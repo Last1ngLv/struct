@@ -1,5 +1,24 @@
 {
   "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\swlsSys.j",
-  "items": [],
-  "timestamp": 1770161386098
+  "items": [
+    {
+      "label": "Wave",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct Wave\n```\n\n\n**_>:** `Swls/swlsSys.j`",
+      "sortText": "1_struct_Wave",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\swlsSys.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**_>:** `Swls/swlsSys.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\swlsSys.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1770162543339
 }
