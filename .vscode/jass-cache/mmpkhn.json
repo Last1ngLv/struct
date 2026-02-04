@@ -29,6 +29,24 @@
       "statementType": "VariableDeclaration"
     },
     {
+      "label": "WaveByBoard",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable WaveByBoard\n```\n\n\n**_>:** `Swls/swlsSys.j`",
+      "sortText": "2_var_WaveByBoard",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\swlsSys.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "SwlsMultiboard",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nmultiboard SwlsMultiboard\n```\n\n\n**_>:** `Swls/swlsSys.j`",
+      "sortText": "2_var_SwlsMultiboard",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\swlsSys.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
       "label": "FX_MAX",
       "kind": 5,
       "detail": "Global Variable",
@@ -52,6 +70,15 @@
       "detail": "Global Variable",
       "documentation": "\n```jass\nstring array FX_UnitOut\n```\n\n\n**_>:** `Swls/swlsSys.j`",
       "sortText": "2_var_FX_UnitOut",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\swlsSys.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "CurrentBoardContext",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nmultiboard CurrentBoardContext\n```\n\n\n**_>:** `Swls/swlsSys.j`",
+      "sortText": "2_var_CurrentBoardContext",
       "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\swlsSys.j",
       "statementType": "VariableDeclaration"
     },
@@ -128,5 +155,5 @@
       "statementType": "FunctionDeclaration"
     }
   ],
-  "timestamp": 1770184131228
+  "timestamp": 1770194918139
 }

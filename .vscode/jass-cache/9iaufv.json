@@ -1,0 +1,15 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\TitleModels.j",
+  "items": [
+    {
+      "label": "BMT1",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction BMT1 takes nothing returns nothing\n```\n\n\n**_>:** `Swls/TitleModels.j`",
+      "sortText": "1_func_BMT1",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\TitleModels.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1770194637482
+}

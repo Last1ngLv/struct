@@ -8,10 +8,15 @@ library WaveTest initializer Init /*
         Table WaveByUnit
         Table WaveByTimer
         Table SlotByUnit
+        Table WaveByBoard
+
+        multiboard SwlsMultiboard //temp
 
         constant integer FX_MAX = 19
         string array FX_UnitIn
         string array FX_UnitOut
+
+        multiboard CurrentBoardContext
     endglobals
 
     //==================================================
@@ -57,6 +62,8 @@ library WaveTest initializer Init /*
         integer limit
         integer priority
         integer fxId
+        integer total
+        boolean isBoss
         player owner
     endstruct
 
@@ -94,11 +101,47 @@ library WaveTest initializer Init /*
         // --- cache del punto elegido ---
         real spawnX
         real spawnY
-        
 
-        static method create takes integer PlayerLim, integer nearChance, real sec returns Wave
+        multiboard board
+        string titleFunc
+
+        // --- Referenciales ---
+        integer waveIndex
+        integer waveTotal
+
+        // --- Totales ---
+        integer totalToSpawn
+
+        integer totalUnits
+        integer totalBosses
+
+        // --- Dinámicos ---
+        integer remainingToSpawn
+        
+        integer remainingUnits
+        integer remainingBosses
+
+        integer activeBosses
+        integer activeUnits
+
+        integer totalKilled
+        
+        integer totalKilledUnits
+        integer totalKilledBoss
+
+        static method create takes integer PlayerLim, integer nearChance, real sec, multiboard mb, string titleFunc, integer wIndex, integer wTotal returns Wave 
             local Wave this = Wave.allocate()
             local integer i = 0
+
+            if mb != null then
+                set this.board = mb
+                set WaveByBoard[GetHandleId(mb)] = this
+                set this.titleFunc  = titleFunc
+                set this.waveIndex  = wIndex
+                set this.waveTotal  = wTotal
+            else
+                set this.board = null
+            endif
 
             set this.pointCount = 0
             set this.nearUnitChance = nearChance
@@ -107,6 +150,22 @@ library WaveTest initializer Init /*
             set this.activeOnMap = 0
             set this.perPlayerLimit = PlayerLim
             set this.interval  = sec
+
+            set this.totalToSpawn      = 0
+            set this.totalUnits        = 0
+            set this.totalBosses       = 0
+
+            set this.remainingToSpawn  = 0
+            set this.remainingUnits    = 0
+            set this.remainingBosses   = 0
+
+            set this.activeBosses      = 0
+            set this.activeUnits       = 0
+
+            set this.totalKilled       = 0
+            set this.totalKilledUnits  = 0
+            set this.totalKilledBoss   = 0
+
 
             loop
                 exitwhen i >= bj_MAX_PLAYER_SLOTS
@@ -118,7 +177,7 @@ library WaveTest initializer Init /*
         endmethod
 
         // Agregar un tipo de unidad
-        method addSlot takes integer uId, integer amount, integer lim, integer prio, integer fxId, player p returns nothing
+        method addSlot takes integer uId, integer amount, integer lim, integer prio, integer fxId, boolean isBoss, player p returns nothing  
             local WaveSlot s = WaveSlot.create()
 
             set s.unitId    = uId
@@ -129,8 +188,30 @@ library WaveTest initializer Init /*
             set s.priority = prio
             set s.fxId = fxId
 
+            set s.total     = amount
+            
+            set s.isBoss    = isBoss
+
             set this.slots[this.slotCount] = s
             set this.slotCount = this.slotCount + 1
+
+            // Global
+            set this.totalToSpawn     = this.totalToSpawn + amount
+            set this.remainingToSpawn = this.remainingToSpawn + amount
+
+            set this.totalKilled     = this.totalKilled + amount
+
+            if isBoss then
+                // Boss
+                set this.totalBosses     = this.totalBosses + amount
+                set this.remainingBosses = this.remainingBosses + amount
+                set this.totalKilledBoss     = this.totalKilledBoss + amount
+            else
+                // Unidades normales
+                set this.totalUnits     = this.totalUnits + amount
+                set this.remainingUnits = this.remainingUnits + amount
+                set this.totalKilledUnits     = this.totalKilledUnits + amount
+            endif
         endmethod
 
         method addPoint takes real x, real y returns nothing
@@ -159,7 +240,7 @@ library WaveTest initializer Init /*
             local real angle
             local real dist
             local real x
-            local real y
+            local real y           
 
             if this.nearUnitCount == 0 then
                 return false
@@ -215,10 +296,6 @@ library WaveTest initializer Init /*
 
             return false
         endmethod
-
-
-        //method getNearUnitPoint takes real radius returns boolean
-
 
         // Iniciar la wave
         method start takes nothing returns nothing
@@ -324,6 +401,16 @@ library WaveTest initializer Init /*
             set s.active                 = s.active + 1
             set this.activeOnMap         = this.activeOnMap + 1
 
+            set this.remainingToSpawn = this.remainingToSpawn - 1
+
+            if s.isBoss then
+                set this.remainingBosses = this.remainingBosses - 1
+                set this.activeBosses    = this.activeBosses + 1
+            else
+                set this.remainingUnits = this.remainingUnits - 1
+                set this.activeUnits    = this.activeUnits + 1
+            endif
+
             // 2. Crear pending spawn
             set ps = PendingSpawn.create()
             set ps.wave = this
@@ -359,6 +446,12 @@ library WaveTest initializer Init /*
         //==================================================
         method onTick takes nothing returns nothing
             call this.trySpawn()
+
+            if this.board != null and this.titleFunc != "" then
+                set CurrentBoardContext = this.board
+                call ExecuteFunc(this.titleFunc)
+                set CurrentBoardContext = null
+            endif
 
             if this.allSlotsEmpty() and this.activeOnMap <= 0 then
                 call this.finish()
@@ -457,6 +550,21 @@ library WaveTest initializer Init /*
             set s.active = s.active - 1
             set w.activeOnMap = w.activeOnMap - 1
 
+            set w.totalKilled = w.totalKilled - 1
+            if s.isBoss then
+                set w.activeBosses = w.activeBosses - 1
+                set w.totalKilledBoss = w.totalKilledBoss - 1
+            else
+                set w.activeUnits = w.activeUnits - 1
+                set w.totalKilledUnits = w.totalKilledUnits - 1
+            endif
+
+            if w.board != null and w.titleFunc != "" then
+                set CurrentBoardContext = w.board
+                call ExecuteFunc(w.titleFunc)
+                set CurrentBoardContext = null
+            endif
+
             call WaveByUnit.remove(hid)
             call SlotByUnit.remove(hid)
         endif
@@ -473,9 +581,12 @@ library WaveTest initializer Init /*
         local Wave w
 
         call InitFX()
+        set SwlsMultiboard = CreateMultiboard() //temp
+
         set WaveByUnit = Table.create()
         set WaveByTimer = Table.create()
         set SlotByUnit = Table.create()
+        set WaveByBoard = Table.create()
 
         loop
             exitwhen i >= bj_MAX_PLAYER_SLOTS
@@ -486,16 +597,16 @@ library WaveTest initializer Init /*
         call TriggerAddAction(t, function OnUnitDeath)
         /* Wave.create(globalLimit, interval)
            w.addSlot(unitId, count, slotLimit, player) */ 
-        set w = Wave.create(3, 50, 1.00)
+        set w = Wave.create(3, 50, 1.00, SwlsMultiboard, "BMT1", 2, 10)
         call w.addPoint(0.0, 0.0)
         call w.addPoint(512.0, 0.0)
         call w.addPoint(0.0, 512.0)
         call w.addPoint(512.0, 512.0)
         call w.addNearUnit(gg_unit_hfoo_0013)
 
-        call w.addSlot('hpea', 8, 2, 1, 3, Player(11))
-        call w.addSlot('ewsp', 8, 3, 1, 9, Player(11))
-        call w.addSlot('ewsp', 4, 3, 2, 2, Player(10))
+        call w.addSlot('hpea', 8, 2, 1, 3, false, Player(11))
+        call w.addSlot('ewsp', 8, 3, 1, 9, false, Player(11))
+        call w.addSlot('ewsp', 6, 2, 2, 2, true, Player(10))
         call w.start()
     endfunction 
 
