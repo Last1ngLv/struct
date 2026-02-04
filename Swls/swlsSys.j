@@ -33,6 +33,7 @@ library WaveTest initializer Init /*
         integer remaining
         integer active
         integer limit
+        integer priority
         player owner
     endstruct
 
@@ -86,7 +87,7 @@ library WaveTest initializer Init /*
         endmethod
 
         // Agregar un tipo de unidad
-        method addSlot takes integer uId, integer amount, integer lim, player p returns nothing
+        method addSlot takes integer uId, integer amount, integer lim, integer prio, player p returns nothing
             local WaveSlot s = WaveSlot.create()
 
             set s.unitId    = uId
@@ -94,6 +95,7 @@ library WaveTest initializer Init /*
             set s.active    = 0
             set s.limit     = lim
             set s.owner     = p
+            set s.priority = prio
 
             set this.slots[this.slotCount] = s
             set this.slotCount = this.slotCount + 1
@@ -202,37 +204,52 @@ library WaveTest initializer Init /*
             local integer pick
             local WaveSlot s
             local integer pid
+            local integer maxPrio = -1
 
-            // 1. Contar slots válidos
+            // 1. Encontrar prioridad más alta válida
             loop
                 exitwhen i >= this.slotCount
                 set s = this.slots[i]
                 set pid = GetPlayerId(s.owner)
 
                 if s.remaining > 0 and s.active < s.limit and this.activeByPlayer[pid] < this.perPlayerLimit then
-                    set validCount = validCount + 1
+                    if s.priority > maxPrio then
+                        set maxPrio = s.priority
+                    endif
                 endif
 
                 set i = i + 1
             endloop
-            call BJDebugMsg("xxcxx")
-            call BJDebugMsg(I2S(validCount))
 
-            if validCount == 0 then
+            if maxPrio < 0 then
                 return 0
             endif
 
-            // 2. Elegir random
-            set pick = GetRandomInt(1, validCount)
 
-            // 3. Buscar el slot elegido
+            // 2. Contar slots con esa prioridad
             set i = 0
             loop
                 exitwhen i >= this.slotCount
                 set s = this.slots[i]
                 set pid = GetPlayerId(s.owner)
 
-                if s.remaining > 0 and s.active < s.limit and this.activeByPlayer[pid] < this.perPlayerLimit then
+                if s.priority == maxPrio and s.remaining > 0 and s.active < s.limit and this.activeByPlayer[pid] < this.perPlayerLimit then
+                    set validCount = validCount + 1
+                endif
+
+                set i = i + 1
+            endloop
+
+            // 3. Elegir random entre ellos
+            set pick = GetRandomInt(1, validCount)
+
+            set i = 0
+            loop
+                exitwhen i >= this.slotCount
+                set s = this.slots[i]
+                set pid = GetPlayerId(s.owner)
+
+                if s.priority == maxPrio and s.remaining > 0 and s.active < s.limit and this.activeByPlayer[pid] < this.perPlayerLimit then
                     set pick = pick - 1
                     if pick == 0 then
                         return s
@@ -367,8 +384,9 @@ library WaveTest initializer Init /*
         call w.addPoint(512.0, 512.0)
         call w.addNearUnit(gg_unit_hfoo_0013)
 
-        call w.addSlot('ewsp', 8, 2, Player(11))
-        call w.addSlot('ewsp', 8, 3, Player(10))
+        call w.addSlot('hpea', 8, 2, 1, Player(11))
+        call w.addSlot('ewsp', 8, 3, 1, Player(11))
+        call w.addSlot('ewsp', 4, 3, 2, Player(10))
         call w.start()
     endfunction 
 
