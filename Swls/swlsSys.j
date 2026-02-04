@@ -50,10 +50,27 @@ library WaveTest initializer Init /*
         real interval 
         timer loopTimer
 
-        static method create takes integer PlayerLim, real sec returns Wave
+        integer pointCount
+        real array pointX[100]
+        real array pointY[100]
+
+        // --- NUEVO: spawn cerca de unidad ---
+        integer nearUnitChance   // 0–100
+        integer nearUnitCount
+        unit array nearUnits[100]
+
+        // --- cache del punto elegido ---
+        real spawnX
+        real spawnY
+        
+
+        static method create takes integer PlayerLim, integer nearChance, real sec returns Wave
             local Wave this = Wave.allocate()
             local integer i = 0
 
+            set this.pointCount = 0
+            set this.nearUnitChance = nearChance
+            set this.nearUnitCount  = 0
             set this.slotCount = 0
             set this.activeOnMap = 0
             set this.perPlayerLimit = PlayerLim
@@ -81,6 +98,93 @@ library WaveTest initializer Init /*
             set this.slots[this.slotCount] = s
             set this.slotCount = this.slotCount + 1
         endmethod
+
+        method addPoint takes real x, real y returns nothing
+            set this.pointX[this.pointCount] = x
+            set this.pointY[this.pointCount] = y
+            set this.pointCount = this.pointCount + 1
+        endmethod
+
+        method addNearUnit takes unit u returns nothing
+            set this.nearUnits[this.nearUnitCount] = u
+            set this.nearUnitCount = this.nearUnitCount + 1
+        endmethod
+
+        method getRandomPointIndex takes nothing returns integer
+            if this.pointCount == 0 then
+                call BJDebugMsg("Sin Punto")
+                return -1
+            endif
+            return GetRandomInt(0, this.pointCount - 1)
+        endmethod
+
+        method tryGetNearUnitPoint takes real radius returns boolean
+            local integer tries = 10
+            local integer index
+            local unit u
+            local real angle
+            local real dist
+            local real x
+            local real y
+
+            if this.nearUnitCount == 0 then
+                return false
+            endif
+
+            loop
+                exitwhen tries <= 0
+
+                set index = GetRandomInt(0, this.nearUnitCount - 1)
+                set u = this.nearUnits[index]
+
+                if u != null and GetUnitTypeId(u) != 0 then
+                    set angle = GetRandomReal(0.0, 6.28318)
+                    set dist  = GetRandomReal(64.0, radius)
+
+                    set x = GetUnitX(u) + dist * Cos(angle)
+                    set y = GetUnitY(u) + dist * Sin(angle)
+
+                    // false = caminable
+                    if not IsTerrainPathable(x, y, PATHING_TYPE_WALKABILITY) then
+                        set this.spawnX = x
+                        set this.spawnY = y
+                        return true
+                    endif
+                endif
+
+                set tries = tries - 1
+            endloop
+
+            return false
+        endmethod
+
+        method selectSpawnPoint takes real radius returns boolean
+            local integer roll
+            local integer pIndex
+
+            set roll = GetRandomInt(1, 100)
+
+            // Intentar spawn cerca de unidad
+            if roll <= this.nearUnitChance then
+                if this.tryGetNearUnitPoint(radius) then
+                    return true
+                endif
+            endif
+
+            // Fallback a puntos base
+            set pIndex = this.getRandomPointIndex()
+            if pIndex >= 0 then
+                set this.spawnX = this.pointX[pIndex]
+                set this.spawnY = this.pointY[pIndex]
+                return true
+            endif
+
+            return false
+        endmethod
+
+
+        //method getNearUnitPoint takes real radius returns boolean
+
 
         // Iniciar la wave
         method start takes nothing returns nothing
@@ -141,25 +245,28 @@ library WaveTest initializer Init /*
             return 0 // seguridad
         endmethod
 
-        
-
-
         //==================================================
         method trySpawn takes nothing returns nothing
             local WaveSlot s
             local unit u
             local integer pid
-
+            local integer pIndex
+            
             set s = this.pickSlot()
 
             if s == 0 then
                 //call BJDebugMsg("No Spawn")
                 return 
             endif
-
+            
             set pid = GetPlayerId(s.owner)
 
-            set u = CreateUnit(s.owner, s.unitId, 0.0, 0.0, 270.0)
+            if not this.selectSpawnPoint(256.0) then
+                return
+            endif
+
+            set u = CreateUnit(s.owner, s.unitId, this.spawnX, this.spawnY, 270.0)
+            //call BJDebugMsg("Spawn " + I2S(s.unitId) + " P" + I2S(pid))
 
             set SlotByUnit[GetHandleId(u)] = s
             set WaveByUnit[GetHandleId(u)] = this
@@ -253,7 +360,13 @@ library WaveTest initializer Init /*
         call TriggerAddAction(t, function OnUnitDeath)
         /* Wave.create(globalLimit, interval)
            w.addSlot(unitId, count, slotLimit, player) */ 
-        set w = Wave.create(3, 1.00)
+        set w = Wave.create(3, 50, 1.00)
+        call w.addPoint(0.0, 0.0)
+        call w.addPoint(512.0, 0.0)
+        call w.addPoint(0.0, 512.0)
+        call w.addPoint(512.0, 512.0)
+        call w.addNearUnit(gg_unit_hfoo_0013)
+
         call w.addSlot('ewsp', 8, 2, Player(11))
         call w.addSlot('ewsp', 8, 3, Player(10))
         call w.start()
