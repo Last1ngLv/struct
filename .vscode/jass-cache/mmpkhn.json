@@ -29,6 +29,33 @@
       "statementType": "VariableDeclaration"
     },
     {
+      "label": "FX_MAX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer FX_MAX\n```\n\n\n**_>:** `Swls/swlsSys.j`",
+      "sortText": "2_var_FX_MAX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\swlsSys.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "FX_UnitIn",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring array FX_UnitIn\n```\n\n\n**_>:** `Swls/swlsSys.j`",
+      "sortText": "2_var_FX_UnitIn",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\swlsSys.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "FX_UnitOut",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring array FX_UnitOut\n```\n\n\n**_>:** `Swls/swlsSys.j`",
+      "sortText": "2_var_FX_UnitOut",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\swlsSys.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
       "label": "Wave_onTick",
       "kind": 2,
       "detail": "Function",
@@ -38,11 +65,29 @@
       "statementType": "FunctionDeclaration"
     },
     {
+      "label": "PendingSpawn_execute",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction PendingSpawn_execute takes nothing returns nothing\n```\n\n\n---\n\n==================================================\n\nSpawn\n\n==================================================\n\n**_>:** `Swls/swlsSys.j`",
+      "sortText": "1_func_PendingSpawn_execute",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\swlsSys.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
       "label": "WaveSlot",
       "kind": 21,
       "detail": "Struct",
-      "documentation": "\n```jass\nstruct WaveSlot\n```\n\n\n---\n\n==================================================\n\nWaveSlot\n\n==================================================\n\n**_>:** `Swls/swlsSys.j`",
+      "documentation": "\n```jass\nstruct WaveSlot\n```\n\n\n**_>:** `Swls/swlsSys.j`",
       "sortText": "1_struct_WaveSlot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\swlsSys.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "PendingSpawn",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct PendingSpawn\n```\n\n\n**_>:** `Swls/swlsSys.j`",
+      "sortText": "1_struct_PendingSpawn",
       "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\swlsSys.j",
       "statementType": "StructDeclaration"
     },
@@ -54,6 +99,15 @@
       "sortText": "1_struct_Wave",
       "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\swlsSys.j",
       "statementType": "StructDeclaration"
+    },
+    {
+      "label": "InitFX",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction InitFX takes nothing returns nothing\n```\n\n\n**_>:** `Swls/swlsSys.j`",
+      "sortText": "1_func_InitFX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\swlsSys.j",
+      "statementType": "FunctionDeclaration"
     },
     {
       "label": "OnUnitDeath",
@@ -74,5 +128,5 @@
       "statementType": "FunctionDeclaration"
     }
   ],
-  "timestamp": 1770178616297
+  "timestamp": 1770184131228
 }

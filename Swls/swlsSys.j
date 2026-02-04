@@ -8,6 +8,10 @@ library WaveTest initializer Init /*
         Table WaveByUnit
         Table WaveByTimer
         Table SlotByUnit
+
+        constant integer FX_MAX = 19
+        string array FX_UnitIn
+        string array FX_UnitOut
     endglobals
 
     //==================================================
@@ -26,17 +30,44 @@ library WaveTest initializer Init /*
     endfunction
 
     //==================================================
-    // WaveSlot
+    // Spawn
     //==================================================
+    function PendingSpawn_execute takes nothing returns nothing
+            local timer t = GetExpiredTimer()
+            local PendingSpawn ps = GetTimerData(t)
+            local unit u
+
+            set u = CreateUnit(ps.slot.owner, ps.slot.unitId, ps.x, ps.y, 270.0)
+            call DestroyEffect(AddSpecialEffectTarget(FX_UnitOut[ps.slot.fxId], u, "origin"))
+
+            set SlotByUnit[GetHandleId(u)] = ps.slot
+            set WaveByUnit[GetHandleId(u)] = ps.wave
+
+            call ReleaseTimer(t)
+            call ps.destroy()
+
+            set t = null
+            set u = null
+    endfunction
+
     struct WaveSlot
         integer unitId
         integer remaining
         integer active
         integer limit
         integer priority
+        integer fxId
         player owner
     endstruct
 
+    struct PendingSpawn
+        Wave wave
+        WaveSlot slot
+        integer pid
+        real x
+        real y
+        timer t
+    endstruct
 
     struct Wave
         integer slotCount
@@ -87,7 +118,7 @@ library WaveTest initializer Init /*
         endmethod
 
         // Agregar un tipo de unidad
-        method addSlot takes integer uId, integer amount, integer lim, integer prio, player p returns nothing
+        method addSlot takes integer uId, integer amount, integer lim, integer prio, integer fxId, player p returns nothing
             local WaveSlot s = WaveSlot.create()
 
             set s.unitId    = uId
@@ -96,6 +127,7 @@ library WaveTest initializer Init /*
             set s.limit     = lim
             set s.owner     = p
             set s.priority = prio
+            set s.fxId = fxId
 
             set this.slots[this.slotCount] = s
             set this.slotCount = this.slotCount + 1
@@ -265,9 +297,8 @@ library WaveTest initializer Init /*
         //==================================================
         method trySpawn takes nothing returns nothing
             local WaveSlot s
-            local unit u
             local integer pid
-            local integer pIndex
+            local PendingSpawn ps
             
             set s = this.pickSlot()
 
@@ -275,23 +306,40 @@ library WaveTest initializer Init /*
                 //call BJDebugMsg("No Spawn")
                 return 
             endif
-            
-            set pid = GetPlayerId(s.owner)
 
             if not this.selectSpawnPoint(256.0) then
                 return
             endif
 
-            set u = CreateUnit(s.owner, s.unitId, this.spawnX, this.spawnY, 270.0)
+            set pid = GetPlayerId(s.owner)
+
+            //set u = CreateUnit(s.owner, s.unitId, this.spawnX, this.spawnY, 270.0)
             //call BJDebugMsg("Spawn " + I2S(s.unitId) + " P" + I2S(pid))
 
-            set SlotByUnit[GetHandleId(u)] = s
-            set WaveByUnit[GetHandleId(u)] = this
+            //set SlotByUnit[GetHandleId(u)] = s
+            //set WaveByUnit[GetHandleId(u)] = this
 
             set this.activeByPlayer[pid] = this.activeByPlayer[pid] + 1
             set s.remaining              = s.remaining - 1
             set s.active                 = s.active + 1
             set this.activeOnMap         = this.activeOnMap + 1
+
+            // 2. Crear pending spawn
+            set ps = PendingSpawn.create()
+            set ps.wave = this
+            set ps.slot = s
+            set ps.pid  = pid
+            set ps.x    = this.spawnX
+            set ps.y    = this.spawnY
+
+            if s.fxId > 0 and s.fxId <= FX_MAX then
+                call DestroyEffect(AddSpecialEffect(FX_UnitIn[s.fxId], ps.x, ps.y))
+            endif
+
+            // 4. Timer de spawn real
+            set ps.t = NewTimer()
+            call SetTimerData(ps.t, ps)
+            call TimerStart(ps.t, 1.50, false, function PendingSpawn_execute)
 
         endmethod
 
@@ -325,6 +373,66 @@ library WaveTest initializer Init /*
             call BJDebugMsg("Wave terminada")
         endmethod
     endstruct
+
+    function InitFX takes nothing returns nothing
+        // 1. Teletransporte masivo humano
+        set FX_UnitIn[1]  = "Abilities\\Spells\\Human\\MassTeleport\\MassTeleportCaster.mdl"
+        set FX_UnitOut[1] = "Abilities\\Spells\\Human\\MassTeleport\\MassTeleportTarget.mdl"
+        // 2. Resurrección humana
+        set FX_UnitIn[2]  = "Abilities\\Spells\\Human\\Resurrect\\ResurrectCaster.mdl"
+        set FX_UnitOut[2] = "Abilities\\Spells\\Human\\Resurrect\\ResurrectTarget.mdl"
+        // 3. Animar muerto no-muerto
+        set FX_UnitIn[3]  = "Abilities\\Spells\\Undead\\CarrionSwarm\\CarrionSwarmDamage.mdl"
+        set FX_UnitOut[3] = "Abilities\\Spells\\Undead\\AnimateDead\\AnimateDeadTarget.mdl"
+        // 4. Artefacto especial (AIil)
+        set FX_UnitIn[4]  = "Abilities\\Spells\\Items\\AIil\\AIilTarget.mdl"
+        set FX_UnitOut[4] = "Abilities\\Spells\\Undead\\DeathCoil\\DeathCoilSpecialArt.mdl"
+        // 5. Disipación no-muerto
+        set FX_UnitIn[5]  = "Objects\\Spawnmodels\\Undead\\UndeadDissipate\\UndeadDissipate.mdl"
+        set FX_UnitOut[5] = "Abilities\\Spells\\Human\\MarkOfChaos\\MarkOfChaosDone.mdl"
+        // 6. Purificación de objeto
+        set FX_UnitIn[6]  = "Abilities\\Spells\\Items\\StaffOfPurification\\PurificationCaster.mdl"
+        set FX_UnitOut[6] = "Abilities\\Spells\\Items\\StaffOfPurification\\PurificationTarget.mdl"
+        // 7. Invocar esqueleto guerrero
+        set FX_UnitIn[7]  = "Abilities\\Spells\\Undead\\RaiseSkeletonWarrior\\RaiseSkeleton.mdl"
+        set FX_UnitOut[7] = "Abilities\\Spells\\Undead\\DeathCoil\\DeathCoilSpecialArt.mdl"
+        // 8.  / batalla
+        set FX_UnitIn[8]  = "Abilities\\Spells\\Orc\\FeralSpirit\\feralspirittarget.mdl"
+        set FX_UnitOut[8] = "Abilities\\Spells\\NightElf\\BattleRoar\\RoarCaster.mdl"
+        // 9. Ola aplastante / daño
+        set FX_UnitIn[9]  = "Abilities\\Spells\\Other\\CrushingWave\\CrushingWaveDamage.mdl"
+        set FX_UnitOut[9] = "Objects\\Spawnmodels\\Naga\\NagaDeath\\NagaDeath.mdl"
+        // 10. Disipación / cancelación no-muerto
+        set FX_UnitIn[10]  = "Objects\\Spawnmodels\\Undead\\UndeadDissipate\\UndeadDissipate.mdl"
+        set FX_UnitOut[10] = "Objects\\Spawnmodels\\Undead\\UCancelDeath\\UCancelDeath.mdl"
+        // 11. Polvo de empalamiento / humano
+        set FX_UnitIn[11]  = "Objects\\Spawnmodels\\Undead\\ImpaleTargetDust\\ImpaleTargetDust.mdl"
+        set FX_UnitOut[11] = "Objects\\Spawnmodels\\Human\\HCancelDeath\\HCancelDeath.mdl"
+        // 12. Pacto de muerte
+        set FX_UnitIn[12]  = "Abilities\\Spells\\Undead\\DeathPact\\DeathPactTarget.mdl"
+        set FX_UnitOut[12] = "Objects\\Spawnmodels\\NightElf\\NECancelDeath\\NECancelDeath.mdl"
+        // 13. ToonBoom / arte especial
+        set FX_UnitIn[13]  = "Objects\\Spawnmodels\\Other\\ToonBoom\\ToonBoom.mdl"
+        set FX_UnitOut[13] = "Abilities\\Spells\\Items\\AIem\\AIemTarget.mdl"
+        // 15. Rayo divino / HolyBolt
+        set FX_UnitIn[14]  = "Abilities\\Spells\\Other\\Awaken\\Awaken.mdl"
+        set FX_UnitOut[14] = "Abilities\\Spells\\Human\\HolyBolt\\HolyBoltSpecialArt.mdl"
+        // 16. Arte AIhe / HolyBolt
+        set FX_UnitIn[15]  = "Abilities\\Spells\\Items\\AIhe\\AIheTarget.mdl"
+        set FX_UnitOut[15] = "Abilities\\Spells\\Human\\HolyBolt\\HolyBoltSpecialArt.mdl"
+        // 17. Feedback / WarStomp
+        set FX_UnitIn[16]  = "Abilities\\Spells\\Human\\Feedback\\SpellBreakerAttack.mdl"
+        set FX_UnitOut[16] = "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl"
+        // 18. Control mágico
+        set FX_UnitIn[17]  = "Abilities\\Spells\\Human\\ControlMagic\\ControlMagicTarget.mdl"
+        set FX_UnitOut[17] = "Abilities\\Spells\\Undead\\DarkRitual\\DarkRitualTarget.mdl"
+        // 19. Impacto de proyectil / Bolt
+        set FX_UnitIn[18]  = "Abilities\\Weapons\\Bolt\\BoltImpact.mdl"
+        set FX_UnitOut[18] = "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl"
+        // 20. Dispel / TomeOfRetraining
+        set FX_UnitIn[19]  = "Abilities\\Spells\\Human\\DispelMagic\\DispelMagicTarget.mdl"
+        set FX_UnitOut[19] = "Abilities\\Spells\\Items\\TomeOfRetraining\\TomeOfRetrainingCaster.mdl"
+    endfunction
 
     //==================================================
     // Trigger de muerte
@@ -364,6 +472,7 @@ library WaveTest initializer Init /*
         local integer i = 0
         local Wave w
 
+        call InitFX()
         set WaveByUnit = Table.create()
         set WaveByTimer = Table.create()
         set SlotByUnit = Table.create()
@@ -384,9 +493,9 @@ library WaveTest initializer Init /*
         call w.addPoint(512.0, 512.0)
         call w.addNearUnit(gg_unit_hfoo_0013)
 
-        call w.addSlot('hpea', 8, 2, 1, Player(11))
-        call w.addSlot('ewsp', 8, 3, 1, Player(11))
-        call w.addSlot('ewsp', 4, 3, 2, Player(10))
+        call w.addSlot('hpea', 8, 2, 1, 3, Player(11))
+        call w.addSlot('ewsp', 8, 3, 1, 9, Player(11))
+        call w.addSlot('ewsp', 4, 3, 2, 2, Player(10))
         call w.start()
     endfunction 
 
