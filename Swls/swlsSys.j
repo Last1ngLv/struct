@@ -64,6 +64,7 @@ library WaveTest initializer Init /*
         integer fxId
         integer total
         boolean isBoss
+        integer killGate
         player owner
     endstruct
 
@@ -177,7 +178,7 @@ library WaveTest initializer Init /*
         endmethod
 
         // Agregar un tipo de unidad
-        method addSlot takes integer uId, integer amount, integer lim, integer prio, integer fxId, boolean isBoss, player p returns nothing  
+        method addSlot takes integer uId, integer amount, integer lim, integer prio, integer fxId, integer killGate, boolean isBoss, player p returns nothing  
             local WaveSlot s = WaveSlot.create()
 
             set s.unitId    = uId
@@ -187,6 +188,7 @@ library WaveTest initializer Init /*
             set s.owner     = p
             set s.priority = prio
             set s.fxId = fxId
+            set s.killGate  = killGate
 
             set s.total     = amount
             
@@ -322,8 +324,10 @@ library WaveTest initializer Init /*
                 set pid = GetPlayerId(s.owner)
 
                 if s.remaining > 0 and s.active < s.limit and this.activeByPlayer[pid] < this.perPlayerLimit then
-                    if s.priority > maxPrio then
-                        set maxPrio = s.priority
+                    if s.killGate == -1 or this.totalKilled <= s.killGate then
+                        if s.priority > maxPrio then
+                            set maxPrio = s.priority
+                        endif
                     endif
                 endif
 
@@ -343,7 +347,9 @@ library WaveTest initializer Init /*
                 set pid = GetPlayerId(s.owner)
 
                 if s.priority == maxPrio and s.remaining > 0 and s.active < s.limit and this.activeByPlayer[pid] < this.perPlayerLimit then
-                    set validCount = validCount + 1
+                    if s.killGate == -1 or this.totalKilled <= s.killGate then
+                        set validCount = validCount + 1
+                    endif
                 endif
 
                 set i = i + 1
@@ -359,9 +365,11 @@ library WaveTest initializer Init /*
                 set pid = GetPlayerId(s.owner)
 
                 if s.priority == maxPrio and s.remaining > 0 and s.active < s.limit and this.activeByPlayer[pid] < this.perPlayerLimit then
-                    set pick = pick - 1
-                    if pick == 0 then
-                        return s
+                    if s.killGate == -1 or this.totalKilled <= s.killGate then
+                        set pick = pick - 1
+                        if pick == 0 then
+                            return s
+                        endif
                     endif
                 endif
 
@@ -597,16 +605,16 @@ library WaveTest initializer Init /*
         call TriggerAddAction(t, function OnUnitDeath)
         /* Wave.create(globalLimit, interval)
            w.addSlot(unitId, count, slotLimit, player) */ 
-        set w = Wave.create(3, 50, 1.00, SwlsMultiboard, "BMT1", 2, 10)
+        set w = Wave.create(5, 50, 1.00, SwlsMultiboard, "BMT1", 2, 10)
         call w.addPoint(0.0, 0.0)
         call w.addPoint(512.0, 0.0)
         call w.addPoint(0.0, 512.0)
         call w.addPoint(512.0, 512.0)
         call w.addNearUnit(gg_unit_hfoo_0013)
 
-        call w.addSlot('hpea', 8, 2, 1, 3, false, Player(11))
-        call w.addSlot('ewsp', 8, 3, 1, 9, false, Player(11))
-        call w.addSlot('ewsp', 6, 2, 2, 2, true, Player(10))
+        call w.addSlot('hpea', 6, 5, 1, 3, -1, false, Player(11))
+        call w.addSlot('ewsp', 6, 5, 1, 9, -1, false, Player(11))
+        call w.addSlot('ewsp', 6, 3, 2, 2,  10, true, Player(10))
         call w.start()
     endfunction 
 
