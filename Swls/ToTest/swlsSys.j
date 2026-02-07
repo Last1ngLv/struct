@@ -107,6 +107,8 @@ library WaveTest initializer Init /*
         multiboard board
         string titleFunc
 
+        string endFunc
+
         // --- Referenciales ---
         integer waveIndex
         integer waveTotal
@@ -131,7 +133,7 @@ library WaveTest initializer Init /*
         integer totalKilledUnits
         integer totalKilledBoss
 
-        static method create takes integer PlayerLim, integer nearChance, real sec, multiboard mb, string titleFunc, integer wIndex, integer wTotal returns Wave 
+        static method create takes integer PlayerLim, integer nearChance, real sec, multiboard mb, string titleFunc, integer wIndex, integer wTotal, string endFun returns Wave  
             local Wave this = Wave.allocate()
             local integer i = 0
 
@@ -144,7 +146,7 @@ library WaveTest initializer Init /*
             else
                 set this.board = null
             endif
-
+            set this.endFunc  = endFun
             set this.pointCount = 0
             set this.nearUnitChance = nearChance
             set this.nearUnitCount  = 0
@@ -529,6 +531,12 @@ library WaveTest initializer Init /*
                 set this.titleFunc = ""
             endif
 
+            // endFunct
+            if this.endFunc != "" then
+                call ExecuteFunc(this.endFunc)
+                set this.endFunc = ""
+            endif
+
             // Slots
             loop
                 exitwhen i >= this.slotCount
@@ -726,7 +734,7 @@ library WaveTest initializer Init /*
         call TriggerAddAction(t, function OnUnitDeath)
         /* Wave.create(globalLimit, interval)
            w.addSlot(unitId, count, slotLimit, player) */ 
-        set w = Wave.create(5, 50, 1.00, SwlsMultiboard, "BMT1", 2, 10)
+        set w = Wave.create(5, 50, 1.00, SwlsMultiboard, "BMT1", 2, 10, "")
         call w.addPoint(0.0, 0.0)
         call w.addPoint(512.0, 0.0)
         call w.addPoint(0.0, 512.0)
