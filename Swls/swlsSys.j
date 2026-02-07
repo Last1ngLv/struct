@@ -9,6 +9,7 @@ library WaveTest initializer Init /*
         Table WaveByTimer
         Table SlotByUnit
         Table WaveByBoard
+        Table ExternalIsBoss
 
         multiboard SwlsMultiboard //temp
 
@@ -215,6 +216,45 @@ library WaveTest initializer Init /*
                 set this.totalKilledUnits     = this.totalKilledUnits + amount
             endif
         endmethod
+
+        method registerExternalUnit takes unit source, unit summoned, boolean isBoss returns nothing
+            local integer srcId = GetHandleId(source)
+            local integer uId   = GetHandleId(summoned)
+            local Wave w
+
+            // El invocador NO pertenece a ninguna wave → ignorar
+            if not WaveByUnit.has(srcId) then
+                return
+            endif
+
+            set w = Wave(WaveByUnit[srcId])
+
+            // Seguridad extra: no doble registro
+            if WaveByUnit.has(uId) then
+                return
+            endif
+
+            set WaveByUnit[uId] = w
+
+            set w.activeOnMap = w.activeOnMap + 1
+            set w.totalToSpawn = w.totalToSpawn + 1
+            set w.totalKilled = w.totalKilled + 1
+
+            if isBoss then
+                //set w.remainingBosses = w.remainingBosses + 1
+                set w.totalBosses = w.totalBosses + 1
+                set ExternalIsBoss[uId] = 1
+                set w.totalKilledBoss = w.totalKilledBoss + 1
+                set w.activeBosses    = w.activeBosses + 1
+            else
+                //set w.remainingUnits = w.remainingUnits + 1
+                set w.totalUnits = w.totalUnits + 1
+                set ExternalIsBoss[uId] = 0
+                set w.totalKilledUnits = w.totalKilledUnits + 1
+                set w.activeUnits    = w.activeUnits + 1
+            endif
+        endmethod
+
 
         method addPoint takes real x, real y returns nothing
             set this.pointX[this.pointCount] = x
@@ -551,20 +591,29 @@ library WaveTest initializer Init /*
             set w = Wave(WaveByUnit[hid])
             set s = WaveSlot(SlotByUnit[hid])
 
-
             set pid = GetPlayerId(s.owner)
-
-            set w.activeByPlayer[pid] = w.activeByPlayer[pid] - 1
-            set s.active = s.active - 1
             set w.activeOnMap = w.activeOnMap - 1
 
+            set w.activeByPlayer[pid] = w.activeByPlayer[pid] - 1
             set w.totalKilled = w.totalKilled - 1
-            if s.isBoss then
-                set w.activeBosses = w.activeBosses - 1
-                set w.totalKilledBoss = w.totalKilledBoss - 1
-            else
-                set w.activeUnits = w.activeUnits - 1
-                set w.totalKilledUnits = w.totalKilledUnits - 1
+            
+            if SlotByUnit.has(hid) then
+                set s.active = s.active - 1
+                if s.isBoss then
+                    set w.activeBosses = w.activeBosses - 1
+                    set w.totalKilledBoss = w.totalKilledBoss - 1
+                else
+                    set w.activeUnits = w.activeUnits - 1
+                    set w.totalKilledUnits = w.totalKilledUnits - 1
+                endif
+            elseif ExternalIsBoss.has(hid) then
+                if ExternalIsBoss[hid] == 1 then 
+                    set w.activeBosses = w.activeBosses - 1
+                    set w.totalKilledBoss = w.totalKilledBoss - 1
+                else                   
+                    set w.activeUnits = w.activeUnits - 1
+                    set w.totalKilledUnits = w.totalKilledUnits - 1
+                endif
             endif
 
             if w.board != null and w.titleFunc != "" then
@@ -578,6 +627,49 @@ library WaveTest initializer Init /*
         endif
 
         set u = null
+    endfunction
+
+    function registerExternalUnit takes unit source, unit summoned, boolean isBoss returns nothing
+            local integer srcId = GetHandleId(source)
+            local integer uId   = GetHandleId(summoned)
+            local Wave w
+
+            // El invocador NO pertenece a ninguna wave → ignorar
+            if not WaveByUnit.has(srcId) then
+                return
+            endif
+
+            set w = Wave(WaveByUnit[srcId])
+
+            // Seguridad extra: no doble registro
+            if WaveByUnit.has(uId) then
+                return
+            endif
+
+            set WaveByUnit[uId] = w
+
+            set w.activeOnMap = w.activeOnMap + 1
+            set w.totalToSpawn = w.totalToSpawn + 1
+            set w.totalKilled = w.totalKilled + 1
+
+            if isBoss then
+                //set w.remainingBosses = w.remainingBosses + 1
+                set w.totalBosses = w.totalBosses + 1
+                set ExternalIsBoss[uId] = 1
+                set w.totalKilledBoss = w.totalKilledBoss + 1
+                set w.activeBosses    = w.activeBosses + 1
+            else
+                //set w.remainingUnits = w.remainingUnits + 1
+                set w.totalUnits = w.totalUnits + 1
+                set ExternalIsBoss[uId] = 0
+                set w.totalKilledUnits = w.totalKilledUnits + 1
+                set w.activeUnits    = w.activeUnits + 1
+            endif
+            if w.board != null and w.titleFunc != "" then
+                set CurrentBoardContext = w.board
+                call ExecuteFunc(w.titleFunc)
+                set CurrentBoardContext = null
+            endif
     endfunction
 
     //==================================================
@@ -595,6 +687,7 @@ library WaveTest initializer Init /*
         set WaveByTimer = Table.create()
         set SlotByUnit = Table.create()
         set WaveByBoard = Table.create()
+        set ExternalIsBoss = Table.create()
 
         loop
             exitwhen i >= bj_MAX_PLAYER_SLOTS
@@ -612,6 +705,7 @@ library WaveTest initializer Init /*
         call w.addPoint(512.0, 512.0)
         call w.addNearUnit(gg_unit_hfoo_0013)
 
+        call w.addSlot('hfoo', 6, 1, 1, 3, -1, false, Player(0))
         call w.addSlot('hpea', 6, 5, 1, 3, -1, false, Player(11))
         call w.addSlot('ewsp', 6, 5, 1, 9, -1, false, Player(11))
         call w.addSlot('ewsp', 6, 3, 2, 2,  10, true, Player(10))

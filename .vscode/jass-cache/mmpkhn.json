@@ -38,6 +38,15 @@
       "statementType": "VariableDeclaration"
     },
     {
+      "label": "ExternalIsBoss",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable ExternalIsBoss\n```\n\n\n**_>:** `Swls/swlsSys.j`",
+      "sortText": "2_var_ExternalIsBoss",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\swlsSys.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
       "label": "SwlsMultiboard",
       "kind": 5,
       "detail": "Global Variable",
@@ -146,6 +155,15 @@
       "statementType": "FunctionDeclaration"
     },
     {
+      "label": "registerExternalUnit",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction registerExternalUnit takes unit source, unit summoned, boolean isBoss returns nothing\n```\n\n\n**_>:** `Swls/swlsSys.j`",
+      "sortText": "1_func_registerExternalUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\swlsSys.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
       "label": "Init",
       "kind": 2,
       "detail": "Function",
@@ -155,5 +173,5 @@
       "statementType": "FunctionDeclaration"
     }
   ],
-  "timestamp": 1770362409792
+  "timestamp": 1770424457304
 }
