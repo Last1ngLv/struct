@@ -508,10 +508,38 @@ library WaveTest initializer Init /*
 
         //==================================================
         method finish takes nothing returns nothing
-            call PauseTimer(this.loopTimer)
-            call ReleaseTimer(this.loopTimer)
-            call WaveByTimer.remove(GetHandleId(this.loopTimer))
-            call BJDebugMsg("Wave terminada")
+            call this.destroyWave()
+        endmethod
+
+        method destroyWave takes nothing returns nothing
+            local integer i = 0
+
+            // Timer
+            if this.loopTimer != null then
+                call PauseTimer(this.loopTimer)
+                call ReleaseTimer(this.loopTimer)
+                call WaveByTimer.remove(GetHandleId(this.loopTimer))
+                set this.loopTimer = null
+            endif
+
+            // Multiboard
+            if this.board != null then
+                call WaveByBoard.remove(GetHandleId(this.board))
+                set this.board = null
+                set this.titleFunc = ""
+            endif
+
+            // Slots
+            loop
+                exitwhen i >= this.slotCount
+                call this.slots[i].destroy()
+                set this.slots[i] = 0
+                set i = i + 1
+            endloop
+
+            call BJDebugMsg("Wave destroyed")
+
+            call this.destroy()
         endmethod
     endstruct
 

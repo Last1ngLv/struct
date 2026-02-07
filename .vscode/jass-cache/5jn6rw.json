@@ -1,0 +1,872 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+  "items": [
+    {
+      "label": "less",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger less\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "2_var_less",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "more",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger more\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "2_var_more",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "ht",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nhashtable ht\n```\n\n\n---\n\nConfigure it if you use more than 8190 \"key\" variables in your map (this will never happen though).\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "2_var_ht",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "sizeK",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nkey sizeK\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "2_var_sizeK",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "listK",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nkey listK\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "2_var_listK",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "dex",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct dex extends array\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_struct_dex",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "handles",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct handles extends array\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_struct_handles",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "agents",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct agents extends array\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_struct_agents",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "NEW_ARRAY_BASIC",
+      "kind": 14,
+      "detail": "TextMacro",
+      "documentation": "\n```jass\ntextmacro NEW_ARRAY_BASIC takes SUPER, FUNC, TYPE\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "insertText": "NEW_ARRAY_BASIC",
+      "sortText": "3_macro_NEW_ARRAY_BASIC",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "TextMacroStatement"
+    },
+    {
+      "label": "NEW_ARRAY",
+      "kind": 14,
+      "detail": "TextMacro",
+      "documentation": "\n```jass\ntextmacro NEW_ARRAY takes FUNC, TYPE\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "insertText": "NEW_ARRAY",
+      "sortText": "3_macro_NEW_ARRAY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "TextMacroStatement"
+    },
+    {
+      "label": "reals",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct reals extends array\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_struct_reals",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "realm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule realm\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_module_realm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "booleans",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct booleans extends array\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_struct_booleans",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "booleanm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule booleanm\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_module_booleanm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "strings",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct strings extends array\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_struct_strings",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "stringm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule stringm\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_module_stringm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "integers",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct integers extends array\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_struct_integers",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "integerm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule integerm\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_module_integerm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "players",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct players extends array\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_struct_players",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "playerm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule playerm\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_module_playerm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "widgets",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct widgets extends array\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_struct_widgets",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "widgetm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule widgetm\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_module_widgetm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "destructables",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct destructables extends array\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_struct_destructables",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "destructablem",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule destructablem\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_module_destructablem",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "items",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct items extends array\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_struct_items",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "itemm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule itemm\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_module_itemm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "units",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct units extends array\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_struct_units",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "unitm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule unitm\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_module_unitm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "abilitys",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct abilitys extends array\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_struct_abilitys",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "abilitym",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule abilitym\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_module_abilitym",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "timers",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct timers extends array\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_struct_timers",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "timerm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule timerm\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_module_timerm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "triggers",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct triggers extends array\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_struct_triggers",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "triggerm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule triggerm\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_module_triggerm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "triggerconditions",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct triggerconditions extends array\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_struct_triggerconditions",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "triggerconditionm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule triggerconditionm\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_module_triggerconditionm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "triggeractions",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct triggeractions extends array\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_struct_triggeractions",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "triggeractionm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule triggeractionm\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_module_triggeractionm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "events",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct events extends array\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_struct_events",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "eventm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule eventm\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_module_eventm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "forces",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct forces extends array\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_struct_forces",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "forcem",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule forcem\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_module_forcem",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "groups",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct groups extends array\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_struct_groups",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "groupm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule groupm\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_module_groupm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "locations",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct locations extends array\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_struct_locations",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "locationm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule locationm\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_module_locationm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "rects",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct rects extends array\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_struct_rects",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "rectm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule rectm\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_module_rectm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "boolexprs",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct boolexprs extends array\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_struct_boolexprs",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "boolexprm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule boolexprm\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_module_boolexprm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "sounds",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct sounds extends array\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_struct_sounds",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "soundm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule soundm\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_module_soundm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "effects",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct effects extends array\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_struct_effects",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "effectm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule effectm\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_module_effectm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "unitpools",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct unitpools extends array\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_struct_unitpools",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "unitpoolm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule unitpoolm\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_module_unitpoolm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "itempools",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct itempools extends array\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_struct_itempools",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "itempoolm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule itempoolm\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_module_itempoolm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "quests",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct quests extends array\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_struct_quests",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "questm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule questm\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_module_questm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "questitems",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct questitems extends array\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_struct_questitems",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "questitemm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule questitemm\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_module_questitemm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "defeatconditions",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct defeatconditions extends array\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_struct_defeatconditions",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "defeatconditionm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule defeatconditionm\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_module_defeatconditionm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "timerdialogs",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct timerdialogs extends array\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_struct_timerdialogs",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "timerdialogm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule timerdialogm\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_module_timerdialogm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "leaderboards",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct leaderboards extends array\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_struct_leaderboards",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "leaderboardm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule leaderboardm\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_module_leaderboardm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "multiboards",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct multiboards extends array\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_struct_multiboards",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "multiboardm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule multiboardm\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_module_multiboardm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "multiboarditems",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct multiboarditems extends array\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_struct_multiboarditems",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "multiboarditemm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule multiboarditemm\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_module_multiboarditemm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "trackables",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct trackables extends array\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_struct_trackables",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "trackablem",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule trackablem\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_module_trackablem",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "dialogs",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct dialogs extends array\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_struct_dialogs",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "dialogm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule dialogm\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_module_dialogm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "buttons",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct buttons extends array\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_struct_buttons",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "buttonm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule buttonm\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_module_buttonm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "texttags",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct texttags extends array\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_struct_texttags",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "texttagm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule texttagm\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_module_texttagm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "lightnings",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct lightnings extends array\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_struct_lightnings",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "lightningm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule lightningm\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_module_lightningm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "images",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct images extends array\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_struct_images",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "imagem",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule imagem\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_module_imagem",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "ubersplats",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct ubersplats extends array\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_struct_ubersplats",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "ubersplatm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule ubersplatm\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_module_ubersplatm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "regions",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct regions extends array\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_struct_regions",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "regionm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule regionm\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_module_regionm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "fogstates",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct fogstates extends array\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_struct_fogstates",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "fogstatem",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule fogstatem\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_module_fogstatem",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "fogmodifiers",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct fogmodifiers extends array\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_struct_fogmodifiers",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "fogmodifierm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule fogmodifierm\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_module_fogmodifierm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "hashtables",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct hashtables extends array\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_struct_hashtables",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "hashtablem",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule hashtablem\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_module_hashtablem",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "Table",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct Table extends array\n```\n\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_struct_Table",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "HashTable",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct HashTable extends array\n```\n\n\n---\n\nNEW: Added in Table 4.0. A fairly simple struct but allows you to do more\n\nthan that which was previously possible.\n\n**_>:** `Swls/ToTest/table.j`",
+      "sortText": "1_struct_HashTable",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\table.j",
+      "statementType": "StructDeclaration"
+    }
+  ],
+  "timestamp": 1770448705124
+}

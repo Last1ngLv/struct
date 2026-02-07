@@ -1,0 +1,168 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToUse\\swlsSys.j",
+  "items": [
+    {
+      "label": "WaveByUnit",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable WaveByUnit\n```\n\n\n**_>:** `Swls/ToUse/swlsSys.j`",
+      "sortText": "2_var_WaveByUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToUse\\swlsSys.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveByTimer",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable WaveByTimer\n```\n\n\n**_>:** `Swls/ToUse/swlsSys.j`",
+      "sortText": "2_var_WaveByTimer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToUse\\swlsSys.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "SlotByUnit",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable SlotByUnit\n```\n\n\n**_>:** `Swls/ToUse/swlsSys.j`",
+      "sortText": "2_var_SlotByUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToUse\\swlsSys.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveByBoard",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable WaveByBoard\n```\n\n\n**_>:** `Swls/ToUse/swlsSys.j`",
+      "sortText": "2_var_WaveByBoard",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToUse\\swlsSys.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "ExternalIsBoss",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable ExternalIsBoss\n```\n\n\n**_>:** `Swls/ToUse/swlsSys.j`",
+      "sortText": "2_var_ExternalIsBoss",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToUse\\swlsSys.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "FX_MAX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer FX_MAX\n```\n\n\n**_>:** `Swls/ToUse/swlsSys.j`",
+      "sortText": "2_var_FX_MAX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToUse\\swlsSys.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "FX_UnitIn",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring array FX_UnitIn\n```\n\n\n**_>:** `Swls/ToUse/swlsSys.j`",
+      "sortText": "2_var_FX_UnitIn",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToUse\\swlsSys.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "FX_UnitOut",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring array FX_UnitOut\n```\n\n\n**_>:** `Swls/ToUse/swlsSys.j`",
+      "sortText": "2_var_FX_UnitOut",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToUse\\swlsSys.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "CurrentBoardContext",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nmultiboard CurrentBoardContext\n```\n\n\n**_>:** `Swls/ToUse/swlsSys.j`",
+      "sortText": "2_var_CurrentBoardContext",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToUse\\swlsSys.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "Wave_onTick",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Wave_onTick takes nothing returns nothing\n```\n\n\n---\n\n==================================================\n\nCallback del timer\n\n==================================================\n\n**_>:** `Swls/ToUse/swlsSys.j`",
+      "sortText": "1_func_Wave_onTick",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToUse\\swlsSys.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "PendingSpawn_execute",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction PendingSpawn_execute takes nothing returns nothing\n```\n\n\n---\n\n==================================================\n\nSpawn\n\n==================================================\n\n**_>:** `Swls/ToUse/swlsSys.j`",
+      "sortText": "1_func_PendingSpawn_execute",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToUse\\swlsSys.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveSlot",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct WaveSlot\n```\n\n\n**_>:** `Swls/ToUse/swlsSys.j`",
+      "sortText": "1_struct_WaveSlot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToUse\\swlsSys.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "PendingSpawn",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct PendingSpawn\n```\n\n\n**_>:** `Swls/ToUse/swlsSys.j`",
+      "sortText": "1_struct_PendingSpawn",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToUse\\swlsSys.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "Wave",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct Wave\n```\n\n\n**_>:** `Swls/ToUse/swlsSys.j`",
+      "sortText": "1_struct_Wave",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToUse\\swlsSys.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "InitFX",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction InitFX takes nothing returns nothing\n```\n\n\n**_>:** `Swls/ToUse/swlsSys.j`",
+      "sortText": "1_func_InitFX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToUse\\swlsSys.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnUnitDeath",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnUnitDeath takes nothing returns nothing\n```\n\n\n---\n\n==================================================\n\nTrigger de muerte\n\n==================================================\n\n**_>:** `Swls/ToUse/swlsSys.j`",
+      "sortText": "1_func_OnUnitDeath",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToUse\\swlsSys.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "registerExternalUnit",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction registerExternalUnit takes unit source, unit summoned, boolean isBoss returns nothing\n```\n\n\n**_>:** `Swls/ToUse/swlsSys.j`",
+      "sortText": "1_func_registerExternalUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToUse\\swlsSys.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n---\n\n==================================================\n\nInit\n\n==================================================\n\n**_>:** `Swls/ToUse/swlsSys.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToUse\\swlsSys.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1770453715828
+}
