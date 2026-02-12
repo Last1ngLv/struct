@@ -1,0 +1,40 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Setups\\HideInv.j",
+  "items": [
+    {
+      "symbolName": "Inventory",
+      "location": {
+        "uri": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Inventory.j",
+        "range": {
+          "start": {
+            "line": 2,
+            "character": 11
+          },
+          "end": {
+            "line": 2,
+            "character": 20
+          }
+        }
+      },
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Inventory.j"
+    },
+    {
+      "symbolName": "Inventory",
+      "location": {
+        "uri": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Inventory\\Inventory.j",
+        "range": {
+          "start": {
+            "line": 2,
+            "character": 11
+          },
+          "end": {
+            "line": 2,
+            "character": 20
+          }
+        }
+      },
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Inventory\\Inventory.j"
+    }
+  ],
+  "timestamp": 1770940105839
+}

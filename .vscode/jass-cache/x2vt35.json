@@ -1,0 +1,24 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Inventory\\InventoryTooltip.j",
+  "items": [
+    {
+      "label": "InvTooltip",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule InvTooltip\n```\n\n\n**_>:** `UISwls/MExampleAdvance/Inventory/InventoryTooltip.j`",
+      "sortText": "1_module_InvTooltip",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Inventory\\InventoryTooltip.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "InvItemTooltip",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule InvItemTooltip\n```\n\n\n**_>:** `UISwls/MExampleAdvance/Inventory/InventoryTooltip.j`",
+      "sortText": "1_module_InvItemTooltip",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Inventory\\InventoryTooltip.j",
+      "statementType": "ModuleDeclaration"
+    }
+  ],
+  "timestamp": 1770940029474
+}

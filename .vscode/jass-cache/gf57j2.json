@@ -1,0 +1,78 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Setups\\YesNoDialog.j",
+  "items": [
+    {
+      "label": "Dialog",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ndialog array Dialog\n```\n\n\n**_>:** `UISwls/MExampleAdvance/Setups/YesNoDialog.j`",
+      "sortText": "2_var_Dialog",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Setups\\YesNoDialog.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "YesBtn",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nbutton array YesBtn\n```\n\n\n**_>:** `UISwls/MExampleAdvance/Setups/YesNoDialog.j`",
+      "sortText": "2_var_YesBtn",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Setups\\YesNoDialog.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "YesCallback",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nfilterfunc array YesCallback\n```\n\n\n**_>:** `UISwls/MExampleAdvance/Setups/YesNoDialog.j`",
+      "sortText": "2_var_YesCallback",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Setups\\YesNoDialog.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "YesNoPlayer",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nplayer YesNoPlayer\n```\n\n\n**_>:** `UISwls/MExampleAdvance/Setups/YesNoDialog.j`",
+      "sortText": "2_var_YesNoPlayer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Setups\\YesNoDialog.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "OnClick",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnClick takes nothing returns nothing\n```\n\n\n**_>:** `UISwls/MExampleAdvance/Setups/YesNoDialog.j`",
+      "sortText": "1_func_OnClick",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Setups\\YesNoDialog.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "YesNoDialog",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct YesNoDialog extends array\n```\n\n\n**_>:** `UISwls/MExampleAdvance/Setups/YesNoDialog.j`",
+      "sortText": "1_struct_YesNoDialog",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Setups\\YesNoDialog.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "ShowYesNoDialog",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ShowYesNoDialog takes string title, User user, filterfunc callback returns nothing\n```\n\n\n**_>:** `UISwls/MExampleAdvance/Setups/YesNoDialog.j`",
+      "sortText": "1_func_ShowYesNoDialog",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Setups\\YesNoDialog.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "INITS",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule INITS\n```\n\n\n**_>:** `UISwls/MExampleAdvance/Setups/YesNoDialog.j`",
+      "sortText": "1_module_INITS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Setups\\YesNoDialog.j",
+      "statementType": "ModuleDeclaration"
+    }
+  ],
+  "timestamp": 1770940147672
+}

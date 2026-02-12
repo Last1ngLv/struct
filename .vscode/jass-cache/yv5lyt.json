@@ -1,0 +1,33 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\SimError.j",
+  "items": [
+    {
+      "label": "error",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nsound error\n```\n\n\n**_>:** `UISwls/Libraries/SimError.j`",
+      "sortText": "2_var_error",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\SimError.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "SimError",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SimError takes player ForPlayer, string msg returns nothing\n```\n\n\n---\n\n====================================================================================================\n\n**_>:** `UISwls/Libraries/SimError.j`",
+      "sortText": "1_func_SimError",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\SimError.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction init takes nothing returns nothing\n```\n\n\n**_>:** `UISwls/Libraries/SimError.j`",
+      "sortText": "1_func_init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\SimError.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1770939985497
+}

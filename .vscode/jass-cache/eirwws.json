@@ -1,0 +1,24 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Inventory\\InventoryPlugins.j",
+  "items": [
+    {
+      "label": "InvPlugins",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule InvPlugins\n```\n\n\n---\n\nadd plugins here\n\n**_>:** `UISwls/MExampleAdvance/Inventory/InventoryPlugins.j`",
+      "sortText": "1_module_InvPlugins",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Inventory\\InventoryPlugins.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "InvItemPlugins",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule InvItemPlugins\n```\n\n\n**_>:** `UISwls/MExampleAdvance/Inventory/InventoryPlugins.j`",
+      "sortText": "1_module_InvItemPlugins",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Inventory\\InventoryPlugins.j",
+      "statementType": "ModuleDeclaration"
+    }
+  ],
+  "timestamp": 1770940025043
+}

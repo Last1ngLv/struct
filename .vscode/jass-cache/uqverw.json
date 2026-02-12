@@ -1,0 +1,24 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Setups\\InvItemSetups.j",
+  "items": [
+    {
+      "label": "CustomItemCondition",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction CustomItemCondition takes nothing returns boolean\n```\n\n\n**_>:** `UISwls/MExampleAdvance/Setups/InvItemSetups.j`",
+      "sortText": "1_func_CustomItemCondition",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Setups\\InvItemSetups.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**_>:** `UISwls/MExampleAdvance/Setups/InvItemSetups.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Setups\\InvItemSetups.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1770940107714
+}

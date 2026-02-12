@@ -1,0 +1,15 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Equipment\\EquipmentSockets.j",
+  "items": [
+    {
+      "label": "InvItemSocket",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule InvItemSocket\n```\n\n\n**_>:** `UISwls/MExampleAdvance/Equipment/EquipmentSockets.j`",
+      "sortText": "1_module_InvItemSocket",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Equipment\\EquipmentSockets.j",
+      "statementType": "ModuleDeclaration"
+    }
+  ],
+  "timestamp": 1770940051632
+}
