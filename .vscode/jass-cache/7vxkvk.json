@@ -1,0 +1,204 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\PersistentMove\\libraries\\UnitDex.j",
+  "items": [
+    {
+      "label": "UnitDexConfig",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule UnitDexConfig\n```\n\n\n**_>:** `PersistentMove/libraries/UnitDex.j`",
+      "sortText": "1_module_UnitDexConfig",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\PersistentMove\\libraries\\UnitDex.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "EVENT_UNIT_INDEX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer EVENT_UNIT_INDEX\n```\n\n\n---\n\nEvent types\n\n**_>:** `PersistentMove/libraries/UnitDex.j`",
+      "sortText": "2_var_EVENT_UNIT_INDEX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\PersistentMove\\libraries\\UnitDex.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "EVENT_UNIT_DEINDEX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer EVENT_UNIT_DEINDEX\n```\n\n\n**_>:** `PersistentMove/libraries/UnitDex.j`",
+      "sortText": "2_var_EVENT_UNIT_DEINDEX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\PersistentMove\\libraries\\UnitDex.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "IndexTrig",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ntrigger array IndexTrig\n```\n\n\n---\n\nSystem variables\n\n**_>:** `PersistentMove/libraries/UnitDex.j`",
+      "sortText": "2_var_IndexTrig",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\PersistentMove\\libraries\\UnitDex.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "Index",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger Index\n```\n\n\n**_>:** `PersistentMove/libraries/UnitDex.j`",
+      "sortText": "2_var_Index",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\PersistentMove\\libraries\\UnitDex.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "E",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal E\n```\n\n\n**_>:** `PersistentMove/libraries/UnitDex.j`",
+      "sortText": "2_var_E",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\PersistentMove\\libraries\\UnitDex.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "FilterEnter",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolexpr FilterEnter\n```\n\n\n**_>:** `PersistentMove/libraries/UnitDex.j`",
+      "sortText": "2_var_FilterEnter",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\PersistentMove\\libraries\\UnitDex.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "GetUnitId",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetUnitId takes unit whichUnit returns integer\n```\n\n\n**_>:** `PersistentMove/libraries/UnitDex.j`",
+      "sortText": "1_func_GetUnitId",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\PersistentMove\\libraries\\UnitDex.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetUnitById",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetUnitById takes integer index returns unit\n```\n\n\n**_>:** `PersistentMove/libraries/UnitDex.j`",
+      "sortText": "1_func_GetUnitById",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\PersistentMove\\libraries\\UnitDex.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetIndexedUnit",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetIndexedUnit takes nothing returns unit\n```\n\n\n**_>:** `PersistentMove/libraries/UnitDex.j`",
+      "sortText": "1_func_GetIndexedUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\PersistentMove\\libraries\\UnitDex.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetIndexedUnitId",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetIndexedUnitId takes nothing returns integer\n```\n\n\n**_>:** `PersistentMove/libraries/UnitDex.j`",
+      "sortText": "1_func_GetIndexedUnitId",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\PersistentMove\\libraries\\UnitDex.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "IsUnitIndexed",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction IsUnitIndexed takes unit u returns boolean\n```\n\n\n**_>:** `PersistentMove/libraries/UnitDex.j`",
+      "sortText": "1_func_IsUnitIndexed",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\PersistentMove\\libraries\\UnitDex.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "UnitDexEnable",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction UnitDexEnable takes boolean flag returns nothing\n```\n\n\n**_>:** `PersistentMove/libraries/UnitDex.j`",
+      "sortText": "1_func_UnitDexEnable",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\PersistentMove\\libraries\\UnitDex.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "IsIndexingEnabled",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction IsIndexingEnabled takes nothing returns boolean\n```\n\n\n**_>:** `PersistentMove/libraries/UnitDex.j`",
+      "sortText": "1_func_IsIndexingEnabled",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\PersistentMove\\libraries\\UnitDex.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "RegisterUnitIndexEvent",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction RegisterUnitIndexEvent takes boolexpr func, integer eventtype returns triggercondition\n```\n\n\n**_>:** `PersistentMove/libraries/UnitDex.j`",
+      "sortText": "1_func_RegisterUnitIndexEvent",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\PersistentMove\\libraries\\UnitDex.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "RemoveUnitIndexEvent",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction RemoveUnitIndexEvent takes triggercondition c, integer eventtype returns nothing\n```\n\n\n**_>:** `PersistentMove/libraries/UnitDex.j`",
+      "sortText": "1_func_RemoveUnitIndexEvent",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\PersistentMove\\libraries\\UnitDex.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TriggerRegisterUnitIndexEvent",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction TriggerRegisterUnitIndexEvent takes trigger t, integer eventtype returns nothing\n```\n\n\n**_>:** `PersistentMove/libraries/UnitDex.j`",
+      "sortText": "1_func_TriggerRegisterUnitIndexEvent",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\PersistentMove\\libraries\\UnitDex.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnUnitIndex",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnUnitIndex takes code func returns triggercondition\n```\n\n\n**_>:** `PersistentMove/libraries/UnitDex.j`",
+      "sortText": "1_func_OnUnitIndex",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\PersistentMove\\libraries\\UnitDex.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnUnitDeindex",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnUnitDeindex takes code func returns triggercondition\n```\n\n\n**_>:** `PersistentMove/libraries/UnitDex.j`",
+      "sortText": "1_func_OnUnitDeindex",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\PersistentMove\\libraries\\UnitDex.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "UnitDex",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct UnitDex extends array\n```\n\n\n**_>:** `PersistentMove/libraries/UnitDex.j`",
+      "sortText": "1_struct_UnitDex",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\PersistentMove\\libraries\\UnitDex.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "UnitDexRemove",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction UnitDexRemove takes unit u, boolean runEvents returns boolean\n```\n\n\n**_>:** `PersistentMove/libraries/UnitDex.j`",
+      "sortText": "1_func_UnitDexRemove",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\PersistentMove\\libraries\\UnitDex.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "UnitDexCore",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule UnitDexCore\n```\n\n\n**_>:** `PersistentMove/libraries/UnitDex.j`",
+      "sortText": "1_module_UnitDexCore",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\PersistentMove\\libraries\\UnitDex.j",
+      "statementType": "ModuleDeclaration"
+    }
+  ],
+  "timestamp": 1770938247898
+}

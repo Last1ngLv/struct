@@ -1,0 +1,258 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Inventory.j",
+  "items": [
+    {
+      "label": "Inventory",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct Inventory\n```\n\n\n**_>:** `CustomUI/libraries/Inventory.j`",
+      "sortText": "1_struct_Inventory",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Inventory.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "GracePeriod",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GracePeriod takes nothing returns nothing\n```\n\n\n**_>:** `CustomUI/libraries/Inventory.j`",
+      "sortText": "1_func_GracePeriod",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Inventory.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "DisableButtonIfUsingTimer",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction DisableButtonIfUsingTimer takes UIButton but, real time returns nothing\n```\n\n\n**_>:** `CustomUI/libraries/Inventory.j`",
+      "sortText": "1_func_DisableButtonIfUsingTimer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Inventory.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "LClickItemSlot",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction LClickItemSlot takes nothing returns boolean\n```\n\n\n**_>:** `CustomUI/libraries/Inventory.j`",
+      "sortText": "1_func_LClickItemSlot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Inventory.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "RClickItemSlot",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction RClickItemSlot takes nothing returns boolean\n```\n\n\n**_>:** `CustomUI/libraries/Inventory.j`",
+      "sortText": "1_func_RClickItemSlot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Inventory.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**_>:** `CustomUI/libraries/Inventory.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Inventory.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "SEED_START",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer SEED_START\n```\n\n\n**_>:** `CustomUI/libraries/Inventory.j`",
+      "sortText": "2_var_SEED_START",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Inventory.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "SEED_END",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer SEED_END\n```\n\n\n**_>:** `CustomUI/libraries/Inventory.j`",
+      "sortText": "2_var_SEED_END",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Inventory.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "InvItem",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct InvItem\n```\n\n\n**_>:** `CustomUI/libraries/Inventory.j`",
+      "sortText": "1_struct_InvItem",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Inventory.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "GetInvItem",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetInvItem takes integer id returns InvItem\n```\n\n\n**_>:** `CustomUI/libraries/Inventory.j`",
+      "sortText": "1_func_GetInvItem",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Inventory.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetItemInfo",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetItemInfo takes integer id returns string\n```\n\n\n**_>:** `CustomUI/libraries/Inventory.j`",
+      "sortText": "1_func_GetItemInfo",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Inventory.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetItemDescription",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetItemDescription takes integer id returns string\n```\n\n\n**_>:** `CustomUI/libraries/Inventory.j`",
+      "sortText": "1_func_GetItemDescription",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Inventory.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetItemIcon",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetItemIcon takes integer id returns integer\n```\n\n\n**_>:** `CustomUI/libraries/Inventory.j`",
+      "sortText": "1_func_GetItemIcon",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Inventory.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "CreateInvItem",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction CreateInvItem takes integer id, integer icon, integer cost, integer abil, string info returns InvItem\n```\n\n\n**_>:** `CustomUI/libraries/Inventory.j`",
+      "sortText": "1_func_CreateInvItem",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Inventory.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "InvCustomItem",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct InvCustomItem extends array\n```\n\n\n**_>:** `CustomUI/libraries/Inventory.j`",
+      "sortText": "1_struct_InvCustomItem",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Inventory.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "InvPlugins",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule InvPlugins\n```\n\n\n---\n\nadd plugins here\n\n**_>:** `CustomUI/libraries/Inventory.j`",
+      "sortText": "1_module_InvPlugins",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Inventory.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "InvItemPlugins",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule InvItemPlugins\n```\n\n\n**_>:** `CustomUI/libraries/Inventory.j`",
+      "sortText": "1_module_InvItemPlugins",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Inventory.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "InvTooltip",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule InvTooltip\n```\n\n\n**_>:** `CustomUI/libraries/Inventory.j`",
+      "sortText": "1_module_InvTooltip",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Inventory.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "InvItemTooltip",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule InvItemTooltip\n```\n\n\n**_>:** `CustomUI/libraries/Inventory.j`",
+      "sortText": "1_module_InvItemTooltip",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Inventory.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "InvFuncLClickSlot",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nfilterfunc InvFuncLClickSlot\n```\n\n\n**_>:** `CustomUI/libraries/Inventory.j`",
+      "sortText": "2_var_InvFuncLClickSlot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Inventory.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "InvFuncRClickSlot",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nfilterfunc InvFuncRClickSlot\n```\n\n\n**_>:** `CustomUI/libraries/Inventory.j`",
+      "sortText": "2_var_InvFuncRClickSlot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Inventory.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "InvPlayerLastSlot",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array InvPlayerLastSlot\n```\n\n\n**_>:** `CustomUI/libraries/Inventory.j`",
+      "sortText": "2_var_InvPlayerLastSlot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Inventory.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "InvPlayerLastButton",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nUIButton array InvPlayerLastButton\n```\n\n\n**_>:** `CustomUI/libraries/Inventory.j`",
+      "sortText": "2_var_InvPlayerLastButton",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Inventory.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "InvButtonDisabled",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean array InvButtonDisabled\n```\n\n\n**_>:** `CustomUI/libraries/Inventory.j`",
+      "sortText": "2_var_InvButtonDisabled",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Inventory.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "InvEventPlayer",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nplayer InvEventPlayer\n```\n\n\n**_>:** `CustomUI/libraries/Inventory.j`",
+      "sortText": "2_var_InvEventPlayer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Inventory.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "InvEventItem",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nInvItem InvEventItem\n```\n\n\n**_>:** `CustomUI/libraries/Inventory.j`",
+      "sortText": "2_var_InvEventItem",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Inventory.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "InvEventSlot",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger InvEventSlot\n```\n\n\n**_>:** `CustomUI/libraries/Inventory.j`",
+      "sortText": "2_var_InvEventSlot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Inventory.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "INVENTORY_KEY_START",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer INVENTORY_KEY_START\n```\n\n\n**_>:** `CustomUI/libraries/Inventory.j`",
+      "sortText": "2_var_INVENTORY_KEY_START",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Inventory.j",
+      "statementType": "VariableDeclaration"
+    }
+  ],
+  "timestamp": 1770938247892
+}

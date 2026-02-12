@@ -1,0 +1,96 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Inventory.j",
+  "items": [
+    {
+      "symbolName": "RACE_BORDERS_START",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Inventory.j",
+      "content": "\n```jass\nstatic constant integer RACE_BORDERS_START\n```\n\n\n**所属:** `Inventory`\n**文件:** `CustomUI/libraries/Inventory.j`"
+    },
+    {
+      "symbolName": "pid",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Inventory.j",
+      "content": "\n```jass\nreadonly integer pid\n```\n\n\n**所属:** `Inventory`\n**文件:** `CustomUI/libraries/Inventory.j`"
+    },
+    {
+      "symbolName": "UI_REFRESH_RATE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Inventory.j",
+      "content": "\n```jass\nstatic constant real UI_REFRESH_RATE\n```\n\n\n---\n\nhow fast the UI updates\n\n**所属:** `Inventory`\n**文件:** `CustomUI/libraries/Inventory.j`"
+    },
+    {
+      "symbolName": "Inventory",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Inventory.j",
+      "content": "\n```jass\nstruct Inventory\n```\n\n\n**文件:** `CustomUI/libraries/Inventory.j`"
+    },
+    {
+      "symbolName": "MAX_SLOTS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Inventory.j",
+      "content": "\n```jass\nstatic constant integer MAX_SLOTS\n```\n\n\n---\n\ndon't edit below here unless you know what you're doing\n\n**所属:** `Inventory`\n**文件:** `CustomUI/libraries/Inventory.j`"
+    },
+    {
+      "symbolName": "InventoryCore",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Inventory.j",
+      "content": "\n```jass\nlibrary InventoryCore requires UserInterface, InventoryItem, PlayerUtils, TimerUtils initializer Init\n```\n\n\n**文件:** `CustomUI/libraries/Inventory.j`"
+    },
+    {
+      "symbolName": "DisplayCount",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Inventory.j",
+      "content": "\n```jass\nstatic readonly integer DisplayCount\n```\n\n\n**所属:** `Inventory`\n**文件:** `CustomUI/libraries/Inventory.j`"
+    },
+    {
+      "symbolName": "X",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Inventory.j",
+      "content": "\n```jass\nstatic real X\n```\n\n\n---\n\nconfiguration\n\nlocation of inventory\n\n**所属:** `Inventory`\n**文件:** `CustomUI/libraries/Inventory.j`"
+    },
+    {
+      "symbolName": "displayed",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Inventory.j",
+      "content": "\n```jass\nreadonly boolean displayed\n```\n\n\n**所属:** `Inventory`\n**文件:** `CustomUI/libraries/Inventory.j`"
+    },
+    {
+      "symbolName": "getButton",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Inventory.j",
+      "content": "\n```jass\nmethod getButton takes integer index returns UIButton\n```\n\n\n**所属:** `Inventory`\n**文件:** `CustomUI/libraries/Inventory.j`"
+    },
+    {
+      "symbolName": "SLOT_HEIGHT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Inventory.j",
+      "content": "\n```jass\nstatic constant real SLOT_HEIGHT\n```\n\n\n**所属:** `Inventory`\n**文件:** `CustomUI/libraries/Inventory.j`"
+    },
+    {
+      "symbolName": "SLOT_WIDTH",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Inventory.j",
+      "content": "\n```jass\nstatic constant real SLOT_WIDTH\n```\n\n\n---\n\nicon size\n\n**所属:** `Inventory`\n**文件:** `CustomUI/libraries/Inventory.j`"
+    },
+    {
+      "symbolName": "InvPlayerLastButton",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Inventory.j",
+      "content": "\n```jass\nUIButton array InvPlayerLastButton\n```\n\n\n**文件:** `CustomUI/libraries/Inventory.j`"
+    },
+    {
+      "symbolName": "show",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Inventory.j",
+      "content": "\n```jass\nmethod show takes boolean flag, Camera cam returns nothing\n```\n\n\n**所属:** `Inventory`\n**文件:** `CustomUI/libraries/Inventory.j`"
+    },
+    {
+      "symbolName": "tempCustomId",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Inventory.j",
+      "content": "\n```jass\ninteger tempCustomId\n```\n\n\n**所属:** `InvItem`\n**文件:** `CustomUI/libraries/Inventory.j`"
+    },
+    {
+      "symbolName": "RClickItemSlot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Inventory.j",
+      "content": "\n```jass\nfunction RClickItemSlot takes nothing returns boolean\n```\n\n\n**文件:** `CustomUI/libraries/Inventory.j`"
+    },
+    {
+      "symbolName": "setButton",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Inventory.j",
+      "content": "\n```jass\nmethod setButton takes integer index, UIButton value returns nothing\n```\n\n\n**所属:** `Inventory`\n**文件:** `CustomUI/libraries/Inventory.j`"
+    },
+    {
+      "symbolName": "id",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Inventory.j",
+      "content": "\n```jass\ninteger id\n```\n\n\n**所属:** `InvItem`\n**文件:** `CustomUI/libraries/Inventory.j`"
+    }
+  ],
+  "timestamp": 1770887665532
+}

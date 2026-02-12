@@ -1,0 +1,36 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\PersistentMove\\ToTest\\PersistentMovement.j",
+  "items": [
+    {
+      "symbolName": "destroy",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\PersistentMove\\ToTest\\PersistentMovement.j",
+      "content": "\n```jass\nmethod destroy takes nothing returns nothing\n```\n\n\n**所属:** `PersistentMove`\n**文件:** `PersistentMove/ToTest/PersistentMovement.j`"
+    },
+    {
+      "symbolName": "onSpell",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\PersistentMove\\ToTest\\PersistentMovement.j",
+      "content": "\n```jass\nmethod onSpell takes nothing returns boolean\n```\n\n\n**所属:** `PersistentMove`\n**文件:** `PersistentMove/ToTest/PersistentMovement.j`"
+    },
+    {
+      "symbolName": "targetY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\PersistentMove\\ToTest\\PersistentMovement.j",
+      "content": "\n```jass\nreal targetY\n```\n\n\n**所属:** `PersistentMove`\n**文件:** `PersistentMove/ToTest/PersistentMovement.j`"
+    },
+    {
+      "symbolName": "u",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\PersistentMove\\ToTest\\PersistentMovement.j",
+      "content": "\n```jass\nunit u\n```\n\n\n---\n\n========================================================================\n\nINSTANCE DATA\n\n========================================================================\n\n**所属:** `PersistentMove`\n**文件:** `PersistentMove/ToTest/PersistentMovement.j`"
+    },
+    {
+      "symbolName": "dummy",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\PersistentMove\\ToTest\\PersistentMovement.j",
+      "content": "\n```jass\nunit dummy\n```\n\n\n**所属:** `PersistentMove`\n**文件:** `PersistentMove/ToTest/PersistentMovement.j`"
+    },
+    {
+      "symbolName": "create",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\PersistentMove\\ToTest\\PersistentMovement.j",
+      "content": "\n```jass\nstatic method create takes unit whichUnit, real x, real y returns thistype\n```\n\n\n---\n\n========================================================================\n\nCREATE\n\nSe llama SOLO cuando la unidad recibe una orden de movimiento\n\n========================================================================\n\n**所属:** `PersistentMove`\n**文件:** `PersistentMove/ToTest/PersistentMovement.j`"
+    }
+  ],
+  "timestamp": 1770798040731
+}

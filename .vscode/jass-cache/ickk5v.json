@@ -1,0 +1,1052 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+  "items": [
+    {
+      "label": "InterfaceConfig",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule InterfaceConfig\n```\n\n\n---\n\nconfiguration\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_module_InterfaceConfig",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "DummyTree",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ndestructable DummyTree\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "2_var_DummyTree",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "Trig",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ntrigger Trig\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "2_var_Trig",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "ClickedButton",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nUIButton ClickedButton\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "2_var_ClickedButton",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "ClickingPlayer",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nplayer ClickingPlayer\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "2_var_ClickingPlayer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DummyLoc",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nlocation DummyLoc\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "2_var_DummyLoc",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "GetTriggerButton",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetTriggerButton takes nothing returns UIButton\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_func_GetTriggerButton",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetClickingPlayer",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetClickingPlayer takes nothing returns player\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_func_GetClickingPlayer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Eval",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Eval takes filterfunc func returns boolean\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_func_Eval",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetTerrainZ",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetTerrainZ takes real x, real y returns real\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_func_GetTerrainZ",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "FindModelAnimIndex",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction FindModelAnimIndex takes real w, real h, real z returns integer\n```\n\n\n---\n\nadjusts\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_func_FindModelAnimIndex",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "FindModelSize",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction FindModelSize takes real w, real h, real z returns real\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_func_FindModelSize",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "LocalReal",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction LocalReal takes player p, real forPlayer, real default returns real\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_func_LocalReal",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "ApplySkin",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ApplySkin takes unit u, integer texture returns boolean\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_func_ApplySkin",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "UIButton",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct UIButton\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_struct_UIButton",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "UIPicture",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct UIPicture\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_struct_UIPicture",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "UIText",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct UIText\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_struct_UIText",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "Interface",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct Interface extends array\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_struct_Interface",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "CreateWindow",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction CreateWindow takes real x, real y, real size, real width, real height, race playerRace returns UIPicture\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_func_CreateWindow",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "InterfaceClickR",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction InterfaceClickR takes nothing returns nothing\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_func_InterfaceClickR",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "InterfaceClickL",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction InterfaceClickL takes nothing returns nothing\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_func_InterfaceClickL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "InterfaceClickL_Timer",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction InterfaceClickL_Timer takes nothing returns nothing\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_func_InterfaceClickL_Timer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "UnitDexConfig",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule UnitDexConfig\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_module_UnitDexConfig",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "EVENT_UNIT_INDEX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer EVENT_UNIT_INDEX\n```\n\n\n---\n\nEvent types\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "2_var_EVENT_UNIT_INDEX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "EVENT_UNIT_DEINDEX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer EVENT_UNIT_DEINDEX\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "2_var_EVENT_UNIT_DEINDEX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "IndexTrig",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ntrigger array IndexTrig\n```\n\n\n---\n\nSystem variables\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "2_var_IndexTrig",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "Index",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger Index\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "2_var_Index",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "E",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal E\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "2_var_E",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "FilterEnter",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolexpr FilterEnter\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "2_var_FilterEnter",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "GetUnitId",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetUnitId takes unit whichUnit returns integer\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_func_GetUnitId",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetUnitById",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetUnitById takes integer index returns unit\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_func_GetUnitById",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetIndexedUnit",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetIndexedUnit takes nothing returns unit\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_func_GetIndexedUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetIndexedUnitId",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetIndexedUnitId takes nothing returns integer\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_func_GetIndexedUnitId",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "IsUnitIndexed",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction IsUnitIndexed takes unit u returns boolean\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_func_IsUnitIndexed",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "UnitDexEnable",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction UnitDexEnable takes boolean flag returns nothing\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_func_UnitDexEnable",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "IsIndexingEnabled",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction IsIndexingEnabled takes nothing returns boolean\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_func_IsIndexingEnabled",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "RegisterUnitIndexEvent",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction RegisterUnitIndexEvent takes boolexpr func, integer eventtype returns triggercondition\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_func_RegisterUnitIndexEvent",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "RemoveUnitIndexEvent",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction RemoveUnitIndexEvent takes triggercondition c, integer eventtype returns nothing\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_func_RemoveUnitIndexEvent",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TriggerRegisterUnitIndexEvent",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction TriggerRegisterUnitIndexEvent takes trigger t, integer eventtype returns nothing\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_func_TriggerRegisterUnitIndexEvent",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnUnitIndex",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnUnitIndex takes code func returns triggercondition\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_func_OnUnitIndex",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnUnitDeindex",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnUnitDeindex takes code func returns triggercondition\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_func_OnUnitDeindex",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "UnitDexRemove",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction UnitDexRemove takes unit u, boolean runEvents returns boolean\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_func_UnitDexRemove",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "UnitDex",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct UnitDex extends array\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_struct_UnitDex",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "UnitDexCore",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule UnitDexCore\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_module_UnitDexCore",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "AUTO_COLOR_UNITS",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant boolean AUTO_COLOR_UNITS\n```\n\n\n---\n\nautomatically change unit colors when changing player color\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "2_var_AUTO_COLOR_UNITS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "ARRAY_LOOKUP",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant boolean ARRAY_LOOKUP\n```\n\n\n---\n\nuse an array for name / color lookups (instead of function calls)\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "2_var_ARRAY_LOOKUP",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HOOK_SAFETY",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant boolean HOOK_SAFETY\n```\n\n\n---\n\nthis only applies if ARRAY_LOOKUP is true\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "2_var_HOOK_SAFETY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "FORCE_PLAYING",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant force FORCE_PLAYING\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "2_var_FORCE_PLAYING",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "Name",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring array Name\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "2_var_Name",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "Hex",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring array Hex\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "2_var_Hex",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "OriginalHex",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring array OriginalHex\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "2_var_OriginalHex",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "CurrentColor",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nplayercolor array CurrentColor\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "2_var_CurrentColor",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "User",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct User extends array\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_struct_User",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "PlayerUtilsInit",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule PlayerUtilsInit\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_module_PlayerUtilsInit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "CHECK_DELTAZ_X",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real CHECK_DELTAZ_X\n```\n\n\n---\n\nconfiguration\n\nlocation on the map where the terrain is the default level\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "2_var_CHECK_DELTAZ_X",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "CHECK_DELTAZ_Y",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real CHECK_DELTAZ_Y\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "2_var_CHECK_DELTAZ_Y",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "SCREEN_WIDTH",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real SCREEN_WIDTH\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "2_var_SCREEN_WIDTH",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "SCREEN_HEIGHT",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real SCREEN_HEIGHT\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "2_var_SCREEN_HEIGHT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "SCREEN_ASPECT_RATIO",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real SCREEN_ASPECT_RATIO\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "2_var_SCREEN_ASPECT_RATIO",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "CAMERA_DUMMY_TYPE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer CAMERA_DUMMY_TYPE\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "2_var_CAMERA_DUMMY_TYPE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "CAMERA_DUMMY_PLAYER",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant player CAMERA_DUMMY_PLAYER\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "2_var_CAMERA_DUMMY_PLAYER",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DeltaZ",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal DeltaZ\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "2_var_DeltaZ",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DummyUnit",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nunit array DummyUnit\n```\n\n\n---\n\nendconfig\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "2_var_DummyUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "GetCameraDeltaZ",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetCameraDeltaZ takes nothing returns real\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_func_GetCameraDeltaZ",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Matrix4Perspective1",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Matrix4Perspective1 takes MATRIX4 Output, real fovy, real Aspect, real zn, real zf returns MATRIX4\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_func_Matrix4Perspective1",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Matrix4Perspective2",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Matrix4Perspective2 takes MATRIX4 Output, real n, real f, real r, real l, real t, real b returns MATRIX4\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_func_Matrix4Perspective2",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Matrix4Look",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Matrix4Look takes MATRIX4 Output, VECTOR3 PosCamera, VECTOR3 AxisX, VECTOR3 AxisY, VECTOR3 AxisZ returns MATRIX4\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_func_Matrix4Look",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Camera",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct Camera\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_struct_Camera",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "CamInitModule",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule CamInitModule\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_module_CamInitModule",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "CamInit",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct CamInit\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_struct_CamInit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "R2I_N",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction R2I_N takes real r returns integer\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_func_R2I_N",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "VECTOR3",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct VECTOR3\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_struct_VECTOR3",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "Vec3Add",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Vec3Add takes VECTOR3 Output, VECTOR3 v1, VECTOR3 v2 returns VECTOR3\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_func_Vec3Add",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Vec3Subtract",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Vec3Subtract takes VECTOR3 Output, VECTOR3 v1, VECTOR3 v2 returns VECTOR3\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_func_Vec3Subtract",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Vec3Scale",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Vec3Scale takes VECTOR3 Output, VECTOR3 v, real r returns VECTOR3\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_func_Vec3Scale",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Vec3Division",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Vec3Division takes VECTOR3 Output, VECTOR3 v, real r returns VECTOR3\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_func_Vec3Division",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Vec3Length",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Vec3Length takes VECTOR3 v returns real\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_func_Vec3Length",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Vec3LengthSq",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Vec3LengthSq takes VECTOR3 v returns real\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_func_Vec3LengthSq",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Vec3Normalize",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Vec3Normalize takes VECTOR3 Output, VECTOR3 v returns VECTOR3\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_func_Vec3Normalize",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Vec3Dot",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Vec3Dot takes VECTOR3 v1, VECTOR3 v2 returns real\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_func_Vec3Dot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Vec3Cross",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Vec3Cross takes VECTOR3 Output, VECTOR3 v1, VECTOR3 v2 returns VECTOR3\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_func_Vec3Cross",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Vec3Transform_1",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Vec3Transform_1 takes VECTOR3 Output, VECTOR3 v, MATRIX3 m returns VECTOR3\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_func_Vec3Transform_1",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Vec3Transform_2",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Vec3Transform_2 takes VECTOR3 Output, VECTOR3 v, MATRIX4 m returns VECTOR3\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_func_Vec3Transform_2",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "MATRIX3",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct MATRIX3\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_struct_MATRIX3",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "Matrix3Multiply",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Matrix3Multiply takes MATRIX3 Output, MATRIX3 M1, MATRIX3 M2 returns MATRIX3\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_func_Matrix3Multiply",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Matrix3Scaling",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Matrix3Scaling takes MATRIX3 Output, real x, real y, real z returns MATRIX3\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_func_Matrix3Scaling",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Matrix3RotationX",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Matrix3RotationX takes MATRIX3 Output, real a returns MATRIX3\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_func_Matrix3RotationX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Matrix3RotationY",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Matrix3RotationY takes MATRIX3 Output, real a returns MATRIX3\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_func_Matrix3RotationY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Matrix3RotationZ",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Matrix3RotationZ takes MATRIX3 Output, real a returns MATRIX3\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_func_Matrix3RotationZ",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Matrix3RotationAxis",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Matrix3RotationAxis takes MATRIX3 Output, VECTOR3 v, real a returns MATRIX3\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_func_Matrix3RotationAxis",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Matrix3RotationYawPitchRoll",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Matrix3RotationYawPitchRoll takes MATRIX3 Output, real Yaw, real Pitch, real Roll returns MATRIX3\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_func_Matrix3RotationYawPitchRoll",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "MATRIX4",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct MATRIX4\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_struct_MATRIX4",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "Matrix4Multiply",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Matrix4Multiply takes MATRIX4 Output, MATRIX4 M1, MATRIX4 M2 returns MATRIX4\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_func_Matrix4Multiply",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "USE_HASH_TABLE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant boolean USE_HASH_TABLE\n```\n\n\n---\n\nHow to tweak timer utils:\n\nUSE_HASH_TABLE = true  (new blue)\n\n* SAFEST\n\n* SLOWEST (though hash tables are kind of fast)\n\nUSE_HASH_TABLE = false, USE_FLEXIBLE_OFFSET = true  (orange)\n\n* kinda safe (except there is a limit in the number of timers)\n\n* ALMOST FAST\n\nUSE_HASH_TABLE = false, USE_FLEXIBLE_OFFSET = false (red)\n\n* THE FASTEST (though is only  faster than the previous method\n\nafter using the optimizer on the map)\n\n* THE LEAST SAFE ( you may have to tweak OFSSET manually for it to\n\nwork)\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "2_var_USE_HASH_TABLE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "USE_FLEXIBLE_OFFSET",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant boolean USE_FLEXIBLE_OFFSET\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "2_var_USE_FLEXIBLE_OFFSET",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "OFFSET",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer OFFSET\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "2_var_OFFSET",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "VOFFSET",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger VOFFSET\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "2_var_VOFFSET",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "QUANTITY",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer QUANTITY\n```\n\n\n---\n\nTimers to preload at map init:\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "2_var_QUANTITY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "ARRAY_SIZE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer ARRAY_SIZE\n```\n\n\n---\n\nChanging this  to something big will allow you to keep recycling\n\ntimers even when there are already AN INCREDIBLE AMOUNT of timers in\n\nthe stack. But it will make things far slower so that's probably a bad idea...\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "2_var_ARRAY_SIZE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "ht",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nhashtable ht\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "2_var_ht",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "SetTimerData",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SetTimerData takes timer t, integer value returns nothing\n```\n\n\n---\n\nIt is dependent on jasshelper's recent inlining optimization in order to perform correctly.\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_func_SetTimerData",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetTimerData",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetTimerData takes timer t returns integer\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_func_GetTimerData",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "tN",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger tN\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "2_var_tN",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HELD",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer HELD\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "2_var_HELD",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "didinit",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean didinit\n```\n\n\n---\n\nuse a totally random number here, the more improbable someone uses it, the better.\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "2_var_didinit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TIMERUTIS_PRIVATE_NewTimerCommon",
+      "kind": 14,
+      "detail": "TextMacro",
+      "documentation": "\n```jass\ntextmacro TIMERUTIS_PRIVATE_NewTimerCommon takes VALUE\n```\n\n\n---\n\n==========================================================================================\n\nI needed to decide between duplicating code ignoring the \"Once and only once\" rule\n\nand using the ugly textmacros. I guess textmacros won.\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "insertText": "TIMERUTIS_PRIVATE_NewTimerCommon",
+      "sortText": "3_macro_TIMERUTIS_PRIVATE_NewTimerCommon",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "TextMacroStatement"
+    },
+    {
+      "label": "NewTimerEx",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction NewTimerEx takes integer value returns timer\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_func_NewTimerEx",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "NewTimer",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction NewTimer takes nothing returns timer\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_func_NewTimer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "ReleaseTimer",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ReleaseTimer takes timer t returns nothing\n```\n\n\n---\n\n==========================================================================================\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_func_ReleaseTimer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction init takes nothing returns nothing\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_func_init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "MAX_INSTANCES",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer MAX_INSTANCES\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "2_var_MAX_INSTANCES",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "Table__make",
+      "kind": 14,
+      "detail": "TextMacro",
+      "documentation": "\n```jass\ntextmacro Table__make takes name, type, key\n```\n\n\n---\n\nHey: Don't instanciate other people's textmacros that you are not supposed to, thanks.\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "insertText": "Table__make",
+      "sortText": "3_macro_Table__make",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "TextMacroStatement"
+    },
+    {
+      "label": "Table",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct Table extends GTable\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_struct_Table",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "error",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nsound error\n```\n\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "2_var_error",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "SimError",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SimError takes player ForPlayer, string msg returns nothing\n```\n\n\n---\n\n====================================================================================================\n\n**_>:** `CustomUI/libraries/libraries.j`",
+      "sortText": "1_func_SimError",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\libraries.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1770938247893
+}

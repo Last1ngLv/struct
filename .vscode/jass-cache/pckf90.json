@@ -1,0 +1,285 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Setups.j",
+  "items": [
+    {
+      "label": "CustomItemCondition",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction CustomItemCondition takes nothing returns boolean\n```\n\n\n**_>:** `CustomUI/libraries/Setups.j`",
+      "sortText": "1_func_CustomItemCondition",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Setups.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**_>:** `CustomUI/libraries/Setups.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Setups.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Trig_show_equip_Conditions",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Trig_show_equip_Conditions takes nothing returns boolean\n```\n\n\n**_>:** `CustomUI/libraries/Setups.j`",
+      "sortText": "1_func_Trig_show_equip_Conditions",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Setups.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Trig_show_equip_Actions",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Trig_show_equip_Actions takes nothing returns nothing\n```\n\n\n**_>:** `CustomUI/libraries/Setups.j`",
+      "sortText": "1_func_Trig_show_equip_Actions",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Setups.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "InitTrig_Show_Equipment",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction InitTrig_Show_Equipment takes nothing returns nothing\n```\n\n\n---\n\n===========================================================================\n\n**_>:** `CustomUI/libraries/Setups.j`",
+      "sortText": "1_func_InitTrig_Show_Equipment",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Setups.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Trig_show_bag_Conditions",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Trig_show_bag_Conditions takes nothing returns boolean\n```\n\n\n**_>:** `CustomUI/libraries/Setups.j`",
+      "sortText": "1_func_Trig_show_bag_Conditions",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Setups.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Trig_show_bag_Actions",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Trig_show_bag_Actions takes nothing returns nothing\n```\n\n\n**_>:** `CustomUI/libraries/Setups.j`",
+      "sortText": "1_func_Trig_show_bag_Actions",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Setups.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "InitTrig_Show_Inventory",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction InitTrig_Show_Inventory takes nothing returns nothing\n```\n\n\n---\n\n===========================================================================\n\n**_>:** `CustomUI/libraries/Setups.j`",
+      "sortText": "1_func_InitTrig_Show_Inventory",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Setups.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Actions",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Actions takes nothing returns nothing\n```\n\n\n**_>:** `CustomUI/libraries/Setups.j`",
+      "sortText": "1_func_Actions",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Setups.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "IsInvItm2H",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction IsInvItm2H takes InvItem itm returns boolean\n```\n\n\n**_>:** `CustomUI/libraries/Setups.j`",
+      "sortText": "1_func_IsInvItm2H",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Setups.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "SellItem",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nInvItem array SellItem\n```\n\n\n**_>:** `CustomUI/libraries/Setups.j`",
+      "sortText": "2_var_SellItem",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Setups.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "SellSlot",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array SellSlot\n```\n\n\n**_>:** `CustomUI/libraries/Setups.j`",
+      "sortText": "2_var_SellSlot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Setups.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "SellInv",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nInventory array SellInv\n```\n\n\n**_>:** `CustomUI/libraries/Setups.j`",
+      "sortText": "2_var_SellInv",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Setups.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "OnAgree",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnAgree takes nothing returns boolean\n```\n\n\n**_>:** `CustomUI/libraries/Setups.j`",
+      "sortText": "1_func_OnAgree",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Setups.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "SockItem",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nInvItem array SockItem\n```\n\n\n**_>:** `CustomUI/libraries/Setups.j`",
+      "sortText": "2_var_SockItem",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Setups.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "SockSlot",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array SockSlot\n```\n\n\n**_>:** `CustomUI/libraries/Setups.j`",
+      "sortText": "2_var_SockSlot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Setups.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "SockInv",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nInventory array SockInv\n```\n\n\n**_>:** `CustomUI/libraries/Setups.j`",
+      "sortText": "2_var_SockInv",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Setups.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "SockLast",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array SockLast\n```\n\n\n**_>:** `CustomUI/libraries/Setups.j`",
+      "sortText": "2_var_SockLast",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Setups.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "SocketLast",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger SocketLast\n```\n\n\n**_>:** `CustomUI/libraries/Setups.j`",
+      "sortText": "2_var_SocketLast",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Setups.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "SocketSlot",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger SocketSlot\n```\n\n\n**_>:** `CustomUI/libraries/Setups.j`",
+      "sortText": "2_var_SocketSlot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Setups.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "SocketInv",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nInventory SocketInv\n```\n\n\n**_>:** `CustomUI/libraries/Setups.j`",
+      "sortText": "2_var_SocketInv",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Setups.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "OnIndex",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnIndex takes nothing returns boolean\n```\n\n\n**_>:** `CustomUI/libraries/Setups.j`",
+      "sortText": "1_func_OnIndex",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Setups.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnDeath",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnDeath takes nothing returns nothing\n```\n\n\n**_>:** `CustomUI/libraries/Setups.j`",
+      "sortText": "1_func_OnDeath",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Setups.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Dialog",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ndialog array Dialog\n```\n\n\n**_>:** `CustomUI/libraries/Setups.j`",
+      "sortText": "2_var_Dialog",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Setups.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "YesBtn",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nbutton array YesBtn\n```\n\n\n**_>:** `CustomUI/libraries/Setups.j`",
+      "sortText": "2_var_YesBtn",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Setups.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "YesCallback",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nfilterfunc array YesCallback\n```\n\n\n**_>:** `CustomUI/libraries/Setups.j`",
+      "sortText": "2_var_YesCallback",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Setups.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "YesNoPlayer",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nplayer YesNoPlayer\n```\n\n\n**_>:** `CustomUI/libraries/Setups.j`",
+      "sortText": "2_var_YesNoPlayer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Setups.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "OnClick",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnClick takes nothing returns nothing\n```\n\n\n**_>:** `CustomUI/libraries/Setups.j`",
+      "sortText": "1_func_OnClick",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Setups.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "YesNoDialog",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct YesNoDialog extends array\n```\n\n\n**_>:** `CustomUI/libraries/Setups.j`",
+      "sortText": "1_struct_YesNoDialog",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Setups.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "ShowYesNoDialog",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ShowYesNoDialog takes string title, User user, filterfunc callback returns nothing\n```\n\n\n**_>:** `CustomUI/libraries/Setups.j`",
+      "sortText": "1_func_ShowYesNoDialog",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Setups.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "INITS",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule INITS\n```\n\n\n**_>:** `CustomUI/libraries/Setups.j`",
+      "sortText": "1_module_INITS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Setups.j",
+      "statementType": "ModuleDeclaration"
+    }
+  ],
+  "timestamp": 1770938247893
+}

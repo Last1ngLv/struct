@@ -1,0 +1,116 @@
+{
+  "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j",
+  "items": [
+    {
+      "symbolName": "Filter",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j",
+      "content": "\n```jass\nnative Filter takes code func returns filterfunc\n```\n\n\n---\n\n过滤方法\n\n可理解为条件/布尔值，用于选取/匹配时指定具体的筛选条件\n\n用完请注意排泄(使用DestroyFilter，并set null)，在AI脚本中不可用\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j`"
+    },
+    {
+      "symbolName": "TriggerSleepAction",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j",
+      "content": "\n```jass\nnative TriggerSleepAction takes real timeout returns nothing\n```\n\n\n---\n\n等待实际时间(指定时间)\n\n在触发器中暂停执行指定的时间\n\n示例: call TriggerSleepAction(2.0) // 等待2秒\n\n**Parameters:**\n- **`timeout`**: 等待时间（秒）\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j`"
+    },
+    {
+      "symbolName": "GetTriggerUnit",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j",
+      "content": "\n```jass\nconstant native GetTriggerUnit takes nothing returns unit\n```\n\n\n---\n\nTrigger Unit Based Event API\n\nreturns handle to unit which triggered the most recent event when called from\n\nwithin a trigger action function...returns null handle when used incorrectly\n\n事件响应 获取触发单位\n\n获取触发单位\n\n获取触发当前事件的单位\n\n示例: set u = GetTriggerUnit() // 获取触发单位\n\n**Returns:** 触发事件的单位\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j`"
+    },
+    {
+      "symbolName": "EVENT_PLAYER_UNIT_ISSUED_POINT_ORDER",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j",
+      "content": "\n```jass\nconstant playerunitevent EVENT_PLAYER_UNIT_ISSUED_POINT_ORDER\n```\n\n\n---\n\n玩家单位事件 发布命令(指定点)\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j`"
+    },
+    {
+      "symbolName": "GetUnitTypeId",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j",
+      "content": "\n```jass\nconstant native GetUnitTypeId takes unit whichUnit returns integer\n```\n\n\n---\n\n获取指定单位类型(返回四字符码)\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j`"
+    },
+    {
+      "symbolName": "GetIssuedOrderId",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j",
+      "content": "\n```jass\nconstant native GetIssuedOrderId takes nothing returns integer\n```\n\n\n---\n\n事件响应 获取发布的命令ID\n\nEVENT_PLAYER_UNIT_ISSUED_ORDER\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j`"
+    },
+    {
+      "symbolName": "EVENT_PLAYER_UNIT_DEATH",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j",
+      "content": "\n```jass\nconstant playerunitevent EVENT_PLAYER_UNIT_DEATH\n```\n\n\n---\n\n玩家单位事件 单位死亡\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j`"
+    },
+    {
+      "symbolName": "EVENT_PLAYER_UNIT_ISSUED_ORDER",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j",
+      "content": "\n```jass\nconstant playerunitevent EVENT_PLAYER_UNIT_ISSUED_ORDER\n```\n\n\n---\n\n玩家单位事件 发布命令(无目标)\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j`"
+    },
+    {
+      "symbolName": "EVENT_PLAYER_UNIT_SPELL_EFFECT",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j",
+      "content": "\n```jass\nconstant playerunitevent EVENT_PLAYER_UNIT_SPELL_EFFECT\n```\n\n\n---\n\n玩家单位事件 发动技能效果(后摇开始)\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j`"
+    },
+    {
+      "symbolName": "boolexpr",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j",
+      "content": "\n```jass\ntype boolexpr = agent\n```\n\n\n---\n\n条件表达式\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j`"
+    },
+    {
+      "symbolName": "fogstate",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j",
+      "content": "\n```jass\ntype fogstate = handle\n```\n\n\n---\n\n迷雾状态\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j`"
+    },
+    {
+      "symbolName": "ubersplat",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j",
+      "content": "\n```jass\ntype ubersplat = handle\n```\n\n\n---\n\n地表纹理变化\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j`"
+    },
+    {
+      "symbolName": "ability",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j",
+      "content": "\n```jass\ntype ability = agent\n```\n\n\n---\n\n技能\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j`"
+    },
+    {
+      "symbolName": "agent",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j",
+      "content": "\n```jass\ntype agent = handle\n```\n\n\n---\n\nNative types. All native functions take extended handle types when\n\npossible to help prevent passing bad values to native functions\n\n引用计数的对象/代理\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j`"
+    },
+    {
+      "symbolName": "GetUnitName",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j",
+      "content": "\n```jass\nconstant native GetUnitName takes unit whichUnit returns string\n```\n\n\n---\n\n获取指定单位（本地化语言的）名字\n\n在AI脚本中默认返回null\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j`"
+    },
+    {
+      "symbolName": "GetUnitDefaultFlyHeight",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j",
+      "content": "\n```jass\nnative GetUnitDefaultFlyHeight takes unit whichUnit returns real\n```\n\n\n---\n\n获取指定单位飞行高度 (默认值)\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j`"
+    },
+    {
+      "symbolName": "ClearTextMessages",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j",
+      "content": "\n```jass\nnative ClearTextMessages takes nothing returns nothing\n```\n\n\n---\n\n清空文本信息(所有玩家) [R]\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j`"
+    },
+    {
+      "symbolName": "GetOwningPlayer",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j",
+      "content": "\n```jass\nconstant native GetOwningPlayer takes unit whichUnit returns player\n```\n\n\n---\n\n获取指定单位所属玩家\n\n获取单位的拥有者玩家\n\n示例: set p = GetOwningPlayer(u) // 获取单位u的拥有者\n\n**Parameters:**\n- **`whichUnit`**: 要获取拥有者的单位\n\n**Returns:** 单位的拥有者玩家\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j`"
+    },
+    {
+      "symbolName": "filterfunc",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j",
+      "content": "\n```jass\ntype filterfunc = boolexpr\n```\n\n\n---\n\n过滤方法\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j`"
+    },
+    {
+      "symbolName": "GetUnitUserData",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j",
+      "content": "\n```jass\nnative GetUnitUserData takes unit whichUnit returns integer\n```\n\n\n---\n\n获取指定单位自定义值\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j`"
+    },
+    {
+      "symbolName": "GetObjectName",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j",
+      "content": "\n```jass\nconstant native GetObjectName takes integer objectId returns string\n```\n\n\n---\n\nLooks up the \"name\" field for any object (unit, item, ability)\n\n获取对象(单位、物品、技能等任何对象)名称(字符串) [C]\n\n名称为英语，未本地化\n\n在AI脚本返回值为 null\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j`"
+    },
+    {
+      "symbolName": "AddSpecialEffectTarget",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j",
+      "content": "\n```jass\nnative AddSpecialEffectTarget takes string modelName, widget targetWidget, string attachPointName returns effect\n```\n\n\n---\n\n新建特效(绑定到单位/物品/可破坏物) [R]\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j`"
+    }
+  ],
+  "timestamp": 1770887116928
+}

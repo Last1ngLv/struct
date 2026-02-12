@@ -1,0 +1,66 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\swlsSys.j",
+  "items": [
+    {
+      "symbolName": "titleFunc",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\swlsSys.j",
+      "content": "\n```jass\nstring titleFunc\n```\n\n\n**所属:** `Wave`\n**文件:** `Swls/ToTest/swlsSys.j`"
+    },
+    {
+      "symbolName": "WaveSlot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\swlsSys.j",
+      "content": "\n```jass\nstruct WaveSlot\n```\n\n\n**文件:** `Swls/ToTest/swlsSys.j`"
+    },
+    {
+      "symbolName": "y",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\swlsSys.j",
+      "content": "\n```jass\nreal y\n```\n\n\n**所属:** `PendingSpawn`\n**文件:** `Swls/ToTest/swlsSys.j`"
+    },
+    {
+      "symbolName": "OnUnitDeath",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\swlsSys.j",
+      "content": "\n```jass\nfunction OnUnitDeath takes nothing returns nothing\n```\n\n\n---\n\n==================================================\n\nTrigger de muerte\n\n==================================================\n\n**文件:** `Swls/ToTest/swlsSys.j`"
+    },
+    {
+      "symbolName": "create",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\swlsSys.j",
+      "content": "\n```jass\nstatic method create takes integer PlayerLim, integer nearChance, real sec, multiboard mb, string titleFunc, integer wIndex, integer wTotal, string endFun returns Wave\n```\n\n\n**所属:** `Wave`\n**文件:** `Swls/ToTest/swlsSys.j`"
+    },
+    {
+      "symbolName": "totalKilledBoss",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\swlsSys.j",
+      "content": "\n```jass\ninteger totalKilledBoss\n```\n\n\n**所属:** `Wave`\n**文件:** `Swls/ToTest/swlsSys.j`"
+    },
+    {
+      "symbolName": "wave",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\swlsSys.j",
+      "content": "\n```jass\nWave wave\n```\n\n\n**所属:** `PendingSpawn`\n**文件:** `Swls/ToTest/swlsSys.j`"
+    },
+    {
+      "symbolName": "WaveByTimer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\swlsSys.j",
+      "content": "\n```jass\nTable WaveByTimer\n```\n\n\n**文件:** `Swls/ToTest/swlsSys.j`"
+    },
+    {
+      "symbolName": "SlotByUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\swlsSys.j",
+      "content": "\n```jass\nTable SlotByUnit\n```\n\n\n**文件:** `Swls/ToTest/swlsSys.j`"
+    },
+    {
+      "symbolName": "WaveByUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\swlsSys.j",
+      "content": "\n```jass\nTable WaveByUnit\n```\n\n\n**文件:** `Swls/ToTest/swlsSys.j`"
+    },
+    {
+      "symbolName": "pid",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\swlsSys.j",
+      "content": "\n```jass\ninteger pid\n```\n\n\n**所属:** `PendingSpawn`\n**文件:** `Swls/ToTest/swlsSys.j`"
+    },
+    {
+      "symbolName": "unitId",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Swls\\ToTest\\swlsSys.j",
+      "content": "\n```jass\ninteger unitId\n```\n\n\n**所属:** `WaveSlot`\n**文件:** `Swls/ToTest/swlsSys.j`"
+    }
+  ],
+  "timestamp": 1770887670364
+}

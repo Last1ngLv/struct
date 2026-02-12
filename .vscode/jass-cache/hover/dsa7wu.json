@@ -1,0 +1,16 @@
+{
+  "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\AIScripts.ai",
+  "items": [
+    {
+      "symbolName": "wave",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\AIScripts.ai",
+      "content": "\n```jass\nconstant integer wave\n```\n\n\n---\n\n暗夜及亡灵攻击波次\n\n暗夜在冰封王座AI脚本使用，亡灵在混乱之治AI脚本使用\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\AIScripts.ai`"
+    },
+    {
+      "symbolName": "User",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\AIScripts.ai",
+      "content": "\n```jass\nconstant player User\n```\n\n\n---\n\n玩家变量\n\n标记战役的真人玩家，以便AI精准攻击敌人（防止战役给玩家设置了AI盟友）\n\n部分官方战役AI脚本的变量\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\AIScripts.ai`"
+    }
+  ],
+  "timestamp": 1770886246107
+}

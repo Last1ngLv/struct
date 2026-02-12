@@ -1,0 +1,116 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\PersistentMove\\ToTest\\MovementSystem.j",
+  "items": [
+    {
+      "symbolName": "DEBUG_MODE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\PersistentMove\\ToTest\\MovementSystem.j",
+      "content": "\n```jass\nconstant boolean DEBUG_MODE\n```\n\n\n---\n\nPara debugging\n\n**文件:** `PersistentMove/ToTest/MovementSystem.j`"
+    },
+    {
+      "symbolName": "destroy",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\PersistentMove\\ToTest\\MovementSystem.j",
+      "content": "\n```jass\nmethod destroy takes nothing returns nothing\n```\n\n\n---\n\n=======================================================================\n\nLimpiar completamente y destruir\n\n=======================================================================\n\n**所属:** `MovementData`\n**文件:** `PersistentMove/ToTest/MovementSystem.j`"
+    },
+    {
+      "symbolName": "INSTANT_CASTS_USE_DUMMY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\PersistentMove\\ToTest\\MovementSystem.j",
+      "content": "\n```jass\nconstant boolean INSTANT_CASTS_USE_DUMMY\n```\n\n\n---\n\nComportamiento\n\n**文件:** `PersistentMove/ToTest/MovementSystem.j`"
+    },
+    {
+      "symbolName": "table",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\PersistentMove\\ToTest\\MovementSystem.j",
+      "content": "\n```jass\nTable table\n```\n\n\n**所属:** `MovementData`\n**文件:** `PersistentMove/ToTest/MovementSystem.j`"
+    },
+    {
+      "symbolName": "targetY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\PersistentMove\\ToTest\\MovementSystem.j",
+      "content": "\n```jass\nreal targetY\n```\n\n\n**所属:** `MovementData`\n**文件:** `PersistentMove/ToTest/MovementSystem.j`"
+    },
+    {
+      "symbolName": "source",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\PersistentMove\\ToTest\\MovementSystem.j",
+      "content": "\n```jass\nunit source\n```\n\n\n**所属:** `MovementData`\n**文件:** `PersistentMove/ToTest/MovementSystem.j`"
+    },
+    {
+      "symbolName": "MovementSystem",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\PersistentMove\\ToTest\\MovementSystem.j",
+      "content": "\n```jass\nlibrary MovementSystem requires TimerUtils, Table, RegisterPlayerUnitEvent, SpellEffectEvent, IsUnitChanneling\n```\n\n\n---\n\n===========================================================================\n\nMovementSystem v2.0\n\nSistema de movimiento con dummy para continuar trayectoria durante casts\n\n- Usa SpellEffectEvent para registrar hechizos específicos\n\n- Más eficiente: solo procesa los hechizos que registres\n\n- Soporta tanto hechizos instantáneos como canalizados\n\nRequires:\n\n---------\n\n- TimerUtils\n\n- Table\n\n- RegisterPlayerUnitEvent\n\n- SpellEffectEvent\n\n- IsUnitChanneling (opcional pero recomendado)\n\n===========================================================================\n\n**文件:** `PersistentMove/ToTest/MovementSystem.j`"
+    },
+    {
+      "symbolName": "has",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\PersistentMove\\ToTest\\MovementSystem.j",
+      "content": "\n```jass\nstatic method has takes unit u returns boolean\n```\n\n\n---\n\n=======================================================================\n\nVerificar si existe\n\n=======================================================================\n\n**所属:** `MovementData`\n**文件:** `PersistentMove/ToTest/MovementSystem.j`"
+    },
+    {
+      "symbolName": "dummy",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\PersistentMove\\ToTest\\MovementSystem.j",
+      "content": "\n```jass\nunit dummy\n```\n\n\n**所属:** `MovementData`\n**文件:** `PersistentMove/ToTest/MovementSystem.j`"
+    },
+    {
+      "symbolName": "INTERVAL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\PersistentMove\\ToTest\\MovementSystem.j",
+      "content": "\n```jass\nconstant real INTERVAL\n```\n\n\n---\n\nConfiguración\n\n**文件:** `PersistentMove/ToTest/MovementSystem.j`"
+    },
+    {
+      "symbolName": "periodic",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\PersistentMove\\ToTest\\MovementSystem.j",
+      "content": "\n```jass\nmethod periodic takes nothing returns nothing\n```\n\n\n---\n\n=======================================================================\n\nCallback periódico del timer\n\n=======================================================================\n\n**所属:** `MovementData`\n**文件:** `PersistentMove/ToTest/MovementSystem.j`"
+    },
+    {
+      "symbolName": "hasDummy",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\PersistentMove\\ToTest\\MovementSystem.j",
+      "content": "\n```jass\nboolean hasDummy\n```\n\n\n**所属:** `MovementData`\n**文件:** `PersistentMove/ToTest/MovementSystem.j`"
+    },
+    {
+      "symbolName": "MovementData_OnSpellEffect",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\PersistentMove\\ToTest\\MovementSystem.j",
+      "content": "\n```jass\nfunction MovementData_OnSpellEffect takes nothing returns nothing\n```\n\n\n---\n\n===========================================================================\n\nCallback para hechizos registrados (EFFECT)\n\n===========================================================================\n\n**文件:** `PersistentMove/ToTest/MovementSystem.j`"
+    },
+    {
+      "symbolName": "MovementData",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\PersistentMove\\ToTest\\MovementSystem.j",
+      "content": "\n```jass\nstruct MovementData\n```\n\n\n---\n\n===========================================================================\n\nStruct principal\n\n===========================================================================\n\n**文件:** `PersistentMove/ToTest/MovementSystem.j`"
+    },
+    {
+      "symbolName": "OnSpellEndCast",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\PersistentMove\\ToTest\\MovementSystem.j",
+      "content": "\n```jass\nfunction OnSpellEndCast takes nothing returns boolean\n```\n\n\n---\n\n===========================================================================\n\nEvento: Fin de hechizo (ENDCAST) - Para todos los hechizos\n\n===========================================================================\n\n**文件:** `PersistentMove/ToTest/MovementSystem.j`"
+    },
+    {
+      "symbolName": "OnStopOrder",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\PersistentMove\\ToTest\\MovementSystem.j",
+      "content": "\n```jass\nfunction OnStopOrder takes nothing returns boolean\n```\n\n\n---\n\n===========================================================================\n\nEvento: Orden de detener\n\n===========================================================================\n\n**文件:** `PersistentMove/ToTest/MovementSystem.j`"
+    },
+    {
+      "symbolName": "OnUnitRemoved",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\PersistentMove\\ToTest\\MovementSystem.j",
+      "content": "\n```jass\nfunction OnUnitRemoved takes nothing returns boolean\n```\n\n\n---\n\n===========================================================================\n\nEvento: Remoción\n\n===========================================================================\n\n**文件:** `PersistentMove/ToTest/MovementSystem.j`"
+    },
+    {
+      "symbolName": "isMoving",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\PersistentMove\\ToTest\\MovementSystem.j",
+      "content": "\n```jass\nboolean isMoving\n```\n\n\n**所属:** `MovementData`\n**文件:** `PersistentMove/ToTest/MovementSystem.j`"
+    },
+    {
+      "symbolName": "OnMoveOrder",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\PersistentMove\\ToTest\\MovementSystem.j",
+      "content": "\n```jass\nfunction OnMoveOrder takes nothing returns boolean\n```\n\n\n---\n\n===========================================================================\n\nEvento: Orden de movimiento\n\n===========================================================================\n\n**文件:** `PersistentMove/ToTest/MovementSystem.j`"
+    },
+    {
+      "symbolName": "OnUnitDeath",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\PersistentMove\\ToTest\\MovementSystem.j",
+      "content": "\n```jass\nfunction OnUnitDeath takes nothing returns boolean\n```\n\n\n---\n\n===========================================================================\n\nEvento: Muerte\n\n===========================================================================\n\n**文件:** `PersistentMove/ToTest/MovementSystem.j`"
+    },
+    {
+      "symbolName": "get",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\PersistentMove\\ToTest\\MovementSystem.j",
+      "content": "\n```jass\nstatic method get takes unit u returns thistype\n```\n\n\n---\n\n=======================================================================\n\nObtener instancia desde unidad\n\n=======================================================================\n\n**所属:** `MovementData`\n**文件:** `PersistentMove/ToTest/MovementSystem.j`"
+    },
+    {
+      "symbolName": "create",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\PersistentMove\\ToTest\\MovementSystem.j",
+      "content": "\n```jass\nstatic method create takes unit u returns thistype\n```\n\n\n---\n\n=======================================================================\n\nConstructor\n\n=======================================================================\n\n**所属:** `MovementData`\n**文件:** `PersistentMove/ToTest/MovementSystem.j`"
+    }
+  ],
+  "timestamp": 1770798040731
+}

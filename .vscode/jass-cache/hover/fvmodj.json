@@ -1,0 +1,16 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\PersistentMove\\libraries\\timerutils.j",
+  "items": [
+    {
+      "symbolName": "GetTimerData",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\PersistentMove\\libraries\\timerutils.j",
+      "content": "\n```jass\nfunction GetTimerData takes timer t returns integer\n```\n\n\n**文件:** `PersistentMove/libraries/timerutils.j`"
+    },
+    {
+      "symbolName": "TimerUtils",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\PersistentMove\\libraries\\timerutils.j",
+      "content": "\n```jass\nlibrary TimerUtils initializer init\n```\n\n\n---\n\nTESH.scrollpos=-1\n\nTESH.alwaysfold=0\n\n**文件:** `PersistentMove/libraries/timerutils.j`"
+    }
+  ],
+  "timestamp": 1770805167331
+}

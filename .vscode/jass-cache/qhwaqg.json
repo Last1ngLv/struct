@@ -1,0 +1,285 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Equipment.j",
+  "items": [
+    {
+      "label": "FuncLClickSlot",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nfilterfunc FuncLClickSlot\n```\n\n\n**_>:** `CustomUI/libraries/Equipment.j`",
+      "sortText": "2_var_FuncLClickSlot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Equipment.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "FuncRClickSlot",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nfilterfunc FuncRClickSlot\n```\n\n\n**_>:** `CustomUI/libraries/Equipment.j`",
+      "sortText": "2_var_FuncRClickSlot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Equipment.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "PlayerLastSlot",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array PlayerLastSlot\n```\n\n\n**_>:** `CustomUI/libraries/Equipment.j`",
+      "sortText": "2_var_PlayerLastSlot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Equipment.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HERO_WINDOW_NAME",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HERO_WINDOW_NAME takes unit u returns string\n```\n\n\n**_>:** `CustomUI/libraries/Equipment.j`",
+      "sortText": "1_func_HERO_WINDOW_NAME",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Equipment.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Equipment",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct Equipment\n```\n\n\n**_>:** `CustomUI/libraries/Equipment.j`",
+      "sortText": "1_struct_Equipment",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Equipment.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "OnInventoryItemClick",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnInventoryItemClick takes nothing returns nothing\n```\n\n\n**_>:** `CustomUI/libraries/Equipment.j`",
+      "sortText": "1_func_OnInventoryItemClick",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Equipment.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnInventoryItemRightClick",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnInventoryItemRightClick takes nothing returns nothing\n```\n\n\n**_>:** `CustomUI/libraries/Equipment.j`",
+      "sortText": "1_func_OnInventoryItemRightClick",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Equipment.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "RClickItemSlot",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction RClickItemSlot takes nothing returns boolean\n```\n\n\n**_>:** `CustomUI/libraries/Equipment.j`",
+      "sortText": "1_func_RClickItemSlot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Equipment.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "LClickItemSlot",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction LClickItemSlot takes nothing returns boolean\n```\n\n\n**_>:** `CustomUI/libraries/Equipment.j`",
+      "sortText": "1_func_LClickItemSlot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Equipment.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**_>:** `CustomUI/libraries/Equipment.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Equipment.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "BonusString",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring array BonusString\n```\n\n\n**_>:** `CustomUI/libraries/Equipment.j`",
+      "sortText": "2_var_BonusString",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Equipment.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "InvItemEquipment",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule InvItemEquipment\n```\n\n\n**_>:** `CustomUI/libraries/Equipment.j`",
+      "sortText": "1_module_InvItemEquipment",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Equipment.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "SetEquipItemStats",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SetEquipItemStats takes integer slot, integer s2, integer ab, integer lvl, integer utype, integer rab, integer dmg, integer def, integer str, integer agi, integer it, integer as, integer sight, integer lreg, integer mreg, InvItem itm returns InvItem\n```\n\n\n**_>:** `CustomUI/libraries/Equipment.j`",
+      "sortText": "1_func_SetEquipItemStats",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Equipment.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "InvItemSocket",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule InvItemSocket\n```\n\n\n**_>:** `CustomUI/libraries/Equipment.j`",
+      "sortText": "1_module_InvItemSocket",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Equipment.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "HeroModels",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable HeroModels\n```\n\n\n**_>:** `CustomUI/libraries/Equipment.j`",
+      "sortText": "2_var_HeroModels",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Equipment.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "Path",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring array Path\n```\n\n\n**_>:** `CustomUI/libraries/Equipment.j`",
+      "sortText": "2_var_Path",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Equipment.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "Models",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger Models\n```\n\n\n**_>:** `CustomUI/libraries/Equipment.j`",
+      "sortText": "2_var_Models",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Equipment.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HeroModelData",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct HeroModelData\n```\n\n\n**_>:** `CustomUI/libraries/Equipment.j`",
+      "sortText": "1_struct_HeroModelData",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Equipment.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "EquipSetHeroModel",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction EquipSetHeroModel takes integer utype, real scale, string path returns nothing\n```\n\n\n**_>:** `CustomUI/libraries/Equipment.j`",
+      "sortText": "1_func_EquipSetHeroModel",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Equipment.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "EquipGetHeroModel",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction EquipGetHeroModel takes integer id returns HeroModelData\n```\n\n\n**_>:** `CustomUI/libraries/Equipment.j`",
+      "sortText": "1_func_EquipGetHeroModel",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Equipment.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "ParseTypeToSlot",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ParseTypeToSlot takes InvItem itm, string t returns nothing\n```\n\n\n---\n\nconfiguration\n\n**_>:** `CustomUI/libraries/Equipment.j`",
+      "sortText": "1_func_ParseTypeToSlot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Equipment.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "ParseClass",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ParseClass takes InvItem itm, string c returns nothing\n```\n\n\n**_>:** `CustomUI/libraries/Equipment.j`",
+      "sortText": "1_func_ParseClass",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Equipment.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "ParseBonusParam",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ParseBonusParam takes InvItem itm, string param, string value, string min, string max returns nothing\n```\n\n\n**_>:** `CustomUI/libraries/Equipment.j`",
+      "sortText": "1_func_ParseBonusParam",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Equipment.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Char2Id",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Char2Id takes string c returns integer\n```\n\n\n---\n\nend\n\nString2Rawcode:\n\n**_>:** `CustomUI/libraries/Equipment.j`",
+      "sortText": "1_func_Char2Id",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Equipment.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "String2Id",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction String2Id takes string s returns integer\n```\n\n\n**_>:** `CustomUI/libraries/Equipment.j`",
+      "sortText": "1_func_String2Id",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Equipment.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Id2Char",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Id2Char takes integer i returns string\n```\n\n\n**_>:** `CustomUI/libraries/Equipment.j`",
+      "sortText": "1_func_Id2Char",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Equipment.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Id2String",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Id2String takes integer id returns string\n```\n\n\n**_>:** `CustomUI/libraries/Equipment.j`",
+      "sortText": "1_func_Id2String",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Equipment.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "ParseRawCodeStr",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ParseRawCodeStr takes string value returns integer\n```\n\n\n---\n\nend\n\n**_>:** `CustomUI/libraries/Equipment.j`",
+      "sortText": "1_func_ParseRawCodeStr",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Equipment.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "ParseParam",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ParseParam takes InvItem itm, string param, string value returns nothing\n```\n\n\n**_>:** `CustomUI/libraries/Equipment.j`",
+      "sortText": "1_func_ParseParam",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Equipment.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TypeSlot",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring TypeSlot\n```\n\n\n**_>:** `CustomUI/libraries/Equipment.j`",
+      "sortText": "2_var_TypeSlot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Equipment.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "InitEquipItem",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction InitEquipItem takes integer itemId, string data returns InvItem\n```\n\n\n**_>:** `CustomUI/libraries/Equipment.j`",
+      "sortText": "1_func_InitEquipItem",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\CustomUI\\libraries\\Equipment.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1770938247891
+}
