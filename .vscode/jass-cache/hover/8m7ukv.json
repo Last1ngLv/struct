@@ -1,0 +1,16 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Inventory\\InventoryItem.j",
+  "items": [
+    {
+      "symbolName": "id",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Inventory\\InventoryItem.j",
+      "content": "\n```jass\ninteger id\n```\n\n\n**所属:** `InvItem`\n**文件:** `UISwls/MExampleAdvance/Inventory/InventoryItem.j`"
+    },
+    {
+      "symbolName": "create",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Inventory\\InventoryItem.j",
+      "content": "\n```jass\nstatic method create takes nothing returns thistype\n```\n\n\n**所属:** `InvCustomItem`\n**文件:** `UISwls/MExampleAdvance/Inventory/InventoryItem.j`"
+    }
+  ],
+  "timestamp": 1770944405794
+}

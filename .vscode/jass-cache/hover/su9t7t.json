@@ -1,0 +1,41 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\Camera.j",
+  "items": [
+    {
+      "symbolName": "create",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\Camera.j",
+      "content": "\n```jass\nstatic method create takes nothing returns thistype\n```\n\n\n**所属:** `Camera`\n**文件:** `UISwls/Libraries/Camera.j`"
+    },
+    {
+      "symbolName": "Camera",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\Camera.j",
+      "content": "\n```jass\nlibrary Camera requires UIMath, PlayerUtils\n```\n\n\n**文件:** `UISwls/Libraries/Camera.j`"
+    },
+    {
+      "symbolName": "Camera",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\Camera.j",
+      "content": "\n```jass\nstruct Camera\n```\n\n\n**文件:** `UISwls/Libraries/Camera.j`"
+    },
+    {
+      "symbolName": "CAMERA_DUMMY_PLAYER",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\Camera.j",
+      "content": "\n```jass\nconstant player CAMERA_DUMMY_PLAYER\n```\n\n\n**文件:** `UISwls/Libraries/Camera.j`"
+    },
+    {
+      "symbolName": "customValue",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\Camera.j",
+      "content": "\n```jass\ninteger customValue\n```\n\n\n**所属:** `Camera`\n**文件:** `UISwls/Libraries/Camera.j`"
+    },
+    {
+      "symbolName": "SCREEN_ASPECT_RATIO",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\Camera.j",
+      "content": "\n```jass\nconstant real SCREEN_ASPECT_RATIO\n```\n\n\n**文件:** `UISwls/Libraries/Camera.j`"
+    },
+    {
+      "symbolName": "SCREEN_HEIGHT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\Camera.j",
+      "content": "\n```jass\nconstant real SCREEN_HEIGHT\n```\n\n\n**文件:** `UISwls/Libraries/Camera.j`"
+    }
+  ],
+  "timestamp": 1770952647418
+}

@@ -1,0 +1,42 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Equipment\\EquipmentItem.j",
+  "items": [
+    {
+      "label": "BonusString",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring array BonusString\n```\n\n\n**_>:** `UISwls/MExampleAdvance/Equipment/EquipmentItem.j`",
+      "sortText": "2_var_BonusString",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Equipment\\EquipmentItem.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**_>:** `UISwls/MExampleAdvance/Equipment/EquipmentItem.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Equipment\\EquipmentItem.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "InvItemEquipment",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule InvItemEquipment\n```\n\n\n**_>:** `UISwls/MExampleAdvance/Equipment/EquipmentItem.j`",
+      "sortText": "1_module_InvItemEquipment",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Equipment\\EquipmentItem.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "SetEquipItemStats",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SetEquipItemStats takes integer slot, integer s2, integer ab, integer lvl, integer utype, integer rab, integer dmg, integer def, integer str, integer agi, integer it, integer as, integer sight, integer lreg, integer mreg, InvItem itm returns InvItem\n```\n\n\n**_>:** `UISwls/MExampleAdvance/Equipment/EquipmentItem.j`",
+      "sortText": "1_func_SetEquipItemStats",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Equipment\\EquipmentItem.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1770944348337
+}

@@ -1,0 +1,11 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Inventory\\InventoryGlobals.j",
+  "items": [
+    {
+      "symbolName": "InvFuncLClickSlot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Inventory\\InventoryGlobals.j",
+      "content": "\n```jass\nfilterfunc InvFuncLClickSlot\n```\n\n\n**文件:** `UISwls/MExampleAdvance/Inventory/InventoryGlobals.j`"
+    }
+  ],
+  "timestamp": 1770952071719
+}

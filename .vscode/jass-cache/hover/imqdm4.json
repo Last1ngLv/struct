@@ -1,0 +1,21 @@
+{
+  "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\blizzard.j",
+  "items": [
+    {
+      "symbolName": "SetPlayerAllianceStateBJ",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\blizzard.j",
+      "content": "\n```jass\nfunction SetPlayerAllianceStateBJ takes player sourcePlayer, player otherPlayer, integer allianceState returns nothing\n```\n\n\n---\n\n设置两位指定玩家的联盟状态\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\blizzard.j`"
+    },
+    {
+      "symbolName": "bj_PLAYER_NEUTRAL_EXTRA",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\blizzard.j",
+      "content": "\n```jass\nconstant integer bj_PLAYER_NEUTRAL_EXTRA\n```\n\n\n---\n\n中立特殊玩家编号（14/26，以1.29区分）\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\blizzard.j`"
+    },
+    {
+      "symbolName": "BJDebugMsg",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\blizzard.j",
+      "content": "\n```jass\nfunction BJDebugMsg takes string msg returns nothing\n```\n\n\n---\n\n***************************************************************************\n\n*\n\n*  Debugging Functions\n\n*\n\n***************************************************************************\n\n显示调试文本[C]\n\n**Parameters:**\n- **`msg`**: 文本内容\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\blizzard.j`"
+    }
+  ],
+  "timestamp": 1770947065216
+}

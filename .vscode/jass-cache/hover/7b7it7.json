@@ -1,0 +1,16 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyUI\\StartUI.j",
+  "items": [
+    {
+      "symbolName": "PlayerHero",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyUI\\StartUI.j",
+      "content": "\n```jass\nunit array PlayerHero\n```\n\n\n**文件:** `UISwls/MyUI/StartUI.j`"
+    },
+    {
+      "symbolName": "PlayerCamera",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyUI\\StartUI.j",
+      "content": "\n```jass\nCamera array PlayerCamera\n```\n\n\n**文件:** `UISwls/MyUI/StartUI.j`"
+    }
+  ],
+  "timestamp": 1770945386701
+}

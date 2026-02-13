@@ -1,0 +1,11 @@
+{
+  "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\AIScripts.ai",
+  "items": [
+    {
+      "symbolName": "user",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\AIScripts.ai",
+      "content": "\n```jass\nconstant player user\n```\n\n\n---\n\n玩家变量\n\n标记战役的真人玩家，以便AI精准攻击敌人（防止战役给玩家设置了AI盟友）\n\n部分官方战役AI脚本的变量\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\AIScripts.ai`"
+    }
+  ],
+  "timestamp": 1770944572072
+}

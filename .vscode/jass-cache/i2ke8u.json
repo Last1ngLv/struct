@@ -1,0 +1,213 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\UserInterface.j",
+  "items": [
+    {
+      "label": "InterfaceConfig",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule InterfaceConfig\n```\n\n\n---\n\nconfiguration\n\n**_>:** `UISwls/Libraries/UserInterface.j`",
+      "sortText": "1_module_InterfaceConfig",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\UserInterface.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "DummyTree",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ndestructable DummyTree\n```\n\n\n**_>:** `UISwls/Libraries/UserInterface.j`",
+      "sortText": "2_var_DummyTree",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\UserInterface.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "Trig",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ntrigger Trig\n```\n\n\n**_>:** `UISwls/Libraries/UserInterface.j`",
+      "sortText": "2_var_Trig",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\UserInterface.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "ClickedButton",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nUIButton ClickedButton\n```\n\n\n**_>:** `UISwls/Libraries/UserInterface.j`",
+      "sortText": "2_var_ClickedButton",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\UserInterface.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "ClickingPlayer",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nplayer ClickingPlayer\n```\n\n\n**_>:** `UISwls/Libraries/UserInterface.j`",
+      "sortText": "2_var_ClickingPlayer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\UserInterface.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DummyLoc",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nlocation DummyLoc\n```\n\n\n**_>:** `UISwls/Libraries/UserInterface.j`",
+      "sortText": "2_var_DummyLoc",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\UserInterface.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "GetTriggerButton",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetTriggerButton takes nothing returns UIButton\n```\n\n\n**_>:** `UISwls/Libraries/UserInterface.j`",
+      "sortText": "1_func_GetTriggerButton",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\UserInterface.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetClickingPlayer",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetClickingPlayer takes nothing returns player\n```\n\n\n**_>:** `UISwls/Libraries/UserInterface.j`",
+      "sortText": "1_func_GetClickingPlayer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\UserInterface.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Eval",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Eval takes filterfunc func returns boolean\n```\n\n\n**_>:** `UISwls/Libraries/UserInterface.j`",
+      "sortText": "1_func_Eval",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\UserInterface.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetTerrainZ",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetTerrainZ takes real x, real y returns real\n```\n\n\n**_>:** `UISwls/Libraries/UserInterface.j`",
+      "sortText": "1_func_GetTerrainZ",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\UserInterface.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "FindModelAnimIndex",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction FindModelAnimIndex takes real w, real h, real z returns integer\n```\n\n\n---\n\nadjusts\n\n**_>:** `UISwls/Libraries/UserInterface.j`",
+      "sortText": "1_func_FindModelAnimIndex",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\UserInterface.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "FindModelSize",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction FindModelSize takes real w, real h, real z returns real\n```\n\n\n**_>:** `UISwls/Libraries/UserInterface.j`",
+      "sortText": "1_func_FindModelSize",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\UserInterface.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "LocalReal",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction LocalReal takes player p, real forPlayer, real default returns real\n```\n\n\n**_>:** `UISwls/Libraries/UserInterface.j`",
+      "sortText": "1_func_LocalReal",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\UserInterface.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "ApplySkin",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ApplySkin takes unit u, integer texture returns boolean\n```\n\n\n**_>:** `UISwls/Libraries/UserInterface.j`",
+      "sortText": "1_func_ApplySkin",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\UserInterface.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "UIButton",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct UIButton\n```\n\n\n**_>:** `UISwls/Libraries/UserInterface.j`",
+      "sortText": "1_struct_UIButton",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\UserInterface.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "UIPicture",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct UIPicture\n```\n\n\n**_>:** `UISwls/Libraries/UserInterface.j`",
+      "sortText": "1_struct_UIPicture",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\UserInterface.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "UIText",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct UIText\n```\n\n\n**_>:** `UISwls/Libraries/UserInterface.j`",
+      "sortText": "1_struct_UIText",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\UserInterface.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "Interface",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct Interface extends array\n```\n\n\n**_>:** `UISwls/Libraries/UserInterface.j`",
+      "sortText": "1_struct_Interface",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\UserInterface.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "CreateWindow",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction CreateWindow takes real x, real y, real size, real width, real height, race playerRace returns UIPicture\n```\n\n\n**_>:** `UISwls/Libraries/UserInterface.j`",
+      "sortText": "1_func_CreateWindow",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\UserInterface.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "InterfaceClickR",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction InterfaceClickR takes nothing returns nothing\n```\n\n\n**_>:** `UISwls/Libraries/UserInterface.j`",
+      "sortText": "1_func_InterfaceClickR",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\UserInterface.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "InterfaceClickL",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction InterfaceClickL takes nothing returns nothing\n```\n\n\n**_>:** `UISwls/Libraries/UserInterface.j`",
+      "sortText": "1_func_InterfaceClickL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\UserInterface.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "InterfaceClickL_Timer",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction InterfaceClickL_Timer takes nothing returns nothing\n```\n\n\n**_>:** `UISwls/Libraries/UserInterface.j`",
+      "sortText": "1_func_InterfaceClickL_Timer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\UserInterface.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**_>:** `UISwls/Libraries/UserInterface.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\UserInterface.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1770944348333
+}

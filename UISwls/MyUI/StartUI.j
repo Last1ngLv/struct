@@ -10,7 +10,7 @@ library StartMy initializer Init requires UserInterface
         local integer array urace
         local User user
         
-        set urace[1] = 'Hpal'
+        set urace[1] = 'Hblm'
         set urace[2] = 'Obla'
         set urace[3] = 'Ulic'
         set urace[4] = 'Edem'

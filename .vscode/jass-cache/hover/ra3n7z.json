@@ -1,0 +1,16 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleSimp\\StartGame.j",
+  "items": [
+    {
+      "symbolName": "PlayerHero",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleSimp\\StartGame.j",
+      "content": "\n```jass\nunit array PlayerHero\n```\n\n\n**文件:** `UISwls/MExampleSimp/StartGame.j`"
+    },
+    {
+      "symbolName": "PlayerCamera",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleSimp\\StartGame.j",
+      "content": "\n```jass\nCamera array PlayerCamera\n```\n\n\n**文件:** `UISwls/MExampleSimp/StartGame.j`"
+    }
+  ],
+  "timestamp": 1770945386701
+}

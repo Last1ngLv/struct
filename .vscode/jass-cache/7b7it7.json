@@ -1,0 +1,33 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyUI\\StartUI.j",
+  "items": [
+    {
+      "label": "PlayerCamera",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nCamera array PlayerCamera\n```\n\n\n**_>:** `UISwls/MyUI/StartUI.j`",
+      "sortText": "2_var_PlayerCamera",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyUI\\StartUI.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "PlayerHero",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nunit array PlayerHero\n```\n\n\n**_>:** `UISwls/MyUI/StartUI.j`",
+      "sortText": "2_var_PlayerHero",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyUI\\StartUI.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**_>:** `UISwls/MyUI/StartUI.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyUI\\StartUI.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1770959589896
+}

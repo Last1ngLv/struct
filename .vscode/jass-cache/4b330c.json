@@ -1,0 +1,96 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\PlayerUtils.j",
+  "items": [
+    {
+      "label": "AUTO_COLOR_UNITS",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant boolean AUTO_COLOR_UNITS\n```\n\n\n---\n\nautomatically change unit colors when changing player color\n\n**_>:** `UISwls/Libraries/PlayerUtils.j`",
+      "sortText": "2_var_AUTO_COLOR_UNITS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\PlayerUtils.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "ARRAY_LOOKUP",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant boolean ARRAY_LOOKUP\n```\n\n\n---\n\nuse an array for name / color lookups (instead of function calls)\n\n**_>:** `UISwls/Libraries/PlayerUtils.j`",
+      "sortText": "2_var_ARRAY_LOOKUP",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\PlayerUtils.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HOOK_SAFETY",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant boolean HOOK_SAFETY\n```\n\n\n---\n\nthis only applies if ARRAY_LOOKUP is true\n\n**_>:** `UISwls/Libraries/PlayerUtils.j`",
+      "sortText": "2_var_HOOK_SAFETY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\PlayerUtils.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "FORCE_PLAYING",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant force FORCE_PLAYING\n```\n\n\n**_>:** `UISwls/Libraries/PlayerUtils.j`",
+      "sortText": "2_var_FORCE_PLAYING",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\PlayerUtils.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "Name",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring array Name\n```\n\n\n**_>:** `UISwls/Libraries/PlayerUtils.j`",
+      "sortText": "2_var_Name",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\PlayerUtils.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "Hex",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring array Hex\n```\n\n\n**_>:** `UISwls/Libraries/PlayerUtils.j`",
+      "sortText": "2_var_Hex",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\PlayerUtils.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "OriginalHex",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring array OriginalHex\n```\n\n\n**_>:** `UISwls/Libraries/PlayerUtils.j`",
+      "sortText": "2_var_OriginalHex",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\PlayerUtils.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "CurrentColor",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nplayercolor array CurrentColor\n```\n\n\n**_>:** `UISwls/Libraries/PlayerUtils.j`",
+      "sortText": "2_var_CurrentColor",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\PlayerUtils.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "User",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct User extends array\n```\n\n\n**_>:** `UISwls/Libraries/PlayerUtils.j`",
+      "sortText": "1_struct_User",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\PlayerUtils.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "PlayerUtilsInit",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule PlayerUtilsInit\n```\n\n\n**_>:** `UISwls/Libraries/PlayerUtils.j`",
+      "sortText": "1_module_PlayerUtilsInit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\PlayerUtils.j",
+      "statementType": "ModuleDeclaration"
+    }
+  ],
+  "timestamp": 1770944348329
+}

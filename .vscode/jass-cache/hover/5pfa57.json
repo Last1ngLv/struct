@@ -1,0 +1,56 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Inventory\\InventoryCore.j",
+  "items": [
+    {
+      "symbolName": "create",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Inventory\\InventoryCore.j",
+      "content": "\n```jass\nstatic method create takes unit owner returns thistype\n```\n\n\n**所属:** `Inventory`\n**文件:** `UISwls/MExampleAdvance/Inventory/InventoryCore.j`"
+    },
+    {
+      "symbolName": "user",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Inventory\\InventoryCore.j",
+      "content": "\n```jass\nreadonly User user\n```\n\n\n**所属:** `Inventory`\n**文件:** `UISwls/MExampleAdvance/Inventory/InventoryCore.j`"
+    },
+    {
+      "symbolName": "pid",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Inventory\\InventoryCore.j",
+      "content": "\n```jass\nreadonly integer pid\n```\n\n\n**所属:** `Inventory`\n**文件:** `UISwls/MExampleAdvance/Inventory/InventoryCore.j`"
+    },
+    {
+      "symbolName": "SLOT_SPACING",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Inventory\\InventoryCore.j",
+      "content": "\n```jass\nstatic constant real SLOT_SPACING\n```\n\n\n**所属:** `Inventory`\n**文件:** `UISwls/MExampleAdvance/Inventory/InventoryCore.j`"
+    },
+    {
+      "symbolName": "MAX_SLOTS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Inventory\\InventoryCore.j",
+      "content": "\n```jass\nstatic constant integer MAX_SLOTS\n```\n\n\n---\n\ndon't edit below here unless you know what you're doing\n\n**所属:** `Inventory`\n**文件:** `UISwls/MExampleAdvance/Inventory/InventoryCore.j`"
+    },
+    {
+      "symbolName": "SLOT_OFFSET_Y",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Inventory\\InventoryCore.j",
+      "content": "\n```jass\nstatic constant real SLOT_OFFSET_Y\n```\n\n\n**所属:** `Inventory`\n**文件:** `UISwls/MExampleAdvance/Inventory/InventoryCore.j`"
+    },
+    {
+      "symbolName": "SLOT_WIDTH",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Inventory\\InventoryCore.j",
+      "content": "\n```jass\nstatic constant real SLOT_WIDTH\n```\n\n\n---\n\nicon size\n\n**所属:** `Inventory`\n**文件:** `UISwls/MExampleAdvance/Inventory/InventoryCore.j`"
+    },
+    {
+      "symbolName": "getButton",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Inventory\\InventoryCore.j",
+      "content": "\n```jass\nmethod getButton takes integer index returns UIButton\n```\n\n\n**所属:** `Inventory`\n**文件:** `UISwls/MExampleAdvance/Inventory/InventoryCore.j`"
+    },
+    {
+      "symbolName": "Y",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Inventory\\InventoryCore.j",
+      "content": "\n```jass\nstatic real Y\n```\n\n\n**所属:** `Inventory`\n**文件:** `UISwls/MExampleAdvance/Inventory/InventoryCore.j`"
+    },
+    {
+      "symbolName": "show",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Inventory\\InventoryCore.j",
+      "content": "\n```jass\nmethod show takes boolean flag, Camera cam returns nothing\n```\n\n\n**所属:** `Inventory`\n**文件:** `UISwls/MExampleAdvance/Inventory/InventoryCore.j`"
+    }
+  ],
+  "timestamp": 1770957566500
+}

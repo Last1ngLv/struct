@@ -1,0 +1,177 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\Camera.j",
+  "items": [
+    {
+      "label": "CHECK_DELTAZ_X",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real CHECK_DELTAZ_X\n```\n\n\n---\n\nconfiguration\n\nlocation on the map where the terrain is the default level\n\n**_>:** `UISwls/Libraries/Camera.j`",
+      "sortText": "2_var_CHECK_DELTAZ_X",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\Camera.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "CHECK_DELTAZ_Y",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real CHECK_DELTAZ_Y\n```\n\n\n**_>:** `UISwls/Libraries/Camera.j`",
+      "sortText": "2_var_CHECK_DELTAZ_Y",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\Camera.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "SCREEN_WIDTH",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real SCREEN_WIDTH\n```\n\n\n**_>:** `UISwls/Libraries/Camera.j`",
+      "sortText": "2_var_SCREEN_WIDTH",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\Camera.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "SCREEN_HEIGHT",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real SCREEN_HEIGHT\n```\n\n\n**_>:** `UISwls/Libraries/Camera.j`",
+      "sortText": "2_var_SCREEN_HEIGHT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\Camera.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "SCREEN_ASPECT_RATIO",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real SCREEN_ASPECT_RATIO\n```\n\n\n**_>:** `UISwls/Libraries/Camera.j`",
+      "sortText": "2_var_SCREEN_ASPECT_RATIO",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\Camera.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "CAMERA_DUMMY_TYPE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer CAMERA_DUMMY_TYPE\n```\n\n\n**_>:** `UISwls/Libraries/Camera.j`",
+      "sortText": "2_var_CAMERA_DUMMY_TYPE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\Camera.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "CAMERA_DUMMY_PLAYER",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant player CAMERA_DUMMY_PLAYER\n```\n\n\n**_>:** `UISwls/Libraries/Camera.j`",
+      "sortText": "2_var_CAMERA_DUMMY_PLAYER",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\Camera.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DummyUnit",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nunit array DummyUnit\n```\n\n\n---\n\nendconfig\n\n**_>:** `UISwls/Libraries/Camera.j`",
+      "sortText": "2_var_DummyUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\Camera.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DeltaZ",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal DeltaZ\n```\n\n\n**_>:** `UISwls/Libraries/Camera.j`",
+      "sortText": "2_var_DeltaZ",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\Camera.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "GetCameraDeltaZ",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetCameraDeltaZ takes nothing returns real\n```\n\n\n**_>:** `UISwls/Libraries/Camera.j`",
+      "sortText": "1_func_GetCameraDeltaZ",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\Camera.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Matrix4Perspective1",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Matrix4Perspective1 takes MATRIX4 Output, real fovy, real Aspect, real zn, real zf returns MATRIX4\n```\n\n\n**_>:** `UISwls/Libraries/Camera.j`",
+      "sortText": "1_func_Matrix4Perspective1",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\Camera.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Matrix4Perspective2",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Matrix4Perspective2 takes MATRIX4 Output, real n, real f, real r, real l, real t, real b returns MATRIX4\n```\n\n\n**_>:** `UISwls/Libraries/Camera.j`",
+      "sortText": "1_func_Matrix4Perspective2",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\Camera.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Matrix4Look",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Matrix4Look takes MATRIX4 Output, VECTOR3 PosCamera, VECTOR3 AxisX, VECTOR3 AxisY, VECTOR3 AxisZ returns MATRIX4\n```\n\n\n**_>:** `UISwls/Libraries/Camera.j`",
+      "sortText": "1_func_Matrix4Look",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\Camera.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Camera",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct Camera\n```\n\n\n**_>:** `UISwls/Libraries/Camera.j`",
+      "sortText": "1_struct_Camera",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\Camera.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "TempX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal TempX\n```\n\n\n**_>:** `UISwls/Libraries/Camera.j`",
+      "sortText": "2_var_TempX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\Camera.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TempY",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal TempY\n```\n\n\n**_>:** `UISwls/Libraries/Camera.j`",
+      "sortText": "2_var_TempY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\Camera.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "InitDeltaZ",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction InitDeltaZ takes nothing returns nothing\n```\n\n\n**_>:** `UISwls/Libraries/Camera.j`",
+      "sortText": "1_func_InitDeltaZ",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\Camera.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "CamInitModule",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule CamInitModule\n```\n\n\n**_>:** `UISwls/Libraries/Camera.j`",
+      "sortText": "1_module_CamInitModule",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\Camera.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "CamInit",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct CamInit\n```\n\n\n**_>:** `UISwls/Libraries/Camera.j`",
+      "sortText": "1_struct_CamInit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\Camera.j",
+      "statementType": "StructDeclaration"
+    }
+  ],
+  "timestamp": 1770944348328
+}

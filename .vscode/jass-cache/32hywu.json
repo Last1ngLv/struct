@@ -1,0 +1,24 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Setups\\Unequip Item.j",
+  "items": [
+    {
+      "label": "Actions",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Actions takes nothing returns nothing\n```\n\n\n**_>:** `UISwls/MExampleAdvance/Setups/Unequip Item.j`",
+      "sortText": "1_func_Actions",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Setups\\Unequip Item.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n---\n\n===========================================================================\n\n**_>:** `UISwls/MExampleAdvance/Setups/Unequip Item.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Setups\\Unequip Item.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1770944348347
+}

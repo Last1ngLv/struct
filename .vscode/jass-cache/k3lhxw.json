@@ -1,0 +1,87 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Inventory\\InventoryGlobals.j",
+  "items": [
+    {
+      "label": "InvFuncLClickSlot",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nfilterfunc InvFuncLClickSlot\n```\n\n\n**_>:** `UISwls/MExampleAdvance/Inventory/InventoryGlobals.j`",
+      "sortText": "2_var_InvFuncLClickSlot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Inventory\\InventoryGlobals.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "InvFuncRClickSlot",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nfilterfunc InvFuncRClickSlot\n```\n\n\n**_>:** `UISwls/MExampleAdvance/Inventory/InventoryGlobals.j`",
+      "sortText": "2_var_InvFuncRClickSlot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Inventory\\InventoryGlobals.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "InvPlayerLastSlot",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array InvPlayerLastSlot\n```\n\n\n**_>:** `UISwls/MExampleAdvance/Inventory/InventoryGlobals.j`",
+      "sortText": "2_var_InvPlayerLastSlot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Inventory\\InventoryGlobals.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "InvPlayerLastButton",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nUIButton array InvPlayerLastButton\n```\n\n\n**_>:** `UISwls/MExampleAdvance/Inventory/InventoryGlobals.j`",
+      "sortText": "2_var_InvPlayerLastButton",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Inventory\\InventoryGlobals.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "InvButtonDisabled",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean array InvButtonDisabled\n```\n\n\n**_>:** `UISwls/MExampleAdvance/Inventory/InventoryGlobals.j`",
+      "sortText": "2_var_InvButtonDisabled",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Inventory\\InventoryGlobals.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "InvEventPlayer",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nplayer InvEventPlayer\n```\n\n\n**_>:** `UISwls/MExampleAdvance/Inventory/InventoryGlobals.j`",
+      "sortText": "2_var_InvEventPlayer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Inventory\\InventoryGlobals.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "InvEventItem",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nInvItem InvEventItem\n```\n\n\n**_>:** `UISwls/MExampleAdvance/Inventory/InventoryGlobals.j`",
+      "sortText": "2_var_InvEventItem",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Inventory\\InventoryGlobals.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "InvEventSlot",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger InvEventSlot\n```\n\n\n**_>:** `UISwls/MExampleAdvance/Inventory/InventoryGlobals.j`",
+      "sortText": "2_var_InvEventSlot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Inventory\\InventoryGlobals.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "INVENTORY_KEY_START",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer INVENTORY_KEY_START\n```\n\n\n**_>:** `UISwls/MExampleAdvance/Inventory/InventoryGlobals.j`",
+      "sortText": "2_var_INVENTORY_KEY_START",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Inventory\\InventoryGlobals.j",
+      "statementType": "VariableDeclaration"
+    }
+  ],
+  "timestamp": 1770944348340
+}

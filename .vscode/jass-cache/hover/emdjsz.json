@@ -1,0 +1,91 @@
+{
+  "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j",
+  "items": [
+    {
+      "symbolName": "CreateUnitAtLoc",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j",
+      "content": "\n```jass\nnative CreateUnitAtLoc takes player id, integer unitid, location whichLocation, real face returns unit\n```\n\n\n---\n\n新建单位(指定单位类型及点) [R]\n\n在指定位置点创建单位\n\n示例: set u = CreateUnitAtLoc(Player(0), FourCC(\"hfoo\"), loc, 0.0) // 在位置点创建步兵\n\n**Parameters:**\n- **`id`**: 拥有者玩家\n- **`unitid`**: 单位类型ID（使用FourCC获取）\n- **`whichLocation`**: 位置点\n- **`face`**: 面向角度（弧度）\n\n**Returns:** 创建的单位\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j`"
+    },
+    {
+      "symbolName": "GetHandleId",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j",
+      "content": "\n```jass\nnative GetHandleId takes handle h returns integer\n```\n\n\n---\n\n获取句柄ID\n\n获取任意句柄对象的唯一标识符\n\n示例: GetHandleId(GetTriggerUnit()) = 单位的唯一ID\n\n注意: 一般用于哈希表键值（hashtable key）\n\n**Parameters:**\n- **`h`**: 任意handle子类型（单位、物品、特效等）\n\n**Returns:** 句柄的唯一ID\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j`"
+    },
+    {
+      "symbolName": "GetPlayerId",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j",
+      "content": "\n```jass\nconstant native GetPlayerId takes player whichPlayer returns integer\n```\n\n\n---\n\n获取玩家编号 [R]\n\n编号从0开始，即玩家1编号为0\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j`"
+    },
+    {
+      "symbolName": "GetPlayerRace",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j",
+      "content": "\n```jass\nconstant native GetPlayerRace takes player whichPlayer returns race\n```\n\n\n---\n\n获取玩家种族\n\n返回值[RACE_NIGHTELF,RACE_HUMAN,RACE_ORC,RACE_UNDEAD]\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j`"
+    },
+    {
+      "symbolName": "player",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j",
+      "content": "\n```jass\ntype player = agent\n```\n\n\n---\n\n玩家\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j`"
+    },
+    {
+      "symbolName": "SelectUnit",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j",
+      "content": "\n```jass\nnative SelectUnit takes unit whichUnit, boolean flag returns nothing\n```\n\n\n---\n\n选择/取消选择 指定单位\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j`"
+    },
+    {
+      "symbolName": "FogEnable",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j",
+      "content": "\n```jass\nnative FogEnable takes boolean enable returns nothing\n```\n\n\n---\n\n启用/禁用 迷雾 [R]\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j`"
+    },
+    {
+      "symbolName": "unit",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j",
+      "content": "\n```jass\ntype unit = widget\n```\n\n\n---\n\n单位\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j`"
+    },
+    {
+      "symbolName": "ClearSelection",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j",
+      "content": "\n```jass\nnative ClearSelection takes nothing returns nothing\n```\n\n\n---\n\n清除所有选择(鼠标框选的单位/物品/可破坏物)\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j`"
+    },
+    {
+      "symbolName": "I2S",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j",
+      "content": "\n```jass\nnative I2S takes integer i returns string\n```\n\n\n---\n\n转换整数成字符串\n\n将整数值转换为字符串\n\n示例: I2S(123) = \"123\", I2S(-45) = \"-45\"\n\n**Parameters:**\n- **`i`**: 要转换的整数\n\n**Returns:** 对应的字符串\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j`"
+    },
+    {
+      "symbolName": "Filter",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j",
+      "content": "\n```jass\nnative Filter takes code func returns filterfunc\n```\n\n\n---\n\n过滤方法\n\n可理解为条件/布尔值，用于选取/匹配时指定具体的筛选条件\n\n用完请注意排泄(使用DestroyFilter，并set null)，在AI脚本中不可用\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j`"
+    },
+    {
+      "symbolName": "SetTextTagText",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j",
+      "content": "\n```jass\nnative SetTextTagText takes texttag t, string s, real height returns nothing\n```\n\n\n---\n\n设置漂浮文字文本 [R]\n\n**Parameters:**\n- **`height`**: 文字高度，可使用 TextTagSize2Height(任意实数) 转换字号(字体大小)获得\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j`"
+    },
+    {
+      "symbolName": "button",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j",
+      "content": "\n```jass\ntype button = agent\n```\n\n\n---\n\n按钮\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j`"
+    },
+    {
+      "symbolName": "TriggerEvaluate",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j",
+      "content": "\n```jass\nnative TriggerEvaluate takes trigger whichTrigger returns boolean\n```\n\n\n---\n\n判断触发器条件是否满足\n\n评估触发器的条件，但不执行动作\n\n示例: if TriggerEvaluate(t) then // 检查触发器t的条件\n\n**Parameters:**\n- **`whichTrigger`**: 要评估的触发器\n\n**Returns:** 如果条件满足则返回true，否则返回false\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j`"
+    },
+    {
+      "symbolName": "GetOwningPlayer",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j",
+      "content": "\n```jass\nconstant native GetOwningPlayer takes unit whichUnit returns player\n```\n\n\n---\n\n获取指定单位所属玩家\n\n获取单位的拥有者玩家\n\n示例: set p = GetOwningPlayer(u) // 获取单位u的拥有者\n\n**Parameters:**\n- **`whichUnit`**: 要获取拥有者的单位\n\n**Returns:** 单位的拥有者玩家\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j`"
+    },
+    {
+      "symbolName": "RACE_HUMAN",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j",
+      "content": "\n```jass\nconstant race RACE_HUMAN\n```\n\n\n---\n\n种族 人类\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j`"
+    },
+    {
+      "symbolName": "IssueImmediateOrderById",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j",
+      "content": "\n```jass\nnative IssueImmediateOrderById takes unit whichUnit, integer order returns boolean\n```\n\n\n---\n\n按ID发布命令(无目标)\n\n**Parameters:**\n- **`order`**: 技能命令ID可在 记录物编的文件 找到\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j`"
+    }
+  ],
+  "timestamp": 1770954554975
+}

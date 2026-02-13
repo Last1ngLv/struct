@@ -1,0 +1,33 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Setups\\Equip Item.j",
+  "items": [
+    {
+      "label": "IsInvItm2H",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction IsInvItm2H takes InvItem itm returns boolean\n```\n\n\n**_>:** `UISwls/MExampleAdvance/Setups/Equip Item.j`",
+      "sortText": "1_func_IsInvItm2H",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Setups\\Equip Item.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Actions",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Actions takes nothing returns nothing\n```\n\n\n**_>:** `UISwls/MExampleAdvance/Setups/Equip Item.j`",
+      "sortText": "1_func_Actions",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Setups\\Equip Item.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n---\n\n===========================================================================\n\n**_>:** `UISwls/MExampleAdvance/Setups/Equip Item.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Setups\\Equip Item.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1770944348343
+}

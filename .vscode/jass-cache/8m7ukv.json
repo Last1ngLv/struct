@@ -1,0 +1,87 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Inventory\\InventoryItem.j",
+  "items": [
+    {
+      "label": "SEED_START",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer SEED_START\n```\n\n\n**_>:** `UISwls/MExampleAdvance/Inventory/InventoryItem.j`",
+      "sortText": "2_var_SEED_START",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Inventory\\InventoryItem.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "SEED_END",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer SEED_END\n```\n\n\n**_>:** `UISwls/MExampleAdvance/Inventory/InventoryItem.j`",
+      "sortText": "2_var_SEED_END",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Inventory\\InventoryItem.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "InvItem",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct InvItem\n```\n\n\n**_>:** `UISwls/MExampleAdvance/Inventory/InventoryItem.j`",
+      "sortText": "1_struct_InvItem",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Inventory\\InventoryItem.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "GetInvItem",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetInvItem takes integer id returns InvItem\n```\n\n\n**_>:** `UISwls/MExampleAdvance/Inventory/InventoryItem.j`",
+      "sortText": "1_func_GetInvItem",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Inventory\\InventoryItem.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetItemInfo",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetItemInfo takes integer id returns string\n```\n\n\n**_>:** `UISwls/MExampleAdvance/Inventory/InventoryItem.j`",
+      "sortText": "1_func_GetItemInfo",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Inventory\\InventoryItem.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetItemDescription",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetItemDescription takes integer id returns string\n```\n\n\n**_>:** `UISwls/MExampleAdvance/Inventory/InventoryItem.j`",
+      "sortText": "1_func_GetItemDescription",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Inventory\\InventoryItem.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetItemIcon",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetItemIcon takes integer id returns integer\n```\n\n\n**_>:** `UISwls/MExampleAdvance/Inventory/InventoryItem.j`",
+      "sortText": "1_func_GetItemIcon",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Inventory\\InventoryItem.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "CreateInvItem",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction CreateInvItem takes integer id, integer icon, integer cost, integer abil, string info returns InvItem\n```\n\n\n**_>:** `UISwls/MExampleAdvance/Inventory/InventoryItem.j`",
+      "sortText": "1_func_CreateInvItem",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Inventory\\InventoryItem.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "InvCustomItem",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct InvCustomItem extends array\n```\n\n\n**_>:** `UISwls/MExampleAdvance/Inventory/InventoryItem.j`",
+      "sortText": "1_struct_InvCustomItem",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Inventory\\InventoryItem.j",
+      "statementType": "StructDeclaration"
+    }
+  ],
+  "timestamp": 1770944348340
+}

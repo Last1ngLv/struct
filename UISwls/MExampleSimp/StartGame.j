@@ -29,7 +29,7 @@ library StartGame initializer Init requires UserInterface
             
             //call ShowUnit(PlayerHero[user.id], false)
 
-            // get vision from dummy player
+            // get vision from dummy player camera
             call SetPlayerAllianceStateBJ(CAMERA_DUMMY_PLAYER, user.handle, bj_ALLIANCE_ALLIED_VISION)
             call SetPlayerAllianceStateBJ(user.handle, CAMERA_DUMMY_PLAYER, bj_ALLIANCE_ALLIED_VISION)
         

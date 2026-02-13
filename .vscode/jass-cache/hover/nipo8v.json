@@ -1,0 +1,81 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Equipment\\EquipmentCore.j",
+  "items": [
+    {
+      "symbolName": "create",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Equipment\\EquipmentCore.j",
+      "content": "\n```jass\nstatic method create takes unit u returns thistype\n```\n\n\n**所属:** `Equipment`\n**文件:** `UISwls/MExampleAdvance/Equipment/EquipmentCore.j`"
+    },
+    {
+      "symbolName": "user",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Equipment\\EquipmentCore.j",
+      "content": "\n```jass\nUser user\n```\n\n\n**所属:** `Equipment`\n**文件:** `UISwls/MExampleAdvance/Equipment/EquipmentCore.j`"
+    },
+    {
+      "symbolName": "player",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Equipment\\EquipmentCore.j",
+      "content": "\n```jass\nplayer player\n```\n\n\n**所属:** `Equipment`\n**文件:** `UISwls/MExampleAdvance/Equipment/EquipmentCore.j`"
+    },
+    {
+      "symbolName": "unit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Equipment\\EquipmentCore.j",
+      "content": "\n```jass\nunit unit\n```\n\n\n**所属:** `Equipment`\n**文件:** `UISwls/MExampleAdvance/Equipment/EquipmentCore.j`"
+    },
+    {
+      "symbolName": "title",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Equipment\\EquipmentCore.j",
+      "content": "\n```jass\nstatic UIText array title\n```\n\n\n**所属:** `Equipment`\n**文件:** `UISwls/MExampleAdvance/Equipment/EquipmentCore.j`"
+    },
+    {
+      "symbolName": "onSocket",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Equipment\\EquipmentCore.j",
+      "content": "\n```jass\nstatic trigger onSocket\n```\n\n\n**所属:** `Equipment`\n**文件:** `UISwls/MExampleAdvance/Equipment/EquipmentCore.j`"
+    },
+    {
+      "symbolName": "WINDOW_DUMMY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Equipment\\EquipmentCore.j",
+      "content": "\n```jass\nstatic constant integer WINDOW_DUMMY\n```\n\n\n**所属:** `Equipment`\n**文件:** `UISwls/MExampleAdvance/Equipment/EquipmentCore.j`"
+    },
+    {
+      "symbolName": "MAX_SLOTS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Equipment\\EquipmentCore.j",
+      "content": "\n```jass\nstatic constant integer MAX_SLOTS\n```\n\n\n**所属:** `Equipment`\n**文件:** `UISwls/MExampleAdvance/Equipment/EquipmentCore.j`"
+    },
+    {
+      "symbolName": "charModel",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Equipment\\EquipmentCore.j",
+      "content": "\n```jass\nUIPicture charModel\n```\n\n\n**所属:** `Equipment`\n**文件:** `UISwls/MExampleAdvance/Equipment/EquipmentCore.j`"
+    },
+    {
+      "symbolName": "SLOT_OFFSET_Y",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Equipment\\EquipmentCore.j",
+      "content": "\n```jass\nstatic constant real SLOT_OFFSET_Y\n```\n\n\n**所属:** `Equipment`\n**文件:** `UISwls/MExampleAdvance/Equipment/EquipmentCore.j`"
+    },
+    {
+      "symbolName": "SLOT_WIDTH",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Equipment\\EquipmentCore.j",
+      "content": "\n```jass\nstatic constant real SLOT_WIDTH\n```\n\n\n**所属:** `Equipment`\n**文件:** `UISwls/MExampleAdvance/Equipment/EquipmentCore.j`"
+    },
+    {
+      "symbolName": "getButton",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Equipment\\EquipmentCore.j",
+      "content": "\n```jass\nmethod getButton takes integer index returns UIButton\n```\n\n\n**所属:** `Equipment`\n**文件:** `UISwls/MExampleAdvance/Equipment/EquipmentCore.j`"
+    },
+    {
+      "symbolName": "Y",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Equipment\\EquipmentCore.j",
+      "content": "\n```jass\nstatic constant real Y\n```\n\n\n**所属:** `Equipment`\n**文件:** `UISwls/MExampleAdvance/Equipment/EquipmentCore.j`"
+    },
+    {
+      "symbolName": "WINDOW_SIZE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Equipment\\EquipmentCore.j",
+      "content": "\n```jass\nstatic constant real WINDOW_SIZE\n```\n\n\n**所属:** `Equipment`\n**文件:** `UISwls/MExampleAdvance/Equipment/EquipmentCore.j`"
+    },
+    {
+      "symbolName": "show",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Equipment\\EquipmentCore.j",
+      "content": "\n```jass\nmethod show takes boolean flag, Camera cam returns nothing\n```\n\n\n**所属:** `Equipment`\n**文件:** `UISwls/MExampleAdvance/Equipment/EquipmentCore.j`"
+    }
+  ],
+  "timestamp": 1770957566499
+}
