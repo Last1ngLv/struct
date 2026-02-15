@@ -1,0 +1,78 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyAdvanceUI\\others\\EquipmentCoreDesignCopy.j",
+  "items": [
+    {
+      "label": "DESIGN_ICON_EMPTY",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer DESIGN_ICON_EMPTY\n```\n\n\n---\n\npublic filterfunc FuncLClickSlot = null\n\npublic filterfunc FuncRClickSlot = null\n\npublic integer array PlayerLastSlot\n\nConfig copiada de InventoryCore para evitar dependencia de Inventory.*\n\n**_>:** `UISwls/MyAdvanceUI/others/EquipmentCoreDesignCopy.j`",
+      "sortText": "2_var_DESIGN_ICON_EMPTY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyAdvanceUI\\others\\EquipmentCoreDesignCopy.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DESIGN_ICON_TRANSPARENT",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer DESIGN_ICON_TRANSPARENT\n```\n\n\n**_>:** `UISwls/MyAdvanceUI/others/EquipmentCoreDesignCopy.j`",
+      "sortText": "2_var_DESIGN_ICON_TRANSPARENT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyAdvanceUI\\others\\EquipmentCoreDesignCopy.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DESIGN_RACE_BORDERS_START",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer DESIGN_RACE_BORDERS_START\n```\n\n\n**_>:** `UISwls/MyAdvanceUI/others/EquipmentCoreDesignCopy.j`",
+      "sortText": "2_var_DESIGN_RACE_BORDERS_START",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyAdvanceUI\\others\\EquipmentCoreDesignCopy.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "OnLeftClickCustom",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnLeftClickCustom takes nothing returns boolean\n```\n\n\n**_>:** `UISwls/MyAdvanceUI/others/EquipmentCoreDesignCopy.j`",
+      "sortText": "1_func_OnLeftClickCustom",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyAdvanceUI\\others\\EquipmentCoreDesignCopy.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "DesignLocalInt",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction DesignLocalInt takes integer pid, integer value, integer other returns integer\n```\n\n\n---\n\nVersion local de Inventory.localInt para mostrar solo al jugador local.\n\n**_>:** `UISwls/MyAdvanceUI/others/EquipmentCoreDesignCopy.j`",
+      "sortText": "1_func_DesignLocalInt",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyAdvanceUI\\others\\EquipmentCoreDesignCopy.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "HERO_WINDOW_NAME",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HERO_WINDOW_NAME takes unit u returns string\n```\n\n\n---\n\nVISUAL: titulo que se pinta en la ventana del heroe\n\n**_>:** `UISwls/MyAdvanceUI/others/EquipmentCoreDesignCopy.j`",
+      "sortText": "1_func_HERO_WINDOW_NAME",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyAdvanceUI\\others\\EquipmentCoreDesignCopy.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "EquipmentDesign",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct EquipmentDesign\n```\n\n\n**_>:** `UISwls/MyAdvanceUI/others/EquipmentCoreDesignCopy.j`",
+      "sortText": "1_struct_EquipmentDesign",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyAdvanceUI\\others\\EquipmentCoreDesignCopy.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**_>:** `UISwls/MyAdvanceUI/others/EquipmentCoreDesignCopy.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyAdvanceUI\\others\\EquipmentCoreDesignCopy.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1771128396548
+}

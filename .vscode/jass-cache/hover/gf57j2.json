@@ -1,0 +1,11 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Setups\\YesNoDialog.j",
+  "items": [
+    {
+      "symbolName": "onInit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Setups\\YesNoDialog.j",
+      "content": "\n```jass\nstatic method onInit takes nothing returns nothing\n```\n\n\n**所属:** `INITS`\n**文件:** `UISwls/MExampleAdvance/Setups/YesNoDialog.j`"
+    }
+  ],
+  "timestamp": 1771062717433
+}

@@ -1,0 +1,42 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyAdvanceUI\\MyStartGameV2.j",
+  "items": [
+    {
+      "label": "PlayerCamera",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nCamera array PlayerCamera\n```\n\n\n**_>:** `UISwls/MyAdvanceUI/MyStartGameV2.j`",
+      "sortText": "2_var_PlayerCamera",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyAdvanceUI\\MyStartGameV2.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "PlayerHero",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nunit array PlayerHero\n```\n\n\n**_>:** `UISwls/MyAdvanceUI/MyStartGameV2.j`",
+      "sortText": "2_var_PlayerHero",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyAdvanceUI\\MyStartGameV2.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "StartGame",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction StartGame takes nothing returns nothing\n```\n\n\n**_>:** `UISwls/MyAdvanceUI/MyStartGameV2.j`",
+      "sortText": "1_func_StartGame",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyAdvanceUI\\MyStartGameV2.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**_>:** `UISwls/MyAdvanceUI/MyStartGameV2.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyAdvanceUI\\MyStartGameV2.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1771128396548
+}

@@ -1,0 +1,106 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyAdvanceUI\\MUplates.j",
+  "items": [
+    {
+      "symbolName": "ICON_TRANSPARENT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyAdvanceUI\\MUplates.j",
+      "content": "\n```jass\nstatic constant integer ICON_TRANSPARENT\n```\n\n\n**所属:** `MUplates`\n**文件:** `UISwls/MyAdvanceUI/MUplates.j`"
+    },
+    {
+      "symbolName": "KEY_ITEM_ID",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyAdvanceUI\\MUplates.j",
+      "content": "\n```jass\nkey KEY_ITEM_ID\n```\n\n\n**所属:** `MUplates`\n**文件:** `UISwls/MyAdvanceUI/MUplates.j`"
+    },
+    {
+      "symbolName": "RACE_BORDERS_START",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyAdvanceUI\\MUplates.j",
+      "content": "\n```jass\nstatic constant integer RACE_BORDERS_START\n```\n\n\n**所属:** `MUplates`\n**文件:** `UISwls/MyAdvanceUI/MUplates.j`"
+    },
+    {
+      "symbolName": "next",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyAdvanceUI\\MUplates.j",
+      "content": "\n```jass\nreadonly thistype next\n```\n\n\n**所属:** `MUplates`\n**文件:** `UISwls/MyAdvanceUI/MUplates.j`"
+    },
+    {
+      "symbolName": "prev",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyAdvanceUI\\MUplates.j",
+      "content": "\n```jass\nreadonly thistype prev\n```\n\n\n**所属:** `MUplates`\n**文件:** `UISwls/MyAdvanceUI/MUplates.j`"
+    },
+    {
+      "symbolName": "destroy",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyAdvanceUI\\MUplates.j",
+      "content": "\n```jass\nmethod destroy takes nothing returns nothing\n```\n\n\n**所属:** `MUplates`\n**文件:** `UISwls/MyAdvanceUI/MUplates.j`"
+    },
+    {
+      "symbolName": "PlayerCurrent",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyAdvanceUI\\MUplates.j",
+      "content": "\n```jass\nstatic readonly thistype array PlayerCurrent\n```\n\n\n**所属:** `MUplates`\n**文件:** `UISwls/MyAdvanceUI/MUplates.j`"
+    },
+    {
+      "symbolName": "owner",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyAdvanceUI\\MUplates.j",
+      "content": "\n```jass\nreadonly unit owner\n```\n\n\n**所属:** `MUplates`\n**文件:** `UISwls/MyAdvanceUI/MUplates.j`"
+    },
+    {
+      "symbolName": "InvPlugins",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyAdvanceUI\\MUplates.j",
+      "content": "\n```jass\nimplement InvPlugins\n```\n\n\n**所属:** `MUplates`\n**文件:** `UISwls/MyAdvanceUI/MUplates.j`"
+    },
+    {
+      "symbolName": "displayed",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyAdvanceUI\\MUplates.j",
+      "content": "\n```jass\nreadonly boolean displayed\n```\n\n\n**所属:** `MUplates`\n**文件:** `UISwls/MyAdvanceUI/MUplates.j`"
+    },
+    {
+      "symbolName": "UI_REFRESH_RATE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyAdvanceUI\\MUplates.j",
+      "content": "\n```jass\nstatic constant real UI_REFRESH_RATE\n```\n\n\n---\n\nhow fast the UI updates\n\n**所属:** `MUplates`\n**文件:** `UISwls/MyAdvanceUI/MUplates.j`"
+    },
+    {
+      "symbolName": "UpdateTimer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyAdvanceUI\\MUplates.j",
+      "content": "\n```jass\nstatic readonly timer UpdateTimer\n```\n\n\n**所属:** `MUplates`\n**文件:** `UISwls/MyAdvanceUI/MUplates.j`"
+    },
+    {
+      "symbolName": "onDisplay",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyAdvanceUI\\MUplates.j",
+      "content": "\n```jass\nmethod onDisplay takes nothing returns nothing\n```\n\n\n**所属:** `MUplates`\n**文件:** `UISwls/MyAdvanceUI/MUplates.j`"
+    },
+    {
+      "symbolName": "Hashtable",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyAdvanceUI\\MUplates.j",
+      "content": "\n```jass\nstatic readonly hashtable Hashtable\n```\n\n\n**所属:** `MUplates`\n**文件:** `UISwls/MyAdvanceUI/MUplates.j`"
+    },
+    {
+      "symbolName": "setItem",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyAdvanceUI\\MUplates.j",
+      "content": "\n```jass\nmethod setItem takes integer index, InvItem itm returns nothing\n```\n\n\n**所属:** `MUplates`\n**文件:** `UISwls/MyAdvanceUI/MUplates.j`"
+    },
+    {
+      "symbolName": "RClickItemSlot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyAdvanceUI\\MUplates.j",
+      "content": "\n```jass\nfunction RClickItemSlot takes nothing returns boolean\n```\n\n\n**文件:** `UISwls/MyAdvanceUI/MUplates.j`"
+    },
+    {
+      "symbolName": "LClickItemSlot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyAdvanceUI\\MUplates.j",
+      "content": "\n```jass\nfunction LClickItemSlot takes nothing returns boolean\n```\n\n\n**文件:** `UISwls/MyAdvanceUI/MUplates.j`"
+    },
+    {
+      "symbolName": "addLeftClickHook",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyAdvanceUI\\MUplates.j",
+      "content": "\n```jass\nstatic method addLeftClickHook takes code func returns nothing\n```\n\n\n**所属:** `MUplates`\n**文件:** `UISwls/MyAdvanceUI/MUplates.j`"
+    },
+    {
+      "symbolName": "TOOLTIP_Y",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyAdvanceUI\\MUplates.j",
+      "content": "\n```jass\nstatic real TOOLTIP_Y\n```\n\n\n**所属:** `MUplates`\n**文件:** `UISwls/MyAdvanceUI/MUplates.j`"
+    },
+    {
+      "symbolName": "addRightClickHook",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyAdvanceUI\\MUplates.j",
+      "content": "\n```jass\nstatic method addRightClickHook takes code func returns nothing\n```\n\n\n**所属:** `MUplates`\n**文件:** `UISwls/MyAdvanceUI/MUplates.j`"
+    }
+  ],
+  "timestamp": 1771064952778
+}

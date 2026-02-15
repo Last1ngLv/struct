@@ -1,0 +1,16 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyAdvanceUI\\source\\modelsSource.j",
+  "items": [
+    {
+      "symbolName": "EquipSetHeroModel",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyAdvanceUI\\source\\modelsSource.j",
+      "content": "\n```jass\nfunction EquipSetHeroModel takes integer utype, real scale, string path returns nothing\n```\n\n\n**文件:** `UISwls/MyAdvanceUI/source/modelsSource.j`"
+    },
+    {
+      "symbolName": "path",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyAdvanceUI\\source\\modelsSource.j",
+      "content": "\n```jass\nstring path\n```\n\n\n**所属:** `HeroModelData`\n**文件:** `UISwls/MyAdvanceUI/source/modelsSource.j`"
+    }
+  ],
+  "timestamp": 1771065436139
+}

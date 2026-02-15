@@ -1,0 +1,96 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyAdvanceUI\\others\\EquipmentCoreProDoc.j",
+  "items": [
+    {
+      "label": "FuncLClickSlot",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nfilterfunc FuncLClickSlot\n```\n\n\n---\n\nFiltros callback para botones de slots de equipo (L/R click).\n\nSe asignan en Init() y luego se inyectan en create().\n\n**_>:** `UISwls/MyAdvanceUI/others/EquipmentCoreProDoc.j`",
+      "sortText": "2_var_FuncLClickSlot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyAdvanceUI\\others\\EquipmentCoreProDoc.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "FuncRClickSlot",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nfilterfunc FuncRClickSlot\n```\n\n\n**_>:** `UISwls/MyAdvanceUI/others/EquipmentCoreProDoc.j`",
+      "sortText": "2_var_FuncRClickSlot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyAdvanceUI\\others\\EquipmentCoreProDoc.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "PlayerLastSlot",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array PlayerLastSlot\n```\n\n\n---\n\n\"slot seleccionado previamente\" por jugador.\n\nSe usa para flujos de intercambio inventario <-> equipo.\n\n**_>:** `UISwls/MyAdvanceUI/others/EquipmentCoreProDoc.j`",
+      "sortText": "2_var_PlayerLastSlot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyAdvanceUI\\others\\EquipmentCoreProDoc.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HERO_WINDOW_NAME",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HERO_WINDOW_NAME takes unit u returns string\n```\n\n\n---\n\nTexto del titulo del panel de equipo.\n\nPuedes cambiar esta funcion para mostrar nombre custom de hero o clase.\n\n**_>:** `UISwls/MyAdvanceUI/others/EquipmentCoreProDoc.j`",
+      "sortText": "1_func_HERO_WINDOW_NAME",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyAdvanceUI\\others\\EquipmentCoreProDoc.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Equipment",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct Equipment\n```\n\n\n**_>:** `UISwls/MyAdvanceUI/others/EquipmentCoreProDoc.j`",
+      "sortText": "1_struct_Equipment",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyAdvanceUI\\others\\EquipmentCoreProDoc.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "OnInventoryItemClick",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnInventoryItemClick takes nothing returns nothing\n```\n\n\n**_>:** `UISwls/MyAdvanceUI/others/EquipmentCoreProDoc.j`",
+      "sortText": "1_func_OnInventoryItemClick",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyAdvanceUI\\others\\EquipmentCoreProDoc.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnInventoryItemRightClick",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnInventoryItemRightClick takes nothing returns nothing\n```\n\n\n**_>:** `UISwls/MyAdvanceUI/others/EquipmentCoreProDoc.j`",
+      "sortText": "1_func_OnInventoryItemRightClick",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyAdvanceUI\\others\\EquipmentCoreProDoc.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "RClickItemSlot",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction RClickItemSlot takes nothing returns boolean\n```\n\n\n**_>:** `UISwls/MyAdvanceUI/others/EquipmentCoreProDoc.j`",
+      "sortText": "1_func_RClickItemSlot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyAdvanceUI\\others\\EquipmentCoreProDoc.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "LClickItemSlot",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction LClickItemSlot takes nothing returns boolean\n```\n\n\n**_>:** `UISwls/MyAdvanceUI/others/EquipmentCoreProDoc.j`",
+      "sortText": "1_func_LClickItemSlot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyAdvanceUI\\others\\EquipmentCoreProDoc.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**_>:** `UISwls/MyAdvanceUI/others/EquipmentCoreProDoc.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyAdvanceUI\\others\\EquipmentCoreProDoc.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1771128396548
+}

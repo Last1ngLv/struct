@@ -35,7 +35,32 @@
       "symbolName": "SCREEN_HEIGHT",
       "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\Camera.j",
       "content": "\n```jass\nconstant real SCREEN_HEIGHT\n```\n\n\n**文件:** `UISwls/Libraries/Camera.j`"
+    },
+    {
+      "symbolName": "destroy",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\Camera.j",
+      "content": "\n```jass\nmethod destroy takes nothing returns nothing\n```\n\n\n**所属:** `Camera`\n**文件:** `UISwls/Libraries/Camera.j`"
+    },
+    {
+      "symbolName": "applyCameraForPlayer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\Camera.j",
+      "content": "\n```jass\nmethod applyCameraForPlayer takes player p, boolean ignoreChange returns boolean\n```\n\n\n**所属:** `Camera`\n**文件:** `UISwls/Libraries/Camera.j`"
+    },
+    {
+      "symbolName": "setPosition",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\Camera.j",
+      "content": "\n```jass\nmethod setPosition takes real x, real y, real z returns nothing\n```\n\n\n**所属:** `Camera`\n**文件:** `UISwls/Libraries/Camera.j`"
+    },
+    {
+      "symbolName": "onInit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\Camera.j",
+      "content": "\n```jass\nstatic method onInit takes nothing returns nothing\n```\n\n\n**所属:** `CamInitModule`\n**文件:** `UISwls/Libraries/Camera.j`"
+    },
+    {
+      "symbolName": "SCREEN_WIDTH",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\Camera.j",
+      "content": "\n```jass\nconstant real SCREEN_WIDTH\n```\n\n\n**文件:** `UISwls/Libraries/Camera.j`"
     }
   ],
-  "timestamp": 1770952647418
+  "timestamp": 1771069112918
 }

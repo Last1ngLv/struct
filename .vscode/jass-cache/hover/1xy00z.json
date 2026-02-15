@@ -115,7 +115,22 @@
       "symbolName": "show",
       "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleSimp\\BasicUI.j",
       "content": "\n```jass\nmethod show takes boolean flag returns nothing\n```\n\n\n**所属:** `BasicWindow`\n**文件:** `UISwls/MExampleSimp/BasicUI.j`"
+    },
+    {
+      "symbolName": "next",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleSimp\\BasicUI.j",
+      "content": "\n```jass\nreadonly thistype next\n```\n\n\n**所属:** `BasicWindow`\n**文件:** `UISwls/MExampleSimp/BasicUI.j`"
+    },
+    {
+      "symbolName": "prev",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleSimp\\BasicUI.j",
+      "content": "\n```jass\nreadonly thistype prev\n```\n\n\n**所属:** `BasicWindow`\n**文件:** `UISwls/MExampleSimp/BasicUI.j`"
+    },
+    {
+      "symbolName": "displayed",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleSimp\\BasicUI.j",
+      "content": "\n```jass\nreadonly boolean displayed\n```\n\n\n**所属:** `BasicWindow`\n**文件:** `UISwls/MExampleSimp/BasicUI.j`"
     }
   ],
-  "timestamp": 1770957566501
+  "timestamp": 1771058280093
 }

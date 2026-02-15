@@ -75,7 +75,162 @@
       "symbolName": "show",
       "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Equipment\\EquipmentCore.j",
       "content": "\n```jass\nmethod show takes boolean flag, Camera cam returns nothing\n```\n\n\n**所属:** `Equipment`\n**文件:** `UISwls/MExampleAdvance/Equipment/EquipmentCore.j`"
+    },
+    {
+      "symbolName": "SLOT_OFFSET_ROWRIGHT_X",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Equipment\\EquipmentCore.j",
+      "content": "\n```jass\nstatic constant real SLOT_OFFSET_ROWRIGHT_X\n```\n\n\n**所属:** `Equipment`\n**文件:** `UISwls/MExampleAdvance/Equipment/EquipmentCore.j`"
+    },
+    {
+      "symbolName": "SLOT_HEIGHT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Equipment\\EquipmentCore.j",
+      "content": "\n```jass\nstatic constant real SLOT_HEIGHT\n```\n\n\n**所属:** `Equipment`\n**文件:** `UISwls/MExampleAdvance/Equipment/EquipmentCore.j`"
+    },
+    {
+      "symbolName": "Equipment",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Equipment\\EquipmentCore.j",
+      "content": "\n```jass\nstruct Equipment\n```\n\n\n**文件:** `UISwls/MExampleAdvance/Equipment/EquipmentCore.j`"
+    },
+    {
+      "symbolName": "MODEL_DUMMY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Equipment\\EquipmentCore.j",
+      "content": "\n```jass\nstatic constant integer MODEL_DUMMY\n```\n\n\n**所属:** `Equipment`\n**文件:** `UISwls/MExampleAdvance/Equipment/EquipmentCore.j`"
+    },
+    {
+      "symbolName": "selector",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Equipment\\EquipmentCore.j",
+      "content": "\n```jass\nstatic UIPicture array selector\n```\n\n\n**所属:** `Equipment`\n**文件:** `UISwls/MExampleAdvance/Equipment/EquipmentCore.j`"
+    },
+    {
+      "symbolName": "CHARMODEL_OFFSET_Y",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Equipment\\EquipmentCore.j",
+      "content": "\n```jass\nstatic constant real CHARMODEL_OFFSET_Y\n```\n\n\n**所属:** `Equipment`\n**文件:** `UISwls/MExampleAdvance/Equipment/EquipmentCore.j`"
+    },
+    {
+      "symbolName": "Initialized",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Equipment\\EquipmentCore.j",
+      "content": "\n```jass\nstatic readonly boolean Initialized\n```\n\n\n---\n\nend config\n\n**所属:** `Equipment`\n**文件:** `UISwls/MExampleAdvance/Equipment/EquipmentCore.j`"
+    },
+    {
+      "symbolName": "UnitsIndex",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Equipment\\EquipmentCore.j",
+      "content": "\n```jass\nstatic readonly thistype array UnitsIndex\n```\n\n\n**所属:** `Equipment`\n**文件:** `UISwls/MExampleAdvance/Equipment/EquipmentCore.j`"
+    },
+    {
+      "symbolName": "CHARMODEL_OFFSET_X",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Equipment\\EquipmentCore.j",
+      "content": "\n```jass\nstatic constant real CHARMODEL_OFFSET_X\n```\n\n\n**所属:** `Equipment`\n**文件:** `UISwls/MExampleAdvance/Equipment/EquipmentCore.j`"
+    },
+    {
+      "symbolName": "OnInventoryItemRightClick",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Equipment\\EquipmentCore.j",
+      "content": "\n```jass\nfunction OnInventoryItemRightClick takes nothing returns nothing\n```\n\n\n**文件:** `UISwls/MExampleAdvance/Equipment/EquipmentCore.j`"
+    },
+    {
+      "symbolName": "PlayerCurrentUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Equipment\\EquipmentCore.j",
+      "content": "\n```jass\nstatic readonly unit array PlayerCurrentUnit\n```\n\n\n**所属:** `Equipment`\n**文件:** `UISwls/MExampleAdvance/Equipment/EquipmentCore.j`"
+    },
+    {
+      "symbolName": "DisplayCount",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Equipment\\EquipmentCore.j",
+      "content": "\n```jass\nstatic readonly integer DisplayCount\n```\n\n\n**所属:** `Equipment`\n**文件:** `UISwls/MExampleAdvance/Equipment/EquipmentCore.j`"
+    },
+    {
+      "symbolName": "setButton",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Equipment\\EquipmentCore.j",
+      "content": "\n```jass\nmethod setButton takes integer index, UIButton value returns nothing\n```\n\n\n**所属:** `Equipment`\n**文件:** `UISwls/MExampleAdvance/Equipment/EquipmentCore.j`"
+    },
+    {
+      "symbolName": "PlayerLastSlot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Equipment\\EquipmentCore.j",
+      "content": "\n```jass\ninteger array PlayerLastSlot\n```\n\n\n**文件:** `UISwls/MExampleAdvance/Equipment/EquipmentCore.j`"
+    },
+    {
+      "symbolName": "HERO_WINDOW_NAME",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Equipment\\EquipmentCore.j",
+      "content": "\n```jass\nfunction HERO_WINDOW_NAME takes unit u returns string\n```\n\n\n**文件:** `UISwls/MExampleAdvance/Equipment/EquipmentCore.j`"
+    },
+    {
+      "symbolName": "FuncLClickSlot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Equipment\\EquipmentCore.j",
+      "content": "\n```jass\nfilterfunc FuncLClickSlot\n```\n\n\n**文件:** `UISwls/MExampleAdvance/Equipment/EquipmentCore.j`"
+    },
+    {
+      "symbolName": "FuncRClickSlot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Equipment\\EquipmentCore.j",
+      "content": "\n```jass\nfilterfunc FuncRClickSlot\n```\n\n\n**文件:** `UISwls/MExampleAdvance/Equipment/EquipmentCore.j`"
+    },
+    {
+      "symbolName": "next",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Equipment\\EquipmentCore.j",
+      "content": "\n```jass\nreadonly thistype next\n```\n\n\n**所属:** `Equipment`\n**文件:** `UISwls/MExampleAdvance/Equipment/EquipmentCore.j`"
+    },
+    {
+      "symbolName": "prev",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Equipment\\EquipmentCore.j",
+      "content": "\n```jass\nreadonly thistype prev\n```\n\n\n**所属:** `Equipment`\n**文件:** `UISwls/MExampleAdvance/Equipment/EquipmentCore.j`"
+    },
+    {
+      "symbolName": "destroy",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Equipment\\EquipmentCore.j",
+      "content": "\n```jass\nmethod destroy takes nothing returns nothing\n```\n\n\n**所属:** `Equipment`\n**文件:** `UISwls/MExampleAdvance/Equipment/EquipmentCore.j`"
+    },
+    {
+      "symbolName": "OnInventoryItemClick",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Equipment\\EquipmentCore.j",
+      "content": "\n```jass\nfunction OnInventoryItemClick takes nothing returns nothing\n```\n\n\n**文件:** `UISwls/MExampleAdvance/Equipment/EquipmentCore.j`"
+    },
+    {
+      "symbolName": "displayed",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Equipment\\EquipmentCore.j",
+      "content": "\n```jass\nreadonly boolean displayed\n```\n\n\n**所属:** `Equipment`\n**文件:** `UISwls/MExampleAdvance/Equipment/EquipmentCore.j`"
+    },
+    {
+      "symbolName": "UpdateTimer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Equipment\\EquipmentCore.j",
+      "content": "\n```jass\nstatic readonly timer UpdateTimer\n```\n\n\n**所属:** `Equipment`\n**文件:** `UISwls/MExampleAdvance/Equipment/EquipmentCore.j`"
+    },
+    {
+      "symbolName": "onDisplay",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Equipment\\EquipmentCore.j",
+      "content": "\n```jass\nmethod onDisplay takes nothing returns nothing\n```\n\n\n**所属:** `Equipment`\n**文件:** `UISwls/MExampleAdvance/Equipment/EquipmentCore.j`"
+    },
+    {
+      "symbolName": "Hashtable",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Equipment\\EquipmentCore.j",
+      "content": "\n```jass\nstatic readonly hashtable Hashtable\n```\n\n\n**所属:** `Equipment`\n**文件:** `UISwls/MExampleAdvance/Equipment/EquipmentCore.j`"
+    },
+    {
+      "symbolName": "onInit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Equipment\\EquipmentCore.j",
+      "content": "\n```jass\nmethod onInit takes nothing returns nothing\n```\n\n\n**所属:** `Equipment`\n**文件:** `UISwls/MExampleAdvance/Equipment/EquipmentCore.j`"
+    },
+    {
+      "symbolName": "RClickItemSlot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Equipment\\EquipmentCore.j",
+      "content": "\n```jass\nfunction RClickItemSlot takes nothing returns boolean\n```\n\n\n**文件:** `UISwls/MExampleAdvance/Equipment/EquipmentCore.j`"
+    },
+    {
+      "symbolName": "LClickItemSlot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Equipment\\EquipmentCore.j",
+      "content": "\n```jass\nfunction LClickItemSlot takes nothing returns boolean\n```\n\n\n**文件:** `UISwls/MExampleAdvance/Equipment/EquipmentCore.j`"
+    },
+    {
+      "symbolName": "equip",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Equipment\\EquipmentCore.j",
+      "content": "\n```jass\nmethod equip takes InvItem itm, integer equipSlot returns boolean\n```\n\n\n**所属:** `Equipment`\n**文件:** `UISwls/MExampleAdvance/Equipment/EquipmentCore.j`"
+    },
+    {
+      "symbolName": "HERO_NAME_Y",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Equipment\\EquipmentCore.j",
+      "content": "\n```jass\nstatic constant real HERO_NAME_Y\n```\n\n\n**所属:** `Equipment`\n**文件:** `UISwls/MExampleAdvance/Equipment/EquipmentCore.j`"
+    },
+    {
+      "symbolName": "SLOT_OFFSET_ROWLEFT_X",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Equipment\\EquipmentCore.j",
+      "content": "\n```jass\nstatic constant real SLOT_OFFSET_ROWLEFT_X\n```\n\n\n**所属:** `Equipment`\n**文件:** `UISwls/MExampleAdvance/Equipment/EquipmentCore.j`"
     }
   ],
-  "timestamp": 1770957566499
+  "timestamp": 1771129702981
 }

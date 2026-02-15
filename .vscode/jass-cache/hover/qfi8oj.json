@@ -1,0 +1,11 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Equipment\\EquipmentItem.j",
+  "items": [
+    {
+      "symbolName": "buildDescription",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Equipment\\EquipmentItem.j",
+      "content": "\n```jass\nmethod buildDescription takes unit forUnit returns string\n```\n\n\n**所属:** `InvItemEquipment`\n**文件:** `UISwls/MExampleAdvance/Equipment/EquipmentItem.j`"
+    }
+  ],
+  "timestamp": 1771064669955
+}

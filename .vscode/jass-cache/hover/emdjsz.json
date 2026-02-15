@@ -85,7 +85,87 @@
       "symbolName": "IssueImmediateOrderById",
       "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j",
       "content": "\n```jass\nnative IssueImmediateOrderById takes unit whichUnit, integer order returns boolean\n```\n\n\n---\n\n按ID发布命令(无目标)\n\n**Parameters:**\n- **`order`**: 技能命令ID可在 记录物编的文件 找到\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j`"
+    },
+    {
+      "symbolName": "GetUnitUserData",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j",
+      "content": "\n```jass\nnative GetUnitUserData takes unit whichUnit returns integer\n```\n\n\n---\n\n获取指定单位自定义值\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j`"
+    },
+    {
+      "symbolName": "UnitAddAbility",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j",
+      "content": "\n```jass\nnative UnitAddAbility takes unit whichUnit, integer abilityId returns boolean\n```\n\n\n---\n\n添加指定技能到指定单位 [R]\n\n添加的技能默认为非永久性，会在单位变身恢复时消失，若要不消失，需设置技能永久性 UnitMakeAbilityPermanent\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j`"
+    },
+    {
+      "symbolName": "item",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j",
+      "content": "\n```jass\ntype item = widget\n```\n\n\n---\n\n物品\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j`"
+    },
+    {
+      "symbolName": "AddSpecialEffectTarget",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j",
+      "content": "\n```jass\nnative AddSpecialEffectTarget takes string modelName, widget targetWidget, string attachPointName returns effect\n```\n\n\n---\n\n新建特效(绑定到单位/物品/可破坏物) [R]\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j`"
+    },
+    {
+      "symbolName": "DisplayTimedTextToPlayer",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j",
+      "content": "\n```jass\nnative DisplayTimedTextToPlayer takes player toPlayer, real x, real y, real duration, string message returns nothing\n```\n\n\n---\n\n对指定玩家显示文本(指定时间) [R]\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j`"
+    },
+    {
+      "symbolName": "SetUnitColor",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j",
+      "content": "\n```jass\nnative SetUnitColor takes unit whichUnit, playercolor whichColor returns nothing\n```\n\n\n---\n\n设置指定单位颜色(指定玩家颜色)\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j`"
+    },
+    {
+      "symbolName": "GetUnitTypeId",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j",
+      "content": "\n```jass\nconstant native GetUnitTypeId takes unit whichUnit returns integer\n```\n\n\n---\n\n获取指定单位类型(返回四字符码)\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j`"
+    },
+    {
+      "symbolName": "GetUnitDefaultFlyHeight",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j",
+      "content": "\n```jass\nnative GetUnitDefaultFlyHeight takes unit whichUnit returns real\n```\n\n\n---\n\n获取指定单位飞行高度 (默认值)\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j`"
+    },
+    {
+      "symbolName": "TimerStart",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j",
+      "content": "\n```jass\nnative TimerStart takes timer whichTimer, real timeout, boolean periodic, code handlerFunc returns nothing\n```\n\n\n---\n\n开始计时器(计时) [C]\n\n**Parameters:**\n- **`whichTimer`**: 计时器\n- **`timeout`**: 超时/倒计时初始值\n- **`periodic`**: 是否循环\n- **`handlerFunc`**: 到期后运行的函数\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j`"
+    },
+    {
+      "symbolName": "PauseTimer",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j",
+      "content": "\n```jass\nnative PauseTimer takes timer whichTimer returns nothing\n```\n\n\n---\n\n暂停计时器(计时) [R]\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j`"
+    },
+    {
+      "symbolName": "InitHashtable",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j",
+      "content": "\n```jass\nnative InitHashtable takes nothing returns hashtable\n```\n\n\n---\n\n新建哈希表 [C]\n\n@version 1.24\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j`"
+    },
+    {
+      "symbolName": "SetUnitVertexColor",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j",
+      "content": "\n```jass\nnative SetUnitVertexColor takes unit whichUnit, integer red, integer green, integer blue, integer alpha returns nothing\n```\n\n\n---\n\n设置指定单位顶点颜色(RGB:0-255) [R]\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j`"
+    },
+    {
+      "symbolName": "SetUnitAnimationByIndex",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j",
+      "content": "\n```jass\nnative SetUnitAnimationByIndex takes unit whichUnit, integer whichAnimation returns nothing\n```\n\n\n---\n\n播放指定单位的指定序号动画 [R]\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j`"
+    },
+    {
+      "symbolName": "CreateItem",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j",
+      "content": "\n```jass\nnative CreateItem takes integer itemid, real x, real y returns item\n```\n\n\n---\n\nItem API\n\n创建物品(指定坐标)\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j`"
+    },
+    {
+      "symbolName": "GetTriggerUnit",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j",
+      "content": "\n```jass\nconstant native GetTriggerUnit takes nothing returns unit\n```\n\n\n---\n\nTrigger Unit Based Event API\n\nreturns handle to unit which triggered the most recent event when called from\n\nwithin a trigger action function...returns null handle when used incorrectly\n\n事件响应 获取触发单位\n\n获取触发单位\n\n获取触发当前事件的单位\n\n示例: set u = GetTriggerUnit() // 获取触发单位\n\n**Returns:** 触发事件的单位\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j`"
+    },
+    {
+      "symbolName": "SelectHeroSkill",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j",
+      "content": "\n```jass\nnative SelectHeroSkill takes unit whichHero, integer abilcode returns nothing\n```\n\n\n---\n\n发布学习技能命令(指定英雄)\n\n当英雄拥有不能叠加的技能时，此命令似乎无效，比如牛头捡了提供坚韧光环的物品（物编未作任何修改），因为他此时已拥有了坚韧光环（物品技能），在发布该指令后，他可能不会学习他本身的坚韧光环\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.4\\static\\common.j`"
     }
   ],
-  "timestamp": 1770954554975
+  "timestamp": 1771130158381
 }

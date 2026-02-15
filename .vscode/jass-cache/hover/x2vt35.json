@@ -1,0 +1,21 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Inventory\\InventoryTooltip.j",
+  "items": [
+    {
+      "symbolName": "showTooltip",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Inventory\\InventoryTooltip.j",
+      "content": "\n```jass\nstatic method showTooltip takes thistype this, boolean flag returns nothing\n```\n\n\n**所属:** `InvTooltip`\n**文件:** `UISwls/MExampleAdvance/Inventory/InventoryTooltip.j`"
+    },
+    {
+      "symbolName": "setTooltipTitle",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Inventory\\InventoryTooltip.j",
+      "content": "\n```jass\nmethod setTooltipTitle takes string title returns nothing\n```\n\n\n**所属:** `InvTooltip`\n**文件:** `UISwls/MExampleAdvance/Inventory/InventoryTooltip.j`"
+    },
+    {
+      "symbolName": "setTooltipCost",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MExampleAdvance\\Inventory\\InventoryTooltip.j",
+      "content": "\n```jass\nmethod setTooltipCost takes string value returns nothing\n```\n\n\n**所属:** `InvTooltip`\n**文件:** `UISwls/MExampleAdvance/Inventory/InventoryTooltip.j`"
+    }
+  ],
+  "timestamp": 1771064867158
+}

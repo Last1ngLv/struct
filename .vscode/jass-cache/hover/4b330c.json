@@ -20,7 +20,32 @@
       "symbolName": "static",
       "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\PlayerUtils.j",
       "content": "\n```jass\nreadonly static\n```\n\n\n**所属:** `User`\n**文件:** `UISwls/Libraries/PlayerUtils.j`"
+    },
+    {
+      "symbolName": "next",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\PlayerUtils.j",
+      "content": "\n```jass\nreadonly thistype next\n```\n\n\n**所属:** `User`\n**文件:** `UISwls/Libraries/PlayerUtils.j`"
+    },
+    {
+      "symbolName": "prev",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\PlayerUtils.j",
+      "content": "\n```jass\nreadonly thistype prev\n```\n\n\n**所属:** `User`\n**文件:** `UISwls/Libraries/PlayerUtils.j`"
+    },
+    {
+      "symbolName": "last",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\PlayerUtils.j",
+      "content": "\n```jass\nstatic readonly thistype last\n```\n\n\n**所属:** `User`\n**文件:** `UISwls/Libraries/PlayerUtils.j`"
+    },
+    {
+      "symbolName": "toPlayer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\PlayerUtils.j",
+      "content": "\n```jass\nmethod toPlayer takes nothing returns player\n```\n\n\n**所属:** `User`\n**文件:** `UISwls/Libraries/PlayerUtils.j`"
+    },
+    {
+      "symbolName": "onInit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\PlayerUtils.j",
+      "content": "\n```jass\nstatic method onInit takes nothing returns nothing\n```\n\n\n**所属:** `PlayerUtilsInit`\n**文件:** `UISwls/Libraries/PlayerUtils.j`"
     }
   ],
-  "timestamp": 1770947290858
+  "timestamp": 1771062717430
 }

@@ -1,0 +1,16 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\UnitDex.j",
+  "items": [
+    {
+      "symbolName": "Initialized",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\UnitDex.j",
+      "content": "\n```jass\nstatic readonly boolean Initialized\n```\n\n\n**所属:** `UnitDex`\n**文件:** `UISwls/Libraries/UnitDex.j`"
+    },
+    {
+      "symbolName": "onInit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\Libraries\\UnitDex.j",
+      "content": "\n```jass\nstatic method onInit takes nothing returns nothing\n```\n\n\n**所属:** `UnitDexCore`\n**文件:** `UISwls/Libraries/UnitDex.j`"
+    }
+  ],
+  "timestamp": 1771062717431
+}

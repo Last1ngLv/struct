@@ -1,0 +1,60 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyAdvanceUI\\MUplates.j",
+  "items": [
+    {
+      "label": "MUplates",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct MUplates\n```\n\n\n**_>:** `UISwls/MyAdvanceUI/MUplates.j`",
+      "sortText": "1_struct_MUplates",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyAdvanceUI\\MUplates.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "GracePeriod",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GracePeriod takes nothing returns nothing\n```\n\n\n**_>:** `UISwls/MyAdvanceUI/MUplates.j`",
+      "sortText": "1_func_GracePeriod",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyAdvanceUI\\MUplates.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "DisableButtonIfUsingTimer",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction DisableButtonIfUsingTimer takes UIButton but, real time returns nothing\n```\n\n\n**_>:** `UISwls/MyAdvanceUI/MUplates.j`",
+      "sortText": "1_func_DisableButtonIfUsingTimer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyAdvanceUI\\MUplates.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "LClickItemSlot",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction LClickItemSlot takes nothing returns boolean\n```\n\n\n**_>:** `UISwls/MyAdvanceUI/MUplates.j`",
+      "sortText": "1_func_LClickItemSlot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyAdvanceUI\\MUplates.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "RClickItemSlot",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction RClickItemSlot takes nothing returns boolean\n```\n\n\n**_>:** `UISwls/MyAdvanceUI/MUplates.j`",
+      "sortText": "1_func_RClickItemSlot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyAdvanceUI\\MUplates.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**_>:** `UISwls/MyAdvanceUI/MUplates.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyAdvanceUI\\MUplates.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1771128396547
+}

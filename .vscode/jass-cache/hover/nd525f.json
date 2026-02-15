@@ -1,0 +1,26 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyAdvanceUI\\EquipmentCoreProDoc.j",
+  "items": [
+    {
+      "symbolName": "DisplayCount",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyAdvanceUI\\EquipmentCoreProDoc.j",
+      "content": "\n```jass\nstatic readonly integer DisplayCount\n```\n\n\n**所属:** `Equipment`\n**文件:** `UISwls/MyAdvanceUI/EquipmentCoreProDoc.j`"
+    },
+    {
+      "symbolName": "setButton",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyAdvanceUI\\EquipmentCoreProDoc.j",
+      "content": "\n```jass\nmethod setButton takes integer index, UIButton value returns nothing\n```\n\n\n**所属:** `Equipment`\n**文件:** `UISwls/MyAdvanceUI/EquipmentCoreProDoc.j`"
+    },
+    {
+      "symbolName": "PlayerLastSlot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyAdvanceUI\\EquipmentCoreProDoc.j",
+      "content": "\n```jass\ninteger array PlayerLastSlot\n```\n\n\n---\n\n\"slot seleccionado previamente\" por jugador.\n\nSe usa para flujos de intercambio inventario <-> equipo.\n\n**文件:** `UISwls/MyAdvanceUI/EquipmentCoreProDoc.j`"
+    },
+    {
+      "symbolName": "HERO_WINDOW_NAME",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyAdvanceUI\\EquipmentCoreProDoc.j",
+      "content": "\n```jass\nfunction HERO_WINDOW_NAME takes unit u returns string\n```\n\n\n---\n\nTexto del titulo del panel de equipo.\n\nPuedes cambiar esta funcion para mostrar nombre custom de hero o clase.\n\n**文件:** `UISwls/MyAdvanceUI/EquipmentCoreProDoc.j`"
+    }
+  ],
+  "timestamp": 1771052104400
+}

@@ -1,0 +1,21 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyAdvanceUI\\others\\EquipmentCoreDesignCopy.j",
+  "items": [
+    {
+      "symbolName": "DesignLocalInt",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyAdvanceUI\\others\\EquipmentCoreDesignCopy.j",
+      "content": "\n```jass\nfunction DesignLocalInt takes integer pid, integer value, integer other returns integer\n```\n\n\n---\n\nVersion local de Inventory.localInt para mostrar solo al jugador local.\n\n**文件:** `UISwls/MyAdvanceUI/others/EquipmentCoreDesignCopy.j`"
+    },
+    {
+      "symbolName": "HERO_NAME_Y",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyAdvanceUI\\others\\EquipmentCoreDesignCopy.j",
+      "content": "\n```jass\nstatic constant real HERO_NAME_Y\n```\n\n\n**所属:** `EquipmentDesign`\n**文件:** `UISwls/MyAdvanceUI/others/EquipmentCoreDesignCopy.j`"
+    },
+    {
+      "symbolName": "SLOT_OFFSET_ROWLEFT_X",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UISwls\\MyAdvanceUI\\others\\EquipmentCoreDesignCopy.j",
+      "content": "\n```jass\nstatic constant real SLOT_OFFSET_ROWLEFT_X\n```\n\n\n**所属:** `EquipmentDesign`\n**文件:** `UISwls/MyAdvanceUI/others/EquipmentCoreDesignCopy.j`"
+    }
+  ],
+  "timestamp": 1771129702982
+}
