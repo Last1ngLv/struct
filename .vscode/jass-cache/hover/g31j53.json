@@ -1,0 +1,11 @@
+{
+  "filePath": "c:\\Users\\Leon\\.antigravity\\extensions\\jass.jass-1.9.4\\static\\common.j",
+  "items": [
+    {
+      "symbolName": "GetLocalPlayer",
+      "filePath": "c:\\Users\\Leon\\.antigravity\\extensions\\jass.jass-1.9.4\\static\\common.j",
+      "content": "\n```jass\nconstant native GetLocalPlayer takes nothing returns player\n```\n\n\n---\n\n获取本地玩家 [R]\n\n常用于异步判断，同时返回多位玩家，包含AI玩家、裁判和观战者\n\n使用不当可能引起玩家掉线\n\n**文件:** `c:\\Users\\Leon\\.antigravity\\extensions\\jass.jass-1.9.4\\static\\common.j`"
+    }
+  ],
+  "timestamp": 1771148253441
+}
