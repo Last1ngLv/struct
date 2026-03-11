@@ -1,0 +1,21 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\IsUnitChanneling.j",
+  "items": [
+    {
+      "symbolName": "IsUnitChanneling",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\IsUnitChanneling.j",
+      "content": "\n```jass\nlibrary IsUnitChanneling requires UnitIndexer, Table, RegisterPlayerUnitEvent\n```\n\n\n**文件:** `libraries/IsUnitChanneling.j`"
+    },
+    {
+      "symbolName": "IsUnitChanneling",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\IsUnitChanneling.j",
+      "content": "\n```jass\nfunction IsUnitChanneling takes unit u returns boolean\n```\n\n\n**文件:** `libraries/IsUnitChanneling.j`"
+    },
+    {
+      "symbolName": "OnChannel",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\IsUnitChanneling.j",
+      "content": "\n```jass\nstruct OnChannel extends array\n```\n\n\n**文件:** `libraries/IsUnitChanneling.j`"
+    }
+  ],
+  "timestamp": 1772395659198
+}

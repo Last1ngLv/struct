@@ -1,0 +1,141 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainPathability.j",
+  "items": [
+    {
+      "label": "MAX_RANGE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real MAX_RANGE\n```\n\n\n**_>:** `libraries/TerrainPathability.j`",
+      "sortText": "2_var_MAX_RANGE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainPathability.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DUMMY_ITEM_ID",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer DUMMY_ITEM_ID\n```\n\n\n**_>:** `libraries/TerrainPathability.j`",
+      "sortText": "2_var_DUMMY_ITEM_ID",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainPathability.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "Item",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nitem Item\n```\n\n\n**_>:** `libraries/TerrainPathability.j`",
+      "sortText": "2_var_Item",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainPathability.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "Find",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nrect Find\n```\n\n\n**_>:** `libraries/TerrainPathability.j`",
+      "sortText": "2_var_Find",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainPathability.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "stack",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nitem array stack\n```\n\n\n**_>:** `libraries/TerrainPathability.j`",
+      "sortText": "2_var_stack",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainPathability.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "size",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger size\n```\n\n\n**_>:** `libraries/TerrainPathability.j`",
+      "sortText": "2_var_size",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainPathability.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "X",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal X\n```\n\n\n**_>:** `libraries/TerrainPathability.j`",
+      "sortText": "2_var_X",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainPathability.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "Y",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal Y\n```\n\n\n**_>:** `libraries/TerrainPathability.j`",
+      "sortText": "2_var_Y",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainPathability.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "IsTerrainDeepWater",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction IsTerrainDeepWater takes real x, real y returns boolean\n```\n\n\n**_>:** `libraries/TerrainPathability.j`",
+      "sortText": "1_func_IsTerrainDeepWater",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainPathability.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "IsTerrainShallowWater",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction IsTerrainShallowWater takes real x, real y returns boolean\n```\n\n\n**_>:** `libraries/TerrainPathability.j`",
+      "sortText": "1_func_IsTerrainShallowWater",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainPathability.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "IsTerrainLand",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction IsTerrainLand takes real x, real y returns boolean\n```\n\n\n**_>:** `libraries/TerrainPathability.j`",
+      "sortText": "1_func_IsTerrainLand",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainPathability.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "IsTerrainPlatform",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction IsTerrainPlatform takes real x, real y returns boolean\n```\n\n\n**_>:** `libraries/TerrainPathability.j`",
+      "sortText": "1_func_IsTerrainPlatform",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainPathability.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "HideItem",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HideItem takes nothing returns nothing\n```\n\n\n**_>:** `libraries/TerrainPathability.j`",
+      "sortText": "1_func_HideItem",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainPathability.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "IsTerrainWalkable",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction IsTerrainWalkable takes real x, real y returns boolean\n```\n\n\n**_>:** `libraries/TerrainPathability.j`",
+      "sortText": "1_func_IsTerrainWalkable",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainPathability.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**_>:** `libraries/TerrainPathability.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainPathability.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1773220558731
+}

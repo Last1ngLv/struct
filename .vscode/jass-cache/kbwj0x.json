@@ -1,0 +1,123 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\IsDestructableTree.j",
+  "items": [
+    {
+      "label": "HARVESTER_UNIT_ID",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer HARVESTER_UNIT_ID\n```\n\n\n**_>:** `libraries/IsDestructableTree.j`",
+      "sortText": "2_var_HARVESTER_UNIT_ID",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\IsDestructableTree.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HARVEST_ABILITY",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer HARVEST_ABILITY\n```\n\n\n**_>:** `libraries/IsDestructableTree.j`",
+      "sortText": "2_var_HARVEST_ABILITY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\IsDestructableTree.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HARVEST_ORDER_ID",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer HARVEST_ORDER_ID\n```\n\n\n**_>:** `libraries/IsDestructableTree.j`",
+      "sortText": "2_var_HARVEST_ORDER_ID",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\IsDestructableTree.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "NEUTRAL_PLAYER",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant player NEUTRAL_PLAYER\n```\n\n\n**_>:** `libraries/IsDestructableTree.j`",
+      "sortText": "2_var_NEUTRAL_PLAYER",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\IsDestructableTree.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "harvester",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nunit harvester\n```\n\n\n**_>:** `libraries/IsDestructableTree.j`",
+      "sortText": "2_var_harvester",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\IsDestructableTree.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "IsDestructableTree",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction IsDestructableTree takes destructable d returns boolean\n```\n\n\n**_>:** `libraries/IsDestructableTree.j`",
+      "sortText": "1_func_IsDestructableTree",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\IsDestructableTree.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "IsDestructableDead",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction IsDestructableDead takes destructable d returns boolean\n```\n\n\n**_>:** `libraries/IsDestructableTree.j`",
+      "sortText": "1_func_IsDestructableDead",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\IsDestructableTree.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "IsDestructableAlive",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction IsDestructableAlive takes destructable d returns boolean\n```\n\n\n**_>:** `libraries/IsDestructableTree.j`",
+      "sortText": "1_func_IsDestructableAlive",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\IsDestructableTree.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "IsTreeAlive",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction IsTreeAlive takes destructable tree returns boolean\n```\n\n\n**_>:** `libraries/IsDestructableTree.j`",
+      "sortText": "1_func_IsTreeAlive",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\IsDestructableTree.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "KillTree",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction KillTree takes destructable tree returns boolean\n```\n\n\n**_>:** `libraries/IsDestructableTree.j`",
+      "sortText": "1_func_KillTree",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\IsDestructableTree.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**_>:** `libraries/IsDestructableTree.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\IsDestructableTree.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Inits",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule Inits\n```\n\n\n---\n\n*  Seriously?\n\n**_>:** `libraries/IsDestructableTree.j`",
+      "sortText": "1_module_Inits",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\IsDestructableTree.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "I",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct I extends array\n```\n\n\n**_>:** `libraries/IsDestructableTree.j`",
+      "sortText": "1_struct_I",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\IsDestructableTree.j",
+      "statementType": "StructDeclaration"
+    }
+  ],
+  "timestamp": 1773220558728
+}

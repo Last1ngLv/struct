@@ -1,0 +1,159 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Missile.j",
+  "items": [
+    {
+      "label": "TIMER_TIMEOUT",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real TIMER_TIMEOUT\n```\n\n\n**_>:** `libraries/Missile.j`",
+      "sortText": "2_var_TIMER_TIMEOUT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "NEUTRAL_PASSIVE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant player NEUTRAL_PASSIVE\n```\n\n\n**_>:** `libraries/Missile.j`",
+      "sortText": "2_var_NEUTRAL_PASSIVE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DUMMY_UNIT_ID",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer DUMMY_UNIT_ID\n```\n\n\n**_>:** `libraries/Missile.j`",
+      "sortText": "2_var_DUMMY_UNIT_ID",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "MAXIMUM_COLLISION_SIZE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real MAXIMUM_COLLISION_SIZE\n```\n\n\n**_>:** `libraries/Missile.j`",
+      "sortText": "2_var_MAXIMUM_COLLISION_SIZE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "COLLISION_TYPE_CIRCLE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer COLLISION_TYPE_CIRCLE\n```\n\n\n**_>:** `libraries/Missile.j`",
+      "sortText": "2_var_COLLISION_TYPE_CIRCLE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "COLLISION_TYPE_RECTANGLE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer COLLISION_TYPE_RECTANGLE\n```\n\n\n**_>:** `libraries/Missile.j`",
+      "sortText": "2_var_COLLISION_TYPE_RECTANGLE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "COLLISION_ACCURACY_FACTOR",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real COLLISION_ACCURACY_FACTOR\n```\n\n\n**_>:** `libraries/Missile.j`",
+      "sortText": "2_var_COLLISION_ACCURACY_FACTOR",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "USE_COLLISION_Z_FILTER",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant boolean USE_COLLISION_Z_FILTER\n```\n\n\n**_>:** `libraries/Missile.j`",
+      "sortText": "2_var_USE_COLLISION_Z_FILTER",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WRITE_DELAYED_MISSILE_RECYCLING",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant boolean WRITE_DELAYED_MISSILE_RECYCLING\n```\n\n\n**_>:** `libraries/Missile.j`",
+      "sortText": "2_var_WRITE_DELAYED_MISSILE_RECYCLING",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DELAYED_MISSILE_DEATH_ANIMATION_TIME",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real DELAYED_MISSILE_DEATH_ANIMATION_TIME\n```\n\n\n**_>:** `libraries/Missile.j`",
+      "sortText": "2_var_DELAYED_MISSILE_DEATH_ANIMATION_TIME",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "USE_DESTRUCTABLE_FILTER",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant boolean USE_DESTRUCTABLE_FILTER\n```\n\n\n**_>:** `libraries/Missile.j`",
+      "sortText": "2_var_USE_DESTRUCTABLE_FILTER",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "USE_ITEM_FILTER",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant boolean USE_ITEM_FILTER\n```\n\n\n**_>:** `libraries/Missile.j`",
+      "sortText": "2_var_USE_ITEM_FILTER",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "GetUnitBodySize",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetUnitBodySize takes unit whichUnit returns real\n```\n\n\n**_>:** `libraries/Missile.j`",
+      "sortText": "1_func_GetUnitBodySize",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetDestructableHeight",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetDestructableHeight takes destructable d returns real\n```\n\n\n**_>:** `libraries/Missile.j`",
+      "sortText": "1_func_GetDestructableHeight",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetItemHeight",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetItemHeight takes item i returns real\n```\n\n\n**_>:** `libraries/Missile.j`",
+      "sortText": "1_func_GetItemHeight",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "ToogleUnitIndexer",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ToogleUnitIndexer takes boolean enable returns boolean\n```\n\n\n**_>:** `libraries/Missile.j`",
+      "sortText": "1_func_ToogleUnitIndexer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Missile",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct Missile extends array\n```\n\n\n**_>:** `libraries/Missile.j`",
+      "sortText": "1_struct_Missile",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Missile.j",
+      "statementType": "StructDeclaration"
+    }
+  ],
+  "timestamp": 1773220558729
+}

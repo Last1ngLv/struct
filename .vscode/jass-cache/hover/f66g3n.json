@@ -1,0 +1,91 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Loadout Leap.j",
+  "items": [
+    {
+      "symbolName": "DARK_TEXT_B",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Loadout Leap.j",
+      "content": "\n```jass\nconstant integer DARK_TEXT_B\n```\n\n\n**文件:** `MissileExamples/Rogue/Loadout Leap.j`"
+    },
+    {
+      "symbolName": "BLOOD_TEXT_B",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Loadout Leap.j",
+      "content": "\n```jass\nconstant integer BLOOD_TEXT_B\n```\n\n\n**文件:** `MissileExamples/Rogue/Loadout Leap.j`"
+    },
+    {
+      "symbolName": "DARK_MAX_HP_PCT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Loadout Leap.j",
+      "content": "\n```jass\nconstant real DARK_MAX_HP_PCT\n```\n\n\n**文件:** `MissileExamples/Rogue/Loadout Leap.j`"
+    },
+    {
+      "symbolName": "targetY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Loadout Leap.j",
+      "content": "\n```jass\nreal array targetY\n```\n\n\n**文件:** `MissileExamples/Rogue/Loadout Leap.j`"
+    },
+    {
+      "symbolName": "storedDamage",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Loadout Leap.j",
+      "content": "\n```jass\nreal array storedDamage\n```\n\n\n**文件:** `MissileExamples/Rogue/Loadout Leap.j`"
+    },
+    {
+      "symbolName": "DEFAULT_TEXT_B",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Loadout Leap.j",
+      "content": "\n```jass\nconstant integer DEFAULT_TEXT_B\n```\n\n\n**文件:** `MissileExamples/Rogue/Loadout Leap.j`"
+    },
+    {
+      "symbolName": "ATTACK_TYPE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Loadout Leap.j",
+      "content": "\n```jass\nconstant attacktype ATTACK_TYPE\n```\n\n\n**文件:** `MissileExamples/Rogue/Loadout Leap.j`"
+    },
+    {
+      "symbolName": "WIND_SCALE_BONUS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Loadout Leap.j",
+      "content": "\n```jass\nconstant real WIND_SCALE_BONUS\n```\n\n\n**文件:** `MissileExamples/Rogue/Loadout Leap.j`"
+    },
+    {
+      "symbolName": "ABILITY_POISON",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Loadout Leap.j",
+      "content": "\n```jass\nconstant integer ABILITY_POISON\n```\n\n\n**文件:** `MissileExamples/Rogue/Loadout Leap.j`"
+    },
+    {
+      "symbolName": "ENABLE_AUTO_MANA_SWAP",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Loadout Leap.j",
+      "content": "\n```jass\nconstant boolean ENABLE_AUTO_MANA_SWAP\n```\n\n\n**文件:** `MissileExamples/Rogue/Loadout Leap.j`"
+    },
+    {
+      "symbolName": "bonusActive",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Loadout Leap.j",
+      "content": "\n```jass\nboolean array bonusActive\n```\n\n\n**文件:** `MissileExamples/Rogue/Loadout Leap.j`"
+    },
+    {
+      "symbolName": "OnEffect",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Loadout Leap.j",
+      "content": "\n```jass\nfunction OnEffect takes nothing returns nothing\n```\n\n\n**文件:** `MissileExamples/Rogue/Loadout Leap.j`"
+    },
+    {
+      "symbolName": "POISON_TEXT_R",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Loadout Leap.j",
+      "content": "\n```jass\nconstant integer POISON_TEXT_R\n```\n\n\n**文件:** `MissileExamples/Rogue/Loadout Leap.j`"
+    },
+    {
+      "symbolName": "delayedAnimTimer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Loadout Leap.j",
+      "content": "\n```jass\ntimer array delayedAnimTimer\n```\n\n\n**文件:** `MissileExamples/Rogue/Loadout Leap.j`"
+    },
+    {
+      "symbolName": "ANIMATION_TAG",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Loadout Leap.j",
+      "content": "\n```jass\nconstant string ANIMATION_TAG\n```\n\n\n**文件:** `MissileExamples/Rogue/Loadout Leap.j`"
+    },
+    {
+      "symbolName": "LoadoutLeap",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Loadout Leap.j",
+      "content": "\n```jass\nlibrary LoadoutLeap requires SpellIndex, Missile, PlayerMissileLoadout, IsUnitChanneling, DamageTextUtil, LoadoutOrbBalance initializer Init\n```\n\n\n**文件:** `MissileExamples/Rogue/Loadout Leap.j`"
+    },
+    {
+      "symbolName": "IMPACT_SOUND",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Loadout Leap.j",
+      "content": "\n```jass\nconstant string IMPACT_SOUND\n```\n\n\n**文件:** `MissileExamples/Rogue/Loadout Leap.j`"
+    }
+  ],
+  "timestamp": 1772899303396
+}

@@ -1,0 +1,24 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\WorldBounds.j",
+  "items": [
+    {
+      "label": "WorldBoundInit",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule WorldBoundInit\n```\n\n\n**_>:** `libraries/WorldBounds.j`",
+      "sortText": "1_module_WorldBoundInit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\WorldBounds.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "WorldBounds",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct WorldBounds extends array\n```\n\n\n**_>:** `libraries/WorldBounds.j`",
+      "sortText": "1_struct_WorldBounds",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\WorldBounds.j",
+      "statementType": "StructDeclaration"
+    }
+  ],
+  "timestamp": 1773220558731
+}

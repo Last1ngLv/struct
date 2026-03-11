@@ -1,2 +1,0 @@
-library InventoryBonuses requires optional BonusMod, optional UnitMaxState
-endlibrary

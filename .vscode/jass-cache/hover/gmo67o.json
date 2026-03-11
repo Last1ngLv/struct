@@ -1,0 +1,16 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Guided Arrow.j",
+  "items": [
+    {
+      "symbolName": "Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Guided Arrow.j",
+      "content": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**文件:** `MissileExamples/Rogue/Guided Arrow.j`"
+    },
+    {
+      "symbolName": "OnEffect",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Guided Arrow.j",
+      "content": "\n```jass\nfunction OnEffect takes nothing returns nothing\n```\n\n\n**文件:** `MissileExamples/Rogue/Guided Arrow.j`"
+    }
+  ],
+  "timestamp": 1772330489937
+}

@@ -1,0 +1,51 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\DummyCaster.j",
+  "items": [
+    {
+      "label": "UNITS_DUMMY_CASTER",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer UNITS_DUMMY_CASTER\n```\n\n\n**_>:** `libraries/DummyCaster.j`",
+      "sortText": "2_var_UNITS_DUMMY_CASTER",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\DummyCaster.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "PLAYER_OWNER",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant player PLAYER_OWNER\n```\n\n\n**_>:** `libraries/DummyCaster.j`",
+      "sortText": "2_var_PLAYER_OWNER",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\DummyCaster.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "u",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nunit u\n```\n\n\n**_>:** `libraries/DummyCaster.j`",
+      "sortText": "2_var_u",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\DummyCaster.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "N",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule N\n```\n\n\n**_>:** `libraries/DummyCaster.j`",
+      "sortText": "1_module_N",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\DummyCaster.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "DummyCaster",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct DummyCaster extends array\n```\n\n\n**_>:** `libraries/DummyCaster.j`",
+      "sortText": "1_struct_DummyCaster",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\DummyCaster.j",
+      "statementType": "StructDeclaration"
+    }
+  ],
+  "timestamp": 1773220558728
+}

@@ -1,0 +1,16 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Missile.j",
+  "items": [
+    {
+      "symbolName": "Missile",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Missile.j",
+      "content": "\n```jass\nlibrary Missile requires ErrorMessage\n```\n\n\n**文件:** `libraries/Missile.j`"
+    },
+    {
+      "symbolName": "Missile",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Missile.j",
+      "content": "\n```jass\nstruct Missile extends array\n```\n\n\n**文件:** `libraries/Missile.j`"
+    }
+  ],
+  "timestamp": 1771634946662
+}

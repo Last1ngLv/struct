@@ -1,0 +1,21 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Gravity Shell.j",
+  "items": [
+    {
+      "symbolName": "missileKind",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Gravity Shell.j",
+      "content": "\n```jass\ninteger array missileKind\n```\n\n\n**文件:** `MissileExamples/Rogue/Gravity Shell.j`"
+    },
+    {
+      "symbolName": "mainCaught",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Gravity Shell.j",
+      "content": "\n```jass\nboolean array mainCaught\n```\n\n\n**文件:** `MissileExamples/Rogue/Gravity Shell.j`"
+    },
+    {
+      "symbolName": "OnEffect",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Gravity Shell.j",
+      "content": "\n```jass\nfunction OnEffect takes nothing returns nothing\n```\n\n\n**文件:** `MissileExamples/Rogue/Gravity Shell.j`"
+    }
+  ],
+  "timestamp": 1772330489937
+}

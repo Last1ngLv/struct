@@ -1,0 +1,136 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Gun Barrage.j",
+  "items": [
+    {
+      "symbolName": "CAST_ANIMATION",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "content": "\n```jass\nconstant string CAST_ANIMATION\n```\n\n\n---\n\n* Visual and animation options.\n\n**文件:** `MissileExamples/Rogue/Gun Barrage.j`"
+    },
+    {
+      "symbolName": "GUN_BARRAGE_ABILITY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "content": "\n```jass\nconstant integer GUN_BARRAGE_ABILITY\n```\n\n\n**文件:** `MissileExamples/Rogue/Gun Barrage.j`"
+    },
+    {
+      "symbolName": "SHOT_2_EXTRA_DAMAGE_PER_LEVEL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "content": "\n```jass\nconstant real SHOT_2_EXTRA_DAMAGE_PER_LEVEL\n```\n\n\n**文件:** `MissileExamples/Rogue/Gun Barrage.j`"
+    },
+    {
+      "symbolName": "SHOT_2_EXTRA_COLLISION",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "content": "\n```jass\nconstant real SHOT_2_EXTRA_COLLISION\n```\n\n\n**文件:** `MissileExamples/Rogue/Gun Barrage.j`"
+    },
+    {
+      "symbolName": "SHOT_3_EXTRA_COLLISION",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "content": "\n```jass\nconstant real SHOT_3_EXTRA_COLLISION\n```\n\n\n**文件:** `MissileExamples/Rogue/Gun Barrage.j`"
+    },
+    {
+      "symbolName": "MUZZLE_FX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "content": "\n```jass\nconstant string MUZZLE_FX\n```\n\n\n**文件:** `MissileExamples/Rogue/Gun Barrage.j`"
+    },
+    {
+      "symbolName": "OnPointOrder",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "content": "\n```jass\nfunction OnPointOrder takes nothing returns nothing\n```\n\n\n**文件:** `MissileExamples/Rogue/Gun Barrage.j`"
+    },
+    {
+      "symbolName": "DAMAGE_TYPE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "content": "\n```jass\nconstant damagetype DAMAGE_TYPE\n```\n\n\n**文件:** `MissileExamples/Rogue/Gun Barrage.j`"
+    },
+    {
+      "symbolName": "GunBarrage",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "content": "\n```jass\nlibrary GunBarrage requires SpellIndex, Missile initializer Init\n```\n\n\n---\n\nTESH.scrollpos=0\n\nTESH.alwaysfold=0\n\n**文件:** `MissileExamples/Rogue/Gun Barrage.j`"
+    },
+    {
+      "symbolName": "FIRE_DURATION",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "content": "\n```jass\nconstant real FIRE_DURATION\n```\n\n\n---\n\n* Firing behavior.\n\n**文件:** `MissileExamples/Rogue/Gun Barrage.j`"
+    },
+    {
+      "symbolName": "SHOT_MISSILE_SCALE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "content": "\n```jass\nconstant real SHOT_MISSILE_SCALE\n```\n\n\n**文件:** `MissileExamples/Rogue/Gun Barrage.j`"
+    },
+    {
+      "symbolName": "NEXT_TICK_EXTRA_COLLISION",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "content": "\n```jass\nconstant real NEXT_TICK_EXTRA_COLLISION\n```\n\n\n**文件:** `MissileExamples/Rogue/Gun Barrage.j`"
+    },
+    {
+      "symbolName": "DealAreaDamage",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "content": "\n```jass\nfunction DealAreaDamage takes Missile missile, real x, real y returns nothing\n```\n\n\n---\n\n* Deal optional area damage around impact.\n\n**文件:** `MissileExamples/Rogue/Gun Barrage.j`"
+    },
+    {
+      "symbolName": "FilterUnits",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "content": "\n```jass\nfunction FilterUnits takes unit target, player owner returns boolean\n```\n\n\n---\n\n* Filter valid targets.\n\n**文件:** `MissileExamples/Rogue/Gun Barrage.j`"
+    },
+    {
+      "symbolName": "SHOT_MISSILE_SPEED",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "content": "\n```jass\nconstant real SHOT_MISSILE_SPEED\n```\n\n\n**文件:** `MissileExamples/Rogue/Gun Barrage.j`"
+    },
+    {
+      "symbolName": "ON_HIT_FX_ATTACH_POINT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "content": "\n```jass\nconstant string ON_HIT_FX_ATTACH_POINT\n```\n\n\n**文件:** `MissileExamples/Rogue/Gun Barrage.j`"
+    },
+    {
+      "symbolName": "RAPID_FIRE_ANIMATION_TIME_SCALE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "content": "\n```jass\nconstant real RAPID_FIRE_ANIMATION_TIME_SCALE\n```\n\n\n**文件:** `MissileExamples/Rogue/Gun Barrage.j`"
+    },
+    {
+      "symbolName": "ANIMATION_TIME_SCALE_ON_END",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "content": "\n```jass\nconstant real ANIMATION_TIME_SCALE_ON_END\n```\n\n\n**文件:** `MissileExamples/Rogue/Gun Barrage.j`"
+    },
+    {
+      "symbolName": "Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "content": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**文件:** `MissileExamples/Rogue/Gun Barrage.j`"
+    },
+    {
+      "symbolName": "SHOT_FLY_HEIGHT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "content": "\n```jass\nconstant real SHOT_FLY_HEIGHT\n```\n\n\n---\n\n* Missile options.\n\n**文件:** `MissileExamples/Rogue/Gun Barrage.j`"
+    },
+    {
+      "symbolName": "CANCEL_MOVE_DISTANCE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "content": "\n```jass\nconstant real CANCEL_MOVE_DISTANCE\n```\n\n\n**文件:** `MissileExamples/Rogue/Gun Barrage.j`"
+    },
+    {
+      "symbolName": "FIRE_INTERVAL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "content": "\n```jass\nconstant real FIRE_INTERVAL\n```\n\n\n**文件:** `MissileExamples/Rogue/Gun Barrage.j`"
+    },
+    {
+      "symbolName": "FIRST_ANIMATION_DELAY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "content": "\n```jass\nconstant real FIRST_ANIMATION_DELAY\n```\n\n\n**文件:** `MissileExamples/Rogue/Gun Barrage.j`"
+    },
+    {
+      "symbolName": "AOE_CENTER_ON_HIT_UNIT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "content": "\n```jass\nconstant boolean AOE_CENTER_ON_HIT_UNIT\n```\n\n\n**文件:** `MissileExamples/Rogue/Gun Barrage.j`"
+    },
+    {
+      "symbolName": "ATTACK_TYPE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "content": "\n```jass\nconstant attacktype ATTACK_TYPE\n```\n\n\n---\n\n* Damage options.\n\n**文件:** `MissileExamples/Rogue/Gun Barrage.j`"
+    },
+    {
+      "symbolName": "OnEffect",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "content": "\n```jass\nfunction OnEffect takes nothing returns nothing\n```\n\n\n**文件:** `MissileExamples/Rogue/Gun Barrage.j`"
+    }
+  ],
+  "timestamp": 1772330489938
+}

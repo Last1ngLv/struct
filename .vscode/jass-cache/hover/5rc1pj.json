@@ -1,0 +1,11 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainPathability.j",
+  "items": [
+    {
+      "symbolName": "Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainPathability.j",
+      "content": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**文件:** `libraries/TerrainPathability.j`"
+    }
+  ],
+  "timestamp": 1771677938872
+}

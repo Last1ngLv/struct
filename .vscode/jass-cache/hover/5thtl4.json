@@ -1,0 +1,61 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Lunar Slash.j",
+  "items": [
+    {
+      "symbolName": "OUTER_EDGE_BONUS_DAMAGE_FACTOR",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Lunar Slash.j",
+      "content": "\n```jass\nconstant real OUTER_EDGE_BONUS_DAMAGE_FACTOR\n```\n\n\n**文件:** `MissileExamples/Rogue/Lunar Slash.j`"
+    },
+    {
+      "symbolName": "NEXT_TICK_EXTRA_DAMAGE_PER_LEVEL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Lunar Slash.j",
+      "content": "\n```jass\nconstant real NEXT_TICK_EXTRA_DAMAGE_PER_LEVEL\n```\n\n\n**文件:** `MissileExamples/Rogue/Lunar Slash.j`"
+    },
+    {
+      "symbolName": "NEXT_TICK_EXTRA_RADIUS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Lunar Slash.j",
+      "content": "\n```jass\nconstant real NEXT_TICK_EXTRA_RADIUS\n```\n\n\n---\n\n* Tick scaling options.\n\n**文件:** `MissileExamples/Rogue/Lunar Slash.j`"
+    },
+    {
+      "symbolName": "NEXT_TICK_EXTRA_DAMAGE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Lunar Slash.j",
+      "content": "\n```jass\nconstant real NEXT_TICK_EXTRA_DAMAGE\n```\n\n\n**文件:** `MissileExamples/Rogue/Lunar Slash.j`"
+    },
+    {
+      "symbolName": "OnPointOrder",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Lunar Slash.j",
+      "content": "\n```jass\nfunction OnPointOrder takes nothing returns nothing\n```\n\n\n**文件:** `MissileExamples/Rogue/Lunar Slash.j`"
+    },
+    {
+      "symbolName": "DAMAGE_TYPE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Lunar Slash.j",
+      "content": "\n```jass\nconstant damagetype DAMAGE_TYPE\n```\n\n\n**文件:** `MissileExamples/Rogue/Lunar Slash.j`"
+    },
+    {
+      "symbolName": "FilterUnits",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Lunar Slash.j",
+      "content": "\n```jass\nfunction FilterUnits takes unit target, player owner returns boolean\n```\n\n\n---\n\n* Filter valid targets.\n\n**文件:** `MissileExamples/Rogue/Lunar Slash.j`"
+    },
+    {
+      "symbolName": "Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Lunar Slash.j",
+      "content": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**文件:** `MissileExamples/Rogue/Lunar Slash.j`"
+    },
+    {
+      "symbolName": "CANCEL_MOVE_DISTANCE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Lunar Slash.j",
+      "content": "\n```jass\nconstant real CANCEL_MOVE_DISTANCE\n```\n\n\n**文件:** `MissileExamples/Rogue/Lunar Slash.j`"
+    },
+    {
+      "symbolName": "ATTACK_TYPE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Lunar Slash.j",
+      "content": "\n```jass\nconstant attacktype ATTACK_TYPE\n```\n\n\n---\n\n* Damage options.\n\n**文件:** `MissileExamples/Rogue/Lunar Slash.j`"
+    },
+    {
+      "symbolName": "OnEffect",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Lunar Slash.j",
+      "content": "\n```jass\nfunction OnEffect takes nothing returns nothing\n```\n\n\n**文件:** `MissileExamples/Rogue/Lunar Slash.j`"
+    }
+  ],
+  "timestamp": 1772330489939
+}

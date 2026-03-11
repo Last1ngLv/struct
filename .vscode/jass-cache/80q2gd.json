@@ -1,0 +1,42 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\RegisterPlayerUnitEvent.j",
+  "items": [
+    {
+      "label": "t",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ntrigger array t\n```\n\n\n**_>:** `libraries/RegisterPlayerUnitEvent.j`",
+      "sortText": "2_var_t",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\RegisterPlayerUnitEvent.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "RegisterPlayerUnitEvent",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction RegisterPlayerUnitEvent takes playerunitevent p, code c returns nothing\n```\n\n\n**_>:** `libraries/RegisterPlayerUnitEvent.j`",
+      "sortText": "1_func_RegisterPlayerUnitEvent",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\RegisterPlayerUnitEvent.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "RegisterPlayerUnitEventForPlayer",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction RegisterPlayerUnitEventForPlayer takes playerunitevent p, code c, player pl returns nothing\n```\n\n\n**_>:** `libraries/RegisterPlayerUnitEvent.j`",
+      "sortText": "1_func_RegisterPlayerUnitEventForPlayer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\RegisterPlayerUnitEvent.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetPlayerUnitEventTrigger",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetPlayerUnitEventTrigger takes playerunitevent p returns trigger\n```\n\n\n**_>:** `libraries/RegisterPlayerUnitEvent.j`",
+      "sortText": "1_func_GetPlayerUnitEventTrigger",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\RegisterPlayerUnitEvent.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1773220558729
+}

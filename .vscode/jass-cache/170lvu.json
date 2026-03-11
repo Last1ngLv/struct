@@ -1,0 +1,33 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SpellFinishEvent.j",
+  "items": [
+    {
+      "label": "M",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule M\n```\n\n\n**_>:** `libraries/SpellFinishEvent.j`",
+      "sortText": "1_module_M",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SpellFinishEvent.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "S",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct S extends array\n```\n\n\n**_>:** `libraries/SpellFinishEvent.j`",
+      "sortText": "1_struct_S",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SpellFinishEvent.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "RegisterSpellFinishEvent",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction RegisterSpellFinishEvent takes integer abil, code onFinish returns nothing\n```\n\n\n**_>:** `libraries/SpellFinishEvent.j`",
+      "sortText": "1_func_RegisterSpellFinishEvent",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SpellFinishEvent.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1773220558730
+}

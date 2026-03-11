@@ -1,0 +1,60 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\BloodMage\\Chaosflare.j",
+  "items": [
+    {
+      "label": "GetImpactDamage",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetImpactDamage takes integer level returns real\n```\n\n\n---\n\n*  Set the impact damage.\n\n**_>:** `MissileExamples/BloodMage/Chaosflare.j`",
+      "sortText": "1_func_GetImpactDamage",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\BloodMage\\Chaosflare.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetDamageOverTime",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetDamageOverTime takes integer level returns real\n```\n\n\n---\n\n*  Set the periodic damage.\n\n**_>:** `MissileExamples/BloodMage/Chaosflare.j`",
+      "sortText": "1_func_GetDamageOverTime",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\BloodMage\\Chaosflare.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetDamageOverTimeCount",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetDamageOverTimeCount takes integer level returns integer\n```\n\n\n---\n\n*  Set how often damage over time is applied.\n\n**_>:** `MissileExamples/BloodMage/Chaosflare.j`",
+      "sortText": "1_func_GetDamageOverTimeCount",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\BloodMage\\Chaosflare.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnPeriodic",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnPeriodic takes nothing returns nothing\n```\n\n\n---\n\n========================================================================\n\n*  Chaosflare code. Make changes carefully.\n\n========================================================================\n\n**_>:** `MissileExamples/BloodMage/Chaosflare.j`",
+      "sortText": "1_func_OnPeriodic",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\BloodMage\\Chaosflare.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnEffect",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnEffect takes nothing returns nothing\n```\n\n\n**_>:** `MissileExamples/BloodMage/Chaosflare.j`",
+      "sortText": "1_func_OnEffect",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\BloodMage\\Chaosflare.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**_>:** `MissileExamples/BloodMage/Chaosflare.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\BloodMage\\Chaosflare.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1773220558732
+}

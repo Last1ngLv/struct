@@ -1,0 +1,60 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\BloodMage\\Fireball.j",
+  "items": [
+    {
+      "label": "GetFlyDistance",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetFlyDistance takes integer level returns real\n```\n\n\n---\n\n*  Set the travel distance.\n\n**_>:** `MissileExamples/BloodMage/Fireball.j`",
+      "sortText": "1_func_GetFlyDistance",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\BloodMage\\Fireball.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetExplosionRadius",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetExplosionRadius takes integer level returns real\n```\n\n\n---\n\n*  Set the explosion aoe on impact.\n\n**_>:** `MissileExamples/BloodMage/Fireball.j`",
+      "sortText": "1_func_GetExplosionRadius",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\BloodMage\\Fireball.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "CustomizeMissile",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction CustomizeMissile takes Missile missile, integer level returns nothing\n```\n\n\n---\n\n*  Customize all missile members to your needs. For example there is also arc & curve\n\n**_>:** `MissileExamples/BloodMage/Fireball.j`",
+      "sortText": "1_func_CustomizeMissile",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\BloodMage\\Fireball.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Fireball",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct Fireball extends array\n```\n\n\n---\n\n========================================================================\n\n*  Fireball code. Make changes carefully.\n\n========================================================================\n\n*  Uses Missile's API. Add or remove whatever you need.\n\n**_>:** `MissileExamples/BloodMage/Fireball.j`",
+      "sortText": "1_struct_Fireball",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\BloodMage\\Fireball.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "OnEffect",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnEffect takes nothing returns nothing\n```\n\n\n**_>:** `MissileExamples/BloodMage/Fireball.j`",
+      "sortText": "1_func_OnEffect",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\BloodMage\\Fireball.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**_>:** `MissileExamples/BloodMage/Fireball.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\BloodMage\\Fireball.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1773220558733
+}

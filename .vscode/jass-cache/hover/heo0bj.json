@@ -1,0 +1,21 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\BloodMage\\Chaosflare.j",
+  "items": [
+    {
+      "symbolName": "GetDamageOverTimeCount",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\BloodMage\\Chaosflare.j",
+      "content": "\n```jass\nfunction GetDamageOverTimeCount takes integer level returns integer\n```\n\n\n---\n\n*  Set how often damage over time is applied.\n\n**文件:** `MissileExamples/BloodMage/Chaosflare.j`"
+    },
+    {
+      "symbolName": "Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\BloodMage\\Chaosflare.j",
+      "content": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**文件:** `MissileExamples/BloodMage/Chaosflare.j`"
+    },
+    {
+      "symbolName": "OnEffect",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\BloodMage\\Chaosflare.j",
+      "content": "\n```jass\nfunction OnEffect takes nothing returns nothing\n```\n\n\n**文件:** `MissileExamples/BloodMage/Chaosflare.j`"
+    }
+  ],
+  "timestamp": 1772330489933
+}

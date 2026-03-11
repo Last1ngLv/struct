@@ -1,3 +1,4 @@
 {
-    "editor.unicodeHighlight.ambiguousCharacters": false
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "kiroAgent.configureMCP": "Disabled"
 }

@@ -1,0 +1,46 @@
+{
+  "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+  "items": [
+    {
+      "symbolName": "unit",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\ntype unit = widget\n```\n\n\n---\n\n单位\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "AddSpecialEffectTarget",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nnative AddSpecialEffectTarget takes string modelName, widget targetWidget, string attachPointName returns effect\n```\n\n\n---\n\n新建特效(绑定到单位/物品/可破坏物) [R]\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "InitHashtable",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nnative InitHashtable takes nothing returns hashtable\n```\n\n\n---\n\n新建哈希表 [C]\n\n@version 1.24\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "EVENT_PLAYER_UNIT_SPELL_CHANNEL",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nconstant playerunitevent EVENT_PLAYER_UNIT_SPELL_CHANNEL\n```\n\n\n---\n\n玩家单位事件 准备施放技能(前摇开始)\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "EVENT_PLAYER_UNIT_SPELL_ENDCAST",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nconstant playerunitevent EVENT_PLAYER_UNIT_SPELL_ENDCAST\n```\n\n\n---\n\n玩家单位事件 停止施放技能\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "GetUnitUserData",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nnative GetUnitUserData takes unit whichUnit returns integer\n```\n\n\n---\n\n获取指定单位自定义值\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "BlzGetUnitMaxMana",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nnative BlzGetUnitMaxMana takes unit whichUnit returns integer\n```\n\n\n---\n\n获取指定单位最大魔法值\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "UNIT_STATE_MAX_MANA",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nconstant unitstate UNIT_STATE_MAX_MANA\n```\n\n\n---\n\n单位状态 单位最大法力值\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    }
+  ],
+  "timestamp": 1772398904243
+}

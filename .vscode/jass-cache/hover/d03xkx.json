@@ -1,0 +1,51 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SpellIndex.j",
+  "items": [
+    {
+      "symbolName": "destroy",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SpellIndex.j",
+      "content": "\n```jass\nmethod destroy takes nothing returns nothing\n```\n\n\n**所属:** `SpellIndex`\n**文件:** `libraries/SpellIndex.j`"
+    },
+    {
+      "symbolName": "source",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SpellIndex.j",
+      "content": "\n```jass\nunit source\n```\n\n\n---\n\n*  Add or remove struct members you to needs.\n\n*  Units.\n\n**所属:** `SpellIndex`\n**文件:** `libraries/SpellIndex.j`"
+    },
+    {
+      "symbolName": "UnitAlive",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SpellIndex.j",
+      "content": "\n```jass\nnative UnitAlive takes unit id returns boolean\n```\n\n\n**文件:** `libraries/SpellIndex.j`"
+    },
+    {
+      "symbolName": "SpellIndex",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SpellIndex.j",
+      "content": "\n```jass\nlibrary SpellIndex requires Table\n```\n\n\n**文件:** `libraries/SpellIndex.j`"
+    },
+    {
+      "symbolName": "SpellIndex",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SpellIndex.j",
+      "content": "\n```jass\nstruct SpellIndex\n```\n\n\n**文件:** `libraries/SpellIndex.j`"
+    },
+    {
+      "symbolName": "level",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SpellIndex.j",
+      "content": "\n```jass\ninteger level\n```\n\n\n**所属:** `SpellIndex`\n**文件:** `libraries/SpellIndex.j`"
+    },
+    {
+      "symbolName": "target",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SpellIndex.j",
+      "content": "\n```jass\nunit target\n```\n\n\n**所属:** `SpellIndex`\n**文件:** `libraries/SpellIndex.j`"
+    },
+    {
+      "symbolName": "GLOBAL_GROUP",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SpellIndex.j",
+      "content": "\n```jass\nstatic constant group GLOBAL_GROUP\n```\n\n\n---\n\n*  implement your Alloc module here.\n\n**所属:** `SpellIndex`\n**文件:** `libraries/SpellIndex.j`"
+    },
+    {
+      "symbolName": "clock",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SpellIndex.j",
+      "content": "\n```jass\ntimer clock\n```\n\n\n---\n\n* Timer.\n\n**所属:** `SpellIndex`\n**文件:** `libraries/SpellIndex.j`"
+    }
+  ],
+  "timestamp": 1772333181231
+}

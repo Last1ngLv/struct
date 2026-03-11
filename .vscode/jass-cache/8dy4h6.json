@@ -1,0 +1,42 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\CameraEQNoise.j",
+  "items": [
+    {
+      "label": "clock",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ntimer array clock\n```\n\n\n**_>:** `libraries/CameraEQNoise.j`",
+      "sortText": "2_var_clock",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\CameraEQNoise.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "StopCameraEQNoise",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction StopCameraEQNoise takes player whichPlayer returns nothing\n```\n\n\n**_>:** `libraries/CameraEQNoise.j`",
+      "sortText": "1_func_StopCameraEQNoise",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\CameraEQNoise.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TimerExpire",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction TimerExpire takes nothing returns nothing\n```\n\n\n**_>:** `libraries/CameraEQNoise.j`",
+      "sortText": "1_func_TimerExpire",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\CameraEQNoise.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "CameraSetEQNoise",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction CameraSetEQNoise takes player whichPlayer, real magnitude, real duration returns nothing\n```\n\n\n**_>:** `libraries/CameraEQNoise.j`",
+      "sortText": "1_func_CameraSetEQNoise",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\CameraEQNoise.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1773220558728
+}

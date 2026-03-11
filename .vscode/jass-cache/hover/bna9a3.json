@@ -1,0 +1,11 @@
+{
+  "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.6\\static\\common.j",
+  "items": [
+    {
+      "symbolName": "DAMAGE_TYPE_MAGIC",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.6\\static\\common.j",
+      "content": "\n```jass\nconstant damagetype DAMAGE_TYPE_MAGIC\n```\n\n\n---\n\n伤害类型 魔法\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.6\\static\\common.j`"
+    }
+  ],
+  "timestamp": 1771721236331
+}

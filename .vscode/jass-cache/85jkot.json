@@ -1,0 +1,267 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\SwapMana.j",
+  "items": [
+    {
+      "label": "CD_LEVEL",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer CD_LEVEL\n```\n\n\n**_>:** `MissileExamples/Rogue/SwapMana.j`",
+      "sortText": "2_var_CD_LEVEL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\SwapMana.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "MAX_TRIGGER_LEVEL",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer MAX_TRIGGER_LEVEL\n```\n\n\n**_>:** `MissileExamples/Rogue/SwapMana.j`",
+      "sortText": "2_var_MAX_TRIGGER_LEVEL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\SwapMana.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "COOLDOWN_MIN",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real COOLDOWN_MIN\n```\n\n\n**_>:** `MissileExamples/Rogue/SwapMana.j`",
+      "sortText": "2_var_COOLDOWN_MIN",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\SwapMana.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "ABILITY_RAY",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer ABILITY_RAY\n```\n\n\n**_>:** `MissileExamples/Rogue/SwapMana.j`",
+      "sortText": "2_var_ABILITY_RAY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\SwapMana.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "ABILITY_FIRE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer ABILITY_FIRE\n```\n\n\n**_>:** `MissileExamples/Rogue/SwapMana.j`",
+      "sortText": "2_var_ABILITY_FIRE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\SwapMana.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "ABILITY_POISON",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer ABILITY_POISON\n```\n\n\n**_>:** `MissileExamples/Rogue/SwapMana.j`",
+      "sortText": "2_var_ABILITY_POISON",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\SwapMana.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "ABILITY_WIND",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer ABILITY_WIND\n```\n\n\n**_>:** `MissileExamples/Rogue/SwapMana.j`",
+      "sortText": "2_var_ABILITY_WIND",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\SwapMana.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "ABILITY_DARK",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer ABILITY_DARK\n```\n\n\n**_>:** `MissileExamples/Rogue/SwapMana.j`",
+      "sortText": "2_var_ABILITY_DARK",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\SwapMana.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "ABILITY_BLOOD",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer ABILITY_BLOOD\n```\n\n\n**_>:** `MissileExamples/Rogue/SwapMana.j`",
+      "sortText": "2_var_ABILITY_BLOOD",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\SwapMana.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "ABILITY_CD_LEVEL1",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real ABILITY_CD_LEVEL1\n```\n\n\n**_>:** `MissileExamples/Rogue/SwapMana.j`",
+      "sortText": "2_var_ABILITY_CD_LEVEL1",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\SwapMana.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "ABILITY_CD_STEP",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real ABILITY_CD_STEP\n```\n\n\n**_>:** `MissileExamples/Rogue/SwapMana.j`",
+      "sortText": "2_var_ABILITY_CD_STEP",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\SwapMana.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "byUnit",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable byUnit\n```\n\n\n**_>:** `MissileExamples/Rogue/SwapMana.j`",
+      "sortText": "2_var_byUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\SwapMana.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "trackedAbility",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array trackedAbility\n```\n\n\n**_>:** `MissileExamples/Rogue/SwapMana.j`",
+      "sortText": "2_var_trackedAbility",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\SwapMana.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "savedLevel",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array savedLevel\n```\n\n\n**_>:** `MissileExamples/Rogue/SwapMana.j`",
+      "sortText": "2_var_savedLevel",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\SwapMana.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "savedInt",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array savedInt\n```\n\n\n**_>:** `MissileExamples/Rogue/SwapMana.j`",
+      "sortText": "2_var_savedInt",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\SwapMana.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "savedMana",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array savedMana\n```\n\n\n**_>:** `MissileExamples/Rogue/SwapMana.j`",
+      "sortText": "2_var_savedMana",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\SwapMana.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "CooldownFromLevel",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction CooldownFromLevel takes integer level returns real\n```\n\n\n---\n\nCalcula cooldown según nivel\n\n**_>:** `MissileExamples/Rogue/SwapMana.j`",
+      "sortText": "1_func_CooldownFromLevel",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\SwapMana.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnCooldownFinish",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnCooldownFinish takes nothing returns nothing\n```\n\n\n---\n\nSolo restaura nivel de habilidad al terminar cooldown\n\n**_>:** `MissileExamples/Rogue/SwapMana.j`",
+      "sortText": "1_func_OnCooldownFinish",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\SwapMana.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnOrbEvent",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnOrbEvent takes integer orbAbility returns nothing\n```\n\n\n---\n\nAl disparar un orb: aplica restauración de INT y mana, y nivel temporal\n\n**_>:** `MissileExamples/Rogue/SwapMana.j`",
+      "sortText": "1_func_OnOrbEvent",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\SwapMana.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "FunctionEventRay",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction FunctionEventRay takes nothing returns nothing\n```\n\n\n---\n\nHandlers para cada orbe\n\n**_>:** `MissileExamples/Rogue/SwapMana.j`",
+      "sortText": "1_func_FunctionEventRay",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\SwapMana.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "FunctionEventFire",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction FunctionEventFire takes nothing returns nothing\n```\n\n\n**_>:** `MissileExamples/Rogue/SwapMana.j`",
+      "sortText": "1_func_FunctionEventFire",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\SwapMana.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "FunctionEventPoison",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction FunctionEventPoison takes nothing returns nothing\n```\n\n\n**_>:** `MissileExamples/Rogue/SwapMana.j`",
+      "sortText": "1_func_FunctionEventPoison",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\SwapMana.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "FunctionEventWind",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction FunctionEventWind takes nothing returns nothing\n```\n\n\n**_>:** `MissileExamples/Rogue/SwapMana.j`",
+      "sortText": "1_func_FunctionEventWind",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\SwapMana.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "FunctionEventDark",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction FunctionEventDark takes nothing returns nothing\n```\n\n\n**_>:** `MissileExamples/Rogue/SwapMana.j`",
+      "sortText": "1_func_FunctionEventDark",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\SwapMana.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "FunctionEventBlood",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction FunctionEventBlood takes nothing returns nothing\n```\n\n\n**_>:** `MissileExamples/Rogue/SwapMana.j`",
+      "sortText": "1_func_FunctionEventBlood",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\SwapMana.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "BeginGive",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction BeginGive takes unit u, integer orbAbility returns nothing\n```\n\n\n---\n\nInicializa tracking y aplica INT 500 + mana full\n\n**_>:** `MissileExamples/Rogue/SwapMana.j`",
+      "sortText": "1_func_BeginGive",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\SwapMana.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TriggerLoadoutIntFullManaSwapForAbility",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction TriggerLoadoutIntFullManaSwapForAbility takes unit u, integer abilityRaw returns nothing\n```\n\n\n**_>:** `MissileExamples/Rogue/SwapMana.j`",
+      "sortText": "1_func_TriggerLoadoutIntFullManaSwapForAbility",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\SwapMana.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "LoadoutIntFullMana",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction LoadoutIntFullMana takes unit u, integer abilityRaw returns nothing\n```\n\n\n**_>:** `MissileExamples/Rogue/SwapMana.j`",
+      "sortText": "1_func_LoadoutIntFullMana",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\SwapMana.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**_>:** `MissileExamples/Rogue/SwapMana.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\SwapMana.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1773220558737
+}
