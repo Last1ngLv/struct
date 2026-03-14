@@ -49,20 +49,28 @@ library IsUnitChanneling requires optional UnitIndexer, optional Table, Register
        
         private static method onEvent takes nothing returns nothing
             // Filtrar si la habilidad es AM05
-            static if GetSpellAbilityId() == 'AM05' then
-                call BJDebugMsg("Ignore!!")
-                return // Ignora este evento
-            endif
 
             static if LIBRARY_UnitIndexer then
                 local integer id = GetUnitUserData(GetTriggerUnit())
+                if GetSpellAbilityId() == 'AM01' or GetSpellAbilityId() == 'AM02' or GetSpellAbilityId() == 'AM03' or GetSpellAbilityId() == 'AM04' or GetSpellAbilityId() == 'AM05' or GetSpellAbilityId() == 'AM06' then
+                    //call BJDebugMsg("Ignore!!1")
+                    return // Ignora este evento
+                endif
                 set channeling[id] = not channeling[id]
             else
                 static if LIBRARY_Table then
                     local integer id = GetHandleId(GetTriggerUnit())
+                    if GetSpellAbilityId() == 'AM01' or GetSpellAbilityId() == 'AM02' or GetSpellAbilityId() == 'AM03' or GetSpellAbilityId() == 'AM04' or GetSpellAbilityId() == 'AM05' or GetSpellAbilityId() == 'AM06' then
+                        //call BJDebugMsg("Ignore!!2")
+                        return // Ignora este evento
+                    endif
                     set channeling.boolean[id] = not channeling.boolean[id]
                 else
                     local integer id = GetHandleId(GetTriggerUnit())
+                    if GetSpellAbilityId() == 'AM01' or GetSpellAbilityId() == 'AM02' or GetSpellAbilityId() == 'AM03' or GetSpellAbilityId() == 'AM04' or GetSpellAbilityId() == 'AM05' or GetSpellAbilityId() == 'AM06' then
+                        //call BJDebugMsg("Ignore!!3")
+                        return // Ignora este evento
+                    endif
                     call SaveBoolean(hash, 0, id, not LoadBoolean(hash, 0, id))
                 endif
             endif
