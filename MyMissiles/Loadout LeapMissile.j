@@ -117,6 +117,10 @@ library LoadoutLeapMissile initializer Init uses SpellIndex, Missile, PlayerMiss
         return (area/100.0)*DUMMY_SCALE_PER_100_AREA
     endfunction
 
+    private function GetLeapMissileWindArea takes integer inst returns real
+        return BASE_IMPACT_AREA + LOADOUT_ORB_WIND_AOE_PER_INSTANCE*LoadoutClampInstance(inst)
+    endfunction
+
     private function GetSafeFireInterval takes nothing returns real
         if FIRE_DURATION <= 0. then
             return 0.03125
@@ -380,7 +384,7 @@ library LoadoutLeapMissile initializer Init uses SpellIndex, Missile, PlayerMiss
             call UnitRemoveAbility(source, BUFF_APPLIED_ID)
             
             if bonus and abilityChoice == LOADOUT_ORB_ABILITY_WIND then
-                set baseArea = LoadoutGetWindAoe(inst)
+                set baseArea = GetLeapMissileWindArea(inst)
             endif
             set dummyScale = GetLeapMissileScaleForArea(baseArea)
 
@@ -547,13 +551,12 @@ library LoadoutLeapMissile initializer Init uses SpellIndex, Missile, PlayerMiss
         local string cFx2 = GetPlayerLeapCasterFx2(owner)
         local string dFx1 = GetPlayerLeapDummyFx1(owner)
         local string dFx2 = GetPlayerLeapDummyFx2(owner)
-        local real dummyScale = GetLeapMissileScaleForArea(BASE_IMPACT_AREA)
+        local real dummyScale = 1.0
         local real companionFacing = Atan2(ty - y, tx - x)*bj_RADTODEG
         local integer companionUnitId = GetPlayerLeapCompanionUnitId(owner)
         local unit buffDummy
         local unit companion
         local unit fxTarget
-        local real visualArea = BASE_IMPACT_AREA
 
         set chosen = GetPlayerMissileAbilityChoice(owner)
         set chosenLevel = 0
@@ -606,10 +609,6 @@ library LoadoutLeapMissile initializer Init uses SpellIndex, Missile, PlayerMiss
         set storedDamage[missile] = damage
         set effectInstances[missile] = instances
         set bonusActive[missile] = (chosen != 0) and (chosenLevel > 0)
-        if bonusActive[missile] and chosen == LOADOUT_ORB_ABILITY_WIND then
-            set visualArea = LoadoutGetWindAoe(instances)
-        endif
-        set dummyScale = GetLeapMissileScaleForArea(visualArea)
 
         if companionUnitId == 0 then
             set companionUnitId = COMPANION_DUMMY_FALLBACK_ID
