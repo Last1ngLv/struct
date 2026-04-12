@@ -344,6 +344,35 @@ struct MovementData
         set .lastCastTargetUnit = null
     endmethod
 
+    private method endSessionAndRestoreMovement takes nothing returns nothing
+        local unit u = .source
+        local boolean hadFollow = .isFollowing and .hasMovePoint
+        local real targetX = .moveX
+        local real targetY = .moveY
+        local real dx
+        local real dy
+
+        call .endSession()
+
+        if (not hadFollow) or (u == null) or (GetUnitTypeId(u) == 0) or (not UnitAlive(u)) then
+            set u = null
+            return
+        endif
+
+        if IsLeapBuffActive(u) then
+            set u = null
+            return
+        endif
+
+        set dx = targetX - GetUnitX(u)
+        set dy = targetY - GetUnitY(u)
+        if dx * dx + dy * dy > ARRIVAL_THRESHOLD_SQ then
+            call IssuePointOrder(u, "smart", targetX, targetY)
+        endif
+
+        set u = null
+    endmethod
+
     method destroy takes nothing returns nothing
         call .endSession()
         if .source != null then
@@ -435,14 +464,14 @@ struct MovementData
         endif
 
         if .sessionRemaining <= 0. then
-            call .endSession()
+            call .endSessionAndRestoreMovement()
             set t = null
             return
         endif
 
         set .sessionRemaining = .sessionRemaining - INTERVAL
         if .sessionRemaining <= 0. then
-            call .endSession()
+            call .endSessionAndRestoreMovement()
         else
             call .refreshCastTextTag()
         endif
