@@ -25,11 +25,6 @@ library LoadoutLeapMissile initializer Init uses SpellIndex, Missile, PlayerMiss
         private constant real DUMMY_SCALE_PER_100_AREA = 0.50
         private constant string IMPACT_SOUND = "" // Configurable impact sound (e.g. "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.wav")
         
-        //* Buff variables
-        private constant integer BUFF_CAST_ID = 'AB01' // Raw code of Leap Apply buff ability
-        private constant integer ORDER_ID     = 852075 // Order of the Leap Apply buff ability (e.g. slow)
-        private constant integer BUFF_APPLIED_ID = 'BB01' // Configure the buff rawcode applied by BUFF_CAST_ID.
-        
         //* Animations
         private constant string CAST_ANIMATION = "spell" // What animation plays while jumping
         private constant string ANIMATION_TAG = "" // Added by AddUnitAnimationProperties. Empty if none.
@@ -308,7 +303,6 @@ library LoadoutLeapMissile initializer Init uses SpellIndex, Missile, PlayerMiss
                 if ANIMATION_TAG != "" then
                     call AddUnitAnimationProperties(dex.source, ANIMATION_TAG, false)
                 endif
-                call UnitRemoveAbility(dex.source, BUFF_APPLIED_ID)
             endif
             
             call dex.destroy()
@@ -381,8 +375,6 @@ library LoadoutLeapMissile initializer Init uses SpellIndex, Missile, PlayerMiss
             local string impactModel = GetPlayerLeapImpactFx(dex.user)
             local real dummyScale = GetLeapMissileScaleForArea(baseArea)
 
-            call UnitRemoveAbility(source, BUFF_APPLIED_ID)
-            
             if bonus and abilityChoice == LOADOUT_ORB_ABILITY_WIND then
                 set baseArea = GetLeapMissileWindArea(inst)
             endif
@@ -554,7 +546,6 @@ library LoadoutLeapMissile initializer Init uses SpellIndex, Missile, PlayerMiss
         local real dummyScale = 1.0
         local real companionFacing = Atan2(ty - y, tx - x)*bj_RADTODEG
         local integer companionUnitId = GetPlayerLeapCompanionUnitId(owner)
-        local unit buffDummy
         local unit companion
         local unit fxTarget
 
@@ -655,13 +646,6 @@ library LoadoutLeapMissile initializer Init uses SpellIndex, Missile, PlayerMiss
             set rayLightning[missile] = AddLightningEx(RAY_LIGHTNING_TYPE, true, x, y, 0.0, x, y, 0.0)
         endif
         
-        // Buff the caster during flight
-        set buffDummy = CreateUnit(owner, 'dumi', x, y, 0)
-        call UnitAddAbility(buffDummy, 'Aloc')
-        call UnitAddAbility(buffDummy, BUFF_CAST_ID)
-        call IssueTargetOrderById(buffDummy, ORDER_ID, source)
-        call UnitApplyTimedLife(buffDummy, 'BTLF', 1.0)
-        set buffDummy = null
         set companion = null
         set fxTarget = null
         
