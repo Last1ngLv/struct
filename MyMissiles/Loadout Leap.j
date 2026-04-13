@@ -1,4 +1,4 @@
-library LoadoutLeap initializer Init uses SpellIndex, Missile, PlayerMissileLoadout, IsUnitChanneling, DamageTextUtil, LoadoutOrbBalance, IsTerrainWalkable
+library LoadoutLeap initializer Init uses TimerUtils, Table, SpellIndex, Missile, PlayerMissileLoadout, IsUnitChanneling, DamageTextUtil, LoadoutOrbBalance, IsTerrainWalkable, SimError, WaveDamageCredit
 //**
 //* User settings:
 //* ==============
@@ -7,7 +7,7 @@ library LoadoutLeap initializer Init uses SpellIndex, Missile, PlayerMissileLoad
 
         //* Base Jump settings
         private constant real BASE_JUMP_HEIGHT = 550.0
-        private constant real BASE_JUMP_SPEED = 900.0
+        private constant real BASE_JUMP_SPEED = 1200.0
         private constant boolean USE_FIXED_TIME = false
         private constant real FIXED_JUMP_TIME = 1.20
 
@@ -76,6 +76,7 @@ library LoadoutLeap initializer Init uses SpellIndex, Missile, PlayerMissileLoad
         private boolean array bonusActive
         private timer array delayedAnimTimer
         private sound error
+        private Table activeLeapMissileByUnit
 
         // FX arrays
         private effect array casterFx1
@@ -90,7 +91,16 @@ library LoadoutLeap initializer Init uses SpellIndex, Missile, PlayerMissileLoad
         // Impact Effect Dummy
         private unit array impactDummy
         private effect array impactFx
+        private real array impactRemaining
+        private integer array impactNext
+        private integer array impactPrev
+        private integer impactHead = 0
+        private timer impactTicker = null
         private effect array poisonFx
+        private integer array poisonNext
+        private integer array poisonPrev
+        private integer poisonHead = 0
+        private timer poisonTicker = null
     endglobals
     
     private keyword LeapCore
@@ -104,39 +114,70 @@ library LoadoutLeap initializer Init uses SpellIndex, Missile, PlayerMissileLoad
 
 
     // Poison DOT Logic
+    private function PoisonListAdd takes SpellIndex dex returns nothing
+        set poisonPrev[dex] = 0
+        set poisonNext[dex] = poisonHead
+        if poisonHead != 0 then
+            set poisonPrev[poisonHead] = dex
+        endif
+        set poisonHead = dex
+    endfunction
+
+    private function PoisonListRemove takes SpellIndex dex returns nothing
+        local integer p = poisonPrev[dex]
+        local integer n = poisonNext[dex]
+        if p != 0 then
+            set poisonNext[p] = n
+        else
+            set poisonHead = n
+        endif
+        if n != 0 then
+            set poisonPrev[n] = p
+        endif
+        set poisonPrev[dex] = 0
+        set poisonNext[dex] = 0
+    endfunction
+
+    private function PoisonDestroy takes SpellIndex dex returns nothing
+        call PoisonListRemove(dex)
+        if poisonFx[dex] != null then
+            call DestroyEffect(poisonFx[dex])
+            set poisonFx[dex] = null
+        endif
+        call dex.destroy()
+    endfunction
+
     private function OnPoisonTick takes nothing returns nothing
-        local timer t = GetExpiredTimer()
-        local SpellIndex dex = GetTimerData(t)
-        local unit target = dex.target
-        local integer ticks = R2I(dex.count - 1)
+        local integer node = poisonHead
+        local integer nextNode
+        local SpellIndex dex
+        local unit target
+        local integer ticks
+        loop
+            exitwhen node == 0
+            set dex = SpellIndex(node)
+            set nextNode = poisonNext[node]
+            set target = dex.target
+            set ticks = R2I(dex.count - 1)
 
-        if (target == null) or (GetUnitTypeId(target) == 0) or IsUnitType(target, UNIT_TYPE_DEAD) then
-            if poisonFx[dex] != null then
-                call DestroyEffect(poisonFx[dex])
-                set poisonFx[dex] = null
+            if (target == null) or (GetUnitTypeId(target) == 0) or (not UnitAlive(target)) or (GetUnitTypeId(dex.source) == 0) then
+                call PoisonDestroy(dex)
+            else
+                call WaveRecordDamageCredit(dex.source, target)
+                call UnitDamageTarget(dex.source, target, dex.damage, false, false, ATTACK_TYPE, DAMAGE_TYPE, null)
+                call ShowCustomLoadoutText(target, "-" + FormatLoadoutDamageText(dex.damage), POISON_TEXT_R, POISON_TEXT_G, POISON_TEXT_B)
+                if ticks <= 0 then
+                    call PoisonDestroy(dex)
+                else
+                    set dex.count = ticks
+                endif
             endif
-            call dex.destroy()
-            call ReleaseTimer(t)
-            set t = null
-            return
+            set node = nextNode
+        endloop
+        if (poisonHead == 0) and (poisonTicker != null) then
+            call ReleaseTimer(poisonTicker)
+            set poisonTicker = null
         endif
-
-        call UnitDamageTarget(dex.source, target, dex.damage, false, false, ATTACK_TYPE, DAMAGE_TYPE, null)
-        call ShowCustomLoadoutText(target, "-" + FormatLoadoutDamageText(dex.damage), POISON_TEXT_R, POISON_TEXT_G, POISON_TEXT_B)
-
-        if ticks <= 0 then
-            if poisonFx[dex] != null then
-                call DestroyEffect(poisonFx[dex])
-                set poisonFx[dex] = null
-            endif
-            call dex.destroy()
-            call ReleaseTimer(t)
-            set t = null
-            return
-        endif
-
-        set dex.count = ticks
-        set t = null
     endfunction
 
     private function ApplyPoison takes unit source, unit target, real damagePerSecond, real duration returns nothing
@@ -145,6 +186,7 @@ library LoadoutLeap initializer Init uses SpellIndex, Missile, PlayerMissileLoad
         local real covered
         
         // Initial impact has no minus sign
+        call WaveRecordDamageCredit(source, target)
         call UnitDamageTarget(source, target, damagePerSecond, false, false, ATTACK_TYPE, DAMAGE_TYPE, null)
         call ShowCustomLoadoutText(target, FormatLoadoutDamageText(damagePerSecond), POISON_TEXT_R, POISON_TEXT_G, POISON_TEXT_B)
 
@@ -175,27 +217,90 @@ library LoadoutLeap initializer Init uses SpellIndex, Missile, PlayerMissileLoad
         endif
 
         set dex.count = ticks
-        call TimerStart(NewTimerEx(dex), LOADOUT_ORB_POISON_TICK_INTERVAL, true, function OnPoisonTick)
+        call PoisonListAdd(dex)
+        if poisonTicker == null then
+            set poisonTicker = NewTimer()
+            call SetTimerDebugTag(poisonTicker, TIMER_DEBUG_TAG_LOADOUT_LEAP)
+            call TimerStart(poisonTicker, LOADOUT_ORB_POISON_TICK_INTERVAL, true, function OnPoisonTick)
+        endif
     endfunction
 
     // Impact Dummy cleanup
-    private function OnImpactDummyExpire takes nothing returns nothing
-        local timer t = GetExpiredTimer()
-        local integer id = GetTimerData(t)
-        
+    private function ImpactListAdd takes integer id returns nothing
+        set impactPrev[id] = 0
+        set impactNext[id] = impactHead
+        if impactHead != 0 then
+            set impactPrev[impactHead] = id
+        endif
+        set impactHead = id
+    endfunction
+
+    private function ImpactListRemove takes integer id returns nothing
+        local integer p = impactPrev[id]
+        local integer n = impactNext[id]
+        if p != 0 then
+            set impactNext[p] = n
+        else
+            set impactHead = n
+        endif
+        if n != 0 then
+            set impactPrev[n] = p
+        endif
+        set impactPrev[id] = 0
+        set impactNext[id] = 0
+    endfunction
+
+    private function DestroyImpactDummy takes integer id returns nothing
+        call ImpactListRemove(id)
         if impactFx[id] != null then
             call DestroyEffect(impactFx[id])
             set impactFx[id] = null
         endif
-        
         if impactDummy[id] != null then
             call RemoveUnit(impactDummy[id])
             set impactDummy[id] = null
         endif
-        
+        set impactRemaining[id] = 0.0
         call SpellIndex(id).destroy()
-        call ReleaseTimer(t)
-        set t = null
+    endfunction
+
+    private function OnImpactTicker takes nothing returns nothing
+        local integer node = impactHead
+        local integer nextNode
+        loop
+            exitwhen node == 0
+            set nextNode = impactNext[node]
+            set impactRemaining[node] = impactRemaining[node] - 0.03125
+            if impactRemaining[node] <= 0.0 then
+                call DestroyImpactDummy(node)
+            endif
+            set node = nextNode
+        endloop
+        if (impactHead == 0) and (impactTicker != null) then
+            call ReleaseTimer(impactTicker)
+            set impactTicker = null
+        endif
+    endfunction
+
+    private function QueueImpactDummy takes unit whichDummy, string impactModel returns nothing
+        local integer id
+        if whichDummy == null or GetUnitTypeId(whichDummy) == 0 then
+            return
+        endif
+        if impactModel == null or impactModel == "" then
+            call RemoveUnit(whichDummy)
+            return
+        endif
+        set id = SpellIndex.create()
+        set impactDummy[id] = whichDummy
+        set impactFx[id] = AddSpecialEffectTarget(impactModel, whichDummy, "origin")
+        set impactRemaining[id] = IMPACT_FX_DURATION
+        call ImpactListAdd(id)
+        if impactTicker == null then
+            set impactTicker = NewTimer()
+            call SetTimerDebugTag(impactTicker, TIMER_DEBUG_TAG_LOADOUT_LEAP)
+            call TimerStart(impactTicker, 0.03125, true, function OnImpactTicker)
+        endif
     endfunction
 
     private struct LeapCore extends array
@@ -236,6 +341,9 @@ library LoadoutLeap initializer Init uses SpellIndex, Missile, PlayerMissileLoad
             
             // Re-enable target unit and reset tags
             if (GetUnitTypeId(dex.source) != 0) then
+                if activeLeapMissileByUnit.has(GetHandleId(dex.source)) and activeLeapMissileByUnit[GetHandleId(dex.source)] == missile then
+                    call activeLeapMissileByUnit.remove(GetHandleId(dex.source))
+                endif
                 if ANIMATION_TAG != "" then
                     call AddUnitAnimationProperties(dex.source, ANIMATION_TAG, false)
                 endif
@@ -285,6 +393,7 @@ library LoadoutLeap initializer Init uses SpellIndex, Missile, PlayerMissileLoad
                     call GroupRemoveUnit(SpellIndex.GLOBAL_GROUP, enumUnit)
                     if IsUnitEnemy(enumUnit, dex.user) and not IsUnitType(enumUnit, UNIT_TYPE_DEAD) and not IsUnitType(enumUnit, UNIT_TYPE_MAGIC_IMMUNE) and (not missile.hasHitWidget(enumUnit)) then
                         call missile.hitWidget(enumUnit)
+                        call WaveRecordDamageCredit(source, enumUnit)
                         call UnitDamageTarget(source, enumUnit, damage, false, false, ATTACK_TYPE, DAMAGE_TYPE, null)
                         call DestroyEffect(AddSpecialEffectTarget(RAY_HIT_FX, enumUnit, RAY_HIT_FX_ATTACH))
                     endif
@@ -306,8 +415,6 @@ library LoadoutLeap initializer Init uses SpellIndex, Missile, PlayerMissileLoad
             local integer abilityChoice = specialAbility[missile]
             local boolean bonus = bonusActive[missile]
             local unit enumUnit
-            local timer t
-            local integer tid
             local integer bloodPct
             local unit iDummy
             local sound s
@@ -342,16 +449,7 @@ library LoadoutLeap initializer Init uses SpellIndex, Missile, PlayerMissileLoad
                 set s = null
             endif
 
-            if impactModel != null and impactModel != "" then
-                // We create a timer to destroy the effect properly
-                set tid = SpellIndex.create()
-                set t = NewTimerEx(tid)
-                set impactDummy[tid] = iDummy
-                set impactFx[tid] = AddSpecialEffectTarget(impactModel, iDummy, "origin")
-                call TimerStart(t, IMPACT_FX_DURATION, false, function OnImpactDummyExpire)
-            else
-                call RemoveUnit(iDummy)
-            endif
+            call QueueImpactDummy(iDummy, impactModel)
             set iDummy = null
 
             // Area Damage
@@ -363,6 +461,7 @@ library LoadoutLeap initializer Init uses SpellIndex, Missile, PlayerMissileLoad
                 if IsUnitEnemy(enumUnit, dex.user) and not IsUnitType(enumUnit, UNIT_TYPE_DEAD) and not IsUnitType(enumUnit, UNIT_TYPE_MAGIC_IMMUNE) then
                     // Ray: Normal damage
                     if abilityChoice == LOADOUT_ORB_ABILITY_RAY or not bonus then
+                        call WaveRecordDamageCredit(source, enumUnit)
                         call UnitDamageTarget(source, enumUnit, finalDamage, false, false, ATTACK_TYPE, DAMAGE_TYPE, null)
                     
                     // Poison: DoT
@@ -372,11 +471,13 @@ library LoadoutLeap initializer Init uses SpellIndex, Missile, PlayerMissileLoad
                     // Dark: Max HP %
                     elseif bonus and abilityChoice == LOADOUT_ORB_ABILITY_DARK then
                         set finalDamage = storedDamage[missile] + LoadoutGetDarkBonus(enumUnit, inst)
+                        call WaveRecordDamageCredit(source, enumUnit)
                         call UnitDamageTarget(source, enumUnit, finalDamage, false, false, ATTACK_TYPE, DAMAGE_TYPE, null)
                         call ShowCustomLoadoutText(enumUnit, FormatLoadoutDamageText(finalDamage), DARK_TEXT_R, DARK_TEXT_G, DARK_TEXT_B)
 
                     // Fire: Just display text
                     elseif bonus and abilityChoice == LOADOUT_ORB_ABILITY_FIRE then
+                        call WaveRecordDamageCredit(source, enumUnit)
                         call UnitDamageTarget(source, enumUnit, finalDamage, false, false, ATTACK_TYPE, DAMAGE_TYPE, null)
                         call ShowCustomLoadoutText(enumUnit, FormatLoadoutDamageText(finalDamage), FIRE_TEXT_R, FIRE_TEXT_G, FIRE_TEXT_B)
 
@@ -385,12 +486,14 @@ library LoadoutLeap initializer Init uses SpellIndex, Missile, PlayerMissileLoad
                         set bloodMult = LoadoutGetBloodRandomMultiplier(inst)
                         set finalDamage = storedDamage[missile]*bloodMult
                         set bloodPct = LoadoutBloodMultiplierToPercent(bloodMult)
+                        call WaveRecordDamageCredit(source, enumUnit)
                         call UnitDamageTarget(source, enumUnit, finalDamage, false, false, ATTACK_TYPE, DAMAGE_TYPE, null)
                         call ShowCustomLoadoutText(enumUnit, FormatLoadoutDamageText(finalDamage) + "   //" + I2S(bloodPct) + "%", BLOOD_TEXT_R, BLOOD_TEXT_G, BLOOD_TEXT_B)
                     
                     // Wind: Just damage
                     elseif bonus and abilityChoice == LOADOUT_ORB_ABILITY_WIND then
                         set finalDamage = LoadoutGetWindDamage(storedDamage[missile])
+                        call WaveRecordDamageCredit(source, enumUnit)
                         call UnitDamageTarget(source, enumUnit, finalDamage, false, false, ATTACK_TYPE, DAMAGE_TYPE, null)
                     endif
                 endif
@@ -435,7 +538,6 @@ library LoadoutLeap initializer Init uses SpellIndex, Missile, PlayerMissileLoad
     endfunction
 
     private function OnEffect takes nothing returns nothing
-        local string prefix = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n|cffffcc00"
         local unit source = GetTriggerUnit()
         local player owner = GetTriggerPlayer()
         local real x = GetUnitX(source)
@@ -465,14 +567,14 @@ library LoadoutLeap initializer Init uses SpellIndex, Missile, PlayerMissileLoad
         local unit companion
 
         if not IsPointJumpable(tx, ty) then
-            call PauseUnit(source, true)
-            call IssueImmediateOrderById(source, 851972)
-            call PauseUnit(source, false)
-            if GetLocalPlayer() == owner then
-                call StartSound(error)
-                call ClearTextMessages()
-            endif
-            call DisplayTimedTextToPlayer(owner, .52, .96, 2., prefix + GetUnitName(source) + " can't jump there!|r")
+            call SimError(owner, GetUnitName(source) + " can't jump there!")
+            set source = null
+            set owner = null
+            return
+        endif
+
+        if not IsVisibleToPlayer(tx, ty, owner) then
+            call SimError(owner, GetUnitName(source) + " needs vision at target!")
             set source = null
             set owner = null
             return
@@ -512,6 +614,7 @@ library LoadoutLeap initializer Init uses SpellIndex, Missile, PlayerMissileLoad
         set dex.user = owner
         set missile = Missile.createEx(source, tx, ty, 0.0)
         set missile.data = dex
+        set activeLeapMissileByUnit[GetHandleId(source)] = missile
         set missile.collision = 0.0 // Important so it doesnt collide
         if distance > 0.0 then
             set arc = Atan((4.0*BASE_JUMP_HEIGHT)/distance)
@@ -578,6 +681,7 @@ library LoadoutLeap initializer Init uses SpellIndex, Missile, PlayerMissileLoad
         endif
 
         set delayedAnimTimer[dex] = NewTimerEx(dex)
+        call SetTimerDebugTag(delayedAnimTimer[dex], TIMER_DEBUG_TAG_LOADOUT_LEAP)
         call TimerStart(delayedAnimTimer[dex], FIRST_ANIMATION_DELAY, false, function DelayedStartAnimation)
         
         // Buff the caster during flight
@@ -595,7 +699,29 @@ library LoadoutLeap initializer Init uses SpellIndex, Missile, PlayerMissileLoad
         set owner = null
     endfunction
 
+    function CancelLoadoutLeapForUnit takes unit u returns nothing
+        local integer hid
+        local Missile missile
+        if u == null or GetUnitTypeId(u) == 0 then
+            return
+        endif
+        set hid = GetHandleId(u)
+        if hid != 0 and activeLeapMissileByUnit.has(hid) then
+            set missile = activeLeapMissileByUnit[hid]
+            call activeLeapMissileByUnit.remove(hid)
+            if missile != 0 then
+                call missile.terminate()
+            endif
+        elseif GetUnitAbilityLevel(u, BUFF_APPLIED_ID) > 0 then
+            call UnitRemoveAbility(u, BUFF_APPLIED_ID)
+            call SetUnitPathing(u, true)
+            call SetUnitTimeScale(u, 1.0)
+            call SetUnitFlyHeight(u, 0.0, 99999.)
+        endif
+    endfunction
+
     private function Init takes nothing returns nothing
+        set activeLeapMissileByUnit = Table.create()
         set error = CreateSoundFromLabel("InterfaceError", false, false, false, 10, 10)
         call RegisterSpellEffectEvent(LOADOUT_LEAP_SPELL, function OnEffect)
     endfunction

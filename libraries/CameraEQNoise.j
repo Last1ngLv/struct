@@ -65,6 +65,7 @@ library CameraEQNoise /* v1.0
         endif
         call StopCameraEQNoise(whichPlayer)
         set clock[id] = NewTimerEx(id)
+        call SetTimerDebugTag(clock[id], TIMER_DEBUG_TAG_OTHER)
         call TimerStart(clock[id], duration, false, function TimerExpire)
         set pow = magnitude*Pow(10, richter)
         if (GetLocalPlayer() == whichPlayer) then

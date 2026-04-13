@@ -1,4 +1,4 @@
-library LoadoutLeapMissile initializer Init uses SpellIndex, Missile, PlayerMissileLoadout, IsUnitChanneling, DamageTextUtil, LoadoutOrbBalance, IsTerrainWalkable, SimError, WaveDamageCredit, Table
+library LoadoutLeapMissile initializer Init uses TimerUtils, SpellIndex, Missile, PlayerMissileLoadout, IsUnitChanneling, DamageTextUtil, LoadoutOrbBalance, IsTerrainWalkable, SimError, WaveDamageCredit, Table
 //**
 //* User settings:
 //* ==============
@@ -92,6 +92,11 @@ library LoadoutLeapMissile initializer Init uses SpellIndex, Missile, PlayerMiss
         // Impact Effect Dummy
         private unit array impactDummy
         private effect array impactFx
+        private real array impactRemaining
+        private integer array impactNext
+        private integer array impactPrev
+        private integer impactHead = 0
+        private timer impactTicker = null
         private effect array poisonFx
         private integer array poisonNext
         private integer array poisonPrev
@@ -238,28 +243,87 @@ library LoadoutLeapMissile initializer Init uses SpellIndex, Missile, PlayerMiss
         call PoisonListAdd(dex)
         if poisonTicker == null then
             set poisonTicker = NewTimer()
+            call SetTimerDebugTag(poisonTicker, TIMER_DEBUG_TAG_LOADOUT_LEAP_MISS)
             call TimerStart(poisonTicker, LOADOUT_ORB_POISON_TICK_INTERVAL, true, function OnPoisonTick)
         endif
     endfunction
 
     // Impact Dummy cleanup
-    private function OnImpactDummyExpire takes nothing returns nothing
-        local timer t = GetExpiredTimer()
-        local integer id = GetTimerData(t)
-        
+    private function ImpactListAdd takes integer id returns nothing
+        set impactPrev[id] = 0
+        set impactNext[id] = impactHead
+        if impactHead != 0 then
+            set impactPrev[impactHead] = id
+        endif
+        set impactHead = id
+    endfunction
+
+    private function ImpactListRemove takes integer id returns nothing
+        local integer p = impactPrev[id]
+        local integer n = impactNext[id]
+        if p != 0 then
+            set impactNext[p] = n
+        else
+            set impactHead = n
+        endif
+        if n != 0 then
+            set impactPrev[n] = p
+        endif
+        set impactPrev[id] = 0
+        set impactNext[id] = 0
+    endfunction
+
+    private function DestroyImpactDummy takes integer id returns nothing
+        call ImpactListRemove(id)
         if impactFx[id] != null then
             call DestroyEffect(impactFx[id])
             set impactFx[id] = null
         endif
-        
         if impactDummy[id] != null then
             call RemoveUnit(impactDummy[id])
             set impactDummy[id] = null
         endif
-        
+        set impactRemaining[id] = 0.0
         call SpellIndex(id).destroy()
-        call ReleaseTimer(t)
-        set t = null
+    endfunction
+
+    private function OnImpactTicker takes nothing returns nothing
+        local integer node = impactHead
+        local integer nextNode
+        loop
+            exitwhen node == 0
+            set nextNode = impactNext[node]
+            set impactRemaining[node] = impactRemaining[node] - 0.03125
+            if impactRemaining[node] <= 0.0 then
+                call DestroyImpactDummy(node)
+            endif
+            set node = nextNode
+        endloop
+        if (impactHead == 0) and (impactTicker != null) then
+            call ReleaseTimer(impactTicker)
+            set impactTicker = null
+        endif
+    endfunction
+
+    private function QueueImpactDummy takes unit whichDummy, string impactModel returns nothing
+        local integer id
+        if whichDummy == null or GetUnitTypeId(whichDummy) == 0 then
+            return
+        endif
+        if impactModel == null or impactModel == "" then
+            call RemoveUnit(whichDummy)
+            return
+        endif
+        set id = SpellIndex.create()
+        set impactDummy[id] = whichDummy
+        set impactFx[id] = AddSpecialEffectTarget(impactModel, whichDummy, "origin")
+        set impactRemaining[id] = IMPACT_FX_DURATION
+        call ImpactListAdd(id)
+        if impactTicker == null then
+            set impactTicker = NewTimer()
+            call SetTimerDebugTag(impactTicker, TIMER_DEBUG_TAG_LOADOUT_LEAP_MISS)
+            call TimerStart(impactTicker, 0.03125, true, function OnImpactTicker)
+        endif
     endfunction
 
     private struct LeapMissileCore extends array
@@ -367,8 +431,6 @@ library LoadoutLeapMissile initializer Init uses SpellIndex, Missile, PlayerMiss
             local integer abilityChoice = specialAbility[missile]
             local boolean bonus = bonusActive[missile]
             local unit enumUnit
-            local timer t
-            local integer tid
             local integer bloodPct
             local unit iDummy
             local sound s
@@ -400,16 +462,7 @@ library LoadoutLeapMissile initializer Init uses SpellIndex, Missile, PlayerMiss
                 set s = null
             endif
 
-            if impactModel != null and impactModel != "" then
-                // We create a timer to destroy the effect properly
-                set tid = SpellIndex.create()
-                set t = NewTimerEx(tid)
-                set impactDummy[tid] = iDummy
-                set impactFx[tid] = AddSpecialEffectTarget(impactModel, iDummy, "origin")
-                call TimerStart(t, IMPACT_FX_DURATION, false, function OnImpactDummyExpire)
-            else
-                call RemoveUnit(iDummy)
-            endif
+            call QueueImpactDummy(iDummy, impactModel)
             set iDummy = null
 
             // Area Damage
@@ -733,11 +786,13 @@ library LoadoutLeapMissile initializer Init uses SpellIndex, Missile, PlayerMiss
         endif
         set dex.phase = 1
         set dex.clock = NewTimerEx(dex)
+        call SetTimerDebugTag(dex.clock, TIMER_DEBUG_TAG_LOADOUT_LEAP_MISS)
         set rapidTargetX[dex] = tx
         set rapidTargetY[dex] = ty
         set active[id] = dex
 
         set delayedAnimTimer[dex] = NewTimerEx(dex)
+        call SetTimerDebugTag(delayedAnimTimer[dex], TIMER_DEBUG_TAG_LOADOUT_LEAP_MISS)
         call TimerStart(delayedAnimTimer[dex], FIRST_ANIMATION_DELAY, false, function DelayedStartAnimation)
 
         call SetUnitTimeScale(source, RAPID_FIRE_ANIMATION_TIME_SCALE)

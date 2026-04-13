@@ -1,4 +1,4 @@
-library SelectionSystem requires PlayerUtils, PlayerMissileLoadout, OrderSmartChannel, Camera, MenuClient, HeroLives, TheEnd
+library SelectionSystem requires PlayerUtils, PlayerMissileLoadout, OrderSmartChannel, Camera, MenuClient, HeroLives, TheEnd, PreConfi
 
 globals
 /*
@@ -374,6 +374,7 @@ struct SelectionSystem
     static method onAllSelected takes nothing returns nothing
         call thistype.createClients()
         call thistype.showClients()
+        call ShowInitialWaveMultiboard()
         set WaveTgg = "Trig_w1_Actions"
         call StartInitialWaveCountdown()
     endmethod
@@ -464,6 +465,7 @@ struct SelectionSystem
         local User u
 
         call thistype.createDialogs()
+        call ShowInitialWaveMultiboard()
         set selectionPhase = SELECTION_PHASE_ELEMENT
 
         if selectionTimer == null then

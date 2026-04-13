@@ -57,7 +57,7 @@ private function OnCooldownFinish takes nothing returns nothing
         if GetUnitAbilityLevel(u, trackedAbility[dex]) <= 0 then
             call UnitAddAbility(u, trackedAbility[dex])
         endif
-        call SetUnitAbilityLevel(u, trackedAbility[dex], savedLevel[dex])
+        call SetUnitAbilityLevel(u, trackedAbility[dex], GetPlayerOrbLevel(GetOwningPlayer(dex.source)))
     endif
 
     call byUnit.remove(GetHandleId(u))
@@ -108,6 +108,7 @@ private function OnOrbEvent takes integer orbAbility returns nothing
         call ReleaseTimer(dex.clock)
     endif
     set dex.clock = NewTimerEx(dex)
+    call SetTimerDebugTag(dex.clock, TIMER_DEBUG_TAG_OTHER)
     call TimerStart(dex.clock, CooldownFromLevel(savedLevel[dex]), false, function OnCooldownFinish)
     
     
@@ -150,7 +151,7 @@ private function BeginGive takes unit u, integer orbAbility returns nothing
         return
     endif
 
-    set level = GetUnitAbilityLevel(u, orbAbility)
+    set level = GetPlayerOrbLevel(GetOwningPlayer(u))
     if level < 1 or level > MAX_TRIGGER_LEVEL then
         return
     endif

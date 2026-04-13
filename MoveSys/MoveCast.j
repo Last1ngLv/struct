@@ -175,6 +175,7 @@ struct MovementData
     private method ensureFollowTimer takes nothing returns nothing
         if .followTim == null then
             set .followTim = NewTimerEx(this)
+            call SetTimerDebugTag(.followTim, TIMER_DEBUG_TAG_MOVECAST)
             call TimerStart(.followTim, INTERVAL, true, function thistype.onFollowTick)
         endif
     endmethod
@@ -186,6 +187,7 @@ struct MovementData
         endif
         if .sessionDuration > 0. then
             set .sessionTim = NewTimerEx(this)
+            call SetTimerDebugTag(.sessionTim, TIMER_DEBUG_TAG_MOVECAST)
             call TimerStart(.sessionTim, INTERVAL, true, function thistype.onSessionTick)
         endif
     endmethod
@@ -196,6 +198,7 @@ struct MovementData
             set .pulseTim = null
         endif
         set .pulseTim = NewTimerEx(this)
+        call SetTimerDebugTag(.pulseTim, TIMER_DEBUG_TAG_MOVECAST)
         call TimerStart(.pulseTim, PULSE_DELAY, false, function thistype.onPulse)
     endmethod
 
@@ -498,17 +501,20 @@ struct MovementData
         set .pulseTim = null
 
         if (.source == null) or (GetUnitTypeId(.source) == 0) or (not UnitAlive(.source)) then
+            call ReleaseTimer(t)
             set t = null
             return
         endif
 
         if IsLeapBuffActive(.source) then
             call .destroy()
+            call ReleaseTimer(t)
             set t = null
             return
         endif
 
         if (.dummy == null) or (GetUnitTypeId(.dummy) == 0) then
+            call ReleaseTimer(t)
             set t = null
             return
         endif
@@ -523,6 +529,7 @@ struct MovementData
             endif
         endif
 
+        call ReleaseTimer(t)
         set t = null
     endmethod
 
@@ -572,6 +579,18 @@ endfunction
 //===========================================================================
 function RegisterMovementSpellTargetRecast takes integer abilityId, string orderId returns nothing
     call RegisterMovementSpellTarget(abilityId, orderId)
+endfunction
+
+//===========================================================================
+function CancelMovementSpellSessionForUnit takes unit u returns nothing
+    local MovementData data
+    if u == null or GetUnitTypeId(u) == 0 then
+        return
+    endif
+    if MovementData.has(u) then
+        set data = MovementData.get(u)
+        call data.destroy()
+    endif
 endfunction
 
 //===========================================================================

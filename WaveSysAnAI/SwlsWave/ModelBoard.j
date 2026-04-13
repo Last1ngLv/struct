@@ -1,0 +1,172 @@
+scope ModelBoard
+    private function MBSetCell takes multiboard board, integer row, integer column, string value, real width returns nothing
+        local multiboarditem boardItem = MultiboardGetItem(board, row, column)
+        call MultiboardSetItemStyle(boardItem, true, false)
+        call MultiboardSetItemWidth(boardItem, width)
+        call MultiboardSetItemValue(boardItem, value)
+        call MultiboardReleaseItem(boardItem)
+        set boardItem = null
+    endfunction
+
+    private function MBWaveStateText takes Wave w returns string
+        if w.isDestroyed or w.isFinishing then
+            return "|cFFB0B0B0Finalizada|r"
+        endif
+        if w.isPaused then
+            return "|cFFFFFF00Pausada|r"
+        endif
+        if w.isRunning then
+            return "|cFF66FF99Activa|r"
+        endif
+        return "|cFFC0C0C0Inactiva|r"
+    endfunction
+
+    private function MBWaveTitle takes Wave w returns string
+        return MBWaveStateText(w) + " |cFFFFFFFFWave |r|cFFE6E6E6" + I2S(w.waveIndex) + "|r|cFFFF8C00/|r|cFFE6E6E6" + I2S(w.waveTotal) + "|r |cFFFFFFFF| |r |cFFFFFFFFToKill |r|cFFFF3333" + I2S(w.totalKilled) + "|r|cFFFF8C00/|r|cFFCC66FF" + I2S(w.totalToSpawn) + "|r"
+    endfunction
+
+    private function MBWaveCell takes Wave w returns string
+        return "|cFFE6E6E6W|r|cFFC0C0C0a|r|cFF8C8C8Cv|r|cFF707070e|r|cFFFFFFFF: |r|cFFE6E6E6" + I2S(w.waveIndex) + "|r|cFFFF8C00/|r|cFFC0C0C0" + I2S(w.waveTotal) + "|r"
+    endfunction
+
+    private function MBToSpawnCell takes Wave w returns string
+        return "|cFFFFD700T|r|cFFFFC300o|r|cFFFFA500S|r|cFFFF8C00pawn|r|cFFFFFFFF: |r|cffff0000" + I2S(w.remainingUnits) + "|r|cFFFF8C00/|r|cFFFFD700" + I2S(w.remainingUnits + w.remainingBosses) + "|r|cFFFF8C00/|r|cFF0080FF" + I2S(w.remainingBosses) + "|r"
+    endfunction
+
+    private function MBUnitsCell takes Wave w returns string
+        return "|cFFFF6666U|r|cFFFF4C4Cn|r|cFFFF3333i|r|cFFFF1A1At|r|cFFCC0000s|r|cFFFFFFFF: |r|cFFCC66FF" + I2S(w.killsDoneUnits) + "|r|cFFFF8C00/|r|cFF00FF00" + I2S(w.activeUnits) + "|r|cFFFF8C00/|r|cffff0000" + I2S(w.totalUnits) + "|r"
+    endfunction
+
+    private function MBBossCell takes Wave w returns string
+        return "|cFF00FFFFB|r|cFF00E5FFo|r|cFF00CCFFs|r|cFF00B2FFs|r|cFFFFFFFF: |r|cFFCC66FF" + I2S(w.killsDoneBoss) + "|r|cFFFF8C00/|r|cFF00FF00" + I2S(w.activeBosses) + "|r|cFFFF8C00/|r|cFF0080FF" + I2S(w.totalBosses) + "|r"
+    endfunction
+
+    private function MBToKillCell takes Wave w returns string
+        return "|cFFCC66FFT|r|cFFB24CFFo|r|cFF9933FFK|r|cFF7F1AFFill|r|cFFFFFFFF: |r|cFFFF3333" + I2S(w.totalKilled) + "|r|cFFFF8C00/|r|cFFCC66FF" + I2S(w.totalToSpawn) + "|r"
+    endfunction
+
+    private function MBOnMapCell takes Wave w returns string
+        return "|cFF66FF99O|r|cFF4DFF88n|r|cFF33FF77M|r|cFF1AFF66a|r|cFF00CC55p|r|cFFFFFFFF: |r|cFF00FF00" + I2S(w.activeOnMap) + "|r"
+    endfunction
+
+    private function MBPlayerKillsText takes integer pid returns string
+        return "|cFFFFFF00Kills|r|cFFFFFFFF: |r|cFFFFFFCC" + I2S(GetWavePlayerTotalKills(pid)) + "|r"
+    endfunction
+
+    private function MBPlayerStreakText takes integer pid returns string
+        return "|cFFFF9933Racha|r|cFFFFFFFF: |r|cFFFFCC66" + I2S(GetWavePlayerCurrentStreak(pid)) + "|r"
+    endfunction
+
+    private function MBPlayerMultiText takes integer pid returns string
+        return "|cFF66CCFFMulti|r|cFFFFFFFF: |r|cFF99E6FF" + I2S(GetWavePlayerCurrentMulti(pid)) + "|r"
+    endfunction
+
+    private function MBPlayerDeathsText takes integer pid returns string
+        return "|cFFFF6666Muertes|r|cFFFFFFFF: |r|cFFFFB3B3" + I2S(GetWavePlayerTotalDeaths(pid)) + "|r"
+    endfunction
+
+    private function MBDebugInUse takes nothing returns string
+        return "|cFF66CCFFInUse|r|cFFFFFFFF: |r|cFFFFFF00" + I2S(GetTimerUtilsInUse()) + "|r"
+    endfunction
+
+    private function MBDebugCap takes nothing returns string
+        return "|cFF66FF99Cap|r|cFFFFFFFF: |r|cFFCCFFDD" + I2S(GetTimerUtilsCapacity()) + "|r"
+    endfunction
+
+    private function MBDebugPeak takes nothing returns string
+        return "|cFFFFCC66Peak|r|cFFFFFFFF: |r|cFFFFE0B3" + I2S(GetTimerUtilsPeakInUse()) + "|r"
+    endfunction
+
+    private function MBDebugAvail takes nothing returns string
+        return "|cFF9999FFAvail|r|cFFFFFFFF: |r|cFFD6D6FF" + I2S(GetTimerUtilsAvailable()) + "|r"
+    endfunction
+
+    private function MBLoadoutDebugCell takes string label, string color, integer tag returns string
+        return color + label + "|r|cFFFFFFFF: |r|cFFFFFF00" + I2S(GetTimerDebugLive(tag)) + "|r|cFFFF8C00/|r|cFFFFCC66" + I2S(GetTimerDebugPeak(tag)) + "|r"
+    endfunction
+
+    private function MBTaggedDebugCell takes string label, string color, integer tag returns string
+        return color + label + "|r|cFFFFFFFF: |r|cFFFFFF00" + I2S(GetTimerDebugLive(tag)) + "|r|cFFFF8C00/|r|cFFFFCC66" + I2S(GetTimerDebugPeak(tag)) + "|r"
+    endfunction
+
+    function BMT1 takes nothing returns nothing
+        local Wave w
+        local integer activePlayers
+        local integer row
+        local integer i
+        local User u
+        local integer pid
+        local integer debugRow
+        local integer loadoutDebugRow
+        local integer systemsDebugRow
+
+        if CurrentBoardContext == null then
+            return
+        endif
+
+        set w = WaveByBoard[GetHandleId(CurrentBoardContext)]
+        if w == 0 then
+            return
+        endif
+
+        set activePlayers = User.AmountPlaying
+        set debugRow = activePlayers + 1
+        set loadoutDebugRow = activePlayers + 2
+        set systemsDebugRow = activePlayers + 3
+
+        call MultiboardDisplay(w.board, true)
+        call MultiboardSetColumnCount(w.board, 6)
+        call MultiboardSetRowCount(w.board, activePlayers + 4)
+        call MultiboardSetTitleText(w.board, MBWaveTitle(w))
+
+        // Row 0: m?tricas completas de la wave con colores del t?tulo viejo
+        call MBSetCell(w.board, 0, 0, MBWaveCell(w), 0.09)
+        call MBSetCell(w.board, 0, 1, MBToSpawnCell(w), 0.15)
+        call MBSetCell(w.board, 0, 2, MBUnitsCell(w), 0.14)
+        call MBSetCell(w.board, 0, 3, MBBossCell(w), 0.13)
+        call MBSetCell(w.board, 0, 4, MBToKillCell(w), 0.12)
+        call MBSetCell(w.board, 0, 5, MBOnMapCell(w), 0.10)
+
+        // Rows 1..N: jugadores activos
+        set i = 0
+        loop
+            exitwhen i >= activePlayers
+            set u = User.fromPlaying(i)
+            set pid = u.id
+            set row = i + 1
+
+            call MBSetCell(w.board, row, 0, u.nameColored, 0.15)
+            call MBSetCell(w.board, row, 1, MBPlayerKillsText(pid), 0.11)
+            call MBSetCell(w.board, row, 2, MBPlayerStreakText(pid), 0.10)
+            call MBSetCell(w.board, row, 3, MBPlayerMultiText(pid), 0.10)
+            call MBSetCell(w.board, row, 4, MBPlayerDeathsText(pid), 0.11)
+            call MBSetCell(w.board, row, 5, "", 0.01)
+
+            set i = i + 1
+        endloop
+
+        // Fila debug general: TimerUtils
+        call MBSetCell(w.board, debugRow, 0, "|cFFBBBBBBDebug TimerUtils|r", 0.15)
+        call MBSetCell(w.board, debugRow, 1, MBDebugInUse(), 0.11)
+        call MBSetCell(w.board, debugRow, 2, MBDebugCap(), 0.10)
+        call MBSetCell(w.board, debugRow, 3, MBDebugPeak(), 0.10)
+        call MBSetCell(w.board, debugRow, 4, MBDebugAvail(), 0.10)
+        call MBSetCell(w.board, debugRow, 5, "", 0.01)
+
+        // Fila debug loadouts: live/peak por sistema
+        call MBSetCell(w.board, loadoutDebugRow, 0, "|cFFBBBBBBDebug Loadouts|r", 0.15)
+        call MBSetCell(w.board, loadoutDebugRow, 1, MBLoadoutDebugCell("Control", "|cFFFF6666", TIMER_DEBUG_TAG_LOADOUT_CONTROL), 0.12)
+        call MBSetCell(w.board, loadoutDebugRow, 2, MBLoadoutDebugCell("Missile", "|cFF66CCFF", TIMER_DEBUG_TAG_LOADOUT_MISSILE), 0.12)
+        call MBSetCell(w.board, loadoutDebugRow, 3, MBLoadoutDebugCell("Leap", "|cFF66FF99", TIMER_DEBUG_TAG_LOADOUT_LEAP), 0.11)
+        call MBSetCell(w.board, loadoutDebugRow, 4, MBLoadoutDebugCell("LeapMs", "|cFFFFCC66", TIMER_DEBUG_TAG_LOADOUT_LEAP_MISS), 0.12)
+        call MBSetCell(w.board, loadoutDebugRow, 5, "", 0.01)
+
+        // Fila debug sistemas: wave / ia / skills / movecast / otros
+        call MBSetCell(w.board, systemsDebugRow, 0, "|cFFBBBBBBDebug Systems|r", 0.15)
+        call MBSetCell(w.board, systemsDebugRow, 1, MBTaggedDebugCell("Wave", "|cFF99CCFF", TIMER_DEBUG_TAG_WAVE_CORE), 0.11)
+        call MBSetCell(w.board, systemsDebugRow, 2, MBTaggedDebugCell("IA", "|cFFFF9999", TIMER_DEBUG_TAG_AI), 0.10)
+        call MBSetCell(w.board, systemsDebugRow, 3, MBTaggedDebugCell("UnitSkills", "|cFF99FF99", TIMER_DEBUG_TAG_UNIT_SKILLS), 0.12)
+        call MBSetCell(w.board, systemsDebugRow, 4, MBTaggedDebugCell("MoveCast", "|cFFFFCC66", TIMER_DEBUG_TAG_MOVECAST), 0.12)
+        call MBSetCell(w.board, systemsDebugRow, 5, MBTaggedDebugCell("Other", "|cFFD6B3FF", TIMER_DEBUG_TAG_OTHER), 0.11)
+    endfunction
+endscope

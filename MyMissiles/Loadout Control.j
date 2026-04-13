@@ -1,32 +1,33 @@
 //TESH.scrollpos=0
 //TESH.alwaysfold=0
-library LoadoutControl initializer Init uses SpellIndex, Missile, PlayerMissileLoadout, IsUnitChanneling, DamageTextUtil, LoadoutOrbBalance, LoadoutIntFullManaSwapNew, Table
+library LoadoutControl initializer Init requires TimerUtils, SpellIndex, Missile, PlayerMissileLoadout, DamageTextUtil, LoadoutOrbBalance, LoadoutIntFullManaSwapNew, Table, WaveBarrierSkills, WaveDamageCredit
 //******************************************************************************
-// Shotgun-style burst spell that reuses LoadoutMissile orb behavior.
+// Shotgun-style burst spell that reuses TimerUtils, LoadoutMissile orb behavior.
 //******************************************************************************
     globals
         private constant integer LOADOUT_CONTROL_SPELL = 'U0A3' //* Configure rawcode.
 
         //* Rapid Fire options.
-        private constant real FIRE_DURATION = 1.0
-        //private constant real FIRE_INTERVAL = FIRE_DURATION/(shots-1)
+        private constant real FIRE_DURATION = 1.00
+        private constant integer FIRE_COUNT = 4
         private constant string CAST_ANIMATION = "attack"
         private constant real FIRST_ANIMATION_DELAY = 0.03
         private constant real RAPID_FIRE_ANIMATION_TIME_SCALE = 5.25
-        private constant real ANIMATION_TIME_SCALE_ON_END = 4.00
+        private constant real ANIMATION_TIME_SCALE_ON_END = 1.00
 
         private constant attacktype ATTACK_TYPE = ATTACK_TYPE_NORMAL
         private constant damagetype DAMAGE_TYPE = DAMAGE_TYPE_MAGIC
 
-        private constant integer BURST_COUNT = 2
-        private constant real BURST_SPREAD_DEG = 10.
+        private constant integer BURST_COUNT = 5
+        private constant real BURST_SPREAD_DEG = 05.
+        private constant real BURST_STAGGER_INTERVAL = 0.03
         private constant real MISSILE_START_Z = 75.
-        private constant real BASE_MISSILE_SPEED = 1250.
+        private constant real BASE_MISSILE_SPEED = 2000.
         private constant real MIN_MISSILE_SPEED = 1.
-        private constant real SHOT_DISTANCE = 550.
+        private constant real SHOT_DISTANCE = 2000.
         private constant real MISSILE_COLLISION = 96.
         private constant real MISSILE_SCALE = 1.00
-        private constant real BASE_DAMAGE_MULT = 1.25
+        private constant real BASE_DAMAGE_MULT = 2
         private constant string BASE_MISSILE_MODEL = "Abilities\\Weapons\\Bolt\\BoltImpact.mdl"
         private constant string WRAP_ATTACH_POINT = "origin"
 
@@ -60,7 +61,23 @@ library LoadoutControl initializer Init uses SpellIndex, Missile, PlayerMissileL
         private boolean array bonusActive
         private effect array overlayFx
         private effect array poisonFx
+        private integer array poisonNext
+        private integer array poisonPrev
+        private integer poisonHead = 0
+        private timer poisonTicker = null
         private timer array delayedAnimTimer
+
+        private timer array burstTimer
+        private integer array burstShotIndex
+        private real array burstBaseAngle
+        private real array burstX
+        private real array burstY
+        private real array burstDamage
+        private integer array burstInstances
+        private integer array burstChosen
+        private boolean array burstBonusActive
+        private string array burstBaseModel
+        private string array burstWrapModel
 
         //* Rapid fire state.
         private Table active
@@ -80,6 +97,7 @@ library LoadoutControl initializer Init uses SpellIndex, Missile, PlayerMissileL
         if (GetUnitTypeId(source) == 0) or (GetUnitTypeId(target) == 0) then
             return false
         endif
+        call WaveRecordDamageCredit(source, target)
         return UnitDamageTarget(source, target, amount, false, false, ATTACK_TYPE, DAMAGE_TYPE, null)
     endfunction
 
@@ -94,38 +112,119 @@ library LoadoutControl initializer Init uses SpellIndex, Missile, PlayerMissileL
             exitwhen u == null
             call GroupRemoveUnit(SpellIndex.GLOBAL_GROUP, u)
             if FilterUnits(u, owner) then
+                call WaveRecordDamageCredit(source, u)
                 call UnitDamageTarget(source, u, amount, false, false, ATTACK_TYPE, DAMAGE_TYPE, null)
             endif
         endloop
         set u = null
     endfunction
 
-    private function OnPoisonTick takes nothing returns nothing
-        local timer t = GetExpiredTimer()
-        local SpellIndex dex = GetTimerData(t)
-        if (dex.count <= 0) or (GetUnitTypeId(dex.target) == 0) or (not UnitAlive(dex.target)) or (GetUnitTypeId(dex.source) == 0) then
-            if poisonFx[dex] != null then
-                call DestroyEffect(poisonFx[dex])
-                set poisonFx[dex] = null
+    private function GetBarrierProjectileKind takes Missile missile returns integer
+        if bonusActive[missile] then
+            if specialAbility[missile] == LOADOUT_ORB_ABILITY_WIND then
+                return WAVE_BARRIER_PROJECTILE_KIND_WIND
             endif
-            call ReleaseTimer(t)
-            call dex.destroy()
-            set t = null
-            return
+            if specialAbility[missile] == LOADOUT_ORB_ABILITY_RAY then
+                return WAVE_BARRIER_PROJECTILE_KIND_RAY
+            endif
         endif
+        return WAVE_BARRIER_PROJECTILE_KIND_NORMAL
+    endfunction
 
-        call UnitDamageTarget(dex.source, dex.target, dex.damage, false, false, ATTACK_TYPE, DAMAGE_TYPE, null)
-        call ShowCustomLoadoutText(dex.target, "-" + FormatLoadoutDamageText(dex.damage), POISON_TEXT_R, POISON_TEXT_G, POISON_TEXT_B)
-        set dex.count = dex.count - 1
-        if dex.count <= 0 then
-            if poisonFx[dex] != null then
-                call DestroyEffect(poisonFx[dex])
-                set poisonFx[dex] = null
+    private function ResolveBarrierIntercept takes Missile missile returns integer
+        local integer interaction = WaveBarrierCheckPlayerProjectile(missile, missile.owner, missile.x, missile.y, GetBarrierProjectileKind(missile))
+        local real radius
+        local real finalDamage
+        if interaction == WAVE_BARRIER_INTERACTION_WIND then
+            if bonusActive[missile] and specialAbility[missile] == LOADOUT_ORB_ABILITY_WIND then
+                set radius = LoadoutGetWindAoe(effectInstances[missile])
+                set finalDamage = LoadoutGetWindDamage(storedDamage[missile])
+                call DamageArea(missile.source, missile.owner, missile.x, missile.y, radius, finalDamage)
             endif
-            call ReleaseTimer(t)
-            call dex.destroy()
+            return WAVE_BARRIER_INTERACTION_WIND
         endif
-        set t = null
+        if interaction == WAVE_BARRIER_INTERACTION_RAY then
+            if bonusActive[missile] and specialAbility[missile] == LOADOUT_ORB_ABILITY_RAY and rayHitsLeft[missile] > 0 then
+                set rayHitsLeft[missile] = rayHitsLeft[missile] - 1
+                return WAVE_BARRIER_INTERACTION_RAY
+            endif
+            return WAVE_BARRIER_INTERACTION_BLOCK
+        endif
+        return interaction
+    endfunction
+
+    function GetLoadoutControlMoveCastDuration takes nothing returns real
+        return FIRE_DURATION
+    endfunction
+
+    private function GetSafeFireInterval takes nothing returns real
+        if FIRE_DURATION <= 0. then
+            return 0.03125
+        endif
+        if FIRE_COUNT <= 0 then
+            return FIRE_DURATION
+        endif
+        return FIRE_DURATION / I2R(FIRE_COUNT)
+    endfunction
+
+    private function PoisonListAdd takes SpellIndex dex returns nothing
+        set poisonPrev[dex] = 0
+        set poisonNext[dex] = poisonHead
+        if poisonHead != 0 then
+            set poisonPrev[poisonHead] = dex
+        endif
+        set poisonHead = dex
+    endfunction
+
+    private function PoisonListRemove takes SpellIndex dex returns nothing
+        local integer p = poisonPrev[dex]
+        local integer n = poisonNext[dex]
+        if p != 0 then
+            set poisonNext[p] = n
+        else
+            set poisonHead = n
+        endif
+        if n != 0 then
+            set poisonPrev[n] = p
+        endif
+        set poisonPrev[dex] = 0
+        set poisonNext[dex] = 0
+    endfunction
+
+    private function PoisonDestroy takes SpellIndex dex returns nothing
+        call PoisonListRemove(dex)
+        if poisonFx[dex] != null then
+            call DestroyEffect(poisonFx[dex])
+            set poisonFx[dex] = null
+        endif
+        call dex.destroy()
+    endfunction
+
+    private function OnPoisonTick takes nothing returns nothing
+        local integer node = poisonHead
+        local integer nextNode
+        local SpellIndex dex
+        loop
+            exitwhen node == 0
+            set dex = SpellIndex(node)
+            set nextNode = poisonNext[node]
+            if (dex.count <= 0) or (GetUnitTypeId(dex.target) == 0) or (not UnitAlive(dex.target)) or (GetUnitTypeId(dex.source) == 0) then
+                call PoisonDestroy(dex)
+            else
+                call WaveRecordDamageCredit(dex.source, dex.target)
+                call UnitDamageTarget(dex.source, dex.target, dex.damage, false, false, ATTACK_TYPE, DAMAGE_TYPE, null)
+                call ShowCustomLoadoutText(dex.target, "-" + FormatLoadoutDamageText(dex.damage), POISON_TEXT_R, POISON_TEXT_G, POISON_TEXT_B)
+                set dex.count = dex.count - 1
+                if dex.count <= 0 then
+                    call PoisonDestroy(dex)
+                endif
+            endif
+            set node = nextNode
+        endloop
+        if (poisonHead == 0) and (poisonTicker != null) then
+            call ReleaseTimer(poisonTicker)
+            set poisonTicker = null
+        endif
     endfunction
 
     private function ApplyPoison takes unit source, unit target, real damagePerSecond, real duration returns nothing
@@ -150,17 +249,23 @@ library LoadoutControl initializer Init uses SpellIndex, Missile, PlayerMissileL
         set dex.source = source
         set dex.target = target
         set dex.damage = damagePerSecond
-        if (POISON_DOT_FX != null) and (POISON_DOT_FX != "") then
+        if (POISON_DOT_FX != "") then
             set poisonFx[dex] = AddSpecialEffectTarget(POISON_DOT_FX, target, POISON_DOT_FX_ATTACH)
         else
             set poisonFx[dex] = null
         endif
 
+        call WaveRecordDamageCredit(source, target)
         call UnitDamageTarget(source, target, damagePerSecond, false, false, ATTACK_TYPE, DAMAGE_TYPE, null)
         call ShowCustomLoadoutText(target, FormatLoadoutDamageText(damagePerSecond), POISON_TEXT_R, POISON_TEXT_G, POISON_TEXT_B)
 
         set dex.count = ticks
-        call TimerStart(NewTimerEx(dex), LOADOUT_ORB_POISON_TICK_INTERVAL, true, function OnPoisonTick)
+        call PoisonListAdd(dex)
+        if poisonTicker == null then
+            set poisonTicker = NewTimer()
+            call SetTimerDebugTag(poisonTicker, TIMER_DEBUG_TAG_LOADOUT_CONTROL)
+            call TimerStart(poisonTicker, LOADOUT_ORB_POISON_TICK_INTERVAL, true, function OnPoisonTick)
+        endif
     endfunction
 
     private struct ControlCore extends array
@@ -175,6 +280,15 @@ library LoadoutControl initializer Init uses SpellIndex, Missile, PlayerMissileL
             local integer bloodPct
             local integer inst = effectInstances[missile]
             local integer abil = specialAbility[missile]
+            local integer barrierInteraction
+
+            set barrierInteraction = ResolveBarrierIntercept(missile)
+            if barrierInteraction == WAVE_BARRIER_INTERACTION_BLOCK or barrierInteraction == WAVE_BARRIER_INTERACTION_WIND then
+                return true
+            endif
+            if barrierInteraction == WAVE_BARRIER_INTERACTION_RAY then
+                return false
+            endif
 
             if not FilterUnits(hit, missile.owner) then
                 return false
@@ -235,6 +349,22 @@ library LoadoutControl initializer Init uses SpellIndex, Missile, PlayerMissileL
             return true
         endmethod
 
+        private static method onDestructable takes Missile missile, destructable hit returns boolean
+            return true
+        endmethod
+
+        private static method onTerrain takes Missile missile returns boolean
+            return true
+        endmethod
+
+        private static method onPeriod takes Missile missile returns boolean
+            local integer barrierInteraction = ResolveBarrierIntercept(missile)
+            if barrierInteraction == WAVE_BARRIER_INTERACTION_BLOCK or barrierInteraction == WAVE_BARRIER_INTERACTION_WIND then
+                return true
+            endif
+            return false
+        endmethod
+
         private static method onRemove takes Missile missile returns boolean
             if overlayFx[missile] != null then
                 call DestroyEffect(overlayFx[missile])
@@ -245,6 +375,7 @@ library LoadoutControl initializer Init uses SpellIndex, Missile, PlayerMissileL
             set effectInstances[missile] = 0
             set rayHitsLeft[missile] = 0
             set bonusActive[missile] = false
+            call WaveBarrierClearProjectileTrace(missile)
             call SpellIndex(missile.data).destroy()
             return true
         endmethod
@@ -276,13 +407,108 @@ library LoadoutControl initializer Init uses SpellIndex, Missile, PlayerMissileL
         set rayHitsLeft[missile] = LoadoutGetRayPierce(instances)
         set bonusActive[missile] = burstBonus
 
-        if burstBonus and (wrapModel != null) and (wrapModel != "") then
+        if burstBonus and (wrapModel != "") then
             set overlayFx[missile] = AddSpecialEffectTarget(wrapModel, missile.dummy, WRAP_ATTACH_POINT)
         else
             set overlayFx[missile] = null
         endif
 
         call ControlCore.launch(missile)
+    endfunction
+
+    private function BurstOffsetForShot takes integer shot, integer burstCount returns real
+        local integer pairIndex
+        if burstCount <= 0 then
+            return 0.0
+        endif
+        if ModuloInteger(burstCount, 2) == 1 then
+            if shot == 0 then
+                return 0.0
+            endif
+            set pairIndex = (shot + 1)/2
+            if ModuloInteger(shot, 2) == 1 then
+                return I2R(pairIndex)
+            endif
+            return -I2R(pairIndex)
+        endif
+        set pairIndex = shot/2
+        if ModuloInteger(shot, 2) == 0 then
+            return -(I2R(pairIndex) + 0.5)
+        endif
+        return I2R(pairIndex) + 0.5
+    endfunction
+
+    private function BurstStop takes SpellIndex dex returns nothing
+        if burstTimer[dex] != null then
+            call ReleaseTimer(burstTimer[dex])
+            set burstTimer[dex] = null
+        endif
+        set burstShotIndex[dex] = 0
+        set burstBaseAngle[dex] = 0.0
+        set burstX[dex] = 0.0
+        set burstY[dex] = 0.0
+        set burstDamage[dex] = 0.0
+        set burstInstances[dex] = 0
+        set burstChosen[dex] = 0
+        set burstBonusActive[dex] = false
+        set burstBaseModel[dex] = ""
+        set burstWrapModel[dex] = ""
+    endfunction
+
+    private function GetBurstStaggerInterval takes nothing returns real
+        local real step = GetSafeFireInterval()
+        local real burstStep
+
+        if BURST_COUNT <= 1 then
+            return 0.03125
+        endif
+
+        set burstStep = step / I2R(BURST_COUNT)
+        if burstStep <= 0. then
+            return BURST_STAGGER_INTERVAL
+        endif
+        if burstStep < BURST_STAGGER_INTERVAL then
+            return burstStep
+        endif
+        return BURST_STAGGER_INTERVAL
+    endfunction
+
+    private function BurstLaunchShot takes SpellIndex dex, integer shot returns nothing
+        local integer burstCount = BURST_COUNT
+        local real angle
+        if shot < 0 or shot >= burstCount then
+            return
+        endif
+        set angle = burstBaseAngle[dex] + (BurstOffsetForShot(shot, burstCount)*BURST_SPREAD_DEG)*bj_DEGTORAD
+        call LaunchBurstMissile(dex.source, dex.user, burstX[dex], burstY[dex], angle, burstChosen[dex], burstBonusActive[dex], burstDamage[dex], burstInstances[dex], burstBaseModel[dex], burstWrapModel[dex])
+    endfunction
+
+    private function OnBurstTick takes nothing returns nothing
+        local timer t = GetExpiredTimer()
+        local SpellIndex dex = GetTimerData(t)
+        local integer shot
+
+        if dex == 0 then
+            call ReleaseTimer(t)
+            set t = null
+            return
+        endif
+
+        if (burstTimer[dex] != t) or (burstShotIndex[dex] >= BURST_COUNT) or (GetUnitTypeId(dex.source) == 0) or (not UnitAlive(dex.source)) or (dex.phase < 0) then
+            call BurstStop(dex)
+            set t = null
+            return
+        endif
+
+        set shot = burstShotIndex[dex]
+        call BurstLaunchShot(dex, shot)
+        set burstShotIndex[dex] = shot + 1
+
+        if burstShotIndex[dex] >= BURST_COUNT then
+            call BurstStop(dex)
+        endif
+
+        set t = null
     endfunction
 
     private function FireBurst takes SpellIndex dex returns nothing
@@ -322,17 +548,31 @@ library LoadoutControl initializer Init uses SpellIndex, Missile, PlayerMissileL
         if damage < 0. then
             set damage = 0.
         endif
-        if (baseModel == null) or (baseModel == "") then
+        if (baseModel == "") then
             set baseModel = BASE_MISSILE_MODEL
         endif
 
-        set mid = (I2R(BURST_COUNT) - 1.)*0.5
-        loop
-            exitwhen i >= BURST_COUNT
-            set angle = baseAngle + ((I2R(i) - mid)*BURST_SPREAD_DEG)*bj_DEGTORAD
-            call LaunchBurstMissile(source, owner, x, y, angle, chosen, burstBonus, damage, instances, baseModel, wrapModel)
-            set i = i + 1
-        endloop
+        set burstBaseAngle[dex] = baseAngle
+        set burstX[dex] = x
+        set burstY[dex] = y
+        set burstDamage[dex] = damage
+        set burstInstances[dex] = instances
+        set burstChosen[dex] = chosen
+        set burstBonusActive[dex] = burstBonus
+        set burstBaseModel[dex] = baseModel
+        set burstWrapModel[dex] = wrapModel
+        set burstShotIndex[dex] = 0
+
+        call BurstLaunchShot(dex, 0)
+        set burstShotIndex[dex] = 1
+
+        if BURST_COUNT > 1 then
+            set burstTimer[dex] = NewTimerEx(dex)
+        call SetTimerDebugTag(burstTimer[dex], TIMER_DEBUG_TAG_LOADOUT_CONTROL)
+            call TimerStart(burstTimer[dex], GetBurstStaggerInterval(), true, function OnBurstTick)
+        else
+            call BurstStop(dex)
+        endif
         set source = null
         set owner = null
     endfunction
@@ -349,6 +589,7 @@ library LoadoutControl initializer Init uses SpellIndex, Missile, PlayerMissileL
             call ReleaseTimer(delayedAnimTimer[dex])
             set delayedAnimTimer[dex] = null
         endif
+        call BurstStop(dex)
         set aim[dex] = 0.
         call ReleaseTimer(dex.clock)
         call dex.destroy()
@@ -374,24 +615,27 @@ library LoadoutControl initializer Init uses SpellIndex, Missile, PlayerMissileL
     private function OnPeriodic takes nothing returns nothing
         local timer t = GetExpiredTimer()
         local SpellIndex dex = GetTimerData(t)
+        local real step = GetSafeFireInterval()
 
-        if (GetUnitTypeId(dex.source) == 0) or (not UnitAlive(dex.source)) or (not IsUnitChanneling(dex.source)) or (dex.phase < 0) then
+        if (GetUnitTypeId(dex.source) == 0) or (not UnitAlive(dex.source)) or (dex.phase < 0) then
             call Cleanup(dex)
             set t = null
             return
         endif
 
         if dex.time <= 0. then
-            call Cleanup(dex)
+            if burstTimer[dex] == null then
+                call Cleanup(dex)
+            endif
             set t = null
             return
         endif
 
         call SetUnitAnimation(dex.source, CAST_ANIMATION)
         call FireBurst(dex)
-        set dex.time = dex.time - FIRE_DURATION/(GetPlayerShortWeaponInterval(GetOwningPlayer(dex.source))+1)
+        set dex.time = dex.time - step
 
-        if dex.time <= 0. then
+        if (dex.time <= 0.) and (burstTimer[dex] == null) then
             call Cleanup(dex)
         endif
         set t = null
@@ -400,8 +644,8 @@ library LoadoutControl initializer Init uses SpellIndex, Missile, PlayerMissileL
     private function MarkCanceled takes unit whichUnit returns nothing
         local integer id = GetHandleId(whichUnit)
         if active.has(id) then
-            call SetUnitTimeScale(whichUnit, ANIMATION_TIME_SCALE_ON_END)
-            set SpellIndex(active[id]).phase = -1
+            // A running cast session is refreshed by recast; orders should not kill it.
+            return
         endif
     endfunction
 
@@ -424,28 +668,49 @@ library LoadoutControl initializer Init uses SpellIndex, Missile, PlayerMissileL
         local SpellIndex dex
         local real x = GetUnitX(source)
         local real y = GetUnitY(source)
+        local real tx = GetSpellTargetX()
+        local real ty = GetSpellTargetY()
+        local real step = GetSafeFireInterval()
+        local boolean useRapid
+
+        set useRapid = GetPlayerMissileUseRapidFireControl(owner)
 
         if active.has(id) then
-            call Cleanup(active[id])
+            set dex = active[id]
+            if (dex.phase >= 0) and (GetUnitTypeId(dex.source) != 0) and UnitAlive(dex.source) then
+                set aim[dex] = Atan2(ty - y, tx - x)
+                set dex.time = FIRE_DURATION
+                call SetUnitTimeScale(source, RAPID_FIRE_ANIMATION_TIME_SCALE)
+                set source = null
+                set owner = null
+                return
+            endif
+            call Cleanup(dex)
         endif
 
         set dex = SpellIndex.create()
         set dex.source = source
         set dex.user = owner
-        set dex.time = FIRE_DURATION
+        if useRapid and (FIRE_DURATION > 0.) then
+            set dex.time = FIRE_DURATION
+        else
+            set dex.time = 0.
+        endif
         set dex.phase = 1
         set dex.clock = NewTimerEx(dex)
-        set aim[dex] = Atan2(GetSpellTargetY() - y, GetSpellTargetX() - x)
+        call SetTimerDebugTag(dex.clock, TIMER_DEBUG_TAG_LOADOUT_CONTROL)
+        set aim[dex] = Atan2(ty - y, tx - x)
         set active[id] = dex
 
         call SetUnitTimeScale(source, RAPID_FIRE_ANIMATION_TIME_SCALE)
         set delayedAnimTimer[dex] = NewTimerEx(dex)
+        call SetTimerDebugTag(delayedAnimTimer[dex], TIMER_DEBUG_TAG_LOADOUT_CONTROL)
         call TimerStart(delayedAnimTimer[dex], FIRST_ANIMATION_DELAY, false, function DelayedStartAnimation)
         call FireBurst(dex)
-        set dex.time = dex.time - FIRE_DURATION/(GetPlayerShortWeaponInterval(GetOwningPlayer(source))+1)
+        set dex.time = dex.time - step
 
         if dex.time > 0. then
-            call TimerStart(dex.clock, FIRE_DURATION/(GetPlayerShortWeaponInterval(GetOwningPlayer(source))+1), true, function OnPeriodic)
+            call TimerStart(dex.clock, step, true, function OnPeriodic)
         else
             call Cleanup(dex)
         endif

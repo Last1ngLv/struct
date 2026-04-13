@@ -58,7 +58,7 @@ library TimerUtils initializer init
         private          integer VOFFSET    = OFFSET
               
         //Timers to preload at map init:
-        private constant integer QUANTITY   = 256
+        private constant integer QUANTITY   = 1024 
         
         //Changing this  to something big will allow you to keep recycling
         // timers even when there are already AN INCREDIBLE AMOUNT of timers in
@@ -69,8 +69,24 @@ library TimerUtils initializer init
 
     //==================================================================================================
     globals
+        constant integer TIMER_DEBUG_TAG_NONE              = 0
+        constant integer TIMER_DEBUG_TAG_LOADOUT_CONTROL   = 1
+        constant integer TIMER_DEBUG_TAG_LOADOUT_MISSILE   = 2
+        constant integer TIMER_DEBUG_TAG_LOADOUT_LEAP      = 3
+        constant integer TIMER_DEBUG_TAG_LOADOUT_LEAP_MISS = 4
+        constant integer TIMER_DEBUG_TAG_WAVE_CORE         = 5
+        constant integer TIMER_DEBUG_TAG_AI                = 6
+        constant integer TIMER_DEBUG_TAG_UNIT_SKILLS       = 7
+        constant integer TIMER_DEBUG_TAG_MOVECAST          = 8
+        constant integer TIMER_DEBUG_TAG_OTHER             = 9
+        private constant integer TIMER_DEBUG_MAX_TAG       = 16
+
         private integer array data[ARRAY_SIZE]
+        private integer array debugTagLive[17]
+        private integer array debugTagPeak[17]
+        private integer array debugTagBorrows[17]
         private hashtable     ht
+        private hashtable     debugHt
     endglobals
     
     
@@ -124,6 +140,76 @@ library TimerUtils initializer init
         endif        
     endfunction
 
+
+    function GetTimerDebugTag takes timer t returns integer
+        if t == null then
+            return TIMER_DEBUG_TAG_NONE
+        endif
+        return LoadInteger(debugHt, 0, GetHandleId(t))
+    endfunction
+
+    function SetTimerDebugTag takes timer t, integer tag returns nothing
+        local integer hid
+        local integer previousTag
+        if t == null then
+            return
+        endif
+        if tag < TIMER_DEBUG_TAG_NONE or tag > TIMER_DEBUG_MAX_TAG then
+            set tag = TIMER_DEBUG_TAG_NONE
+        endif
+        set hid = GetHandleId(t)
+        set previousTag = LoadInteger(debugHt, 0, hid)
+        if previousTag == tag then
+            return
+        endif
+        if previousTag > TIMER_DEBUG_TAG_NONE and previousTag <= TIMER_DEBUG_MAX_TAG and debugTagLive[previousTag] > 0 then
+            set debugTagLive[previousTag] = debugTagLive[previousTag] - 1
+        endif
+        call SaveInteger(debugHt, 0, hid, tag)
+        if tag > TIMER_DEBUG_TAG_NONE and tag <= TIMER_DEBUG_MAX_TAG then
+            set debugTagLive[tag] = debugTagLive[tag] + 1
+            set debugTagBorrows[tag] = debugTagBorrows[tag] + 1
+            if debugTagLive[tag] > debugTagPeak[tag] then
+                set debugTagPeak[tag] = debugTagLive[tag]
+            endif
+        endif
+    endfunction
+
+    private function ClearTimerDebugTag takes timer t returns nothing
+        local integer hid
+        local integer tag
+        if t == null then
+            return
+        endif
+        set hid = GetHandleId(t)
+        set tag = LoadInteger(debugHt, 0, hid)
+        if tag > TIMER_DEBUG_TAG_NONE and tag <= TIMER_DEBUG_MAX_TAG and debugTagLive[tag] > 0 then
+            set debugTagLive[tag] = debugTagLive[tag] - 1
+        endif
+        call RemoveSavedInteger(debugHt, 0, hid)
+    endfunction
+
+    function GetTimerDebugLive takes integer tag returns integer
+        if tag < TIMER_DEBUG_TAG_NONE or tag > TIMER_DEBUG_MAX_TAG then
+            return 0
+        endif
+        return debugTagLive[tag]
+    endfunction
+
+    function GetTimerDebugPeak takes integer tag returns integer
+        if tag < TIMER_DEBUG_TAG_NONE or tag > TIMER_DEBUG_MAX_TAG then
+            return 0
+        endif
+        return debugTagPeak[tag]
+    endfunction
+
+    function GetTimerDebugBorrows takes integer tag returns integer
+        if tag < TIMER_DEBUG_TAG_NONE or tag > TIMER_DEBUG_MAX_TAG then
+            return 0
+        endif
+        return debugTagBorrows[tag]
+    endfunction
+
     //==========================================================================================
     globals
         private timer array tT[ARRAY_SIZE]
@@ -132,6 +218,8 @@ library TimerUtils initializer init
         //use a totally random number here, the more improbable someone uses it, the better.
         
         private boolean       didinit = false
+        private integer       borrowedTimers = 0
+        private integer       peakBorrowedTimers = 0
     endglobals
     private keyword init
 
@@ -176,6 +264,10 @@ library TimerUtils initializer init
             set tN=tN-1
         endif
         call SetTimerData(tT[tN],value)
+        set borrowedTimers = borrowedTimers + 1
+        if borrowedTimers > peakBorrowedTimers then
+            set peakBorrowedTimers = borrowedTimers
+        endif
      return tT[tN]
     endfunction
     
@@ -194,6 +286,10 @@ library TimerUtils initializer init
             debug call BJDebugMsg("Warning: Timer stack is full, destroying timer!!")
 
             //stack is full, the map already has much more troubles than the chance of bug
+            if borrowedTimers > 0 then
+                set borrowedTimers = borrowedTimers - 1
+            endif
+            call ClearTimerDebugTag(t)
             call DestroyTimer(t)
         else
             call PauseTimer(t)
@@ -202,9 +298,29 @@ library TimerUtils initializer init
                 return
             endif
             call SetTimerData(t,HELD)
+            if borrowedTimers > 0 then
+                set borrowedTimers = borrowedTimers - 1
+            endif
+            call ClearTimerDebugTag(t)
             set tT[tN]=t
             set tN=tN+1
         endif    
+    endfunction
+
+    function GetTimerUtilsCapacity takes nothing returns integer
+        return QUANTITY
+    endfunction
+
+    function GetTimerUtilsAvailable takes nothing returns integer
+        return tN
+    endfunction
+
+    function GetTimerUtilsInUse takes nothing returns integer
+        return borrowedTimers
+    endfunction
+
+    function GetTimerUtilsPeakInUse takes nothing returns integer
+        return peakBorrowedTimers
     endfunction
 
     private function init takes nothing returns nothing
@@ -219,6 +335,7 @@ library TimerUtils initializer init
      
         static if( USE_HASH_TABLE ) then
             set ht = InitHashtable()
+            set debugHt = InitHashtable()
             loop
                 exitwhen(i==QUANTITY)
                 set tT[i]=CreateTimer()
