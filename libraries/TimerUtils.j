@@ -74,11 +74,12 @@ library TimerUtils initializer init
         constant integer TIMER_DEBUG_TAG_LOADOUT_MISSILE   = 2
         constant integer TIMER_DEBUG_TAG_LOADOUT_LEAP      = 3
         constant integer TIMER_DEBUG_TAG_LOADOUT_LEAP_MISS = 4
-        constant integer TIMER_DEBUG_TAG_WAVE_CORE         = 5
-        constant integer TIMER_DEBUG_TAG_AI                = 6
-        constant integer TIMER_DEBUG_TAG_UNIT_SKILLS       = 7
-        constant integer TIMER_DEBUG_TAG_MOVECAST          = 8
-        constant integer TIMER_DEBUG_TAG_OTHER             = 9
+        constant integer TIMER_DEBUG_TAG_LOADOUT_ROCKET    = 5
+        constant integer TIMER_DEBUG_TAG_WAVE_CORE         = 6
+        constant integer TIMER_DEBUG_TAG_AI                = 7
+        constant integer TIMER_DEBUG_TAG_UNIT_SKILLS       = 8
+        constant integer TIMER_DEBUG_TAG_MOVECAST          = 9
+        constant integer TIMER_DEBUG_TAG_OTHER             = 10
         private constant integer TIMER_DEBUG_MAX_TAG       = 16
 
         private integer array data[ARRAY_SIZE]

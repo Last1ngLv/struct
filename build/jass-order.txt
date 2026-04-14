@@ -55,6 +55,7 @@ libraries/WaveDamageCredit.j
 MyMissiles/Loadout Missile.j
 MoveSys/MoveCast.j
 MyMissiles/Loadout Control.j
+MyMissiles/Loadout RocketLauncher.j
 InitMap/Confis/LoadoutMoveCastConfi.j
 InitMap/PreConfi.j
 InitMap/HeroLives.j

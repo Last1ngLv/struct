@@ -57,11 +57,11 @@ library PreConfi initializer Init requires PlayerUtils, TimerUtils, TenderSystem
         call SetInitialBoardCell(1, 5, "", 0.01)
 
         call SetInitialBoardCell(2, 0, "|cFFBBBBBBDebug Loadouts|r", 0.16)
-        call SetInitialBoardCell(2, 1, "|cFFFF6666Control|r|cFFFFFFFF: |r|cFFFFFF00" + I2S(GetTimerDebugLive(TIMER_DEBUG_TAG_LOADOUT_CONTROL)) + "|r|cFFFF8C00/|r|cFFFFCC66" + I2S(GetTimerDebugPeak(TIMER_DEBUG_TAG_LOADOUT_CONTROL)) + "|r", 0.13)
-        call SetInitialBoardCell(2, 2, "|cFF66CCFFMissile|r|cFFFFFFFF: |r|cFFFFFF00" + I2S(GetTimerDebugLive(TIMER_DEBUG_TAG_LOADOUT_MISSILE)) + "|r|cFFFF8C00/|r|cFFFFCC66" + I2S(GetTimerDebugPeak(TIMER_DEBUG_TAG_LOADOUT_MISSILE)) + "|r", 0.13)
-        call SetInitialBoardCell(2, 3, "|cFF66FF99Leap|r|cFFFFFFFF: |r|cFFFFFF00" + I2S(GetTimerDebugLive(TIMER_DEBUG_TAG_LOADOUT_LEAP)) + "|r|cFFFF8C00/|r|cFFFFCC66" + I2S(GetTimerDebugPeak(TIMER_DEBUG_TAG_LOADOUT_LEAP)) + "|r", 0.12)
-        call SetInitialBoardCell(2, 4, "|cFFFFCC66LeapMs|r|cFFFFFFFF: |r|cFFFFFF00" + I2S(GetTimerDebugLive(TIMER_DEBUG_TAG_LOADOUT_LEAP_MISS)) + "|r|cFFFF8C00/|r|cFFFFCC66" + I2S(GetTimerDebugPeak(TIMER_DEBUG_TAG_LOADOUT_LEAP_MISS)) + "|r", 0.13)
-        call SetInitialBoardCell(2, 5, "", 0.01)
+        call SetInitialBoardCell(2, 1, "|cFFFF6666Control|r|cFFFFFFFF: |r|cFFFFFF00" + I2S(GetTimerDebugLive(TIMER_DEBUG_TAG_LOADOUT_CONTROL)) + "|r|cFFFF8C00/|r|cFFFFCC66" + I2S(GetTimerDebugPeak(TIMER_DEBUG_TAG_LOADOUT_CONTROL)) + "|r", 0.11)
+        call SetInitialBoardCell(2, 2, "|cFF66CCFFMissile|r|cFFFFFFFF: |r|cFFFFFF00" + I2S(GetTimerDebugLive(TIMER_DEBUG_TAG_LOADOUT_MISSILE)) + "|r|cFFFF8C00/|r|cFFFFCC66" + I2S(GetTimerDebugPeak(TIMER_DEBUG_TAG_LOADOUT_MISSILE)) + "|r", 0.11)
+        call SetInitialBoardCell(2, 3, "|cFF66FF99Leap|r|cFFFFFFFF: |r|cFFFFFF00" + I2S(GetTimerDebugLive(TIMER_DEBUG_TAG_LOADOUT_LEAP)) + "|r|cFFFF8C00/|r|cFFFFCC66" + I2S(GetTimerDebugPeak(TIMER_DEBUG_TAG_LOADOUT_LEAP)) + "|r", 0.10)
+        call SetInitialBoardCell(2, 4, "|cFFFFCC66LeapMs|r|cFFFFFFFF: |r|cFFFFFF00" + I2S(GetTimerDebugLive(TIMER_DEBUG_TAG_LOADOUT_LEAP_MISS)) + "|r|cFFFF8C00/|r|cFFFFCC66" + I2S(GetTimerDebugPeak(TIMER_DEBUG_TAG_LOADOUT_LEAP_MISS)) + "|r", 0.10)
+        call SetInitialBoardCell(2, 5, "|cFFFF99CCRocket|r|cFFFFFFFF: |r|cFFFFFF00" + I2S(GetTimerDebugLive(TIMER_DEBUG_TAG_LOADOUT_ROCKET)) + "|r|cFFFF8C00/|r|cFFFFCC66" + I2S(GetTimerDebugPeak(TIMER_DEBUG_TAG_LOADOUT_ROCKET)) + "|r", 0.10)
 
         call SetInitialBoardCell(3, 0, "|cFFBBBBBBDebug Systems|r", 0.16)
         call SetInitialBoardCell(3, 1, "|cFF99CCFFWave|r|cFFFFFFFF: |r|cFFFFFF00" + I2S(GetTimerDebugLive(TIMER_DEBUG_TAG_WAVE_CORE)) + "|r|cFFFF8C00/|r|cFFFFCC66" + I2S(GetTimerDebugPeak(TIMER_DEBUG_TAG_WAVE_CORE)) + "|r", 0.11)

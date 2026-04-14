@@ -4,6 +4,7 @@ library LoadoutLeapMissile initializer Init uses TimerUtils, SpellIndex, Missile
 //* ==============
     globals
         private constant integer LOADOUT_LEAP_MISSILE_SPELL = 'U0A4'
+        private constant boolean ENABLE_CAST_POINT_VALIDATION = false
 
         //* Base Jump settings
         private constant real BASE_JUMP_HEIGHT = 550.0
@@ -19,6 +20,7 @@ library LoadoutLeapMissile initializer Init uses TimerUtils, SpellIndex, Missile
 
         //* Base Impact Settings
         private constant real BASE_IMPACT_AREA = 350.0
+        private constant real BASE_DAMAGE_MULT = 1.00
         private constant attacktype ATTACK_TYPE = ATTACK_TYPE_NORMAL
         private constant damagetype DAMAGE_TYPE = DAMAGE_TYPE_MAGIC
         private constant real IMPACT_FX_DURATION = 1.00
@@ -111,6 +113,23 @@ library LoadoutLeapMissile initializer Init uses TimerUtils, SpellIndex, Missile
             return IsTerrainWalkable(x, y)
         endif
         return false
+    endfunction
+
+    private function ShouldValidateLeapMissileCastPoint takes unit source returns boolean
+        set source = null
+        return ENABLE_CAST_POINT_VALIDATION
+    endfunction
+
+    private function ValidateLeapMissileCastPoint takes unit source, player owner, real tx, real ty returns boolean
+        if not IsPointJumpable(tx, ty) then
+            call SimError(owner, GetUnitName(source) + " can't jump there!")
+            return false
+        endif
+        if not IsVisibleToPlayer(tx, ty, owner) then
+            call SimError(owner, GetUnitName(source) + " needs vision at target!")
+            return false
+        endif
+        return true
     endfunction
 
     private function GetLeapMissileScaleForArea takes real area returns real
@@ -622,7 +641,7 @@ library LoadoutLeapMissile initializer Init uses TimerUtils, SpellIndex, Missile
             set speed = 1.0
         endif
 
-        set damage = GetPlayerMissileDamageValue(owner)
+        set damage = GetPlayerMissileDamageValue(owner)*BASE_DAMAGE_MULT
         if damage < 0. then
             set damage = 0.
         endif
@@ -748,15 +767,7 @@ library LoadoutLeapMissile initializer Init uses TimerUtils, SpellIndex, Missile
         local real step = GetSafeFireInterval()
         local boolean useRapid = GetPlayerMissileUseRapidFire(owner)
 
-        if not IsPointJumpable(tx, ty) then
-            call SimError(owner, GetUnitName(source) + " can't jump there!")
-            set source = null
-            set owner = null
-            return
-        endif
-
-        if not IsVisibleToPlayer(tx, ty, owner) then
-            call SimError(owner, GetUnitName(source) + " needs vision at target!")
+        if ShouldValidateLeapMissileCastPoint(source) and not ValidateLeapMissileCastPoint(source, owner, tx, ty) then
             set source = null
             set owner = null
             return

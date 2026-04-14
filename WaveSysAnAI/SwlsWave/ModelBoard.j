@@ -155,11 +155,11 @@ scope ModelBoard
 
         // Fila debug loadouts: live/peak por sistema
         call MBSetCell(w.board, loadoutDebugRow, 0, "|cFFBBBBBBDebug Loadouts|r", 0.15)
-        call MBSetCell(w.board, loadoutDebugRow, 1, MBLoadoutDebugCell("Control", "|cFFFF6666", TIMER_DEBUG_TAG_LOADOUT_CONTROL), 0.12)
-        call MBSetCell(w.board, loadoutDebugRow, 2, MBLoadoutDebugCell("Missile", "|cFF66CCFF", TIMER_DEBUG_TAG_LOADOUT_MISSILE), 0.12)
-        call MBSetCell(w.board, loadoutDebugRow, 3, MBLoadoutDebugCell("Leap", "|cFF66FF99", TIMER_DEBUG_TAG_LOADOUT_LEAP), 0.11)
-        call MBSetCell(w.board, loadoutDebugRow, 4, MBLoadoutDebugCell("LeapMs", "|cFFFFCC66", TIMER_DEBUG_TAG_LOADOUT_LEAP_MISS), 0.12)
-        call MBSetCell(w.board, loadoutDebugRow, 5, "", 0.01)
+        call MBSetCell(w.board, loadoutDebugRow, 1, MBLoadoutDebugCell("Control", "|cFFFF6666", TIMER_DEBUG_TAG_LOADOUT_CONTROL), 0.11)
+        call MBSetCell(w.board, loadoutDebugRow, 2, MBLoadoutDebugCell("Missile", "|cFF66CCFF", TIMER_DEBUG_TAG_LOADOUT_MISSILE), 0.11)
+        call MBSetCell(w.board, loadoutDebugRow, 3, MBLoadoutDebugCell("Leap", "|cFF66FF99", TIMER_DEBUG_TAG_LOADOUT_LEAP), 0.10)
+        call MBSetCell(w.board, loadoutDebugRow, 4, MBLoadoutDebugCell("LeapMs", "|cFFFFCC66", TIMER_DEBUG_TAG_LOADOUT_LEAP_MISS), 0.10)
+        call MBSetCell(w.board, loadoutDebugRow, 5, MBLoadoutDebugCell("Rocket", "|cFFFF99CC", TIMER_DEBUG_TAG_LOADOUT_ROCKET), 0.10)
 
         // Fila debug sistemas: wave / ia / skills / movecast / otros
         call MBSetCell(w.board, systemsDebugRow, 0, "|cFFBBBBBBDebug Systems|r", 0.15)

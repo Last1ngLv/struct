@@ -333,7 +333,7 @@ library LoadoutRocketLauncher initializer Init requires TimerUtils, SpellIndex, 
         call PoisonListAdd(dex)
         if poisonTicker == null then
             set poisonTicker = NewTimer()
-            call SetTimerDebugTag(poisonTicker, TIMER_DEBUG_TAG_LOADOUT_CONTROL)
+            call SetTimerDebugTag(poisonTicker, TIMER_DEBUG_TAG_LOADOUT_ROCKET)
             call TimerStart(poisonTicker, LOADOUT_ORB_POISON_TICK_INTERVAL, true, function OnPoisonTick)
         endif
     endfunction
@@ -645,7 +645,7 @@ library LoadoutRocketLauncher initializer Init requires TimerUtils, SpellIndex, 
 
         if BURST_COUNT > 1 then
             set burstTimer[dex] = NewTimerEx(dex)
-        call SetTimerDebugTag(burstTimer[dex], TIMER_DEBUG_TAG_LOADOUT_CONTROL)
+        call SetTimerDebugTag(burstTimer[dex], TIMER_DEBUG_TAG_LOADOUT_ROCKET)
             call TimerStart(burstTimer[dex], GetBurstStaggerInterval(), true, function OnBurstTick)
         else
             call BurstStop(dex)
@@ -775,13 +775,13 @@ library LoadoutRocketLauncher initializer Init requires TimerUtils, SpellIndex, 
         endif
         set dex.phase = 1
         set dex.clock = NewTimerEx(dex)
-        call SetTimerDebugTag(dex.clock, TIMER_DEBUG_TAG_LOADOUT_CONTROL)
+        call SetTimerDebugTag(dex.clock, TIMER_DEBUG_TAG_LOADOUT_ROCKET)
         set aim[dex] = Atan2(ty - y, tx - x)
         set active[id] = dex
 
         call SetUnitTimeScale(source, RAPID_FIRE_ANIMATION_TIME_SCALE)
         set delayedAnimTimer[dex] = NewTimerEx(dex)
-        call SetTimerDebugTag(delayedAnimTimer[dex], TIMER_DEBUG_TAG_LOADOUT_CONTROL)
+        call SetTimerDebugTag(delayedAnimTimer[dex], TIMER_DEBUG_TAG_LOADOUT_ROCKET)
         call TimerStart(delayedAnimTimer[dex], FIRST_ANIMATION_DELAY, false, function DelayedStartAnimation)
         call FireBurst(dex)
         set dex.time = dex.time - step
