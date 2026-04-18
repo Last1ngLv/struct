@@ -11,6 +11,7 @@ globals
     private real array PlayerMenuCameraHeight
     private real array PlayerMenuCameraOffset
     private boolean array PlayerMenuHealthBarPreSelect
+    private real array PlayerMenuFogAppliedHeight
 endglobals
     
     public /*constant*/ function HERO_WINDOW_NAME takes unit u returns string
@@ -48,6 +49,22 @@ endglobals
 
     private function GetMenuCameraOffsetForHeight takes real height returns real
         return GetDefaultMenuCameraOffset() + ((height - GetDefaultMenuCameraHeight())/1000.)*667.
+    endfunction
+
+    private function GetMenuCameraFogEnd takes real height returns real
+        return 3500. + (height - GetDefaultMenuCameraHeight())*1.75
+    endfunction
+
+    private function ApplyMenuCameraFog takes player p, real height returns nothing
+        if User.Local == p then
+            call SetTerrainFogExBJ(0, 0.00, GetMenuCameraFogEnd(height), 0.00, 24.00, 24.00, 24.00)
+        endif
+    endfunction
+
+    private function ResetMenuCameraFog takes player p returns nothing
+        if User.Local == p then
+            call ResetTerrainFogBJ()
+        endif
     endfunction
 
     private function EnsureMenuCameraSettings takes integer pid returns nothing
@@ -540,6 +557,10 @@ endglobals
             set x = GetUnitX(equipment.unit)
             set y = GetUnitY(equipment.unit)
             call EnsureMenuCameraSettings(user.id)
+            if PlayerMenuFogAppliedHeight[user.id] != PlayerMenuCameraHeight[user.id] then
+                call ApplyMenuCameraFog(user.handle, PlayerMenuCameraHeight[user.id])
+                set PlayerMenuFogAppliedHeight[user.id] = PlayerMenuCameraHeight[user.id]
+            endif
             set z = GetTerrainZ(x, y) + PlayerMenuCameraHeight[user.id] + GetUnitDefaultFlyHeight(equipment.unit)
             call equipment.camera.setPosition(x, y - PlayerMenuCameraOffset[user.id], z)
             
@@ -593,6 +614,8 @@ endglobals
                     call TimerStart(.UpdateTimer, 0.03125, true, function thistype.onDisplay)
                 endif
                 if (User.Local == this.player) then
+                    call ResetMenuCameraFog(this.player)
+                    set PlayerMenuFogAppliedHeight[this.user.id] = -1.
                     call ResetToGameCamera(0)
                 endif
             endif
@@ -1221,6 +1244,7 @@ endglobals
             set PlayerMenuCameraHeight[user.id] = GetDefaultMenuCameraHeight()
             set PlayerMenuCameraOffset[user.id] = GetDefaultMenuCameraOffset()
             set PlayerMenuHealthBarPreSelect[user.id] = false
+            set PlayerMenuFogAppliedHeight[user.id] = -1.
             set user = user.next
         endloop
         set FuncLClickSlot = Filter(function LClickItemSlot)
