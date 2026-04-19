@@ -4,6 +4,7 @@
 
 libraries/Table.j
 libraries/TimerUtils.j
+libraries/File IO.j
 libraries/SwlsMath.j
 UI System/MyIU/Models.j
 InitMap/HideIcons.j
@@ -44,7 +45,6 @@ WaveSysAnAI/WaveProjectiles/WaveSiegeSkills.j
 WaveSysAnAI/SwlsWave/WavePointGroups.j
 WaveSysAnAI/SwlsWave/WavePointGroupsConfig.j
 WaveSysAnAI/WaveProjectiles/WaveReinforcements.j
-WaveSysAnAI/AI/IAManager.j
 MyMissiles/Loadout Leap.j
 MyMissiles/Loadout LeapMissile.j
 MyMissiles/SwapMana.j
@@ -56,6 +56,12 @@ MyMissiles/Loadout Missile.j
 MoveSys/MoveCast.j
 MyMissiles/Loadout Control.j
 MyMissiles/Loadout RocketLauncher.j
+WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j
+WaveSysAnAI/WaveProjectiles/WavePriestSkills.j
+WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j
+WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j
+WaveSysAnAI/WaveProjectiles/WaveWaveformSkills.j
+WaveSysAnAI/AI/IAManager.j
 InitMap/Confis/LoadoutMoveCastConfi.j
 InitMap/PreConfi.j
 InitMap/HeroLives.j

@@ -1,15 +1,24 @@
-library WavePriestSkills initializer Init requires Table, TimerUtils, SpellIndex, WaveTest, WaveSkillVisuals
+library WavePriestSkills initializer Init requires Table, TimerUtils, SpellIndex, WaveTest, WaveSkillVisuals, FileIO
 
     globals
         public constant integer WAVE_HMPR_UNIT_ID = 'hmpr'
         public constant integer WAVE_HMPR_BOSS_UNIT_ID = 'zA07'
         public constant integer WAVE_HMPR_NORMAL_PASSIVE_ID = 'A004'
         public constant integer WAVE_HMPR_BOSS_PASSIVE_ID = 'A005'
+        private constant integer WAVE_ANY_BOSS_1 = 'zA01'
+        private constant integer WAVE_ANY_BOSS_2 = 'zA02'
+        private constant integer WAVE_ANY_BOSS_3 = 'zA03'
+        private constant integer WAVE_ANY_BOSS_4 = 'zA04'
+        private constant integer WAVE_ANY_BOSS_5 = 'zA05'
+        private constant integer WAVE_ANY_BOSS_6 = 'zA06'
+        private constant integer WAVE_ANY_BOSS_7 = 'zA07'
+        private constant integer WAVE_ANY_BOSS_8 = 'zA08'
+        private constant integer WAVE_ANY_BOSS_9 = 'zA09'
 
         public constant string WAVE_HMPR_AURA_VISUAL_MODEL = "war3mapImported\\Ubershield Starfire x3.mdx"
         public constant string WAVE_HMPR_BOSS_AURA_VISUAL_MODEL = "war3mapImported\\Ubershield Starfire x3.mdx"
 
-        public constant real WAVE_HMPR_AURA_RADIUS = 300.0
+        public constant real WAVE_HMPR_AURA_RADIUS = 500.0
         public constant real WAVE_HMPR_AURA_DURATION = 5.0
         public constant real WAVE_HMPR_AURA_SCALE_BONUS = 1.0
         public constant real WAVE_HMPR_INITIAL_DELAY_MIN = 2.00
@@ -17,7 +26,7 @@ library WavePriestSkills initializer Init requires Table, TimerUtils, SpellIndex
         public constant real WAVE_HMPR_COOLDOWN_MIN = 10.00
         public constant real WAVE_HMPR_COOLDOWN_MAX = 12.00
 
-        public constant real WAVE_HMPR_BOSS_AURA_RADIUS = 850.0
+        public constant real WAVE_HMPR_BOSS_AURA_RADIUS = 950.0
         public constant real WAVE_HMPR_BOSS_AURA_DURATION = 10.0
         public constant real WAVE_HMPR_BOSS_AURA_SCALE_BONUS = 1.75
         public constant real WAVE_HMPR_BOSS_INITIAL_DELAY_MIN = 3.50
@@ -29,14 +38,17 @@ library WavePriestSkills initializer Init requires Table, TimerUtils, SpellIndex
         private constant integer WAVE_HMPR_MEMBER_STRIDE = 1024
         private constant integer WAVE_HMPR_AURA_TYPE_NORMAL = 1
         private constant integer WAVE_HMPR_AURA_TYPE_BOSS = 2
+        private constant boolean WAVE_HMPR_DEBUG = false
+        private constant integer WAVE_HMPR_DEBUG_FILE_BATCH = 32
+        private constant string WAVE_HMPR_DEBUG_FILE_FOLDER = "struct"
 
         private Table WavePriestNextCastMs
         private Table WavePriestActiveAuraByUnit
-        private Table WavePriestSeenTokenByUnit
-        private Table WavePriestNormalCountByUnit
-        private Table WavePriestBossCountByUnit
         private Table WavePriestBaseScaleByUnit
-
+        private Table WavePriestNormalOwnerAuraByUnit
+        private Table WavePriestBossOwnerAuraByUnit
+        private Table WavePriestMemberUnitByKey
+        private Table WavePriestMemberHidByKey
         private timer WavePriestTimer
         private boolean WavePriestTimerRunning = false
         private integer WavePriestHead = 0
@@ -45,13 +57,15 @@ library WavePriestSkills initializer Init requires Table, TimerUtils, SpellIndex
         private integer array WavePriestNext
         private integer array WavePriestPrev
         private integer array WavePriestAuraType
-        private integer array WavePriestSweepToken
         private integer array WavePriestMemberCount
         private unit array WavePriestSource
         private real array WavePriestRadius
         private real array WavePriestRemaining
         private integer array WavePriestVisualId
-        private unit array WavePriestMemberUnit
+
+        private File WavePriestDebugFile = 0
+        private integer WavePriestDebugFileSegment = 0
+        private integer WavePriestDebugFileLineCount = 0
     endglobals
 
     private function WavePriestMemberKey takes integer auraId, integer index returns integer
@@ -85,131 +99,6 @@ library WavePriestSkills initializer Init requires Table, TimerUtils, SpellIndex
         return u != null and GetUnitTypeId(u) != 0 and UnitAlive(u)
     endfunction
 
-    private function WavePriestIsNormal takes unit source returns boolean
-        return source != null and GetUnitTypeId(source) == WAVE_HMPR_UNIT_ID
-    endfunction
-
-    private function WavePriestIsBoss takes unit source returns boolean
-        return source != null and GetUnitTypeId(source) == WAVE_HMPR_BOSS_UNIT_ID
-    endfunction
-
-    private function WavePriestRefreshScale takes unit target returns nothing
-        local integer hid
-        local real baseScale = 1.0
-        local integer normalCount = 0
-        local integer bossCount = 0
-        local real nextScale
-        if target == null or GetUnitTypeId(target) == 0 then
-            return
-        endif
-        set hid = GetHandleId(target)
-        if hid != 0 and WavePriestBaseScaleByUnit.has(hid) then
-            set baseScale = WavePriestBaseScaleByUnit.real[hid]
-        endif
-        if hid != 0 and WavePriestNormalCountByUnit.has(hid) then
-            set normalCount = R2I(WavePriestNormalCountByUnit.real[hid])
-        endif
-        if hid != 0 and WavePriestBossCountByUnit.has(hid) then
-            set bossCount = R2I(WavePriestBossCountByUnit.real[hid])
-        endif
-        set nextScale = baseScale + I2R(normalCount)*WAVE_HMPR_AURA_SCALE_BONUS + I2R(bossCount)*WAVE_HMPR_BOSS_AURA_SCALE_BONUS
-        if nextScale < 0.10 then
-            set nextScale = 0.10
-        endif
-        call SetUnitScale(target, nextScale, nextScale, nextScale)
-    endfunction
-
-    private function WavePriestGetAuraCount takes Table countTable, integer hid returns integer
-        if hid != 0 and countTable.has(hid) then
-            return R2I(countTable.real[hid])
-        endif
-        return 0
-    endfunction
-
-    private function WavePriestSetAuraCount takes Table countTable, integer hid, integer amount returns nothing
-        if hid == 0 then
-            return
-        endif
-        if amount <= 0 then
-            if countTable.has(hid) then
-                call countTable.remove(hid)
-            endif
-        else
-            set countTable.real[hid] = I2R(amount)
-        endif
-    endfunction
-
-    private function WavePriestApplyAuraEffect takes integer auraType, unit target returns nothing
-        local integer hid
-        local integer amount
-        if target == null or GetUnitTypeId(target) == 0 then
-            return
-        endif
-        set hid = GetHandleId(target)
-        if auraType == WAVE_HMPR_AURA_TYPE_BOSS then
-            set amount = WavePriestGetAuraCount(WavePriestBossCountByUnit, hid)
-            if amount == 0 then
-                if not WavePriestBaseScaleByUnit.has(hid) then
-                    set WavePriestBaseScaleByUnit.real[hid] = 1.0
-                endif
-                call UnitAddAbility(target, WAVE_HMPR_BOSS_PASSIVE_ID)
-            endif
-            call WavePriestSetAuraCount(WavePriestBossCountByUnit, hid, amount + 1)
-            call WavePriestRefreshScale(target)
-        else
-            set amount = WavePriestGetAuraCount(WavePriestNormalCountByUnit, hid)
-            if amount == 0 then
-                if not WavePriestBaseScaleByUnit.has(hid) then
-                    set WavePriestBaseScaleByUnit.real[hid] = 1.0
-                endif
-                call UnitAddAbility(target, WAVE_HMPR_NORMAL_PASSIVE_ID)
-            endif
-            call WavePriestSetAuraCount(WavePriestNormalCountByUnit, hid, amount + 1)
-            call WavePriestRefreshScale(target)
-        endif
-    endfunction
-
-    private function WavePriestRemoveAuraEffect takes integer auraType, unit target returns nothing
-        local integer hid
-        local integer amount
-        if target == null or GetUnitTypeId(target) == 0 then
-            return
-        endif
-        set hid = GetHandleId(target)
-        if auraType == WAVE_HMPR_AURA_TYPE_BOSS then
-            set amount = WavePriestGetAuraCount(WavePriestBossCountByUnit, hid)
-            if amount <= 1 then
-                call UnitRemoveAbility(target, WAVE_HMPR_BOSS_PASSIVE_ID)
-                call WavePriestSetAuraCount(WavePriestBossCountByUnit, hid, 0)
-            else
-                call WavePriestSetAuraCount(WavePriestBossCountByUnit, hid, amount - 1)
-            endif
-            call WavePriestRefreshScale(target)
-            if WavePriestGetAuraCount(WavePriestNormalCountByUnit, hid) == 0 and WavePriestGetAuraCount(WavePriestBossCountByUnit, hid) == 0 and WavePriestBaseScaleByUnit.has(hid) then
-                call WavePriestBaseScaleByUnit.remove(hid)
-            endif
-        else
-            set amount = WavePriestGetAuraCount(WavePriestNormalCountByUnit, hid)
-            if amount <= 1 then
-                call UnitRemoveAbility(target, WAVE_HMPR_NORMAL_PASSIVE_ID)
-                call WavePriestSetAuraCount(WavePriestNormalCountByUnit, hid, 0)
-            else
-                call WavePriestSetAuraCount(WavePriestNormalCountByUnit, hid, amount - 1)
-            endif
-            call WavePriestRefreshScale(target)
-            if WavePriestGetAuraCount(WavePriestNormalCountByUnit, hid) == 0 and WavePriestGetAuraCount(WavePriestBossCountByUnit, hid) == 0 and WavePriestBaseScaleByUnit.has(hid) then
-                call WavePriestBaseScaleByUnit.remove(hid)
-            endif
-        endif
-    endfunction
-
-    private function WavePriestVisualModelForType takes integer auraType returns string
-        if auraType == WAVE_HMPR_AURA_TYPE_BOSS then
-            return WAVE_HMPR_BOSS_AURA_VISUAL_MODEL
-        endif
-        return WAVE_HMPR_AURA_VISUAL_MODEL
-    endfunction
-
     private function WavePriestTargetIsValid takes unit source, unit target returns boolean
         local integer sourceWave
         local integer targetWave
@@ -230,6 +119,9 @@ library WavePriestSkills initializer Init requires Table, TimerUtils, SpellIndex
             return false
         endif
         set unitTypeId = GetUnitTypeId(target)
+        if unitTypeId == WAVE_ANY_BOSS_1 or unitTypeId == WAVE_ANY_BOSS_2 or unitTypeId == WAVE_ANY_BOSS_3 or unitTypeId == WAVE_ANY_BOSS_4 or unitTypeId == WAVE_ANY_BOSS_5 or unitTypeId == WAVE_ANY_BOSS_6 or unitTypeId == WAVE_ANY_BOSS_7 or unitTypeId == WAVE_ANY_BOSS_8 or unitTypeId == WAVE_ANY_BOSS_9 then
+            return false
+        endif
         if unitTypeId == WAVE_HMPR_UNIT_ID or unitTypeId == WAVE_HMPR_BOSS_UNIT_ID then
             return false
         endif
@@ -239,6 +131,193 @@ library WavePriestSkills initializer Init requires Table, TimerUtils, SpellIndex
             return false
         endif
         return true
+    endfunction
+
+    private function WavePriestIsNormal takes unit source returns boolean
+        return source != null and GetUnitTypeId(source) == WAVE_HMPR_UNIT_ID
+    endfunction
+
+    private function WavePriestIsBoss takes unit source returns boolean
+        return source != null and GetUnitTypeId(source) == WAVE_HMPR_BOSS_UNIT_ID
+    endfunction
+
+    private function WavePriestAuraTypeName takes integer auraType returns string
+        if auraType == WAVE_HMPR_AURA_TYPE_BOSS then
+            return "BOSS"
+        endif
+        return "NORMAL"
+    endfunction
+
+    private function WavePriestDebugMsg takes string msg returns nothing
+        local string line
+        if WAVE_HMPR_DEBUG then
+            set line = "[WavePriest] " + msg
+            call BJDebugMsg("|cffffcc00" + line + "|r")
+            if File.enabled then
+                if WavePriestDebugFile == 0 then
+                    set WavePriestDebugFile = File.open(WAVE_HMPR_DEBUG_FILE_FOLDER, "WavePriestDebug_" + I2S(WavePriestDebugFileSegment), File.Flag.WRITE)
+                    set WavePriestDebugFileLineCount = 0
+                endif
+                call WavePriestDebugFile.write(line)
+                set WavePriestDebugFileLineCount = WavePriestDebugFileLineCount + 1
+                if WavePriestDebugFileLineCount >= WAVE_HMPR_DEBUG_FILE_BATCH then
+                    call WavePriestDebugFile.close()
+                    set WavePriestDebugFile = 0
+                    set WavePriestDebugFileSegment = WavePriestDebugFileSegment + 1
+                    set WavePriestDebugFileLineCount = 0
+                endif
+            endif
+        endif
+        set line = null
+    endfunction
+
+    private function WavePriestDebugTargetState takes string action, integer auraId, integer auraType, unit target returns nothing
+        local integer hid = 0
+        local integer normalOwner = 0
+        local integer bossOwner = 0
+        local integer normalLevel = 0
+        local integer bossLevel = 0
+        local string unitName = "null"
+        if not WAVE_HMPR_DEBUG then
+            return
+        endif
+        if target != null and GetUnitTypeId(target) != 0 then
+            set hid = GetHandleId(target)
+            set unitName = GetUnitName(target)
+            set normalLevel = GetUnitAbilityLevel(target, WAVE_HMPR_NORMAL_PASSIVE_ID)
+            set bossLevel = GetUnitAbilityLevel(target, WAVE_HMPR_BOSS_PASSIVE_ID)
+            if WavePriestNormalOwnerAuraByUnit.has(hid) then
+                set normalOwner = WavePriestNormalOwnerAuraByUnit[hid]
+            endif
+            if WavePriestBossOwnerAuraByUnit.has(hid) then
+                set bossOwner = WavePriestBossOwnerAuraByUnit[hid]
+            endif
+        endif
+        call WavePriestDebugMsg(action + " aura=" + I2S(auraId) + " type=" + WavePriestAuraTypeName(auraType) + " target=" + unitName + " hid=" + I2S(hid) + " nOwner=" + I2S(normalOwner) + " bOwner=" + I2S(bossOwner) + " nLvl=" + I2S(normalLevel) + " bLvl=" + I2S(bossLevel))
+    endfunction
+
+    private function WavePriestTargetInAuraRange takes unit source, unit target, real radius returns boolean
+        local real dx
+        local real dy
+        if not WavePriestTargetIsValid(source, target) then
+            return false
+        endif
+        set dx = GetUnitX(target) - GetUnitX(source)
+        set dy = GetUnitY(target) - GetUnitY(source)
+        return dx*dx + dy*dy <= radius*radius
+    endfunction
+
+    private function WavePriestRefreshScale takes unit target returns nothing
+        local integer hid
+        local real baseScale = 1.0
+        local real nextScale
+        if target == null or GetUnitTypeId(target) == 0 then
+            return
+        endif
+        set hid = GetHandleId(target)
+        if hid != 0 and WavePriestBaseScaleByUnit.real.has(hid) then
+            set baseScale = WavePriestBaseScaleByUnit.real[hid]
+        endif
+        set nextScale = baseScale
+        if hid != 0 and WavePriestNormalOwnerAuraByUnit.has(hid) then
+            set nextScale = nextScale + WAVE_HMPR_AURA_SCALE_BONUS
+        endif
+        if hid != 0 and WavePriestBossOwnerAuraByUnit.has(hid) then
+            set nextScale = nextScale + WAVE_HMPR_BOSS_AURA_SCALE_BONUS
+        endif
+        if nextScale < 0.10 then
+            set nextScale = 0.10
+        endif
+        call SetUnitScale(target, nextScale, nextScale, nextScale)
+        if hid != 0 and (not WavePriestNormalOwnerAuraByUnit.has(hid)) and (not WavePriestBossOwnerAuraByUnit.has(hid)) and WavePriestBaseScaleByUnit.real.has(hid) then
+            call WavePriestBaseScaleByUnit.real.remove(hid)
+        endif
+    endfunction
+
+    private function WavePriestConfiguredBaseScale takes unit target returns real
+        local integer unitTypeId
+        if target == null or GetUnitTypeId(target) == 0 then
+            return 1.0
+        endif
+        set unitTypeId = GetUnitTypeId(target)
+        // Si algún tipo necesita escala base distinta, se declara acá.
+        // En 1.27b no tenemos un native seguro para leer la escala real del object data.
+        if unitTypeId == 0 then
+            return 1.0
+        endif
+        return 1.0
+    endfunction
+
+    private function WavePriestApplyAuraEffect takes integer auraId, integer auraType, unit target returns boolean
+        local integer hid
+        if target == null or GetUnitTypeId(target) == 0 then
+            return false
+        endif
+        set hid = GetHandleId(target)
+        if hid == 0 then
+            return false
+        endif
+        if not WavePriestBaseScaleByUnit.real.has(hid) then
+            set WavePriestBaseScaleByUnit.real[hid] = WavePriestConfiguredBaseScale(target)
+        endif
+        if auraType == WAVE_HMPR_AURA_TYPE_BOSS then
+            if WavePriestBossOwnerAuraByUnit.has(hid) or GetUnitAbilityLevel(target, WAVE_HMPR_BOSS_PASSIVE_ID) > 0 then
+                call WavePriestDebugTargetState("APPLY_REJECT", auraId, auraType, target)
+                return false
+            endif
+            set WavePriestBossOwnerAuraByUnit[hid] = auraId
+            if GetUnitAbilityLevel(target, WAVE_HMPR_BOSS_PASSIVE_ID) <= 0 then
+                call UnitAddAbility(target, WAVE_HMPR_BOSS_PASSIVE_ID)
+            endif
+        else
+            if WavePriestNormalOwnerAuraByUnit.has(hid) or GetUnitAbilityLevel(target, WAVE_HMPR_NORMAL_PASSIVE_ID) > 0 then
+                call WavePriestDebugTargetState("APPLY_REJECT", auraId, auraType, target)
+                return false
+            endif
+            set WavePriestNormalOwnerAuraByUnit[hid] = auraId
+            if GetUnitAbilityLevel(target, WAVE_HMPR_NORMAL_PASSIVE_ID) <= 0 then
+                call UnitAddAbility(target, WAVE_HMPR_NORMAL_PASSIVE_ID)
+            endif
+        endif
+        call WavePriestRefreshScale(target)
+        call WavePriestDebugTargetState("APPLY_OK", auraId, auraType, target)
+        return true
+    endfunction
+
+    private function WavePriestRemoveAuraEffect takes integer auraId, integer auraType, unit target returns nothing
+        local integer hid
+        if target == null or GetUnitTypeId(target) == 0 then
+            return
+        endif
+        set hid = GetHandleId(target)
+        if hid == 0 then
+            return
+        endif
+        call WavePriestDebugTargetState("REMOVE_BEGIN", auraId, auraType, target)
+        if auraType == WAVE_HMPR_AURA_TYPE_BOSS then
+            if WavePriestBossOwnerAuraByUnit.has(hid) and WavePriestBossOwnerAuraByUnit[hid] == auraId then
+                call WavePriestBossOwnerAuraByUnit.remove(hid)
+                if GetUnitAbilityLevel(target, WAVE_HMPR_BOSS_PASSIVE_ID) > 0 then
+                    call UnitRemoveAbility(target, WAVE_HMPR_BOSS_PASSIVE_ID)
+                endif
+            endif
+        else
+            if WavePriestNormalOwnerAuraByUnit.has(hid) and WavePriestNormalOwnerAuraByUnit[hid] == auraId then
+                call WavePriestNormalOwnerAuraByUnit.remove(hid)
+                if GetUnitAbilityLevel(target, WAVE_HMPR_NORMAL_PASSIVE_ID) > 0 then
+                    call UnitRemoveAbility(target, WAVE_HMPR_NORMAL_PASSIVE_ID)
+                endif
+            endif
+        endif
+        call WavePriestRefreshScale(target)
+        call WavePriestDebugTargetState("REMOVE_END", auraId, auraType, target)
+    endfunction
+
+    private function WavePriestVisualModelForType takes integer auraType returns string
+        if auraType == WAVE_HMPR_AURA_TYPE_BOSS then
+            return WAVE_HMPR_BOSS_AURA_VISUAL_MODEL
+        endif
+        return WAVE_HMPR_AURA_VISUAL_MODEL
     endfunction
 
     private function WavePriestAdd takes integer auraId returns nothing
@@ -269,7 +348,7 @@ library WavePriestSkills initializer Init requires Table, TimerUtils, SpellIndex
         local integer idx = 1
         loop
             exitwhen idx > WavePriestMemberCount[auraId]
-            if WavePriestMemberUnit[WavePriestMemberKey(auraId, idx)] == target then
+            if WavePriestMemberUnitByKey.unit[WavePriestMemberKey(auraId, idx)] == target then
                 return idx
             endif
             set idx = idx + 1
@@ -284,32 +363,58 @@ library WavePriestSkills initializer Init requires Table, TimerUtils, SpellIndex
             return
         endif
         if WavePriestFindMemberIndex(auraId, target) != 0 then
+            call WavePriestDebugTargetState("ADD_SKIP_EXISTS", auraId, WavePriestAuraType[auraId], target)
             return
         endif
         set count = WavePriestMemberCount[auraId] + 1
         set WavePriestMemberCount[auraId] = count
         set key = WavePriestMemberKey(auraId, count)
-        set WavePriestMemberUnit[key] = target
-        call WavePriestApplyAuraEffect(WavePriestAuraType[auraId], target)
+        set WavePriestMemberUnitByKey.unit[key] = target
+        set WavePriestMemberHidByKey[key] = GetHandleId(target)
+        call WavePriestDebugMsg("MEMBER_PUSH aura=" + I2S(auraId) + " type=" + WavePriestAuraTypeName(WavePriestAuraType[auraId]) + " count=" + I2S(WavePriestMemberCount[auraId]) + " target=" + GetUnitName(target))
+        if not WavePriestApplyAuraEffect(auraId, WavePriestAuraType[auraId], target) then
+            call WavePriestMemberUnitByKey.remove(key)
+            if WavePriestMemberHidByKey.has(key) then
+                call WavePriestMemberHidByKey.remove(key)
+            endif
+            set WavePriestMemberCount[auraId] = count - 1
+            call WavePriestDebugMsg("MEMBER_POP_ROLLBACK aura=" + I2S(auraId) + " type=" + WavePriestAuraTypeName(WavePriestAuraType[auraId]) + " count=" + I2S(WavePriestMemberCount[auraId]) + " target=" + GetUnitName(target))
+            call WavePriestDebugTargetState("ADD_ROLLBACK", auraId, WavePriestAuraType[auraId], target)
+        else
+            call WavePriestDebugTargetState("ADD_OK", auraId, WavePriestAuraType[auraId], target)
+        endif
     endfunction
 
     private function WavePriestRemoveMemberAt takes integer auraId, integer index returns nothing
         local integer count = WavePriestMemberCount[auraId]
         local integer key = WavePriestMemberKey(auraId, index)
         local integer lastKey = WavePriestMemberKey(auraId, count)
-        local unit target = WavePriestMemberUnit[key]
+        local unit target = WavePriestMemberUnitByKey.unit[key]
+        local unit moved = null
         if index <= 0 or index > count then
             set target = null
             return
         endif
         if target != null and GetUnitTypeId(target) != 0 then
-            call WavePriestRemoveAuraEffect(WavePriestAuraType[auraId], target)
+            call WavePriestDebugTargetState("REMOVE_MEMBER", auraId, WavePriestAuraType[auraId], target)
+            call WavePriestRemoveAuraEffect(auraId, WavePriestAuraType[auraId], target)
         endif
         if index != count then
-            set WavePriestMemberUnit[key] = WavePriestMemberUnit[lastKey]
+            set moved = WavePriestMemberUnitByKey.unit[lastKey]
+            set WavePriestMemberUnitByKey.unit[key] = moved
+            if WavePriestMemberHidByKey.has(lastKey) then
+                set WavePriestMemberHidByKey[key] = WavePriestMemberHidByKey[lastKey]
+            elseif WavePriestMemberHidByKey.has(key) then
+                call WavePriestMemberHidByKey.remove(key)
+            endif
         endif
-        set WavePriestMemberUnit[lastKey] = null
+        call WavePriestMemberUnitByKey.remove(lastKey)
+        if WavePriestMemberHidByKey.has(lastKey) then
+            call WavePriestMemberHidByKey.remove(lastKey)
+        endif
         set WavePriestMemberCount[auraId] = count - 1
+        call WavePriestDebugMsg("MEMBER_POP aura=" + I2S(auraId) + " type=" + WavePriestAuraTypeName(WavePriestAuraType[auraId]) + " count=" + I2S(WavePriestMemberCount[auraId]))
+        set moved = null
         set target = null
     endfunction
 
@@ -326,6 +431,7 @@ library WavePriestSkills initializer Init requires Table, TimerUtils, SpellIndex
         if auraId <= 0 then
             return
         endif
+        call WavePriestDebugMsg("DESTROY_AURA aura=" + I2S(auraId) + " type=" + WavePriestAuraTypeName(WavePriestAuraType[auraId]) + " members=" + I2S(WavePriestMemberCount[auraId]))
         if source != null and GetUnitTypeId(source) != 0 then
             set hid = GetHandleId(source)
         endif
@@ -339,40 +445,42 @@ library WavePriestSkills initializer Init requires Table, TimerUtils, SpellIndex
             set WavePriestVisualId[auraId] = 0
         endif
         set WavePriestAuraType[auraId] = 0
-        set WavePriestSweepToken[auraId] = 0
         set WavePriestMemberCount[auraId] = 0
         set WavePriestSource[auraId] = null
         set WavePriestRadius[auraId] = 0.0
         set WavePriestRemaining[auraId] = 0.0
+        if WAVE_HMPR_DEBUG and WavePriestHead == 0 and WavePriestDebugFile != 0 then
+            call WavePriestDebugFile.close()
+            set WavePriestDebugFile = 0
+            set WavePriestDebugFileSegment = WavePriestDebugFileSegment + 1
+            set WavePriestDebugFileLineCount = 0
+        endif
     endfunction
 
     private function WavePriestProcessAura takes integer auraId returns nothing
         local unit source = WavePriestSource[auraId]
         local unit target
         local integer idx
-        local integer hid
-        local integer token
+        call WavePriestDebugMsg("TICK aura=" + I2S(auraId) + " type=" + WavePriestAuraTypeName(WavePriestAuraType[auraId]) + " members=" + I2S(WavePriestMemberCount[auraId]) + " remaining=" + R2S(WavePriestRemaining[auraId]))
         if not WavePriestUnitAlive(source) then
+            call WavePriestDebugMsg("TICK_DESTROY_DEAD aura=" + I2S(auraId))
             call WavePriestDestroyAura(auraId)
             return
         endif
 
         set WavePriestRemaining[auraId] = WavePriestRemaining[auraId] - WAVE_HMPR_TICK
         if WavePriestRemaining[auraId] <= 0.0 then
+            call WavePriestDebugMsg("TICK_DESTROY_TIMEOUT aura=" + I2S(auraId))
             call WavePriestDestroyAura(auraId)
             return
         endif
 
-        set token = WavePriestSweepToken[auraId] + 1
-        set WavePriestSweepToken[auraId] = token
         call GroupEnumUnitsInRange(SpellIndex.GLOBAL_GROUP, GetUnitX(source), GetUnitY(source), WavePriestRadius[auraId], null)
         loop
             set target = FirstOfGroup(SpellIndex.GLOBAL_GROUP)
             exitwhen target == null
             call GroupRemoveUnit(SpellIndex.GLOBAL_GROUP, target)
             if WavePriestTargetIsValid(source, target) then
-                set hid = GetHandleId(target)
-                set WavePriestSeenTokenByUnit.real[hid] = I2R(token)
                 call WavePriestAddMember(auraId, target)
             endif
         endloop
@@ -380,21 +488,14 @@ library WavePriestSkills initializer Init requires Table, TimerUtils, SpellIndex
         set idx = WavePriestMemberCount[auraId]
         loop
             exitwhen idx <= 0
-            set target = WavePriestMemberUnit[WavePriestMemberKey(auraId, idx)]
+            set target = WavePriestMemberUnitByKey.unit[WavePriestMemberKey(auraId, idx)]
             if target == null or GetUnitTypeId(target) == 0 then
+                call WavePriestDebugMsg("REMOVE_CAUSE_NULL aura=" + I2S(auraId) + " idx=" + I2S(idx))
                 call WavePriestRemoveMemberAt(auraId, idx)
             else
-                set hid = GetHandleId(target)
-                if (not WavePriestSeenTokenByUnit.has(hid)) or R2I(WavePriestSeenTokenByUnit.real[hid]) != token then
+                if not WavePriestTargetInAuraRange(source, target, WavePriestRadius[auraId]) then
+                    call WavePriestDebugMsg("REMOVE_CAUSE_RANGE aura=" + I2S(auraId) + " idx=" + I2S(idx) + " target=" + GetUnitName(target))
                     call WavePriestRemoveMemberAt(auraId, idx)
-                elseif WavePriestAuraType[auraId] == WAVE_HMPR_AURA_TYPE_BOSS then
-                    if GetUnitAbilityLevel(target, WAVE_HMPR_BOSS_PASSIVE_ID) == 0 then
-                        call UnitAddAbility(target, WAVE_HMPR_BOSS_PASSIVE_ID)
-                    endif
-                else
-                    if GetUnitAbilityLevel(target, WAVE_HMPR_NORMAL_PASSIVE_ID) == 0 then
-                        call UnitAddAbility(target, WAVE_HMPR_NORMAL_PASSIVE_ID)
-                    endif
                 endif
             endif
             set idx = idx - 1
@@ -431,7 +532,6 @@ library WavePriestSkills initializer Init requires Table, TimerUtils, SpellIndex
         local integer hid = GetHandleId(source)
         set WavePriestCount = auraId
         set WavePriestAuraType[auraId] = auraType
-        set WavePriestSweepToken[auraId] = 0
         set WavePriestMemberCount[auraId] = 0
         set WavePriestSource[auraId] = source
         if auraType == WAVE_HMPR_AURA_TYPE_BOSS then
@@ -447,6 +547,7 @@ library WavePriestSkills initializer Init requires Table, TimerUtils, SpellIndex
         call IssueImmediateOrder(source, "stop")
         call SetUnitAnimation(source, "spell")
         call WavePriestEnsureTimer()
+        call WavePriestDebugMsg("START_AURA aura=" + I2S(auraId) + " type=" + WavePriestAuraTypeName(auraType) + " source=" + GetUnitName(source))
     endfunction
 
     private function WavePriestCleanupWaveDeath takes nothing returns nothing
@@ -522,10 +623,11 @@ library WavePriestSkills initializer Init requires Table, TimerUtils, SpellIndex
     private function Init takes nothing returns nothing
         set WavePriestNextCastMs = Table.create()
         set WavePriestActiveAuraByUnit = Table.create()
-        set WavePriestSeenTokenByUnit = Table.create()
-        set WavePriestNormalCountByUnit = Table.create()
-        set WavePriestBossCountByUnit = Table.create()
         set WavePriestBaseScaleByUnit = Table.create()
+        set WavePriestNormalOwnerAuraByUnit = Table.create()
+        set WavePriestBossOwnerAuraByUnit = Table.create()
+        set WavePriestMemberUnitByKey = Table.create()
+        set WavePriestMemberHidByKey = Table.create()
         set WavePriestTimer = NewTimer()
         call SetTimerDebugTag(WavePriestTimer, TIMER_DEBUG_TAG_UNIT_SKILLS)
         call RegisterWaveDeathEvent(function WavePriestCleanupWaveDeath)
