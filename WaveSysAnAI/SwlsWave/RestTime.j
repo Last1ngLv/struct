@@ -243,6 +243,7 @@ library TheEnd requires HeroLives, TenderSystem, PreConfi
         call StopAmbientTownSound()
         call StopTenderAreaSound()
         call CloseTenderForActivePlayers()
+        call ExecuteFunc("MenuClientClearEnemyPreviewForActivePlayers")
         set WavePhaseState = WAVE_PHASE_NONE
         set WavePhaseRemaining = 0
         set CurrentTenderTrackIndex = 0
@@ -284,6 +285,7 @@ library TheEnd requires HeroLives, TenderSystem, PreConfi
             call StartAmbientTownSound()
             call StopTenderAreaSound()
             call StartPurchaseMusic()
+            call ExecuteFunc("MenuClientRefreshEnemyPreviewForActivePlayers")
             call SetWaveStatusTextForActivePlayers("TimeOfPurchase: " + I2S(WavePhaseRemaining))
         else
             call StopPurchaseMusic()

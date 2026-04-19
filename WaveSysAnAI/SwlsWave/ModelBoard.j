@@ -180,6 +180,6 @@ scope ModelBoard
         call MBSetCell(w.board, textTagDebugRow, 2, MBTextTagTotalCell("UI", "|cFFFF9999", GetTextTagDebugLive(TEXTTAG_DEBUG_UI), GetTextTagDebugPeak(TEXTTAG_DEBUG_UI)), 0.10)
         call MBSetCell(w.board, textTagDebugRow, 3, MBTextTagTotalCell("Move", "|cFFFFCC66", GetTextTagDebugLive(TEXTTAG_DEBUG_MOVECAST), GetTextTagDebugPeak(TEXTTAG_DEBUG_MOVECAST)), 0.10)
         call MBSetCell(w.board, textTagDebugRow, 4, MBTextTagTotalCell("Dmg", "|cFFD6B3FF", GetTextTagDebugLive(TEXTTAG_DEBUG_DAMAGE), GetTextTagDebugPeak(TEXTTAG_DEBUG_DAMAGE)), 0.11)
-        call MBSetCell(w.board, textTagDebugRow, 5, MBTextTagTotalCell("Health", "|cFF99FF99", GetTextTagDebugLive(TEXTTAG_DEBUG_HEALTHBAR), GetHealthBarTextTagCap()), 0.12)
+        call MBSetCell(w.board, textTagDebugRow, 5, MBTextTagTotalCell("Health", "|cFF99FF99", GetHealthBarVisibleCount(), GetHealthBarTextTagCap()), 0.12)
     endfunction
 endscope

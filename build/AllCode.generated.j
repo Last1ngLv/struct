@@ -1,6 +1,6 @@
 // AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY.
 // Source manifest: jass-order.txt
-// Generated at: 2026-04-18 23:26:17
+// Generated at: 2026-04-19 01:06:26
 
 // ===== BEGIN: libraries/Table.j =====
 //TESH.scrollpos=0
@@ -3875,19 +3875,18 @@ endlibrary
 // ===== END: libraries/PlayerUtils.j =====
 
 // ===== BEGIN: libraries/HealthBarTextTags.j =====
-library HealthBarTextTags initializer Init requires Table, TimerUtils, PlayerUtils, TextTagDebug
+library HealthBarTextTags initializer Init requires Table, TimerUtils, PlayerUtils
 
     globals
         private constant real HEALTH_BAR_HERO_PERIOD = 0.03
         private constant real HEALTH_BAR_ENEMY_PERIOD = 0.05
         private constant real HEALTH_BAR_ENEMY_TIMEOUT = 1.50
         private constant integer HEALTH_BAR_SEGMENTS = 10
-        private constant integer HEALTH_BAR_ENEMY_SLOTS_PER_VIEWER = 12
-        private constant real HEALTH_BAR_HERO_NAME_SIZE = 0.020
-        private constant real HEALTH_BAR_HERO_BAR_SIZE = 0.018
-        private constant real HEALTH_BAR_ENEMY_BAR_SIZE = 0.017
-        private constant real HEALTH_BAR_HERO_NAME_Z = 205.0
-        private constant real HEALTH_BAR_HERO_BAR_Z = 145.0
+        private constant integer HEALTH_BAR_HERO_CAP = 8
+        private constant integer HEALTH_BAR_ENEMY_CAP = 40
+        private constant real HEALTH_BAR_HERO_TEXT_SIZE = 0.018
+        private constant real HEALTH_BAR_ENEMY_TEXT_SIZE = 0.017
+        private constant real HEALTH_BAR_HERO_Z = 145.0
         private constant real HEALTH_BAR_ENEMY_Z = 120.0
         private constant real HEALTH_BAR_HERO_X_OFFSET = -42.0
         private constant real HEALTH_BAR_ENEMY_X_OFFSET = -28.0
@@ -3895,7 +3894,7 @@ library HealthBarTextTags initializer Init requires Table, TimerUtils, PlayerUti
 
         private timer HealthBarHeroTicker = null
         private timer HealthBarEnemyTicker = null
-        private real HealthBarEnemyNow = 0.00
+        private timer HealthBarClock = null
 
         private texttag array HeroTag
         private integer array HeroBoundHandleId
@@ -3906,98 +3905,30 @@ library HealthBarTextTags initializer Init requires Table, TimerUtils, PlayerUti
         private integer array EnemyBarTargetHid
         private real array EnemyBarExpireAt
         private integer array EnemyBarLastPercent
-        private Table EnemySlotByKey
+        private Table EnemySlotByTarget
+
+        private integer HealthBarHeroVisibleCount = 0
+        private integer HealthBarEnemyVisibleCount = 0
+        private integer HealthBarVisibleCount = 0
+        private integer HealthBarPeakVisibleCount = 0
     endglobals
+
+    private function HealthBarClockNoop takes nothing returns nothing
+    endfunction
+
+    private function HealthBarNow takes nothing returns real
+        return TimerGetElapsed(HealthBarClock)
+    endfunction
+
+    private function HealthBarRefreshVisibleTotals takes nothing returns nothing
+        set HealthBarVisibleCount = HealthBarHeroVisibleCount + HealthBarEnemyVisibleCount
+        if HealthBarVisibleCount > HealthBarPeakVisibleCount then
+            set HealthBarPeakVisibleCount = HealthBarVisibleCount
+        endif
+    endfunction
 
     private function HealthBarEnemyKey takes integer targetHid returns integer
         return targetHid
-    endfunction
-
-    private function HealthBarGetPlayerColorR takes integer pid returns integer
-        if pid == 0 then
-            return 255
-        elseif pid == 1 then
-            return 0
-        elseif pid == 2 then
-            return 28
-        elseif pid == 3 then
-            return 84
-        elseif pid == 4 then
-            return 255
-        elseif pid == 5 then
-            return 254
-        elseif pid == 6 then
-            return 32
-        elseif pid == 7 then
-            return 229
-        elseif pid == 8 then
-            return 149
-        elseif pid == 9 then
-            return 126
-        elseif pid == 10 then
-            return 16
-        elseif pid == 11 then
-            return 78
-        endif
-        return 255
-    endfunction
-
-    private function HealthBarGetPlayerColorG takes integer pid returns integer
-        if pid == 0 then
-            return 3
-        elseif pid == 1 then
-            return 66
-        elseif pid == 2 then
-            return 230
-        elseif pid == 3 then
-            return 0
-        elseif pid == 4 then
-            return 252
-        elseif pid == 5 then
-            return 138
-        elseif pid == 6 then
-            return 192
-        elseif pid == 7 then
-            return 91
-        elseif pid == 8 then
-            return 150
-        elseif pid == 9 then
-            return 191
-        elseif pid == 10 then
-            return 98
-        elseif pid == 11 then
-            return 42
-        endif
-        return 255
-    endfunction
-
-    private function HealthBarGetPlayerColorB takes integer pid returns integer
-        if pid == 0 then
-            return 3
-        elseif pid == 1 then
-            return 255
-        elseif pid == 2 then
-            return 185
-        elseif pid == 3 then
-            return 129
-        elseif pid == 4 then
-            return 1
-        elseif pid == 5 then
-            return 14
-        elseif pid == 6 then
-            return 0
-        elseif pid == 7 then
-            return 176
-        elseif pid == 8 then
-            return 151
-        elseif pid == 9 then
-            return 241
-        elseif pid == 10 then
-            return 70
-        elseif pid == 11 then
-            return 4
-        endif
-        return 255
     endfunction
 
     private function HealthBarGetPercent takes unit whichUnit returns integer
@@ -4005,23 +3936,28 @@ library HealthBarTextTags initializer Init requires Table, TimerUtils, PlayerUti
         local real life
         local real ratio
         local integer percent
+
         if whichUnit == null or GetUnitTypeId(whichUnit) == 0 then
             return 0
         endif
+
         set maxLife = GetUnitState(whichUnit, UNIT_STATE_MAX_LIFE)
         if maxLife <= 0.405 then
             return 0
         endif
+
         set life = GetUnitState(whichUnit, UNIT_STATE_LIFE)
         if life < 0.00 then
             set life = 0.00
         endif
+
         set ratio = life/maxLife
         if ratio < 0.00 then
             set ratio = 0.00
         elseif ratio > 1.00 then
             set ratio = 1.00
         endif
+
         set percent = R2I(ratio*100.00 + 0.5)
         if percent < 0 then
             set percent = 0
@@ -4047,11 +3983,7 @@ library HealthBarTextTags initializer Init requires Table, TimerUtils, PlayerUti
         local string emptyColor = "|cff808080"
         local string result = ""
         local integer i = 0
-        if filled < 0 then
-            set filled = 0
-        elseif filled > HEALTH_BAR_SEGMENTS then
-            set filled = HEALTH_BAR_SEGMENTS
-        endif
+
         if filled >= 7 then
             set filledColor = "|cff50ff50"
         elseif filled >= 4 then
@@ -4059,6 +3991,7 @@ library HealthBarTextTags initializer Init requires Table, TimerUtils, PlayerUti
         else
             set filledColor = "|cffff5050"
         endif
+
         loop
             exitwhen i >= HEALTH_BAR_SEGMENTS
             if i < filled then
@@ -4068,41 +4001,12 @@ library HealthBarTextTags initializer Init requires Table, TimerUtils, PlayerUti
             endif
             set i = i + 1
         endloop
+
         return result + "|r |cffffffff" + I2S(percent) + "%|r"
     endfunction
 
     private function HealthBarGetHeroText takes integer pid, integer percent returns string
         return User.fromIndex(pid).nameColored + "\n" + HealthBarGetBarText(percent)
-    endfunction
-
-    private function HealthBarGetLifeColorR takes integer percent returns integer
-        local integer filled = HealthBarGetFilledSegments(percent)
-        if filled >= 7 then
-            return 80
-        elseif filled >= 4 then
-            return 255
-        endif
-        return 255
-    endfunction
-
-    private function HealthBarGetLifeColorG takes integer percent returns integer
-        local integer filled = HealthBarGetFilledSegments(percent)
-        if filled >= 7 then
-            return 255
-        elseif filled >= 4 then
-            return 220
-        endif
-        return 80
-    endfunction
-
-    private function HealthBarGetLifeColorB takes integer percent returns integer
-        local integer filled = HealthBarGetFilledSegments(percent)
-        if filled >= 7 then
-            return 80
-        elseif filled >= 4 then
-            return 0
-        endif
-        return 80
     endfunction
 
     private function HealthBarIsTrackedUnit takes unit whichUnit returns boolean
@@ -4120,7 +4024,7 @@ library HealthBarTextTags initializer Init requires Table, TimerUtils, PlayerUti
     endfunction
 
     private function HealthBarCreatePersistentTextTag takes nothing returns texttag
-        local texttag tag = CreateTrackedTextTag(TEXTTAG_DEBUG_HEALTHBAR)
+        local texttag tag = CreateTextTag()
         call SetTextTagPermanent(tag, true)
         call SetTextTagVisibility(tag, false)
         call SetTextTagVelocity(tag, 0.00, 0.00)
@@ -4129,16 +4033,31 @@ library HealthBarTextTags initializer Init requires Table, TimerUtils, PlayerUti
         return tag
     endfunction
 
+    private function HealthBarSetTagPosition takes texttag tag, unit u, real xOffset, real zOffset returns nothing
+        call SetTextTagPos(tag, GetUnitX(u) + xOffset, GetUnitY(u), zOffset + GetUnitFlyHeight(u))
+    endfunction
+
     function GetHealthBarEnemySlotCap takes nothing returns integer
-        return HEALTH_BAR_ENEMY_SLOTS_PER_VIEWER
+        return HEALTH_BAR_ENEMY_CAP
+    endfunction
+
+    function GetHealthBarHeroSlotCap takes nothing returns integer
+        if User.AmountPlaying > HEALTH_BAR_HERO_CAP then
+            return HEALTH_BAR_HERO_CAP
+        endif
+        return User.AmountPlaying
     endfunction
 
     function GetHealthBarTextTagCap takes nothing returns integer
-        return HEALTH_BAR_ENEMY_SLOTS_PER_VIEWER + User.AmountPlaying
+        return HEALTH_BAR_ENEMY_CAP + GetHealthBarHeroSlotCap()
     endfunction
 
-    private function HealthBarSetTagPosition takes texttag tag, unit u, real xOffset, real zOffset returns nothing
-        call SetTextTagPos(tag, GetUnitX(u) + xOffset, GetUnitY(u), zOffset + GetUnitFlyHeight(u))
+    function GetHealthBarVisibleCount takes nothing returns integer
+        return HealthBarVisibleCount
+    endfunction
+
+    function GetHealthBarPeakVisibleCount takes nothing returns integer
+        return HealthBarPeakVisibleCount
     endfunction
 
     function HealthBarsRefreshHeroForPlayer takes integer pid returns nothing
@@ -4149,7 +4068,7 @@ library HealthBarTextTags initializer Init requires Table, TimerUtils, PlayerUti
         set HeroLastPercent[pid] = -1
     endfunction
 
-    private function HealthBarUpdateHeroEntry takes integer pid returns nothing
+    private function HealthBarUpdateHeroEntry takes integer pid returns boolean
         local unit hero = PlayerHero[pid]
         local texttag heroTag = HeroTag[pid]
         local integer hid = 0
@@ -4163,7 +4082,7 @@ library HealthBarTextTags initializer Init requires Table, TimerUtils, PlayerUti
             set HeroLastPercent[pid] = -1
             set hero = null
             set heroTag = null
-            return
+            return false
         endif
 
         if heroTag == null then
@@ -4172,68 +4091,72 @@ library HealthBarTextTags initializer Init requires Table, TimerUtils, PlayerUti
         endif
 
         set hid = GetHandleId(hero)
-        call SetTextTagVisibility(heroTag, true)
-        call HealthBarSetTagPosition(heroTag, hero, HEALTH_BAR_HERO_X_OFFSET, HEALTH_BAR_HERO_BAR_Z)
-
         if HeroBoundHandleId[pid] != hid then
             set HeroBoundHandleId[pid] = hid
             set HeroLastPercent[pid] = -1
         endif
 
         set percent = HealthBarGetPercent(hero)
-        set HeroLastPercent[pid] = percent
-        call SetTextTagText(heroTag, HealthBarGetHeroText(pid, percent), HEALTH_BAR_HERO_BAR_SIZE)
+        call SetTextTagText(heroTag, HealthBarGetHeroText(pid, percent), HEALTH_BAR_HERO_TEXT_SIZE)
         call SetTextTagColor(heroTag, 255, 255, 255, HEALTH_BAR_ALPHA)
+        call HealthBarSetTagPosition(heroTag, hero, HEALTH_BAR_HERO_X_OFFSET, HEALTH_BAR_HERO_Z)
+        call SetTextTagVisibility(heroTag, true)
+        set HeroLastPercent[pid] = percent
 
         set hero = null
         set heroTag = null
+        return true
     endfunction
 
     private function HealthBarHeroTick takes nothing returns nothing
         local integer pid = 0
+        local integer visibleCount = 0
+
         loop
             exitwhen pid >= bj_MAX_PLAYER_SLOTS
-            call HealthBarUpdateHeroEntry(pid)
+            if HealthBarUpdateHeroEntry(pid) then
+                set visibleCount = visibleCount + 1
+            endif
             set pid = pid + 1
         endloop
+
+        set HealthBarHeroVisibleCount = visibleCount
+        call HealthBarRefreshVisibleTotals()
     endfunction
 
     private function HealthBarEnemyClearSlot takes integer slotIndex returns nothing
         local integer key
-        if slotIndex < 0 or slotIndex >= HEALTH_BAR_ENEMY_SLOTS_PER_VIEWER then
+        if slotIndex < 0 or slotIndex >= HEALTH_BAR_ENEMY_CAP then
             return
         endif
         if EnemyBarTargetHid[slotIndex] != 0 then
             set key = HealthBarEnemyKey(EnemyBarTargetHid[slotIndex])
-            if EnemySlotByKey.has(key) then
-                call EnemySlotByKey.remove(key)
+            if EnemySlotByTarget.has(key) then
+                call EnemySlotByTarget.remove(key)
             endif
         endif
         set EnemyBarTarget[slotIndex] = null
         set EnemyBarTargetHid[slotIndex] = 0
         set EnemyBarExpireAt[slotIndex] = 0.00
         set EnemyBarLastPercent[slotIndex] = -1
-        if EnemyBarTag[slotIndex] != null then
-            call SetTextTagVisibility(EnemyBarTag[slotIndex], false)
-        endif
+        call SetTextTagVisibility(EnemyBarTag[slotIndex], false)
     endfunction
 
     private function HealthBarEnemyFindSlot takes unit target returns integer
         local integer hid = GetHandleId(target)
         local integer key = HealthBarEnemyKey(hid)
-        local integer slotIndex
-        local integer localSlot = 0
+        local integer slotIndex = 0
         local integer oldestIndex = 0
         local real oldestExpire = 9999999.00
+        local real now = HealthBarNow()
 
-        if EnemySlotByKey.has(key) then
-            return EnemySlotByKey[key]
+        if EnemySlotByTarget.has(key) then
+            return EnemySlotByTarget[key]
         endif
 
         loop
-            exitwhen localSlot >= HEALTH_BAR_ENEMY_SLOTS_PER_VIEWER
-            set slotIndex = localSlot
-            if EnemyBarTarget[slotIndex] == null or EnemyBarExpireAt[slotIndex] <= HealthBarEnemyNow or not HealthBarIsEnemyDisplayTargetValid(EnemyBarTarget[slotIndex]) then
+            exitwhen slotIndex >= HEALTH_BAR_ENEMY_CAP
+            if EnemyBarTarget[slotIndex] == null or EnemyBarExpireAt[slotIndex] <= now or not HealthBarIsEnemyDisplayTargetValid(EnemyBarTarget[slotIndex]) then
                 call HealthBarEnemyClearSlot(slotIndex)
                 return slotIndex
             endif
@@ -4241,40 +4164,34 @@ library HealthBarTextTags initializer Init requires Table, TimerUtils, PlayerUti
                 set oldestExpire = EnemyBarExpireAt[slotIndex]
                 set oldestIndex = slotIndex
             endif
-            set localSlot = localSlot + 1
+            set slotIndex = slotIndex + 1
         endloop
 
         call HealthBarEnemyClearSlot(oldestIndex)
         return oldestIndex
     endfunction
 
-    private function HealthBarEnemyRefreshSlot takes integer slotIndex returns nothing
+    private function HealthBarEnemyRefreshSlot takes integer slotIndex returns boolean
         local unit target = EnemyBarTarget[slotIndex]
-        local texttag tag = EnemyBarTag[slotIndex]
         local integer percent
-        if tag == null then
-            set tag = HealthBarCreatePersistentTextTag()
-            set EnemyBarTag[slotIndex] = tag
-        endif
-        if tag == null or not HealthBarIsEnemyDisplayTargetValid(target) then
+
+        if not HealthBarIsEnemyDisplayTargetValid(target) then
             call HealthBarEnemyClearSlot(slotIndex)
             set target = null
-            set tag = null
-            return
+            return false
         endif
 
         set percent = HealthBarGetPercent(target)
-        call HealthBarSetTagPosition(tag, target, HEALTH_BAR_ENEMY_X_OFFSET, HEALTH_BAR_ENEMY_Z)
         if EnemyBarLastPercent[slotIndex] != percent then
+            call SetTextTagText(EnemyBarTag[slotIndex], HealthBarGetBarText(percent), HEALTH_BAR_ENEMY_TEXT_SIZE)
+            call SetTextTagColor(EnemyBarTag[slotIndex], 255, 255, 255, HEALTH_BAR_ALPHA)
             set EnemyBarLastPercent[slotIndex] = percent
-            call SetTextTagText(tag, HealthBarGetBarText(percent), HEALTH_BAR_ENEMY_BAR_SIZE)
-            call SetTextTagColor(tag, HealthBarGetLifeColorR(percent), HealthBarGetLifeColorG(percent), HealthBarGetLifeColorB(percent), HEALTH_BAR_ALPHA)
         endif
-
-        call SetTextTagVisibility(tag, true)
+        call HealthBarSetTagPosition(EnemyBarTag[slotIndex], target, HEALTH_BAR_ENEMY_X_OFFSET, HEALTH_BAR_ENEMY_Z)
+        call SetTextTagVisibility(EnemyBarTag[slotIndex], true)
 
         set target = null
-        set tag = null
+        return true
     endfunction
 
     function HealthBarsNotifyEnemyDamagedByPid takes integer ownerPid, unit target returns nothing
@@ -4291,10 +4208,8 @@ library HealthBarTextTags initializer Init requires Table, TimerUtils, PlayerUti
         set key = HealthBarEnemyKey(GetHandleId(target))
         set EnemyBarTarget[slotIndex] = target
         set EnemyBarTargetHid[slotIndex] = GetHandleId(target)
-        set EnemyBarExpireAt[slotIndex] = HealthBarEnemyNow + HEALTH_BAR_ENEMY_TIMEOUT
-        if not EnemySlotByKey.has(key) or EnemySlotByKey[key] != slotIndex then
-            set EnemySlotByKey[key] = slotIndex
-        endif
+        set EnemyBarExpireAt[slotIndex] = HealthBarNow() + HEALTH_BAR_ENEMY_TIMEOUT
+        set EnemySlotByTarget[key] = slotIndex
         call HealthBarEnemyRefreshSlot(slotIndex)
     endfunction
 
@@ -4318,32 +4233,34 @@ library HealthBarTextTags initializer Init requires Table, TimerUtils, PlayerUti
 
     private function HealthBarEnemyTick takes nothing returns nothing
         local integer slotIndex = 0
-        set HealthBarEnemyNow = HealthBarEnemyNow + HEALTH_BAR_ENEMY_PERIOD
+        local integer visibleCount = 0
+        local real now = HealthBarNow()
+
         loop
-            exitwhen slotIndex >= HEALTH_BAR_ENEMY_SLOTS_PER_VIEWER
+            exitwhen slotIndex >= HEALTH_BAR_ENEMY_CAP
             if EnemyBarTarget[slotIndex] != null then
-                if EnemyBarExpireAt[slotIndex] <= HealthBarEnemyNow then
+                if EnemyBarExpireAt[slotIndex] <= now then
                     call HealthBarEnemyClearSlot(slotIndex)
-                else
-                    call HealthBarEnemyRefreshSlot(slotIndex)
+                elseif HealthBarEnemyRefreshSlot(slotIndex) then
+                    set visibleCount = visibleCount + 1
                 endif
             endif
             set slotIndex = slotIndex + 1
         endloop
+
+        set HealthBarEnemyVisibleCount = visibleCount
+        call HealthBarRefreshVisibleTotals()
     endfunction
 
     private function Init takes nothing returns nothing
         local integer i = 0
-        local integer slotIndex
 
-        set EnemySlotByKey = Table.create()
+        set EnemySlotByTarget = Table.create()
 
-        set i = 0
         loop
-            exitwhen i >= HEALTH_BAR_ENEMY_SLOTS_PER_VIEWER
-            set slotIndex = i
-            set EnemyBarLastPercent[slotIndex] = -1
-            set EnemyBarTag[slotIndex] = null
+            exitwhen i >= HEALTH_BAR_ENEMY_CAP
+            set EnemyBarTag[i] = HealthBarCreatePersistentTextTag()
+            set EnemyBarLastPercent[i] = -1
             set i = i + 1
         endloop
 
@@ -4353,6 +4270,9 @@ library HealthBarTextTags initializer Init requires Table, TimerUtils, PlayerUti
             set HeroLastPercent[i] = -1
             set i = i + 1
         endloop
+
+        set HealthBarClock = CreateTimer()
+        call TimerStart(HealthBarClock, 864000.00, false, function HealthBarClockNoop)
 
         set HealthBarHeroTicker = NewTimer()
         call SetTimerDebugTag(HealthBarHeroTicker, TIMER_DEBUG_TAG_OTHER)
@@ -17932,7 +17852,7 @@ endlibrary
 // ===== END: MyMissiles/UnitTypeMissileLoadout.j =====
 
 // ===== BEGIN: libraries/WaveDamageCredit.j =====
-library WaveDamageCredit initializer Init requires Table
+library WaveDamageCredit initializer Init requires Table, HealthBarTextTags
 
     globals
         // Fallback window for last-damage credit. Short on purpose:
@@ -17979,6 +17899,7 @@ library WaveDamageCredit initializer Init requires Table
         set WaveDamageCreditOwnerPidByTarget[hid] = pid
         set WaveDamageCreditSourceHidByTarget[hid] = GetHandleId(source)
         set WaveDamageCreditTimeByTarget.real[hid] = WaveDamageCreditNow()
+        call HealthBarsNotifyEnemyDamaged(source, target)
     endfunction
 
     function WaveClearDamageCredit takes unit target returns nothing
@@ -25774,7 +25695,7 @@ library PreConfi initializer Init requires PlayerUtils, TimerUtils, TenderSystem
         call SetInitialBoardCell(4, 2, "|cFFFF9999UI|r|cFFFFFFFF: |r|cFFFFFF00" + I2S(GetTextTagDebugLive(TEXTTAG_DEBUG_UI)) + "|r|cFFFF8C00/|r|cFFFFCC66" + I2S(GetTextTagDebugPeak(TEXTTAG_DEBUG_UI)) + "|r", 0.10)
         call SetInitialBoardCell(4, 3, "|cFFFFCC66Move|r|cFFFFFFFF: |r|cFFFFFF00" + I2S(GetTextTagDebugLive(TEXTTAG_DEBUG_MOVECAST)) + "|r|cFFFF8C00/|r|cFFFFCC66" + I2S(GetTextTagDebugPeak(TEXTTAG_DEBUG_MOVECAST)) + "|r", 0.10)
         call SetInitialBoardCell(4, 4, "|cFFD6B3FFDmg|r|cFFFFFFFF: |r|cFFFFFF00" + I2S(GetTextTagDebugLive(TEXTTAG_DEBUG_DAMAGE)) + "|r|cFFFF8C00/|r|cFFFFCC66" + I2S(GetTextTagDebugPeak(TEXTTAG_DEBUG_DAMAGE)) + "|r", 0.11)
-        call SetInitialBoardCell(4, 5, "|cFF99FF99Health|r|cFFFFFFFF: |r|cFFFFFF00" + I2S(GetTextTagDebugLive(TEXTTAG_DEBUG_HEALTHBAR)) + "|r|cFFFF8C00/|r|cFFFFCC66" + I2S(GetHealthBarTextTagCap()) + "|r", 0.12)
+        call SetInitialBoardCell(4, 5, "|cFF99FF99Health|r|cFFFFFFFF: |r|cFFFFFF00" + I2S(GetHealthBarVisibleCount()) + "|r|cFFFF8C00/|r|cFFFFCC66" + I2S(GetHealthBarTextTagCap()) + "|r", 0.12)
     endfunction
 
     private function InitialWaveMultiboardTick takes nothing returns nothing
@@ -26762,6 +26683,7 @@ library TheEnd requires HeroLives, TenderSystem, PreConfi
         call StopAmbientTownSound()
         call StopTenderAreaSound()
         call CloseTenderForActivePlayers()
+        call ExecuteFunc("MenuClientClearEnemyPreviewForActivePlayers")
         set WavePhaseState = WAVE_PHASE_NONE
         set WavePhaseRemaining = 0
         set CurrentTenderTrackIndex = 0
@@ -26803,6 +26725,7 @@ library TheEnd requires HeroLives, TenderSystem, PreConfi
             call StartAmbientTownSound()
             call StopTenderAreaSound()
             call StartPurchaseMusic()
+            call ExecuteFunc("MenuClientRefreshEnemyPreviewForActivePlayers")
             call SetWaveStatusTextForActivePlayers("TimeOfPurchase: " + I2S(WavePhaseRemaining))
         else
             call StopPurchaseMusic()
@@ -29778,7 +29701,7 @@ scope ModelBoard
         call MBSetCell(w.board, textTagDebugRow, 2, MBTextTagTotalCell("UI", "|cFFFF9999", GetTextTagDebugLive(TEXTTAG_DEBUG_UI), GetTextTagDebugPeak(TEXTTAG_DEBUG_UI)), 0.10)
         call MBSetCell(w.board, textTagDebugRow, 3, MBTextTagTotalCell("Move", "|cFFFFCC66", GetTextTagDebugLive(TEXTTAG_DEBUG_MOVECAST), GetTextTagDebugPeak(TEXTTAG_DEBUG_MOVECAST)), 0.10)
         call MBSetCell(w.board, textTagDebugRow, 4, MBTextTagTotalCell("Dmg", "|cFFD6B3FF", GetTextTagDebugLive(TEXTTAG_DEBUG_DAMAGE), GetTextTagDebugPeak(TEXTTAG_DEBUG_DAMAGE)), 0.11)
-        call MBSetCell(w.board, textTagDebugRow, 5, MBTextTagTotalCell("Health", "|cFF99FF99", GetTextTagDebugLive(TEXTTAG_DEBUG_HEALTHBAR), GetHealthBarTextTagCap()), 0.12)
+        call MBSetCell(w.board, textTagDebugRow, 5, MBTextTagTotalCell("Health", "|cFF99FF99", GetHealthBarVisibleCount(), GetHealthBarTextTagCap()), 0.12)
     endfunction
 endscope
 

@@ -75,7 +75,7 @@ library PreConfi initializer Init requires PlayerUtils, TimerUtils, TenderSystem
         call SetInitialBoardCell(4, 2, "|cFFFF9999UI|r|cFFFFFFFF: |r|cFFFFFF00" + I2S(GetTextTagDebugLive(TEXTTAG_DEBUG_UI)) + "|r|cFFFF8C00/|r|cFFFFCC66" + I2S(GetTextTagDebugPeak(TEXTTAG_DEBUG_UI)) + "|r", 0.10)
         call SetInitialBoardCell(4, 3, "|cFFFFCC66Move|r|cFFFFFFFF: |r|cFFFFFF00" + I2S(GetTextTagDebugLive(TEXTTAG_DEBUG_MOVECAST)) + "|r|cFFFF8C00/|r|cFFFFCC66" + I2S(GetTextTagDebugPeak(TEXTTAG_DEBUG_MOVECAST)) + "|r", 0.10)
         call SetInitialBoardCell(4, 4, "|cFFD6B3FFDmg|r|cFFFFFFFF: |r|cFFFFFF00" + I2S(GetTextTagDebugLive(TEXTTAG_DEBUG_DAMAGE)) + "|r|cFFFF8C00/|r|cFFFFCC66" + I2S(GetTextTagDebugPeak(TEXTTAG_DEBUG_DAMAGE)) + "|r", 0.11)
-        call SetInitialBoardCell(4, 5, "|cFF99FF99Health|r|cFFFFFFFF: |r|cFFFFFF00" + I2S(GetTextTagDebugLive(TEXTTAG_DEBUG_HEALTHBAR)) + "|r|cFFFF8C00/|r|cFFFFCC66" + I2S(GetHealthBarTextTagCap()) + "|r", 0.12)
+        call SetInitialBoardCell(4, 5, "|cFF99FF99Health|r|cFFFFFFFF: |r|cFFFFFF00" + I2S(GetHealthBarVisibleCount()) + "|r|cFFFF8C00/|r|cFFFFCC66" + I2S(GetHealthBarTextTagCap()) + "|r", 0.12)
     endfunction
 
     private function InitialWaveMultiboardTick takes nothing returns nothing
