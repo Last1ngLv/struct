@@ -1,4 +1,4 @@
-library IAManager initializer Init requires Table, TimerUtils, WaveTest, TenderSystem, AIProfiles, AIConfig, TerrainPathability, WaveBarrierSkills, WaveAuraSkills, WaveRangedSkills, WaveSiegeSkills, WaveMortarSkills, WavePriestSkills, WaveTrapSkills, WaveSiegeZoneSkills, WaveWaveformSkills
+library IAManager initializer Init requires Table, TimerUtils, WaveTest, TenderSystem, AIProfiles, AIConfig, TerrainPathability, WaveBarrierSkills, WaveAuraSkills, WaveRangedSkills, WaveSiegeSkills, WaveMortarSkills, WavePriestSkills, WaveTrapSkills, WaveSiegeZoneSkills, WaveWaveformSkills, TextTagDebug
 
     globals
         private constant integer AI_TICK_MS = 500
@@ -664,7 +664,7 @@ library IAManager initializer Init requires Table, TimerUtils, WaveTest, TenderS
             set cast.windupFx = null
         endif
         if cast.castText != null then
-            call DestroyTextTag(cast.castText)
+            call DestroyTrackedTextTag(cast.castText, TEXTTAG_DEBUG_AI)
             set cast.castText = null
         endif
         if cast.boss != null and GetUnitTypeId(cast.boss) != 0 then
@@ -785,13 +785,14 @@ library IAManager initializer Init requires Table, TimerUtils, WaveTest, TenderS
         else
             set cast.windupFx = null
         endif
-        set cast.castText = CreateTextTag()
+        set cast.castText = CreateTrackedTextTag(TEXTTAG_DEBUG_AI)
         call SetTextTagText(cast.castText, AI_BOSS_REINFORCEMENT_TEXT, AI_BOSS_REINFORCEMENT_TEXT_SIZE)
         call SetTextTagPosUnit(cast.castText, u, AI_BOSS_REINFORCEMENT_TEXT_Z_OFFSET)
         call SetTextTagVelocity(cast.castText, 0.0, AI_BOSS_REINFORCEMENT_TEXT_RISE_SPEED)
         call SetTextTagLifespan(cast.castText, AI_BOSS_REINFORCEMENT_TEXT_LIFESPAN)
         call SetTextTagFadepoint(cast.castText, AI_BOSS_REINFORCEMENT_TEXT_FADEPOINT)
         call SetTextTagPermanent(cast.castText, false)
+        call ReleaseTrackedTextTag(TEXTTAG_DEBUG_AI)
         set cast.t = NewTimer()
         call SetTimerDebugTag(cast.t, TIMER_DEBUG_TAG_AI)
         call SetTimerData(cast.t, cast)

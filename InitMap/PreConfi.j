@@ -1,4 +1,4 @@
-library PreConfi initializer Init requires PlayerUtils, TimerUtils, TenderSystem, MovementSystem
+library PreConfi initializer Init requires PlayerUtils, TimerUtils, TenderSystem, MovementSystem, TextTagDebug
 
     globals
         integer array ManaPassiveUnit
@@ -39,7 +39,7 @@ library PreConfi initializer Init requires PlayerUtils, TimerUtils, TenderSystem
         endif
 
         call MultiboardSetColumnCount(SwlsMultiboard, 6)
-        call MultiboardSetRowCount(SwlsMultiboard, 4)
+        call MultiboardSetRowCount(SwlsMultiboard, 5)
         call MultiboardSetTitleText(SwlsMultiboard, "|cFFC0C0C0Preparando |r|cFFFFFFFFWave |r|cFFE6E6E6" + I2S(TargetWave) + "|r|cFFFF8C00/|r|cFFE6E6E610|r")
 
         call SetInitialBoardCell(0, 0, "|cFFBBBBBBEstado|r|cFFFFFFFF: |r|cFFFFFF99Seleccion|r", 0.16)
@@ -69,6 +69,13 @@ library PreConfi initializer Init requires PlayerUtils, TimerUtils, TenderSystem
         call SetInitialBoardCell(3, 3, "|cFF99FF99UnitSkills|r|cFFFFFFFF: |r|cFFFFFF00" + I2S(GetTimerDebugLive(TIMER_DEBUG_TAG_UNIT_SKILLS)) + "|r|cFFFF8C00/|r|cFFFFCC66" + I2S(GetTimerDebugPeak(TIMER_DEBUG_TAG_UNIT_SKILLS)) + "|r", 0.12)
         call SetInitialBoardCell(3, 4, "|cFFFFCC66MoveCast|r|cFFFFFFFF: |r|cFFFFFF00" + I2S(GetTimerDebugLive(TIMER_DEBUG_TAG_MOVECAST)) + "|r|cFFFF8C00/|r|cFFFFCC66" + I2S(GetTimerDebugPeak(TIMER_DEBUG_TAG_MOVECAST)) + "|r", 0.12)
         call SetInitialBoardCell(3, 5, "|cFFD6B3FFOther|r|cFFFFFFFF: |r|cFFFFFF00" + I2S(GetTimerDebugLive(TIMER_DEBUG_TAG_OTHER)) + "|r|cFFFF8C00/|r|cFFFFCC66" + I2S(GetTimerDebugPeak(TIMER_DEBUG_TAG_OTHER)) + "|r", 0.11)
+
+        call SetInitialBoardCell(4, 0, "|cFFBBBBBBDebug TextTags|r", 0.16)
+        call SetInitialBoardCell(4, 1, "|cFF66CCFFTotal|r|cFFFFFFFF: |r|cFFFFFF00" + I2S(GetTextTagDebugLiveTotal()) + "|r|cFFFF8C00/|r|cFFFFCC66" + I2S(GetTextTagDebugPeakTotal()) + "|r", 0.11)
+        call SetInitialBoardCell(4, 2, "|cFFFF9999UI|r|cFFFFFFFF: |r|cFFFFFF00" + I2S(GetTextTagDebugLive(TEXTTAG_DEBUG_UI)) + "|r|cFFFF8C00/|r|cFFFFCC66" + I2S(GetTextTagDebugPeak(TEXTTAG_DEBUG_UI)) + "|r", 0.10)
+        call SetInitialBoardCell(4, 3, "|cFFFFCC66Move|r|cFFFFFFFF: |r|cFFFFFF00" + I2S(GetTextTagDebugLive(TEXTTAG_DEBUG_MOVECAST)) + "|r|cFFFF8C00/|r|cFFFFCC66" + I2S(GetTextTagDebugPeak(TEXTTAG_DEBUG_MOVECAST)) + "|r", 0.10)
+        call SetInitialBoardCell(4, 4, "|cFFD6B3FFDmg|r|cFFFFFFFF: |r|cFFFFFF00" + I2S(GetTextTagDebugLive(TEXTTAG_DEBUG_DAMAGE)) + "|r|cFFFF8C00/|r|cFFFFCC66" + I2S(GetTextTagDebugPeak(TEXTTAG_DEBUG_DAMAGE)) + "|r", 0.11)
+        call SetInitialBoardCell(4, 5, "|cFF99FF99Health|r|cFFFFFFFF: |r|cFFFFFF00" + I2S(GetTextTagDebugLive(TEXTTAG_DEBUG_HEALTHBAR)) + "|r|cFFFF8C00/|r|cFFFFCC66" + I2S(GetHealthBarTextTagCap()) + "|r", 0.12)
     endfunction
 
     private function InitialWaveMultiboardTick takes nothing returns nothing

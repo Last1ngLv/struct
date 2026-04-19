@@ -7,7 +7,7 @@
 //  - no manual facing; the native dummy order keeps orientation behavior
 //
 //===========================================================================
-library MovementSystem initializer Init requires TimerUtils, Table, RegisterPlayerUnitEvent
+library MovementSystem initializer Init requires TimerUtils, Table, RegisterPlayerUnitEvent, TextTagDebug
 
 globals
     private constant real INTERVAL = 0.03125
@@ -126,7 +126,7 @@ struct MovementData
         endif
 
         if .castText == null then
-            set .castText = CreateTextTag()
+            set .castText = CreateTrackedTextTag(TEXTTAG_DEBUG_MOVECAST)
             call SetTextTagPermanent(.castText, true)
             call SetTextTagVisibility(.castText, true)
         endif
@@ -147,6 +147,7 @@ struct MovementData
             call SetTextTagVelocity(.castText, 0.0, CAST_TEXT_RISE_SPEED)
             call SetTextTagLifespan(.castText, CAST_TEXT_LIFESPAN)
             call SetTextTagFadepoint(.castText, CAST_TEXT_FADEPOINT)
+            call ReleaseTrackedTextTag(TEXTTAG_DEBUG_MOVECAST)
             set .castText = null
         endif
     endmethod

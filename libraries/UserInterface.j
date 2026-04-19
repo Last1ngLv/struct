@@ -1,4 +1,4 @@
-library UserInterface initializer Init requires optional UnitDex/*or any unit indexer*/, Camera
+library UserInterface initializer Init requires optional UnitDex/*or any unit indexer*/, Camera, TextTagDebug
 /***************************************************************
 *
 *   v1.0.6, by TriggerHappy
@@ -718,7 +718,7 @@ library UserInterface initializer Init requires optional UnitDex/*or any unit in
             set .maxy           = maxy
             set .z              = 100 + z
             set .displayed      = false
-            set .text           = CreateTextTag()
+            set .text           = CreateTrackedTextTag(TEXTTAG_DEBUG_UI)
             set .dummy          = CreateUnit(Interface.PLAYER, Interface.DUMMY_TYPE, 0, 0, 0)
 
             call SetUnitScale(.dummy, 0, 0, 0)
@@ -744,7 +744,7 @@ library UserInterface initializer Init requires optional UnitDex/*or any unit in
             set .dummy          = CreateUnit(Interface.PLAYER, Interface.DUMMY_TYPE, 0, 0, 0)
 
             if (User.Local == p) then
-                set .text = CreateTextTag()
+                set .text = CreateTrackedTextTag(TEXTTAG_DEBUG_UI)
             endif
             
             call SetUnitScale(.dummy, 0, 0, 0)
@@ -759,7 +759,9 @@ library UserInterface initializer Init requires optional UnitDex/*or any unit in
         endmethod
         
         method destroy takes nothing returns nothing
-            call DestroyTextTag(.text)
+            if .text != null then
+                call DestroyTrackedTextTag(.text, TEXTTAG_DEBUG_UI)
+            endif
             
             if .displayed then
                 set .AllShow[.index] = .AllShow[.CountShow]

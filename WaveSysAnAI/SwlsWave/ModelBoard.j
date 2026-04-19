@@ -89,6 +89,10 @@ scope ModelBoard
         return color + label + "|r|cFFFFFFFF: |r|cFFFFFF00" + I2S(GetTimerDebugLive(tag)) + "|r|cFFFF8C00/|r|cFFFFCC66" + I2S(GetTimerDebugPeak(tag)) + "|r"
     endfunction
 
+    private function MBTextTagTotalCell takes string label, string color, integer liveValue, integer peakValue returns string
+        return color + label + "|r|cFFFFFFFF: |r|cFFFFFF00" + I2S(liveValue) + "|r|cFFFF8C00/|r|cFFFFCC66" + I2S(peakValue) + "|r"
+    endfunction
+
     function BMT1 takes nothing returns nothing
         local Wave w
         local integer activePlayers
@@ -99,6 +103,7 @@ scope ModelBoard
         local integer debugRow
         local integer loadoutDebugRow
         local integer systemsDebugRow
+        local integer textTagDebugRow
 
         if CurrentBoardContext == null then
             return
@@ -113,10 +118,11 @@ scope ModelBoard
         set debugRow = activePlayers + 1
         set loadoutDebugRow = activePlayers + 2
         set systemsDebugRow = activePlayers + 3
+        set textTagDebugRow = activePlayers + 4
 
         call MultiboardDisplay(w.board, true)
         call MultiboardSetColumnCount(w.board, 6)
-        call MultiboardSetRowCount(w.board, activePlayers + 4)
+        call MultiboardSetRowCount(w.board, activePlayers + 5)
         call MultiboardSetTitleText(w.board, MBWaveTitle(w))
 
         // Row 0: m?tricas completas de la wave con colores del t?tulo viejo
@@ -168,5 +174,12 @@ scope ModelBoard
         call MBSetCell(w.board, systemsDebugRow, 3, MBTaggedDebugCell("UnitSkills", "|cFF99FF99", TIMER_DEBUG_TAG_UNIT_SKILLS), 0.12)
         call MBSetCell(w.board, systemsDebugRow, 4, MBTaggedDebugCell("MoveCast", "|cFFFFCC66", TIMER_DEBUG_TAG_MOVECAST), 0.12)
         call MBSetCell(w.board, systemsDebugRow, 5, MBTaggedDebugCell("Other", "|cFFD6B3FF", TIMER_DEBUG_TAG_OTHER), 0.11)
+
+        call MBSetCell(w.board, textTagDebugRow, 0, "|cFFBBBBBBDebug TextTags|r", 0.15)
+        call MBSetCell(w.board, textTagDebugRow, 1, MBTextTagTotalCell("Total", "|cFF66CCFF", GetTextTagDebugLiveTotal(), GetTextTagDebugPeakTotal()), 0.11)
+        call MBSetCell(w.board, textTagDebugRow, 2, MBTextTagTotalCell("UI", "|cFFFF9999", GetTextTagDebugLive(TEXTTAG_DEBUG_UI), GetTextTagDebugPeak(TEXTTAG_DEBUG_UI)), 0.10)
+        call MBSetCell(w.board, textTagDebugRow, 3, MBTextTagTotalCell("Move", "|cFFFFCC66", GetTextTagDebugLive(TEXTTAG_DEBUG_MOVECAST), GetTextTagDebugPeak(TEXTTAG_DEBUG_MOVECAST)), 0.10)
+        call MBSetCell(w.board, textTagDebugRow, 4, MBTextTagTotalCell("Dmg", "|cFFD6B3FF", GetTextTagDebugLive(TEXTTAG_DEBUG_DAMAGE), GetTextTagDebugPeak(TEXTTAG_DEBUG_DAMAGE)), 0.11)
+        call MBSetCell(w.board, textTagDebugRow, 5, MBTextTagTotalCell("Health", "|cFF99FF99", GetTextTagDebugLive(TEXTTAG_DEBUG_HEALTHBAR), GetHealthBarTextTagCap()), 0.12)
     endfunction
 endscope

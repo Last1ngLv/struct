@@ -9,11 +9,13 @@ libraries/SwlsMath.j
 UI System/MyIU/Models.j
 InitMap/HideIcons.j
 libraries/CameraEQNoise.j
+libraries/TextTagDebug.j
 libraries/Damage Text Util.j
 libraries/DummyCaster.j
 libraries/IsDestructableTree.j
 libraries/Missile.j
 libraries/PlayerUtils.j
+libraries/HealthBarTextTags.j
 libraries/RegisterPlayerUnitEvent.j
 libraries/SilenceEx.j
 libraries/SimError.j
