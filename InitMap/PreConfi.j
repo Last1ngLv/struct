@@ -144,6 +144,22 @@ library PreConfi initializer Init requires PlayerUtils, TimerUtils, TenderSystem
             return "war3mapImported\\announcer_kill_ultra_01.mp3"
         elseif idx == 16 then
             return "war3mapImported\\announcer_kill_rampage_01.mp3"
+        elseif idx == 17 then
+            return "war3mapImported\\Trader --- - Never Gonna Stay in The Abyss.wav"
+        elseif idx == 18 then
+            return "war3mapImported\\Trader 1 - Meanwhile, in The Abyss.wav"
+        elseif idx == 19 then
+            return "war3mapImported\\Trader 10 - Columba Noachi.wav"
+        elseif idx == 20 then
+            return "war3mapImported\\Trader 11 - Cold Wind.wav"
+        elseif idx == 21 then
+            return "war3mapImported\\Trader 12 - Crystal Breakin' Time.wav"
+        elseif idx == 22 then
+            return "war3mapImported\\Trader 9 - Weapon Check-up.wav"
+        elseif idx == 23 then
+            return "war3mapImported\\emptytown.wav"
+        elseif idx == 24 then
+            return "war3mapImported\\SurvivalEnd.wav"
         endif
         return ""
     endfunction
@@ -189,6 +205,7 @@ library PreConfi initializer Init requires PlayerUtils, TimerUtils, TenderSystem
         set TargetWave = 1
         set SwlsMultiboard = CreateMultiboard()
         call ShowInitialWaveMultiboard()
+        call ExecuteFunc("StartTenderSoundTracker")
         if InitialBoardTimer == null then
             set InitialBoardTimer = CreateTimer()
             call TimerStart(InitialBoardTimer, 0.10, true, function InitialWaveMultiboardTick)
@@ -215,6 +232,7 @@ library PreConfi initializer Init requires PlayerUtils, TimerUtils, TenderSystem
         call RegisterMovementSpellTarget('A000',"thunderbolt")
         call RegisterMovementSpellTarget('AHdr',"drain")
 
+        call EnablePreSelect(true, false)
         //call SetCameraField(CAMERA_FIELD_FARZ, 10000., 0)
         //call FogEnable(false)
         //call FogMaskEnable(false)

@@ -374,6 +374,7 @@ struct SelectionSystem
     static method onAllSelected takes nothing returns nothing
         call thistype.createClients()
         call thistype.showClients()
+        call StartAmbientTownSound()
         call ShowInitialWaveMultiboard()
         set WaveTgg = "Trig_w1_Actions"
         call StartInitialWaveCountdown()
