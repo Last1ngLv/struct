@@ -1,0 +1,1005 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+  "items": [
+    {
+      "label": "WAVE_STREAK_MAX_TIERS",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_STREAK_MAX_TIERS\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "2_var_WAVE_STREAK_MAX_TIERS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_MULTI_MAX_TIERS",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_MULTI_MAX_TIERS\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "2_var_WAVE_MULTI_MAX_TIERS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_STREAK_QUEUE_MAX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_STREAK_QUEUE_MAX\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "2_var_WAVE_STREAK_QUEUE_MAX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_STREAK_QUEUE_TICK",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_STREAK_QUEUE_TICK\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "2_var_WAVE_STREAK_QUEUE_TICK",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_STREAK_MESSAGE_DURATION",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_STREAK_MESSAGE_DURATION\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "2_var_WAVE_STREAK_MESSAGE_DURATION",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_QUEUE_KIND_GENERIC",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_QUEUE_KIND_GENERIC\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "2_var_WAVE_QUEUE_KIND_GENERIC",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_QUEUE_KIND_FIRST_BLOOD",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_QUEUE_KIND_FIRST_BLOOD\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "2_var_WAVE_QUEUE_KIND_FIRST_BLOOD",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_QUEUE_KIND_STREAK",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_QUEUE_KIND_STREAK\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "2_var_WAVE_QUEUE_KIND_STREAK",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_QUEUE_KIND_MULTI",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_QUEUE_KIND_MULTI\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "2_var_WAVE_QUEUE_KIND_MULTI",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_QUEUE_KIND_BREAK_STREAK",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_QUEUE_KIND_BREAK_STREAK\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "2_var_WAVE_QUEUE_KIND_BREAK_STREAK",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_QUEUE_KIND_BREAK_MULTI",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_QUEUE_KIND_BREAK_MULTI\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "2_var_WAVE_QUEUE_KIND_BREAK_MULTI",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_DEFAULT_MULTI_WINDOW",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_DEFAULT_MULTI_WINDOW\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "2_var_WAVE_DEFAULT_MULTI_WINDOW",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_DEFAULT_QUEUE_GAP",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_DEFAULT_QUEUE_GAP\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "2_var_WAVE_DEFAULT_QUEUE_GAP",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_DEFAULT_SOUND_FIRST_BLOOD",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string WAVE_DEFAULT_SOUND_FIRST_BLOOD\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "2_var_WAVE_DEFAULT_SOUND_FIRST_BLOOD",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_DEFAULT_SOUND_STREAK_BREAK",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string WAVE_DEFAULT_SOUND_STREAK_BREAK\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "2_var_WAVE_DEFAULT_SOUND_STREAK_BREAK",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_DEFAULT_SOUND_MULTI_BREAK_LOW",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string WAVE_DEFAULT_SOUND_MULTI_BREAK_LOW\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "2_var_WAVE_DEFAULT_SOUND_MULTI_BREAK_LOW",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_DEFAULT_SOUND_MULTI_BREAK_HIGH",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string WAVE_DEFAULT_SOUND_MULTI_BREAK_HIGH\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "2_var_WAVE_DEFAULT_SOUND_MULTI_BREAK_HIGH",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_DEFAULT_SOUND_STREAK_1",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string WAVE_DEFAULT_SOUND_STREAK_1\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "2_var_WAVE_DEFAULT_SOUND_STREAK_1",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_DEFAULT_SOUND_STREAK_2",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string WAVE_DEFAULT_SOUND_STREAK_2\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "2_var_WAVE_DEFAULT_SOUND_STREAK_2",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_DEFAULT_SOUND_STREAK_3",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string WAVE_DEFAULT_SOUND_STREAK_3\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "2_var_WAVE_DEFAULT_SOUND_STREAK_3",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_DEFAULT_SOUND_STREAK_4",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string WAVE_DEFAULT_SOUND_STREAK_4\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "2_var_WAVE_DEFAULT_SOUND_STREAK_4",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_DEFAULT_SOUND_STREAK_5",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string WAVE_DEFAULT_SOUND_STREAK_5\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "2_var_WAVE_DEFAULT_SOUND_STREAK_5",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_DEFAULT_SOUND_STREAK_6",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string WAVE_DEFAULT_SOUND_STREAK_6\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "2_var_WAVE_DEFAULT_SOUND_STREAK_6",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_DEFAULT_SOUND_STREAK_7",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string WAVE_DEFAULT_SOUND_STREAK_7\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "2_var_WAVE_DEFAULT_SOUND_STREAK_7",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_DEFAULT_SOUND_STREAK_8",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string WAVE_DEFAULT_SOUND_STREAK_8\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "2_var_WAVE_DEFAULT_SOUND_STREAK_8",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_DEFAULT_SOUND_MULTI_1",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string WAVE_DEFAULT_SOUND_MULTI_1\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "2_var_WAVE_DEFAULT_SOUND_MULTI_1",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_DEFAULT_SOUND_MULTI_2",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string WAVE_DEFAULT_SOUND_MULTI_2\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "2_var_WAVE_DEFAULT_SOUND_MULTI_2",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_DEFAULT_SOUND_MULTI_3",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string WAVE_DEFAULT_SOUND_MULTI_3\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "2_var_WAVE_DEFAULT_SOUND_MULTI_3",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_DEFAULT_SOUND_MULTI_4",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string WAVE_DEFAULT_SOUND_MULTI_4\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "2_var_WAVE_DEFAULT_SOUND_MULTI_4",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveFirstBloodDoneByWave",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable WaveFirstBloodDoneByWave\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "2_var_WaveFirstBloodDoneByWave",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WavePlayerStreakKills",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array WavePlayerStreakKills\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "2_var_WavePlayerStreakKills",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WavePlayerMultiKills",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array WavePlayerMultiKills\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "2_var_WavePlayerMultiKills",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WavePlayerTotalKills",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array WavePlayerTotalKills\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "2_var_WavePlayerTotalKills",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WavePlayerTotalDeaths",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array WavePlayerTotalDeaths\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "2_var_WavePlayerTotalDeaths",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WavePlayerMultiExpireAt",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array WavePlayerMultiExpireAt\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "2_var_WavePlayerMultiExpireAt",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WavePlayerLastStreakTier",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array WavePlayerLastStreakTier\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "2_var_WavePlayerLastStreakTier",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WavePlayerLastMultiTier",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array WavePlayerLastMultiTier\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "2_var_WavePlayerLastMultiTier",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WavePlayerLastStreakAnnouncedKills",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array WavePlayerLastStreakAnnouncedKills\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "2_var_WavePlayerLastStreakAnnouncedKills",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WavePlayerLastMultiAnnouncedKills",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array WavePlayerLastMultiAnnouncedKills\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "2_var_WavePlayerLastMultiAnnouncedKills",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveStreakThresholds",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array WaveStreakThresholds\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "2_var_WaveStreakThresholds",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveMultiThresholds",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array WaveMultiThresholds\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "2_var_WaveMultiThresholds",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveStreakFirstBloodSoundPath",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring WaveStreakFirstBloodSoundPath\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "2_var_WaveStreakFirstBloodSoundPath",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveStreakKillSoundPath",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring array WaveStreakKillSoundPath\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "2_var_WaveStreakKillSoundPath",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveMultiKillSoundPath",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring array WaveMultiKillSoundPath\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "2_var_WaveMultiKillSoundPath",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveStreakBreakSoundPath",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring WaveStreakBreakSoundPath\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "2_var_WaveStreakBreakSoundPath",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveMultiBreakLowSoundPath",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring WaveMultiBreakLowSoundPath\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "2_var_WaveMultiBreakLowSoundPath",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveMultiBreakHighSoundPath",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring WaveMultiBreakHighSoundPath\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "2_var_WaveMultiBreakHighSoundPath",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveMultiKillWindowSec",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal WaveMultiKillWindowSec\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "2_var_WaveMultiKillWindowSec",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveQueueGapSec",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal WaveQueueGapSec\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "2_var_WaveQueueGapSec",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveQueueCooldown",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal WaveQueueCooldown\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "2_var_WaveQueueCooldown",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveQueueSoundPath",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring array WaveQueueSoundPath\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "2_var_WaveQueueSoundPath",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveQueueText",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring array WaveQueueText\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "2_var_WaveQueueText",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveQueueKind",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array WaveQueueKind\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "2_var_WaveQueueKind",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveQueuePid",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array WaveQueuePid\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "2_var_WaveQueuePid",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveQueueTmpSoundPath",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring array WaveQueueTmpSoundPath\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "2_var_WaveQueueTmpSoundPath",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveQueueTmpText",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring array WaveQueueTmpText\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "2_var_WaveQueueTmpText",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveQueueTmpKind",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array WaveQueueTmpKind\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "2_var_WaveQueueTmpKind",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveQueueTmpPid",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array WaveQueueTmpPid\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "2_var_WaveQueueTmpPid",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveQueueRead",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger WaveQueueRead\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "2_var_WaveQueueRead",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveQueueWrite",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger WaveQueueWrite\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "2_var_WaveQueueWrite",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveQueueCount",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger WaveQueueCount\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "2_var_WaveQueueCount",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveClockTimer",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ntimer WaveClockTimer\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "2_var_WaveClockTimer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveQueueTimer",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ntimer WaveQueueTimer\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "2_var_WaveQueueTimer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveQueueRunning",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean WaveQueueRunning\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "2_var_WaveQueueRunning",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveNow",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveNow takes nothing returns real\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "1_func_WaveNow",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveClockNoop",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveClockNoop takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "1_func_WaveClockNoop",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveWrapQueueIndex",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveWrapQueueIndex takes integer i returns integer\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "1_func_WaveWrapQueueIndex",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveBroadcastText",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveBroadcastText takes string msg returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "1_func_WaveBroadcastText",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WavePlaySoundGlobal",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WavePlaySoundGlobal takes string path returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "1_func_WavePlaySoundGlobal",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveQueuePopAndEmit",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveQueuePopAndEmit takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "1_func_WaveQueuePopAndEmit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveQueueOnTick",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveQueueOnTick takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "1_func_WaveQueueOnTick",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveQueueDropPendingByKindAndPid",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveQueueDropPendingByKindAndPid takes integer kind, integer pid returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "1_func_WaveQueueDropPendingByKindAndPid",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveQueuePushTyped",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveQueuePushTyped takes string soundPath, string msg, integer kind, integer pid returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "1_func_WaveQueuePushTyped",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveGetStreakTier",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveGetStreakTier takes integer kills returns integer\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "1_func_WaveGetStreakTier",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveGetMultiTier",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveGetMultiTier takes integer kills returns integer\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "1_func_WaveGetMultiTier",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveGetStreakMaxRepeatStep",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveGetStreakMaxRepeatStep takes nothing returns integer\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "1_func_WaveGetStreakMaxRepeatStep",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveGetMultiMaxRepeatStep",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveGetMultiMaxRepeatStep takes nothing returns integer\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "1_func_WaveGetMultiMaxRepeatStep",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveGetStreakTierName",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveGetStreakTierName takes integer tier returns string\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "1_func_WaveGetStreakTierName",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveGetMultiTierName",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveGetMultiTierName takes integer tier returns string\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "1_func_WaveGetMultiTierName",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveGetOwnerPlayerId",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveGetOwnerPlayerId takes unit u returns integer\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "1_func_WaveGetOwnerPlayerId",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveGetHeroPlayerId",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveGetHeroPlayerId takes unit hero returns integer\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "1_func_WaveGetHeroPlayerId",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveResetPlayerState",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveResetPlayerState takes integer pid returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "1_func_WaveResetPlayerState",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveGetPlayerNameColoredById",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveGetPlayerNameColoredById takes integer pid returns string\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "1_func_WaveGetPlayerNameColoredById",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveFormatKillUnits",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveFormatKillUnits takes integer kills returns string\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "1_func_WaveFormatKillUnits",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveQueueFirstBlood",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveQueueFirstBlood takes integer pid, integer waveId returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "1_func_WaveQueueFirstBlood",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveQueueStreakTier",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveQueueStreakTier takes integer pid, integer tier, integer kills returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "1_func_WaveQueueStreakTier",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveQueueMultiTier",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveQueueMultiTier takes integer pid, integer tier, integer kills returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "1_func_WaveQueueMultiTier",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveQueueBreakStreak",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveQueueBreakStreak takes integer pid, integer kills returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "1_func_WaveQueueBreakStreak",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveQueueBreakMulti",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveQueueBreakMulti takes integer pid, integer tier returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "1_func_WaveQueueBreakMulti",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveStreakOnWaveStart",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveStreakOnWaveStart takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "1_func_WaveStreakOnWaveStart",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveStreakOnWaveFinish",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveStreakOnWaveFinish takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "1_func_WaveStreakOnWaveFinish",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveStreakOnWaveDeath",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveStreakOnWaveDeath takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "1_func_WaveStreakOnWaveDeath",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveStreakOnAnyDeath",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveStreakOnAnyDeath takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "1_func_WaveStreakOnAnyDeath",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetWavePlayerCurrentStreak",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetWavePlayerCurrentStreak takes integer pid returns integer\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "1_func_GetWavePlayerCurrentStreak",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetWavePlayerCurrentMulti",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetWavePlayerCurrentMulti takes integer pid returns integer\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "1_func_GetWavePlayerCurrentMulti",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetWavePlayerTotalKills",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetWavePlayerTotalKills takes integer pid returns integer\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "1_func_GetWavePlayerTotalKills",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetWavePlayerTotalDeaths",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetWavePlayerTotalDeaths takes integer pid returns integer\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "1_func_GetWavePlayerTotalDeaths",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "SetWaveStreakMultiKillWindow",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SetWaveStreakMultiKillWindow takes real sec returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "1_func_SetWaveStreakMultiKillWindow",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "SetWaveStreakQueueGap",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SetWaveStreakQueueGap takes real sec returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "1_func_SetWaveStreakQueueGap",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "SetWaveStreakFirstBloodSound",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SetWaveStreakFirstBloodSound takes string path returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "1_func_SetWaveStreakFirstBloodSound",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "SetWaveStreakKillStreakSound",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SetWaveStreakKillStreakSound takes integer tier, string path returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "1_func_SetWaveStreakKillStreakSound",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "SetWaveStreakMultiKillSound",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SetWaveStreakMultiKillSound takes integer tier, string path returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "1_func_SetWaveStreakMultiKillSound",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "SetWaveStreakBreakSound",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SetWaveStreakBreakSound takes string path returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "1_func_SetWaveStreakBreakSound",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "SetWaveStreakMultiBreakLowSound",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SetWaveStreakMultiBreakLowSound takes string path returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "1_func_SetWaveStreakMultiBreakLowSound",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "SetWaveStreakMultiBreakHighSound",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SetWaveStreakMultiBreakHighSound takes string path returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "1_func_SetWaveStreakMultiBreakHighSound",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "SetWaveStreakKillStreakThreshold",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SetWaveStreakKillStreakThreshold takes integer tier, integer kills returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "1_func_SetWaveStreakKillStreakThreshold",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "SetWaveStreakMultiKillThreshold",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SetWaveStreakMultiKillThreshold takes integer tier, integer kills returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "1_func_SetWaveStreakMultiKillThreshold",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "SetWaveStreakKillStreakStep",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SetWaveStreakKillStreakStep takes integer killsPerTier returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "1_func_SetWaveStreakKillStreakStep",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "SetWaveStreakMultiKillStep",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SetWaveStreakMultiKillStep takes integer killsPerTier returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "1_func_SetWaveStreakMultiKillStep",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "ApplyWaveStreakDefaultConfig",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ApplyWaveStreakDefaultConfig takes nothing returns nothing\n```\n\n\n---\n\nConfig default centralizada en este sistema para evitar dependencias circulares.\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "1_func_ApplyWaveStreakDefaultConfig",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1776550709654
+}

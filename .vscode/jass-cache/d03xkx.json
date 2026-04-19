@@ -1,0 +1,24 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SpellIndex.j",
+  "items": [
+    {
+      "label": "UnitAlive",
+      "kind": 2,
+      "detail": "Native Function",
+      "documentation": "\n```jass\nnative UnitAlive takes unit id returns boolean\n```\n\n\n**_>:** `libraries/SpellIndex.j`",
+      "sortText": "1_native_UnitAlive",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SpellIndex.j",
+      "statementType": "NativeDeclaration"
+    },
+    {
+      "label": "SpellIndex",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct SpellIndex\n```\n\n\n**_>:** `libraries/SpellIndex.j`",
+      "sortText": "1_struct_SpellIndex",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SpellIndex.j",
+      "statementType": "StructDeclaration"
+    }
+  ],
+  "timestamp": 1776550709268
+}

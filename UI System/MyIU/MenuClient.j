@@ -717,7 +717,7 @@ endglobals
 
             call .getButton(2).showPlayer(this.user.handle, true, this.camera)
             call .getButton(7).showPlayer(this.user.handle, true, this.camera)
-            call .getButton(8).showPlayer(this.user.handle, true, this.camera)
+            call .getButton(8).showPlayer(this.user.handle, false, this.camera)
 
             
             

@@ -1,0 +1,609 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissile.j",
+  "items": [
+    {
+      "label": "MISSILE_ABILITY_ID",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer MISSILE_ABILITY_ID\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissile.j`",
+      "sortText": "2_var_MISSILE_ABILITY_ID",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WRAP_ATTACH_POINT",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string WRAP_ATTACH_POINT\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissile.j`",
+      "sortText": "2_var_WRAP_ATTACH_POINT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "POINT_IMPACT_LINGER",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real POINT_IMPACT_LINGER\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissile.j`",
+      "sortText": "2_var_POINT_IMPACT_LINGER",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "CLEANUP_REASON_NONE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer CLEANUP_REASON_NONE\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissile.j`",
+      "sortText": "2_var_CLEANUP_REASON_NONE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "CLEANUP_REASON_INTERRUPTED",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer CLEANUP_REASON_INTERRUPTED\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissile.j`",
+      "sortText": "2_var_CLEANUP_REASON_INTERRUPTED",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "CLEANUP_REASON_COMPLETED",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer CLEANUP_REASON_COMPLETED\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissile.j`",
+      "sortText": "2_var_CLEANUP_REASON_COMPLETED",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DUMMY_UNIT_ID",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer DUMMY_UNIT_ID\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissile.j`",
+      "sortText": "2_var_DUMMY_UNIT_ID",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DUMMY_ABILITY",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer DUMMY_ABILITY\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissile.j`",
+      "sortText": "2_var_DUMMY_ABILITY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "ATTACK_TYPE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant attacktype ATTACK_TYPE\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissile.j`",
+      "sortText": "2_var_ATTACK_TYPE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DAMAGE_TYPE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant damagetype DAMAGE_TYPE\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissile.j`",
+      "sortText": "2_var_DAMAGE_TYPE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "activeData",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable activeData\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissile.j`",
+      "sortText": "2_var_activeData",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "castDummy",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nunit array castDummy\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissile.j`",
+      "sortText": "2_var_castDummy",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "castFx",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\neffect array castFx\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissile.j`",
+      "sortText": "2_var_castFx",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "castWaitFx",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\neffect array castWaitFx\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissile.j`",
+      "sortText": "2_var_castWaitFx",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "castX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array castX\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissile.j`",
+      "sortText": "2_var_castX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "castY",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array castY\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissile.j`",
+      "sortText": "2_var_castY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "castAngle",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array castAngle\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissile.j`",
+      "sortText": "2_var_castAngle",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "castDistance",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array castDistance\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissile.j`",
+      "sortText": "2_var_castDistance",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "castTargetX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array castTargetX\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissile.j`",
+      "sortText": "2_var_castTargetX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "castTargetY",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array castTargetY\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissile.j`",
+      "sortText": "2_var_castTargetY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "castUseRapid",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean array castUseRapid\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissile.j`",
+      "sortText": "2_var_castUseRapid",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "castRapidRemaining",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array castRapidRemaining\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissile.j`",
+      "sortText": "2_var_castRapidRemaining",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "castRapidInterval",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array castRapidInterval\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissile.j`",
+      "sortText": "2_var_castRapidInterval",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "castAnim",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring array castAnim\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissile.j`",
+      "sortText": "2_var_castAnim",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "castAnimScale",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array castAnimScale\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissile.j`",
+      "sortText": "2_var_castAnimScale",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "castSoundWaitEnd",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring array castSoundWaitEnd\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissile.j`",
+      "sortText": "2_var_castSoundWaitEnd",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "castSoundInterrupted",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring array castSoundInterrupted\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissile.j`",
+      "sortText": "2_var_castSoundInterrupted",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "castSoundChannelComplete",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring array castSoundChannelComplete\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissile.j`",
+      "sortText": "2_var_castSoundChannelComplete",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "delayedAnimTimer",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ntimer array delayedAnimTimer\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissile.j`",
+      "sortText": "2_var_delayedAnimTimer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "castNormalPointData",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array castNormalPointData\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissile.j`",
+      "sortText": "2_var_castNormalPointData",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "castSpecialPointData",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array castSpecialPointData\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissile.j`",
+      "sortText": "2_var_castSpecialPointData",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "castNormalShots",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array castNormalShots\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissile.j`",
+      "sortText": "2_var_castNormalShots",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "overlayFx",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\neffect array overlayFx\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissile.j`",
+      "sortText": "2_var_overlayFx",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "pointDummy",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nunit array pointDummy\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissile.j`",
+      "sortText": "2_var_pointDummy",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "pointFx",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\neffect array pointFx\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissile.j`",
+      "sortText": "2_var_pointFx",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "pointImpactFx",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring array pointImpactFx\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissile.j`",
+      "sortText": "2_var_pointImpactFx",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "pointPending",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array pointPending\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissile.j`",
+      "sortText": "2_var_pointPending",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "pointImpactApplied",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean array pointImpactApplied\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissile.j`",
+      "sortText": "2_var_pointImpactApplied",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "pointClosed",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean array pointClosed\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissile.j`",
+      "sortText": "2_var_pointClosed",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "pointHadImpact",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean array pointHadImpact\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissile.j`",
+      "sortText": "2_var_pointHadImpact",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "pointSoundImpact",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring array pointSoundImpact\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissile.j`",
+      "sortText": "2_var_pointSoundImpact",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "pointSoundLastMissile",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring array pointSoundLastMissile\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissile.j`",
+      "sortText": "2_var_pointSoundLastMissile",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "pointSoundDummyClear",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring array pointSoundDummyClear\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissile.j`",
+      "sortText": "2_var_pointSoundDummyClear",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "pointByMissile",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array pointByMissile\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissile.j`",
+      "sortText": "2_var_pointByMissile",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "pointDoneByMissile",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean array pointDoneByMissile\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissile.j`",
+      "sortText": "2_var_pointDoneByMissile",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "impactOnPathByMissile",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean array impactOnPathByMissile\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissile.j`",
+      "sortText": "2_var_impactOnPathByMissile",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "lingerDummy",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nunit array lingerDummy\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissile.j`",
+      "sortText": "2_var_lingerDummy",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "lingerFx",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\neffect array lingerFx\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissile.j`",
+      "sortText": "2_var_lingerFx",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "lingerSound",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring array lingerSound\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissile.j`",
+      "sortText": "2_var_lingerSound",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "FilterUnits",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction FilterUnits takes unit target, player owner returns boolean\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissile.j`",
+      "sortText": "1_func_FilterUnits",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "DamageArea",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction DamageArea takes unit source, player owner, real x, real y, real radius, real amount returns nothing\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissile.j`",
+      "sortText": "1_func_DamageArea",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "PlaySoundOnUnit",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction PlaySoundOnUnit takes string file, unit source returns nothing\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissile.j`",
+      "sortText": "1_func_PlaySoundOnUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "PlaySoundAt",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction PlaySoundAt takes string file, real x, real y returns nothing\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissile.j`",
+      "sortText": "1_func_PlaySoundAt",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnLingerExpire",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnLingerExpire takes nothing returns nothing\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissile.j`",
+      "sortText": "1_func_OnLingerExpire",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "StartLingerCleanup",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction StartLingerCleanup takes unit dummy, effect fx, string snd returns nothing\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissile.j`",
+      "sortText": "1_func_StartLingerCleanup",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "ReleasePointDataIfIdle",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ReleasePointDataIfIdle takes integer pointDex returns nothing\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissile.j`",
+      "sortText": "1_func_ReleasePointDataIfIdle",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "ResolvePointFromMissile",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ResolvePointFromMissile takes Missile missile, boolean applyImpactFx returns nothing\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissile.j`",
+      "sortText": "1_func_ResolvePointFromMissile",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "UnitTypeMissileCore",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct UnitTypeMissileCore extends array\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissile.j`",
+      "sortText": "1_struct_UnitTypeMissileCore",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissile.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "Cleanup",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Cleanup takes SpellIndex dex, integer reason returns nothing\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissile.j`",
+      "sortText": "1_func_Cleanup",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "FireMissile",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction FireMissile takes SpellIndex castDex returns nothing\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissile.j`",
+      "sortText": "1_func_FireMissile",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnFire",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnFire takes nothing returns nothing\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissile.j`",
+      "sortText": "1_func_OnFire",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "DelayedStartAnimation",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction DelayedStartAnimation takes nothing returns nothing\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissile.j`",
+      "sortText": "1_func_DelayedStartAnimation",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnEffect",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnEffect takes nothing returns nothing\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissile.j`",
+      "sortText": "1_func_OnEffect",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnInterrupted",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnInterrupted takes nothing returns nothing\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissile.j`",
+      "sortText": "1_func_OnInterrupted",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnSpellFinish",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnSpellFinish takes nothing returns nothing\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissile.j`",
+      "sortText": "1_func_OnSpellFinish",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnDeath",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnDeath takes nothing returns nothing\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissile.j`",
+      "sortText": "1_func_OnDeath",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissile.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissile.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1776550709377
+}

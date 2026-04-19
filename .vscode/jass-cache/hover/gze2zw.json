@@ -1,0 +1,21 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UnitDex.j",
+  "items": [
+    {
+      "symbolName": "Enabled",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UnitDex.j",
+      "content": "\n```jass\nstatic boolean Enabled\n```\n\n\n**所属:** `UnitDex`\n**文件:** `libraries/UnitDex.j`"
+    },
+    {
+      "symbolName": "onInit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UnitDex.j",
+      "content": "\n```jass\nstatic method onInit takes nothing returns nothing\n```\n\n\n**所属:** `UnitDexCore`\n**文件:** `libraries/UnitDex.j`"
+    },
+    {
+      "symbolName": "Initialized",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UnitDex.j",
+      "content": "\n```jass\nstatic readonly boolean Initialized\n```\n\n\n**所属:** `UnitDex`\n**文件:** `libraries/UnitDex.j`"
+    }
+  ],
+  "timestamp": 1775930547175
+}

@@ -1,0 +1,21 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Missile.j",
+  "items": [
+    {
+      "symbolName": "Missile",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Missile.j",
+      "content": "\n```jass\nlibrary Missile requires ErrorMessage\n```\n\n\n**文件:** `libraries/Missile.j`"
+    },
+    {
+      "symbolName": "Missile",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Missile.j",
+      "content": "\n```jass\nstruct Missile extends array\n```\n\n\n**文件:** `libraries/Missile.j`"
+    },
+    {
+      "symbolName": "createEx",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Missile.j",
+      "content": "\n```jass\nstatic method createEx takes unit missileDummy, real impactX, real impactY, real impactZ returns Missile\n```\n\n\n**所属:** `Missile`\n**文件:** `libraries/Missile.j`"
+    }
+  ],
+  "timestamp": 1775422863725
+}

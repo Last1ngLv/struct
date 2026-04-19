@@ -1,0 +1,33 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SpellEfffectEvent.j",
+  "items": [
+    {
+      "label": "M",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule M\n```\n\n\n---\n\n============================================================================\n\n**_>:** `libraries/SpellEfffectEvent.j`",
+      "sortText": "1_module_M",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SpellEfffectEvent.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "S",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct S extends array\n```\n\n\n---\n\n============================================================================\n\n**_>:** `libraries/SpellEfffectEvent.j`",
+      "sortText": "1_struct_S",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SpellEfffectEvent.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "RegisterSpellEffectEvent",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction RegisterSpellEffectEvent takes integer abil, code onCast returns nothing\n```\n\n\n---\n\n============================================================================\n\n**_>:** `libraries/SpellEfffectEvent.j`",
+      "sortText": "1_func_RegisterSpellEffectEvent",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SpellEfffectEvent.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1776550709249
+}

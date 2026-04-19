@@ -1,0 +1,41 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\ExampleAdvance\\Equipment\\EquipHeroModels.j",
+  "items": [
+    {
+      "symbolName": "EquipHeroModels",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\ExampleAdvance\\Equipment\\EquipHeroModels.j",
+      "content": "\n```jass\nlibrary EquipHeroModels initializer Init\n```\n\n\n**文件:** `Pruebas/ExampleAdvance/Equipment/EquipHeroModels.j`"
+    },
+    {
+      "symbolName": "HeroModels",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\ExampleAdvance\\Equipment\\EquipHeroModels.j",
+      "content": "\n```jass\nTable HeroModels\n```\n\n\n**文件:** `Pruebas/ExampleAdvance/Equipment/EquipHeroModels.j`"
+    },
+    {
+      "symbolName": "path",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\ExampleAdvance\\Equipment\\EquipHeroModels.j",
+      "content": "\n```jass\nstring path\n```\n\n\n**所属:** `HeroModelData`\n**文件:** `Pruebas/ExampleAdvance/Equipment/EquipHeroModels.j`"
+    },
+    {
+      "symbolName": "HeroModelData",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\ExampleAdvance\\Equipment\\EquipHeroModels.j",
+      "content": "\n```jass\nstruct HeroModelData\n```\n\n\n**文件:** `Pruebas/ExampleAdvance/Equipment/EquipHeroModels.j`"
+    },
+    {
+      "symbolName": "Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\ExampleAdvance\\Equipment\\EquipHeroModels.j",
+      "content": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**文件:** `Pruebas/ExampleAdvance/Equipment/EquipHeroModels.j`"
+    },
+    {
+      "symbolName": "EquipSetHeroModel",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\ExampleAdvance\\Equipment\\EquipHeroModels.j",
+      "content": "\n```jass\nfunction EquipSetHeroModel takes integer utype, real scale, string path returns nothing\n```\n\n\n**文件:** `Pruebas/ExampleAdvance/Equipment/EquipHeroModels.j`"
+    },
+    {
+      "symbolName": "EquipGetHeroModel",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\ExampleAdvance\\Equipment\\EquipHeroModels.j",
+      "content": "\n```jass\nfunction EquipGetHeroModel takes integer id returns HeroModelData\n```\n\n\n**文件:** `Pruebas/ExampleAdvance/Equipment/EquipHeroModels.j`"
+    }
+  ],
+  "timestamp": 1775855359945
+}

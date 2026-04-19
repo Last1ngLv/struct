@@ -1,0 +1,251 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+  "items": [
+    {
+      "symbolName": "SILENCE_TESTUNIT_AMOV",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "content": "\n```jass\nfunction SILENCE_TESTUNIT_AMOV takes unit a returns nothing\n```\n\n\n**文件:** `build/AllCode.generated.j`"
+    },
+    {
+      "symbolName": "u",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "content": "\n```jass\nunit u\n```\n\n\n**所属:** `AuxiliarDataUnit`\n**文件:** `build/AllCode.generated.j`"
+    },
+    {
+      "symbolName": "u",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "content": "\n```jass\nunit u\n```\n\n\n**文件:** `build/AllCode.generated.j`"
+    },
+    {
+      "symbolName": "x",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "content": "\n```jass\nreal x\n```\n\n\n**所属:** `PendingSpawn`\n**文件:** `build/AllCode.generated.j`"
+    },
+    {
+      "symbolName": "x",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "content": "\n```jass\nreal x\n```\n\n\n**所属:** `AuxiliarDataUnit`\n**文件:** `build/AllCode.generated.j`"
+    },
+    {
+      "symbolName": "DistanceBetweenCoords",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "content": "\n```jass\nfunction DistanceBetweenCoords takes real x1, real y1, real x2, real y2 returns real\n```\n\n\n**文件:** `build/AllCode.generated.j`"
+    },
+    {
+      "symbolName": "Table",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "content": "\n```jass\nlibrary Table\n```\n\n\n**文件:** `build/AllCode.generated.j`"
+    },
+    {
+      "symbolName": "Table",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "content": "\n```jass\nstruct Table extends array\n```\n\n\n**文件:** `build/AllCode.generated.j`"
+    },
+    {
+      "symbolName": "EquipHeroModels",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "content": "\n```jass\nlibrary EquipHeroModels initializer Init\n```\n\n\n---\n\n===== END: WaveSysAnAI/AI/IAManager.j =====\n\n===== BEGIN: UI System/MyIU/Models.j =====\n\n**文件:** `build/AllCode.generated.j`"
+    },
+    {
+      "symbolName": "remove",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "content": "\n```jass\nmethod remove takes integer key returns nothing\n```\n\n\n**所属:** `handles`\n**文件:** `build/AllCode.generated.j`"
+    },
+    {
+      "symbolName": "remove",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "content": "\n```jass\nmethod remove takes integer key returns nothing\n```\n\n\n**所属:** `reals`\n**文件:** `build/AllCode.generated.j`"
+    },
+    {
+      "symbolName": "remove",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "content": "\n```jass\nmethod remove takes integer key returns nothing\n```\n\n\n**所属:** `booleans`\n**文件:** `build/AllCode.generated.j`"
+    },
+    {
+      "symbolName": "remove",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "content": "\n```jass\nmethod remove takes integer key returns nothing\n```\n\n\n**所属:** `strings`\n**文件:** `build/AllCode.generated.j`"
+    },
+    {
+      "symbolName": "remove",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "content": "\n```jass\nmethod remove takes integer key returns nothing\n```\n\n\n---\n\ncall tb.remove(294080)\n\n**所属:** `Table`\n**文件:** `build/AllCode.generated.j`"
+    },
+    {
+      "symbolName": "NewTimer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "content": "\n```jass\nfunction NewTimer takes nothing returns timer\n```\n\n\n**文件:** `build/AllCode.generated.j`"
+    },
+    {
+      "symbolName": "effects",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "content": "\n```jass\nstruct effects extends array\n```\n\n\n**文件:** `build/AllCode.generated.j`"
+    },
+    {
+      "symbolName": "y",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "content": "\n```jass\nreal y\n```\n\n\n**所属:** `AuxiliarDataUnit`\n**文件:** `build/AllCode.generated.j`"
+    },
+    {
+      "symbolName": "buttons",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "content": "\n```jass\nstruct buttons extends array\n```\n\n\n**文件:** `build/AllCode.generated.j`"
+    },
+    {
+      "symbolName": "Missile",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "content": "\n```jass\nlibrary Missile requires ErrorMessage\n```\n\n\n**文件:** `build/AllCode.generated.j`"
+    },
+    {
+      "symbolName": "Missile",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "content": "\n```jass\nstruct Missile extends array\n```\n\n\n**文件:** `build/AllCode.generated.j`"
+    },
+    {
+      "symbolName": "NEW_ARRAY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "content": "\n```jass\ntextmacro NEW_ARRAY takes FUNC, TYPE\n```\n\n\n**文件:** `build/AllCode.generated.j`"
+    },
+    {
+      "symbolName": "cast",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "content": "\n```jass\nmethod cast takes player p, integer level, integer order, real x, real y returns boolean\n```\n\n\n**所属:** `DummyCaster`\n**文件:** `build/AllCode.generated.j`"
+    },
+    {
+      "symbolName": "has",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "content": "\n```jass\nmethod has takes integer key returns boolean\n```\n\n\n**所属:** `handles`\n**文件:** `build/AllCode.generated.j`"
+    },
+    {
+      "symbolName": "has",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "content": "\n```jass\nmethod has takes integer key returns boolean\n```\n\n\n---\n\nAUTO-GENERATED FILE. DO NOT EDIT DIRECTLY.\n\nSource manifest: jass-order.txt\n\nGenerated at: 2026-04-04 15:34:30\n\n===== BEGIN: libraries/Table.j =====\n\nTESH.scrollpos=0\n\nTESH.alwaysfold=0\n\n**所属:** `reals`\n**文件:** `build/AllCode.generated.j`"
+    },
+    {
+      "symbolName": "has",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "content": "\n```jass\nmethod has takes integer key returns boolean\n```\n\n\n---\n\nAUTO-GENERATED FILE. DO NOT EDIT DIRECTLY.\n\nSource manifest: jass-order.txt\n\nGenerated at: 2026-04-04 15:34:30\n\n===== BEGIN: libraries/Table.j =====\n\nTESH.scrollpos=0\n\nTESH.alwaysfold=0\n\n**所属:** `booleans`\n**文件:** `build/AllCode.generated.j`"
+    },
+    {
+      "symbolName": "has",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "content": "\n```jass\nmethod has takes integer key returns boolean\n```\n\n\n---\n\nAUTO-GENERATED FILE. DO NOT EDIT DIRECTLY.\n\nSource manifest: jass-order.txt\n\nGenerated at: 2026-04-04 15:34:30\n\n===== BEGIN: libraries/Table.j =====\n\nTESH.scrollpos=0\n\nTESH.alwaysfold=0\n\n**所属:** `strings`\n**文件:** `build/AllCode.generated.j`"
+    },
+    {
+      "symbolName": "has",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "content": "\n```jass\nmethod has takes integer key returns boolean\n```\n\n\n---\n\nset b = tb.has(2493223)\n\n**所属:** `Table`\n**文件:** `build/AllCode.generated.j`"
+    },
+    {
+      "symbolName": "create",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "content": "\n```jass\nstatic method create takes nothing returns Table\n```\n\n\n---\n\nlocal Table tb = Table.create()\n\n**所属:** `Table`\n**文件:** `build/AllCode.generated.j`"
+    },
+    {
+      "symbolName": "HeroModels",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "content": "\n```jass\nTable HeroModels\n```\n\n\n**文件:** `build/AllCode.generated.j`"
+    },
+    {
+      "symbolName": "destroy",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "content": "\n```jass\nmethod destroy takes nothing returns nothing\n```\n\n\n---\n\nRemoves all data from a Table instance and recycles its index.\n\ncall tb.destroy()\n\n**所属:** `Table`\n**文件:** `build/AllCode.generated.j`"
+    },
+    {
+      "symbolName": "onInit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "content": "\n```jass\nstatic method onInit takes nothing returns nothing\n```\n\n\n**所属:** `N`\n**文件:** `build/AllCode.generated.j`"
+    },
+    {
+      "symbolName": "onInit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "content": "\n```jass\nstatic method onInit takes nothing returns nothing\n```\n\n\n**所属:** `Inits`\n**文件:** `build/AllCode.generated.j`"
+    },
+    {
+      "symbolName": "createEx",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "content": "\n```jass\nstatic method createEx takes unit missileDummy, real impactX, real impactY, real impactZ returns Missile\n```\n\n\n**所属:** `Missile`\n**文件:** `build/AllCode.generated.j`"
+    },
+    {
+      "symbolName": "path",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "content": "\n```jass\nstring path\n```\n\n\n**所属:** `HeroModelData`\n**文件:** `build/AllCode.generated.j`"
+    },
+    {
+      "symbolName": "HeroModelData",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "content": "\n```jass\nstruct HeroModelData\n```\n\n\n**文件:** `build/AllCode.generated.j`"
+    },
+    {
+      "symbolName": "Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "content": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**文件:** `build/AllCode.generated.j`"
+    },
+    {
+      "symbolName": "Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "content": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**文件:** `build/AllCode.generated.j`"
+    },
+    {
+      "symbolName": "units",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "content": "\n```jass\nstruct units extends array\n```\n\n\n**文件:** `build/AllCode.generated.j`"
+    },
+    {
+      "symbolName": "EquipSetHeroModel",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "content": "\n```jass\nfunction EquipSetHeroModel takes integer utype, real scale, string path returns nothing\n```\n\n\n**文件:** `build/AllCode.generated.j`"
+    },
+    {
+      "symbolName": "EquipGetHeroModel",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "content": "\n```jass\nfunction EquipGetHeroModel takes integer id returns HeroModelData\n```\n\n\n**文件:** `build/AllCode.generated.j`"
+    },
+    {
+      "symbolName": "OFFSET",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "content": "\n```jass\nconstant integer OFFSET\n```\n\n\n**文件:** `build/AllCode.generated.j`"
+    },
+    {
+      "symbolName": "USE_HASH_TABLE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "content": "\n```jass\nconstant boolean USE_HASH_TABLE\n```\n\n\n---\n\nHow to tweak timer utils:\n\nUSE_HASH_TABLE = true  (new blue)\n\n* SAFEST\n\n* SLOWEST (though hash tables are kind of fast)\n\nUSE_HASH_TABLE = false, USE_FLEXIBLE_OFFSET = true  (orange)\n\n* kinda safe (except there is a limit in the number of timers)\n\n* ALMOST FAST\n\nUSE_HASH_TABLE = false, USE_FLEXIBLE_OFFSET = false (red)\n\n* THE FASTEST (though is only  faster than the previous method\n\nafter using the optimizer on the map)\n\n* THE LEAST SAFE ( you may have to tweak OFSSET manually for it to\n\nwork)\n\n**文件:** `build/AllCode.generated.j`"
+    },
+    {
+      "symbolName": "USE_FLEXIBLE_OFFSET",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "content": "\n```jass\nconstant boolean USE_FLEXIBLE_OFFSET\n```\n\n\n**文件:** `build/AllCode.generated.j`"
+    },
+    {
+      "symbolName": "didinit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "content": "\n```jass\nboolean didinit\n```\n\n\n---\n\nuse a totally random number here, the more improbable someone uses it, the better.\n\n**文件:** `build/AllCode.generated.j`"
+    },
+    {
+      "symbolName": "QUANTITY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "content": "\n```jass\nconstant integer QUANTITY\n```\n\n\n---\n\nTimers to preload at map init:\n\n**文件:** `build/AllCode.generated.j`"
+    },
+    {
+      "symbolName": "UNITS_DUMMY_CASTER",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "content": "\n```jass\nconstant integer UNITS_DUMMY_CASTER\n```\n\n\n**文件:** `build/AllCode.generated.j`"
+    },
+    {
+      "symbolName": "finish",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "content": "\n```jass\nmethod finish takes integer a returns nothing\n```\n\n\n**所属:** `DummyCaster`\n**文件:** `build/AllCode.generated.j`"
+    },
+    {
+      "symbolName": "FormatLoadoutDamageText",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "content": "\n```jass\nfunction FormatLoadoutDamageText takes real amount returns string\n```\n\n\n**文件:** `build/AllCode.generated.j`"
+    },
+    {
+      "symbolName": "dex",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "content": "\n```jass\nstruct dex extends array\n```\n\n\n**文件:** `build/AllCode.generated.j`"
+    }
+  ],
+  "timestamp": 1776205784951
+}

@@ -1,0 +1,645 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+  "items": [
+    {
+      "label": "WAVE_HRIF_UNIT_ID",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_HRIF_UNIT_ID\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "2_var_WAVE_HRIF_UNIT_ID",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HRIF_BOSS_UNIT_ID",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_HRIF_BOSS_UNIT_ID\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "2_var_WAVE_HRIF_BOSS_UNIT_ID",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HRIF_TELEGRAPH_LIGHTNING_CODE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string WAVE_HRIF_TELEGRAPH_LIGHTNING_CODE\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "2_var_WAVE_HRIF_TELEGRAPH_LIGHTNING_CODE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HRIF_TELEGRAPH_DURATION",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HRIF_TELEGRAPH_DURATION\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "2_var_WAVE_HRIF_TELEGRAPH_DURATION",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HRIF_BOSS_TELEGRAPH_DURATION",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HRIF_BOSS_TELEGRAPH_DURATION\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "2_var_WAVE_HRIF_BOSS_TELEGRAPH_DURATION",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HRIF_TELEGRAPH_TICK",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HRIF_TELEGRAPH_TICK\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "2_var_WAVE_HRIF_TELEGRAPH_TICK",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HRIF_LIGHTNING_SOURCE_Z",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HRIF_LIGHTNING_SOURCE_Z\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "2_var_WAVE_HRIF_LIGHTNING_SOURCE_Z",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HRIF_LIGHTNING_TARGET_Z",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HRIF_LIGHTNING_TARGET_Z\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "2_var_WAVE_HRIF_LIGHTNING_TARGET_Z",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HRIF_TARGET_MARKER_MODEL",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string WAVE_HRIF_TARGET_MARKER_MODEL\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "2_var_WAVE_HRIF_TARGET_MARKER_MODEL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HRIF_COOLDOWN_MIN",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HRIF_COOLDOWN_MIN\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "2_var_WAVE_HRIF_COOLDOWN_MIN",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HRIF_COOLDOWN_MAX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HRIF_COOLDOWN_MAX\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "2_var_WAVE_HRIF_COOLDOWN_MAX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HRIF_INITIAL_DELAY_MIN",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HRIF_INITIAL_DELAY_MIN\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "2_var_WAVE_HRIF_INITIAL_DELAY_MIN",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HRIF_INITIAL_DELAY_MAX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HRIF_INITIAL_DELAY_MAX\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "2_var_WAVE_HRIF_INITIAL_DELAY_MAX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HRIF_BOSS_COOLDOWN_MIN",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HRIF_BOSS_COOLDOWN_MIN\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "2_var_WAVE_HRIF_BOSS_COOLDOWN_MIN",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HRIF_BOSS_COOLDOWN_MAX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HRIF_BOSS_COOLDOWN_MAX\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "2_var_WAVE_HRIF_BOSS_COOLDOWN_MAX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HRIF_BOSS_INITIAL_DELAY_MIN",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HRIF_BOSS_INITIAL_DELAY_MIN\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "2_var_WAVE_HRIF_BOSS_INITIAL_DELAY_MIN",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HRIF_BOSS_INITIAL_DELAY_MAX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HRIF_BOSS_INITIAL_DELAY_MAX\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "2_var_WAVE_HRIF_BOSS_INITIAL_DELAY_MAX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HRIF_BOSS_VOLLEY_COUNT",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_HRIF_BOSS_VOLLEY_COUNT\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "2_var_WAVE_HRIF_BOSS_VOLLEY_COUNT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HRIF_BOSS_VOLLEY_INTERVAL",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HRIF_BOSS_VOLLEY_INTERVAL\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "2_var_WAVE_HRIF_BOSS_VOLLEY_INTERVAL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_RANGED_MODE_HRIF",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_RANGED_MODE_HRIF\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "2_var_WAVE_RANGED_MODE_HRIF",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_RANGED_MODE_HRIF_BOSS",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_RANGED_MODE_HRIF_BOSS\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "2_var_WAVE_RANGED_MODE_HRIF_BOSS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_RANGED_PHASE_TELEGRAPH",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_RANGED_PHASE_TELEGRAPH\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "2_var_WAVE_RANGED_PHASE_TELEGRAPH",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_RANGED_PHASE_VOLLEY",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_RANGED_PHASE_VOLLEY\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "2_var_WAVE_RANGED_PHASE_VOLLEY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveRangedNextCastMs",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable WaveRangedNextCastMs\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "2_var_WaveRangedNextCastMs",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveRangedActiveCastByUnit",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable WaveRangedActiveCastByUnit\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "2_var_WaveRangedActiveCastByUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveRangedTickTimer",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ntimer WaveRangedTickTimer\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "2_var_WaveRangedTickTimer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveRangedTickRunning",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean WaveRangedTickRunning\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "2_var_WaveRangedTickRunning",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveRangedCastHead",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger WaveRangedCastHead\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "2_var_WaveRangedCastHead",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveRangedCastCount",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger WaveRangedCastCount\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "2_var_WaveRangedCastCount",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveRangedTrackedHeroByPlayer",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nunit array[24] WaveRangedTrackedHeroByPlayer\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "2_var_WaveRangedTrackedHeroByPlayer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveRangedCastNext",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array WaveRangedCastNext\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "2_var_WaveRangedCastNext",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveRangedCastPrev",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array WaveRangedCastPrev\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "2_var_WaveRangedCastPrev",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveRangedCastMode",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array WaveRangedCastMode\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "2_var_WaveRangedCastMode",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveRangedCastPhase",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array WaveRangedCastPhase\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "2_var_WaveRangedCastPhase",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveRangedCastVolleyRemaining",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array WaveRangedCastVolleyRemaining\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "2_var_WaveRangedCastVolleyRemaining",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveRangedCastVolleyAccumulator",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array WaveRangedCastVolleyAccumulator\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "2_var_WaveRangedCastVolleyAccumulator",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveRangedCastSource",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nunit array WaveRangedCastSource\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "2_var_WaveRangedCastSource",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveRangedCastTarget",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nunit array WaveRangedCastTarget\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "2_var_WaveRangedCastTarget",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveRangedCastTargetX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array WaveRangedCastTargetX\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "2_var_WaveRangedCastTargetX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveRangedCastTargetY",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array WaveRangedCastTargetY\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "2_var_WaveRangedCastTargetY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveRangedCastElapsed",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array WaveRangedCastElapsed\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "2_var_WaveRangedCastElapsed",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveRangedCastTargetMarker",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array WaveRangedCastTargetMarker\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "2_var_WaveRangedCastTargetMarker",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveRangedCastLightning",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nlightning array WaveRangedCastLightning\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "2_var_WaveRangedCastLightning",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveRangedBossLightningByIndex",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nlightning array WaveRangedBossLightningByIndex\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "2_var_WaveRangedBossLightningByIndex",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveRangedCastSourcePaused",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean array WaveRangedCastSourcePaused\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "2_var_WaveRangedCastSourcePaused",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveRangedBossLightningIndex",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveRangedBossLightningIndex takes integer castId, integer playerId returns integer\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "1_func_WaveRangedBossLightningIndex",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveRangedSecToMs",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveRangedSecToMs takes real sec returns integer\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "1_func_WaveRangedSecToMs",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveRangedRandomMsRange",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveRangedRandomMsRange takes real minSec, real maxSec returns integer\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "1_func_WaveRangedRandomMsRange",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveRangedUnitAlive",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveRangedUnitAlive takes unit u returns boolean\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "1_func_WaveRangedUnitAlive",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveRangedIsEnemyHeroOfSource",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveRangedIsEnemyHeroOfSource takes unit source, unit target returns boolean\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "1_func_WaveRangedIsEnemyHeroOfSource",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveRangedIsHrifBase",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveRangedIsHrifBase takes unit source returns boolean\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "1_func_WaveRangedIsHrifBase",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveRangedIsHrifBoss",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveRangedIsHrifBoss takes unit source returns boolean\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "1_func_WaveRangedIsHrifBoss",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveRangedCastAdd",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveRangedCastAdd takes integer castId returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "1_func_WaveRangedCastAdd",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveRangedCastRemove",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveRangedCastRemove takes integer castId returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "1_func_WaveRangedCastRemove",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveRangedDestroyBossLightnings",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveRangedDestroyBossLightnings takes integer castId returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "1_func_WaveRangedDestroyBossLightnings",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveRangedCastDestroy",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveRangedCastDestroy takes integer castId returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "1_func_WaveRangedCastDestroy",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveRangedCreateHrifImpactMarker",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveRangedCreateHrifImpactMarker takes unit source, real tx, real ty returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "1_func_WaveRangedCreateHrifImpactMarker",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveRangedLaunchHrifProjectilePoint",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveRangedLaunchHrifProjectilePoint takes unit source, real tx, real ty returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "1_func_WaveRangedLaunchHrifProjectilePoint",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveRangedLaunchHrifProjectile",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveRangedLaunchHrifProjectile takes integer castId returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "1_func_WaveRangedLaunchHrifProjectile",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveRangedBossCountEnemyHeroes",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveRangedBossCountEnemyHeroes takes unit source returns integer\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "1_func_WaveRangedBossCountEnemyHeroes",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveRangedBossFireVolley",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveRangedBossFireVolley takes integer castId returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "1_func_WaveRangedBossFireVolley",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveRangedBossCreateTelegraphs",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveRangedBossCreateTelegraphs takes integer castId returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "1_func_WaveRangedBossCreateTelegraphs",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveRangedBossUpdateTelegraphs",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveRangedBossUpdateTelegraphs takes integer castId returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "1_func_WaveRangedBossUpdateTelegraphs",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveRangedOnTick",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveRangedOnTick takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "1_func_WaveRangedOnTick",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveRangedEnsureTickTimer",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveRangedEnsureTickTimer takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "1_func_WaveRangedEnsureTickTimer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveRangedStartHrifCast",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveRangedStartHrifCast takes unit source, unit target returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "1_func_WaveRangedStartHrifCast",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveRangedStartHrifBossCast",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveRangedStartHrifBossCast takes unit source, unit target returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "1_func_WaveRangedStartHrifBossCast",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveRangedCleanupDeadCaster",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveRangedCleanupDeadCaster takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "1_func_WaveRangedCleanupDeadCaster",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveRangedSkillsSetTrackedHeroForPlayer",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveRangedSkillsSetTrackedHeroForPlayer takes integer playerId, unit hero returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "1_func_WaveRangedSkillsSetTrackedHeroForPlayer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveRangedSkillsTryExecute",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveRangedSkillsTryExecute takes unit source, unit target, integer nowMs returns boolean\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "1_func_WaveRangedSkillsTryExecute",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1776550709696
+}

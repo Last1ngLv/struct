@@ -1,0 +1,42 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Necromancer\\Reapers Scythe.j",
+  "items": [
+    {
+      "label": "GetDamageFactor",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetDamageFactor takes integer level returns real\n```\n\n\n---\n\n*  Set the damage factor. The original Dota setup would be 0.4, 0.6, 0.9\n\n**_>:** `Pruebas/MissileExamples/Necromancer/Reapers Scythe.j`",
+      "sortText": "1_func_GetDamageFactor",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Necromancer\\Reapers Scythe.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Callback",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Callback takes nothing returns nothing\n```\n\n\n---\n\n========================================================================\n\n*  Reaper's scythe code. Make changes carefully.\n\n========================================================================\n\n**_>:** `Pruebas/MissileExamples/Necromancer/Reapers Scythe.j`",
+      "sortText": "1_func_Callback",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Necromancer\\Reapers Scythe.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnEffect",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnEffect takes nothing returns nothing\n```\n\n\n**_>:** `Pruebas/MissileExamples/Necromancer/Reapers Scythe.j`",
+      "sortText": "1_func_OnEffect",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Necromancer\\Reapers Scythe.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**_>:** `Pruebas/MissileExamples/Necromancer/Reapers Scythe.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Necromancer\\Reapers Scythe.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1776550709554
+}

@@ -14,7 +14,7 @@ library LoadoutLeapMissile initializer Init uses TimerUtils, SpellIndex, Missile
 
         //* Rapid Fire options.
         private constant real FIRE_DURATION = 1.00
-        private constant integer FIRE_COUNT = 3
+        private constant integer FIRE_COUNT = 2
         private constant real RAPID_FIRE_ANIMATION_TIME_SCALE = 5.25
         private constant real ANIMATION_TIME_SCALE_ON_END = 1.00
 

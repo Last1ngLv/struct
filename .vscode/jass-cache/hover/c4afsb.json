@@ -1,0 +1,196 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+  "items": [
+    {
+      "symbolName": "WaveStreakThresholds",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "content": "\n```jass\ninteger array WaveStreakThresholds\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`"
+    },
+    {
+      "symbolName": "WaveStreakFirstBloodSoundPath",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "content": "\n```jass\nstring WaveStreakFirstBloodSoundPath\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`"
+    },
+    {
+      "symbolName": "WAVE_STREAK_QUEUE_TICK",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "content": "\n```jass\nconstant real WAVE_STREAK_QUEUE_TICK\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`"
+    },
+    {
+      "symbolName": "WaveMultiKillSoundPath",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "content": "\n```jass\nstring array WaveMultiKillSoundPath\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`"
+    },
+    {
+      "symbolName": "WaveStreakBreakSoundPath",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "content": "\n```jass\nstring WaveStreakBreakSoundPath\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`"
+    },
+    {
+      "symbolName": "WaveMultiThresholds",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "content": "\n```jass\ninteger array WaveMultiThresholds\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`"
+    },
+    {
+      "symbolName": "WaveStreakKillSoundPath",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "content": "\n```jass\nstring array WaveStreakKillSoundPath\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`"
+    },
+    {
+      "symbolName": "SetWaveStreakKillStreakSound",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "content": "\n```jass\nfunction SetWaveStreakKillStreakSound takes integer tier, string path returns nothing\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`"
+    },
+    {
+      "symbolName": "SetWaveStreakKillStreakThreshold",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "content": "\n```jass\nfunction SetWaveStreakKillStreakThreshold takes integer tier, integer kills returns nothing\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`"
+    },
+    {
+      "symbolName": "SetWaveStreakMultiKillThreshold",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "content": "\n```jass\nfunction SetWaveStreakMultiKillThreshold takes integer tier, integer kills returns nothing\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`"
+    },
+    {
+      "symbolName": "SetWaveStreakMultiKillSound",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "content": "\n```jass\nfunction SetWaveStreakMultiKillSound takes integer tier, string path returns nothing\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`"
+    },
+    {
+      "symbolName": "SetWaveStreakMultiBreakHighSound",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "content": "\n```jass\nfunction SetWaveStreakMultiBreakHighSound takes string path returns nothing\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`"
+    },
+    {
+      "symbolName": "SetWaveStreakMultiKillWindow",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "content": "\n```jass\nfunction SetWaveStreakMultiKillWindow takes real sec returns nothing\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`"
+    },
+    {
+      "symbolName": "SetWaveStreakMultiBreakLowSound",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "content": "\n```jass\nfunction SetWaveStreakMultiBreakLowSound takes string path returns nothing\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`"
+    },
+    {
+      "symbolName": "WAVE_DEFAULT_SOUND_STREAK_7",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "content": "\n```jass\nconstant string WAVE_DEFAULT_SOUND_STREAK_7\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`"
+    },
+    {
+      "symbolName": "WAVE_DEFAULT_SOUND_MULTI_BREAK_HIGH",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "content": "\n```jass\nconstant string WAVE_DEFAULT_SOUND_MULTI_BREAK_HIGH\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`"
+    },
+    {
+      "symbolName": "WAVE_DEFAULT_SOUND_STREAK_1",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "content": "\n```jass\nconstant string WAVE_DEFAULT_SOUND_STREAK_1\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`"
+    },
+    {
+      "symbolName": "WaveQueuePush",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "content": "\n```jass\nfunction WaveQueuePush takes string soundPath, string msg returns nothing\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`"
+    },
+    {
+      "symbolName": "WaveMultiBreakHighSoundPath",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "content": "\n```jass\nstring WaveMultiBreakHighSoundPath\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`"
+    },
+    {
+      "symbolName": "ApplyWaveStreakDefaultConfig",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "content": "\n```jass\nfunction ApplyWaveStreakDefaultConfig takes nothing returns nothing\n```\n\n\n---\n\nConfig default centralizada en este sistema para evitar dependencias circulares.\n\n**文件:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`"
+    },
+    {
+      "symbolName": "WaveFirstBloodDoneByWave",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "content": "\n```jass\nTable WaveFirstBloodDoneByWave\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`"
+    },
+    {
+      "symbolName": "WAVE_DEFAULT_SOUND_STREAK_BREAK",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "content": "\n```jass\nconstant string WAVE_DEFAULT_SOUND_STREAK_BREAK\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`"
+    },
+    {
+      "symbolName": "WAVE_DEFAULT_SOUND_FIRST_BLOOD",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "content": "\n```jass\nconstant string WAVE_DEFAULT_SOUND_FIRST_BLOOD\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`"
+    },
+    {
+      "symbolName": "WaveQueueRead",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "content": "\n```jass\ninteger WaveQueueRead\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`"
+    },
+    {
+      "symbolName": "WaveQueueWrite",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "content": "\n```jass\ninteger WaveQueueWrite\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`"
+    },
+    {
+      "symbolName": "WAVE_DEFAULT_SOUND_MULTI_BREAK_LOW",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "content": "\n```jass\nconstant string WAVE_DEFAULT_SOUND_MULTI_BREAK_LOW\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`"
+    },
+    {
+      "symbolName": "WAVE_DEFAULT_SOUND_MULTI_2",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "content": "\n```jass\nconstant string WAVE_DEFAULT_SOUND_MULTI_2\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`"
+    },
+    {
+      "symbolName": "WAVE_DEFAULT_SOUND_STREAK_4",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "content": "\n```jass\nconstant string WAVE_DEFAULT_SOUND_STREAK_4\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`"
+    },
+    {
+      "symbolName": "WAVE_DEFAULT_SOUND_STREAK_3",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "content": "\n```jass\nconstant string WAVE_DEFAULT_SOUND_STREAK_3\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`"
+    },
+    {
+      "symbolName": "WAVE_DEFAULT_SOUND_STREAK_6",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "content": "\n```jass\nconstant string WAVE_DEFAULT_SOUND_STREAK_6\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`"
+    },
+    {
+      "symbolName": "WAVE_DEFAULT_MULTI_WINDOW",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "content": "\n```jass\nconstant real WAVE_DEFAULT_MULTI_WINDOW\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`"
+    },
+    {
+      "symbolName": "WAVE_DEFAULT_SOUND_STREAK_5",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "content": "\n```jass\nconstant string WAVE_DEFAULT_SOUND_STREAK_5\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`"
+    },
+    {
+      "symbolName": "WAVE_DEFAULT_SOUND_STREAK_8",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "content": "\n```jass\nconstant string WAVE_DEFAULT_SOUND_STREAK_8\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`"
+    },
+    {
+      "symbolName": "WAVE_DEFAULT_QUEUE_GAP",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "content": "\n```jass\nconstant real WAVE_DEFAULT_QUEUE_GAP\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`"
+    },
+    {
+      "symbolName": "SetWaveStreakKillStreakStep",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "content": "\n```jass\nfunction SetWaveStreakKillStreakStep takes integer killsPerTier returns nothing\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`"
+    },
+    {
+      "symbolName": "WaveQueueCooldown",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "content": "\n```jass\nreal WaveQueueCooldown\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`"
+    },
+    {
+      "symbolName": "SetWaveStreakMultiKillStep",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "content": "\n```jass\nfunction SetWaveStreakMultiKillStep takes integer killsPerTier returns nothing\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`"
+    },
+    {
+      "symbolName": "Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WaveStreaks.j",
+      "content": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/WaveStreaks.j`"
+    }
+  ],
+  "timestamp": 1775665632212
+}

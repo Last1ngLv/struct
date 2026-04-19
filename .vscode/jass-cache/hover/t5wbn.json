@@ -1,0 +1,11 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\ExampleAdvance\\Equipment\\EquipmentItem.j",
+  "items": [
+    {
+      "symbolName": "Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\ExampleAdvance\\Equipment\\EquipmentItem.j",
+      "content": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**文件:** `Pruebas/ExampleAdvance/Equipment/EquipmentItem.j`"
+    }
+  ],
+  "timestamp": 1775665632196
+}

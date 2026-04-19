@@ -1,0 +1,105 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\ExampleAdvance\\Equipment\\EquipItemParser.j",
+  "items": [
+    {
+      "label": "ParseTypeToSlot",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ParseTypeToSlot takes InvItem itm, string t returns nothing\n```\n\n\n---\n\nconfiguration\n\n**_>:** `Pruebas/ExampleAdvance/Equipment/EquipItemParser.j`",
+      "sortText": "1_func_ParseTypeToSlot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\ExampleAdvance\\Equipment\\EquipItemParser.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "ParseClass",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ParseClass takes InvItem itm, string c returns nothing\n```\n\n\n**_>:** `Pruebas/ExampleAdvance/Equipment/EquipItemParser.j`",
+      "sortText": "1_func_ParseClass",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\ExampleAdvance\\Equipment\\EquipItemParser.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "ParseBonusParam",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ParseBonusParam takes InvItem itm, string param, string value, string min, string max returns nothing\n```\n\n\n**_>:** `Pruebas/ExampleAdvance/Equipment/EquipItemParser.j`",
+      "sortText": "1_func_ParseBonusParam",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\ExampleAdvance\\Equipment\\EquipItemParser.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Char2Id",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Char2Id takes string c returns integer\n```\n\n\n---\n\nend\n\nString2Rawcode:\n\n**_>:** `Pruebas/ExampleAdvance/Equipment/EquipItemParser.j`",
+      "sortText": "1_func_Char2Id",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\ExampleAdvance\\Equipment\\EquipItemParser.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "String2Id",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction String2Id takes string s returns integer\n```\n\n\n**_>:** `Pruebas/ExampleAdvance/Equipment/EquipItemParser.j`",
+      "sortText": "1_func_String2Id",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\ExampleAdvance\\Equipment\\EquipItemParser.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Id2Char",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Id2Char takes integer i returns string\n```\n\n\n**_>:** `Pruebas/ExampleAdvance/Equipment/EquipItemParser.j`",
+      "sortText": "1_func_Id2Char",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\ExampleAdvance\\Equipment\\EquipItemParser.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Id2String",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Id2String takes integer id returns string\n```\n\n\n**_>:** `Pruebas/ExampleAdvance/Equipment/EquipItemParser.j`",
+      "sortText": "1_func_Id2String",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\ExampleAdvance\\Equipment\\EquipItemParser.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "ParseRawCodeStr",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ParseRawCodeStr takes string value returns integer\n```\n\n\n---\n\nend\n\n**_>:** `Pruebas/ExampleAdvance/Equipment/EquipItemParser.j`",
+      "sortText": "1_func_ParseRawCodeStr",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\ExampleAdvance\\Equipment\\EquipItemParser.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "ParseParam",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ParseParam takes InvItem itm, string param, string value returns nothing\n```\n\n\n**_>:** `Pruebas/ExampleAdvance/Equipment/EquipItemParser.j`",
+      "sortText": "1_func_ParseParam",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\ExampleAdvance\\Equipment\\EquipItemParser.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TypeSlot",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring TypeSlot\n```\n\n\n**_>:** `Pruebas/ExampleAdvance/Equipment/EquipItemParser.j`",
+      "sortText": "2_var_TypeSlot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\ExampleAdvance\\Equipment\\EquipItemParser.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "InitEquipItem",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction InitEquipItem takes integer itemId, string data returns InvItem\n```\n\n\n**_>:** `Pruebas/ExampleAdvance/Equipment/EquipItemParser.j`",
+      "sortText": "1_func_InitEquipItem",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\ExampleAdvance\\Equipment\\EquipItemParser.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1776550709416
+}

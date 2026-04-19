@@ -10,6 +10,7 @@ library WaveMortarSkills initializer Init requires Table, TimerUtils, Missile, S
         public constant real WAVE_HMTM_PROJECTILE_SPEED = 1350.0
         public constant real WAVE_HMTM_PROJECTILE_START_Z = 90.0
         public constant real WAVE_HMTM_PROJECTILE_ARC = 0.75
+        public constant real WAVE_HMTM_CAST_RANGE = 2000.0
 
         public constant real WAVE_HMTM_IMPACT_DAMAGE = 15.0
         public constant real WAVE_HMTM_IMPACT_AOE = 250.0
@@ -72,6 +73,17 @@ library WaveMortarSkills initializer Init requires Table, TimerUtils, Missile, S
 
     private function WaveMortarUnitAlive takes unit u returns boolean
         return u != null and GetUnitTypeId(u) != 0 and UnitAlive(u)
+    endfunction
+
+    private function WaveMortarTargetInCastRange takes unit source, unit target returns boolean
+        local real dx
+        local real dy
+        if not WaveMortarUnitAlive(source) or not WaveMortarUnitAlive(target) then
+            return false
+        endif
+        set dx = GetUnitX(target) - GetUnitX(source)
+        set dy = GetUnitY(target) - GetUnitY(source)
+        return dx*dx + dy*dy <= WAVE_HMTM_CAST_RANGE*WAVE_HMTM_CAST_RANGE
     endfunction
 
     private function WaveMortarCanDamageTarget takes Missile missile, unit hit returns boolean
@@ -314,6 +326,9 @@ library WaveMortarSkills initializer Init requires Table, TimerUtils, Missile, S
             return false
         endif
         if target == null or GetUnitTypeId(target) == 0 or not UnitAlive(target) or not IsUnitType(target, UNIT_TYPE_HERO) then
+            return false
+        endif
+        if not WaveMortarTargetInCastRange(source, target) then
             return false
         endif
 

@@ -1,0 +1,61 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\WorldBounds.j",
+  "items": [
+    {
+      "symbolName": "minX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\WorldBounds.j",
+      "content": "\n```jass\nstatic readonly integer minX\n```\n\n\n**所属:** `WorldBounds`\n**文件:** `libraries/WorldBounds.j`"
+    },
+    {
+      "symbolName": "maxX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\WorldBounds.j",
+      "content": "\n```jass\nstatic readonly integer maxX\n```\n\n\n**所属:** `WorldBounds`\n**文件:** `libraries/WorldBounds.j`"
+    },
+    {
+      "symbolName": "maxY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\WorldBounds.j",
+      "content": "\n```jass\nstatic readonly integer maxY\n```\n\n\n**所属:** `WorldBounds`\n**文件:** `libraries/WorldBounds.j`"
+    },
+    {
+      "symbolName": "centerX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\WorldBounds.j",
+      "content": "\n```jass\nstatic readonly integer centerX\n```\n\n\n**所属:** `WorldBounds`\n**文件:** `libraries/WorldBounds.j`"
+    },
+    {
+      "symbolName": "centerY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\WorldBounds.j",
+      "content": "\n```jass\nstatic readonly integer centerY\n```\n\n\n**所属:** `WorldBounds`\n**文件:** `libraries/WorldBounds.j`"
+    },
+    {
+      "symbolName": "world",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\WorldBounds.j",
+      "content": "\n```jass\nstatic readonly rect world\n```\n\n\n**所属:** `WorldBounds`\n**文件:** `libraries/WorldBounds.j`"
+    },
+    {
+      "symbolName": "worldRegion",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\WorldBounds.j",
+      "content": "\n```jass\nstatic readonly region worldRegion\n```\n\n\n**所属:** `WorldBounds`\n**文件:** `libraries/WorldBounds.j`"
+    },
+    {
+      "symbolName": "onInit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\WorldBounds.j",
+      "content": "\n```jass\nstatic method onInit takes nothing returns nothing\n```\n\n\n**所属:** `WorldBoundInit`\n**文件:** `libraries/WorldBounds.j`"
+    },
+    {
+      "symbolName": "WorldBoundInit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\WorldBounds.j",
+      "content": "\n```jass\nmodule WorldBoundInit\n```\n\n\n**文件:** `libraries/WorldBounds.j`"
+    },
+    {
+      "symbolName": "WorldBoundInit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\WorldBounds.j",
+      "content": "\n```jass\nimplement WorldBoundInit\n```\n\n\n**所属:** `WorldBounds`\n**文件:** `libraries/WorldBounds.j`"
+    },
+    {
+      "symbolName": "minY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\WorldBounds.j",
+      "content": "\n```jass\nstatic readonly integer minY\n```\n\n\n**所属:** `WorldBounds`\n**文件:** `libraries/WorldBounds.j`"
+    }
+  ],
+  "timestamp": 1775421326546
+}

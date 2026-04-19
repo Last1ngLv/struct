@@ -1,0 +1,33 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\ExampleAdvance\\Setups\\HideInv.j",
+  "items": [
+    {
+      "label": "OnIndex",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnIndex takes nothing returns boolean\n```\n\n\n**_>:** `Pruebas/ExampleAdvance/Setups/HideInv.j`",
+      "sortText": "1_func_OnIndex",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\ExampleAdvance\\Setups\\HideInv.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnDeath",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnDeath takes nothing returns nothing\n```\n\n\n**_>:** `Pruebas/ExampleAdvance/Setups/HideInv.j`",
+      "sortText": "1_func_OnDeath",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\ExampleAdvance\\Setups\\HideInv.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**_>:** `Pruebas/ExampleAdvance/Setups/HideInv.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\ExampleAdvance\\Setups\\HideInv.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1776550709472
+}

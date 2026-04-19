@@ -1,0 +1,11 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SpellEfffectEvent.j",
+  "items": [
+    {
+      "symbolName": "onInit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SpellEfffectEvent.j",
+      "content": "\n```jass\nstatic method onInit takes nothing returns nothing\n```\n\n\n**所属:** `M`\n**文件:** `libraries/SpellEfffectEvent.j`"
+    }
+  ],
+  "timestamp": 1775421274335
+}

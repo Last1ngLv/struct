@@ -1,0 +1,123 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\EnemyPreviewConfig.j",
+  "items": [
+    {
+      "label": "ENEMY_PREVIEW_MAX_WAVES",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer ENEMY_PREVIEW_MAX_WAVES\n```\n\n\n**_>:** `UI System/MyIU/EnemyPreviewConfig.j`",
+      "sortText": "2_var_ENEMY_PREVIEW_MAX_WAVES",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\EnemyPreviewConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "EnemyPreviewModelPath",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring array EnemyPreviewModelPath\n```\n\n\n**_>:** `UI System/MyIU/EnemyPreviewConfig.j`",
+      "sortText": "2_var_EnemyPreviewModelPath",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\EnemyPreviewConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "EnemyPreviewModelScale",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array EnemyPreviewModelScale\n```\n\n\n**_>:** `UI System/MyIU/EnemyPreviewConfig.j`",
+      "sortText": "2_var_EnemyPreviewModelScale",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\EnemyPreviewConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "EnemyPreviewText",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring array EnemyPreviewText\n```\n\n\n**_>:** `UI System/MyIU/EnemyPreviewConfig.j`",
+      "sortText": "2_var_EnemyPreviewText",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\EnemyPreviewConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "ClampEnemyPreviewWave",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ClampEnemyPreviewWave takes integer waveId returns integer\n```\n\n\n**_>:** `UI System/MyIU/EnemyPreviewConfig.j`",
+      "sortText": "1_func_ClampEnemyPreviewWave",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\EnemyPreviewConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "EnemyPreviewSetModelPath",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction EnemyPreviewSetModelPath takes integer waveId, string path returns nothing\n```\n\n\n**_>:** `UI System/MyIU/EnemyPreviewConfig.j`",
+      "sortText": "1_func_EnemyPreviewSetModelPath",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\EnemyPreviewConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "EnemyPreviewGetModelPath",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction EnemyPreviewGetModelPath takes integer waveId returns string\n```\n\n\n**_>:** `UI System/MyIU/EnemyPreviewConfig.j`",
+      "sortText": "1_func_EnemyPreviewGetModelPath",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\EnemyPreviewConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "EnemyPreviewSetModelScale",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction EnemyPreviewSetModelScale takes integer waveId, real scale returns nothing\n```\n\n\n**_>:** `UI System/MyIU/EnemyPreviewConfig.j`",
+      "sortText": "1_func_EnemyPreviewSetModelScale",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\EnemyPreviewConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "EnemyPreviewGetModelScale",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction EnemyPreviewGetModelScale takes integer waveId returns real\n```\n\n\n**_>:** `UI System/MyIU/EnemyPreviewConfig.j`",
+      "sortText": "1_func_EnemyPreviewGetModelScale",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\EnemyPreviewConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "EnemyPreviewSetModel",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction EnemyPreviewSetModel takes integer waveId, string path, real scale returns nothing\n```\n\n\n**_>:** `UI System/MyIU/EnemyPreviewConfig.j`",
+      "sortText": "1_func_EnemyPreviewSetModel",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\EnemyPreviewConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "EnemyPreviewSetText",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction EnemyPreviewSetText takes integer waveId, string text returns nothing\n```\n\n\n**_>:** `UI System/MyIU/EnemyPreviewConfig.j`",
+      "sortText": "1_func_EnemyPreviewSetText",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\EnemyPreviewConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "EnemyPreviewGetText",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction EnemyPreviewGetText takes integer waveId returns string\n```\n\n\n**_>:** `UI System/MyIU/EnemyPreviewConfig.j`",
+      "sortText": "1_func_EnemyPreviewGetText",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\EnemyPreviewConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**_>:** `UI System/MyIU/EnemyPreviewConfig.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\EnemyPreviewConfig.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1776550709586
+}

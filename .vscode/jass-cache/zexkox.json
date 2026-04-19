@@ -1,0 +1,1752 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+  "items": [
+    {
+      "label": "MAX_PLAYER_SLOTS",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer MAX_PLAYER_SLOTS\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_MAX_PLAYER_SLOTS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_CHOICE_ABILITY",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer DEFAULT_CHOICE_ABILITY\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_DEFAULT_CHOICE_ABILITY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_SPEED_BONUS",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real DEFAULT_SPEED_BONUS\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_DEFAULT_SPEED_BONUS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_DAMAGE_VALUE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real DEFAULT_DAMAGE_VALUE\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_DEFAULT_DAMAGE_VALUE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_INSTANCE_COUNT",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer DEFAULT_INSTANCE_COUNT\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_DEFAULT_INSTANCE_COUNT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_MODEL_PATH",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string DEFAULT_MODEL_PATH\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_DEFAULT_MODEL_PATH",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_OVERLAY_MODEL_PATH",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string DEFAULT_OVERLAY_MODEL_PATH\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_DEFAULT_OVERLAY_MODEL_PATH",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_HEAL_ON_HIT",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real DEFAULT_HEAL_ON_HIT\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_DEFAULT_HEAL_ON_HIT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_USE_RAPID_FIRE_MISSILE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant boolean DEFAULT_USE_RAPID_FIRE_MISSILE\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_DEFAULT_USE_RAPID_FIRE_MISSILE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_USE_RAPID_FIRE_CONTROL",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant boolean DEFAULT_USE_RAPID_FIRE_CONTROL\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_DEFAULT_USE_RAPID_FIRE_CONTROL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_USE_SMART_RECAST",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant boolean DEFAULT_USE_SMART_RECAST\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_DEFAULT_USE_SMART_RECAST",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_LEAP_CASTER_FX1",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string DEFAULT_LEAP_CASTER_FX1\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_DEFAULT_LEAP_CASTER_FX1",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_LEAP_CASTER_FX2",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string DEFAULT_LEAP_CASTER_FX2\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_DEFAULT_LEAP_CASTER_FX2",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_LEAP_DUMMY_FX1",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string DEFAULT_LEAP_DUMMY_FX1\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_DEFAULT_LEAP_DUMMY_FX1",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_LEAP_DUMMY_FX2",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string DEFAULT_LEAP_DUMMY_FX2\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_DEFAULT_LEAP_DUMMY_FX2",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_LEAP_DUMMY_SCALE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real DEFAULT_LEAP_DUMMY_SCALE\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_DEFAULT_LEAP_DUMMY_SCALE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_LEAP_DUMMY_FLIGHT_OFFSET",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real DEFAULT_LEAP_DUMMY_FLIGHT_OFFSET\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_DEFAULT_LEAP_DUMMY_FLIGHT_OFFSET",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_LEAP_COMPANION_UNIT_ID",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer DEFAULT_LEAP_COMPANION_UNIT_ID\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_DEFAULT_LEAP_COMPANION_UNIT_ID",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_LEAP_IMPACT_FX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string DEFAULT_LEAP_IMPACT_FX\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_DEFAULT_LEAP_IMPACT_FX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_ORB_LEVEL",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer DEFAULT_ORB_LEVEL\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_DEFAULT_ORB_LEVEL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_POINTS_OF_MANA",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer DEFAULT_POINTS_OF_MANA\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_DEFAULT_POINTS_OF_MANA",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "byHandle",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable byHandle\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_byHandle",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "chosenAbility",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array chosenAbility\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_chosenAbility",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "chosenSpeedBonus",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array chosenSpeedBonus\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_chosenSpeedBonus",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "chosenDamage",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array chosenDamage\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_chosenDamage",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "chosenInstances",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array chosenInstances\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_chosenInstances",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "chosenModelPath",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring array chosenModelPath\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_chosenModelPath",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "chosenOverlayPath",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring array chosenOverlayPath\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_chosenOverlayPath",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "chosenHealOnHit",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array chosenHealOnHit\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_chosenHealOnHit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "chosenUseRapidFireMissile",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean array chosenUseRapidFireMissile\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_chosenUseRapidFireMissile",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "chosenUseRapidFireControl",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean array chosenUseRapidFireControl\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_chosenUseRapidFireControl",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "chosenUseSmartRecast",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean array chosenUseSmartRecast\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_chosenUseSmartRecast",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "chosenLeapCasterFx1",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring array chosenLeapCasterFx1\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_chosenLeapCasterFx1",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "chosenLeapCasterFx2",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring array chosenLeapCasterFx2\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_chosenLeapCasterFx2",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "chosenLeapDummyFx1",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring array chosenLeapDummyFx1\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_chosenLeapDummyFx1",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "chosenLeapDummyFx2",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring array chosenLeapDummyFx2\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_chosenLeapDummyFx2",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "chosenLeapDummyScale",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array chosenLeapDummyScale\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_chosenLeapDummyScale",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "chosenLeapDummyFlightOffset",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array chosenLeapDummyFlightOffset\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_chosenLeapDummyFlightOffset",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "chosenLeapCompanionUnitId",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array chosenLeapCompanionUnitId\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_chosenLeapCompanionUnitId",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "chosenLeapImpactFx",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring array chosenLeapImpactFx\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_chosenLeapImpactFx",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "orbLevel",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array orbLevel\n```\n\n\n---\n\nNuevo: cantidad asociada a ShortWeaponInterval\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_orbLevel",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "pointsOfMana",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array pointsOfMana\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_pointsOfMana",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "SlotOfPlayer",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SlotOfPlayer takes player p returns integer\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_SlotOfPlayer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "SetPlayerMissileLoadout",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SetPlayerMissileLoadout takes player p, integer abilityRawcode, real speedBonus, real damageValue, integer instanceCount, string missileModelPath, string overlayModelPath returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_SetPlayerMissileLoadout",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "SetPlayerMissileAbilityChoice",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SetPlayerMissileAbilityChoice takes player p, integer abilityRawcode returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_SetPlayerMissileAbilityChoice",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "SetPlayerMissileSpeedBonus",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SetPlayerMissileSpeedBonus takes player p, real speedBonus returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_SetPlayerMissileSpeedBonus",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "SetPlayerMissileDamageValue",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SetPlayerMissileDamageValue takes player p, real damageValue returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_SetPlayerMissileDamageValue",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "SetPlayerMissileInstanceCount",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SetPlayerMissileInstanceCount takes player p, integer instanceCount returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_SetPlayerMissileInstanceCount",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AddPlayerMissileInstanceCount",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AddPlayerMissileInstanceCount takes player p, integer delta returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_AddPlayerMissileInstanceCount",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "SetPlayerMissileModelPath",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SetPlayerMissileModelPath takes player p, string modelPath returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_SetPlayerMissileModelPath",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "SetPlayerMissileOverlayModelPath",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SetPlayerMissileOverlayModelPath takes player p, string modelPath returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_SetPlayerMissileOverlayModelPath",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "SetPlayerMissileHealOnHit",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SetPlayerMissileHealOnHit takes player p, real value returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_SetPlayerMissileHealOnHit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "SetPlayerMissileUseRapidFireMissile",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SetPlayerMissileUseRapidFireMissile takes player p, boolean flag returns nothing\n```\n\n\n---\n\nBackward-compatible helper: applies to both missile and control variants.\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_SetPlayerMissileUseRapidFireMissile",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "SetPlayerMissileUseRapidFireControl",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SetPlayerMissileUseRapidFireControl takes player p, boolean flag returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_SetPlayerMissileUseRapidFireControl",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "SetPlayerMissileUseRapidFire",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SetPlayerMissileUseRapidFire takes player p, boolean flag returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_SetPlayerMissileUseRapidFire",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "SetPlayerMissileUseSmartRecast",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SetPlayerMissileUseSmartRecast takes player p, boolean flag returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_SetPlayerMissileUseSmartRecast",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "SetPlayerLeapCasterFx",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SetPlayerLeapCasterFx takes player p, string fx1, string fx2 returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_SetPlayerLeapCasterFx",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "SetPlayerLeapDummyFx",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SetPlayerLeapDummyFx takes player p, string fx1, string fx2 returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_SetPlayerLeapDummyFx",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "SetPlayerLeapDummyScale",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SetPlayerLeapDummyScale takes player p, real scale returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_SetPlayerLeapDummyScale",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "SetPlayerLeapDummyFlightOffset",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SetPlayerLeapDummyFlightOffset takes player p, real offset returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_SetPlayerLeapDummyFlightOffset",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "SetPlayerLeapCompanionUnitId",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SetPlayerLeapCompanionUnitId takes player p, integer unitId returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_SetPlayerLeapCompanionUnitId",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "SetPlayerLeapImpactFx",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SetPlayerLeapImpactFx takes player p, string fx returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_SetPlayerLeapImpactFx",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetPlayerMissileAbilityChoice",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetPlayerMissileAbilityChoice takes player p returns integer\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_GetPlayerMissileAbilityChoice",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetPlayerMissileSpeedBonus",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetPlayerMissileSpeedBonus takes player p returns real\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_GetPlayerMissileSpeedBonus",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetPlayerMissileDamageValue",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetPlayerMissileDamageValue takes player p returns real\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_GetPlayerMissileDamageValue",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetPlayerMissileInstanceCount",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetPlayerMissileInstanceCount takes player p returns integer\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_GetPlayerMissileInstanceCount",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetPlayerMissileModelPath",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetPlayerMissileModelPath takes player p returns string\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_GetPlayerMissileModelPath",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetPlayerMissileOverlayModelPath",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetPlayerMissileOverlayModelPath takes player p returns string\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_GetPlayerMissileOverlayModelPath",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetPlayerMissileHealOnHit",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetPlayerMissileHealOnHit takes player p returns real\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_GetPlayerMissileHealOnHit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetPlayerMissileUseRapidFireMissile",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetPlayerMissileUseRapidFireMissile takes player p returns boolean\n```\n\n\n---\n\nBackward-compatible helper: returns missile variant.\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_GetPlayerMissileUseRapidFireMissile",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetPlayerMissileUseRapidFire",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetPlayerMissileUseRapidFire takes player p returns boolean\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_GetPlayerMissileUseRapidFire",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetPlayerMissileUseRapidFireControl",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetPlayerMissileUseRapidFireControl takes player p returns boolean\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_GetPlayerMissileUseRapidFireControl",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetPlayerMissileUseSmartRecast",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetPlayerMissileUseSmartRecast takes player p returns boolean\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_GetPlayerMissileUseSmartRecast",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetPlayerLeapCasterFx1",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetPlayerLeapCasterFx1 takes player p returns string\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_GetPlayerLeapCasterFx1",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetPlayerLeapCasterFx2",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetPlayerLeapCasterFx2 takes player p returns string\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_GetPlayerLeapCasterFx2",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetPlayerLeapDummyFx1",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetPlayerLeapDummyFx1 takes player p returns string\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_GetPlayerLeapDummyFx1",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetPlayerLeapDummyFx2",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetPlayerLeapDummyFx2 takes player p returns string\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_GetPlayerLeapDummyFx2",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetPlayerLeapDummyScale",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetPlayerLeapDummyScale takes player p returns real\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_GetPlayerLeapDummyScale",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetPlayerLeapDummyFlightOffset",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetPlayerLeapDummyFlightOffset takes player p returns real\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_GetPlayerLeapDummyFlightOffset",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetPlayerLeapCompanionUnitId",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetPlayerLeapCompanionUnitId takes player p returns integer\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_GetPlayerLeapCompanionUnitId",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetPlayerLeapImpactFx",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetPlayerLeapImpactFx takes player p returns string\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_GetPlayerLeapImpactFx",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "SetPlayerOrbLevel",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SetPlayerOrbLevel takes player p, integer value returns nothing\n```\n\n\n---\n\nmys\n\nORB LEVEL\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_SetPlayerOrbLevel",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "SetPlayerPointsOfMana",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SetPlayerPointsOfMana takes player p, integer value returns nothing\n```\n\n\n---\n\nPOINTS OF MANA\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_SetPlayerPointsOfMana",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetPlayerOrbLevel",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetPlayerOrbLevel takes player p returns integer\n```\n\n\n---\n\n=======================\n\nGETTERS\n\n=======================\n\nORB LEVEL\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_GetPlayerOrbLevel",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetPlayerPointsOfMana",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetPlayerPointsOfMana takes player p returns integer\n```\n\n\n---\n\nPOINTS OF MANA\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_GetPlayerPointsOfMana",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "LOADOUT_ORB_ABILITY_RAY",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer LOADOUT_ORB_ABILITY_RAY\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_LOADOUT_ORB_ABILITY_RAY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "LOADOUT_ORB_ABILITY_FIRE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer LOADOUT_ORB_ABILITY_FIRE\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_LOADOUT_ORB_ABILITY_FIRE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "LOADOUT_ORB_ABILITY_POISON",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer LOADOUT_ORB_ABILITY_POISON\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_LOADOUT_ORB_ABILITY_POISON",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "LOADOUT_ORB_ABILITY_WIND",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer LOADOUT_ORB_ABILITY_WIND\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_LOADOUT_ORB_ABILITY_WIND",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "LOADOUT_ORB_ABILITY_DARK",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer LOADOUT_ORB_ABILITY_DARK\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_LOADOUT_ORB_ABILITY_DARK",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "LOADOUT_ORB_ABILITY_BLOOD",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer LOADOUT_ORB_ABILITY_BLOOD\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_LOADOUT_ORB_ABILITY_BLOOD",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "LOADOUT_ORB_FIRE_DAMAGE_PERCENT_PER_INSTANCE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real LOADOUT_ORB_FIRE_DAMAGE_PERCENT_PER_INSTANCE\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_LOADOUT_ORB_FIRE_DAMAGE_PERCENT_PER_INSTANCE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "LOADOUT_ORB_POISON_DURATION_PER_INSTANCE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real LOADOUT_ORB_POISON_DURATION_PER_INSTANCE\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_LOADOUT_ORB_POISON_DURATION_PER_INSTANCE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "LOADOUT_ORB_POISON_TICK_INTERVAL",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real LOADOUT_ORB_POISON_TICK_INTERVAL\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_LOADOUT_ORB_POISON_TICK_INTERVAL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "LOADOUT_ORB_POISON_DAMAGE_MULT",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real LOADOUT_ORB_POISON_DAMAGE_MULT\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_LOADOUT_ORB_POISON_DAMAGE_MULT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "LOADOUT_ORB_WIND_BASE_AOE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real LOADOUT_ORB_WIND_BASE_AOE\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_LOADOUT_ORB_WIND_BASE_AOE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "LOADOUT_ORB_WIND_AOE_PER_INSTANCE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real LOADOUT_ORB_WIND_AOE_PER_INSTANCE\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_LOADOUT_ORB_WIND_AOE_PER_INSTANCE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "LOADOUT_ORB_WIND_BASE_DAMAGE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real LOADOUT_ORB_WIND_BASE_DAMAGE\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_LOADOUT_ORB_WIND_BASE_DAMAGE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "LOADOUT_ORB_DARK_BASE_CURRENT_HP_PERCENT",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real LOADOUT_ORB_DARK_BASE_CURRENT_HP_PERCENT\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_LOADOUT_ORB_DARK_BASE_CURRENT_HP_PERCENT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "LOADOUT_ORB_DARK_PERCENT_PER_INSTANCE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real LOADOUT_ORB_DARK_PERCENT_PER_INSTANCE\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_LOADOUT_ORB_DARK_PERCENT_PER_INSTANCE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "LOADOUT_ORB_BLOOD_MIN_BASE_MULT",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real LOADOUT_ORB_BLOOD_MIN_BASE_MULT\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_LOADOUT_ORB_BLOOD_MIN_BASE_MULT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "LOADOUT_ORB_BLOOD_MAX_BASE_MULT",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real LOADOUT_ORB_BLOOD_MAX_BASE_MULT\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_LOADOUT_ORB_BLOOD_MAX_BASE_MULT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "LOADOUT_ORB_BLOOD_RANGE_PER_INSTANCE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real LOADOUT_ORB_BLOOD_RANGE_PER_INSTANCE\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_LOADOUT_ORB_BLOOD_RANGE_PER_INSTANCE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "LoadoutClampInstance",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction LoadoutClampInstance takes integer inst returns integer\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_LoadoutClampInstance",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "LoadoutGetRayPierce",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction LoadoutGetRayPierce takes integer inst returns integer\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_LoadoutGetRayPierce",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "LoadoutGetFireDamage",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction LoadoutGetFireDamage takes real baseDamage, integer inst returns real\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_LoadoutGetFireDamage",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "LoadoutGetPoisonDuration",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction LoadoutGetPoisonDuration takes integer inst returns real\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_LoadoutGetPoisonDuration",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "LoadoutGetPoisonTickDamage",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction LoadoutGetPoisonTickDamage takes real baseDamage returns real\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_LoadoutGetPoisonTickDamage",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "LoadoutGetWindAoe",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction LoadoutGetWindAoe takes integer inst returns real\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_LoadoutGetWindAoe",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "LoadoutGetWindDamage",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction LoadoutGetWindDamage takes real baseDamage returns real\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_LoadoutGetWindDamage",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "LoadoutGetDarkBonus",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction LoadoutGetDarkBonus takes unit target, integer inst returns real\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_LoadoutGetDarkBonus",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "LoadoutGetBloodMinMultiplier",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction LoadoutGetBloodMinMultiplier takes integer inst returns real\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_LoadoutGetBloodMinMultiplier",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "LoadoutGetBloodMaxMultiplier",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction LoadoutGetBloodMaxMultiplier takes integer inst returns real\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_LoadoutGetBloodMaxMultiplier",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "LoadoutGetBloodRandomMultiplier",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction LoadoutGetBloodRandomMultiplier takes integer inst returns real\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_LoadoutGetBloodRandomMultiplier",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "LoadoutBloodMultiplierToPercent",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction LoadoutBloodMultiplierToPercent takes real mult returns integer\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_LoadoutBloodMultiplierToPercent",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "LOADOUT_MISSILE_SPELL",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer LOADOUT_MISSILE_SPELL\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_LOADOUT_MISSILE_SPELL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "FIRE_DURATION",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real FIRE_DURATION\n```\n\n\n---\n\n* Rapid Fire options.\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_FIRE_DURATION",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "FIRE_COUNT",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer FIRE_COUNT\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_FIRE_COUNT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "CAST_ANIMATION",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string CAST_ANIMATION\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_CAST_ANIMATION",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "FIRST_ANIMATION_DELAY",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real FIRST_ANIMATION_DELAY\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_FIRST_ANIMATION_DELAY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "RAPID_FIRE_ANIMATION_TIME_SCALE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real RAPID_FIRE_ANIMATION_TIME_SCALE\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_RAPID_FIRE_ANIMATION_TIME_SCALE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "ANIMATION_TIME_SCALE_ON_END",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real ANIMATION_TIME_SCALE_ON_END\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_ANIMATION_TIME_SCALE_ON_END",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "ATTACK_TYPE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant attacktype ATTACK_TYPE\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_ATTACK_TYPE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DAMAGE_TYPE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant damagetype DAMAGE_TYPE\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_DAMAGE_TYPE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "BASE_MISSILE_SPEED",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real BASE_MISSILE_SPEED\n```\n\n\n---\n\n* Base missile defaults.\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_BASE_MISSILE_SPEED",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "MIN_MISSILE_SPEED",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real MIN_MISSILE_SPEED\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_MIN_MISSILE_SPEED",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "FIXED_TRAVEL_DISTANCE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real FIXED_TRAVEL_DISTANCE\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_FIXED_TRAVEL_DISTANCE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "MISSILE_START_Z",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real MISSILE_START_Z\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_MISSILE_START_Z",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "BASE_MISSILE_MODEL",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string BASE_MISSILE_MODEL\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_BASE_MISSILE_MODEL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "MISSILE_SCALE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real MISSILE_SCALE\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_MISSILE_SCALE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "MISSILE_COLLISION",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real MISSILE_COLLISION\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_MISSILE_COLLISION",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DAMAGE_TEXT_SIZE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real DAMAGE_TEXT_SIZE\n```\n\n\n---\n\n* Damage text.\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_DAMAGE_TEXT_SIZE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DAMAGE_TEXT_Z",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real DAMAGE_TEXT_Z\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_DAMAGE_TEXT_Z",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DAMAGE_TEXT_VY",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real DAMAGE_TEXT_VY\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_DAMAGE_TEXT_VY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DAMAGE_TEXT_LIFE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real DAMAGE_TEXT_LIFE\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_DAMAGE_TEXT_LIFE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "CRIT_TEXT_R",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer CRIT_TEXT_R\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_CRIT_TEXT_R",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "CRIT_TEXT_G",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer CRIT_TEXT_G\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_CRIT_TEXT_G",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "CRIT_TEXT_B",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer CRIT_TEXT_B\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_CRIT_TEXT_B",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DARK_TEXT_R",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer DARK_TEXT_R\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_DARK_TEXT_R",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DARK_TEXT_G",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer DARK_TEXT_G\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_DARK_TEXT_G",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DARK_TEXT_B",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer DARK_TEXT_B\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_DARK_TEXT_B",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "FIRE_TEXT_R",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer FIRE_TEXT_R\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_FIRE_TEXT_R",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "FIRE_TEXT_G",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer FIRE_TEXT_G\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_FIRE_TEXT_G",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "FIRE_TEXT_B",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer FIRE_TEXT_B\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_FIRE_TEXT_B",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "POISON_TEXT_R",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer POISON_TEXT_R\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_POISON_TEXT_R",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "POISON_TEXT_G",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer POISON_TEXT_G\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_POISON_TEXT_G",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "POISON_TEXT_B",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer POISON_TEXT_B\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_POISON_TEXT_B",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "RAY_TEXT_R",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer RAY_TEXT_R\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_RAY_TEXT_R",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "RAY_TEXT_G",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer RAY_TEXT_G\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_RAY_TEXT_G",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "RAY_TEXT_B",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer RAY_TEXT_B\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_RAY_TEXT_B",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WIND_TEXT_R",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WIND_TEXT_R\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_WIND_TEXT_R",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WIND_TEXT_G",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WIND_TEXT_G\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_WIND_TEXT_G",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WIND_TEXT_B",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WIND_TEXT_B\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_WIND_TEXT_B",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "POISON_DOT_FX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string POISON_DOT_FX\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_POISON_DOT_FX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "POISON_DOT_FX_ATTACH",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string POISON_DOT_FX_ATTACH\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_POISON_DOT_FX_ATTACH",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WRAP_ATTACH_POINT",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string WRAP_ATTACH_POINT\n```\n\n\n---\n\n* Optional color for wrapper overlay model if needed externally.\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_WRAP_ATTACH_POINT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "specialAbility",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array specialAbility\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_specialAbility",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "storedDamage",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array storedDamage\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_storedDamage",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "effectInstances",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array effectInstances\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_effectInstances",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "rayHitsLeft",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array rayHitsLeft\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_rayHitsLeft",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "bonusActive",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean array bonusActive\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_bonusActive",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "overlayFx",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\neffect array overlayFx\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_overlayFx",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "poisonFx",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\neffect array poisonFx\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_poisonFx",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "poisonNext",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array poisonNext\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_poisonNext",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "poisonPrev",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array poisonPrev\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_poisonPrev",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "poisonHead",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger poisonHead\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_poisonHead",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "poisonTicker",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ntimer poisonTicker\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_poisonTicker",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "delayedAnimTimer",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ntimer array delayedAnimTimer\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_delayedAnimTimer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "active",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable active\n```\n\n\n---\n\n* Rapid fire state.\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_active",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "aim",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array aim\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_aim",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "FilterUnits",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction FilterUnits takes unit target, player owner returns boolean\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_FilterUnits",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "DamageUnit",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction DamageUnit takes unit source, unit target, real amount returns boolean\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_DamageUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "HealCasterOnHit",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HealCasterOnHit takes unit source, player owner returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_HealCasterOnHit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "DamageArea",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction DamageArea takes unit source, player owner, real x, real y, real radius, real amount returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_DamageArea",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetBarrierProjectileKind",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetBarrierProjectileKind takes Missile missile returns integer\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_GetBarrierProjectileKind",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "ResolveBarrierIntercept",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ResolveBarrierIntercept takes Missile missile returns integer\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_ResolveBarrierIntercept",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "PoisonListAdd",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction PoisonListAdd takes SpellIndex dex returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_PoisonListAdd",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "PoisonListRemove",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction PoisonListRemove takes SpellIndex dex returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_PoisonListRemove",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "PoisonDestroy",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction PoisonDestroy takes SpellIndex dex returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_PoisonDestroy",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnPoisonTick",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnPoisonTick takes nothing returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_OnPoisonTick",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "ApplyPoison",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ApplyPoison takes unit source, unit target, real damagePerSecond, real duration returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_ApplyPoison",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "LoadoutCore",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct LoadoutCore extends array\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_struct_LoadoutCore",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "Cleanup",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Cleanup takes SpellIndex dex returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_Cleanup",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "DelayedStartAnimation",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction DelayedStartAnimation takes nothing returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_DelayedStartAnimation",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "FireMissile",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction FireMissile takes SpellIndex dex returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_FireMissile",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetLoadoutMissileMoveCastDuration",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetLoadoutMissileMoveCastDuration takes nothing returns real\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_GetLoadoutMissileMoveCastDuration",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetSafeFireInterval",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetSafeFireInterval takes nothing returns real\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_GetSafeFireInterval",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnPeriodic",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnPeriodic takes nothing returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_OnPeriodic",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "MarkCanceled",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction MarkCanceled takes unit whichUnit returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_MarkCanceled",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnOrder",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnOrder takes nothing returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_OnOrder",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnPointOrder",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnPointOrder takes nothing returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_OnPointOrder",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnTargetOrder",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnTargetOrder takes nothing returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_OnTargetOrder",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnEffect",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnEffect takes nothing returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_OnEffect",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1776550709362
+}

@@ -1,0 +1,21 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UnitIndexer.j",
+  "items": [
+    {
+      "symbolName": "UnitIndexer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UnitIndexer.j",
+      "content": "\n```jass\nlibrary UnitIndexer requires UnitDex\n```\n\n\n**文件:** `libraries/UnitIndexer.j`"
+    },
+    {
+      "symbolName": "UnitIndexer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UnitIndexer.j",
+      "content": "\n```jass\nstruct UnitIndexer\n```\n\n\n**文件:** `libraries/UnitIndexer.j`"
+    },
+    {
+      "symbolName": "UnitIndexerz",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UnitIndexer.j",
+      "content": "\n```jass\nlibrary UnitIndexerz requires UnitDex\n```\n\n\n**文件:** `libraries/UnitIndexer.j`"
+    }
+  ],
+  "timestamp": 1774867952367
+}

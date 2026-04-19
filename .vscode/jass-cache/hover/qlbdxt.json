@@ -1,0 +1,16 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\VisionConfi.j",
+  "items": [
+    {
+      "symbolName": "Trig_Event_Actions",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\VisionConfi.j",
+      "content": "\n```jass\nfunction Trig_Event_Actions takes nothing returns nothing\n```\n\n\n---\n\nCompatibilidad con detonador clásico (si alguien todavía llama esta función).\n\n**文件:** `InitMap/VisionConfi.j`"
+    },
+    {
+      "symbolName": "Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\VisionConfi.j",
+      "content": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**文件:** `InitMap/VisionConfi.j`"
+    }
+  ],
+  "timestamp": 1775665632189
+}

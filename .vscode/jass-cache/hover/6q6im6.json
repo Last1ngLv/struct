@@ -1,0 +1,11 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\HealthBarTextTags.j",
+  "items": [
+    {
+      "symbolName": "HeroBarTag",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\HealthBarTextTags.j",
+      "content": "\n```jass\ntexttag array HeroBarTag\n```\n\n\n**文件:** `libraries/HealthBarTextTags.j`"
+    }
+  ],
+  "timestamp": 1776558496651
+}

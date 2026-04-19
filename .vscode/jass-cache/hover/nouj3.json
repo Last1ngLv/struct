@@ -1,0 +1,81 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIConfig.j",
+  "items": [
+    {
+      "symbolName": "AI_PROFILE_WAVE1_SPELL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIConfig.j",
+      "content": "\n```jass\nconstant integer AI_PROFILE_WAVE1_SPELL\n```\n\n\n---\n\nPerfil de ejemplo para unidades con spell en wave 1.\n\nAsignar este perfil en addSlotEx / addSlotExByPlayers.\n\n**文件:** `WaveSysAnAI/AI/AIConfig.j`"
+    },
+    {
+      "symbolName": "AIConfig",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIConfig.j",
+      "content": "\n```jass\nlibrary AIConfig requires AIProfiles initializer Init\n```\n\n\n**文件:** `WaveSysAnAI/AI/AIConfig.j`"
+    },
+    {
+      "symbolName": "AI_PROFILE_WAVE2_SPELL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIConfig.j",
+      "content": "\n```jass\nconstant integer AI_PROFILE_WAVE2_SPELL\n```\n\n\n**文件:** `WaveSysAnAI/AI/AIConfig.j`"
+    },
+    {
+      "symbolName": "AI_PROFILE_WAVE4_SPELL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIConfig.j",
+      "content": "\n```jass\nconstant integer AI_PROFILE_WAVE4_SPELL\n```\n\n\n**文件:** `WaveSysAnAI/AI/AIConfig.j`"
+    },
+    {
+      "symbolName": "AI_PROFILE_BOSS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIConfig.j",
+      "content": "\n```jass\nconstant integer AI_PROFILE_BOSS\n```\n\n\n**文件:** `WaveSysAnAI/AI/AIConfig.j`"
+    },
+    {
+      "symbolName": "AI_PROFILE_BOSS_SUMMON",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIConfig.j",
+      "content": "\n```jass\nconstant integer AI_PROFILE_BOSS_SUMMON\n```\n\n\n**文件:** `WaveSysAnAI/AI/AIConfig.j`"
+    },
+    {
+      "symbolName": "AI_STAGE1_SLOT_GROUP_HKNI",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIConfig.j",
+      "content": "\n```jass\nconstant integer AI_STAGE1_SLOT_GROUP_HKNI\n```\n\n\n**文件:** `WaveSysAnAI/AI/AIConfig.j`"
+    },
+    {
+      "symbolName": "AI_STAGE1_SLOT_GROUP_HMTM",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIConfig.j",
+      "content": "\n```jass\nconstant integer AI_STAGE1_SLOT_GROUP_HMTM\n```\n\n\n**文件:** `WaveSysAnAI/AI/AIConfig.j`"
+    },
+    {
+      "symbolName": "AI_STAGE1_SLOT_GROUP_HRIF",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIConfig.j",
+      "content": "\n```jass\nconstant integer AI_STAGE1_SLOT_GROUP_HRIF\n```\n\n\n**文件:** `WaveSysAnAI/AI/AIConfig.j`"
+    },
+    {
+      "symbolName": "AI_STAGE1_SLOT_GROUP_HMIL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIConfig.j",
+      "content": "\n```jass\nconstant integer AI_STAGE1_SLOT_GROUP_HMIL\n```\n\n\n**文件:** `WaveSysAnAI/AI/AIConfig.j`"
+    },
+    {
+      "symbolName": "AI_STAGE1_SLOT_GROUP_HFOO",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIConfig.j",
+      "content": "\n```jass\nconstant integer AI_STAGE1_SLOT_GROUP_HFOO\n```\n\n\n**文件:** `WaveSysAnAI/AI/AIConfig.j`"
+    },
+    {
+      "symbolName": "AI_STAGE1_SLOT_GROUP_HPEA",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIConfig.j",
+      "content": "\n```jass\nconstant integer AI_STAGE1_SLOT_GROUP_HPEA\n```\n\n\n**文件:** `WaveSysAnAI/AI/AIConfig.j`"
+    },
+    {
+      "symbolName": "Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIConfig.j",
+      "content": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**文件:** `WaveSysAnAI/AI/AIConfig.j`"
+    },
+    {
+      "symbolName": "AI_PROFILE_WAVE9_BOSS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIConfig.j",
+      "content": "\n```jass\nconstant integer AI_PROFILE_WAVE9_BOSS\n```\n\n\n**文件:** `WaveSysAnAI/AI/AIConfig.j`"
+    },
+    {
+      "symbolName": "AI_STAGE1_SLOT_GROUP_HMPR",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIConfig.j",
+      "content": "\n```jass\nconstant integer AI_STAGE1_SLOT_GROUP_HMPR\n```\n\n\n**文件:** `WaveSysAnAI/AI/AIConfig.j`"
+    }
+  ],
+  "timestamp": 1776550817547
+}

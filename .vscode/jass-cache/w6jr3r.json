@@ -1,0 +1,771 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+  "items": [
+    {
+      "label": "AI_TARGET_NONE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer AI_TARGET_NONE\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "2_var_AI_TARGET_NONE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AI_TARGET_UNIT",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer AI_TARGET_UNIT\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "2_var_AI_TARGET_UNIT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AI_TARGET_POINT",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer AI_TARGET_POINT\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "2_var_AI_TARGET_POINT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AI_BEHAVIOR_KEEP_DISTANCE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer AI_BEHAVIOR_KEEP_DISTANCE\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "2_var_AI_BEHAVIOR_KEEP_DISTANCE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AI_BEHAVIOR_LOW_HP_BIAS",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer AI_BEHAVIOR_LOW_HP_BIAS\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "2_var_AI_BEHAVIOR_LOW_HP_BIAS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AI_DEFAULT_PROFILE_ID",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer AI_DEFAULT_PROFILE_ID\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "2_var_AI_DEFAULT_PROFILE_ID",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AI_PROFILE_MELEE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer AI_PROFILE_MELEE\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "2_var_AI_PROFILE_MELEE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AI_PROFILE_RANGED",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer AI_PROFILE_RANGED\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "2_var_AI_PROFILE_RANGED",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AI_PROFILE_CASTER",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer AI_PROFILE_CASTER\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "2_var_AI_PROFILE_CASTER",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AI_MAX_RULES_PER_PROFILE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer AI_MAX_RULES_PER_PROFILE\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "2_var_AI_MAX_RULES_PER_PROFILE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AI_RULE_KEY_STRIDE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer AI_RULE_KEY_STRIDE\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "2_var_AI_RULE_KEY_STRIDE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIProfThinkInterval",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable AIProfThinkInterval\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "2_var_AIProfThinkInterval",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIProfRetargetInterval",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable AIProfRetargetInterval\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "2_var_AIProfRetargetInterval",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIProfOrderInterval",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable AIProfOrderInterval\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "2_var_AIProfOrderInterval",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIProfAcquireRange",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable AIProfAcquireRange\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "2_var_AIProfAcquireRange",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIProfLeashRange",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable AIProfLeashRange\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "2_var_AIProfLeashRange",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIProfPreferredRange",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable AIProfPreferredRange\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "2_var_AIProfPreferredRange",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIProfChaseBias",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable AIProfChaseBias\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "2_var_AIProfChaseBias",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIProfDefaultFlags",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable AIProfDefaultFlags\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "2_var_AIProfDefaultFlags",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIProfRuleCount",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable AIProfRuleCount\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "2_var_AIProfRuleCount",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIProfTeleportEnabled",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable AIProfTeleportEnabled\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "2_var_AIProfTeleportEnabled",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIProfTeleportPrioritizeFarthest",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable AIProfTeleportPrioritizeFarthest\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "2_var_AIProfTeleportPrioritizeFarthest",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIProfTeleportCooldownMin",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable AIProfTeleportCooldownMin\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "2_var_AIProfTeleportCooldownMin",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIProfTeleportCooldownMax",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable AIProfTeleportCooldownMax\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "2_var_AIProfTeleportCooldownMax",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIProfTeleportEntryDelayMin",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable AIProfTeleportEntryDelayMin\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "2_var_AIProfTeleportEntryDelayMin",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIProfTeleportEntryDelayMax",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable AIProfTeleportEntryDelayMax\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "2_var_AIProfTeleportEntryDelayMax",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIProfTeleportOffsetMin",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable AIProfTeleportOffsetMin\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "2_var_AIProfTeleportOffsetMin",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIProfTeleportOffsetMax",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable AIProfTeleportOffsetMax\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "2_var_AIProfTeleportOffsetMax",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIProfTeleportPreFxPath",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable AIProfTeleportPreFxPath\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "2_var_AIProfTeleportPreFxPath",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIRuleAbilityId",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable AIRuleAbilityId\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "2_var_AIRuleAbilityId",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIRuleOrderString",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable AIRuleOrderString\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "2_var_AIRuleOrderString",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIRuleTargetType",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable AIRuleTargetType\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "2_var_AIRuleTargetType",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIRuleMinRange",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable AIRuleMinRange\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "2_var_AIRuleMinRange",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIRuleMaxRange",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable AIRuleMaxRange\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "2_var_AIRuleMaxRange",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIRuleSelfHpMaxPct",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable AIRuleSelfHpMaxPct\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "2_var_AIRuleSelfHpMaxPct",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIRuleEnemyHpMaxPct",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable AIRuleEnemyHpMaxPct\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "2_var_AIRuleEnemyHpMaxPct",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIRuleMinEnemiesInRadius",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable AIRuleMinEnemiesInRadius\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "2_var_AIRuleMinEnemiesInRadius",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIRuleRadius",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable AIRuleRadius\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "2_var_AIRuleRadius",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIRulePriority",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable AIRulePriority\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "2_var_AIRulePriority",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIRuleLocalCooldown",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable AIRuleLocalCooldown\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "2_var_AIRuleLocalCooldown",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIRuleIsChanneling",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable AIRuleIsChanneling\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "2_var_AIRuleIsChanneling",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIRuleChannelLock",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable AIRuleChannelLock\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "2_var_AIRuleChannelLock",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIDefaultProfileByUnitType",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable AIDefaultProfileByUnitType\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "2_var_AIDefaultProfileByUnitType",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIRuleKey",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIRuleKey takes integer profileId, integer slot returns integer\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "1_func_AIRuleKey",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIRegisterProfile",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIRegisterProfile takes integer profileId, real thinkInterval, real retargetInterval, real acquireRange, real leashRange, real preferredRange returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "1_func_AIRegisterProfile",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AISetProfileBehavior",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AISetProfileBehavior takes integer profileId, real chaseBias, integer defaultFlags returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "1_func_AISetProfileBehavior",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AISetProfileOrderInterval",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AISetProfileOrderInterval takes integer profileId, real orderInterval returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "1_func_AISetProfileOrderInterval",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AISetProfileTeleport",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AISetProfileTeleport takes integer profileId, boolean enabled, boolean prioritizeFarthestTrackedHero, real cooldownMinSec, real cooldownMaxSec, real entryDelayMinSec, real entryDelayMaxSec, real offsetMin, real offsetMax, string preFxPath returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "1_func_AISetProfileTeleport",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIAddAbilityRule",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIAddAbilityRule takes integer profileId, integer abilityId, string orderString, integer targetType, real minRange, real maxRange, real selfHpMaxPct, real enemyHpMaxPct, integer minEnemiesInRadius, real radius, integer priority, real localCooldown returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "1_func_AIAddAbilityRule",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AISetAbilityRuleChanneling",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AISetAbilityRuleChanneling takes integer profileId, integer slot, boolean isChanneling, real channelLockSeconds returns nothing\n```\n\n\n---\n\nMarca una regla como channeling y define cuánto tiempo bloquear órdenes de movimiento/ataque.\n\nchannelLockSeconds recomendado: duración del canal + pequeño margen (ej. 2.20).\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "1_func_AISetAbilityRuleChanneling",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIGetProfileRuleCount",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIGetProfileRuleCount takes integer profileId returns integer\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "1_func_AIGetProfileRuleCount",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIAddAbilityRuleEx",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIAddAbilityRuleEx takes integer profileId, integer abilityId, string orderString, integer targetType, real minRange, real maxRange, real selfHpMaxPct, real enemyHpMaxPct, integer minEnemiesInRadius, real radius, integer priority, real localCooldown, boolean isChanneling, real channelLockSeconds returns nothing\n```\n\n\n---\n\nVariante extendida: permite definir channeling al crear la regla.\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "1_func_AIAddAbilityRuleEx",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AISetDefaultProfileForUnitType",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AISetDefaultProfileForUnitType takes integer unitTypeId, integer profileId returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "1_func_AISetDefaultProfileForUnitType",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIGetDefaultProfileForUnitType",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIGetDefaultProfileForUnitType takes integer unitTypeId returns integer\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "1_func_AIGetDefaultProfileForUnitType",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIGetProfileThinkInterval",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIGetProfileThinkInterval takes integer profileId returns real\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "1_func_AIGetProfileThinkInterval",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIGetProfileRetargetInterval",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIGetProfileRetargetInterval takes integer profileId returns real\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "1_func_AIGetProfileRetargetInterval",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIGetProfileOrderInterval",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIGetProfileOrderInterval takes integer profileId returns real\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "1_func_AIGetProfileOrderInterval",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIGetProfileAcquireRange",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIGetProfileAcquireRange takes integer profileId returns real\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "1_func_AIGetProfileAcquireRange",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIGetProfileLeashRange",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIGetProfileLeashRange takes integer profileId returns real\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "1_func_AIGetProfileLeashRange",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIGetProfilePreferredRange",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIGetProfilePreferredRange takes integer profileId returns real\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "1_func_AIGetProfilePreferredRange",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIGetProfileChaseBias",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIGetProfileChaseBias takes integer profileId returns real\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "1_func_AIGetProfileChaseBias",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIGetProfileDefaultFlags",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIGetProfileDefaultFlags takes integer profileId returns integer\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "1_func_AIGetProfileDefaultFlags",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIGetProfileTeleportEnabled",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIGetProfileTeleportEnabled takes integer profileId returns boolean\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "1_func_AIGetProfileTeleportEnabled",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIGetProfileTeleportPrioritizeFarthestTrackedHero",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIGetProfileTeleportPrioritizeFarthestTrackedHero takes integer profileId returns boolean\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "1_func_AIGetProfileTeleportPrioritizeFarthestTrackedHero",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIGetProfileTeleportCooldownMin",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIGetProfileTeleportCooldownMin takes integer profileId returns real\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "1_func_AIGetProfileTeleportCooldownMin",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIGetProfileTeleportCooldownMax",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIGetProfileTeleportCooldownMax takes integer profileId returns real\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "1_func_AIGetProfileTeleportCooldownMax",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIGetProfileTeleportEntryDelayMin",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIGetProfileTeleportEntryDelayMin takes integer profileId returns real\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "1_func_AIGetProfileTeleportEntryDelayMin",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIGetProfileTeleportEntryDelayMax",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIGetProfileTeleportEntryDelayMax takes integer profileId returns real\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "1_func_AIGetProfileTeleportEntryDelayMax",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIGetProfileTeleportOffsetMin",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIGetProfileTeleportOffsetMin takes integer profileId returns real\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "1_func_AIGetProfileTeleportOffsetMin",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIGetProfileTeleportOffsetMax",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIGetProfileTeleportOffsetMax takes integer profileId returns real\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "1_func_AIGetProfileTeleportOffsetMax",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIGetProfileTeleportPreFxPath",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIGetProfileTeleportPreFxPath takes integer profileId returns string\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "1_func_AIGetProfileTeleportPreFxPath",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIGetProfileRuleAbilityId",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIGetProfileRuleAbilityId takes integer profileId, integer slot returns integer\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "1_func_AIGetProfileRuleAbilityId",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIGetProfileRuleOrderString",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIGetProfileRuleOrderString takes integer profileId, integer slot returns string\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "1_func_AIGetProfileRuleOrderString",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIGetProfileRuleTargetType",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIGetProfileRuleTargetType takes integer profileId, integer slot returns integer\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "1_func_AIGetProfileRuleTargetType",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIGetProfileRuleMinRange",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIGetProfileRuleMinRange takes integer profileId, integer slot returns real\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "1_func_AIGetProfileRuleMinRange",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIGetProfileRuleMaxRange",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIGetProfileRuleMaxRange takes integer profileId, integer slot returns real\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "1_func_AIGetProfileRuleMaxRange",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIGetProfileRuleSelfHpMaxPct",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIGetProfileRuleSelfHpMaxPct takes integer profileId, integer slot returns real\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "1_func_AIGetProfileRuleSelfHpMaxPct",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIGetProfileRuleEnemyHpMaxPct",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIGetProfileRuleEnemyHpMaxPct takes integer profileId, integer slot returns real\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "1_func_AIGetProfileRuleEnemyHpMaxPct",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIGetProfileRuleMinEnemiesInRadius",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIGetProfileRuleMinEnemiesInRadius takes integer profileId, integer slot returns integer\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "1_func_AIGetProfileRuleMinEnemiesInRadius",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIGetProfileRuleRadius",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIGetProfileRuleRadius takes integer profileId, integer slot returns real\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "1_func_AIGetProfileRuleRadius",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIGetProfileRulePriority",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIGetProfileRulePriority takes integer profileId, integer slot returns integer\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "1_func_AIGetProfileRulePriority",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIGetProfileRuleLocalCooldown",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIGetProfileRuleLocalCooldown takes integer profileId, integer slot returns real\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "1_func_AIGetProfileRuleLocalCooldown",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIGetProfileRuleIsChanneling",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIGetProfileRuleIsChanneling takes integer profileId, integer slot returns integer\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "1_func_AIGetProfileRuleIsChanneling",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIGetProfileRuleChannelLock",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIGetProfileRuleChannelLock takes integer profileId, integer slot returns real\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "1_func_AIGetProfileRuleChannelLock",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIProfiles.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1776550709611
+}

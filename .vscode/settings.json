@@ -1,0 +1,17 @@
+{
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "emeraldwalk.runonsave": {
+        "commands": [
+            {
+                "match": "^(.*[\\\\/](UI System|InitMap|WaveSysAnAI|MyMissiles|libraries)[\\\\/].*\\.j)$",
+                "isAsync": false,
+                "cmd": "powershell -NoProfile -ExecutionPolicy Bypass -File \"${workspaceFolder}/build/build-jass.ps1\" -AutoSyncManifest -AutoOrderManifest"
+            },
+            {
+                "match": "^(.*[\\\\/]build[\\\\/]jass-order\\.txt)$",
+                "isAsync": false,
+                "cmd": "powershell -NoProfile -ExecutionPolicy Bypass -File \"${workspaceFolder}/build/build-jass.ps1\" -AutoSyncManifest -AutoOrderManifest"
+            }
+        ]
+    }
+}

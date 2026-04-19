@@ -1,0 +1,51 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\File IO.j",
+  "items": [
+    {
+      "label": "LocalFileTestInit",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule LocalFileTestInit\n```\n\n\n---\n\nTests if the player can read files\n\n**_>:** `libraries/File IO.j`",
+      "sortText": "1_module_LocalFileTestInit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\File IO.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "LocalFileTest",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct LocalFileTest extends array\n```\n\n\n**_>:** `libraries/File IO.j`",
+      "sortText": "1_struct_LocalFileTest",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\File IO.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "FlagG",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct FlagG extends array\n```\n\n\n**_>:** `libraries/File IO.j`",
+      "sortText": "1_struct_FlagG",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\File IO.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "FileInit",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule FileInit\n```\n\n\n**_>:** `libraries/File IO.j`",
+      "sortText": "1_module_FileInit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\File IO.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "File",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct File extends array\n```\n\n\n**_>:** `libraries/File IO.j`",
+      "sortText": "1_struct_File",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\File IO.j",
+      "statementType": "StructDeclaration"
+    }
+  ],
+  "timestamp": 1776552602019
+}

@@ -1,0 +1,24 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\AllScripts\\libraries\\SwlsMath.j",
+  "items": [
+    {
+      "label": "SwlsDistanceSq",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SwlsDistanceSq takes real x1, real y1, real x2, real y2 returns real\n```\n\n\n---\n\nDistancia al cuadrado (sin SquareRoot, ideal para comparaciones).\n\n**_>:** `Pruebas/AllScripts/libraries/SwlsMath.j`",
+      "sortText": "1_func_SwlsDistanceSq",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\AllScripts\\libraries\\SwlsMath.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "SwlsDistance",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SwlsDistance takes real x1, real y1, real x2, real y2 returns real\n```\n\n\n---\n\nDistancia real (usa SquareRoot).\n\n**_>:** `Pruebas/AllScripts/libraries/SwlsMath.j`",
+      "sortText": "1_func_SwlsDistance",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\AllScripts\\libraries\\SwlsMath.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1774467088099
+}

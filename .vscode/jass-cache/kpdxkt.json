@@ -1,0 +1,303 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\movecast_viejo.j",
+  "items": [
+    {
+      "label": "INTERVAL",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real INTERVAL\n```\n\n\n---\n\nConfiguración\n\n**_>:** `Pruebas/Reworks/movecast_viejo.j`",
+      "sortText": "2_var_INTERVAL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\movecast_viejo.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "ARRIVAL_THRESHOLD",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real ARRIVAL_THRESHOLD\n```\n\n\n**_>:** `Pruebas/Reworks/movecast_viejo.j`",
+      "sortText": "2_var_ARRIVAL_THRESHOLD",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\movecast_viejo.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "ARRIVAL_THRESHOLD_SQ",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real ARRIVAL_THRESHOLD_SQ\n```\n\n\n**_>:** `Pruebas/Reworks/movecast_viejo.j`",
+      "sortText": "2_var_ARRIVAL_THRESHOLD_SQ",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\movecast_viejo.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DATA_IDLE_TIMEOUT",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real DATA_IDLE_TIMEOUT\n```\n\n\n**_>:** `Pruebas/Reworks/movecast_viejo.j`",
+      "sortText": "2_var_DATA_IDLE_TIMEOUT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\movecast_viejo.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "RECAST_LOCK_TIMEOUT",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real RECAST_LOCK_TIMEOUT\n```\n\n\n**_>:** `Pruebas/Reworks/movecast_viejo.j`",
+      "sortText": "2_var_RECAST_LOCK_TIMEOUT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\movecast_viejo.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "CHANNEL_END_GRACE_TIMEOUT",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real CHANNEL_END_GRACE_TIMEOUT\n```\n\n\n**_>:** `Pruebas/Reworks/movecast_viejo.j`",
+      "sortText": "2_var_CHANNEL_END_GRACE_TIMEOUT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\movecast_viejo.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DUMMY_UNIT_ID",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer DUMMY_UNIT_ID\n```\n\n\n**_>:** `Pruebas/Reworks/movecast_viejo.j`",
+      "sortText": "2_var_DUMMY_UNIT_ID",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\movecast_viejo.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "IGNORE_BUFF_ID",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer IGNORE_BUFF_ID\n```\n\n\n**_>:** `Pruebas/Reworks/movecast_viejo.j`",
+      "sortText": "2_var_IGNORE_BUFF_ID",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\movecast_viejo.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "INSTANT_CASTS_USE_DUMMY",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant boolean INSTANT_CASTS_USE_DUMMY\n```\n\n\n---\n\nComportamiento\n\n**_>:** `Pruebas/Reworks/movecast_viejo.j`",
+      "sortText": "2_var_INSTANT_CASTS_USE_DUMMY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\movecast_viejo.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEBUG_MODE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant boolean DEBUG_MODE\n```\n\n\n---\n\nDebug\n\n**_>:** `Pruebas/Reworks/movecast_viejo.j`",
+      "sortText": "2_var_DEBUG_MODE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\movecast_viejo.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "registeredSpells",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable registeredSpells\n```\n\n\n---\n\nTabla de habilidades registradas: OrderId -> AbilityId\n\n**_>:** `Pruebas/Reworks/movecast_viejo.j`",
+      "sortText": "2_var_registeredSpells",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\movecast_viejo.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "abilityOrderSpells",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable abilityOrderSpells\n```\n\n\n---\n\nTabla inversa: AbilityId -> OrderId\n\n**_>:** `Pruebas/Reworks/movecast_viejo.j`",
+      "sortText": "2_var_abilityOrderSpells",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\movecast_viejo.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "targetOrderSpells",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable targetOrderSpells\n```\n\n\n---\n\nTabla de OrderId -> Boolean (para órdenes target)\n\n**_>:** `Pruebas/Reworks/movecast_viejo.j`",
+      "sortText": "2_var_targetOrderSpells",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\movecast_viejo.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "recastOrderSpells",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable recastOrderSpells\n```\n\n\n---\n\nTabla de OrderId -> Boolean (habilita recast explícito)\n\n**_>:** `Pruebas/Reworks/movecast_viejo.j`",
+      "sortText": "2_var_recastOrderSpells",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\movecast_viejo.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "ORDER_ID_MOVE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger ORDER_ID_MOVE\n```\n\n\n**_>:** `Pruebas/Reworks/movecast_viejo.j`",
+      "sortText": "2_var_ORDER_ID_MOVE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\movecast_viejo.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "ORDER_ID_SMART",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger ORDER_ID_SMART\n```\n\n\n**_>:** `Pruebas/Reworks/movecast_viejo.j`",
+      "sortText": "2_var_ORDER_ID_SMART",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\movecast_viejo.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "ORDER_ID_STOP",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger ORDER_ID_STOP\n```\n\n\n**_>:** `Pruebas/Reworks/movecast_viejo.j`",
+      "sortText": "2_var_ORDER_ID_STOP",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\movecast_viejo.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "ORDER_ID_HOLD_POSITION",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger ORDER_ID_HOLD_POSITION\n```\n\n\n**_>:** `Pruebas/Reworks/movecast_viejo.j`",
+      "sortText": "2_var_ORDER_ID_HOLD_POSITION",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\movecast_viejo.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "MovementData",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct MovementData\n```\n\n\n---\n\n===========================================================================\n\nStruct principal\n\n===========================================================================\n\n**_>:** `Pruebas/Reworks/movecast_viejo.j`",
+      "sortText": "1_struct_MovementData",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\movecast_viejo.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "RegisterMovementSpell",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction RegisterMovementSpell takes integer abilityId, string orderId returns nothing\n```\n\n\n---\n\n===========================================================================\n\nAPI - Funciones públicas para registrar hechizos\n\n===========================================================================\n\n===========================================================================\n\nRegistrar hechizo con OrderId string\n\n===========================================================================\n\n**_>:** `Pruebas/Reworks/movecast_viejo.j`",
+      "sortText": "1_func_RegisterMovementSpell",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\movecast_viejo.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "RegisterMovementSpellTarget",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction RegisterMovementSpellTarget takes integer abilityId, string orderId returns nothing\n```\n\n\n---\n\n===========================================================================\n\nRegistrar hechizo TARGET con OrderId string\n\n===========================================================================\n\n**_>:** `Pruebas/Reworks/movecast_viejo.j`",
+      "sortText": "1_func_RegisterMovementSpellTarget",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\movecast_viejo.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "IsIgnoredUnit",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction IsIgnoredUnit takes unit u returns boolean\n```\n\n\n---\n\n===========================================================================\n\nEventos del sistema\n\n===========================================================================\n\n**_>:** `Pruebas/Reworks/movecast_viejo.j`",
+      "sortText": "1_func_IsIgnoredUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\movecast_viejo.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "IsRecastOrder",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction IsRecastOrder takes integer orderId returns boolean\n```\n\n\n**_>:** `Pruebas/Reworks/movecast_viejo.j`",
+      "sortText": "1_func_IsRecastOrder",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\movecast_viejo.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "RegisterMovementSpellRecast",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction RegisterMovementSpellRecast takes integer abilityId, string orderId returns nothing\n```\n\n\n---\n\n===========================================================================\n\nRegistrar hechizo con recast habilitado (POINT ORDER)\n\n===========================================================================\n\n**_>:** `Pruebas/Reworks/movecast_viejo.j`",
+      "sortText": "1_func_RegisterMovementSpellRecast",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\movecast_viejo.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "RegisterMovementSpellTargetRecast",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction RegisterMovementSpellTargetRecast takes integer abilityId, string orderId returns nothing\n```\n\n\n---\n\n===========================================================================\n\nRegistrar hechizo TARGET con recast habilitado (TARGET ORDER)\n\n===========================================================================\n\n**_>:** `Pruebas/Reworks/movecast_viejo.j`",
+      "sortText": "1_func_RegisterMovementSpellTargetRecast",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\movecast_viejo.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnMoveOrder",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnMoveOrder takes nothing returns boolean\n```\n\n\n---\n\n===========================================================================\n\nEvento: Orden de movimiento\n\n===========================================================================\n\n**_>:** `Pruebas/Reworks/movecast_viejo.j`",
+      "sortText": "1_func_OnMoveOrder",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\movecast_viejo.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnSpellOrderPoint",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnSpellOrderPoint takes nothing returns boolean\n```\n\n\n---\n\n===========================================================================\n\nEvento: Orden de hechizo (POINT ORDER)\n\n===========================================================================\n\n**_>:** `Pruebas/Reworks/movecast_viejo.j`",
+      "sortText": "1_func_OnSpellOrderPoint",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\movecast_viejo.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnSpellOrderTarget",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnSpellOrderTarget takes nothing returns boolean\n```\n\n\n---\n\n===========================================================================\n\nEvento: Orden de hechizo (TARGET ORDER)\n\n===========================================================================\n\n**_>:** `Pruebas/Reworks/movecast_viejo.j`",
+      "sortText": "1_func_OnSpellOrderTarget",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\movecast_viejo.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnSpellEffect",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnSpellEffect takes nothing returns boolean\n```\n\n\n---\n\n===========================================================================\n\nEvento: Efecto de hechizo (para verificar channeling)\n\n===========================================================================\n\n**_>:** `Pruebas/Reworks/movecast_viejo.j`",
+      "sortText": "1_func_OnSpellEffect",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\movecast_viejo.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnSpellEndCast",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnSpellEndCast takes nothing returns boolean\n```\n\n\n---\n\n===========================================================================\n\nEvento: Fin de hechizo\n\n===========================================================================\n\n**_>:** `Pruebas/Reworks/movecast_viejo.j`",
+      "sortText": "1_func_OnSpellEndCast",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\movecast_viejo.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnStopOrder",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnStopOrder takes nothing returns boolean\n```\n\n\n---\n\n===========================================================================\n\nEvento: Orden de detener\n\n===========================================================================\n\n**_>:** `Pruebas/Reworks/movecast_viejo.j`",
+      "sortText": "1_func_OnStopOrder",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\movecast_viejo.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnUnitDeath",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnUnitDeath takes nothing returns boolean\n```\n\n\n---\n\n===========================================================================\n\nEvento: Muerte\n\n===========================================================================\n\n**_>:** `Pruebas/Reworks/movecast_viejo.j`",
+      "sortText": "1_func_OnUnitDeath",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\movecast_viejo.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n---\n\n===========================================================================\n\nInicialización\n\n===========================================================================\n\n**_>:** `Pruebas/Reworks/movecast_viejo.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\movecast_viejo.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1776550709575
+}

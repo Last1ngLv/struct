@@ -1,0 +1,879 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+  "items": [
+    {
+      "label": "WAVE_DEBUG_ENABLED",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant boolean WAVE_DEBUG_ENABLED\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "2_var_WAVE_DEBUG_ENABLED",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_DEBUG_PREFIX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string WAVE_DEBUG_PREFIX\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "2_var_WAVE_DEBUG_PREFIX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveByUnit",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable WaveByUnit\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "2_var_WaveByUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveByTimer",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable WaveByTimer\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "2_var_WaveByTimer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "SlotByUnit",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable SlotByUnit\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "2_var_SlotByUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveByBoard",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable WaveByBoard\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "2_var_WaveByBoard",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "ExternalIsBoss",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable ExternalIsBoss\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "2_var_ExternalIsBoss",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveActiveUnitByKey",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable WaveActiveUnitByKey\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "2_var_WaveActiveUnitByKey",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveActivePosByUnit",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable WaveActivePosByUnit\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "2_var_WaveActivePosByUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveAffiliateWaveByUnit",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable WaveAffiliateWaveByUnit\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "2_var_WaveAffiliateWaveByUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveAffiliateModeByUnit",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable WaveAffiliateModeByUnit\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "2_var_WaveAffiliateModeByUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveExternalOwnerPidByUnit",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable WaveExternalOwnerPidByUnit\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "2_var_WaveExternalOwnerPidByUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveExternalSpawnFxByUnit",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable WaveExternalSpawnFxByUnit\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "2_var_WaveExternalSpawnFxByUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_MAX_SLOTS",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_MAX_SLOTS\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "2_var_WAVE_MAX_SLOTS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_MAX_POINTS",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_MAX_POINTS\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "2_var_WAVE_MAX_POINTS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_MAX_NEAR_UNITS",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_MAX_NEAR_UNITS\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "2_var_WAVE_MAX_NEAR_UNITS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_TRACKED_PLAYER_SLOTS",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_TRACKED_PLAYER_SLOTS\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "2_var_WAVE_TRACKED_PLAYER_SLOTS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_ACTIVE_STRIDE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_ACTIVE_STRIDE\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "2_var_WAVE_ACTIVE_STRIDE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_DEFAULT_OWNER_MIN",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_DEFAULT_OWNER_MIN\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "2_var_WAVE_DEFAULT_OWNER_MIN",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_DEFAULT_OWNER_MAX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_DEFAULT_OWNER_MAX\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "2_var_WAVE_DEFAULT_OWNER_MAX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "FX_MAX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer FX_MAX\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "2_var_FX_MAX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "FX_UnitIn",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring array FX_UnitIn\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "2_var_FX_UnitIn",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "FX_UnitOut",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring array FX_UnitOut\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "2_var_FX_UnitOut",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveEvtStart",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ntrigger WaveEvtStart\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "2_var_WaveEvtStart",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveEvtPause",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ntrigger WaveEvtPause\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "2_var_WaveEvtPause",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveEvtResume",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ntrigger WaveEvtResume\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "2_var_WaveEvtResume",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveEvtFinish",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ntrigger WaveEvtFinish\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "2_var_WaveEvtFinish",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveEvtSpawn",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ntrigger WaveEvtSpawn\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "2_var_WaveEvtSpawn",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveEvtDeath",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ntrigger WaveEvtDeath\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "2_var_WaveEvtDeath",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveEvtExternal",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ntrigger WaveEvtExternal\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "2_var_WaveEvtExternal",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveEventWaveId",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger WaveEventWaveId\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "2_var_WaveEventWaveId",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveEventUnit",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nunit WaveEventUnit\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "2_var_WaveEventUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveEventKiller",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nunit WaveEventKiller\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "2_var_WaveEventKiller",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveEventSlotId",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger WaveEventSlotId\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "2_var_WaveEventSlotId",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveEventIsBoss",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean WaveEventIsBoss\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "2_var_WaveEventIsBoss",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveEventIsExternal",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean WaveEventIsExternal\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "2_var_WaveEventIsExternal",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveTokenSeed",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger WaveTokenSeed\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "2_var_WaveTokenSeed",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "CurrentBoardContext",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nmultiboard CurrentBoardContext\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "2_var_CurrentBoardContext",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WavePushEventContext",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WavePushEventContext takes integer w, unit u, unit killer, integer s, boolean isBoss, boolean isExternal returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "1_func_WavePushEventContext",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveClearEventContext",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveClearEventContext takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "1_func_WaveClearEventContext",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveDebugBoolToInt",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveDebugBoolToInt takes boolean b returns integer\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "1_func_WaveDebugBoolToInt",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveDebugUnitSummary",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveDebugUnitSummary takes unit u returns string\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "1_func_WaveDebugUnitSummary",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveDebugLog",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveDebugLog takes string msg returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "1_func_WaveDebugLog",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveDeathDebugContextSummary",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveDeathDebugContextSummary takes nothing returns string\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "1_func_WaveDeathDebugContextSummary",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveExecEvent",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveExecEvent takes trigger t returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "1_func_WaveExecEvent",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveFireStart",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveFireStart takes integer w returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "1_func_WaveFireStart",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveFirePause",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveFirePause takes integer w returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "1_func_WaveFirePause",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveFireResume",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveFireResume takes integer w returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "1_func_WaveFireResume",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveFireFinish",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveFireFinish takes integer w returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "1_func_WaveFireFinish",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveFireSpawn",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveFireSpawn takes integer w, unit u, integer s, boolean isBoss, boolean isExternal returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "1_func_WaveFireSpawn",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveFireDeath",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveFireDeath takes integer w, unit u, unit killer, integer s, boolean isBoss, boolean isExternal returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "1_func_WaveFireDeath",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveFireExternal",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveFireExternal takes integer w, unit u, integer s, boolean isBoss, boolean isExternal returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "1_func_WaveFireExternal",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveCountPlayingUsers",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveCountPlayingUsers takes nothing returns integer\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "1_func_WaveCountPlayingUsers",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveHandleAffiliateDeath",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveHandleAffiliateDeath takes integer hid returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "1_func_WaveHandleAffiliateDeath",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Wave_onTick",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Wave_onTick takes nothing returns nothing\n```\n\n\n---\n\n==================================================\n\nCallback del timer\n\n==================================================\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "1_func_Wave_onTick",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "PendingSpawn_execute",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction PendingSpawn_execute takes nothing returns nothing\n```\n\n\n---\n\n==================================================\n\nSpawn\n\n==================================================\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "1_func_PendingSpawn_execute",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveSlot",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct WaveSlot\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "1_struct_WaveSlot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "PendingSpawn",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct PendingSpawn\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "1_struct_PendingSpawn",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "Wave",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct Wave\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "1_struct_Wave",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "GetWaveEventWave",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetWaveEventWave takes nothing returns Wave\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "1_func_GetWaveEventWave",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetWaveEventUnit",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetWaveEventUnit takes nothing returns unit\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "1_func_GetWaveEventUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetWaveEventKiller",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetWaveEventKiller takes nothing returns unit\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "1_func_GetWaveEventKiller",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetWaveEventSlot",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetWaveEventSlot takes nothing returns WaveSlot\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "1_func_GetWaveEventSlot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "IsWaveEventBoss",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction IsWaveEventBoss takes nothing returns boolean\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "1_func_IsWaveEventBoss",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "IsWaveEventExternal",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction IsWaveEventExternal takes nothing returns boolean\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "1_func_IsWaveEventExternal",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetWaveSlotByUnit",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetWaveSlotByUnit takes unit u returns WaveSlot\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "1_func_GetWaveSlotByUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "IsWaveManagedUnit",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction IsWaveManagedUnit takes unit u returns boolean\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "1_func_IsWaveManagedUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "RegisterWaveStartEvent",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction RegisterWaveStartEvent takes code c returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "1_func_RegisterWaveStartEvent",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "RegisterWavePauseEvent",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction RegisterWavePauseEvent takes code c returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "1_func_RegisterWavePauseEvent",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "RegisterWaveResumeEvent",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction RegisterWaveResumeEvent takes code c returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "1_func_RegisterWaveResumeEvent",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "RegisterWaveFinishEvent",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction RegisterWaveFinishEvent takes code c returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "1_func_RegisterWaveFinishEvent",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "RegisterWaveSpawnEvent",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction RegisterWaveSpawnEvent takes code c returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "1_func_RegisterWaveSpawnEvent",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "RegisterWaveDeathEvent",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction RegisterWaveDeathEvent takes code c returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "1_func_RegisterWaveDeathEvent",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "RegisterWaveExternalEvent",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction RegisterWaveExternalEvent takes code c returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "1_func_RegisterWaveExternalEvent",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "PauseWave",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction PauseWave takes Wave w returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "1_func_PauseWave",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "ResumeWave",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ResumeWave takes Wave w returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "1_func_ResumeWave",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "BindWaveToUnitDeath",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction BindWaveToUnitDeath takes Wave w, unit anchor, boolean forceKillOnDeath returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "1_func_BindWaveToUnitDeath",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "UnbindWaveFromUnitDeath",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction UnbindWaveFromUnitDeath takes Wave w returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "1_func_UnbindWaveFromUnitDeath",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TerminateWaveInstanceGraceful",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction TerminateWaveInstanceGraceful takes integer waveId returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "1_func_TerminateWaveInstanceGraceful",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TerminateWaveInstanceForceKill",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction TerminateWaveInstanceForceKill takes integer waveId returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "1_func_TerminateWaveInstanceForceKill",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "BindWaveInstanceToUnitDeath",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction BindWaveInstanceToUnitDeath takes integer waveId, unit anchor, boolean forceKillOnDeath returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "1_func_BindWaveInstanceToUnitDeath",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "UnbindWaveInstanceFromUnitDeath",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction UnbindWaveInstanceFromUnitDeath takes integer waveId returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "1_func_UnbindWaveInstanceFromUnitDeath",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "InitFX",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction InitFX takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "1_func_InitFX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnUnitDeath",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnUnitDeath takes nothing returns nothing\n```\n\n\n---\n\n==================================================\n\nTrigger de muerte\n\n==================================================\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "1_func_OnUnitDeath",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "registerExternalUnit",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction registerExternalUnit takes unit source, unit summoned, boolean isBoss returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "1_func_registerExternalUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetWaveByUnit",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetWaveByUnit takes unit u returns Wave\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "1_func_GetWaveByUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveIsDefaultOwnerPlayerId",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveIsDefaultOwnerPlayerId takes integer pid returns boolean\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "1_func_WaveIsDefaultOwnerPlayerId",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveGetDefaultOwnerCount",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveGetDefaultOwnerCount takes nothing returns integer\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "1_func_WaveGetDefaultOwnerCount",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveGetSpawnFxIdForUnit",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveGetSpawnFxIdForUnit takes unit u returns integer\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "1_func_WaveGetSpawnFxIdForUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveCanSpawnUnitFromDefaultOwnerPid",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveCanSpawnUnitFromDefaultOwnerPid takes unit source, integer pid returns boolean\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "1_func_WaveCanSpawnUnitFromDefaultOwnerPid",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveSpawnUnitFromDefaultOwnerPid",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveSpawnUnitFromDefaultOwnerPid takes unit source, integer unitTypeId, integer pid, real x, real y returns unit\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "1_func_WaveSpawnUnitFromDefaultOwnerPid",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveSpawnUnitFromDefaultOwners",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveSpawnUnitFromDefaultOwners takes unit source, integer unitTypeId, real x, real y returns unit\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "1_func_WaveSpawnUnitFromDefaultOwners",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveGetPointCount",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveGetPointCount takes Wave w returns integer\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "1_func_WaveGetPointCount",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveGetPointX",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveGetPointX takes Wave w, integer pointIndex returns real\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "1_func_WaveGetPointX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveGetPointY",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveGetPointY takes Wave w, integer pointIndex returns real\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "1_func_WaveGetPointY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "DistanceBetweenCoords",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction DistanceBetweenCoords takes real x1, real y1, real x2, real y2 returns real\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "1_func_DistanceBetweenCoords",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n---\n\n==================================================\n\nInit\n\n==================================================\n\n**_>:** `WaveSysAnAI/SwlsWave/SwlsWave.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1776550709641
+}

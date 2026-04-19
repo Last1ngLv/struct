@@ -1,0 +1,303 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveWaveformSkills.j",
+  "items": [
+    {
+      "label": "WAVE_HWT3_UNIT_ID",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_HWT3_UNIT_ID\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveWaveformSkills.j`",
+      "sortText": "2_var_WAVE_HWT3_UNIT_ID",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveWaveformSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HWT3_BOSS_UNIT_ID",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_HWT3_BOSS_UNIT_ID\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveWaveformSkills.j`",
+      "sortText": "2_var_WAVE_HWT3_BOSS_UNIT_ID",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveWaveformSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HWT3_IMPACT_FX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string WAVE_HWT3_IMPACT_FX\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveWaveformSkills.j`",
+      "sortText": "2_var_WAVE_HWT3_IMPACT_FX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveWaveformSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HWT3_TRAIL_FX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string WAVE_HWT3_TRAIL_FX\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveWaveformSkills.j`",
+      "sortText": "2_var_WAVE_HWT3_TRAIL_FX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveWaveformSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HWT3_TRAIL_INTERVAL",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HWT3_TRAIL_INTERVAL\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveWaveformSkills.j`",
+      "sortText": "2_var_WAVE_HWT3_TRAIL_INTERVAL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveWaveformSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HWT3_SPEED",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HWT3_SPEED\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveWaveformSkills.j`",
+      "sortText": "2_var_WAVE_HWT3_SPEED",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveWaveformSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HWT3_INITIAL_DELAY_MIN",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HWT3_INITIAL_DELAY_MIN\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveWaveformSkills.j`",
+      "sortText": "2_var_WAVE_HWT3_INITIAL_DELAY_MIN",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveWaveformSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HWT3_INITIAL_DELAY_MAX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HWT3_INITIAL_DELAY_MAX\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveWaveformSkills.j`",
+      "sortText": "2_var_WAVE_HWT3_INITIAL_DELAY_MAX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveWaveformSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HWT3_COOLDOWN_MIN",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HWT3_COOLDOWN_MIN\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveWaveformSkills.j`",
+      "sortText": "2_var_WAVE_HWT3_COOLDOWN_MIN",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveWaveformSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HWT3_COOLDOWN_MAX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HWT3_COOLDOWN_MAX\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveWaveformSkills.j`",
+      "sortText": "2_var_WAVE_HWT3_COOLDOWN_MAX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveWaveformSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HWT3_AOE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HWT3_AOE\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveWaveformSkills.j`",
+      "sortText": "2_var_WAVE_HWT3_AOE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveWaveformSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HWT3_DAMAGE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HWT3_DAMAGE\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveWaveformSkills.j`",
+      "sortText": "2_var_WAVE_HWT3_DAMAGE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveWaveformSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HWT3_BOSS_INITIAL_DELAY_MIN",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HWT3_BOSS_INITIAL_DELAY_MIN\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveWaveformSkills.j`",
+      "sortText": "2_var_WAVE_HWT3_BOSS_INITIAL_DELAY_MIN",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveWaveformSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HWT3_BOSS_INITIAL_DELAY_MAX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HWT3_BOSS_INITIAL_DELAY_MAX\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveWaveformSkills.j`",
+      "sortText": "2_var_WAVE_HWT3_BOSS_INITIAL_DELAY_MAX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveWaveformSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HWT3_BOSS_COOLDOWN_MIN",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HWT3_BOSS_COOLDOWN_MIN\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveWaveformSkills.j`",
+      "sortText": "2_var_WAVE_HWT3_BOSS_COOLDOWN_MIN",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveWaveformSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HWT3_BOSS_COOLDOWN_MAX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HWT3_BOSS_COOLDOWN_MAX\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveWaveformSkills.j`",
+      "sortText": "2_var_WAVE_HWT3_BOSS_COOLDOWN_MAX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveWaveformSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HWT3_BOSS_AOE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HWT3_BOSS_AOE\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveWaveformSkills.j`",
+      "sortText": "2_var_WAVE_HWT3_BOSS_AOE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveWaveformSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HWT3_BOSS_DAMAGE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HWT3_BOSS_DAMAGE\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveWaveformSkills.j`",
+      "sortText": "2_var_WAVE_HWT3_BOSS_DAMAGE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveWaveformSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveWaveformNextCastMs",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable WaveWaveformNextCastMs\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveWaveformSkills.j`",
+      "sortText": "2_var_WaveWaveformNextCastMs",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveWaveformSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveWaveformActiveMissileByUnit",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable WaveWaveformActiveMissileByUnit\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveWaveformSkills.j`",
+      "sortText": "2_var_WaveWaveformActiveMissileByUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveWaveformSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveWaveformMissileAoe",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array WaveWaveformMissileAoe\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveWaveformSkills.j`",
+      "sortText": "2_var_WaveWaveformMissileAoe",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveWaveformSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveWaveformMissileDamage",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array WaveWaveformMissileDamage\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveWaveformSkills.j`",
+      "sortText": "2_var_WaveWaveformMissileDamage",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveWaveformSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveWaveformMissileTrailElapsed",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array WaveWaveformMissileTrailElapsed\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveWaveformSkills.j`",
+      "sortText": "2_var_WaveWaveformMissileTrailElapsed",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveWaveformSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveWaveformSecToMs",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveWaveformSecToMs takes real sec returns integer\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveWaveformSkills.j`",
+      "sortText": "1_func_WaveWaveformSecToMs",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveWaveformSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveWaveformRandomMsRange",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveWaveformRandomMsRange takes real minSec, real maxSec returns integer\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveWaveformSkills.j`",
+      "sortText": "1_func_WaveWaveformRandomMsRange",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveWaveformSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveWaveformUnitAlive",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveWaveformUnitAlive takes unit u returns boolean\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveWaveformSkills.j`",
+      "sortText": "1_func_WaveWaveformUnitAlive",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveWaveformSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveWaveformCreateImpactFx",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveWaveformCreateImpactFx takes real x, real y returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveWaveformSkills.j`",
+      "sortText": "1_func_WaveWaveformCreateImpactFx",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveWaveformSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveWaveformCanDamage",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveWaveformCanDamage takes Missile missile, unit target returns boolean\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveWaveformSkills.j`",
+      "sortText": "1_func_WaveWaveformCanDamage",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveWaveformSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveWaveformMissile",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct WaveWaveformMissile extends array\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveWaveformSkills.j`",
+      "sortText": "1_struct_WaveWaveformMissile",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveWaveformSkills.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "WaveWaveformLaunch",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveWaveformLaunch takes unit source, real tx, real ty, real aoe, real damage returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveWaveformSkills.j`",
+      "sortText": "1_func_WaveWaveformLaunch",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveWaveformSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveWaveformCleanupWaveDeath",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveWaveformCleanupWaveDeath takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveWaveformSkills.j`",
+      "sortText": "1_func_WaveWaveformCleanupWaveDeath",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveWaveformSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveWaveformSkillsTryExecute",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveWaveformSkillsTryExecute takes unit source, unit target, integer nowMs returns boolean\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveWaveformSkills.j`",
+      "sortText": "1_func_WaveWaveformSkillsTryExecute",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveWaveformSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveWaveformSkills.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveWaveformSkills.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1776555823472
+}

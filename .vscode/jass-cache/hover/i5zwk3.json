@@ -1,0 +1,21 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileCore.j",
+  "items": [
+    {
+      "symbolName": "WaveProjectileTypeByMissile",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileCore.j",
+      "content": "\n```jass\ninteger array WaveProjectileTypeByMissile\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveProjectileCore.j`"
+    },
+    {
+      "symbolName": "WaveProjectileStruct",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileCore.j",
+      "content": "\n```jass\nstruct WaveProjectileStruct extends array\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveProjectileCore.j`"
+    },
+    {
+      "symbolName": "WaveProjectileDamageByMissile",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileCore.j",
+      "content": "\n```jass\nreal array WaveProjectileDamageByMissile\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveProjectileCore.j`"
+    }
+  ],
+  "timestamp": 1775248292288
+}

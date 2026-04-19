@@ -1,0 +1,24 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\ExampleAdvance\\Setups\\AcquireItem.j",
+  "items": [
+    {
+      "label": "Actions",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Actions takes nothing returns nothing\n```\n\n\n**_>:** `Pruebas/ExampleAdvance/Setups/AcquireItem.j`",
+      "sortText": "1_func_Actions",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\ExampleAdvance\\Setups\\AcquireItem.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n---\n\n===========================================================================\n\n**_>:** `Pruebas/ExampleAdvance/Setups/AcquireItem.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\ExampleAdvance\\Setups\\AcquireItem.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1776550709462
+}

@@ -1,0 +1,123 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Mountain King\\Fist of Thunder.j",
+  "items": [
+    {
+      "label": "GetSlamCollisionSize",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetSlamCollisionSize takes integer level returns real\n```\n\n\n---\n\n*  Set the slam collision size.\n\n**_>:** `Pruebas/MissileExamples/Mountain King/Fist of Thunder.j`",
+      "sortText": "1_func_GetSlamCollisionSize",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Mountain King\\Fist of Thunder.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetSlamDamage",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetSlamDamage takes integer level returns real\n```\n\n\n---\n\n*  Set the damage dealt on slam.\n\n**_>:** `Pruebas/MissileExamples/Mountain King/Fist of Thunder.j`",
+      "sortText": "1_func_GetSlamDamage",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Mountain King\\Fist of Thunder.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetMissileFlyDistance",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetMissileFlyDistance takes integer level returns real\n```\n\n\n---\n\n*  Set the travel distance for each missile.\n\n**_>:** `Pruebas/MissileExamples/Mountain King/Fist of Thunder.j`",
+      "sortText": "1_func_GetMissileFlyDistance",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Mountain King\\Fist of Thunder.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetMissileCount",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetMissileCount takes integer level returns integer\n```\n\n\n---\n\n*  Set the amount of Missiles based on the ability level.\n\n**_>:** `Pruebas/MissileExamples/Mountain King/Fist of Thunder.j`",
+      "sortText": "1_func_GetMissileCount",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Mountain King\\Fist of Thunder.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "FilterUnits",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction FilterUnits takes unit target, player owner returns boolean\n```\n\n\n---\n\n*  Filter valid target units.\n\n**_>:** `Pruebas/MissileExamples/Mountain King/Fist of Thunder.j`",
+      "sortText": "1_func_FilterUnits",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Mountain King\\Fist of Thunder.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "CustomizeMissile",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction CustomizeMissile takes Missile missile, integer level returns nothing\n```\n\n\n---\n\n*  Customize all missile members to your needs.\n\n**_>:** `Pruebas/MissileExamples/Mountain King/Fist of Thunder.j`",
+      "sortText": "1_func_CustomizeMissile",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Mountain King\\Fist of Thunder.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "RunOnSlamEffects",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction RunOnSlamEffects takes unit source, real slamX, real slamY returns nothing\n```\n\n\n---\n\n*  These effects run on spell effect event.  Customize them to your needs.\n\n**_>:** `Pruebas/MissileExamples/Mountain King/Fist of Thunder.j`",
+      "sortText": "1_func_RunOnSlamEffects",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Mountain King\\Fist of Thunder.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "RunOnCollideEffects",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction RunOnCollideEffects takes unit source, unit hit returns nothing\n```\n\n\n---\n\n*  These effects run when a missile ( source ) collides with a unit ( hit )\n\n**_>:** `Pruebas/MissileExamples/Mountain King/Fist of Thunder.j`",
+      "sortText": "1_func_RunOnCollideEffects",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Mountain King\\Fist of Thunder.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "FistOfThunder",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct FistOfThunder extends array\n```\n\n\n---\n\n========================================================================\n\n*  Fist of Thunder code. Make changes carefully.\n\n========================================================================\n\n*  Uses Missile's API. For a destructable enum, add .onDestructable and .onDestructableFilter.\n\n**_>:** `Pruebas/MissileExamples/Mountain King/Fist of Thunder.j`",
+      "sortText": "1_struct_FistOfThunder",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Mountain King\\Fist of Thunder.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "Callback",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Callback takes nothing returns nothing\n```\n\n\n**_>:** `Pruebas/MissileExamples/Mountain King/Fist of Thunder.j`",
+      "sortText": "1_func_Callback",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Mountain King\\Fist of Thunder.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "CreateMissiles",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction CreateMissiles takes unit source, player user, real x, real y, integer level returns nothing\n```\n\n\n**_>:** `Pruebas/MissileExamples/Mountain King/Fist of Thunder.j`",
+      "sortText": "1_func_CreateMissiles",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Mountain King\\Fist of Thunder.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnEffect",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnEffect takes nothing returns nothing\n```\n\n\n**_>:** `Pruebas/MissileExamples/Mountain King/Fist of Thunder.j`",
+      "sortText": "1_func_OnEffect",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Mountain King\\Fist of Thunder.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**_>:** `Pruebas/MissileExamples/Mountain King/Fist of Thunder.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Mountain King\\Fist of Thunder.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1776550709544
+}

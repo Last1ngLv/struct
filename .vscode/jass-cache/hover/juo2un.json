@@ -1,0 +1,171 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+  "items": [
+    {
+      "symbolName": "user",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nUser user\n```\n\n\n**所属:** `Client`\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "HERO_NAME_X",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nstatic constant real HERO_NAME_X\n```\n\n\n**所属:** `Client`\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "show",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nmethod show takes boolean flag, Camera cam returns nothing\n```\n\n\n**所属:** `Client`\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "camera",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nCamera camera\n```\n\n\n**所属:** `Client`\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "Client",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nstruct Client\n```\n\n\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "HERO_NAME_Y",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nstatic constant real HERO_NAME_Y\n```\n\n\n**所属:** `Client`\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "unit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nunit unit\n```\n\n\n**所属:** `Client`\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "MAX_SLOTS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nstatic constant integer MAX_SLOTS\n```\n\n\n**所属:** `Client`\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "getButton",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nmethod getButton takes integer index returns UIButton\n```\n\n\n**所属:** `Client`\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "create",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nstatic method create takes unit u returns thistype\n```\n\n\n**所属:** `Client`\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "SLOT_WIDTH",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nstatic constant real SLOT_WIDTH\n```\n\n\n**所属:** `Client`\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "displayed",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nreadonly boolean displayed\n```\n\n\n**所属:** `Client`\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "destroy",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nmethod destroy takes nothing returns nothing\n```\n\n\n**所属:** `Client`\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "onInit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nmethod onInit takes nothing returns nothing\n```\n\n\n**所属:** `Client`\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "SLOT_OFFSET_Y",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nstatic constant real SLOT_OFFSET_Y\n```\n\n\n**所属:** `Client`\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "SLOT_HEIGHT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nstatic constant real SLOT_HEIGHT\n```\n\n\n**所属:** `Client`\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "setButton",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nmethod setButton takes integer index, UIButton value returns nothing\n```\n\n\n**所属:** `Client`\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "WINDOW_SIZE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nstatic constant real WINDOW_SIZE\n```\n\n\n**所属:** `Client`\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "CHARMODEL_OFFSET_X",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nstatic constant real CHARMODEL_OFFSET_X\n```\n\n\n**所属:** `Client`\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "WaveStatusText",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nstring array WaveStatusText\n```\n\n\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "HERO_WINDOW_NAME",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nfunction HERO_WINDOW_NAME takes unit u returns string\n```\n\n\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "charModel",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nUIPicture charModel\n```\n\n\n**所属:** `Client`\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "WaveEnemyPreviewText",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nstring array WaveEnemyPreviewText\n```\n\n\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "MenuClientClearEnemyPreviewForActivePlayers",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nfunction MenuClientClearEnemyPreviewForActivePlayers takes nothing returns nothing\n```\n\n\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "MenuClientRefreshEnemyPreviewForActivePlayers",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nfunction MenuClientRefreshEnemyPreviewForActivePlayers takes integer waveId returns nothing\n```\n\n\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "CHARMODEL_OFFSET_Y",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nstatic constant real CHARMODEL_OFFSET_Y\n```\n\n\n**所属:** `Client`\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "Initialized",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nstatic readonly boolean Initialized\n```\n\n\n---\n\nend config\n\n**所属:** `Client`\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "UpdateTimer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nstatic readonly timer UpdateTimer\n```\n\n\n**所属:** `Client`\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "onDisplay",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nmethod onDisplay takes nothing returns nothing\n```\n\n\n**所属:** `Client`\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "PlayerCurrentUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nstatic readonly unit array PlayerCurrentUnit\n```\n\n\n**所属:** `Client`\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "EnsureMenuCameraSettings",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nfunction EnsureMenuCameraSettings takes integer pid returns nothing\n```\n\n\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "PlayerMenuHealthBarPreSelect",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nboolean array PlayerMenuHealthBarPreSelect\n```\n\n\n**文件:** `UI System/MyIU/MenuClient.j`"
+    }
+  ],
+  "timestamp": 1776566624423
+}

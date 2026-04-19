@@ -1,0 +1,24 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Damage Text Util.j",
+  "items": [
+    {
+      "label": "FormatLoadoutDamageText",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction FormatLoadoutDamageText takes real amount returns string\n```\n\n\n**_>:** `libraries/Damage Text Util.j`",
+      "sortText": "1_func_FormatLoadoutDamageText",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Damage Text Util.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "ShowCustomLoadoutText",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ShowCustomLoadoutText takes unit target, string msg, integer r, integer g, integer b returns nothing\n```\n\n\n**_>:** `libraries/Damage Text Util.j`",
+      "sortText": "1_func_ShowCustomLoadoutText",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Damage Text Util.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1776550709214
+}

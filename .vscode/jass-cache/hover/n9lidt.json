@@ -1,0 +1,71 @@
+{
+  "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\blizzard.j",
+  "items": [
+    {
+      "symbolName": "SetForceAllianceStateBJ",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\blizzard.j",
+      "content": "\n```jass\nfunction SetForceAllianceStateBJ takes force sourceForce, force targetForce, integer allianceState returns nothing\n```\n\n\n---\n\n设置玩家组联盟状态\n\nSet the alliance states for an entire force towards another force.\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\blizzard.j`"
+    },
+    {
+      "symbolName": "SetTimeOfDay",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\blizzard.j",
+      "content": "\n```jass\nfunction SetTimeOfDay takes real whatTime returns nothing\n```\n\n\n---\n\n设置游戏的时间（夜晚白昼，24小时制，精确到分）\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\blizzard.j`"
+    },
+    {
+      "symbolName": "ModifyGateBJ",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\blizzard.j",
+      "content": "\n```jass\nfunction ModifyGateBJ takes integer gateOperation, destructable d returns nothing\n```\n\n\n---\n\n打开/关闭/破坏 门\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\blizzard.j`"
+    },
+    {
+      "symbolName": "bj_GATEOPERATION_OPEN",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\blizzard.j",
+      "content": "\n```jass\nconstant integer bj_GATEOPERATION_OPEN\n```\n\n\n---\n\n操作可破坏物 开启门\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\blizzard.j`"
+    },
+    {
+      "symbolName": "CreateFogModifierRectBJ",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\blizzard.j",
+      "content": "\n```jass\nfunction CreateFogModifierRectBJ takes boolean enabled, player whichPlayer, fogstate whichFogState, rect r returns fogmodifier\n```\n\n\n---\n\n启用可见度修正器(矩形区域)\n\nVersion of CreateFogModifierRect that assumes use of sharedVision and\n\ngives the option of immediately enabling the modifier, so that triggers\n\ncan default to modifiers that are immediately enabled.\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\blizzard.j`"
+    },
+    {
+      "symbolName": "bj_FORCE_PLAYER",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\blizzard.j",
+      "content": "\n```jass\nforce array bj_FORCE_PLAYER\n```\n\n\n---\n\n玩家组（数组）\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\blizzard.j`"
+    },
+    {
+      "symbolName": "bj_PLAYER_NEUTRAL_EXTRA",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\blizzard.j",
+      "content": "\n```jass\nconstant integer bj_PLAYER_NEUTRAL_EXTRA\n```\n\n\n---\n\n中立特殊玩家编号（14/26，以1.29区分）\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\blizzard.j`"
+    },
+    {
+      "symbolName": "CustomVictoryBJ",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\blizzard.j",
+      "content": "\n```jass\nfunction CustomVictoryBJ takes player whichPlayer, boolean showDialog, boolean showScores returns nothing\n```\n\n\n---\n\n游戏胜利（自定义地图/战役）\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\blizzard.j`"
+    },
+    {
+      "symbolName": "TriggerRegisterTimerEventSingle",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\blizzard.j",
+      "content": "\n```jass\nfunction TriggerRegisterTimerEventSingle takes trigger trig, real timeout returns event\n```\n\n\n---\n\n游戏逝去的时间(游戏开始N秒)事件\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\blizzard.j`"
+    },
+    {
+      "symbolName": "BJDebugMsg",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\blizzard.j",
+      "content": "\n```jass\nfunction BJDebugMsg takes string msg returns nothing\n```\n\n\n---\n\n***************************************************************************\n\n*\n\n*  Debugging Functions\n\n*\n\n***************************************************************************\n\n显示调试文本[C]\n\n**Parameters:**\n- **`msg`**: 文本内容\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\blizzard.j`"
+    },
+    {
+      "symbolName": "bj_lastCreatedFogModifier",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\blizzard.j",
+      "content": "\n```jass\nfogmodifier bj_lastCreatedFogModifier\n```\n\n\n---\n\n最后创建的可见度修正器\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\blizzard.j`"
+    },
+    {
+      "symbolName": "bj_RADTODEG",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\blizzard.j",
+      "content": "\n```jass\nconstant real bj_RADTODEG\n```\n\n\n---\n\n弧角转换系数（弧度转换成角度）\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\blizzard.j`"
+    },
+    {
+      "symbolName": "bj_MAX_PLAYER_SLOTS",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\blizzard.j",
+      "content": "\n```jass\nconstant integer bj_MAX_PLAYER_SLOTS\n```\n\n\n---\n\n玩家槽数量上限（共16/28位，包含所有中立玩家，以1.29区分）\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\blizzard.j`"
+    }
+  ],
+  "timestamp": 1775671254331
+}

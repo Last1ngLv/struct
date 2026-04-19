@@ -1,0 +1,222 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\StartSelection.j",
+  "items": [
+    {
+      "label": "SPAWN_X",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real SPAWN_X\n```\n\n\n**_>:** `InitMap/StartSelection.j`",
+      "sortText": "2_var_SPAWN_X",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\StartSelection.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "SPAWN_Y",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real SPAWN_Y\n```\n\n\n**_>:** `InitMap/StartSelection.j`",
+      "sortText": "2_var_SPAWN_Y",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\StartSelection.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "START_DELAY",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real START_DELAY\n```\n\n\n**_>:** `InitMap/StartSelection.j`",
+      "sortText": "2_var_START_DELAY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\StartSelection.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "SELECTION_PHASE_TIMEOUT",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real SELECTION_PHASE_TIMEOUT\n```\n\n\n**_>:** `InitMap/StartSelection.j`",
+      "sortText": "2_var_SELECTION_PHASE_TIMEOUT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\StartSelection.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "SELECTION_PHASE_NONE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer SELECTION_PHASE_NONE\n```\n\n\n**_>:** `InitMap/StartSelection.j`",
+      "sortText": "2_var_SELECTION_PHASE_NONE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\StartSelection.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "SELECTION_PHASE_ELEMENT",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer SELECTION_PHASE_ELEMENT\n```\n\n\n**_>:** `InitMap/StartSelection.j`",
+      "sortText": "2_var_SELECTION_PHASE_ELEMENT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\StartSelection.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "SELECTION_PHASE_HERO",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer SELECTION_PHASE_HERO\n```\n\n\n**_>:** `InitMap/StartSelection.j`",
+      "sortText": "2_var_SELECTION_PHASE_HERO",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\StartSelection.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "heroDialog",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ndialog array heroDialog\n```\n\n\n**_>:** `InitMap/StartSelection.j`",
+      "sortText": "2_var_heroDialog",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\StartSelection.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "elementDialog",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ndialog array elementDialog\n```\n\n\n**_>:** `InitMap/StartSelection.j`",
+      "sortText": "2_var_elementDialog",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\StartSelection.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "heroButton",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nbutton array heroButton\n```\n\n\n**_>:** `InitMap/StartSelection.j`",
+      "sortText": "2_var_heroButton",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\StartSelection.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "elementButton",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nbutton array elementButton\n```\n\n\n**_>:** `InitMap/StartSelection.j`",
+      "sortText": "2_var_elementButton",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\StartSelection.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "heroChoice",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array heroChoice\n```\n\n\n**_>:** `InitMap/StartSelection.j`",
+      "sortText": "2_var_heroChoice",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\StartSelection.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "elementChoice",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array elementChoice\n```\n\n\n**_>:** `InitMap/StartSelection.j`",
+      "sortText": "2_var_elementChoice",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\StartSelection.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "heroChosen",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean array heroChosen\n```\n\n\n**_>:** `InitMap/StartSelection.j`",
+      "sortText": "2_var_heroChosen",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\StartSelection.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "elementChosen",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean array elementChosen\n```\n\n\n**_>:** `InitMap/StartSelection.j`",
+      "sortText": "2_var_elementChosen",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\StartSelection.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "finished",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean array finished\n```\n\n\n**_>:** `InitMap/StartSelection.j`",
+      "sortText": "2_var_finished",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\StartSelection.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "totalElementChosen",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger totalElementChosen\n```\n\n\n**_>:** `InitMap/StartSelection.j`",
+      "sortText": "2_var_totalElementChosen",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\StartSelection.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "totalFinished",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger totalFinished\n```\n\n\n**_>:** `InitMap/StartSelection.j`",
+      "sortText": "2_var_totalFinished",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\StartSelection.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "dialogTrig",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ntrigger dialogTrig\n```\n\n\n**_>:** `InitMap/StartSelection.j`",
+      "sortText": "2_var_dialogTrig",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\StartSelection.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "selectionTimer",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ntimer selectionTimer\n```\n\n\n**_>:** `InitMap/StartSelection.j`",
+      "sortText": "2_var_selectionTimer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\StartSelection.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "selectionPhase",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger selectionPhase\n```\n\n\n**_>:** `InitMap/StartSelection.j`",
+      "sortText": "2_var_selectionPhase",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\StartSelection.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "PlayerHero",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nunit array PlayerHero\n```\n\n\n**_>:** `InitMap/StartSelection.j`",
+      "sortText": "2_var_PlayerHero",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\StartSelection.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "PlayerCamera",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nCamera array PlayerCamera\n```\n\n\n**_>:** `InitMap/StartSelection.j`",
+      "sortText": "2_var_PlayerCamera",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\StartSelection.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "SelectionSystem",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct SelectionSystem\n```\n\n\n**_>:** `InitMap/StartSelection.j`",
+      "sortText": "1_struct_SelectionSystem",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\StartSelection.j",
+      "statementType": "StructDeclaration"
+    }
+  ],
+  "timestamp": 1776550709193
+}

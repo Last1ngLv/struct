@@ -1,0 +1,31 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\ExampleAdvance\\Inventory\\InventoryItem.j",
+  "items": [
+    {
+      "symbolName": "Table",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\ExampleAdvance\\Inventory\\InventoryItem.j",
+      "content": "\n```jass\nstatic readonly Table Table\n```\n\n\n**所属:** `InvItem`\n**文件:** `Pruebas/ExampleAdvance/Inventory/InventoryItem.j`"
+    },
+    {
+      "symbolName": "id",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\ExampleAdvance\\Inventory\\InventoryItem.j",
+      "content": "\n```jass\ninteger id\n```\n\n\n**所属:** `InvItem`\n**文件:** `Pruebas/ExampleAdvance/Inventory/InventoryItem.j`"
+    },
+    {
+      "symbolName": "create",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\ExampleAdvance\\Inventory\\InventoryItem.j",
+      "content": "\n```jass\nstatic method create takes nothing returns thistype\n```\n\n\n**所属:** `InvCustomItem`\n**文件:** `Pruebas/ExampleAdvance/Inventory/InventoryItem.j`"
+    },
+    {
+      "symbolName": "onInit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\ExampleAdvance\\Inventory\\InventoryItem.j",
+      "content": "\n```jass\nmethod onInit takes nothing returns nothing\n```\n\n\n**所属:** `InvItem`\n**文件:** `Pruebas/ExampleAdvance/Inventory/InventoryItem.j`"
+    },
+    {
+      "symbolName": "onInit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\ExampleAdvance\\Inventory\\InventoryItem.j",
+      "content": "\n```jass\nstatic method onInit takes nothing returns nothing\n```\n\n\n**所属:** `InvCustomItem`\n**文件:** `Pruebas/ExampleAdvance/Inventory/InventoryItem.j`"
+    }
+  ],
+  "timestamp": 1775421274344
+}

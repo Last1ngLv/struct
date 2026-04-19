@@ -205,7 +205,6 @@ library PreConfi initializer Init requires PlayerUtils, TimerUtils, TenderSystem
         set TargetWave = 1
         set SwlsMultiboard = CreateMultiboard()
         call ShowInitialWaveMultiboard()
-        call ExecuteFunc("StartTenderSoundTracker")
         if InitialBoardTimer == null then
             set InitialBoardTimer = CreateTimer()
             call TimerStart(InitialBoardTimer, 0.10, true, function InitialWaveMultiboardTick)

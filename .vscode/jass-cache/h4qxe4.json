@@ -1,0 +1,798 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+  "items": [
+    {
+      "label": "WAVE_HMPR_UNIT_ID",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_HMPR_UNIT_ID\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "2_var_WAVE_HMPR_UNIT_ID",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMPR_BOSS_UNIT_ID",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_HMPR_BOSS_UNIT_ID\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "2_var_WAVE_HMPR_BOSS_UNIT_ID",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMPR_NORMAL_PASSIVE_ID",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_HMPR_NORMAL_PASSIVE_ID\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "2_var_WAVE_HMPR_NORMAL_PASSIVE_ID",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMPR_BOSS_PASSIVE_ID",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_HMPR_BOSS_PASSIVE_ID\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "2_var_WAVE_HMPR_BOSS_PASSIVE_ID",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_ANY_BOSS_1",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_ANY_BOSS_1\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "2_var_WAVE_ANY_BOSS_1",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_ANY_BOSS_2",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_ANY_BOSS_2\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "2_var_WAVE_ANY_BOSS_2",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_ANY_BOSS_3",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_ANY_BOSS_3\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "2_var_WAVE_ANY_BOSS_3",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_ANY_BOSS_4",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_ANY_BOSS_4\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "2_var_WAVE_ANY_BOSS_4",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_ANY_BOSS_5",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_ANY_BOSS_5\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "2_var_WAVE_ANY_BOSS_5",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_ANY_BOSS_6",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_ANY_BOSS_6\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "2_var_WAVE_ANY_BOSS_6",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_ANY_BOSS_7",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_ANY_BOSS_7\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "2_var_WAVE_ANY_BOSS_7",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_ANY_BOSS_8",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_ANY_BOSS_8\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "2_var_WAVE_ANY_BOSS_8",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_ANY_BOSS_9",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_ANY_BOSS_9\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "2_var_WAVE_ANY_BOSS_9",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMPR_AURA_VISUAL_MODEL",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string WAVE_HMPR_AURA_VISUAL_MODEL\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "2_var_WAVE_HMPR_AURA_VISUAL_MODEL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMPR_BOSS_AURA_VISUAL_MODEL",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string WAVE_HMPR_BOSS_AURA_VISUAL_MODEL\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "2_var_WAVE_HMPR_BOSS_AURA_VISUAL_MODEL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMPR_AURA_RADIUS",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HMPR_AURA_RADIUS\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "2_var_WAVE_HMPR_AURA_RADIUS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMPR_AURA_DURATION",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HMPR_AURA_DURATION\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "2_var_WAVE_HMPR_AURA_DURATION",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMPR_AURA_SCALE_BONUS",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HMPR_AURA_SCALE_BONUS\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "2_var_WAVE_HMPR_AURA_SCALE_BONUS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMPR_INITIAL_DELAY_MIN",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HMPR_INITIAL_DELAY_MIN\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "2_var_WAVE_HMPR_INITIAL_DELAY_MIN",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMPR_INITIAL_DELAY_MAX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HMPR_INITIAL_DELAY_MAX\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "2_var_WAVE_HMPR_INITIAL_DELAY_MAX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMPR_COOLDOWN_MIN",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HMPR_COOLDOWN_MIN\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "2_var_WAVE_HMPR_COOLDOWN_MIN",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMPR_COOLDOWN_MAX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HMPR_COOLDOWN_MAX\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "2_var_WAVE_HMPR_COOLDOWN_MAX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMPR_BOSS_AURA_RADIUS",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HMPR_BOSS_AURA_RADIUS\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "2_var_WAVE_HMPR_BOSS_AURA_RADIUS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMPR_BOSS_AURA_DURATION",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HMPR_BOSS_AURA_DURATION\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "2_var_WAVE_HMPR_BOSS_AURA_DURATION",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMPR_BOSS_AURA_SCALE_BONUS",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HMPR_BOSS_AURA_SCALE_BONUS\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "2_var_WAVE_HMPR_BOSS_AURA_SCALE_BONUS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMPR_BOSS_INITIAL_DELAY_MIN",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HMPR_BOSS_INITIAL_DELAY_MIN\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "2_var_WAVE_HMPR_BOSS_INITIAL_DELAY_MIN",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMPR_BOSS_INITIAL_DELAY_MAX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HMPR_BOSS_INITIAL_DELAY_MAX\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "2_var_WAVE_HMPR_BOSS_INITIAL_DELAY_MAX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMPR_BOSS_COOLDOWN_MIN",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HMPR_BOSS_COOLDOWN_MIN\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "2_var_WAVE_HMPR_BOSS_COOLDOWN_MIN",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMPR_BOSS_COOLDOWN_MAX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HMPR_BOSS_COOLDOWN_MAX\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "2_var_WAVE_HMPR_BOSS_COOLDOWN_MAX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMPR_TICK",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HMPR_TICK\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "2_var_WAVE_HMPR_TICK",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMPR_MEMBER_STRIDE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_HMPR_MEMBER_STRIDE\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "2_var_WAVE_HMPR_MEMBER_STRIDE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMPR_AURA_TYPE_NORMAL",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_HMPR_AURA_TYPE_NORMAL\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "2_var_WAVE_HMPR_AURA_TYPE_NORMAL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMPR_AURA_TYPE_BOSS",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_HMPR_AURA_TYPE_BOSS\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "2_var_WAVE_HMPR_AURA_TYPE_BOSS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMPR_DEBUG",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant boolean WAVE_HMPR_DEBUG\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "2_var_WAVE_HMPR_DEBUG",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMPR_DEBUG_FILE_BATCH",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_HMPR_DEBUG_FILE_BATCH\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "2_var_WAVE_HMPR_DEBUG_FILE_BATCH",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMPR_DEBUG_FILE_FOLDER",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string WAVE_HMPR_DEBUG_FILE_FOLDER\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "2_var_WAVE_HMPR_DEBUG_FILE_FOLDER",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WavePriestNextCastMs",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable WavePriestNextCastMs\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "2_var_WavePriestNextCastMs",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WavePriestActiveAuraByUnit",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable WavePriestActiveAuraByUnit\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "2_var_WavePriestActiveAuraByUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WavePriestBaseScaleByUnit",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable WavePriestBaseScaleByUnit\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "2_var_WavePriestBaseScaleByUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WavePriestNormalOwnerAuraByUnit",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable WavePriestNormalOwnerAuraByUnit\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "2_var_WavePriestNormalOwnerAuraByUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WavePriestBossOwnerAuraByUnit",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable WavePriestBossOwnerAuraByUnit\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "2_var_WavePriestBossOwnerAuraByUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WavePriestMemberUnitByKey",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable WavePriestMemberUnitByKey\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "2_var_WavePriestMemberUnitByKey",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WavePriestMemberHidByKey",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable WavePriestMemberHidByKey\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "2_var_WavePriestMemberHidByKey",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WavePriestTimer",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ntimer WavePriestTimer\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "2_var_WavePriestTimer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WavePriestTimerRunning",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean WavePriestTimerRunning\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "2_var_WavePriestTimerRunning",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WavePriestHead",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger WavePriestHead\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "2_var_WavePriestHead",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WavePriestCount",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger WavePriestCount\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "2_var_WavePriestCount",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WavePriestNext",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array WavePriestNext\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "2_var_WavePriestNext",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WavePriestPrev",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array WavePriestPrev\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "2_var_WavePriestPrev",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WavePriestAuraType",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array WavePriestAuraType\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "2_var_WavePriestAuraType",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WavePriestMemberCount",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array WavePriestMemberCount\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "2_var_WavePriestMemberCount",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WavePriestSource",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nunit array WavePriestSource\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "2_var_WavePriestSource",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WavePriestRadius",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array WavePriestRadius\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "2_var_WavePriestRadius",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WavePriestRemaining",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array WavePriestRemaining\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "2_var_WavePriestRemaining",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WavePriestVisualId",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array WavePriestVisualId\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "2_var_WavePriestVisualId",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WavePriestDebugFile",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nFile WavePriestDebugFile\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "2_var_WavePriestDebugFile",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WavePriestDebugFileSegment",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger WavePriestDebugFileSegment\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "2_var_WavePriestDebugFileSegment",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WavePriestDebugFileLineCount",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger WavePriestDebugFileLineCount\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "2_var_WavePriestDebugFileLineCount",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WavePriestMemberKey",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WavePriestMemberKey takes integer auraId, integer index returns integer\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "1_func_WavePriestMemberKey",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WavePriestSecToMs",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WavePriestSecToMs takes real sec returns integer\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "1_func_WavePriestSecToMs",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WavePriestRandomMsRange",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WavePriestRandomMsRange takes real minSec, real maxSec returns integer\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "1_func_WavePriestRandomMsRange",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WavePriestUnitAlive",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WavePriestUnitAlive takes unit u returns boolean\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "1_func_WavePriestUnitAlive",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WavePriestTargetIsValid",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WavePriestTargetIsValid takes unit source, unit target returns boolean\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "1_func_WavePriestTargetIsValid",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WavePriestIsNormal",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WavePriestIsNormal takes unit source returns boolean\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "1_func_WavePriestIsNormal",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WavePriestIsBoss",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WavePriestIsBoss takes unit source returns boolean\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "1_func_WavePriestIsBoss",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WavePriestAuraTypeName",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WavePriestAuraTypeName takes integer auraType returns string\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "1_func_WavePriestAuraTypeName",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WavePriestDebugMsg",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WavePriestDebugMsg takes string msg returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "1_func_WavePriestDebugMsg",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WavePriestDebugTargetState",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WavePriestDebugTargetState takes string action, integer auraId, integer auraType, unit target returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "1_func_WavePriestDebugTargetState",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WavePriestTargetInAuraRange",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WavePriestTargetInAuraRange takes unit source, unit target, real radius returns boolean\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "1_func_WavePriestTargetInAuraRange",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WavePriestRefreshScale",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WavePriestRefreshScale takes unit target returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "1_func_WavePriestRefreshScale",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WavePriestConfiguredBaseScale",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WavePriestConfiguredBaseScale takes unit target returns real\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "1_func_WavePriestConfiguredBaseScale",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WavePriestApplyAuraEffect",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WavePriestApplyAuraEffect takes integer auraId, integer auraType, unit target returns boolean\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "1_func_WavePriestApplyAuraEffect",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WavePriestRemoveAuraEffect",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WavePriestRemoveAuraEffect takes integer auraId, integer auraType, unit target returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "1_func_WavePriestRemoveAuraEffect",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WavePriestVisualModelForType",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WavePriestVisualModelForType takes integer auraType returns string\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "1_func_WavePriestVisualModelForType",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WavePriestAdd",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WavePriestAdd takes integer auraId returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "1_func_WavePriestAdd",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WavePriestRemove",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WavePriestRemove takes integer auraId returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "1_func_WavePriestRemove",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WavePriestFindMemberIndex",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WavePriestFindMemberIndex takes integer auraId, unit target returns integer\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "1_func_WavePriestFindMemberIndex",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WavePriestAddMember",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WavePriestAddMember takes integer auraId, unit target returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "1_func_WavePriestAddMember",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WavePriestRemoveMemberAt",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WavePriestRemoveMemberAt takes integer auraId, integer index returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "1_func_WavePriestRemoveMemberAt",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WavePriestRemoveAllMembers",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WavePriestRemoveAllMembers takes integer auraId returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "1_func_WavePriestRemoveAllMembers",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WavePriestDestroyAura",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WavePriestDestroyAura takes integer auraId returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "1_func_WavePriestDestroyAura",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WavePriestProcessAura",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WavePriestProcessAura takes integer auraId returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "1_func_WavePriestProcessAura",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WavePriestOnTick",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WavePriestOnTick takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "1_func_WavePriestOnTick",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WavePriestEnsureTimer",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WavePriestEnsureTimer takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "1_func_WavePriestEnsureTimer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WavePriestStartAura",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WavePriestStartAura takes unit source, integer auraType returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "1_func_WavePriestStartAura",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WavePriestCleanupWaveDeath",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WavePriestCleanupWaveDeath takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "1_func_WavePriestCleanupWaveDeath",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WavePriestSkillsTryExecute",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WavePriestSkillsTryExecute takes unit source, unit target, integer nowMs returns boolean\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "1_func_WavePriestSkillsTryExecute",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1776556089794
+}

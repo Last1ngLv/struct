@@ -1,0 +1,41 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WavePointGroups.j",
+  "items": [
+    {
+      "symbolName": "WavePointGroupRegister",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WavePointGroups.j",
+      "content": "\n```jass\nfunction WavePointGroupRegister takes string groupName, rect area, integer markerRawcode returns integer\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/WavePointGroups.j`"
+    },
+    {
+      "symbolName": "WPGGroupRegistered",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WavePointGroups.j",
+      "content": "\n```jass\nboolean array WPGGroupRegistered\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/WavePointGroups.j`"
+    },
+    {
+      "symbolName": "WavePointGroupsBuild",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WavePointGroups.j",
+      "content": "\n```jass\nfunction WavePointGroupsBuild takes nothing returns nothing\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/WavePointGroups.j`"
+    },
+    {
+      "symbolName": "WPGGroupBuilt",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WavePointGroups.j",
+      "content": "\n```jass\nboolean array WPGGroupBuilt\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/WavePointGroups.j`"
+    },
+    {
+      "symbolName": "WavePointGroupApplyToWave",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WavePointGroups.j",
+      "content": "\n```jass\nfunction WavePointGroupApplyToWave takes Wave w, string groupName returns integer\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/WavePointGroups.j`"
+    },
+    {
+      "symbolName": "WPGGroupPointX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WavePointGroups.j",
+      "content": "\n```jass\nreal array WPGGroupPointX\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/WavePointGroups.j`"
+    },
+    {
+      "symbolName": "Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WavePointGroups.j",
+      "content": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/WavePointGroups.j`"
+    }
+  ],
+  "timestamp": 1775665632212
+}

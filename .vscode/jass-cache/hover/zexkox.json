@@ -1,0 +1,161 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+  "items": [
+    {
+      "symbolName": "DAMAGE_TYPE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "content": "\n```jass\nconstant damagetype DAMAGE_TYPE\n```\n\n\n**文件:** `MyMissiles/Loadout Missile.j`"
+    },
+    {
+      "symbolName": "SetPlayerMissileInstanceCount",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "content": "\n```jass\nfunction SetPlayerMissileInstanceCount takes player p, integer instanceCount returns nothing\n```\n\n\n**文件:** `MyMissiles/Loadout Missile.j`"
+    },
+    {
+      "symbolName": "FIRST_ANIMATION_DELAY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "content": "\n```jass\nconstant real FIRST_ANIMATION_DELAY\n```\n\n\n**文件:** `MyMissiles/Loadout Missile.j`"
+    },
+    {
+      "symbolName": "SetPlayerLeapDummyScale",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "content": "\n```jass\nfunction SetPlayerLeapDummyScale takes player p, real scale returns nothing\n```\n\n\n**文件:** `MyMissiles/Loadout Missile.j`"
+    },
+    {
+      "symbolName": "SetPlayerMissileHealOnHit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "content": "\n```jass\nfunction SetPlayerMissileHealOnHit takes player p, real value returns nothing\n```\n\n\n**文件:** `MyMissiles/Loadout Missile.j`"
+    },
+    {
+      "symbolName": "SetPlayerLeapDummyFlightOffset",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "content": "\n```jass\nfunction SetPlayerLeapDummyFlightOffset takes player p, real offset returns nothing\n```\n\n\n**文件:** `MyMissiles/Loadout Missile.j`"
+    },
+    {
+      "symbolName": "GetPlayerMissileDamageValue",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "content": "\n```jass\nfunction GetPlayerMissileDamageValue takes player p returns real\n```\n\n\n**文件:** `MyMissiles/Loadout Missile.j`"
+    },
+    {
+      "symbolName": "Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "content": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**文件:** `MyMissiles/Loadout Missile.j`"
+    },
+    {
+      "symbolName": "Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "content": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**文件:** `MyMissiles/Loadout Missile.j`"
+    },
+    {
+      "symbolName": "GetPlayerMissileUseSmartRecast",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "content": "\n```jass\nfunction GetPlayerMissileUseSmartRecast takes player p returns boolean\n```\n\n\n**文件:** `MyMissiles/Loadout Missile.j`"
+    },
+    {
+      "symbolName": "GetPlayerOrbLevel",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "content": "\n```jass\nfunction GetPlayerOrbLevel takes player p returns integer\n```\n\n\n---\n\n=======================\n\nGETTERS\n\n=======================\n\nORB LEVEL\n\n**文件:** `MyMissiles/Loadout Missile.j`"
+    },
+    {
+      "symbolName": "FIRE_TEXT_B",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "content": "\n```jass\nconstant integer FIRE_TEXT_B\n```\n\n\n**文件:** `MyMissiles/Loadout Missile.j`"
+    },
+    {
+      "symbolName": "SetPlayerMissileDamageValue",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "content": "\n```jass\nfunction SetPlayerMissileDamageValue takes player p, real damageValue returns nothing\n```\n\n\n**文件:** `MyMissiles/Loadout Missile.j`"
+    },
+    {
+      "symbolName": "chosenUseRapidFireControl",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "content": "\n```jass\nboolean array chosenUseRapidFireControl\n```\n\n\n**文件:** `MyMissiles/Loadout Missile.j`"
+    },
+    {
+      "symbolName": "GetPlayerMissileUseRapidFire",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "content": "\n```jass\nfunction GetPlayerMissileUseRapidFire takes player p returns boolean\n```\n\n\n**文件:** `MyMissiles/Loadout Missile.j`"
+    },
+    {
+      "symbolName": "GetPlayerMissileUseRapidFireControl",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "content": "\n```jass\nfunction GetPlayerMissileUseRapidFireControl takes player p returns boolean\n```\n\n\n**文件:** `MyMissiles/Loadout Missile.j`"
+    },
+    {
+      "symbolName": "SetPlayerMissileUseRapidFireControl",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "content": "\n```jass\nfunction SetPlayerMissileUseRapidFireControl takes player p, boolean flag returns nothing\n```\n\n\n**文件:** `MyMissiles/Loadout Missile.j`"
+    },
+    {
+      "symbolName": "SetPlayerMissileUseRapidFire",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "content": "\n```jass\nfunction SetPlayerMissileUseRapidFire takes player p, boolean flag returns nothing\n```\n\n\n**文件:** `MyMissiles/Loadout Missile.j`"
+    },
+    {
+      "symbolName": "SetPlayerMissileUseRapidFireMissile",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "content": "\n```jass\nfunction SetPlayerMissileUseRapidFireMissile takes player p, boolean flag returns nothing\n```\n\n\n---\n\nBackward-compatible helper: applies to both missile and control variants.\n\n**文件:** `MyMissiles/Loadout Missile.j`"
+    },
+    {
+      "symbolName": "RAPID_FIRE_ANIMATION_TIME_SCALE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "content": "\n```jass\nconstant real RAPID_FIRE_ANIMATION_TIME_SCALE\n```\n\n\n**文件:** `MyMissiles/Loadout Missile.j`"
+    },
+    {
+      "symbolName": "MISSILE_COLLISION",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "content": "\n```jass\nconstant real MISSILE_COLLISION\n```\n\n\n**文件:** `MyMissiles/Loadout Missile.j`"
+    },
+    {
+      "symbolName": "PlayerMissileLoadout",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "content": "\n```jass\nlibrary PlayerMissileLoadout requires Table, WaveDamageCredit initializer Init\n```\n\n\n---\n\nTESH.scrollpos=0\n\nTESH.alwaysfold=0\n\n**文件:** `MyMissiles/Loadout Missile.j`"
+    },
+    {
+      "symbolName": "MISSILE_SCALE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "content": "\n```jass\nconstant real MISSILE_SCALE\n```\n\n\n**文件:** `MyMissiles/Loadout Missile.j`"
+    },
+    {
+      "symbolName": "SetPlayerLeapImpactFx",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "content": "\n```jass\nfunction SetPlayerLeapImpactFx takes player p, string fx returns nothing\n```\n\n\n**文件:** `MyMissiles/Loadout Missile.j`"
+    },
+    {
+      "symbolName": "SetPlayerLeapCasterFx",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "content": "\n```jass\nfunction SetPlayerLeapCasterFx takes player p, string fx1, string fx2 returns nothing\n```\n\n\n**文件:** `MyMissiles/Loadout Missile.j`"
+    },
+    {
+      "symbolName": "SetPlayerMissileLoadout",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "content": "\n```jass\nfunction SetPlayerMissileLoadout takes player p, integer abilityRawcode, real speedBonus, real damageValue, integer instanceCount, string missileModelPath, string overlayModelPath returns nothing\n```\n\n\n**文件:** `MyMissiles/Loadout Missile.j`"
+    },
+    {
+      "symbolName": "SlotOfPlayer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "content": "\n```jass\nfunction SlotOfPlayer takes player p returns integer\n```\n\n\n**文件:** `MyMissiles/Loadout Missile.j`"
+    },
+    {
+      "symbolName": "GetPlayerMissileAbilityChoice",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "content": "\n```jass\nfunction GetPlayerMissileAbilityChoice takes player p returns integer\n```\n\n\n**文件:** `MyMissiles/Loadout Missile.j`"
+    },
+    {
+      "symbolName": "FIRE_TEXT_G",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "content": "\n```jass\nconstant integer FIRE_TEXT_G\n```\n\n\n**文件:** `MyMissiles/Loadout Missile.j`"
+    },
+    {
+      "symbolName": "SetPlayerPointsOfMana",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "content": "\n```jass\nfunction SetPlayerPointsOfMana takes player p, integer value returns nothing\n```\n\n\n---\n\nPOINTS OF MANA\n\n**文件:** `MyMissiles/Loadout Missile.j`"
+    },
+    {
+      "symbolName": "FIRE_TEXT_R",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "content": "\n```jass\nconstant integer FIRE_TEXT_R\n```\n\n\n**文件:** `MyMissiles/Loadout Missile.j`"
+    }
+  ],
+  "timestamp": 1776204759942
+}

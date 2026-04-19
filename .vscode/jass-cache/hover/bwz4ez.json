@@ -1,0 +1,11 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Damage Text Util.j",
+  "items": [
+    {
+      "symbolName": "FormatLoadoutDamageText",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Damage Text Util.j",
+      "content": "\n```jass\nfunction FormatLoadoutDamageText takes real amount returns string\n```\n\n\n**文件:** `libraries/Damage Text Util.j`"
+    }
+  ],
+  "timestamp": 1776205773267
+}

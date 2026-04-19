@@ -1,0 +1,1257 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+  "items": [
+    {
+      "label": "DEFAULT_SPEED",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real DEFAULT_SPEED\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_DEFAULT_SPEED",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_DAMAGE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real DEFAULT_DAMAGE\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_DEFAULT_DAMAGE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_MISSILE_MODEL",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string DEFAULT_MISSILE_MODEL\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_DEFAULT_MISSILE_MODEL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_OVERLAY_MODEL",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string DEFAULT_OVERLAY_MODEL\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_DEFAULT_OVERLAY_MODEL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_USE_RAPID_FIRE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant boolean DEFAULT_USE_RAPID_FIRE\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_DEFAULT_USE_RAPID_FIRE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_RAPID_FIRE_DURATION",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real DEFAULT_RAPID_FIRE_DURATION\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_DEFAULT_RAPID_FIRE_DURATION",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_RAPID_FIRE_INTERVAL",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real DEFAULT_RAPID_FIRE_INTERVAL\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_DEFAULT_RAPID_FIRE_INTERVAL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_CAST_ANIMATION",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string DEFAULT_CAST_ANIMATION\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_DEFAULT_CAST_ANIMATION",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_CAST_ANIMATION_DELAY",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real DEFAULT_CAST_ANIMATION_DELAY\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_DEFAULT_CAST_ANIMATION_DELAY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_CAST_ANIMATION_TIME_SCALE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real DEFAULT_CAST_ANIMATION_TIME_SCALE\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_DEFAULT_CAST_ANIMATION_TIME_SCALE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_CASTER_WAIT_FX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string DEFAULT_CASTER_WAIT_FX\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_DEFAULT_CASTER_WAIT_FX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_DUMMY_MODEL",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string DEFAULT_DUMMY_MODEL\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_DEFAULT_DUMMY_MODEL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_DUMMY_IMPACT_FX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string DEFAULT_DUMMY_IMPACT_FX\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_DEFAULT_DUMMY_IMPACT_FX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_DUMMY_SCALE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real DEFAULT_DUMMY_SCALE\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_DEFAULT_DUMMY_SCALE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_DUMMY_AREA",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real DEFAULT_DUMMY_AREA\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_DEFAULT_DUMMY_AREA",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_DUMMY_DELAY",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real DEFAULT_DUMMY_DELAY\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_DEFAULT_DUMMY_DELAY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_MISSILE_ARC",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real DEFAULT_MISSILE_ARC\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_DEFAULT_MISSILE_ARC",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_MISSILE_START_Z",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real DEFAULT_MISSILE_START_Z\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_DEFAULT_MISSILE_START_Z",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_MISSILE_FLY_HEIGHT",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real DEFAULT_MISSILE_FLY_HEIGHT\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_DEFAULT_MISSILE_FLY_HEIGHT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_MISSILE_COLLISION",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real DEFAULT_MISSILE_COLLISION\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_DEFAULT_MISSILE_COLLISION",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_IMPACT_ON_PATH",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant boolean DEFAULT_IMPACT_ON_PATH\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_DEFAULT_IMPACT_ON_PATH",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_SPECIAL_ENABLED",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant boolean DEFAULT_SPECIAL_ENABLED\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_DEFAULT_SPECIAL_ENABLED",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_SPECIAL_AFTER_NORMAL_SHOTS",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer DEFAULT_SPECIAL_AFTER_NORMAL_SHOTS\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_DEFAULT_SPECIAL_AFTER_NORMAL_SHOTS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_SPECIAL_MISSILE_MODEL",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string DEFAULT_SPECIAL_MISSILE_MODEL\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_DEFAULT_SPECIAL_MISSILE_MODEL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_SPECIAL_OVERLAY_MODEL",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string DEFAULT_SPECIAL_OVERLAY_MODEL\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_DEFAULT_SPECIAL_OVERLAY_MODEL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_SPECIAL_DAMAGE_MULT",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real DEFAULT_SPECIAL_DAMAGE_MULT\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_DEFAULT_SPECIAL_DAMAGE_MULT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_SPECIAL_AREA_MULT",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real DEFAULT_SPECIAL_AREA_MULT\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_DEFAULT_SPECIAL_AREA_MULT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_SPECIAL_SPEED_MULT",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real DEFAULT_SPECIAL_SPEED_MULT\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_DEFAULT_SPECIAL_SPEED_MULT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_SPECIAL_MISSILE_SCALE_MULT",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real DEFAULT_SPECIAL_MISSILE_SCALE_MULT\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_DEFAULT_SPECIAL_MISSILE_SCALE_MULT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_SPECIAL_DUMMY_SCALE_MULT",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real DEFAULT_SPECIAL_DUMMY_SCALE_MULT\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_DEFAULT_SPECIAL_DUMMY_SCALE_MULT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_SOUND_CAST_START",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string DEFAULT_SOUND_CAST_START\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_DEFAULT_SOUND_CAST_START",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_SOUND_WAIT_START",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string DEFAULT_SOUND_WAIT_START\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_DEFAULT_SOUND_WAIT_START",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_SOUND_WAIT_END",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string DEFAULT_SOUND_WAIT_END\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_DEFAULT_SOUND_WAIT_END",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_SOUND_IMPACT",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string DEFAULT_SOUND_IMPACT\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_DEFAULT_SOUND_IMPACT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_SOUND_LAST_MISSILE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string DEFAULT_SOUND_LAST_MISSILE\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_DEFAULT_SOUND_LAST_MISSILE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_SOUND_DUMMY_CLEAR",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string DEFAULT_SOUND_DUMMY_CLEAR\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_DEFAULT_SOUND_DUMMY_CLEAR",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_SOUND_INTERRUPTED",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string DEFAULT_SOUND_INTERRUPTED\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_DEFAULT_SOUND_INTERRUPTED",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_SOUND_CHANNEL_COMPLETE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string DEFAULT_SOUND_CHANNEL_COMPLETE\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_DEFAULT_SOUND_CHANNEL_COMPLETE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_MISSILE_SCALE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real DEFAULT_MISSILE_SCALE\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_DEFAULT_MISSILE_SCALE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_MANA_COST",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real DEFAULT_MANA_COST\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_DEFAULT_MANA_COST",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "byType",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable byType\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_byType",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "nextSlot",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger nextSlot\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_nextSlot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "typeSpeed",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array typeSpeed\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_typeSpeed",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "typeDamage",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array typeDamage\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_typeDamage",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "typeModel",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring array typeModel\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_typeModel",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "typeOverlay",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring array typeOverlay\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_typeOverlay",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "typeUseRapidFire",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean array typeUseRapidFire\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_typeUseRapidFire",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "typeRapidFireDuration",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array typeRapidFireDuration\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_typeRapidFireDuration",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "typeRapidFireInterval",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array typeRapidFireInterval\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_typeRapidFireInterval",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "typeCastAnimation",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring array typeCastAnimation\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_typeCastAnimation",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "typeCastAnimDelay",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array typeCastAnimDelay\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_typeCastAnimDelay",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "typeCastAnimTimeScale",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array typeCastAnimTimeScale\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_typeCastAnimTimeScale",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "typeCasterWaitFx",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring array typeCasterWaitFx\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_typeCasterWaitFx",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "typeDummyModel",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring array typeDummyModel\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_typeDummyModel",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "typeDummyImpactFx",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring array typeDummyImpactFx\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_typeDummyImpactFx",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "typeDummyScale",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array typeDummyScale\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_typeDummyScale",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "typeDummyArea",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array typeDummyArea\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_typeDummyArea",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "typeDummyDelay",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array typeDummyDelay\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_typeDummyDelay",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "typeMissileArc",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array typeMissileArc\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_typeMissileArc",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "typeMissileStartZ",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array typeMissileStartZ\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_typeMissileStartZ",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "typeMissileFlyHeight",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array typeMissileFlyHeight\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_typeMissileFlyHeight",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "typeMissileCollision",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array typeMissileCollision\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_typeMissileCollision",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "typeImpactOnPath",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean array typeImpactOnPath\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_typeImpactOnPath",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "typeSpecialEnabled",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean array typeSpecialEnabled\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_typeSpecialEnabled",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "typeSpecialAfterNormalShots",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array typeSpecialAfterNormalShots\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_typeSpecialAfterNormalShots",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "typeSpecialMissileModel",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring array typeSpecialMissileModel\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_typeSpecialMissileModel",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "typeSpecialOverlayModel",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring array typeSpecialOverlayModel\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_typeSpecialOverlayModel",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "typeSpecialDamageMult",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array typeSpecialDamageMult\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_typeSpecialDamageMult",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "typeSpecialAreaMult",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array typeSpecialAreaMult\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_typeSpecialAreaMult",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "typeSpecialSpeedMult",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array typeSpecialSpeedMult\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_typeSpecialSpeedMult",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "typeSpecialMissileScaleMult",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array typeSpecialMissileScaleMult\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_typeSpecialMissileScaleMult",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "typeSpecialDummyScaleMult",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array typeSpecialDummyScaleMult\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_typeSpecialDummyScaleMult",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "typeSoundCastStart",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring array typeSoundCastStart\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_typeSoundCastStart",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "typeSoundWaitStart",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring array typeSoundWaitStart\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_typeSoundWaitStart",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "typeSoundWaitEnd",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring array typeSoundWaitEnd\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_typeSoundWaitEnd",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "typeSoundImpact",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring array typeSoundImpact\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_typeSoundImpact",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "typeSoundLastMissile",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring array typeSoundLastMissile\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_typeSoundLastMissile",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "typeSoundDummyClear",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring array typeSoundDummyClear\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_typeSoundDummyClear",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "typeSoundInterrupted",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring array typeSoundInterrupted\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_typeSoundInterrupted",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "typeSoundChannelComplete",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring array typeSoundChannelComplete\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_typeSoundChannelComplete",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "typeMissileScale",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array typeMissileScale\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_typeMissileScale",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "typeManaCost",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array typeManaCost\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "2_var_typeManaCost",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "SlotOfType",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SlotOfType takes integer unitType returns integer\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "1_func_SlotOfType",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "SetUnitTypeMissileLoadout",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SetUnitTypeMissileLoadout takes integer unitType, real speed, real damage, string missileModel, string overlayModel returns nothing\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "1_func_SetUnitTypeMissileLoadout",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "SetUnitTypeUseRapidFire",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SetUnitTypeUseRapidFire takes integer unitType, boolean use, real duration, real interval returns nothing\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "1_func_SetUnitTypeUseRapidFire",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "SetUnitTypeCastAnimation",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SetUnitTypeCastAnimation takes integer unitType, string animation, real delay, real timeScale returns nothing\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "1_func_SetUnitTypeCastAnimation",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "SetUnitTypeCasterWaitFx",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SetUnitTypeCasterWaitFx takes integer unitType, string fx returns nothing\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "1_func_SetUnitTypeCasterWaitFx",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "SetUnitTypeDummyConfig",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SetUnitTypeDummyConfig takes integer unitType, string model, real scale, real delay returns nothing\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "1_func_SetUnitTypeDummyConfig",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "SetUnitTypeDummyImpactFx",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SetUnitTypeDummyImpactFx takes integer unitType, string fx returns nothing\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "1_func_SetUnitTypeDummyImpactFx",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "SetUnitTypeDummyArea",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SetUnitTypeDummyArea takes integer unitType, real area returns nothing\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "1_func_SetUnitTypeDummyArea",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "SetUnitTypeMissileConfig",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SetUnitTypeMissileConfig takes integer unitType, real arc, real flyHeight, real collision, real scale returns nothing\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "1_func_SetUnitTypeMissileConfig",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "SetUnitTypeImpactOnPath",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SetUnitTypeImpactOnPath takes integer unitType, boolean enabled returns nothing\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "1_func_SetUnitTypeImpactOnPath",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "SetUnitTypeSpecialMissile",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SetUnitTypeSpecialMissile takes integer unitType, boolean enabled, integer afterNormalShots, string specialModel, string specialOverlay returns nothing\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "1_func_SetUnitTypeSpecialMissile",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "SetUnitTypeSpecialMultipliers",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SetUnitTypeSpecialMultipliers takes integer unitType, real damageMult, real areaMult, real speedMult, real missileScaleMult, real dummyScaleMult returns nothing\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "1_func_SetUnitTypeSpecialMultipliers",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "SetUnitTypeMissileSounds",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SetUnitTypeMissileSounds takes integer unitType, string castStart, string waitStart, string waitEnd, string impact, string lastMissile, string dummyClear, string interrupted, string channelComplete returns nothing\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "1_func_SetUnitTypeMissileSounds",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "SetUnitTypeMissileStartZ",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SetUnitTypeMissileStartZ takes integer unitType, real startZ returns nothing\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "1_func_SetUnitTypeMissileStartZ",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "SetUnitTypeManaCost",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SetUnitTypeManaCost takes integer unitType, real cost returns nothing\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "1_func_SetUnitTypeManaCost",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetUnitTypeMissileSpeed",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetUnitTypeMissileSpeed takes integer unitType returns real\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "1_func_GetUnitTypeMissileSpeed",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetUnitTypeMissileDamage",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetUnitTypeMissileDamage takes integer unitType returns real\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "1_func_GetUnitTypeMissileDamage",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetUnitTypeMissileModel",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetUnitTypeMissileModel takes integer unitType returns string\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "1_func_GetUnitTypeMissileModel",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetUnitTypeMissileOverlayModel",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetUnitTypeMissileOverlayModel takes integer unitType returns string\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "1_func_GetUnitTypeMissileOverlayModel",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetUnitTypeUseRapidFire",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetUnitTypeUseRapidFire takes integer unitType returns boolean\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "1_func_GetUnitTypeUseRapidFire",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetUnitTypeRapidFireDuration",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetUnitTypeRapidFireDuration takes integer unitType returns real\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "1_func_GetUnitTypeRapidFireDuration",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetUnitTypeRapidFireInterval",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetUnitTypeRapidFireInterval takes integer unitType returns real\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "1_func_GetUnitTypeRapidFireInterval",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetUnitTypeCastAnimation",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetUnitTypeCastAnimation takes integer unitType returns string\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "1_func_GetUnitTypeCastAnimation",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetUnitTypeCastAnimationDelay",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetUnitTypeCastAnimationDelay takes integer unitType returns real\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "1_func_GetUnitTypeCastAnimationDelay",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetUnitTypeCastAnimationTimeScale",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetUnitTypeCastAnimationTimeScale takes integer unitType returns real\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "1_func_GetUnitTypeCastAnimationTimeScale",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetUnitTypeCasterWaitFx",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetUnitTypeCasterWaitFx takes integer unitType returns string\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "1_func_GetUnitTypeCasterWaitFx",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetUnitTypeDummyModel",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetUnitTypeDummyModel takes integer unitType returns string\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "1_func_GetUnitTypeDummyModel",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetUnitTypeDummyImpactFx",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetUnitTypeDummyImpactFx takes integer unitType returns string\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "1_func_GetUnitTypeDummyImpactFx",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetUnitTypeDummyScale",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetUnitTypeDummyScale takes integer unitType returns real\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "1_func_GetUnitTypeDummyScale",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetUnitTypeDummyArea",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetUnitTypeDummyArea takes integer unitType returns real\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "1_func_GetUnitTypeDummyArea",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetUnitTypeDummyDelay",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetUnitTypeDummyDelay takes integer unitType returns real\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "1_func_GetUnitTypeDummyDelay",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetUnitTypeMissileArc",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetUnitTypeMissileArc takes integer unitType returns real\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "1_func_GetUnitTypeMissileArc",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetUnitTypeMissileStartZ",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetUnitTypeMissileStartZ takes integer unitType returns real\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "1_func_GetUnitTypeMissileStartZ",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetUnitTypeMissileFlyHeight",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetUnitTypeMissileFlyHeight takes integer unitType returns real\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "1_func_GetUnitTypeMissileFlyHeight",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetUnitTypeMissileCollision",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetUnitTypeMissileCollision takes integer unitType returns real\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "1_func_GetUnitTypeMissileCollision",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetUnitTypeImpactOnPath",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetUnitTypeImpactOnPath takes integer unitType returns boolean\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "1_func_GetUnitTypeImpactOnPath",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetUnitTypeSpecialEnabled",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetUnitTypeSpecialEnabled takes integer unitType returns boolean\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "1_func_GetUnitTypeSpecialEnabled",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetUnitTypeSpecialAfterNormalShots",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetUnitTypeSpecialAfterNormalShots takes integer unitType returns integer\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "1_func_GetUnitTypeSpecialAfterNormalShots",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetUnitTypeSpecialMissileModel",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetUnitTypeSpecialMissileModel takes integer unitType returns string\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "1_func_GetUnitTypeSpecialMissileModel",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetUnitTypeSpecialOverlayModel",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetUnitTypeSpecialOverlayModel takes integer unitType returns string\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "1_func_GetUnitTypeSpecialOverlayModel",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetUnitTypeSpecialDamageMult",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetUnitTypeSpecialDamageMult takes integer unitType returns real\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "1_func_GetUnitTypeSpecialDamageMult",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetUnitTypeSpecialAreaMult",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetUnitTypeSpecialAreaMult takes integer unitType returns real\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "1_func_GetUnitTypeSpecialAreaMult",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetUnitTypeSpecialSpeedMult",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetUnitTypeSpecialSpeedMult takes integer unitType returns real\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "1_func_GetUnitTypeSpecialSpeedMult",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetUnitTypeSpecialMissileScaleMult",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetUnitTypeSpecialMissileScaleMult takes integer unitType returns real\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "1_func_GetUnitTypeSpecialMissileScaleMult",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetUnitTypeSpecialDummyScaleMult",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetUnitTypeSpecialDummyScaleMult takes integer unitType returns real\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "1_func_GetUnitTypeSpecialDummyScaleMult",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetUnitTypeSoundCastStart",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetUnitTypeSoundCastStart takes integer unitType returns string\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "1_func_GetUnitTypeSoundCastStart",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetUnitTypeSoundWaitStart",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetUnitTypeSoundWaitStart takes integer unitType returns string\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "1_func_GetUnitTypeSoundWaitStart",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetUnitTypeSoundWaitEnd",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetUnitTypeSoundWaitEnd takes integer unitType returns string\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "1_func_GetUnitTypeSoundWaitEnd",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetUnitTypeSoundImpact",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetUnitTypeSoundImpact takes integer unitType returns string\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "1_func_GetUnitTypeSoundImpact",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetUnitTypeSoundLastMissile",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetUnitTypeSoundLastMissile takes integer unitType returns string\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "1_func_GetUnitTypeSoundLastMissile",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetUnitTypeSoundDummyClear",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetUnitTypeSoundDummyClear takes integer unitType returns string\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "1_func_GetUnitTypeSoundDummyClear",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetUnitTypeSoundInterrupted",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetUnitTypeSoundInterrupted takes integer unitType returns string\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "1_func_GetUnitTypeSoundInterrupted",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetUnitTypeSoundChannelComplete",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetUnitTypeSoundChannelComplete takes integer unitType returns string\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "1_func_GetUnitTypeSoundChannelComplete",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetUnitTypeMissileScale",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetUnitTypeMissileScale takes integer unitType returns real\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "1_func_GetUnitTypeMissileScale",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetUnitTypeManaCost",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetUnitTypeManaCost takes integer unitType returns real\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "1_func_GetUnitTypeManaCost",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "HasUnitTypeMissileConfig",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HasUnitTypeMissileConfig takes integer unitType returns boolean\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "1_func_HasUnitTypeMissileConfig",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileLoadout.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1776550709383
+}

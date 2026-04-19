@@ -1,0 +1,91 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\ExampleAdvance\\Inventory\\InventoryCore.j",
+  "items": [
+    {
+      "symbolName": "user",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\ExampleAdvance\\Inventory\\InventoryCore.j",
+      "content": "\n```jass\nreadonly User user\n```\n\n\n**所属:** `Inventory`\n**文件:** `Pruebas/ExampleAdvance/Inventory/InventoryCore.j`"
+    },
+    {
+      "symbolName": "show",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\ExampleAdvance\\Inventory\\InventoryCore.j",
+      "content": "\n```jass\nmethod show takes boolean flag, Camera cam returns nothing\n```\n\n\n**所属:** `Inventory`\n**文件:** `Pruebas/ExampleAdvance/Inventory/InventoryCore.j`"
+    },
+    {
+      "symbolName": "pid",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\ExampleAdvance\\Inventory\\InventoryCore.j",
+      "content": "\n```jass\nreadonly integer pid\n```\n\n\n**所属:** `Inventory`\n**文件:** `Pruebas/ExampleAdvance/Inventory/InventoryCore.j`"
+    },
+    {
+      "symbolName": "camera",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\ExampleAdvance\\Inventory\\InventoryCore.j",
+      "content": "\n```jass\nCamera camera\n```\n\n\n**所属:** `Inventory`\n**文件:** `Pruebas/ExampleAdvance/Inventory/InventoryCore.j`"
+    },
+    {
+      "symbolName": "MAX_SLOTS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\ExampleAdvance\\Inventory\\InventoryCore.j",
+      "content": "\n```jass\nstatic constant integer MAX_SLOTS\n```\n\n\n---\n\ndon't edit below here unless you know what you're doing\n\n**所属:** `Inventory`\n**文件:** `Pruebas/ExampleAdvance/Inventory/InventoryCore.j`"
+    },
+    {
+      "symbolName": "getButton",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\ExampleAdvance\\Inventory\\InventoryCore.j",
+      "content": "\n```jass\nmethod getButton takes integer index returns UIButton\n```\n\n\n**所属:** `Inventory`\n**文件:** `Pruebas/ExampleAdvance/Inventory/InventoryCore.j`"
+    },
+    {
+      "symbolName": "buttons",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\ExampleAdvance\\Inventory\\InventoryCore.j",
+      "content": "\n```jass\nstatic readonly UIButton array buttons\n```\n\n\n**所属:** `Inventory`\n**文件:** `Pruebas/ExampleAdvance/Inventory/InventoryCore.j`"
+    },
+    {
+      "symbolName": "create",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\ExampleAdvance\\Inventory\\InventoryCore.j",
+      "content": "\n```jass\nstatic method create takes unit owner returns thistype\n```\n\n\n**所属:** `Inventory`\n**文件:** `Pruebas/ExampleAdvance/Inventory/InventoryCore.j`"
+    },
+    {
+      "symbolName": "SLOT_WIDTH",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\ExampleAdvance\\Inventory\\InventoryCore.j",
+      "content": "\n```jass\nstatic constant real SLOT_WIDTH\n```\n\n\n---\n\nicon size\n\n**所属:** `Inventory`\n**文件:** `Pruebas/ExampleAdvance/Inventory/InventoryCore.j`"
+    },
+    {
+      "symbolName": "displayed",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\ExampleAdvance\\Inventory\\InventoryCore.j",
+      "content": "\n```jass\nreadonly boolean displayed\n```\n\n\n**所属:** `Inventory`\n**文件:** `Pruebas/ExampleAdvance/Inventory/InventoryCore.j`"
+    },
+    {
+      "symbolName": "destroy",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\ExampleAdvance\\Inventory\\InventoryCore.j",
+      "content": "\n```jass\nmethod destroy takes nothing returns nothing\n```\n\n\n**所属:** `Inventory`\n**文件:** `Pruebas/ExampleAdvance/Inventory/InventoryCore.j`"
+    },
+    {
+      "symbolName": "SLOT_OFFSET_Y",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\ExampleAdvance\\Inventory\\InventoryCore.j",
+      "content": "\n```jass\nstatic constant real SLOT_OFFSET_Y\n```\n\n\n**所属:** `Inventory`\n**文件:** `Pruebas/ExampleAdvance/Inventory/InventoryCore.j`"
+    },
+    {
+      "symbolName": "SLOT_HEIGHT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\ExampleAdvance\\Inventory\\InventoryCore.j",
+      "content": "\n```jass\nstatic constant real SLOT_HEIGHT\n```\n\n\n**所属:** `Inventory`\n**文件:** `Pruebas/ExampleAdvance/Inventory/InventoryCore.j`"
+    },
+    {
+      "symbolName": "setButton",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\ExampleAdvance\\Inventory\\InventoryCore.j",
+      "content": "\n```jass\nmethod setButton takes integer index, UIButton value returns nothing\n```\n\n\n**所属:** `Inventory`\n**文件:** `Pruebas/ExampleAdvance/Inventory/InventoryCore.j`"
+    },
+    {
+      "symbolName": "Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\ExampleAdvance\\Inventory\\InventoryCore.j",
+      "content": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**文件:** `Pruebas/ExampleAdvance/Inventory/InventoryCore.j`"
+    },
+    {
+      "symbolName": "UpdateTimer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\ExampleAdvance\\Inventory\\InventoryCore.j",
+      "content": "\n```jass\nstatic readonly timer UpdateTimer\n```\n\n\n**所属:** `Inventory`\n**文件:** `Pruebas/ExampleAdvance/Inventory/InventoryCore.j`"
+    },
+    {
+      "symbolName": "onDisplay",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\ExampleAdvance\\Inventory\\InventoryCore.j",
+      "content": "\n```jass\nmethod onDisplay takes nothing returns nothing\n```\n\n\n**所属:** `Inventory`\n**文件:** `Pruebas/ExampleAdvance/Inventory/InventoryCore.j`"
+    }
+  ],
+  "timestamp": 1776464946793
+}

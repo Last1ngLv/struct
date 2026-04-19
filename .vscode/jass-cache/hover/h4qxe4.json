@@ -1,0 +1,21 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+  "items": [
+    {
+      "symbolName": "WAVE_HMPR_NORMAL_PASSIVE_ID",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "content": "\n```jass\nconstant integer WAVE_HMPR_NORMAL_PASSIVE_ID\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`"
+    },
+    {
+      "symbolName": "WavePriestBossOwnerAuraByUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "content": "\n```jass\nTable WavePriestBossOwnerAuraByUnit\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`"
+    },
+    {
+      "symbolName": "WAVE_HMPR_AURA_SCALE_BONUS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WavePriestSkills.j",
+      "content": "\n```jass\nconstant real WAVE_HMPR_AURA_SCALE_BONUS\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WavePriestSkills.j`"
+    }
+  ],
+  "timestamp": 1776555903757
+}

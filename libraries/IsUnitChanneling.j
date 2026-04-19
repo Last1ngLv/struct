@@ -60,14 +60,14 @@ library IsUnitChanneling requires optional UnitIndexer, optional Table, Register
             else
                 static if LIBRARY_Table then
                     local integer id = GetHandleId(GetTriggerUnit())
-                    if GetSpellAbilityId() == 'AM01' or GetSpellAbilityId() == 'AM02' or GetSpellAbilityId() == 'AM03' or GetSpellAbilityId() == 'AM04' or GetSpellAbilityId() == 'AM05' or GetSpellAbilityId() == 'AM06' then
+                    if GetSpellAbilityId() == 'AM01' or GetSpellAbilityId() == 'AM02' or GetSpellAbilityId() == 'AM03' or GetSpellAbilityId() == 'AM04' or GetSpellAbilityId() == 'AM05' or GetSpellAbilityId() == 'AM06' or GetSpellAbilityId() == 'HDHD' then
                         //call BJDebugMsg("Ignore!!2")
                         return // Ignora este evento
                     endif
                     set channeling.boolean[id] = not channeling.boolean[id]
                 else
                     local integer id = GetHandleId(GetTriggerUnit())
-                    if GetSpellAbilityId() == 'AM01' or GetSpellAbilityId() == 'AM02' or GetSpellAbilityId() == 'AM03' or GetSpellAbilityId() == 'AM04' or GetSpellAbilityId() == 'AM05' or GetSpellAbilityId() == 'AM06' then
+                    if GetSpellAbilityId() == 'AM01' or GetSpellAbilityId() == 'AM02' or GetSpellAbilityId() == 'AM03' or GetSpellAbilityId() == 'AM04' or GetSpellAbilityId() == 'AM05' or GetSpellAbilityId() == 'AM06' or GetSpellAbilityId() == 'HDHD' then
                         //call BJDebugMsg("Ignore!!3")
                         return // Ignora este evento
                     endif

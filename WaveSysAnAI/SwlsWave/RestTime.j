@@ -3,12 +3,10 @@ library TheEnd requires HeroLives, TenderSystem, PreConfi
         private constant integer WAVE_PHASE_NONE = 0
         private constant integer WAVE_PHASE_START = 1
         private constant integer WAVE_PHASE_PURCHASE = 2
-        private constant integer INITIAL_WAVE_COUNTDOWN = 35
-        private constant integer PURCHASE_COUNTDOWN = 50
+        private constant integer INITIAL_WAVE_COUNTDOWN = 5
+        private constant integer PURCHASE_COUNTDOWN = 5
         private constant real WAVE_PHASE_TICK_SEC = 1.00
         private constant integer TRADER_TRACK_COUNT = 6
-        private constant real TENDER_SOUND_CHECK_PERIOD = 0.25
-        private constant real TENDER_SOUND_RADIUS = 500.0
         private constant real SURVIVAL_END_DELAY = 18.00
         private constant integer PURCHASE_MUSIC_VOLUME = 127
         private constant real PURCHASE_MUSIC_PITCH = 1.00
@@ -16,7 +14,6 @@ library TheEnd requires HeroLives, TenderSystem, PreConfi
         private constant string SURVIVAL_END_SOUND_PATH = "war3mapImported\\SurvivalEnd.wav"
 
         private timer WavePhaseTimer = null
-        private timer TenderSoundTimer = null
         private timer SurvivalEndTimer = null
         private integer WavePhaseState = WAVE_PHASE_NONE
         private integer WavePhaseRemaining = 0
@@ -48,18 +45,14 @@ library TheEnd requires HeroLives, TenderSystem, PreConfi
     endfunction
 
     private function PickTraderTrackIndex takes integer lastIndex returns integer
-        local integer roll
         if TRADER_TRACK_COUNT <= 1 then
             return 1
         endif
-        set roll = GetRandomInt(1, TRADER_TRACK_COUNT)
-        if roll == lastIndex then
-            set roll = roll + 1
-            if roll > TRADER_TRACK_COUNT then
-                set roll = 1
-            endif
+        set lastIndex = lastIndex + 1
+        if lastIndex > TRADER_TRACK_COUNT or lastIndex <= 0 then
+            set lastIndex = 1
         endif
-        return roll
+        return lastIndex
     endfunction
 
     private function SetWaveStatusTextForActivePlayers takes string statusText returns nothing
@@ -163,9 +156,11 @@ library TheEnd requires HeroLives, TenderSystem, PreConfi
     private function StartTenderAreaSound takes nothing returns nothing
         local string trackPath
         call StopTenderAreaSound()
+        if WavePhaseState != WAVE_PHASE_PURCHASE then
+            return
+        endif
         if CurrentTenderTrackIndex <= 0 then
-            set CurrentTenderTrackIndex = PickTraderTrackIndex(LastTenderTrackIndex)
-            set LastTenderTrackIndex = CurrentTenderTrackIndex
+            return
         endif
         set trackPath = GetTraderTrackPath(CurrentTenderTrackIndex)
         if trackPath == null or trackPath == "" then
@@ -187,37 +182,7 @@ library TheEnd requires HeroLives, TenderSystem, PreConfi
         endif
     endfunction
 
-    private function OnTenderSoundTick takes nothing returns nothing
-        local unit hero
-        if SurvivalEndSequenceActive then
-            call StopTenderAreaSound()
-            return
-        endif
-        if WavePhaseState != WAVE_PHASE_PURCHASE then
-            call StopTenderAreaSound()
-            return
-        endif
-        set hero = PlayerHero[User.LocalId]
-        if hero != null and GetUnitTypeId(hero) != 0 and GetWidgetLife(hero) > 0.405 then
-            if IsUnitNearTender(hero, TENDER_SOUND_RADIUS) then
-                if TenderAreaSound == null then
-                    call StartTenderAreaSound()
-                endif
-            else
-                call StopTenderAreaSound()
-            endif
-        else
-            call StopTenderAreaSound()
-        endif
-        set hero = null
-    endfunction
-
     function StartTenderSoundTracker takes nothing returns nothing
-        if TenderSoundTimer == null then
-            set TenderSoundTimer = CreateTimer()
-        endif
-        call PauseTimer(TenderSoundTimer)
-        call TimerStart(TenderSoundTimer, TENDER_SOUND_CHECK_PERIOD, true, function OnTenderSoundTick)
     endfunction
 
     private function CompleteSurvivalEndSequence takes nothing returns nothing
@@ -278,7 +243,6 @@ library TheEnd requires HeroLives, TenderSystem, PreConfi
         call StopAmbientTownSound()
         call StopTenderAreaSound()
         call CloseTenderForActivePlayers()
-        call ExecuteFunc("MenuClientClearEnemyPreviewForActivePlayers")
         set WavePhaseState = WAVE_PHASE_NONE
         set WavePhaseRemaining = 0
         set CurrentTenderTrackIndex = 0
@@ -318,7 +282,8 @@ library TheEnd requires HeroLives, TenderSystem, PreConfi
             set CurrentTenderTrackIndex = PickTraderTrackIndex(LastTenderTrackIndex)
             set LastTenderTrackIndex = CurrentTenderTrackIndex
             call StartAmbientTownSound()
-            call StopPurchaseMusic()
+            call StopTenderAreaSound()
+            call StartPurchaseMusic()
             call SetWaveStatusTextForActivePlayers("TimeOfPurchase: " + I2S(WavePhaseRemaining))
         else
             call StopPurchaseMusic()
@@ -326,7 +291,6 @@ library TheEnd requires HeroLives, TenderSystem, PreConfi
             set CurrentTenderTrackIndex = 0
             call SetWaveStatusTextForActivePlayers("WaveIn: " + I2S(WavePhaseRemaining))
         endif
-        call ExecuteFunc("MenuClientRefreshEnemyPreviewForActivePlayers")
         call PauseTimer(WavePhaseTimer)
         call TimerStart(WavePhaseTimer, WAVE_PHASE_TICK_SEC, true, function OnWavePhaseTick)
     endfunction

@@ -1,0 +1,11 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\ExampleAdvance\\Setups\\Socket Item.j",
+  "items": [
+    {
+      "symbolName": "Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\ExampleAdvance\\Setups\\Socket Item.j",
+      "content": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n---\n\n===========================================================================\n\n**文件:** `Pruebas/ExampleAdvance/Setups/Socket Item.j`"
+    }
+  ],
+  "timestamp": 1775665632199
+}

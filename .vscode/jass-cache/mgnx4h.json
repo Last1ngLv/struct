@@ -1,0 +1,69 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\Models.j",
+  "items": [
+    {
+      "label": "HeroModels",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable HeroModels\n```\n\n\n**_>:** `UI System/MyIU/Models.j`",
+      "sortText": "2_var_HeroModels",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\Models.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "Path",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring array Path\n```\n\n\n**_>:** `UI System/MyIU/Models.j`",
+      "sortText": "2_var_Path",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\Models.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "Models",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger Models\n```\n\n\n**_>:** `UI System/MyIU/Models.j`",
+      "sortText": "2_var_Models",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\Models.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HeroModelData",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct HeroModelData\n```\n\n\n**_>:** `UI System/MyIU/Models.j`",
+      "sortText": "1_struct_HeroModelData",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\Models.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "EquipSetHeroModel",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction EquipSetHeroModel takes integer utype, real scale, string path returns nothing\n```\n\n\n**_>:** `UI System/MyIU/Models.j`",
+      "sortText": "1_func_EquipSetHeroModel",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\Models.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "EquipGetHeroModel",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction EquipGetHeroModel takes integer id returns HeroModelData\n```\n\n\n**_>:** `UI System/MyIU/Models.j`",
+      "sortText": "1_func_EquipGetHeroModel",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\Models.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**_>:** `UI System/MyIU/Models.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\Models.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1776550709602
+}

@@ -1,0 +1,31 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\RunInit.j",
+  "items": [
+    {
+      "symbolName": "ApplyDefaultTerrainReplaceBounds",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\RunInit.j",
+      "content": "\n```jass\nfunction ApplyDefaultTerrainReplaceBounds takes real minX, real minY, real maxX, real maxY returns integer\n```\n\n\n**文件:** `InitMap/RunInit.j`"
+    },
+    {
+      "symbolName": "SetupDefaultTerrainReplaceRules",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\RunInit.j",
+      "content": "\n```jass\nfunction SetupDefaultTerrainReplaceRules takes nothing returns nothing\n```\n\n\n**文件:** `InitMap/RunInit.j`"
+    },
+    {
+      "symbolName": "Trig_gg_Actions",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\RunInit.j",
+      "content": "\n```jass\nfunction Trig_gg_Actions takes nothing returns nothing\n```\n\n\n**文件:** `InitMap/RunInit.j`"
+    },
+    {
+      "symbolName": "InitTrig_gg",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\RunInit.j",
+      "content": "\n```jass\nfunction InitTrig_gg takes nothing returns nothing\n```\n\n\n---\n\nCompatibilidad con trigger clásico, pero sin gg_trg_gg.\n\n**文件:** `InitMap/RunInit.j`"
+    },
+    {
+      "symbolName": "Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\RunInit.j",
+      "content": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**文件:** `InitMap/RunInit.j`"
+    }
+  ],
+  "timestamp": 1775665632189
+}

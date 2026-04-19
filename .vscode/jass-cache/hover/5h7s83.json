@@ -1,0 +1,41 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Loadout Missile.j",
+  "items": [
+    {
+      "symbolName": "SetPlayerLeapImpactFx",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Loadout Missile.j",
+      "content": "\n```jass\nfunction SetPlayerLeapImpactFx takes player p, string fx returns nothing\n```\n\n\n**文件:** `MissileExamples/Rogue/Loadout Missile.j`"
+    },
+    {
+      "symbolName": "SetPlayerLeapCasterFx",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Loadout Missile.j",
+      "content": "\n```jass\nfunction SetPlayerLeapCasterFx takes player p, string fx1, string fx2 returns nothing\n```\n\n\n**文件:** `MissileExamples/Rogue/Loadout Missile.j`"
+    },
+    {
+      "symbolName": "SetPlayerMissileLoadout",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Loadout Missile.j",
+      "content": "\n```jass\nfunction SetPlayerMissileLoadout takes player p, integer abilityRawcode, real speedBonus, real damageValue, integer instanceCount, string missileModelPath, string overlayModelPath returns nothing\n```\n\n\n**文件:** `MissileExamples/Rogue/Loadout Missile.j`"
+    },
+    {
+      "symbolName": "SlotOfPlayer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Loadout Missile.j",
+      "content": "\n```jass\nfunction SlotOfPlayer takes player p returns integer\n```\n\n\n**文件:** `MissileExamples/Rogue/Loadout Missile.j`"
+    },
+    {
+      "symbolName": "GetPlayerMissileAbilityChoice",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Loadout Missile.j",
+      "content": "\n```jass\nfunction GetPlayerMissileAbilityChoice takes player p returns integer\n```\n\n\n**文件:** `MissileExamples/Rogue/Loadout Missile.j`"
+    },
+    {
+      "symbolName": "FIRE_TEXT_G",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Loadout Missile.j",
+      "content": "\n```jass\nconstant integer FIRE_TEXT_G\n```\n\n\n**文件:** `MissileExamples/Rogue/Loadout Missile.j`"
+    },
+    {
+      "symbolName": "FIRE_TEXT_R",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MissileExamples\\Rogue\\Loadout Missile.j",
+      "content": "\n```jass\nconstant integer FIRE_TEXT_R\n```\n\n\n**文件:** `MissileExamples/Rogue/Loadout Missile.j`"
+    }
+  ],
+  "timestamp": 1776204759940
+}

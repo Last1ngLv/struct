@@ -1,0 +1,101 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Table.j",
+  "items": [
+    {
+      "symbolName": "Table",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Table.j",
+      "content": "\n```jass\nlibrary Table\n```\n\n\n**文件:** `libraries/Table.j`"
+    },
+    {
+      "symbolName": "Table",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Table.j",
+      "content": "\n```jass\nstruct Table extends array\n```\n\n\n**文件:** `libraries/Table.j`"
+    },
+    {
+      "symbolName": "remove",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Table.j",
+      "content": "\n```jass\nmethod remove takes integer key returns nothing\n```\n\n\n**所属:** `handles`\n**文件:** `libraries/Table.j`"
+    },
+    {
+      "symbolName": "remove",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Table.j",
+      "content": "\n```jass\nmethod remove takes integer key returns nothing\n```\n\n\n**所属:** `reals`\n**文件:** `libraries/Table.j`"
+    },
+    {
+      "symbolName": "remove",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Table.j",
+      "content": "\n```jass\nmethod remove takes integer key returns nothing\n```\n\n\n**所属:** `booleans`\n**文件:** `libraries/Table.j`"
+    },
+    {
+      "symbolName": "remove",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Table.j",
+      "content": "\n```jass\nmethod remove takes integer key returns nothing\n```\n\n\n**所属:** `strings`\n**文件:** `libraries/Table.j`"
+    },
+    {
+      "symbolName": "remove",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Table.j",
+      "content": "\n```jass\nmethod remove takes integer key returns nothing\n```\n\n\n---\n\ncall tb.remove(294080)\n\n**所属:** `Table`\n**文件:** `libraries/Table.j`"
+    },
+    {
+      "symbolName": "effects",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Table.j",
+      "content": "\n```jass\nstruct effects extends array\n```\n\n\n**文件:** `libraries/Table.j`"
+    },
+    {
+      "symbolName": "buttons",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Table.j",
+      "content": "\n```jass\nstruct buttons extends array\n```\n\n\n**文件:** `libraries/Table.j`"
+    },
+    {
+      "symbolName": "NEW_ARRAY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Table.j",
+      "content": "\n```jass\ntextmacro NEW_ARRAY takes FUNC, TYPE\n```\n\n\n**文件:** `libraries/Table.j`"
+    },
+    {
+      "symbolName": "has",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Table.j",
+      "content": "\n```jass\nmethod has takes integer key returns boolean\n```\n\n\n**所属:** `handles`\n**文件:** `libraries/Table.j`"
+    },
+    {
+      "symbolName": "has",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Table.j",
+      "content": "\n```jass\nmethod has takes integer key returns boolean\n```\n\n\n**所属:** `reals`\n**文件:** `libraries/Table.j`"
+    },
+    {
+      "symbolName": "has",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Table.j",
+      "content": "\n```jass\nmethod has takes integer key returns boolean\n```\n\n\n**所属:** `booleans`\n**文件:** `libraries/Table.j`"
+    },
+    {
+      "symbolName": "has",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Table.j",
+      "content": "\n```jass\nmethod has takes integer key returns boolean\n```\n\n\n**所属:** `strings`\n**文件:** `libraries/Table.j`"
+    },
+    {
+      "symbolName": "has",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Table.j",
+      "content": "\n```jass\nmethod has takes integer key returns boolean\n```\n\n\n---\n\nset b = tb.has(2493223)\n\n**所属:** `Table`\n**文件:** `libraries/Table.j`"
+    },
+    {
+      "symbolName": "create",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Table.j",
+      "content": "\n```jass\nstatic method create takes nothing returns Table\n```\n\n\n---\n\nlocal Table tb = Table.create()\n\n**所属:** `Table`\n**文件:** `libraries/Table.j`"
+    },
+    {
+      "symbolName": "destroy",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Table.j",
+      "content": "\n```jass\nmethod destroy takes nothing returns nothing\n```\n\n\n---\n\nRemoves all data from a Table instance and recycles its index.\n\ncall tb.destroy()\n\n**所属:** `Table`\n**文件:** `libraries/Table.j`"
+    },
+    {
+      "symbolName": "units",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Table.j",
+      "content": "\n```jass\nstruct units extends array\n```\n\n\n**文件:** `libraries/Table.j`"
+    },
+    {
+      "symbolName": "dex",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Table.j",
+      "content": "\n```jass\nstruct dex extends array\n```\n\n\n**文件:** `libraries/Table.j`"
+    }
+  ],
+  "timestamp": 1776205784952
+}

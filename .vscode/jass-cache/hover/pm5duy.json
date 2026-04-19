@@ -1,0 +1,91 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime.j",
+  "items": [
+    {
+      "symbolName": "CloseTenderForActivePlayers",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime.j",
+      "content": "\n```jass\nfunction CloseTenderForActivePlayers takes nothing returns nothing\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/RestTime.j`"
+    },
+    {
+      "symbolName": "PurchasePhaseSound",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime.j",
+      "content": "\n```jass\nsound PurchasePhaseSound\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/RestTime.j`"
+    },
+    {
+      "symbolName": "SetWaveStatusTextForActivePlayers",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime.j",
+      "content": "\n```jass\nfunction SetWaveStatusTextForActivePlayers takes string statusText returns nothing\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/RestTime.j`"
+    },
+    {
+      "symbolName": "PURCHASE_MUSIC_PATH",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime.j",
+      "content": "\n```jass\nconstant string PURCHASE_MUSIC_PATH\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/RestTime.j`"
+    },
+    {
+      "symbolName": "WavePhaseRemaining",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime.j",
+      "content": "\n```jass\ninteger WavePhaseRemaining\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/RestTime.j`"
+    },
+    {
+      "symbolName": "WAVE_PHASE_NONE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime.j",
+      "content": "\n```jass\nconstant integer WAVE_PHASE_NONE\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/RestTime.j`"
+    },
+    {
+      "symbolName": "PURCHASE_MUSIC_VOLUME",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime.j",
+      "content": "\n```jass\nconstant integer PURCHASE_MUSIC_VOLUME\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/RestTime.j`"
+    },
+    {
+      "symbolName": "WavePhaseTimer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime.j",
+      "content": "\n```jass\ntimer WavePhaseTimer\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/RestTime.j`"
+    },
+    {
+      "symbolName": "WAVE_PHASE_TICK_SEC",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime.j",
+      "content": "\n```jass\nconstant real WAVE_PHASE_TICK_SEC\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/RestTime.j`"
+    },
+    {
+      "symbolName": "WavePhaseState",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime.j",
+      "content": "\n```jass\ninteger WavePhaseState\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/RestTime.j`"
+    },
+    {
+      "symbolName": "WAVE_PHASE_START",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime.j",
+      "content": "\n```jass\nconstant integer WAVE_PHASE_START\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/RestTime.j`"
+    },
+    {
+      "symbolName": "PURCHASE_COUNTDOWN",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime.j",
+      "content": "\n```jass\nconstant integer PURCHASE_COUNTDOWN\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/RestTime.j`"
+    },
+    {
+      "symbolName": "StartInitialWaveCountdown",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime.j",
+      "content": "\n```jass\nfunction StartInitialWaveCountdown takes nothing returns nothing\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/RestTime.j`"
+    },
+    {
+      "symbolName": "OnWavePhaseTick",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime.j",
+      "content": "\n```jass\nfunction OnWavePhaseTick takes nothing returns nothing\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/RestTime.j`"
+    },
+    {
+      "symbolName": "LaunchCurrentWave",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime.j",
+      "content": "\n```jass\nfunction LaunchCurrentWave takes nothing returns nothing\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/RestTime.j`"
+    },
+    {
+      "symbolName": "INITIAL_WAVE_COUNTDOWN",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime.j",
+      "content": "\n```jass\nconstant integer INITIAL_WAVE_COUNTDOWN\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/RestTime.j`"
+    },
+    {
+      "symbolName": "TRADER_TRACK_COUNT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime.j",
+      "content": "\n```jass\nconstant integer TRADER_TRACK_COUNT\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/RestTime.j`"
+    }
+  ],
+  "timestamp": 1776569161640
+}

@@ -1,0 +1,51 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+  "items": [
+    {
+      "symbolName": "impactFxAttach",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+      "content": "\n```jass\nstring array impactFxAttach\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j`"
+    },
+    {
+      "symbolName": "WaveProjectileGetScale",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+      "content": "\n```jass\nfunction WaveProjectileGetScale takes integer projectileId returns real\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j`"
+    },
+    {
+      "symbolName": "WaveProjectileGetMoveSpeed",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+      "content": "\n```jass\nfunction WaveProjectileGetMoveSpeed takes integer projectileId returns real\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j`"
+    },
+    {
+      "symbolName": "WAVE_PROJECTILE_DEFAULT_ATTACH_POINT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+      "content": "\n```jass\nconstant string WAVE_PROJECTILE_DEFAULT_ATTACH_POINT\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j`"
+    },
+    {
+      "symbolName": "WAVE_HRIF_PROJECTILE_DISTANCE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+      "content": "\n```jass\nconstant real WAVE_HRIF_PROJECTILE_DISTANCE\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j`"
+    },
+    {
+      "symbolName": "WAVE_HRIF_PROJECTILE_IMPACT_FX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+      "content": "\n```jass\nconstant string WAVE_HRIF_PROJECTILE_IMPACT_FX\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j`"
+    },
+    {
+      "symbolName": "stopOnUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+      "content": "\n```jass\nboolean array stopOnUnit\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j`"
+    },
+    {
+      "symbolName": "Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+      "content": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j`"
+    },
+    {
+      "symbolName": "modelPath",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+      "content": "\n```jass\nstring array modelPath\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j`"
+    }
+  ],
+  "timestamp": 1775953564916
+}

@@ -1,0 +1,21 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\movecast_viejo.j",
+  "items": [
+    {
+      "symbolName": "RegisterMovementSpell",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\movecast_viejo.j",
+      "content": "\n```jass\nfunction RegisterMovementSpell takes integer abilityId, string orderId returns nothing\n```\n\n\n---\n\n===========================================================================\n\nAPI - Funciones públicas para registrar hechizos\n\n===========================================================================\n\n===========================================================================\n\nRegistrar hechizo con OrderId string\n\n===========================================================================\n\n**文件:** `Pruebas/Reworks/movecast_viejo.j`"
+    },
+    {
+      "symbolName": "OnSpellEffect",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\movecast_viejo.j",
+      "content": "\n```jass\nfunction OnSpellEffect takes nothing returns boolean\n```\n\n\n---\n\n===========================================================================\n\nEvento: Efecto de hechizo (para verificar channeling)\n\n===========================================================================\n\n**文件:** `Pruebas/Reworks/movecast_viejo.j`"
+    },
+    {
+      "symbolName": "ORDER_ID_MOVE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\movecast_viejo.j",
+      "content": "\n```jass\ninteger ORDER_ID_MOVE\n```\n\n\n**文件:** `Pruebas/Reworks/movecast_viejo.j`"
+    }
+  ],
+  "timestamp": 1775930548205
+}

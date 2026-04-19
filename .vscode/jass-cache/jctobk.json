@@ -1,0 +1,339 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Tiny\\Tiny Building Toss.j",
+  "items": [
+    {
+      "label": "GetPickupRadius",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetPickupRadius takes integer level returns real\n```\n\n\n---\n\n==========================================================================\n\nTunables by ability level (PLACEHOLDERS)\n\n==========================================================================\n\n**_>:** `Pruebas/MissileExamples/Tiny/Tiny Building Toss.j`",
+      "sortText": "1_func_GetPickupRadius",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Tiny\\Tiny Building Toss.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetProjectileSpeed",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetProjectileSpeed takes integer level returns real\n```\n\n\n**_>:** `Pruebas/MissileExamples/Tiny/Tiny Building Toss.j`",
+      "sortText": "1_func_GetProjectileSpeed",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Tiny\\Tiny Building Toss.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetProjectileArc",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetProjectileArc takes integer level returns real\n```\n\n\n**_>:** `Pruebas/MissileExamples/Tiny/Tiny Building Toss.j`",
+      "sortText": "1_func_GetProjectileArc",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Tiny\\Tiny Building Toss.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetProjectileStartHeightOffset",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetProjectileStartHeightOffset takes integer level returns real\n```\n\n\n---\n\nAltura inicial adicional sobre la altura actual del edificio.\n\n**_>:** `Pruebas/MissileExamples/Tiny/Tiny Building Toss.j`",
+      "sortText": "1_func_GetProjectileStartHeightOffset",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Tiny\\Tiny Building Toss.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetProjectileImpactHeightOffset",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetProjectileImpactHeightOffset takes integer level returns real\n```\n\n\n---\n\nAltura final adicional al llegar al punto objetivo.\n\n**_>:** `Pruebas/MissileExamples/Tiny/Tiny Building Toss.j`",
+      "sortText": "1_func_GetProjectileImpactHeightOffset",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Tiny\\Tiny Building Toss.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetProjectileCollision",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetProjectileCollision takes integer level returns real\n```\n\n\n---\n\nColisión del misil durante vuelo (0 = no colisión en vuelo).\n\n**_>:** `Pruebas/MissileExamples/Tiny/Tiny Building Toss.j`",
+      "sortText": "1_func_GetProjectileCollision",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Tiny\\Tiny Building Toss.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetProjectileAcceleration",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetProjectileAcceleration takes integer level returns real\n```\n\n\n---\n\nAceleración por tick del sistema Missile (normalmente 0 para vuelo estable).\n\n**_>:** `Pruebas/MissileExamples/Tiny/Tiny Building Toss.j`",
+      "sortText": "1_func_GetProjectileAcceleration",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Tiny\\Tiny Building Toss.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetManaRefund",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetManaRefund takes integer level returns real\n```\n\n\n**_>:** `Pruebas/MissileExamples/Tiny/Tiny Building Toss.j`",
+      "sortText": "1_func_GetManaRefund",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Tiny\\Tiny Building Toss.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetImpactAoe",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetImpactAoe takes integer level returns real\n```\n\n\n**_>:** `Pruebas/MissileExamples/Tiny/Tiny Building Toss.j`",
+      "sortText": "1_func_GetImpactAoe",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Tiny\\Tiny Building Toss.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetImpactDamage",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetImpactDamage takes integer level returns real\n```\n\n\n**_>:** `Pruebas/MissileExamples/Tiny/Tiny Building Toss.j`",
+      "sortText": "1_func_GetImpactDamage",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Tiny\\Tiny Building Toss.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetStunDuration",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetStunDuration takes integer level returns real\n```\n\n\n**_>:** `Pruebas/MissileExamples/Tiny/Tiny Building Toss.j`",
+      "sortText": "1_func_GetStunDuration",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Tiny\\Tiny Building Toss.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "inFlightByHandle",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable inFlightByHandle\n```\n\n\n**_>:** `Pruebas/MissileExamples/Tiny/Tiny Building Toss.j`",
+      "sortText": "2_var_inFlightByHandle",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Tiny\\Tiny Building Toss.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "scriptStunStacks",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable scriptStunStacks\n```\n\n\n**_>:** `Pruebas/MissileExamples/Tiny/Tiny Building Toss.j`",
+      "sortText": "2_var_scriptStunStacks",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Tiny\\Tiny Building Toss.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "cleaned",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean array cleaned\n```\n\n\n**_>:** `Pruebas/MissileExamples/Tiny/Tiny Building Toss.j`",
+      "sortText": "2_var_cleaned",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Tiny\\Tiny Building Toss.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "originX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array originX\n```\n\n\n**_>:** `Pruebas/MissileExamples/Tiny/Tiny Building Toss.j`",
+      "sortText": "2_var_originX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Tiny\\Tiny Building Toss.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "originY",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array originY\n```\n\n\n**_>:** `Pruebas/MissileExamples/Tiny/Tiny Building Toss.j`",
+      "sortText": "2_var_originY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Tiny\\Tiny Building Toss.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "originFlyZ",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array originFlyZ\n```\n\n\n**_>:** `Pruebas/MissileExamples/Tiny/Tiny Building Toss.j`",
+      "sortText": "2_var_originFlyZ",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Tiny\\Tiny Building Toss.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "targetX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array targetX\n```\n\n\n**_>:** `Pruebas/MissileExamples/Tiny/Tiny Building Toss.j`",
+      "sortText": "2_var_targetX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Tiny\\Tiny Building Toss.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "targetY",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array targetY\n```\n\n\n**_>:** `Pruebas/MissileExamples/Tiny/Tiny Building Toss.j`",
+      "sortText": "2_var_targetY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Tiny\\Tiny Building Toss.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "launchFacing",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array launchFacing\n```\n\n\n**_>:** `Pruebas/MissileExamples/Tiny/Tiny Building Toss.j`",
+      "sortText": "2_var_launchFacing",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Tiny\\Tiny Building Toss.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "PlaceBuilding",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction PlaceBuilding takes unit u, real x, real y returns nothing\n```\n\n\n**_>:** `Pruebas/MissileExamples/Tiny/Tiny Building Toss.j`",
+      "sortText": "1_func_PlaceBuilding",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Tiny\\Tiny Building Toss.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetLandingFacing",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetLandingFacing takes integer dex, unit structureUnit returns real\n```\n\n\n**_>:** `Pruebas/MissileExamples/Tiny/Tiny Building Toss.j`",
+      "sortText": "1_func_GetLandingFacing",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Tiny\\Tiny Building Toss.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "IsWhitelistedStructureType",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction IsWhitelistedStructureType takes integer unitTypeId returns boolean\n```\n\n\n**_>:** `Pruebas/MissileExamples/Tiny/Tiny Building Toss.j`",
+      "sortText": "1_func_IsWhitelistedStructureType",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Tiny\\Tiny Building Toss.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "IsValidPickup",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction IsValidPickup takes unit u, player owner returns boolean\n```\n\n\n**_>:** `Pruebas/MissileExamples/Tiny/Tiny Building Toss.j`",
+      "sortText": "1_func_IsValidPickup",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Tiny\\Tiny Building Toss.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "IsValidImpactTarget",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction IsValidImpactTarget takes unit u, player owner returns boolean\n```\n\n\n**_>:** `Pruebas/MissileExamples/Tiny/Tiny Building Toss.j`",
+      "sortText": "1_func_IsValidImpactTarget",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Tiny\\Tiny Building Toss.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "PlaySoundAt",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction PlaySoundAt takes string file, real x, real y returns nothing\n```\n\n\n**_>:** `Pruebas/MissileExamples/Tiny/Tiny Building Toss.j`",
+      "sortText": "1_func_PlaySoundAt",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Tiny\\Tiny Building Toss.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "RefundMana",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction RefundMana takes unit caster, integer level returns nothing\n```\n\n\n**_>:** `Pruebas/MissileExamples/Tiny/Tiny Building Toss.j`",
+      "sortText": "1_func_RefundMana",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Tiny\\Tiny Building Toss.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "FindNearestOwnedStructure",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction FindNearestOwnedStructure takes unit caster, player owner, real radius returns unit\n```\n\n\n**_>:** `Pruebas/MissileExamples/Tiny/Tiny Building Toss.j`",
+      "sortText": "1_func_FindNearestOwnedStructure",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Tiny\\Tiny Building Toss.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnScriptStunExpire",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnScriptStunExpire takes nothing returns nothing\n```\n\n\n**_>:** `Pruebas/MissileExamples/Tiny/Tiny Building Toss.j`",
+      "sortText": "1_func_OnScriptStunExpire",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Tiny\\Tiny Building Toss.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "ApplyScriptStun",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ApplyScriptStun takes unit target, real duration returns nothing\n```\n\n\n**_>:** `Pruebas/MissileExamples/Tiny/Tiny Building Toss.j`",
+      "sortText": "1_func_ApplyScriptStun",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Tiny\\Tiny Building Toss.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "ApplyImpactStun",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ApplyImpactStun takes unit target, player owner, integer level returns nothing\n```\n\n\n**_>:** `Pruebas/MissileExamples/Tiny/Tiny Building Toss.j`",
+      "sortText": "1_func_ApplyImpactStun",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Tiny\\Tiny Building Toss.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "MarkBuildingInFlight",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction MarkBuildingInFlight takes unit u, boolean flag returns nothing\n```\n\n\n**_>:** `Pruebas/MissileExamples/Tiny/Tiny Building Toss.j`",
+      "sortText": "1_func_MarkBuildingInFlight",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Tiny\\Tiny Building Toss.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "CleanupCast",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction CleanupCast takes SpellIndex dex returns nothing\n```\n\n\n**_>:** `Pruebas/MissileExamples/Tiny/Tiny Building Toss.j`",
+      "sortText": "1_func_CleanupCast",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Tiny\\Tiny Building Toss.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "DealImpact",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction DealImpact takes SpellIndex dex, unit structureUnit, real x, real y returns nothing\n```\n\n\n**_>:** `Pruebas/MissileExamples/Tiny/Tiny Building Toss.j`",
+      "sortText": "1_func_DealImpact",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Tiny\\Tiny Building Toss.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TinyBuildingTossCore",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct TinyBuildingTossCore extends array\n```\n\n\n**_>:** `Pruebas/MissileExamples/Tiny/Tiny Building Toss.j`",
+      "sortText": "1_struct_TinyBuildingTossCore",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Tiny\\Tiny Building Toss.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "OnEffect",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnEffect takes nothing returns nothing\n```\n\n\n**_>:** `Pruebas/MissileExamples/Tiny/Tiny Building Toss.j`",
+      "sortText": "1_func_OnEffect",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Tiny\\Tiny Building Toss.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**_>:** `Pruebas/MissileExamples/Tiny/Tiny Building Toss.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Tiny\\Tiny Building Toss.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1776550709568
+}

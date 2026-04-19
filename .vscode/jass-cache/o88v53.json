@@ -1,0 +1,420 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gravity Shell.j",
+  "items": [
+    {
+      "label": "GetMainImpactDamage",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetMainImpactDamage takes integer level returns real\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gravity Shell.j`",
+      "sortText": "1_func_GetMainImpactDamage",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gravity Shell.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetCatchImpactDamage",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetCatchImpactDamage takes integer level returns real\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gravity Shell.j`",
+      "sortText": "1_func_GetCatchImpactDamage",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gravity Shell.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetRadialDamage",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetRadialDamage takes integer level returns real\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gravity Shell.j`",
+      "sortText": "1_func_GetRadialDamage",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gravity Shell.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "FilterUnits",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction FilterUnits takes unit target, player owner returns boolean\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gravity Shell.j`",
+      "sortText": "1_func_FilterUnits",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gravity Shell.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "KIND_MAIN",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer KIND_MAIN\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gravity Shell.j`",
+      "sortText": "2_var_KIND_MAIN",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gravity Shell.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "KIND_RADIAL",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer KIND_RADIAL\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gravity Shell.j`",
+      "sortText": "2_var_KIND_RADIAL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gravity Shell.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "missileKind",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array missileKind\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gravity Shell.j`",
+      "sortText": "2_var_missileKind",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gravity Shell.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "currentSpeed",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array currentSpeed\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gravity Shell.j`",
+      "sortText": "2_var_currentSpeed",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gravity Shell.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "decelElapsed",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array decelElapsed\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gravity Shell.j`",
+      "sortText": "2_var_decelElapsed",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gravity Shell.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "elapsedTotal",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array elapsedTotal\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gravity Shell.j`",
+      "sortText": "2_var_elapsedTotal",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gravity Shell.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "profileDecelDuration",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array profileDecelDuration\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gravity Shell.j`",
+      "sortText": "2_var_profileDecelDuration",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gravity Shell.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "profileStartDecelTime",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array profileStartDecelTime\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gravity Shell.j`",
+      "sortText": "2_var_profileStartDecelTime",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gravity Shell.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "profileStartDecelDistanceRatio",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array profileStartDecelDistanceRatio\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gravity Shell.j`",
+      "sortText": "2_var_profileStartDecelDistanceRatio",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gravity Shell.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "decelStarted",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean array decelStarted\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gravity Shell.j`",
+      "sortText": "2_var_decelStarted",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gravity Shell.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "profileInitSpeed",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array profileInitSpeed\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gravity Shell.j`",
+      "sortText": "2_var_profileInitSpeed",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gravity Shell.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "profileMinSpeed",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array profileMinSpeed\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gravity Shell.j`",
+      "sortText": "2_var_profileMinSpeed",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gravity Shell.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "profileDecelTime",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array profileDecelTime\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gravity Shell.j`",
+      "sortText": "2_var_profileDecelTime",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gravity Shell.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "mainCaught",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean array mainCaught\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gravity Shell.j`",
+      "sortText": "2_var_mainCaught",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gravity Shell.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "mainLaunchSound",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nsound array mainLaunchSound\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gravity Shell.j`",
+      "sortText": "2_var_mainLaunchSound",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gravity Shell.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "catchStage",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array catchStage\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gravity Shell.j`",
+      "sortText": "2_var_catchStage",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gravity Shell.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "catchPeakRadialEnabled",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean array catchPeakRadialEnabled\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gravity Shell.j`",
+      "sortText": "2_var_catchPeakRadialEnabled",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gravity Shell.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "catchElapsed",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array catchElapsed\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gravity Shell.j`",
+      "sortText": "2_var_catchElapsed",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gravity Shell.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "catchBaseHeight",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array catchBaseHeight\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gravity Shell.j`",
+      "sortText": "2_var_catchBaseHeight",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gravity Shell.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "catchDistanceTotal",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array catchDistanceTotal\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gravity Shell.j`",
+      "sortText": "2_var_catchDistanceTotal",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gravity Shell.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "catchDistanceProgress",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array catchDistanceProgress\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gravity Shell.j`",
+      "sortText": "2_var_catchDistanceProgress",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gravity Shell.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "radialAoe",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array radialAoe\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gravity Shell.j`",
+      "sortText": "2_var_radialAoe",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gravity Shell.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "radialDamage",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array radialDamage\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gravity Shell.j`",
+      "sortText": "2_var_radialDamage",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gravity Shell.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "PlayLaunchSound",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction PlayLaunchSound takes unit source, real pitch returns nothing\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gravity Shell.j`",
+      "sortText": "1_func_PlayLaunchSound",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gravity Shell.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "StartLaunchSound",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction StartLaunchSound takes unit source, real pitch returns sound\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gravity Shell.j`",
+      "sortText": "1_func_StartLaunchSound",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gravity Shell.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "StopLaunchSound",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction StopLaunchSound takes sound s returns nothing\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gravity Shell.j`",
+      "sortText": "1_func_StopLaunchSound",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gravity Shell.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "PlayImpactSound",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction PlayImpactSound takes real x, real y returns nothing\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gravity Shell.j`",
+      "sortText": "1_func_PlayImpactSound",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gravity Shell.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "PlayImpactSoundPitch",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction PlayImpactSoundPitch takes real x, real y, real pitch returns nothing\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gravity Shell.j`",
+      "sortText": "1_func_PlayImpactSoundPitch",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gravity Shell.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "PreloadSounds",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction PreloadSounds takes nothing returns nothing\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gravity Shell.j`",
+      "sortText": "1_func_PreloadSounds",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gravity Shell.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "DelayedStartAnimation",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction DelayedStartAnimation takes nothing returns nothing\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gravity Shell.j`",
+      "sortText": "1_func_DelayedStartAnimation",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gravity Shell.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "SetupSpeedProfile",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SetupSpeedProfile takes Missile missile returns nothing\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gravity Shell.j`",
+      "sortText": "1_func_SetupSpeedProfile",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gravity Shell.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "ApplySpeedProfile",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ApplySpeedProfile takes Missile missile returns nothing\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gravity Shell.j`",
+      "sortText": "1_func_ApplySpeedProfile",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gravity Shell.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "DealAreaDamage",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction DealAreaDamage takes unit source, player owner, real x, real y, real radius, real amount returns nothing\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gravity Shell.j`",
+      "sortText": "1_func_DealAreaDamage",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gravity Shell.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "LaunchRadialProjectiles",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction LaunchRadialProjectiles takes unit source, player owner, integer level, real x, real y, real z, real distance returns nothing\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gravity Shell.j`",
+      "sortText": "1_func_LaunchRadialProjectiles",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gravity Shell.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "ComputeMotionSpeed",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ComputeMotionSpeed takes real elapsed, real totalTime, real adjustTime, real adjustRatio, real totalDistance, real progressed returns real\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gravity Shell.j`",
+      "sortText": "1_func_ComputeMotionSpeed",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gravity Shell.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "ClearCaughtData",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ClearCaughtData takes SpellIndex dex returns nothing\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gravity Shell.j`",
+      "sortText": "1_func_ClearCaughtData",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gravity Shell.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnCaughtMotion",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnCaughtMotion takes nothing returns nothing\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gravity Shell.j`",
+      "sortText": "1_func_OnCaughtMotion",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gravity Shell.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "CatchOneUnit",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction CatchOneUnit takes unit source, player owner, integer level, unit target, boolean allowPeakRadial returns nothing\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gravity Shell.j`",
+      "sortText": "1_func_CatchOneUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gravity Shell.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "HandlePathCatch",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HandlePathCatch takes Missile missile, unit firstHit returns nothing\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gravity Shell.j`",
+      "sortText": "1_func_HandlePathCatch",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gravity Shell.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "ShockCore",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct ShockCore extends array\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gravity Shell.j`",
+      "sortText": "1_struct_ShockCore",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gravity Shell.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "OnEffect",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnEffect takes nothing returns nothing\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gravity Shell.j`",
+      "sortText": "1_func_OnEffect",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gravity Shell.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gravity Shell.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gravity Shell.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1776550709557
+}

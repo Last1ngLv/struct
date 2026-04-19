@@ -1,0 +1,31 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveMortarSkills.j",
+  "items": [
+    {
+      "symbolName": "WaveMortarBarragePrev",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveMortarSkills.j",
+      "content": "\n```jass\ninteger array WaveMortarBarragePrev\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j`"
+    },
+    {
+      "symbolName": "WaveMortarActiveBarrageByUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveMortarSkills.j",
+      "content": "\n```jass\nTable WaveMortarActiveBarrageByUnit\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j`"
+    },
+    {
+      "symbolName": "WAVE_HMTM_BARRAGE_TICK",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveMortarSkills.j",
+      "content": "\n```jass\nconstant real WAVE_HMTM_BARRAGE_TICK\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j`"
+    },
+    {
+      "symbolName": "WaveMortarBarrageTimerRunning",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveMortarSkills.j",
+      "content": "\n```jass\nboolean WaveMortarBarrageTimerRunning\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j`"
+    },
+    {
+      "symbolName": "WaveMortarBarrageAccumulator",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveMortarSkills.j",
+      "content": "\n```jass\nreal array WaveMortarBarrageAccumulator\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j`"
+    }
+  ],
+  "timestamp": 1776475703528
+}

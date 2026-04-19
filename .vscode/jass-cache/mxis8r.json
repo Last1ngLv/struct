@@ -1,0 +1,465 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileConfig.j",
+  "items": [
+    {
+      "label": "DEFAULT_SPEED",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real DEFAULT_SPEED\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileConfig.j`",
+      "sortText": "2_var_DEFAULT_SPEED",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_DAMAGE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real DEFAULT_DAMAGE\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileConfig.j`",
+      "sortText": "2_var_DEFAULT_DAMAGE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_MISSILE_MODEL",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string DEFAULT_MISSILE_MODEL\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileConfig.j`",
+      "sortText": "2_var_DEFAULT_MISSILE_MODEL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_OVERLAY_MODEL",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string DEFAULT_OVERLAY_MODEL\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileConfig.j`",
+      "sortText": "2_var_DEFAULT_OVERLAY_MODEL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_USE_RAPID_FIRE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant boolean DEFAULT_USE_RAPID_FIRE\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileConfig.j`",
+      "sortText": "2_var_DEFAULT_USE_RAPID_FIRE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_RAPID_FIRE_DURATION",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real DEFAULT_RAPID_FIRE_DURATION\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileConfig.j`",
+      "sortText": "2_var_DEFAULT_RAPID_FIRE_DURATION",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_RAPID_FIRE_INTERVAL",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real DEFAULT_RAPID_FIRE_INTERVAL\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileConfig.j`",
+      "sortText": "2_var_DEFAULT_RAPID_FIRE_INTERVAL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_CAST_ANIMATION",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string DEFAULT_CAST_ANIMATION\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileConfig.j`",
+      "sortText": "2_var_DEFAULT_CAST_ANIMATION",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_CAST_ANIMATION_DELAY",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real DEFAULT_CAST_ANIMATION_DELAY\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileConfig.j`",
+      "sortText": "2_var_DEFAULT_CAST_ANIMATION_DELAY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_CAST_ANIMATION_TIME_SCALE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real DEFAULT_CAST_ANIMATION_TIME_SCALE\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileConfig.j`",
+      "sortText": "2_var_DEFAULT_CAST_ANIMATION_TIME_SCALE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_CASTER_WAIT_FX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string DEFAULT_CASTER_WAIT_FX\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileConfig.j`",
+      "sortText": "2_var_DEFAULT_CASTER_WAIT_FX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_DUMMY_MODEL",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string DEFAULT_DUMMY_MODEL\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileConfig.j`",
+      "sortText": "2_var_DEFAULT_DUMMY_MODEL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_DUMMY_IMPACT_FX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string DEFAULT_DUMMY_IMPACT_FX\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileConfig.j`",
+      "sortText": "2_var_DEFAULT_DUMMY_IMPACT_FX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_DUMMY_SCALE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real DEFAULT_DUMMY_SCALE\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileConfig.j`",
+      "sortText": "2_var_DEFAULT_DUMMY_SCALE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_DUMMY_AREA",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real DEFAULT_DUMMY_AREA\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileConfig.j`",
+      "sortText": "2_var_DEFAULT_DUMMY_AREA",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_DUMMY_DELAY",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real DEFAULT_DUMMY_DELAY\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileConfig.j`",
+      "sortText": "2_var_DEFAULT_DUMMY_DELAY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_MISSILE_ARC",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real DEFAULT_MISSILE_ARC\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileConfig.j`",
+      "sortText": "2_var_DEFAULT_MISSILE_ARC",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_MISSILE_START_Z",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real DEFAULT_MISSILE_START_Z\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileConfig.j`",
+      "sortText": "2_var_DEFAULT_MISSILE_START_Z",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_MISSILE_FLY_HEIGHT",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real DEFAULT_MISSILE_FLY_HEIGHT\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileConfig.j`",
+      "sortText": "2_var_DEFAULT_MISSILE_FLY_HEIGHT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_MISSILE_COLLISION",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real DEFAULT_MISSILE_COLLISION\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileConfig.j`",
+      "sortText": "2_var_DEFAULT_MISSILE_COLLISION",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_IMPACT_ON_PATH",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant boolean DEFAULT_IMPACT_ON_PATH\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileConfig.j`",
+      "sortText": "2_var_DEFAULT_IMPACT_ON_PATH",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_SPECIAL_ENABLED",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant boolean DEFAULT_SPECIAL_ENABLED\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileConfig.j`",
+      "sortText": "2_var_DEFAULT_SPECIAL_ENABLED",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_SPECIAL_AFTER_NORMAL_SHOTS",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer DEFAULT_SPECIAL_AFTER_NORMAL_SHOTS\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileConfig.j`",
+      "sortText": "2_var_DEFAULT_SPECIAL_AFTER_NORMAL_SHOTS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_SPECIAL_MISSILE_MODEL",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string DEFAULT_SPECIAL_MISSILE_MODEL\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileConfig.j`",
+      "sortText": "2_var_DEFAULT_SPECIAL_MISSILE_MODEL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_SPECIAL_OVERLAY_MODEL",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string DEFAULT_SPECIAL_OVERLAY_MODEL\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileConfig.j`",
+      "sortText": "2_var_DEFAULT_SPECIAL_OVERLAY_MODEL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_SPECIAL_DAMAGE_MULT",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real DEFAULT_SPECIAL_DAMAGE_MULT\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileConfig.j`",
+      "sortText": "2_var_DEFAULT_SPECIAL_DAMAGE_MULT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_SPECIAL_AREA_MULT",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real DEFAULT_SPECIAL_AREA_MULT\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileConfig.j`",
+      "sortText": "2_var_DEFAULT_SPECIAL_AREA_MULT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_SPECIAL_SPEED_MULT",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real DEFAULT_SPECIAL_SPEED_MULT\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileConfig.j`",
+      "sortText": "2_var_DEFAULT_SPECIAL_SPEED_MULT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_SPECIAL_MISSILE_SCALE_MULT",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real DEFAULT_SPECIAL_MISSILE_SCALE_MULT\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileConfig.j`",
+      "sortText": "2_var_DEFAULT_SPECIAL_MISSILE_SCALE_MULT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_SPECIAL_DUMMY_SCALE_MULT",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real DEFAULT_SPECIAL_DUMMY_SCALE_MULT\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileConfig.j`",
+      "sortText": "2_var_DEFAULT_SPECIAL_DUMMY_SCALE_MULT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_SOUND_CAST_START",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string DEFAULT_SOUND_CAST_START\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileConfig.j`",
+      "sortText": "2_var_DEFAULT_SOUND_CAST_START",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_SOUND_WAIT_START",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string DEFAULT_SOUND_WAIT_START\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileConfig.j`",
+      "sortText": "2_var_DEFAULT_SOUND_WAIT_START",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_SOUND_WAIT_END",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string DEFAULT_SOUND_WAIT_END\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileConfig.j`",
+      "sortText": "2_var_DEFAULT_SOUND_WAIT_END",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_SOUND_IMPACT",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string DEFAULT_SOUND_IMPACT\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileConfig.j`",
+      "sortText": "2_var_DEFAULT_SOUND_IMPACT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_SOUND_LAST_MISSILE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string DEFAULT_SOUND_LAST_MISSILE\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileConfig.j`",
+      "sortText": "2_var_DEFAULT_SOUND_LAST_MISSILE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_SOUND_DUMMY_CLEAR",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string DEFAULT_SOUND_DUMMY_CLEAR\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileConfig.j`",
+      "sortText": "2_var_DEFAULT_SOUND_DUMMY_CLEAR",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_SOUND_INTERRUPTED",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string DEFAULT_SOUND_INTERRUPTED\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileConfig.j`",
+      "sortText": "2_var_DEFAULT_SOUND_INTERRUPTED",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_SOUND_CHANNEL_COMPLETE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string DEFAULT_SOUND_CHANNEL_COMPLETE\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileConfig.j`",
+      "sortText": "2_var_DEFAULT_SOUND_CHANNEL_COMPLETE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_MISSILE_SCALE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real DEFAULT_MISSILE_SCALE\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileConfig.j`",
+      "sortText": "2_var_DEFAULT_MISSILE_SCALE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_MANA_COST",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real DEFAULT_MANA_COST\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileConfig.j`",
+      "sortText": "2_var_DEFAULT_MANA_COST",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "Configure_hpea",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Configure_hpea takes nothing returns nothing\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileConfig.j`",
+      "sortText": "1_func_Configure_hpea",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Configure_hmil",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Configure_hmil takes nothing returns nothing\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileConfig.j`",
+      "sortText": "1_func_Configure_hmil",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Configure_hfoo",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Configure_hfoo takes nothing returns nothing\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileConfig.j`",
+      "sortText": "1_func_Configure_hfoo",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Configure_hrif",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Configure_hrif takes nothing returns nothing\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileConfig.j`",
+      "sortText": "1_func_Configure_hrif",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Configure_hkni",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Configure_hkni takes nothing returns nothing\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileConfig.j`",
+      "sortText": "1_func_Configure_hkni",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Configure_hmtm",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Configure_hmtm takes nothing returns nothing\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileConfig.j`",
+      "sortText": "1_func_Configure_hmtm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Configure_hmpr",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Configure_hmpr takes nothing returns nothing\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileConfig.j`",
+      "sortText": "1_func_Configure_hmpr",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Configure_hsor",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Configure_hsor takes nothing returns nothing\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileConfig.j`",
+      "sortText": "1_func_Configure_hsor",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Configure_hmtt",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Configure_hmtt takes nothing returns nothing\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileConfig.j`",
+      "sortText": "1_func_Configure_hmtt",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Configure_hwt3",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Configure_hwt3 takes nothing returns nothing\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileConfig.j`",
+      "sortText": "1_func_Configure_hwt3",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**_>:** `MyMissiles/UnitTypeMissileConfig.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileConfig.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1776550709381
+}

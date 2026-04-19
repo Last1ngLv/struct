@@ -1,4 +1,4 @@
-library WaveDamageCredit initializer Init requires Table, HealthBarTextTags
+library WaveDamageCredit initializer Init requires Table
 
     globals
         // Fallback window for last-damage credit. Short on purpose:
@@ -41,7 +41,6 @@ library WaveDamageCredit initializer Init requires Table, HealthBarTextTags
         if pid < 0 then
             return
         endif
-        call HealthBarsNotifyEnemyDamagedByPid(pid, target)
         set hid = GetHandleId(target)
         set WaveDamageCreditOwnerPidByTarget[hid] = pid
         set WaveDamageCreditSourceHidByTarget[hid] = GetHandleId(source)

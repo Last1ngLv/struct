@@ -1,0 +1,36 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TimerUtils.j",
+  "items": [
+    {
+      "symbolName": "NewTimer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TimerUtils.j",
+      "content": "\n```jass\nfunction NewTimer takes nothing returns timer\n```\n\n\n**文件:** `libraries/TimerUtils.j`"
+    },
+    {
+      "symbolName": "OFFSET",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TimerUtils.j",
+      "content": "\n```jass\nconstant integer OFFSET\n```\n\n\n**文件:** `libraries/TimerUtils.j`"
+    },
+    {
+      "symbolName": "USE_HASH_TABLE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TimerUtils.j",
+      "content": "\n```jass\nconstant boolean USE_HASH_TABLE\n```\n\n\n---\n\nHow to tweak timer utils:\n\nUSE_HASH_TABLE = true  (new blue)\n\n* SAFEST\n\n* SLOWEST (though hash tables are kind of fast)\n\nUSE_HASH_TABLE = false, USE_FLEXIBLE_OFFSET = true  (orange)\n\n* kinda safe (except there is a limit in the number of timers)\n\n* ALMOST FAST\n\nUSE_HASH_TABLE = false, USE_FLEXIBLE_OFFSET = false (red)\n\n* THE FASTEST (though is only  faster than the previous method\n\nafter using the optimizer on the map)\n\n* THE LEAST SAFE ( you may have to tweak OFSSET manually for it to\n\nwork)\n\n**文件:** `libraries/TimerUtils.j`"
+    },
+    {
+      "symbolName": "USE_FLEXIBLE_OFFSET",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TimerUtils.j",
+      "content": "\n```jass\nconstant boolean USE_FLEXIBLE_OFFSET\n```\n\n\n**文件:** `libraries/TimerUtils.j`"
+    },
+    {
+      "symbolName": "didinit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TimerUtils.j",
+      "content": "\n```jass\nboolean didinit\n```\n\n\n---\n\nuse a totally random number here, the more improbable someone uses it, the better.\n\n**文件:** `libraries/TimerUtils.j`"
+    },
+    {
+      "symbolName": "QUANTITY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TimerUtils.j",
+      "content": "\n```jass\nconstant integer QUANTITY\n```\n\n\n---\n\nTimers to preload at map init:\n\n**文件:** `libraries/TimerUtils.j`"
+    }
+  ],
+  "timestamp": 1776063529924
+}

@@ -9,7 +9,9 @@ library WaveTrapSkills initializer Init requires Table, TimerUtils, Missile, Spe
         public constant real WAVE_HSOR_PROJECTILE_SPEED = 950.0
         public constant real WAVE_HSOR_PROJECTILE_START_Z = 75.0
         public constant real WAVE_HSOR_PROJECTILE_ARC = 0.12
+        public constant real WAVE_HSOR_PROJECTILE_CATCH_RADIUS = 150.0
         public constant real WAVE_HSOR_WINDUP = 1.50
+        public constant real WAVE_HSOR_CAST_RANGE = 2000.0
 
         public constant real WAVE_HSOR_TRAP_RADIUS = 150.0
         public constant real WAVE_HSOR_TRAP_DURATION = 3.50
@@ -22,8 +24,8 @@ library WaveTrapSkills initializer Init requires Table, TimerUtils, Missile, Spe
         public constant real WAVE_HSOR_BOSS_TRAP_DURATION = 5.50
         public constant real WAVE_HSOR_BOSS_INITIAL_DELAY_MIN = 3.00
         public constant real WAVE_HSOR_BOSS_INITIAL_DELAY_MAX = 4.50
-        public constant real WAVE_HSOR_BOSS_COOLDOWN_MIN = 14.00
-        public constant real WAVE_HSOR_BOSS_COOLDOWN_MAX = 18.00
+        public constant real WAVE_HSOR_BOSS_COOLDOWN_MIN = 10.00
+        public constant real WAVE_HSOR_BOSS_COOLDOWN_MAX = 12.00
 
         private constant real WAVE_HSOR_TICK = 0.05
 
@@ -91,6 +93,17 @@ library WaveTrapSkills initializer Init requires Table, TimerUtils, Missile, Spe
 
     private function WaveTrapUnitAlive takes unit u returns boolean
         return u != null and GetUnitTypeId(u) != 0 and UnitAlive(u)
+    endfunction
+
+    private function WaveTrapTargetInCastRange takes unit source, unit target returns boolean
+        local real dx
+        local real dy
+        if not WaveTrapUnitAlive(source) or not WaveTrapUnitAlive(target) then
+            return false
+        endif
+        set dx = GetUnitX(target) - GetUnitX(source)
+        set dy = GetUnitY(target) - GetUnitY(source)
+        return dx*dx + dy*dy <= WAVE_HSOR_CAST_RANGE*WAVE_HSOR_CAST_RANGE
     endfunction
 
     private function WaveTrapIsBoss takes unit source returns boolean
@@ -264,7 +277,7 @@ library WaveTrapSkills initializer Init requires Table, TimerUtils, Missile, Spe
         set missile.owner = GetOwningPlayer(source)
         set missile.model = modelPath
         set missile.scale = WaveSkillVisualShieldScaleForRadius(radius)
-        set missile.collision = radius
+        set missile.collision = WAVE_HSOR_PROJECTILE_CATCH_RADIUS
         set missile.arc = WAVE_HSOR_PROJECTILE_ARC
         call missile.setMovementSpeed(WAVE_HSOR_PROJECTILE_SPEED)
         set WaveTrapMissileOwner[missile] = GetOwningPlayer(source)
@@ -441,6 +454,9 @@ library WaveTrapSkills initializer Init requires Table, TimerUtils, Missile, Spe
             return false
         endif
         if target == null or GetUnitTypeId(target) == 0 or not UnitAlive(target) or not IsUnitType(target, UNIT_TYPE_HERO) then
+            return false
+        endif
+        if not WaveTrapTargetInCastRange(source, target) then
             return false
         endif
 

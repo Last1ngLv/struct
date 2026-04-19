@@ -1,0 +1,870 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+  "items": [
+    {
+      "label": "WAVE_HKNI_UNIT_ID",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_HKNI_UNIT_ID\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "2_var_WAVE_HKNI_UNIT_ID",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HKNI_BOSS_UNIT_ID",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_HKNI_BOSS_UNIT_ID\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "2_var_WAVE_HKNI_BOSS_UNIT_ID",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HKNI_PHASE_ITEM_ID",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_HKNI_PHASE_ITEM_ID\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "2_var_WAVE_HKNI_PHASE_ITEM_ID",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HKNI_PHASE_BUFF_ID",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_HKNI_PHASE_BUFF_ID\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "2_var_WAVE_HKNI_PHASE_BUFF_ID",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_AURA_TEMP_INVENTORY_ABILITY_ID",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_AURA_TEMP_INVENTORY_ABILITY_ID\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "2_var_WAVE_AURA_TEMP_INVENTORY_ABILITY_ID",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HKNI_AURA_VISUAL_MODEL",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string WAVE_HKNI_AURA_VISUAL_MODEL\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "2_var_WAVE_HKNI_AURA_VISUAL_MODEL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HKNI_BOSS_AURA_VISUAL_MODEL",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string WAVE_HKNI_BOSS_AURA_VISUAL_MODEL\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "2_var_WAVE_HKNI_BOSS_AURA_VISUAL_MODEL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HKNI_AURA_RADIUS",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HKNI_AURA_RADIUS\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "2_var_WAVE_HKNI_AURA_RADIUS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HKNI_AURA_DURATION",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HKNI_AURA_DURATION\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "2_var_WAVE_HKNI_AURA_DURATION",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HKNI_AURA_REFRESH_INTERVAL",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HKNI_AURA_REFRESH_INTERVAL\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "2_var_WAVE_HKNI_AURA_REFRESH_INTERVAL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HKNI_INITIAL_DELAY_MIN",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HKNI_INITIAL_DELAY_MIN\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "2_var_WAVE_HKNI_INITIAL_DELAY_MIN",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HKNI_INITIAL_DELAY_MAX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HKNI_INITIAL_DELAY_MAX\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "2_var_WAVE_HKNI_INITIAL_DELAY_MAX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HKNI_COOLDOWN_MIN",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HKNI_COOLDOWN_MIN\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "2_var_WAVE_HKNI_COOLDOWN_MIN",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HKNI_COOLDOWN_MAX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HKNI_COOLDOWN_MAX\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "2_var_WAVE_HKNI_COOLDOWN_MAX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HKNI_BOSS_AURA_RADIUS",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HKNI_BOSS_AURA_RADIUS\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "2_var_WAVE_HKNI_BOSS_AURA_RADIUS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HKNI_BOSS_AURA_DURATION",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HKNI_BOSS_AURA_DURATION\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "2_var_WAVE_HKNI_BOSS_AURA_DURATION",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HKNI_BOSS_INITIAL_DELAY_MIN",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HKNI_BOSS_INITIAL_DELAY_MIN\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "2_var_WAVE_HKNI_BOSS_INITIAL_DELAY_MIN",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HKNI_BOSS_INITIAL_DELAY_MAX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HKNI_BOSS_INITIAL_DELAY_MAX\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "2_var_WAVE_HKNI_BOSS_INITIAL_DELAY_MAX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HKNI_BOSS_COOLDOWN_MIN",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HKNI_BOSS_COOLDOWN_MIN\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "2_var_WAVE_HKNI_BOSS_COOLDOWN_MIN",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HKNI_BOSS_COOLDOWN_MAX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HKNI_BOSS_COOLDOWN_MAX\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "2_var_WAVE_HKNI_BOSS_COOLDOWN_MAX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_AURA_DEBUG_ENABLED",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean WAVE_AURA_DEBUG_ENABLED\n```\n\n\n---\n\nPara el caso de StageExample/wave 1: WaveAuraSetDebug(true), WaveAuraSetDebugWaveFilter(1), WaveAuraSetDebugUnitTypeFilter('hkni')\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "2_var_WAVE_AURA_DEBUG_ENABLED",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_AURA_DEBUG_WAVE_FILTER",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger WAVE_AURA_DEBUG_WAVE_FILTER\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "2_var_WAVE_AURA_DEBUG_WAVE_FILTER",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_AURA_DEBUG_UNIT_TYPE_FILTER",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger WAVE_AURA_DEBUG_UNIT_TYPE_FILTER\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "2_var_WAVE_AURA_DEBUG_UNIT_TYPE_FILTER",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_AURA_DEBUG_MAX_LOGS_PER_TICK",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger WAVE_AURA_DEBUG_MAX_LOGS_PER_TICK\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "2_var_WAVE_AURA_DEBUG_MAX_LOGS_PER_TICK",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_AURA_DEBUG_MAX_REJECT_LOGS_PER_TICK",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger WAVE_AURA_DEBUG_MAX_REJECT_LOGS_PER_TICK\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "2_var_WAVE_AURA_DEBUG_MAX_REJECT_LOGS_PER_TICK",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_AURA_DEBUG_MAX_NULL_REJECT_LOGS_PER_TICK",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger WAVE_AURA_DEBUG_MAX_NULL_REJECT_LOGS_PER_TICK\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "2_var_WAVE_AURA_DEBUG_MAX_NULL_REJECT_LOGS_PER_TICK",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_AURA_DEBUG_MAX_RAW_ENUM_LOGS_PER_TICK",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger WAVE_AURA_DEBUG_MAX_RAW_ENUM_LOGS_PER_TICK\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "2_var_WAVE_AURA_DEBUG_MAX_RAW_ENUM_LOGS_PER_TICK",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_AURA_DEBUG_LOG_ACTIVE_AURA_EXISTS",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean WAVE_AURA_DEBUG_LOG_ACTIVE_AURA_EXISTS\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "2_var_WAVE_AURA_DEBUG_LOG_ACTIVE_AURA_EXISTS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_AURA_MEMBER_STRIDE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_AURA_MEMBER_STRIDE\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "2_var_WAVE_AURA_MEMBER_STRIDE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveAuraNextCastMs",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable WaveAuraNextCastMs\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "2_var_WaveAuraNextCastMs",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveAuraActiveAuraByUnit",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable WaveAuraActiveAuraByUnit\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "2_var_WaveAuraActiveAuraByUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveAuraUnitOwnerAura",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable WaveAuraUnitOwnerAura\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "2_var_WaveAuraUnitOwnerAura",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveAuraUnitMemberIndex",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable WaveAuraUnitMemberIndex\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "2_var_WaveAuraUnitMemberIndex",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveAuraMemberUnitByKey",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable WaveAuraMemberUnitByKey\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "2_var_WaveAuraMemberUnitByKey",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveAuraMemberHidByKey",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable WaveAuraMemberHidByKey\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "2_var_WaveAuraMemberHidByKey",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveAuraSeenTokenByUnit",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable WaveAuraSeenTokenByUnit\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "2_var_WaveAuraSeenTokenByUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveAuraVisualByUnit",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable WaveAuraVisualByUnit\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "2_var_WaveAuraVisualByUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveAuraUnitInventoryGranted",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable WaveAuraUnitInventoryGranted\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "2_var_WaveAuraUnitInventoryGranted",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveAuraEnumGroup",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ngroup WaveAuraEnumGroup\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "2_var_WaveAuraEnumGroup",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveAuraTimer",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ntimer WaveAuraTimer\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "2_var_WaveAuraTimer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveAuraTimerRunning",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean WaveAuraTimerRunning\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "2_var_WaveAuraTimerRunning",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveAuraHead",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger WaveAuraHead\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "2_var_WaveAuraHead",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveAuraCount",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger WaveAuraCount\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "2_var_WaveAuraCount",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveAuraEnumAuraId",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger WaveAuraEnumAuraId\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "2_var_WaveAuraEnumAuraId",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveAuraNext",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array WaveAuraNext\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "2_var_WaveAuraNext",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveAuraPrev",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array WaveAuraPrev\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "2_var_WaveAuraPrev",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveAuraSweepToken",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array WaveAuraSweepToken\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "2_var_WaveAuraSweepToken",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveAuraMemberCount",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array WaveAuraMemberCount\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "2_var_WaveAuraMemberCount",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveAuraSource",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nunit array WaveAuraSource\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "2_var_WaveAuraSource",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveAuraVisualFx",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array WaveAuraVisualFx\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "2_var_WaveAuraVisualFx",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveAuraRadius",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array WaveAuraRadius\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "2_var_WaveAuraRadius",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveAuraRemaining",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array WaveAuraRemaining\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "2_var_WaveAuraRemaining",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveAuraDebugEnumCount",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array WaveAuraDebugEnumCount\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "2_var_WaveAuraDebugEnumCount",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveAuraDebugApplyCount",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array WaveAuraDebugApplyCount\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "2_var_WaveAuraDebugApplyCount",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveAuraDebugRejectCount",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array WaveAuraDebugRejectCount\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "2_var_WaveAuraDebugRejectCount",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveAuraDebugRemovalCount",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array WaveAuraDebugRemovalCount\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "2_var_WaveAuraDebugRemovalCount",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveAuraDebugRejectLogs",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array WaveAuraDebugRejectLogs\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "2_var_WaveAuraDebugRejectLogs",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveAuraDebugNullRejectLogs",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array WaveAuraDebugNullRejectLogs\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "2_var_WaveAuraDebugNullRejectLogs",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveAuraDebugRawEnumLogs",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array WaveAuraDebugRawEnumLogs\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "2_var_WaveAuraDebugRawEnumLogs",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveAuraDebugLogsThisTick",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger WaveAuraDebugLogsThisTick\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "2_var_WaveAuraDebugLogsThisTick",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveAuraMemberKey",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveAuraMemberKey takes integer auraId, integer index returns integer\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "1_func_WaveAuraMemberKey",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveAuraClearMemberState",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveAuraClearMemberState takes integer key, integer hid, unit target returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "1_func_WaveAuraClearMemberState",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveAuraSecToMs",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveAuraSecToMs takes real sec returns integer\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "1_func_WaveAuraSecToMs",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveAuraRandomMsRange",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveAuraRandomMsRange takes real minSec, real maxSec returns integer\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "1_func_WaveAuraRandomMsRange",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveAuraBoolToInt",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveAuraBoolToInt takes boolean b returns integer\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "1_func_WaveAuraBoolToInt",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveAuraUnitAlive",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveAuraUnitAlive takes unit u returns boolean\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "1_func_WaveAuraUnitAlive",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveAuraUnitWaveId",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveAuraUnitWaveId takes unit u returns integer\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "1_func_WaveAuraUnitWaveId",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveAuraDebugUnitSummary",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveAuraDebugUnitSummary takes unit u returns string\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "1_func_WaveAuraDebugUnitSummary",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveAuraDebugPassesFilter",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveAuraDebugPassesFilter takes unit source returns boolean\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "1_func_WaveAuraDebugPassesFilter",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveAuraDebugLog",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveAuraDebugLog takes string msg returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "1_func_WaveAuraDebugLog",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveAuraTargetDebugDetails",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveAuraTargetDebugDetails takes unit source, unit target returns string\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "1_func_WaveAuraTargetDebugDetails",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveAuraTargetRejectReason",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveAuraTargetRejectReason takes integer auraId, unit source, unit target returns string\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "1_func_WaveAuraTargetRejectReason",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveAuraIsHkni",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveAuraIsHkni takes unit source returns boolean\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "1_func_WaveAuraIsHkni",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveAuraIsHkniBoss",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveAuraIsHkniBoss takes unit source returns boolean\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "1_func_WaveAuraIsHkniBoss",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveAuraVisualModelForSource",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveAuraVisualModelForSource takes unit source returns string\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "1_func_WaveAuraVisualModelForSource",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveAuraIsValidTarget",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveAuraIsValidTarget takes integer auraId, unit source, unit target returns boolean\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "1_func_WaveAuraIsValidTarget",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveAuraAdd",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveAuraAdd takes integer auraId returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "1_func_WaveAuraAdd",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveAuraRemove",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveAuraRemove takes integer auraId returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "1_func_WaveAuraRemove",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveAuraRemoveMember",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveAuraRemoveMember takes integer auraId, integer hid, unit target, string reason returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "1_func_WaveAuraRemoveMember",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveAuraRemoveAllMembers",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveAuraRemoveAllMembers takes integer auraId returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "1_func_WaveAuraRemoveAllMembers",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveAuraDestroyVisual",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveAuraDestroyVisual takes integer auraId returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "1_func_WaveAuraDestroyVisual",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveAuraDestroy",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveAuraDestroy takes integer auraId, string reason returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "1_func_WaveAuraDestroy",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveAuraApplyTarget",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveAuraApplyTarget takes integer auraId, unit target returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "1_func_WaveAuraApplyTarget",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveAuraEnum",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveAuraEnum takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "1_func_WaveAuraEnum",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveAuraSweepMembers",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveAuraSweepMembers takes integer auraId returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "1_func_WaveAuraSweepMembers",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveAuraTick",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveAuraTick takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "1_func_WaveAuraTick",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveAuraEnsureTimer",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveAuraEnsureTimer takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "1_func_WaveAuraEnsureTimer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveAuraStart",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveAuraStart takes unit source, real radius, real duration returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "1_func_WaveAuraStart",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveAuraCleanupDeadSource",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveAuraCleanupDeadSource takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "1_func_WaveAuraCleanupDeadSource",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveAuraSkillsTryExecute",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveAuraSkillsTryExecute takes unit source, unit target, integer nowMs returns boolean\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "1_func_WaveAuraSkillsTryExecute",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveAuraSetDebug",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveAuraSetDebug takes boolean enabled returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "1_func_WaveAuraSetDebug",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveAuraSetDebugWaveFilter",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveAuraSetDebugWaveFilter takes integer waveId returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "1_func_WaveAuraSetDebugWaveFilter",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveAuraSetDebugUnitTypeFilter",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveAuraSetDebugUnitTypeFilter takes integer unitTypeId returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "1_func_WaveAuraSetDebugUnitTypeFilter",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveAuraSetDebugMaxLogsPerTick",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveAuraSetDebugMaxLogsPerTick takes integer maxLogs returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "1_func_WaveAuraSetDebugMaxLogsPerTick",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveAuraSetDebugMaxRejectLogsPerTick",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveAuraSetDebugMaxRejectLogsPerTick takes integer maxLogs returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "1_func_WaveAuraSetDebugMaxRejectLogsPerTick",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveAuraSkills.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1776550709659
+}

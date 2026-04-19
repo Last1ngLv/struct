@@ -1,0 +1,26 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\TenderSystem.j",
+  "items": [
+    {
+      "symbolName": "TenderUnitTypeId",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\TenderSystem.j",
+      "content": "\n```jass\ninteger TenderUnitTypeId\n```\n\n\n**文件:** `InitMap/TenderSystem.j`"
+    },
+    {
+      "symbolName": "TenderSystem",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\TenderSystem.j",
+      "content": "\n```jass\nlibrary TenderSystem requires SwlsMath\n```\n\n\n**文件:** `InitMap/TenderSystem.j`"
+    },
+    {
+      "symbolName": "IsUnitNearTender",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\TenderSystem.j",
+      "content": "\n```jass\nfunction IsUnitNearTender takes unit u, real radius returns boolean\n```\n\n\n**文件:** `InitMap/TenderSystem.j`"
+    },
+    {
+      "symbolName": "GetTenderUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\TenderSystem.j",
+      "content": "\n```jass\nfunction GetTenderUnit takes nothing returns unit\n```\n\n\n**文件:** `InitMap/TenderSystem.j`"
+    }
+  ],
+  "timestamp": 1776107979456
+}

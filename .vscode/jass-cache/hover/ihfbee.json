@@ -1,0 +1,11 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveWaveformSkills.j",
+  "items": [
+    {
+      "symbolName": "WAVE_HWT3_COOLDOWN_MAX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveWaveformSkills.j",
+      "content": "\n```jass\nconstant real WAVE_HWT3_COOLDOWN_MAX\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveWaveformSkills.j`"
+    }
+  ],
+  "timestamp": 1776473990982
+}

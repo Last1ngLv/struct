@@ -1,0 +1,21 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\EnemyPreviewConfig.j",
+  "items": [
+    {
+      "symbolName": "EnemyPreviewModelPath",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\EnemyPreviewConfig.j",
+      "content": "\n```jass\nstring array EnemyPreviewModelPath\n```\n\n\n**文件:** `UI System/MyIU/EnemyPreviewConfig.j`"
+    },
+    {
+      "symbolName": "EnemyPreviewGetModelScale",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\EnemyPreviewConfig.j",
+      "content": "\n```jass\nfunction EnemyPreviewGetModelScale takes integer waveId returns real\n```\n\n\n**文件:** `UI System/MyIU/EnemyPreviewConfig.j`"
+    },
+    {
+      "symbolName": "EnemyPreviewText",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\EnemyPreviewConfig.j",
+      "content": "\n```jass\nstring array EnemyPreviewText\n```\n\n\n**文件:** `UI System/MyIU/EnemyPreviewConfig.j`"
+    }
+  ],
+  "timestamp": 1775862476761
+}

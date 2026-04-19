@@ -1,0 +1,31 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+  "items": [
+    {
+      "symbolName": "WAVE_HMTT_DUMMY_ID",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "content": "\n```jass\nconstant integer WAVE_HMTT_DUMMY_ID\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`"
+    },
+    {
+      "symbolName": "WAVE_HMTT_BOSS_UNIT_ID",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "content": "\n```jass\nconstant integer WAVE_HMTT_BOSS_UNIT_ID\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`"
+    },
+    {
+      "symbolName": "WAVE_HMTT_BOSS_INITIAL_DELAY_MAX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "content": "\n```jass\nconstant real WAVE_HMTT_BOSS_INITIAL_DELAY_MAX\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`"
+    },
+    {
+      "symbolName": "WAVE_HMTT_INITIAL_DELAY_MIN",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "content": "\n```jass\nconstant real WAVE_HMTT_INITIAL_DELAY_MIN\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`"
+    },
+    {
+      "symbolName": "WAVE_HMTT_BOSS_INITIAL_DELAY_MIN",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "content": "\n```jass\nconstant real WAVE_HMTT_BOSS_INITIAL_DELAY_MIN\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`"
+    }
+  ],
+  "timestamp": 1776555796736
+}

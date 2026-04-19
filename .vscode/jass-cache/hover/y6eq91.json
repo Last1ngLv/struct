@@ -1,0 +1,16 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileBehaviors.j",
+  "items": [
+    {
+      "symbolName": "WaveProjectileBehaviorOnUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileBehaviors.j",
+      "content": "\n```jass\nfunction WaveProjectileBehaviorOnUnit takes integer projectileId, Missile missile, unit hit, real damage returns boolean\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveProjectileBehaviors.j`"
+    },
+    {
+      "symbolName": "CreateFxAtWidget",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileBehaviors.j",
+      "content": "\n```jass\nfunction CreateFxAtWidget takes widget w, string fxPath, string attach returns nothing\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveProjectileBehaviors.j`"
+    }
+  ],
+  "timestamp": 1775248202023
+}

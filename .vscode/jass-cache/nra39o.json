@@ -1,0 +1,60 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\ExampleAdvance\\Setups\\Drop Item.j",
+  "items": [
+    {
+      "label": "DropItem",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nInvItem array DropItem\n```\n\n\n**_>:** `Pruebas/ExampleAdvance/Setups/Drop Item.j`",
+      "sortText": "2_var_DropItem",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\ExampleAdvance\\Setups\\Drop Item.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DropSlot",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array DropSlot\n```\n\n\n**_>:** `Pruebas/ExampleAdvance/Setups/Drop Item.j`",
+      "sortText": "2_var_DropSlot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\ExampleAdvance\\Setups\\Drop Item.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DropInv",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nInventory array DropInv\n```\n\n\n**_>:** `Pruebas/ExampleAdvance/Setups/Drop Item.j`",
+      "sortText": "2_var_DropInv",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\ExampleAdvance\\Setups\\Drop Item.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "OnAgree",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnAgree takes nothing returns boolean\n```\n\n\n**_>:** `Pruebas/ExampleAdvance/Setups/Drop Item.j`",
+      "sortText": "1_func_OnAgree",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\ExampleAdvance\\Setups\\Drop Item.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Actions",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Actions takes nothing returns nothing\n```\n\n\n**_>:** `Pruebas/ExampleAdvance/Setups/Drop Item.j`",
+      "sortText": "1_func_Actions",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\ExampleAdvance\\Setups\\Drop Item.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n---\n\n===========================================================================\n\n**_>:** `Pruebas/ExampleAdvance/Setups/Drop Item.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\ExampleAdvance\\Setups\\Drop Item.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1776550709466
+}

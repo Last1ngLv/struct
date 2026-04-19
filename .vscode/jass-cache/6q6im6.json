@@ -1,0 +1,483 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\HealthBarTextTags.j",
+  "items": [
+    {
+      "label": "HEALTH_BAR_HERO_PERIOD",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real HEALTH_BAR_HERO_PERIOD\n```\n\n\n**_>:** `libraries/HealthBarTextTags.j`",
+      "sortText": "2_var_HEALTH_BAR_HERO_PERIOD",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\HealthBarTextTags.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HEALTH_BAR_ENEMY_PERIOD",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real HEALTH_BAR_ENEMY_PERIOD\n```\n\n\n**_>:** `libraries/HealthBarTextTags.j`",
+      "sortText": "2_var_HEALTH_BAR_ENEMY_PERIOD",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\HealthBarTextTags.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HEALTH_BAR_ENEMY_TIMEOUT",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real HEALTH_BAR_ENEMY_TIMEOUT\n```\n\n\n**_>:** `libraries/HealthBarTextTags.j`",
+      "sortText": "2_var_HEALTH_BAR_ENEMY_TIMEOUT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\HealthBarTextTags.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HEALTH_BAR_SEGMENTS",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer HEALTH_BAR_SEGMENTS\n```\n\n\n**_>:** `libraries/HealthBarTextTags.j`",
+      "sortText": "2_var_HEALTH_BAR_SEGMENTS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\HealthBarTextTags.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HEALTH_BAR_ENEMY_SLOTS_PER_VIEWER",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer HEALTH_BAR_ENEMY_SLOTS_PER_VIEWER\n```\n\n\n**_>:** `libraries/HealthBarTextTags.j`",
+      "sortText": "2_var_HEALTH_BAR_ENEMY_SLOTS_PER_VIEWER",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\HealthBarTextTags.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HEALTH_BAR_HERO_NAME_SIZE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real HEALTH_BAR_HERO_NAME_SIZE\n```\n\n\n**_>:** `libraries/HealthBarTextTags.j`",
+      "sortText": "2_var_HEALTH_BAR_HERO_NAME_SIZE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\HealthBarTextTags.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HEALTH_BAR_HERO_BAR_SIZE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real HEALTH_BAR_HERO_BAR_SIZE\n```\n\n\n**_>:** `libraries/HealthBarTextTags.j`",
+      "sortText": "2_var_HEALTH_BAR_HERO_BAR_SIZE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\HealthBarTextTags.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HEALTH_BAR_ENEMY_BAR_SIZE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real HEALTH_BAR_ENEMY_BAR_SIZE\n```\n\n\n**_>:** `libraries/HealthBarTextTags.j`",
+      "sortText": "2_var_HEALTH_BAR_ENEMY_BAR_SIZE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\HealthBarTextTags.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HEALTH_BAR_HERO_NAME_Z",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real HEALTH_BAR_HERO_NAME_Z\n```\n\n\n**_>:** `libraries/HealthBarTextTags.j`",
+      "sortText": "2_var_HEALTH_BAR_HERO_NAME_Z",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\HealthBarTextTags.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HEALTH_BAR_HERO_BAR_Z",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real HEALTH_BAR_HERO_BAR_Z\n```\n\n\n**_>:** `libraries/HealthBarTextTags.j`",
+      "sortText": "2_var_HEALTH_BAR_HERO_BAR_Z",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\HealthBarTextTags.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HEALTH_BAR_ENEMY_Z",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real HEALTH_BAR_ENEMY_Z\n```\n\n\n**_>:** `libraries/HealthBarTextTags.j`",
+      "sortText": "2_var_HEALTH_BAR_ENEMY_Z",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\HealthBarTextTags.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HEALTH_BAR_HERO_X_OFFSET",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real HEALTH_BAR_HERO_X_OFFSET\n```\n\n\n**_>:** `libraries/HealthBarTextTags.j`",
+      "sortText": "2_var_HEALTH_BAR_HERO_X_OFFSET",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\HealthBarTextTags.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HEALTH_BAR_ENEMY_X_OFFSET",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real HEALTH_BAR_ENEMY_X_OFFSET\n```\n\n\n**_>:** `libraries/HealthBarTextTags.j`",
+      "sortText": "2_var_HEALTH_BAR_ENEMY_X_OFFSET",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\HealthBarTextTags.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HEALTH_BAR_ALPHA",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer HEALTH_BAR_ALPHA\n```\n\n\n**_>:** `libraries/HealthBarTextTags.j`",
+      "sortText": "2_var_HEALTH_BAR_ALPHA",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\HealthBarTextTags.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HealthBarHeroTicker",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ntimer HealthBarHeroTicker\n```\n\n\n**_>:** `libraries/HealthBarTextTags.j`",
+      "sortText": "2_var_HealthBarHeroTicker",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\HealthBarTextTags.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HealthBarEnemyTicker",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ntimer HealthBarEnemyTicker\n```\n\n\n**_>:** `libraries/HealthBarTextTags.j`",
+      "sortText": "2_var_HealthBarEnemyTicker",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\HealthBarTextTags.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HealthBarEnemyNow",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal HealthBarEnemyNow\n```\n\n\n**_>:** `libraries/HealthBarTextTags.j`",
+      "sortText": "2_var_HealthBarEnemyNow",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\HealthBarTextTags.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HeroNameTag",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ntexttag array HeroNameTag\n```\n\n\n**_>:** `libraries/HealthBarTextTags.j`",
+      "sortText": "2_var_HeroNameTag",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\HealthBarTextTags.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HeroBarTag",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ntexttag array HeroBarTag\n```\n\n\n**_>:** `libraries/HealthBarTextTags.j`",
+      "sortText": "2_var_HeroBarTag",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\HealthBarTextTags.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HeroBoundHandleId",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array HeroBoundHandleId\n```\n\n\n**_>:** `libraries/HealthBarTextTags.j`",
+      "sortText": "2_var_HeroBoundHandleId",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\HealthBarTextTags.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HeroLastPercent",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array HeroLastPercent\n```\n\n\n**_>:** `libraries/HealthBarTextTags.j`",
+      "sortText": "2_var_HeroLastPercent",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\HealthBarTextTags.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "EnemyBarTag",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ntexttag array EnemyBarTag\n```\n\n\n**_>:** `libraries/HealthBarTextTags.j`",
+      "sortText": "2_var_EnemyBarTag",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\HealthBarTextTags.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "EnemyBarTarget",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nunit array EnemyBarTarget\n```\n\n\n**_>:** `libraries/HealthBarTextTags.j`",
+      "sortText": "2_var_EnemyBarTarget",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\HealthBarTextTags.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "EnemyBarTargetHid",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array EnemyBarTargetHid\n```\n\n\n**_>:** `libraries/HealthBarTextTags.j`",
+      "sortText": "2_var_EnemyBarTargetHid",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\HealthBarTextTags.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "EnemyBarExpireAt",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array EnemyBarExpireAt\n```\n\n\n**_>:** `libraries/HealthBarTextTags.j`",
+      "sortText": "2_var_EnemyBarExpireAt",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\HealthBarTextTags.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "EnemyBarLastPercent",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array EnemyBarLastPercent\n```\n\n\n**_>:** `libraries/HealthBarTextTags.j`",
+      "sortText": "2_var_EnemyBarLastPercent",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\HealthBarTextTags.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "EnemySlotByKey",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable EnemySlotByKey\n```\n\n\n**_>:** `libraries/HealthBarTextTags.j`",
+      "sortText": "2_var_EnemySlotByKey",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\HealthBarTextTags.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HealthBarEnemyKey",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HealthBarEnemyKey takes integer targetHid returns integer\n```\n\n\n**_>:** `libraries/HealthBarTextTags.j`",
+      "sortText": "1_func_HealthBarEnemyKey",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\HealthBarTextTags.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "HealthBarGetPlayerColorR",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HealthBarGetPlayerColorR takes integer pid returns integer\n```\n\n\n**_>:** `libraries/HealthBarTextTags.j`",
+      "sortText": "1_func_HealthBarGetPlayerColorR",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\HealthBarTextTags.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "HealthBarGetPlayerColorG",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HealthBarGetPlayerColorG takes integer pid returns integer\n```\n\n\n**_>:** `libraries/HealthBarTextTags.j`",
+      "sortText": "1_func_HealthBarGetPlayerColorG",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\HealthBarTextTags.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "HealthBarGetPlayerColorB",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HealthBarGetPlayerColorB takes integer pid returns integer\n```\n\n\n**_>:** `libraries/HealthBarTextTags.j`",
+      "sortText": "1_func_HealthBarGetPlayerColorB",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\HealthBarTextTags.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "HealthBarGetPercent",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HealthBarGetPercent takes unit whichUnit returns integer\n```\n\n\n**_>:** `libraries/HealthBarTextTags.j`",
+      "sortText": "1_func_HealthBarGetPercent",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\HealthBarTextTags.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "HealthBarGetFilledSegments",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HealthBarGetFilledSegments takes integer percent returns integer\n```\n\n\n**_>:** `libraries/HealthBarTextTags.j`",
+      "sortText": "1_func_HealthBarGetFilledSegments",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\HealthBarTextTags.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "HealthBarGetBarText",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HealthBarGetBarText takes integer percent returns string\n```\n\n\n**_>:** `libraries/HealthBarTextTags.j`",
+      "sortText": "1_func_HealthBarGetBarText",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\HealthBarTextTags.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "HealthBarGetLifeColorR",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HealthBarGetLifeColorR takes integer percent returns integer\n```\n\n\n**_>:** `libraries/HealthBarTextTags.j`",
+      "sortText": "1_func_HealthBarGetLifeColorR",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\HealthBarTextTags.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "HealthBarGetLifeColorG",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HealthBarGetLifeColorG takes integer percent returns integer\n```\n\n\n**_>:** `libraries/HealthBarTextTags.j`",
+      "sortText": "1_func_HealthBarGetLifeColorG",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\HealthBarTextTags.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "HealthBarGetLifeColorB",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HealthBarGetLifeColorB takes integer percent returns integer\n```\n\n\n**_>:** `libraries/HealthBarTextTags.j`",
+      "sortText": "1_func_HealthBarGetLifeColorB",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\HealthBarTextTags.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "HealthBarIsTrackedUnit",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HealthBarIsTrackedUnit takes unit whichUnit returns boolean\n```\n\n\n**_>:** `libraries/HealthBarTextTags.j`",
+      "sortText": "1_func_HealthBarIsTrackedUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\HealthBarTextTags.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "HealthBarIsEnemyDisplayTargetValid",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HealthBarIsEnemyDisplayTargetValid takes unit whichUnit returns boolean\n```\n\n\n**_>:** `libraries/HealthBarTextTags.j`",
+      "sortText": "1_func_HealthBarIsEnemyDisplayTargetValid",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\HealthBarTextTags.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "HealthBarCreatePersistentTextTag",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HealthBarCreatePersistentTextTag takes nothing returns texttag\n```\n\n\n**_>:** `libraries/HealthBarTextTags.j`",
+      "sortText": "1_func_HealthBarCreatePersistentTextTag",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\HealthBarTextTags.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetHealthBarEnemySlotCap",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetHealthBarEnemySlotCap takes nothing returns integer\n```\n\n\n**_>:** `libraries/HealthBarTextTags.j`",
+      "sortText": "1_func_GetHealthBarEnemySlotCap",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\HealthBarTextTags.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetHealthBarTextTagCap",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetHealthBarTextTagCap takes nothing returns integer\n```\n\n\n**_>:** `libraries/HealthBarTextTags.j`",
+      "sortText": "1_func_GetHealthBarTextTagCap",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\HealthBarTextTags.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "HealthBarSetTagPosition",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HealthBarSetTagPosition takes texttag tag, unit u, real xOffset, real zOffset returns nothing\n```\n\n\n**_>:** `libraries/HealthBarTextTags.j`",
+      "sortText": "1_func_HealthBarSetTagPosition",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\HealthBarTextTags.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "HealthBarsRefreshHeroForPlayer",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HealthBarsRefreshHeroForPlayer takes integer pid returns nothing\n```\n\n\n**_>:** `libraries/HealthBarTextTags.j`",
+      "sortText": "1_func_HealthBarsRefreshHeroForPlayer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\HealthBarTextTags.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "HealthBarUpdateHeroEntry",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HealthBarUpdateHeroEntry takes integer pid returns nothing\n```\n\n\n**_>:** `libraries/HealthBarTextTags.j`",
+      "sortText": "1_func_HealthBarUpdateHeroEntry",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\HealthBarTextTags.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "HealthBarHeroTick",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HealthBarHeroTick takes nothing returns nothing\n```\n\n\n**_>:** `libraries/HealthBarTextTags.j`",
+      "sortText": "1_func_HealthBarHeroTick",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\HealthBarTextTags.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "HealthBarEnemyClearSlot",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HealthBarEnemyClearSlot takes integer slotIndex returns nothing\n```\n\n\n**_>:** `libraries/HealthBarTextTags.j`",
+      "sortText": "1_func_HealthBarEnemyClearSlot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\HealthBarTextTags.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "HealthBarEnemyFindSlot",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HealthBarEnemyFindSlot takes unit target returns integer\n```\n\n\n**_>:** `libraries/HealthBarTextTags.j`",
+      "sortText": "1_func_HealthBarEnemyFindSlot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\HealthBarTextTags.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "HealthBarEnemyRefreshSlot",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HealthBarEnemyRefreshSlot takes integer slotIndex returns nothing\n```\n\n\n**_>:** `libraries/HealthBarTextTags.j`",
+      "sortText": "1_func_HealthBarEnemyRefreshSlot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\HealthBarTextTags.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "HealthBarsNotifyEnemyDamagedByPid",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HealthBarsNotifyEnemyDamagedByPid takes integer ownerPid, unit target returns nothing\n```\n\n\n**_>:** `libraries/HealthBarTextTags.j`",
+      "sortText": "1_func_HealthBarsNotifyEnemyDamagedByPid",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\HealthBarTextTags.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "HealthBarsNotifyEnemyDamaged",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HealthBarsNotifyEnemyDamaged takes unit source, unit target returns nothing\n```\n\n\n**_>:** `libraries/HealthBarTextTags.j`",
+      "sortText": "1_func_HealthBarsNotifyEnemyDamaged",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\HealthBarTextTags.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "HealthBarEnemyTick",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HealthBarEnemyTick takes nothing returns nothing\n```\n\n\n**_>:** `libraries/HealthBarTextTags.j`",
+      "sortText": "1_func_HealthBarEnemyTick",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\HealthBarTextTags.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**_>:** `libraries/HealthBarTextTags.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\HealthBarTextTags.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1776560555601
+}

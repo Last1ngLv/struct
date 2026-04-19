@@ -1,0 +1,537 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+  "items": [
+    {
+      "label": "WAVE_PROJECTILE_FAMILY_MISSILE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_PROJECTILE_FAMILY_MISSILE\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j`",
+      "sortText": "2_var_WAVE_PROJECTILE_FAMILY_MISSILE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_PROJECTILE_FAMILY_CONTROL",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_PROJECTILE_FAMILY_CONTROL\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j`",
+      "sortText": "2_var_WAVE_PROJECTILE_FAMILY_CONTROL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_PROJECTILE_FAMILY_SPECIAL",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_PROJECTILE_FAMILY_SPECIAL\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j`",
+      "sortText": "2_var_WAVE_PROJECTILE_FAMILY_SPECIAL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_PROJECTILE_TYPE_BASIC",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_PROJECTILE_TYPE_BASIC\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j`",
+      "sortText": "2_var_WAVE_PROJECTILE_TYPE_BASIC",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_PROJECTILE_TYPE_DEATH_BURST",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_PROJECTILE_TYPE_DEATH_BURST\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j`",
+      "sortText": "2_var_WAVE_PROJECTILE_TYPE_DEATH_BURST",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_PROJECTILE_TYPE_HRIF",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_PROJECTILE_TYPE_HRIF\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j`",
+      "sortText": "2_var_WAVE_PROJECTILE_TYPE_HRIF",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HRIF_PROJECTILE_SPEED",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HRIF_PROJECTILE_SPEED\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j`",
+      "sortText": "2_var_WAVE_HRIF_PROJECTILE_SPEED",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HRIF_PROJECTILE_DISTANCE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HRIF_PROJECTILE_DISTANCE\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j`",
+      "sortText": "2_var_WAVE_HRIF_PROJECTILE_DISTANCE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HRIF_PROJECTILE_COLLISION",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HRIF_PROJECTILE_COLLISION\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j`",
+      "sortText": "2_var_WAVE_HRIF_PROJECTILE_COLLISION",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HRIF_PROJECTILE_SCALE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HRIF_PROJECTILE_SCALE\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j`",
+      "sortText": "2_var_WAVE_HRIF_PROJECTILE_SCALE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HRIF_PROJECTILE_START_Z",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HRIF_PROJECTILE_START_Z\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j`",
+      "sortText": "2_var_WAVE_HRIF_PROJECTILE_START_Z",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HRIF_PROJECTILE_DAMAGE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HRIF_PROJECTILE_DAMAGE\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j`",
+      "sortText": "2_var_WAVE_HRIF_PROJECTILE_DAMAGE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HRIF_PROJECTILE_FINISH_AOE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HRIF_PROJECTILE_FINISH_AOE\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j`",
+      "sortText": "2_var_WAVE_HRIF_PROJECTILE_FINISH_AOE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HRIF_PROJECTILE_MODEL",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string WAVE_HRIF_PROJECTILE_MODEL\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j`",
+      "sortText": "2_var_WAVE_HRIF_PROJECTILE_MODEL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HRIF_PROJECTILE_IMPACT_FX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string WAVE_HRIF_PROJECTILE_IMPACT_FX\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j`",
+      "sortText": "2_var_WAVE_HRIF_PROJECTILE_IMPACT_FX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_PROJECTILE_DEFAULT_ATTACH_POINT",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string WAVE_PROJECTILE_DEFAULT_ATTACH_POINT\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j`",
+      "sortText": "2_var_WAVE_PROJECTILE_DEFAULT_ATTACH_POINT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "registered",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean array registered\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j`",
+      "sortText": "2_var_registered",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "familyId",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array familyId\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j`",
+      "sortText": "2_var_familyId",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "modelPath",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring array modelPath\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j`",
+      "sortText": "2_var_modelPath",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "moveSpeed",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array moveSpeed\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j`",
+      "sortText": "2_var_moveSpeed",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "travelDistance",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array travelDistance\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j`",
+      "sortText": "2_var_travelDistance",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "collisionSize",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array collisionSize\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j`",
+      "sortText": "2_var_collisionSize",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "scaleValue",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array scaleValue\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j`",
+      "sortText": "2_var_scaleValue",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "startZ",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array startZ\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j`",
+      "sortText": "2_var_startZ",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "baseDamage",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array baseDamage\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j`",
+      "sortText": "2_var_baseDamage",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "collideDestructable",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean array collideDestructable\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j`",
+      "sortText": "2_var_collideDestructable",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "collideTerrain",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean array collideTerrain\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j`",
+      "sortText": "2_var_collideTerrain",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "stopOnUnit",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean array stopOnUnit\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j`",
+      "sortText": "2_var_stopOnUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "hitStructures",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean array hitStructures\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j`",
+      "sortText": "2_var_hitStructures",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "impactFxPath",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring array impactFxPath\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j`",
+      "sortText": "2_var_impactFxPath",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "impactFxAttach",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring array impactFxAttach\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j`",
+      "sortText": "2_var_impactFxAttach",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "removeFxPath",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring array removeFxPath\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j`",
+      "sortText": "2_var_removeFxPath",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "removeFxAttach",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring array removeFxAttach\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j`",
+      "sortText": "2_var_removeFxAttach",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "finishAoeRadius",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array finishAoeRadius\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j`",
+      "sortText": "2_var_finishAoeRadius",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "NormalizeAttachPoint",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction NormalizeAttachPoint takes string attach returns string\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j`",
+      "sortText": "1_func_NormalizeAttachPoint",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveProjectileRegister",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveProjectileRegister takes integer projectileId, integer family, string model, real speed, real distance, real collision, real scale, real z, real damage returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j`",
+      "sortText": "1_func_WaveProjectileRegister",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveProjectileSetCollisionProfile",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveProjectileSetCollisionProfile takes integer projectileId, boolean collideDestFlag, boolean collideTerrainFlag, boolean stopOnUnitFlag, boolean hitStructuresFlag returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j`",
+      "sortText": "1_func_WaveProjectileSetCollisionProfile",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveProjectileSetImpactFx",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveProjectileSetImpactFx takes integer projectileId, string fxPath, string attach returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j`",
+      "sortText": "1_func_WaveProjectileSetImpactFx",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveProjectileSetRemoveFx",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveProjectileSetRemoveFx takes integer projectileId, string fxPath, string attach returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j`",
+      "sortText": "1_func_WaveProjectileSetRemoveFx",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveProjectileSetFinishAoe",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveProjectileSetFinishAoe takes integer projectileId, real radius returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j`",
+      "sortText": "1_func_WaveProjectileSetFinishAoe",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveProjectileIsRegistered",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveProjectileIsRegistered takes integer projectileId returns boolean\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j`",
+      "sortText": "1_func_WaveProjectileIsRegistered",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveProjectileGetFamilyId",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveProjectileGetFamilyId takes integer projectileId returns integer\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j`",
+      "sortText": "1_func_WaveProjectileGetFamilyId",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveProjectileGetModelPath",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveProjectileGetModelPath takes integer projectileId returns string\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j`",
+      "sortText": "1_func_WaveProjectileGetModelPath",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveProjectileGetMoveSpeed",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveProjectileGetMoveSpeed takes integer projectileId returns real\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j`",
+      "sortText": "1_func_WaveProjectileGetMoveSpeed",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveProjectileGetTravelDistance",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveProjectileGetTravelDistance takes integer projectileId returns real\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j`",
+      "sortText": "1_func_WaveProjectileGetTravelDistance",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveProjectileGetCollisionSize",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveProjectileGetCollisionSize takes integer projectileId returns real\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j`",
+      "sortText": "1_func_WaveProjectileGetCollisionSize",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveProjectileGetScale",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveProjectileGetScale takes integer projectileId returns real\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j`",
+      "sortText": "1_func_WaveProjectileGetScale",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveProjectileGetStartZ",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveProjectileGetStartZ takes integer projectileId returns real\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j`",
+      "sortText": "1_func_WaveProjectileGetStartZ",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveProjectileGetBaseDamage",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveProjectileGetBaseDamage takes integer projectileId returns real\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j`",
+      "sortText": "1_func_WaveProjectileGetBaseDamage",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveProjectileCollidesDestructable",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveProjectileCollidesDestructable takes integer projectileId returns boolean\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j`",
+      "sortText": "1_func_WaveProjectileCollidesDestructable",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveProjectileCollidesTerrain",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveProjectileCollidesTerrain takes integer projectileId returns boolean\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j`",
+      "sortText": "1_func_WaveProjectileCollidesTerrain",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveProjectileStopsOnUnit",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveProjectileStopsOnUnit takes integer projectileId returns boolean\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j`",
+      "sortText": "1_func_WaveProjectileStopsOnUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveProjectileCanHitStructures",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveProjectileCanHitStructures takes integer projectileId returns boolean\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j`",
+      "sortText": "1_func_WaveProjectileCanHitStructures",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveProjectileGetImpactFxPath",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveProjectileGetImpactFxPath takes integer projectileId returns string\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j`",
+      "sortText": "1_func_WaveProjectileGetImpactFxPath",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveProjectileGetImpactFxAttach",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveProjectileGetImpactFxAttach takes integer projectileId returns string\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j`",
+      "sortText": "1_func_WaveProjectileGetImpactFxAttach",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveProjectileGetRemoveFxPath",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveProjectileGetRemoveFxPath takes integer projectileId returns string\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j`",
+      "sortText": "1_func_WaveProjectileGetRemoveFxPath",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveProjectileGetRemoveFxAttach",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveProjectileGetRemoveFxAttach takes integer projectileId returns string\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j`",
+      "sortText": "1_func_WaveProjectileGetRemoveFxAttach",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveProjectileGetFinishAoeRadius",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveProjectileGetFinishAoeRadius takes integer projectileId returns real\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j`",
+      "sortText": "1_func_WaveProjectileGetFinishAoeRadius",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileConfig.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1776550709691
+}

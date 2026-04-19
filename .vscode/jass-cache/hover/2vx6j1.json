@@ -1,0 +1,56 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSkillVisuals.j",
+  "items": [
+    {
+      "symbolName": "WaveSkillVisualSource",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSkillVisuals.j",
+      "content": "\n```jass\nunit array WaveSkillVisualSource\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveSkillVisuals.j`"
+    },
+    {
+      "symbolName": "WaveSkillVisualTimer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSkillVisuals.j",
+      "content": "\n```jass\ntimer WaveSkillVisualTimer\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveSkillVisuals.j`"
+    },
+    {
+      "symbolName": "WaveSkillVisualFx",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSkillVisuals.j",
+      "content": "\n```jass\neffect array WaveSkillVisualFx\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveSkillVisuals.j`"
+    },
+    {
+      "symbolName": "WaveSkillVisualEnsureTimer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSkillVisuals.j",
+      "content": "\n```jass\nfunction WaveSkillVisualEnsureTimer takes nothing returns nothing\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveSkillVisuals.j`"
+    },
+    {
+      "symbolName": "WaveSkillVisualRemaining",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSkillVisuals.j",
+      "content": "\n```jass\nreal array WaveSkillVisualRemaining\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveSkillVisuals.j`"
+    },
+    {
+      "symbolName": "WaveSkillVisualKind",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSkillVisuals.j",
+      "content": "\n```jass\ninteger array WaveSkillVisualKind\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveSkillVisuals.j`"
+    },
+    {
+      "symbolName": "WaveSkillVisualRemove",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSkillVisuals.j",
+      "content": "\n```jass\nfunction WaveSkillVisualRemove takes integer visualId returns nothing\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveSkillVisuals.j`"
+    },
+    {
+      "symbolName": "WaveSkillVisualDestroy",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSkillVisuals.j",
+      "content": "\n```jass\nfunction WaveSkillVisualDestroy takes integer visualId returns nothing\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveSkillVisuals.j`"
+    },
+    {
+      "symbolName": "WaveSkillVisualHead",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSkillVisuals.j",
+      "content": "\n```jass\ninteger WaveSkillVisualHead\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveSkillVisuals.j`"
+    },
+    {
+      "symbolName": "Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSkillVisuals.j",
+      "content": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveSkillVisuals.j`"
+    }
+  ],
+  "timestamp": 1775665632215
+}

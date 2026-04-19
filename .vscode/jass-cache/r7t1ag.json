@@ -1,0 +1,1410 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+  "items": [
+    {
+      "label": "AI_TICK_MS",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer AI_TICK_MS\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AI_TICK_MS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AI_BUDGET_PER_TICK",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer AI_BUDGET_PER_TICK\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AI_BUDGET_PER_TICK",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AI_IDLE_TICK_MS",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer AI_IDLE_TICK_MS\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AI_IDLE_TICK_MS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AI_MIN_TICK_MS",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer AI_MIN_TICK_MS\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AI_MIN_TICK_MS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AI_MAX_TICK_MS",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer AI_MAX_TICK_MS\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AI_MAX_TICK_MS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AI_MIN_BUDGET_PER_TICK",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer AI_MIN_BUDGET_PER_TICK\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AI_MIN_BUDGET_PER_TICK",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AI_MAX_BUDGET_PER_TICK",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer AI_MAX_BUDGET_PER_TICK\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AI_MAX_BUDGET_PER_TICK",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AI_CAST_FAIL_BACKOFF_MS",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer AI_CAST_FAIL_BACKOFF_MS\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AI_CAST_FAIL_BACKOFF_MS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AI_ORDER_NONE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer AI_ORDER_NONE\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AI_ORDER_NONE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AI_ORDER_ATTACK",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer AI_ORDER_ATTACK\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AI_ORDER_ATTACK",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AI_ORDER_MOVE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer AI_ORDER_MOVE\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AI_ORDER_MOVE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AI_TELEPORT_BACK_ATTEMPTS",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer AI_TELEPORT_BACK_ATTEMPTS\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AI_TELEPORT_BACK_ATTEMPTS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AI_TELEPORT_FALLBACK_ATTEMPTS",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer AI_TELEPORT_FALLBACK_ATTEMPTS\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AI_TELEPORT_FALLBACK_ATTEMPTS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AI_TELEPORT_MIN_COOLDOWN_MS",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer AI_TELEPORT_MIN_COOLDOWN_MS\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AI_TELEPORT_MIN_COOLDOWN_MS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AI_TELEPORT_MIN_ENTRY_DELAY_MS",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer AI_TELEPORT_MIN_ENTRY_DELAY_MS\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AI_TELEPORT_MIN_ENTRY_DELAY_MS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AI_TELEPORT_MIN_OFFSET",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real AI_TELEPORT_MIN_OFFSET\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AI_TELEPORT_MIN_OFFSET",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AI_TELEPORT_FRONTBACK_DOT_THRESHOLD",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real AI_TELEPORT_FRONTBACK_DOT_THRESHOLD\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AI_TELEPORT_FRONTBACK_DOT_THRESHOLD",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AI_TELEPORT_ATTACH_POINT",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string AI_TELEPORT_ATTACH_POINT\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AI_TELEPORT_ATTACH_POINT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AI_BOSS_REINFORCEMENT_WINDUP_MS",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer AI_BOSS_REINFORCEMENT_WINDUP_MS\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AI_BOSS_REINFORCEMENT_WINDUP_MS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AI_BOSS_REINFORCEMENT_INITIAL_MIN_MS",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer AI_BOSS_REINFORCEMENT_INITIAL_MIN_MS\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AI_BOSS_REINFORCEMENT_INITIAL_MIN_MS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AI_BOSS_REINFORCEMENT_INITIAL_MAX_MS",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer AI_BOSS_REINFORCEMENT_INITIAL_MAX_MS\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AI_BOSS_REINFORCEMENT_INITIAL_MAX_MS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AI_BOSS_REINFORCEMENT_COOLDOWN_MIN_MS",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer AI_BOSS_REINFORCEMENT_COOLDOWN_MIN_MS\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AI_BOSS_REINFORCEMENT_COOLDOWN_MIN_MS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AI_BOSS_REINFORCEMENT_COOLDOWN_MAX_MS",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer AI_BOSS_REINFORCEMENT_COOLDOWN_MAX_MS\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AI_BOSS_REINFORCEMENT_COOLDOWN_MAX_MS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AI_BOSS_REINFORCEMENT_START_FX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string AI_BOSS_REINFORCEMENT_START_FX\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AI_BOSS_REINFORCEMENT_START_FX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AI_BOSS_REINFORCEMENT_APPLY_FX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string AI_BOSS_REINFORCEMENT_APPLY_FX\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AI_BOSS_REINFORCEMENT_APPLY_FX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AI_BOSS_REINFORCEMENT_ATTACH_POINT",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string AI_BOSS_REINFORCEMENT_ATTACH_POINT\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AI_BOSS_REINFORCEMENT_ATTACH_POINT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AI_BOSS_REINFORCEMENT_TEXT",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string AI_BOSS_REINFORCEMENT_TEXT\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AI_BOSS_REINFORCEMENT_TEXT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AI_BOSS_REINFORCEMENT_TEXT_SIZE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real AI_BOSS_REINFORCEMENT_TEXT_SIZE\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AI_BOSS_REINFORCEMENT_TEXT_SIZE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AI_BOSS_REINFORCEMENT_TEXT_Z_OFFSET",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real AI_BOSS_REINFORCEMENT_TEXT_Z_OFFSET\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AI_BOSS_REINFORCEMENT_TEXT_Z_OFFSET",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AI_BOSS_REINFORCEMENT_TEXT_RISE_SPEED",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real AI_BOSS_REINFORCEMENT_TEXT_RISE_SPEED\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AI_BOSS_REINFORCEMENT_TEXT_RISE_SPEED",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AI_BOSS_REINFORCEMENT_TEXT_LIFESPAN",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real AI_BOSS_REINFORCEMENT_TEXT_LIFESPAN\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AI_BOSS_REINFORCEMENT_TEXT_LIFESPAN",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AI_BOSS_REINFORCEMENT_TEXT_FADEPOINT",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real AI_BOSS_REINFORCEMENT_TEXT_FADEPOINT\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AI_BOSS_REINFORCEMENT_TEXT_FADEPOINT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIUnitByIndex",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable AIUnitByIndex\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AIUnitByIndex",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIIndexByUnit",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable AIIndexByUnit\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AIIndexByUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIUnitWaveId",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable AIUnitWaveId\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AIUnitWaveId",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIUnitProfileId",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable AIUnitProfileId\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AIUnitProfileId",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIUnitLaneId",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable AIUnitLaneId\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AIUnitLaneId",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIUnitBehaviorFlags",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable AIUnitBehaviorFlags\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AIUnitBehaviorFlags",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIUnitThreatWeight",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable AIUnitThreatWeight\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AIUnitThreatWeight",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIUnitTarget",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable AIUnitTarget\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AIUnitTarget",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIUnitNextRetargetMs",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable AIUnitNextRetargetMs\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AIUnitNextRetargetMs",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIUnitNextOrderMs",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable AIUnitNextOrderMs\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AIUnitNextOrderMs",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIUnitNextAbilityMs",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable AIUnitNextAbilityMs\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AIUnitNextAbilityMs",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIUnitChannelLockUntilMs",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable AIUnitChannelLockUntilMs\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AIUnitChannelLockUntilMs",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIUnitNextTeleportMs",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable AIUnitNextTeleportMs\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AIUnitNextTeleportMs",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIUnitTeleportReadyMs",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable AIUnitTeleportReadyMs\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AIUnitTeleportReadyMs",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIUnitNextDebugMs",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable AIUnitNextDebugMs\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AIUnitNextDebugMs",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIUnitCooldownTables",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable AIUnitCooldownTables\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AIUnitCooldownTables",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIUnitLastOrderType",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable AIUnitLastOrderType\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AIUnitLastOrderType",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIUnitLastOrderTarget",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable AIUnitLastOrderTarget\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AIUnitLastOrderTarget",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIUnitLastOrderX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable AIUnitLastOrderX\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AIUnitLastOrderX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIUnitLastOrderY",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable AIUnitLastOrderY\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AIUnitLastOrderY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIBossReinforcementNextMs",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable AIBossReinforcementNextMs\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AIBossReinforcementNextMs",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIBossReinforcementCastByUnit",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable AIBossReinforcementCastByUnit\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AIBossReinforcementCastByUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIWaveIsActive",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable AIWaveIsActive\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AIWaveIsActive",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIWaveIsPaused",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable AIWaveIsPaused\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AIWaveIsPaused",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIWaveUnitCount",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable AIWaveUnitCount\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AIWaveUnitCount",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIWaveEnabledOverride",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable AIWaveEnabledOverride\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AIWaveEnabledOverride",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AITempGroup",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ngroup AITempGroup\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AITempGroup",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AITimer",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ntimer AITimer\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AITimer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIClockMs",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger AIClockMs\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AIClockMs",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIUnitCount",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger AIUnitCount\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AIUnitCount",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIGlobalCursor",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger AIGlobalCursor\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AIGlobalCursor",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AICurrentTickMs",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger AICurrentTickMs\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AICurrentTickMs",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AICurrentBudget",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger AICurrentBudget\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AICurrentBudget",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIFixedTickMs",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger AIFixedTickMs\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AIFixedTickMs",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIFixedBudget",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger AIFixedBudget\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AIFixedBudget",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AINextPerfLogMs",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger AINextPerfLogMs\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AINextPerfLogMs",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIDebugLogsThisTick",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger AIDebugLogsThisTick\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AIDebugLogsThisTick",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIDebugMaxLogsPerTick",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger AIDebugMaxLogsPerTick\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AIDebugMaxLogsPerTick",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIDebugWaveFilter",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger AIDebugWaveFilter\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AIDebugWaveFilter",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIDebugUnitTypeFilter",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger AIDebugUnitTypeFilter\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AIDebugUnitTypeFilter",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIDebugEnabled",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean AIDebugEnabled\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AIDebugEnabled",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIUseDynamicScheduler",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean AIUseDynamicScheduler\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AIUseDynamicScheduler",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AIUseGroupFallbackNoHeroes",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean AIUseGroupFallbackNoHeroes\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AIUseGroupFallbackNoHeroes",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AITrackedHeroByPlayer",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nunit array[24] AITrackedHeroByPlayer\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AITrackedHeroByPlayer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AITeleportPointX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal AITeleportPointX\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AITeleportPointX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AITeleportPointY",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal AITeleportPointY\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "2_var_AITeleportPointY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AILog",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AILog takes string msg returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AILog",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AILogLimited",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AILogLimited takes string msg returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AILogLimited",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIBoolToInt",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIBoolToInt takes boolean b returns integer\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AIBoolToInt",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIIntervalToMs",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIIntervalToMs takes real sec, integer fallback returns integer\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AIIntervalToMs",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIClampInt",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIClampInt takes integer v, integer minV, integer maxV returns integer\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AIClampInt",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIClampReal",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIClampReal takes real v, real minV, real maxV returns real\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AIClampReal",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIGetRandomRealRange",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIGetRandomRealRange takes real minV, real maxV returns real\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AIGetRandomRealRange",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIGetRandomMsRange",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIGetRandomMsRange takes real minSec, real maxSec, integer fallbackMs, integer minMs returns integer\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AIGetRandomMsRange",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIBossReinforcementRollInitialMs",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIBossReinforcementRollInitialMs takes nothing returns integer\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AIBossReinforcementRollInitialMs",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIBossReinforcementRollCooldownMs",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIBossReinforcementRollCooldownMs takes nothing returns integer\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AIBossReinforcementRollCooldownMs",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIBossReinforcementSupportsUnitType",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIBossReinforcementSupportsUnitType takes integer unitTypeId returns boolean\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AIBossReinforcementSupportsUnitType",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIBossReinforcementAnimationForUnitType",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIBossReinforcementAnimationForUnitType takes integer unitTypeId returns string\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AIBossReinforcementAnimationForUnitType",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIBossReinforcementApplySlots",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIBossReinforcementApplySlots takes Wave w, integer maxWave returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AIBossReinforcementApplySlots",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AICalcDynamicBudget",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AICalcDynamicBudget takes integer unitCount returns integer\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AICalcDynamicBudget",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AICalcDynamicTick",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AICalcDynamicTick takes integer unitCount, boolean combatSeen returns integer\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AICalcDynamicTick",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIHasBehaviorFlag",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIHasBehaviorFlag takes integer flags, integer mask returns boolean\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AIHasBehaviorFlag",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIDebugPassesFilter",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIDebugPassesFilter takes unit u, integer waveId returns boolean\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AIDebugPassesFilter",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIDistanceSqUnits",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIDistanceSqUnits takes unit a, unit b returns real\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AIDistanceSqUnits",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIDistanceSqPoint",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIDistanceSqPoint takes real x1, real y1, real x2, real y2 returns real\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AIDistanceSqPoint",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIGetKeepDistanceBandHalf",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIGetKeepDistanceBandHalf takes real preferredRange returns real\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AIGetKeepDistanceBandHalf",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIShouldUseKeepDistanceBand",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIShouldUseKeepDistanceBand takes integer profileId returns boolean\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AIShouldUseKeepDistanceBand",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIMaybeIssueMoveOrder",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIMaybeIssueMoveOrder takes unit u, integer hid, real x, real y returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AIMaybeIssueMoveOrder",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIMoveToTargetRange",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIMoveToTargetRange takes unit u, unit target, integer hid, real desiredRange returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AIMoveToTargetRange",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIGetUnitHpPct",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIGetUnitHpPct takes unit u returns real\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AIGetUnitHpPct",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIIsEnemyHero",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIIsEnemyHero takes unit source, unit target returns boolean\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AIIsEnemyHero",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIGetFallbackObjectiveTarget",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIGetFallbackObjectiveTarget takes unit source returns unit\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AIGetFallbackObjectiveTarget",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIIsCombatObjective",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIIsCombatObjective takes unit source, unit target returns boolean\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AIIsCombatObjective",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIHasAliveEnemyHeroTracked",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIHasAliveEnemyHeroTracked takes unit source returns boolean\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AIHasAliveEnemyHeroTracked",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIGetNearestTrackedHeroDistSq",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIGetNearestTrackedHeroDistSq takes unit source, boolean enemyOnly returns real\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AIGetNearestTrackedHeroDistSq",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AICountEnemyHeroesInRadius",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AICountEnemyHeroesInRadius takes unit source, real radius returns integer\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AICountEnemyHeroesInRadius",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AISelectTargetHero",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AISelectTargetHero takes unit source, real acquireRange, integer behaviorFlags, real threatWeight returns unit\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AISelectTargetHero",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AISelectCombatObjective",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AISelectCombatObjective takes unit source, real acquireRange, integer behaviorFlags, real threatWeight returns unit\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AISelectCombatObjective",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AISelectFarthestTrackedHero",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AISelectFarthestTrackedHero takes unit source returns unit\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AISelectFarthestTrackedHero",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIResetOrderState",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIResetOrderState takes integer hid returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AIResetOrderState",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIBossReinforcementCast",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct AIBossReinforcementCast\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_struct_AIBossReinforcementCast",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "AICancelBossReinforcementCast",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AICancelBossReinforcementCast takes integer hid returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AICancelBossReinforcementCast",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIBossReinforcementApply",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIBossReinforcementApply takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AIBossReinforcementApply",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AITryBossReinforcement",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AITryBossReinforcement takes unit u, integer hid, integer waveId, integer profileId returns boolean\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AITryBossReinforcement",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIInitTeleportState",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIInitTeleportState takes integer hid, integer profileId returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AIInitTeleportState",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIIsTeleportPointValid",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIIsTeleportPointValid takes unit hero, real x, real y returns boolean\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AIIsTeleportPointValid",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AITryFindTeleportPointInArc",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AITryFindTeleportPointInArc takes unit hero, real baseAngle, real angleSpan, real minOffset, real maxOffset, integer attempts returns boolean\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AITryFindTeleportPointInArc",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIGetTeleportBaseAngle",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIGetTeleportBaseAngle takes unit source, unit hero returns real\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AIGetTeleportBaseAngle",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AITryFindTeleportPoint",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AITryFindTeleportPoint takes unit source, unit hero, real minOffset, real maxOffset returns boolean\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AITryFindTeleportPoint",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AITryTeleportByProfile",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AITryTeleportByProfile takes unit u, unit currentTarget, integer hid, integer profileId returns boolean\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AITryTeleportByProfile",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIGetUnitCooldownTable",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIGetUnitCooldownTable takes integer hid, boolean createIfMissing returns Table\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AIGetUnitCooldownTable",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIUpdateWaveUnitCountOnRemove",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIUpdateWaveUnitCountOnRemove takes integer waveId returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AIUpdateWaveUnitCountOnRemove",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIRemoveUnitByIndex",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIRemoveUnitByIndex takes integer index returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AIRemoveUnitByIndex",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIAddOrUpdateUnit",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIAddOrUpdateUnit takes unit u, integer waveId, integer profileId, integer laneId, integer behaviorFlags, real threatWeight returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AIAddOrUpdateUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AICleanupWave",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AICleanupWave takes integer waveId returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AICleanupWave",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIIsWaveEnabled",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIIsWaveEnabled takes integer waveId returns boolean\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AIIsWaveEnabled",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AITryCastByProfile",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AITryCastByProfile takes unit u, unit target, integer hid, integer profileId, integer behaviorFlags returns boolean\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AITryCastByProfile",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIMaybeIssueAttackOrder",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIMaybeIssueAttackOrder takes unit u, integer hid, unit target returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AIMaybeIssueAttackOrder",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIApplyMovement",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIApplyMovement takes unit u, unit target, integer hid, integer profileId, integer behaviorFlags returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AIApplyMovement",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIEvaluateUnit",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIEvaluateUnit takes unit u returns boolean\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AIEvaluateUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIOnTick",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIOnTick takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AIOnTick",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIOnWaveSpawn",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIOnWaveSpawn takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AIOnWaveSpawn",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIOnWaveExternal",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIOnWaveExternal takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AIOnWaveExternal",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIOnWaveDeath",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIOnWaveDeath takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AIOnWaveDeath",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIOnWavePause",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIOnWavePause takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AIOnWavePause",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIOnWaveResume",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIOnWaveResume takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AIOnWaveResume",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIOnWaveFinish",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIOnWaveFinish takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AIOnWaveFinish",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIOnWaveStart",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIOnWaveStart takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AIOnWaveStart",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIEnableWave",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIEnableWave takes integer waveId, boolean enabled returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AIEnableWave",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AISetDebug",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AISetDebug takes boolean enabled returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AISetDebug",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AISetDebugWaveFilter",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AISetDebugWaveFilter takes integer waveId returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AISetDebugWaveFilter",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AISetDebugUnitTypeFilter",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AISetDebugUnitTypeFilter takes integer unitTypeId returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AISetDebugUnitTypeFilter",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AISetDebugMaxLogsPerTick",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AISetDebugMaxLogsPerTick takes integer maxLogs returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AISetDebugMaxLogsPerTick",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AISetDynamicScheduler",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AISetDynamicScheduler takes boolean enabled returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AISetDynamicScheduler",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AISetFixedTickMs",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AISetFixedTickMs takes integer ms returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AISetFixedTickMs",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AISetFixedBudget",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AISetFixedBudget takes integer budget returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AISetFixedBudget",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIGetCurrentTickMs",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIGetCurrentTickMs takes nothing returns integer\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AIGetCurrentTickMs",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIGetCurrentBudget",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIGetCurrentBudget takes nothing returns integer\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AIGetCurrentBudget",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AISetUseGroupFallbackNoHeroes",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AISetUseGroupFallbackNoHeroes takes boolean enabled returns nothing\n```\n\n\n---\n\ntrue: si no hay heroes registrados, usa GroupEnumUnitsInRange (modo compatible).\n\nfalse: si no hay heroes registrados, no hace fallback por grupo (modo estricto/optimizado).\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AISetUseGroupFallbackNoHeroes",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AISetTrackedHeroForPlayer",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AISetTrackedHeroForPlayer takes integer playerId, unit hero returns nothing\n```\n\n\n---\n\nRegistra héroe objetivo por player id (0..bj_MAX_PLAYER_SLOTS-1).\n\nCuando hay al menos uno registrado, el targeting evita GroupEnumUnitsInRange.\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AISetTrackedHeroForPlayer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AISetTrackedHero",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AISetTrackedHero takes unit hero returns nothing\n```\n\n\n---\n\nHelper: registra por owner de la unidad.\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AISetTrackedHero",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIClearTrackedHeroes",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIClearTrackedHeroes takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AIClearTrackedHeroes",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AIDebugDumpTrackedHeroes",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIDebugDumpTrackedHeroes takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_AIDebugDumpTrackedHeroes",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1776550709617
+}

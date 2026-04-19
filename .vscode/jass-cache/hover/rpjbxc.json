@@ -1,0 +1,11 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Loadout Grenade.j",
+  "items": [
+    {
+      "symbolName": "FIRE_TEXT_G",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Loadout Grenade.j",
+      "content": "\n```jass\nconstant integer FIRE_TEXT_G\n```\n\n\n**文件:** `Pruebas/Loadout Grenade.j`"
+    }
+  ],
+  "timestamp": 1776020049107
+}

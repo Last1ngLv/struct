@@ -1,0 +1,51 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\AllScripts\\WaveSysAnAI\\AI\\AIConfig.j",
+  "items": [
+    {
+      "label": "AI_PROFILE_WAVE1_SPELL",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer AI_PROFILE_WAVE1_SPELL\n```\n\n\n---\n\nPerfil de ejemplo para unidades con spell en wave 1.\n\nAsignar este perfil en addSlotEx / addSlotExByPlayers.\n\n**_>:** `Pruebas/AllScripts/WaveSysAnAI/AI/AIConfig.j`",
+      "sortText": "2_var_AI_PROFILE_WAVE1_SPELL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\AllScripts\\WaveSysAnAI\\AI\\AIConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AI_PROFILE_WAVE2_SPELL",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer AI_PROFILE_WAVE2_SPELL\n```\n\n\n**_>:** `Pruebas/AllScripts/WaveSysAnAI/AI/AIConfig.j`",
+      "sortText": "2_var_AI_PROFILE_WAVE2_SPELL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\AllScripts\\WaveSysAnAI\\AI\\AIConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AI_PROFILE_WAVE3_SPELL",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer AI_PROFILE_WAVE3_SPELL\n```\n\n\n**_>:** `Pruebas/AllScripts/WaveSysAnAI/AI/AIConfig.j`",
+      "sortText": "2_var_AI_PROFILE_WAVE3_SPELL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\AllScripts\\WaveSysAnAI\\AI\\AIConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AI_PROFILE_WAVE4_SPELL",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer AI_PROFILE_WAVE4_SPELL\n```\n\n\n**_>:** `Pruebas/AllScripts/WaveSysAnAI/AI/AIConfig.j`",
+      "sortText": "2_var_AI_PROFILE_WAVE4_SPELL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\AllScripts\\WaveSysAnAI\\AI\\AIConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**_>:** `Pruebas/AllScripts/WaveSysAnAI/AI/AIConfig.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\AllScripts\\WaveSysAnAI\\AI\\AIConfig.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1774467046027
+}

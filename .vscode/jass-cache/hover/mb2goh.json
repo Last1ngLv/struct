@@ -1,0 +1,11 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\BloodMage\\Choatic Boulder.j",
+  "items": [
+    {
+      "symbolName": "Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\BloodMage\\Choatic Boulder.j",
+      "content": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**文件:** `Pruebas/MissileExamples/BloodMage/Choatic Boulder.j`"
+    }
+  ],
+  "timestamp": 1775665632201
+}

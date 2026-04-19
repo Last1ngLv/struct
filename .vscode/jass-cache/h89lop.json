@@ -1,0 +1,834 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+  "items": [
+    {
+      "label": "LOADOUT_LEAP_MISSILE_SPELL",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer LOADOUT_LEAP_MISSILE_SPELL\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "2_var_LOADOUT_LEAP_MISSILE_SPELL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "ENABLE_CAST_POINT_VALIDATION",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant boolean ENABLE_CAST_POINT_VALIDATION\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "2_var_ENABLE_CAST_POINT_VALIDATION",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "BASE_JUMP_HEIGHT",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real BASE_JUMP_HEIGHT\n```\n\n\n---\n\n* Base Jump settings\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "2_var_BASE_JUMP_HEIGHT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "BASE_JUMP_SPEED",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real BASE_JUMP_SPEED\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "2_var_BASE_JUMP_SPEED",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "USE_FIXED_TIME",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant boolean USE_FIXED_TIME\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "2_var_USE_FIXED_TIME",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "FIXED_JUMP_TIME",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real FIXED_JUMP_TIME\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "2_var_FIXED_JUMP_TIME",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "FIRE_DURATION",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real FIRE_DURATION\n```\n\n\n---\n\n* Rapid Fire options.\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "2_var_FIRE_DURATION",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "FIRE_COUNT",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer FIRE_COUNT\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "2_var_FIRE_COUNT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "RAPID_FIRE_ANIMATION_TIME_SCALE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real RAPID_FIRE_ANIMATION_TIME_SCALE\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "2_var_RAPID_FIRE_ANIMATION_TIME_SCALE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "ANIMATION_TIME_SCALE_ON_END",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real ANIMATION_TIME_SCALE_ON_END\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "2_var_ANIMATION_TIME_SCALE_ON_END",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "BASE_IMPACT_AREA",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real BASE_IMPACT_AREA\n```\n\n\n---\n\n* Base Impact Settings\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "2_var_BASE_IMPACT_AREA",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "BASE_DAMAGE_MULT",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real BASE_DAMAGE_MULT\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "2_var_BASE_DAMAGE_MULT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "ATTACK_TYPE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant attacktype ATTACK_TYPE\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "2_var_ATTACK_TYPE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DAMAGE_TYPE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant damagetype DAMAGE_TYPE\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "2_var_DAMAGE_TYPE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "IMPACT_FX_DURATION",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real IMPACT_FX_DURATION\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "2_var_IMPACT_FX_DURATION",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DUMMY_SCALE_PER_100_AREA",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real DUMMY_SCALE_PER_100_AREA\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "2_var_DUMMY_SCALE_PER_100_AREA",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "IMPACT_SOUND",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string IMPACT_SOUND\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "2_var_IMPACT_SOUND",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "CAST_ANIMATION",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string CAST_ANIMATION\n```\n\n\n---\n\n* Animations\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "2_var_CAST_ANIMATION",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "ANIMATION_TAG",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string ANIMATION_TAG\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "2_var_ANIMATION_TAG",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "FIRST_ANIMATION_DELAY",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real FIRST_ANIMATION_DELAY\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "2_var_FIRST_ANIMATION_DELAY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "COMPANION_DUMMY_FALLBACK_ID",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer COMPANION_DUMMY_FALLBACK_ID\n```\n\n\n---\n\n* Companion fallback unit type (used only if loadout returns 0).\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "2_var_COMPANION_DUMMY_FALLBACK_ID",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "RAY_LIGHTNING_TYPE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string RAY_LIGHTNING_TYPE\n```\n\n\n---\n\n* Orbs Visuals\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "2_var_RAY_LIGHTNING_TYPE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "RAY_HIT_FX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string RAY_HIT_FX\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "2_var_RAY_HIT_FX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "RAY_HIT_FX_ATTACH",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string RAY_HIT_FX_ATTACH\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "2_var_RAY_HIT_FX_ATTACH",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_TEXT_R",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer DEFAULT_TEXT_R\n```\n\n\n---\n\n* Floating Text Colors\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "2_var_DEFAULT_TEXT_R",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_TEXT_G",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer DEFAULT_TEXT_G\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "2_var_DEFAULT_TEXT_G",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEFAULT_TEXT_B",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer DEFAULT_TEXT_B\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "2_var_DEFAULT_TEXT_B",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "POISON_TEXT_R",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer POISON_TEXT_R\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "2_var_POISON_TEXT_R",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "POISON_TEXT_G",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer POISON_TEXT_G\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "2_var_POISON_TEXT_G",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "POISON_TEXT_B",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer POISON_TEXT_B\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "2_var_POISON_TEXT_B",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "FIRE_TEXT_R",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer FIRE_TEXT_R\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "2_var_FIRE_TEXT_R",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "FIRE_TEXT_G",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer FIRE_TEXT_G\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "2_var_FIRE_TEXT_G",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "FIRE_TEXT_B",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer FIRE_TEXT_B\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "2_var_FIRE_TEXT_B",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "BLOOD_TEXT_R",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer BLOOD_TEXT_R\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "2_var_BLOOD_TEXT_R",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "BLOOD_TEXT_G",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer BLOOD_TEXT_G\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "2_var_BLOOD_TEXT_G",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "BLOOD_TEXT_B",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer BLOOD_TEXT_B\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "2_var_BLOOD_TEXT_B",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DARK_TEXT_R",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer DARK_TEXT_R\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "2_var_DARK_TEXT_R",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DARK_TEXT_G",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer DARK_TEXT_G\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "2_var_DARK_TEXT_G",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DARK_TEXT_B",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer DARK_TEXT_B\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "2_var_DARK_TEXT_B",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "POISON_DOT_FX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string POISON_DOT_FX\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "2_var_POISON_DOT_FX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "POISON_DOT_FX_ATTACH",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string POISON_DOT_FX_ATTACH\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "2_var_POISON_DOT_FX_ATTACH",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "specialAbility",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array specialAbility\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "2_var_specialAbility",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "storedDamage",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array storedDamage\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "2_var_storedDamage",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "effectInstances",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array effectInstances\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "2_var_effectInstances",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "bonusActive",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean array bonusActive\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "2_var_bonusActive",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "delayedAnimTimer",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ntimer array delayedAnimTimer\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "2_var_delayedAnimTimer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "error",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nsound error\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "2_var_error",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "active",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable active\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "2_var_active",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "rapidTargetX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array rapidTargetX\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "2_var_rapidTargetX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "rapidTargetY",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array rapidTargetY\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "2_var_rapidTargetY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "casterFx1",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\neffect array casterFx1\n```\n\n\n---\n\nFX arrays\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "2_var_casterFx1",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "casterFx2",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\neffect array casterFx2\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "2_var_casterFx2",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "dummyFx1",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\neffect array dummyFx1\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "2_var_dummyFx1",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "dummyFx2",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\neffect array dummyFx2\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "2_var_dummyFx2",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "companionDummy",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nunit array companionDummy\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "2_var_companionDummy",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "rayLightning",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nlightning array rayLightning\n```\n\n\n---\n\nRay Logic\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "2_var_rayLightning",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "impactDummy",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nunit array impactDummy\n```\n\n\n---\n\nImpact Effect Dummy\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "2_var_impactDummy",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "impactFx",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\neffect array impactFx\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "2_var_impactFx",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "impactRemaining",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array impactRemaining\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "2_var_impactRemaining",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "impactNext",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array impactNext\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "2_var_impactNext",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "impactPrev",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array impactPrev\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "2_var_impactPrev",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "impactHead",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger impactHead\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "2_var_impactHead",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "impactTicker",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ntimer impactTicker\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "2_var_impactTicker",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "poisonFx",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\neffect array poisonFx\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "2_var_poisonFx",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "poisonNext",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array poisonNext\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "2_var_poisonNext",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "poisonPrev",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array poisonPrev\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "2_var_poisonPrev",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "poisonHead",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger poisonHead\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "2_var_poisonHead",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "poisonTicker",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ntimer poisonTicker\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "2_var_poisonTicker",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "IsPointJumpable",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction IsPointJumpable takes real x, real y returns boolean\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "1_func_IsPointJumpable",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "ShouldValidateLeapMissileCastPoint",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ShouldValidateLeapMissileCastPoint takes unit source returns boolean\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "1_func_ShouldValidateLeapMissileCastPoint",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "ValidateLeapMissileCastPoint",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ValidateLeapMissileCastPoint takes unit source, player owner, real tx, real ty returns boolean\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "1_func_ValidateLeapMissileCastPoint",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetLeapMissileScaleForArea",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetLeapMissileScaleForArea takes real area returns real\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "1_func_GetLeapMissileScaleForArea",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetLeapMissileWindArea",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetLeapMissileWindArea takes integer inst returns real\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "1_func_GetLeapMissileWindArea",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetSafeFireInterval",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetSafeFireInterval takes nothing returns real\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "1_func_GetSafeFireInterval",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetLoadoutLeapMissileMoveCastDuration",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetLoadoutLeapMissileMoveCastDuration takes nothing returns real\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "1_func_GetLoadoutLeapMissileMoveCastDuration",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "PoisonListAdd",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction PoisonListAdd takes SpellIndex dex returns nothing\n```\n\n\n---\n\nPoison DOT Logic\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "1_func_PoisonListAdd",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "PoisonListRemove",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction PoisonListRemove takes SpellIndex dex returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "1_func_PoisonListRemove",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "PoisonDestroy",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction PoisonDestroy takes SpellIndex dex returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "1_func_PoisonDestroy",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnPoisonTick",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnPoisonTick takes nothing returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "1_func_OnPoisonTick",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "ApplyPoison",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ApplyPoison takes unit source, unit target, real damagePerSecond, real duration returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "1_func_ApplyPoison",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "ImpactListAdd",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ImpactListAdd takes integer id returns nothing\n```\n\n\n---\n\nImpact Dummy cleanup\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "1_func_ImpactListAdd",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "ImpactListRemove",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ImpactListRemove takes integer id returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "1_func_ImpactListRemove",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "DestroyImpactDummy",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction DestroyImpactDummy takes integer id returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "1_func_DestroyImpactDummy",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnImpactTicker",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnImpactTicker takes nothing returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "1_func_OnImpactTicker",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "QueueImpactDummy",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction QueueImpactDummy takes unit whichDummy, string impactModel returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "1_func_QueueImpactDummy",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "LeapMissileCore",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct LeapMissileCore extends array\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "1_struct_LeapMissileCore",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "Cleanup",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Cleanup takes SpellIndex dex returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "1_func_Cleanup",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "DelayedStartAnimation",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction DelayedStartAnimation takes nothing returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "1_func_DelayedStartAnimation",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "FireLeapMissile",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction FireLeapMissile takes SpellIndex dex returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "1_func_FireLeapMissile",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnPeriodic",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnPeriodic takes nothing returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "1_func_OnPeriodic",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnEffect",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnEffect takes nothing returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "1_func_OnEffect",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout LeapMissile.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1776550709360
+}

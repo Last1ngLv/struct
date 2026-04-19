@@ -1,0 +1,16 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\Inits.j",
+  "items": [
+    {
+      "symbolName": "InitTrig_ShowMenuClient",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\Inits.j",
+      "content": "\n```jass\nfunction InitTrig_ShowMenuClient takes nothing returns nothing\n```\n\n\n---\n\nCompatibilidad con GUI-style init, pero sin gg_trg_ShowMenuClient.\n\n**文件:** `UI System/MyIU/Inits.j`"
+    },
+    {
+      "symbolName": "Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\Inits.j",
+      "content": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**文件:** `UI System/MyIU/Inits.j`"
+    }
+  ],
+  "timestamp": 1775665632209
+}

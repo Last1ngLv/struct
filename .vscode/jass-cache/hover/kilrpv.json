@@ -1,0 +1,191 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+  "items": [
+    {
+      "symbolName": "x",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "content": "\n```jass\nreal x\n```\n\n\n**所属:** `PendingSpawn`\n**文件:** `WaveSysAnAI/SwlsWave/SwlsWave.j`"
+    },
+    {
+      "symbolName": "DistanceBetweenCoords",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "content": "\n```jass\nfunction DistanceBetweenCoords takes real x1, real y1, real x2, real y2 returns real\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/SwlsWave.j`"
+    },
+    {
+      "symbolName": "RegisterWaveDeathEvent",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "content": "\n```jass\nfunction RegisterWaveDeathEvent takes code c returns nothing\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/SwlsWave.j`"
+    },
+    {
+      "symbolName": "pid",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "content": "\n```jass\ninteger pid\n```\n\n\n**所属:** `PendingSpawn`\n**文件:** `WaveSysAnAI/SwlsWave/SwlsWave.j`"
+    },
+    {
+      "symbolName": "fxId",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "content": "\n```jass\ninteger fxId\n```\n\n\n**所属:** `WaveSlot`\n**文件:** `WaveSysAnAI/SwlsWave/SwlsWave.j`"
+    },
+    {
+      "symbolName": "WaveCountPlayingUsers",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "content": "\n```jass\nfunction WaveCountPlayingUsers takes nothing returns integer\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/SwlsWave.j`"
+    },
+    {
+      "symbolName": "addSlotScaledForDefaultPlayers",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "content": "\n```jass\nmethod addSlotScaledForDefaultPlayers takes integer uId, integer baseAmount, real pct, integer lim, integer prio, integer fxId, integer killGate, boolean isBoss, integer aiProfileId, integer laneId, integer behaviorFlags, real threatWeight returns nothing\n```\n\n\n**所属:** `Wave`\n**文件:** `WaveSysAnAI/SwlsWave/SwlsWave.j`"
+    },
+    {
+      "symbolName": "addSlotExByPlayers",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "content": "\n```jass\nmethod addSlotExByPlayers takes integer uId, integer baseAmount, integer lim, integer prio, integer fxId, integer killGate, boolean isBoss, integer aiProfileId, integer laneId, integer behaviorFlags, real threatWeight returns nothing\n```\n\n\n**所属:** `Wave`\n**文件:** `WaveSysAnAI/SwlsWave/SwlsWave.j`"
+    },
+    {
+      "symbolName": "addSlotByPlayer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "content": "\n```jass\nmethod addSlotByPlayer takes integer uId, integer baseAmount, integer lim, integer prio, integer fxId, integer killGate, boolean isBoss, player p returns nothing\n```\n\n\n---\n\nVariante explÃƒÂ­cita por jugador para casos especiales.\n\n**所属:** `Wave`\n**文件:** `WaveSysAnAI/SwlsWave/SwlsWave.j`"
+    },
+    {
+      "symbolName": "addSlotInternal",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "content": "\n```jass\nmethod addSlotInternal takes integer uId, integer amount, integer lim, integer prio, integer fxId, integer killGate, boolean isBoss, player p, integer aiProfileId, integer laneId, integer behaviorFlags, real threatWeight returns nothing\n```\n\n\n---\n\nAgregar un tipo de unidad (base interna)\n\n**所属:** `Wave`\n**文件:** `WaveSysAnAI/SwlsWave/SwlsWave.j`"
+    },
+    {
+      "symbolName": "addSlotByPlayers",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "content": "\n```jass\nmethod addSlotByPlayers takes integer uId, integer baseAmount, integer lim, integer prio, integer fxId, integer killGate, boolean isBoss returns nothing\n```\n\n\n---\n\nModo nativo del sistema: crea slots para Player(8..12) en una sola llamada.\n\n**所属:** `Wave`\n**文件:** `WaveSysAnAI/SwlsWave/SwlsWave.j`"
+    },
+    {
+      "symbolName": "computeScaledAmount",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "content": "\n```jass\nmethod computeScaledAmount takes integer baseAmount, integer playersCount, real pct returns integer\n```\n\n\n**所属:** `Wave`\n**文件:** `WaveSysAnAI/SwlsWave/SwlsWave.j`"
+    },
+    {
+      "symbolName": "additionalPerPlayerPct",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "content": "\n```jass\nreal additionalPerPlayerPct\n```\n\n\n**所属:** `Wave`\n**文件:** `WaveSysAnAI/SwlsWave/SwlsWave.j`"
+    },
+    {
+      "symbolName": "addSlotByPlayerPct",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "content": "\n```jass\nmethod addSlotByPlayerPct takes integer uId, integer baseAmount, real pct, boolean scaleWithActivePlayers, integer lim, integer prio, integer fxId, integer killGate, boolean isBoss, player p returns nothing\n```\n\n\n**所属:** `Wave`\n**文件:** `WaveSysAnAI/SwlsWave/SwlsWave.j`"
+    },
+    {
+      "symbolName": "addSlotByPlayersPct",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "content": "\n```jass\nmethod addSlotByPlayersPct takes integer uId, integer baseAmount, real pct, boolean scaleWithActivePlayers, integer lim, integer prio, integer fxId, integer killGate, boolean isBoss returns nothing\n```\n\n\n**所属:** `Wave`\n**文件:** `WaveSysAnAI/SwlsWave/SwlsWave.j`"
+    },
+    {
+      "symbolName": "killGate",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "content": "\n```jass\ninteger killGate\n```\n\n\n**所属:** `WaveSlot`\n**文件:** `WaveSysAnAI/SwlsWave/SwlsWave.j`"
+    },
+    {
+      "symbolName": "setAdditionalPerPlayerPercent",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "content": "\n```jass\nmethod setAdditionalPerPlayerPercent takes real pct returns nothing\n```\n\n\n**所属:** `Wave`\n**文件:** `WaveSysAnAI/SwlsWave/SwlsWave.j`"
+    },
+    {
+      "symbolName": "addSlotExByPlayer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "content": "\n```jass\nmethod addSlotExByPlayer takes integer uId, integer baseAmount, boolean scaleWithActivePlayers, integer lim, integer prio, integer fxId, integer killGate, boolean isBoss, player p, integer aiProfileId, integer laneId, integer behaviorFlags, real threatWeight returns nothing\n```\n\n\n**所属:** `Wave`\n**文件:** `WaveSysAnAI/SwlsWave/SwlsWave.j`"
+    },
+    {
+      "symbolName": "y",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "content": "\n```jass\nreal y\n```\n\n\n**所属:** `PendingSpawn`\n**文件:** `WaveSysAnAI/SwlsWave/SwlsWave.j`"
+    },
+    {
+      "symbolName": "addPoint",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "content": "\n```jass\nmethod addPoint takes real x, real y returns nothing\n```\n\n\n**所属:** `Wave`\n**文件:** `WaveSysAnAI/SwlsWave/SwlsWave.j`"
+    },
+    {
+      "symbolName": "spawnY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "content": "\n```jass\nreal spawnY\n```\n\n\n**所属:** `Wave`\n**文件:** `WaveSysAnAI/SwlsWave/SwlsWave.j`"
+    },
+    {
+      "symbolName": "TerminateWaveInstanceGraceful",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "content": "\n```jass\nfunction TerminateWaveInstanceGraceful takes integer waveId returns nothing\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/SwlsWave.j`"
+    },
+    {
+      "symbolName": "refreshBoard",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "content": "\n```jass\nmethod refreshBoard takes nothing returns nothing\n```\n\n\n**所属:** `Wave`\n**文件:** `WaveSysAnAI/SwlsWave/SwlsWave.j`"
+    },
+    {
+      "symbolName": "addNearUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "content": "\n```jass\nmethod addNearUnit takes unit u returns nothing\n```\n\n\n**所属:** `Wave`\n**文件:** `WaveSysAnAI/SwlsWave/SwlsWave.j`"
+    },
+    {
+      "symbolName": "activeKey",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "content": "\n```jass\nmethod activeKey takes integer index returns integer\n```\n\n\n**所属:** `Wave`\n**文件:** `WaveSysAnAI/SwlsWave/SwlsWave.j`"
+    },
+    {
+      "symbolName": "behaviorFlags",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "content": "\n```jass\ninteger behaviorFlags\n```\n\n\n**所属:** `WaveSlot`\n**文件:** `WaveSysAnAI/SwlsWave/SwlsWave.j`"
+    },
+    {
+      "symbolName": "WaveTokenSeed",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "content": "\n```jass\ninteger WaveTokenSeed\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/SwlsWave.j`"
+    },
+    {
+      "symbolName": "WAVE_TRACKED_PLAYER_SLOTS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "content": "\n```jass\nconstant integer WAVE_TRACKED_PLAYER_SLOTS\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/SwlsWave.j`"
+    },
+    {
+      "symbolName": "waveIndex",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "content": "\n```jass\ninteger waveIndex\n```\n\n\n---\n\n--- Referenciales ---\n\n**所属:** `Wave`\n**文件:** `WaveSysAnAI/SwlsWave/SwlsWave.j`"
+    },
+    {
+      "symbolName": "create",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "content": "\n```jass\nstatic method create takes integer PlayerLim, integer nearChance, real sec, multiboard mb, string titleFunc, integer wIndex, integer wTotal, string onFinishFuncName returns Wave\n```\n\n\n**所属:** `Wave`\n**文件:** `WaveSysAnAI/SwlsWave/SwlsWave.j`"
+    },
+    {
+      "symbolName": "upsertSlotExByPlayers",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "content": "\n```jass\nmethod upsertSlotExByPlayers takes integer slotGroupId, integer uId, integer baseAmount, boolean scaleWithActivePlayers, integer lim, integer prio, integer fxId, integer killGate, boolean isBoss, integer aiProfileId, integer laneId, integer behaviorFlags, real threatWeight returns nothing\n```\n\n\n**所属:** `Wave`\n**文件:** `WaveSysAnAI/SwlsWave/SwlsWave.j`"
+    },
+    {
+      "symbolName": "GetWaveEventSlot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "content": "\n```jass\nfunction GetWaveEventSlot takes nothing returns WaveSlot\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/SwlsWave.j`"
+    },
+    {
+      "symbolName": "Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "content": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n---\n\n==================================================\n\nInit\n\n==================================================\n\n**文件:** `WaveSysAnAI/SwlsWave/SwlsWave.j`"
+    },
+    {
+      "symbolName": "Wave",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "content": "\n```jass\nstruct Wave\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/SwlsWave.j`"
+    },
+    {
+      "symbolName": "finish",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "content": "\n```jass\nmethod finish takes nothing returns nothing\n```\n\n\n---\n\n==================================================\n\n**所属:** `Wave`\n**文件:** `WaveSysAnAI/SwlsWave/SwlsWave.j`"
+    },
+    {
+      "symbolName": "slot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "content": "\n```jass\nWaveSlot slot\n```\n\n\n**所属:** `PendingSpawn`\n**文件:** `WaveSysAnAI/SwlsWave/SwlsWave.j`"
+    },
+    {
+      "symbolName": "GetWaveSlotByUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "content": "\n```jass\nfunction GetWaveSlotByUnit takes unit u returns WaveSlot\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/SwlsWave.j`"
+    }
+  ],
+  "timestamp": 1776464768268
+}

@@ -1,0 +1,11 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\Confis\\LoadoutMoveCastConfi.j",
+  "items": [
+    {
+      "symbolName": "LoadoutMoveCastConfi",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\Confis\\LoadoutMoveCastConfi.j",
+      "content": "\n```jass\nlibrary LoadoutMoveCastConfi requires MovementSystem, LoadoutMissile, LoadoutControl, LoadoutLeapMissile initializer Init\n```\n\n\n**文件:** `InitMap/Confis/LoadoutMoveCastConfi.j`"
+    }
+  ],
+  "timestamp": 1776026330899
+}

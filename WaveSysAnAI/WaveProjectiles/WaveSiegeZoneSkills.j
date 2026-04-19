@@ -6,24 +6,24 @@ library WaveSiegeZoneSkills initializer Init requires Table, TimerUtils, SpellIn
         public constant string WAVE_HMTT_ZONE_MODEL = "war3mapImported\\NuclearExplosion.mdx"
         public constant string WAVE_HMTT_AREA_MODEL = "war3mapImported\\Spell Marker Green.mdx"
 
-        public constant real WAVE_HMTT_WINDUP = 1.50
+        public constant real WAVE_HMTT_WINDUP = 0.50
         public constant real WAVE_HMTT_ZONE_DURATION = 10.0
         public constant real WAVE_HMTT_ZONE_TICK = 1.00
-        public constant real WAVE_HMTT_CAST_RANGE = 300.0
+        public constant real WAVE_HMTT_CAST_RANGE = 1000.0
 
-        public constant real WAVE_HMTT_RADIUS = 500.0
-        public constant real WAVE_HMTT_DAMAGE = 5.0
-        public constant real WAVE_HMTT_INITIAL_DELAY_MIN = 2.00
-        public constant real WAVE_HMTT_INITIAL_DELAY_MAX = 3.50
-        public constant real WAVE_HMTT_COOLDOWN_MIN = 14.00
-        public constant real WAVE_HMTT_COOLDOWN_MAX = 16.00
+        public constant real WAVE_HMTT_RADIUS = 850.0
+        public constant real WAVE_HMTT_DAMAGE = 15.0
+        public constant real WAVE_HMTT_INITIAL_DELAY_MIN = 1.00
+        public constant real WAVE_HMTT_INITIAL_DELAY_MAX = 1.50
+        public constant real WAVE_HMTT_COOLDOWN_MIN = 4.00
+        public constant real WAVE_HMTT_COOLDOWN_MAX = 6.00
 
-        public constant real WAVE_HMTT_BOSS_RADIUS = 1200.0
-        public constant real WAVE_HMTT_BOSS_DAMAGE = 15.0
-        public constant real WAVE_HMTT_BOSS_INITIAL_DELAY_MIN = 3.00
-        public constant real WAVE_HMTT_BOSS_INITIAL_DELAY_MAX = 4.50
-        public constant real WAVE_HMTT_BOSS_COOLDOWN_MIN = 18.00
-        public constant real WAVE_HMTT_BOSS_COOLDOWN_MAX = 22.00
+        public constant real WAVE_HMTT_BOSS_RADIUS = 1500.0
+        public constant real WAVE_HMTT_BOSS_DAMAGE = 30.0
+        public constant real WAVE_HMTT_BOSS_INITIAL_DELAY_MIN = 1.00
+        public constant real WAVE_HMTT_BOSS_INITIAL_DELAY_MAX = 1.50
+        public constant real WAVE_HMTT_BOSS_COOLDOWN_MIN = 5.00
+        public constant real WAVE_HMTT_BOSS_COOLDOWN_MAX = 7.00
 
         private constant real WAVE_HMTT_TICK = 0.05
         private constant integer WAVE_HMTT_DUMMY_ID = 'dumi'

@@ -1,0 +1,11 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\StageExample.j",
+  "items": [
+    {
+      "symbolName": "Trig_w1_Actions",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\StageExample.j",
+      "content": "\n```jass\nfunction Trig_w1_Actions takes nothing returns nothing\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/StageExample.j`"
+    }
+  ],
+  "timestamp": 1775048449817
+}

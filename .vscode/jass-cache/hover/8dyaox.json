@@ -1,0 +1,66 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\logs\\currentmapscript.j",
+  "items": [
+    {
+      "symbolName": "units",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\logs\\currentmapscript.j",
+      "content": "\n```jass\nstruct units extends array\n```\n\n\n**文件:** `logs/currentmapscript.j`"
+    },
+    {
+      "symbolName": "EquipSetHeroModel",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\logs\\currentmapscript.j",
+      "content": "\n```jass\nfunction EquipSetHeroModel takes integer utype, real scale, string path returns nothing\n```\n\n\n**文件:** `logs/currentmapscript.j`"
+    },
+    {
+      "symbolName": "EquipGetHeroModel",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\logs\\currentmapscript.j",
+      "content": "\n```jass\nfunction EquipGetHeroModel takes integer id returns HeroModelData\n```\n\n\n**文件:** `logs/currentmapscript.j`"
+    },
+    {
+      "symbolName": "origin",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\logs\\currentmapscript.j",
+      "content": "\n```jass\nreadonly MissilePosition origin\n```\n\n\n---\n\nPosition members for your needs.\n\n**所属:** `Missile`\n**文件:** `logs/currentmapscript.j`"
+    },
+    {
+      "symbolName": "OFFSET",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\logs\\currentmapscript.j",
+      "content": "\n```jass\nconstant integer OFFSET\n```\n\n\n**文件:** `logs/currentmapscript.j`"
+    },
+    {
+      "symbolName": "move",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\logs\\currentmapscript.j",
+      "content": "\n```jass\nmethod move takes real toX, real toY, real toZ returns nothing\n```\n\n\n**所属:** `MissilePosition`\n**文件:** `logs/currentmapscript.j`"
+    },
+    {
+      "symbolName": "Fire",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\logs\\currentmapscript.j",
+      "content": "\n```jass\nfunction Fire takes nothing returns nothing\n```\n\n\n---\n\nCore:\n\n=====\n\nFires every Missile_TIMER_TIMEOUT.\n\n**文件:** `logs/currentmapscript.j`"
+    },
+    {
+      "symbolName": "speed",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\logs\\currentmapscript.j",
+      "content": "\n```jass\nreal speed\n```\n\n\n**所属:** `Missile`\n**文件:** `logs/currentmapscript.j`"
+    },
+    {
+      "symbolName": "USE_HASH_TABLE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\logs\\currentmapscript.j",
+      "content": "\n```jass\nconstant boolean USE_HASH_TABLE\n```\n\n\n---\n\nHow to tweak timer utils:\n\nUSE_HASH_TABLE = true  (new blue)\n\n* SAFEST\n\n* SLOWEST (though hash tables are kind of fast)\n\nUSE_HASH_TABLE = false, USE_FLEXIBLE_OFFSET = true  (orange)\n\n* kinda safe (except there is a limit in the number of timers)\n\n* ALMOST FAST\n\nUSE_HASH_TABLE = false, USE_FLEXIBLE_OFFSET = false (red)\n\n* THE FASTEST (though is only  faster than the previous method\n\nafter using the optimizer on the map)\n\n* THE LEAST SAFE ( you may have to tweak OFSSET manually for it to\n\nwork)\n\n**文件:** `logs/currentmapscript.j`"
+    },
+    {
+      "symbolName": "USE_FLEXIBLE_OFFSET",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\logs\\currentmapscript.j",
+      "content": "\n```jass\nconstant boolean USE_FLEXIBLE_OFFSET\n```\n\n\n**文件:** `logs/currentmapscript.j`"
+    },
+    {
+      "symbolName": "didinit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\logs\\currentmapscript.j",
+      "content": "\n```jass\nboolean didinit\n```\n\n\n---\n\nuse a totally random number here, the more improbable someone uses it, the better.\n\n**文件:** `logs/currentmapscript.j`"
+    },
+    {
+      "symbolName": "QUANTITY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\logs\\currentmapscript.j",
+      "content": "\n```jass\nconstant integer QUANTITY\n```\n\n\n---\n\nTimers to preload at map init:\n\n**文件:** `logs/currentmapscript.j`"
+    }
+  ],
+  "timestamp": 1776063529924
+}

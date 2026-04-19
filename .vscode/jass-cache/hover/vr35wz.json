@@ -1,0 +1,46 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveReinforcements.j",
+  "items": [
+    {
+      "symbolName": "WaveReinforcementSpawnX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveReinforcements.j",
+      "content": "\n```jass\nreal WaveReinforcementSpawnX\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveReinforcements.j`"
+    },
+    {
+      "symbolName": "WaveReinforcementUnitByWaveTier",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveReinforcements.j",
+      "content": "\n```jass\ninteger array WaveReinforcementUnitByWaveTier\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveReinforcements.j`"
+    },
+    {
+      "symbolName": "WaveReinforcementSpawnY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveReinforcements.j",
+      "content": "\n```jass\nreal WaveReinforcementSpawnY\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveReinforcements.j`"
+    },
+    {
+      "symbolName": "WaveReinforcementPendingBossSummonByUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveReinforcements.j",
+      "content": "\n```jass\nTable WaveReinforcementPendingBossSummonByUnit\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveReinforcements.j`"
+    },
+    {
+      "symbolName": "WAVE_REINFORCEMENT_MAX_UNLOCKED_WAVE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveReinforcements.j",
+      "content": "\n```jass\nconstant integer WAVE_REINFORCEMENT_MAX_UNLOCKED_WAVE\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveReinforcements.j`"
+    },
+    {
+      "symbolName": "WaveReinforcementBossSummonAnimationByUnitId",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveReinforcements.j",
+      "content": "\n```jass\nTable WaveReinforcementBossSummonAnimationByUnitId\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveReinforcements.j`"
+    },
+    {
+      "symbolName": "WaveReinforcementSetBossSummonConfig",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveReinforcements.j",
+      "content": "\n```jass\nfunction WaveReinforcementSetBossSummonConfig takes integer bossUnitTypeId, string animation, string fxPath returns nothing\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveReinforcements.j`"
+    },
+    {
+      "symbolName": "Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveReinforcements.j",
+      "content": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveReinforcements.j`"
+    }
+  ],
+  "timestamp": 1775665632214
+}

@@ -1,0 +1,222 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\AllScripts\\castpremier.j",
+  "items": [
+    {
+      "label": "INTERVAL",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real INTERVAL\n```\n\n\n**_>:** `Pruebas/AllScripts/castpremier.j`",
+      "sortText": "2_var_INTERVAL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\AllScripts\\castpremier.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "ARRIVAL_THRESHOLD",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real ARRIVAL_THRESHOLD\n```\n\n\n**_>:** `Pruebas/AllScripts/castpremier.j`",
+      "sortText": "2_var_ARRIVAL_THRESHOLD",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\AllScripts\\castpremier.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "ARRIVAL_THRESHOLD_SQ",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real ARRIVAL_THRESHOLD_SQ\n```\n\n\n**_>:** `Pruebas/AllScripts/castpremier.j`",
+      "sortText": "2_var_ARRIVAL_THRESHOLD_SQ",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\AllScripts\\castpremier.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DUMMY_UNIT_ID",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer DUMMY_UNIT_ID\n```\n\n\n**_>:** `Pruebas/AllScripts/castpremier.j`",
+      "sortText": "2_var_DUMMY_UNIT_ID",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\AllScripts\\castpremier.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DUMMY_FOLLOW_ABILITY_ID",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer DUMMY_FOLLOW_ABILITY_ID\n```\n\n\n**_>:** `Pruebas/AllScripts/castpremier.j`",
+      "sortText": "2_var_DUMMY_FOLLOW_ABILITY_ID",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\AllScripts\\castpremier.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DEBUG_MODE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant boolean DEBUG_MODE\n```\n\n\n**_>:** `Pruebas/AllScripts/castpremier.j`",
+      "sortText": "2_var_DEBUG_MODE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\AllScripts\\castpremier.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "registeredOrderSpells",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable registeredOrderSpells\n```\n\n\n**_>:** `Pruebas/AllScripts/castpremier.j`",
+      "sortText": "2_var_registeredOrderSpells",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\AllScripts\\castpremier.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "registeredAbilities",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable registeredAbilities\n```\n\n\n**_>:** `Pruebas/AllScripts/castpremier.j`",
+      "sortText": "2_var_registeredAbilities",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\AllScripts\\castpremier.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "castSessionDurationByAbility",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable castSessionDurationByAbility\n```\n\n\n**_>:** `Pruebas/AllScripts/castpremier.j`",
+      "sortText": "2_var_castSessionDurationByAbility",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\AllScripts\\castpremier.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "ORDER_ID_MOVE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger ORDER_ID_MOVE\n```\n\n\n**_>:** `Pruebas/AllScripts/castpremier.j`",
+      "sortText": "2_var_ORDER_ID_MOVE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\AllScripts\\castpremier.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "ORDER_ID_SMART",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger ORDER_ID_SMART\n```\n\n\n**_>:** `Pruebas/AllScripts/castpremier.j`",
+      "sortText": "2_var_ORDER_ID_SMART",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\AllScripts\\castpremier.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "ORDER_ID_STOP",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger ORDER_ID_STOP\n```\n\n\n**_>:** `Pruebas/AllScripts/castpremier.j`",
+      "sortText": "2_var_ORDER_ID_STOP",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\AllScripts\\castpremier.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "ORDER_ID_FLARE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger ORDER_ID_FLARE\n```\n\n\n**_>:** `Pruebas/AllScripts/castpremier.j`",
+      "sortText": "2_var_ORDER_ID_FLARE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\AllScripts\\castpremier.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "MovementData",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct MovementData\n```\n\n\n**_>:** `Pruebas/AllScripts/castpremier.j`",
+      "sortText": "1_struct_MovementData",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\AllScripts\\castpremier.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "RegisterMovementSpell",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction RegisterMovementSpell takes integer abilityId, string orderId returns nothing\n```\n\n\n---\n\n===========================================================================\n\n**_>:** `Pruebas/AllScripts/castpremier.j`",
+      "sortText": "1_func_RegisterMovementSpell",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\AllScripts\\castpremier.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "RegisterMovementSpellTarget",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction RegisterMovementSpellTarget takes integer abilityId, string orderId returns nothing\n```\n\n\n---\n\n===========================================================================\n\n**_>:** `Pruebas/AllScripts/castpremier.j`",
+      "sortText": "1_func_RegisterMovementSpellTarget",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\AllScripts\\castpremier.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "ConfigureMovementSpellCastSession",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ConfigureMovementSpellCastSession takes integer abilityId, real castDuration, boolean allowSmartRecast, integer maxSmartRecasts returns nothing\n```\n\n\n---\n\n===========================================================================\n\n**_>:** `Pruebas/AllScripts/castpremier.j`",
+      "sortText": "1_func_ConfigureMovementSpellCastSession",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\AllScripts\\castpremier.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "RegisterMovementSpellRecast",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction RegisterMovementSpellRecast takes integer abilityId, string orderId returns nothing\n```\n\n\n---\n\n===========================================================================\n\n**_>:** `Pruebas/AllScripts/castpremier.j`",
+      "sortText": "1_func_RegisterMovementSpellRecast",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\AllScripts\\castpremier.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "RegisterMovementSpellTargetRecast",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction RegisterMovementSpellTargetRecast takes integer abilityId, string orderId returns nothing\n```\n\n\n---\n\n===========================================================================\n\n**_>:** `Pruebas/AllScripts/castpremier.j`",
+      "sortText": "1_func_RegisterMovementSpellTargetRecast",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\AllScripts\\castpremier.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnPointOrder",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnPointOrder takes nothing returns boolean\n```\n\n\n---\n\n===========================================================================\n\n**_>:** `Pruebas/AllScripts/castpremier.j`",
+      "sortText": "1_func_OnPointOrder",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\AllScripts\\castpremier.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnTargetOrder",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnTargetOrder takes nothing returns boolean\n```\n\n\n---\n\n===========================================================================\n\n**_>:** `Pruebas/AllScripts/castpremier.j`",
+      "sortText": "1_func_OnTargetOrder",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\AllScripts\\castpremier.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnSpellEffect",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnSpellEffect takes nothing returns boolean\n```\n\n\n---\n\n===========================================================================\n\n**_>:** `Pruebas/AllScripts/castpremier.j`",
+      "sortText": "1_func_OnSpellEffect",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\AllScripts\\castpremier.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnUnitDeath",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnUnitDeath takes nothing returns boolean\n```\n\n\n---\n\n===========================================================================\n\n**_>:** `Pruebas/AllScripts/castpremier.j`",
+      "sortText": "1_func_OnUnitDeath",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\AllScripts\\castpremier.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n---\n\n===========================================================================\n\n**_>:** `Pruebas/AllScripts/castpremier.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\AllScripts\\castpremier.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1776550709397
+}

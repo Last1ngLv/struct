@@ -1,0 +1,116 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\PreConfi.j",
+  "items": [
+    {
+      "symbolName": "SwlsMultiboard",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\PreConfi.j",
+      "content": "\n```jass\nmultiboard SwlsMultiboard\n```\n\n\n**文件:** `InitMap/PreConfi.j`"
+    },
+    {
+      "symbolName": "tender",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\PreConfi.j",
+      "content": "\n```jass\nunit tender\n```\n\n\n**文件:** `InitMap/PreConfi.j`"
+    },
+    {
+      "symbolName": "TENDER_UNIT_TYPE_ID",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\PreConfi.j",
+      "content": "\n```jass\nconstant integer TENDER_UNIT_TYPE_ID\n```\n\n\n**文件:** `InitMap/PreConfi.j`"
+    },
+    {
+      "symbolName": "RefreshTenderUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\PreConfi.j",
+      "content": "\n```jass\nfunction RefreshTenderUnit takes nothing returns unit\n```\n\n\n**文件:** `InitMap/PreConfi.j`"
+    },
+    {
+      "symbolName": "TenderUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\PreConfi.j",
+      "content": "\n```jass\nunit TenderUnit\n```\n\n\n**文件:** `InitMap/PreConfi.j`"
+    },
+    {
+      "symbolName": "RefreshTenderUnitByType",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\PreConfi.j",
+      "content": "\n```jass\nfunction RefreshTenderUnitByType takes integer unitTypeId, real x, real y, real facing returns unit\n```\n\n\n---\n\nCrea/recrea el tender por tipo y posición.\n\nSi ya existe uno en TenderUnit, lo remueve primero.\n\n**文件:** `InitMap/PreConfi.j`"
+    },
+    {
+      "symbolName": "TenderX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\PreConfi.j",
+      "content": "\n```jass\nreal TenderX\n```\n\n\n**文件:** `InitMap/PreConfi.j`"
+    },
+    {
+      "symbolName": "TenderOwnerId",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\PreConfi.j",
+      "content": "\n```jass\ninteger TenderOwnerId\n```\n\n\n**文件:** `InitMap/PreConfi.j`"
+    },
+    {
+      "symbolName": "isTender",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\PreConfi.j",
+      "content": "\n```jass\nboolean array[11] isTender\n```\n\n\n**文件:** `InitMap/PreConfi.j`"
+    },
+    {
+      "symbolName": "isWavez",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\PreConfi.j",
+      "content": "\n```jass\nboolean isWavez\n```\n\n\n**文件:** `InitMap/PreConfi.j`"
+    },
+    {
+      "symbolName": "InitTrig_Vars",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\PreConfi.j",
+      "content": "\n```jass\nfunction InitTrig_Vars takes nothing returns nothing\n```\n\n\n**文件:** `InitMap/PreConfi.j`"
+    },
+    {
+      "symbolName": "SetupWaveStreakConfig",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\PreConfi.j",
+      "content": "\n```jass\nfunction SetupWaveStreakConfig takes nothing returns nothing\n```\n\n\n---\n\nConfiguración central de rachas (WaveStreaks).\n\nPodés ajustar rutas/tiempos/escalones acá sin tocar el sistema core.\n\n**文件:** `InitMap/PreConfi.j`"
+    },
+    {
+      "symbolName": "TargetWave",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\PreConfi.j",
+      "content": "\n```jass\ninteger TargetWave\n```\n\n\n**文件:** `InitMap/PreConfi.j`"
+    },
+    {
+      "symbolName": "PreloadMapResources",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\PreConfi.j",
+      "content": "\n```jass\nfunction PreloadMapResources takes nothing returns nothing\n```\n\n\n---\n\nPrecarga exclusiva de recursos (audio).\n\nMantener esta lista alineada con los defaults de WaveStreaks.\n\n**文件:** `InitMap/PreConfi.j`"
+    },
+    {
+      "symbolName": "WaveTgg",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\PreConfi.j",
+      "content": "\n```jass\nstring WaveTgg\n```\n\n\n**文件:** `InitMap/PreConfi.j`"
+    },
+    {
+      "symbolName": "error_Neg",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\PreConfi.j",
+      "content": "\n```jass\nsound error_Neg\n```\n\n\n**文件:** `InitMap/PreConfi.j`"
+    },
+    {
+      "symbolName": "SwlsSound",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\PreConfi.j",
+      "content": "\n```jass\nsound SwlsSound\n```\n\n\n**文件:** `InitMap/PreConfi.j`"
+    },
+    {
+      "symbolName": "PreloadResTimer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\PreConfi.j",
+      "content": "\n```jass\ntimer PreloadResTimer\n```\n\n\n**文件:** `InitMap/PreConfi.j`"
+    },
+    {
+      "symbolName": "Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\PreConfi.j",
+      "content": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**文件:** `InitMap/PreConfi.j`"
+    },
+    {
+      "symbolName": "PreloadMapResourcesTick",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\PreConfi.j",
+      "content": "\n```jass\nfunction PreloadMapResourcesTick takes nothing returns nothing\n```\n\n\n**文件:** `InitMap/PreConfi.j`"
+    },
+    {
+      "symbolName": "InitDefaultWaveOwnerResearches",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\PreConfi.j",
+      "content": "\n```jass\nfunction InitDefaultWaveOwnerResearches takes nothing returns nothing\n```\n\n\n**文件:** `InitMap/PreConfi.j`"
+    },
+    {
+      "symbolName": "Message",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\PreConfi.j",
+      "content": "\n```jass\nstring Message\n```\n\n\n**文件:** `InitMap/PreConfi.j`"
+    }
+  ],
+  "timestamp": 1776558494605
+}

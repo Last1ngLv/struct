@@ -1,0 +1,11 @@
+{
+  "filePath": "c:\\Users\\Leon\\.antigravity\\extensions\\jass.jass-1.9.4\\static\\blizzard.j",
+  "items": [
+    {
+      "symbolName": "UnitAddItemSwapped",
+      "filePath": "c:\\Users\\Leon\\.antigravity\\extensions\\jass.jass-1.9.4\\static\\blizzard.j",
+      "content": "\n```jass\nfunction UnitAddItemSwapped takes item whichItem, unit whichHero returns boolean\n```\n\n\n---\n\n创建物品（指定单位）触发器动作\n\n**文件:** `c:\\Users\\Leon\\.antigravity\\extensions\\jass.jass-1.9.4\\static\\blizzard.j`"
+    }
+  ],
+  "timestamp": 1776464735451
+}

@@ -1,0 +1,126 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+  "items": [
+    {
+      "symbolName": "TerrainReplaceRuleCount",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "content": "\n```jass\ninteger TerrainReplaceRuleCount\n```\n\n\n**文件:** `libraries/TerrainReplace.j`"
+    },
+    {
+      "symbolName": "TerrainReplaceVariation",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "content": "\n```jass\ninteger array TerrainReplaceVariation\n```\n\n\n**文件:** `libraries/TerrainReplace.j`"
+    },
+    {
+      "symbolName": "TerrainReplaceFloorTileIndex",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "content": "\n```jass\nfunction TerrainReplaceFloorTileIndex takes real coord returns integer\n```\n\n\n**文件:** `libraries/TerrainReplace.j`"
+    },
+    {
+      "symbolName": "TerrainReplaceClearRules",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "content": "\n```jass\nfunction TerrainReplaceClearRules takes nothing returns nothing\n```\n\n\n**文件:** `libraries/TerrainReplace.j`"
+    },
+    {
+      "symbolName": "TerrainReplaceApplyRect",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "content": "\n```jass\nfunction TerrainReplaceApplyRect takes rect r returns integer\n```\n\n\n**文件:** `libraries/TerrainReplace.j`"
+    },
+    {
+      "symbolName": "TerrainReplaceApplyBounds",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "content": "\n```jass\nfunction TerrainReplaceApplyBounds takes real minX, real minY, real maxX, real maxY returns integer\n```\n\n\n**文件:** `libraries/TerrainReplace.j`"
+    },
+    {
+      "symbolName": "TerrainReplaceAddRule",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "content": "\n```jass\nfunction TerrainReplaceAddRule takes integer baseTile, integer newTile returns integer\n```\n\n\n**文件:** `libraries/TerrainReplace.j`"
+    },
+    {
+      "symbolName": "TERRAIN_REPLACE_MAX_RULES",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "content": "\n```jass\nconstant integer TERRAIN_REPLACE_MAX_RULES\n```\n\n\n**文件:** `libraries/TerrainReplace.j`"
+    },
+    {
+      "symbolName": "TerrainReplaceEnabled",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "content": "\n```jass\nboolean array TerrainReplaceEnabled\n```\n\n\n**文件:** `libraries/TerrainReplace.j`"
+    },
+    {
+      "symbolName": "TerrainReplaceDebugRuleHits",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "content": "\n```jass\ninteger array TerrainReplaceDebugRuleHits\n```\n\n\n**文件:** `libraries/TerrainReplace.j`"
+    },
+    {
+      "symbolName": "TerrainReplaceDebugEnabled",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "content": "\n```jass\nboolean TerrainReplaceDebugEnabled\n```\n\n\n**文件:** `libraries/TerrainReplace.j`"
+    },
+    {
+      "symbolName": "TerrainReplaceClearDebugStats",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "content": "\n```jass\nfunction TerrainReplaceClearDebugStats takes nothing returns nothing\n```\n\n\n**文件:** `libraries/TerrainReplace.j`"
+    },
+    {
+      "symbolName": "TerrainReplaceDebugDump",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "content": "\n```jass\nfunction TerrainReplaceDebugDump takes string label returns nothing\n```\n\n\n**文件:** `libraries/TerrainReplace.j`"
+    },
+    {
+      "symbolName": "TERRAIN_REPLACE_TILE_SIZE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "content": "\n```jass\nconstant real TERRAIN_REPLACE_TILE_SIZE\n```\n\n\n**文件:** `libraries/TerrainReplace.j`"
+    },
+    {
+      "symbolName": "TerrainReplaceGetWorldMinTileY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "content": "\n```jass\nfunction TerrainReplaceGetWorldMinTileY takes nothing returns integer\n```\n\n\n**文件:** `libraries/TerrainReplace.j`"
+    },
+    {
+      "symbolName": "TerrainReplaceGetDebugChangedTiles",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "content": "\n```jass\nfunction TerrainReplaceGetDebugChangedTiles takes nothing returns integer\n```\n\n\n**文件:** `libraries/TerrainReplace.j`"
+    },
+    {
+      "symbolName": "TerrainReplaceStopBatch",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "content": "\n```jass\nfunction TerrainReplaceStopBatch takes nothing returns nothing\n```\n\n\n**文件:** `libraries/TerrainReplace.j`"
+    },
+    {
+      "symbolName": "TerrainReplaceTileCenter",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "content": "\n```jass\nfunction TerrainReplaceTileCenter takes integer tileIndex returns real\n```\n\n\n**文件:** `libraries/TerrainReplace.j`"
+    },
+    {
+      "symbolName": "TerrainReplaceClampNonNegative",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "content": "\n```jass\nfunction TerrainReplaceClampNonNegative takes integer v returns integer\n```\n\n\n**文件:** `libraries/TerrainReplace.j`"
+    },
+    {
+      "symbolName": "TerrainReplaceDebugVisitedTiles",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "content": "\n```jass\ninteger TerrainReplaceDebugVisitedTiles\n```\n\n\n**文件:** `libraries/TerrainReplace.j`"
+    },
+    {
+      "symbolName": "TerrainReplaceCountTilesBounds",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "content": "\n```jass\nfunction TerrainReplaceCountTilesBounds takes real minX, real minY, real maxX, real maxY returns integer\n```\n\n\n**文件:** `libraries/TerrainReplace.j`"
+    },
+    {
+      "symbolName": "TerrainReplaceGetWorldMaxTileY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "content": "\n```jass\nfunction TerrainReplaceGetWorldMaxTileY takes nothing returns integer\n```\n\n\n**文件:** `libraries/TerrainReplace.j`"
+    },
+    {
+      "symbolName": "TerrainReplaceSetBatchTilesPerTick",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "content": "\n```jass\nfunction TerrainReplaceSetBatchTilesPerTick takes integer value returns nothing\n```\n\n\n**文件:** `libraries/TerrainReplace.j`"
+    },
+    {
+      "symbolName": "Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "content": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**文件:** `libraries/TerrainReplace.j`"
+    }
+  ],
+  "timestamp": 1775665632191
+}

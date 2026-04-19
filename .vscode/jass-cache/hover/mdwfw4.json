@@ -1,0 +1,11 @@
+{
+  "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.ai",
+  "items": [
+    {
+      "symbolName": "Sleep",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.ai",
+      "content": "\n```jass\nnative Sleep takes real seconds returns nothing\n```\n\n\n---\n\n等待指定时间，按秒计时（等待期间不执行任何代码）\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.ai`"
+    }
+  ],
+  "timestamp": 1775863574679
+}

@@ -1,0 +1,101 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeSkills.j",
+  "items": [
+    {
+      "symbolName": "WAVE_HMIL_BOSS_COOLDOWN_MIN",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeSkills.j",
+      "content": "\n```jass\nconstant real WAVE_HMIL_BOSS_COOLDOWN_MIN\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveSiegeSkills.j`"
+    },
+    {
+      "symbolName": "WAVE_HMIL_NODE_SEARCH_RADIUS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeSkills.j",
+      "content": "\n```jass\nconstant real WAVE_HMIL_NODE_SEARCH_RADIUS\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveSiegeSkills.j`"
+    },
+    {
+      "symbolName": "WaveSiegeNodeTimerRunning",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeSkills.j",
+      "content": "\n```jass\nboolean WaveSiegeNodeTimerRunning\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveSiegeSkills.j`"
+    },
+    {
+      "symbolName": "WaveSiegeNodeTimer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeSkills.j",
+      "content": "\n```jass\ntimer WaveSiegeNodeTimer\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveSiegeSkills.j`"
+    },
+    {
+      "symbolName": "WaveSiegeNodeTick",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeSkills.j",
+      "content": "\n```jass\nfunction WaveSiegeNodeTick takes nothing returns nothing\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveSiegeSkills.j`"
+    },
+    {
+      "symbolName": "WAVE_HMIL_BOSS_SECONDARY_RANDOM_RADIUS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeSkills.j",
+      "content": "\n```jass\nconstant real WAVE_HMIL_BOSS_SECONDARY_RANDOM_RADIUS\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveSiegeSkills.j`"
+    },
+    {
+      "symbolName": "WAVE_HMIL_COOLDOWN_MIN",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeSkills.j",
+      "content": "\n```jass\nconstant real WAVE_HMIL_COOLDOWN_MIN\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveSiegeSkills.j`"
+    },
+    {
+      "symbolName": "WAVE_HMIL_BOSS_INITIAL_DELAY_MIN",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeSkills.j",
+      "content": "\n```jass\nconstant real WAVE_HMIL_BOSS_INITIAL_DELAY_MIN\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveSiegeSkills.j`"
+    },
+    {
+      "symbolName": "WaveSiegeNodeUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeSkills.j",
+      "content": "\n```jass\nunit array WaveSiegeNodeUnit\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveSiegeSkills.j`"
+    },
+    {
+      "symbolName": "WAVE_HMIL_BOSS_PROJECTILE_COUNT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeSkills.j",
+      "content": "\n```jass\nconstant integer WAVE_HMIL_BOSS_PROJECTILE_COUNT\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveSiegeSkills.j`"
+    },
+    {
+      "symbolName": "WAVE_HMIL_BOSS_IMPACT_DAMAGE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeSkills.j",
+      "content": "\n```jass\nconstant real WAVE_HMIL_BOSS_IMPACT_DAMAGE\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveSiegeSkills.j`"
+    },
+    {
+      "symbolName": "WAVE_HMIL_BOSS_IMPACT_AOE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeSkills.j",
+      "content": "\n```jass\nconstant real WAVE_HMIL_BOSS_IMPACT_AOE\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveSiegeSkills.j`"
+    },
+    {
+      "symbolName": "WAVE_HMIL_INITIAL_DELAY_MIN",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeSkills.j",
+      "content": "\n```jass\nconstant real WAVE_HMIL_INITIAL_DELAY_MIN\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveSiegeSkills.j`"
+    },
+    {
+      "symbolName": "WAVE_HMIL_BOSS_COOLDOWN_MAX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeSkills.j",
+      "content": "\n```jass\nconstant real WAVE_HMIL_BOSS_COOLDOWN_MAX\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveSiegeSkills.j`"
+    },
+    {
+      "symbolName": "WAVE_HMIL_BOSS_INITIAL_DELAY_MAX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeSkills.j",
+      "content": "\n```jass\nconstant real WAVE_HMIL_BOSS_INITIAL_DELAY_MAX\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveSiegeSkills.j`"
+    },
+    {
+      "symbolName": "Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeSkills.j",
+      "content": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveSiegeSkills.j`"
+    },
+    {
+      "symbolName": "WaveSiegeMissileMarker",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeSkills.j",
+      "content": "\n```jass\ninteger array WaveSiegeMissileMarker\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveSiegeSkills.j`"
+    },
+    {
+      "symbolName": "WaveSiegeMissileDamage",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeSkills.j",
+      "content": "\n```jass\nreal array WaveSiegeMissileDamage\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveSiegeSkills.j`"
+    },
+    {
+      "symbolName": "WaveSiegeNextCastMs",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeSkills.j",
+      "content": "\n```jass\nTable WaveSiegeNextCastMs\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveSiegeSkills.j`"
+    }
+  ],
+  "timestamp": 1776555806701
+}

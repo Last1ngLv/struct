@@ -1,0 +1,78 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Guided Arrow.j",
+  "items": [
+    {
+      "label": "GetFlyDistance",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetFlyDistance takes integer level returns real\n```\n\n\n---\n\nSet the maximum travel distance. Does no longer count, when a traget is found.\n\n**_>:** `Pruebas/MissileExamples/Rogue/Guided Arrow.j`",
+      "sortText": "1_func_GetFlyDistance",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Guided Arrow.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetPiercingCount",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetPiercingCount takes integer level returns integer\n```\n\n\n---\n\nSet the number of pierce events.\n\n**_>:** `Pruebas/MissileExamples/Rogue/Guided Arrow.j`",
+      "sortText": "1_func_GetPiercingCount",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Guided Arrow.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "CustomizeMissile",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction CustomizeMissile takes Missile missile, integer level returns nothing\n```\n\n\n---\n\n*  Customize all missile members to your needs.\n\n**_>:** `Pruebas/MissileExamples/Rogue/Guided Arrow.j`",
+      "sortText": "1_func_CustomizeMissile",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Guided Arrow.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "tempOwner",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nplayer tempOwner\n```\n\n\n---\n\n\"tempOwner\" is always set to the owner of the arrow before \"ConsiderUnitFiltered\" is called.\n\n**_>:** `Pruebas/MissileExamples/Rogue/Guided Arrow.j`",
+      "sortText": "2_var_tempOwner",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Guided Arrow.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "ConsiderUnitsFiltered",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ConsiderUnitsFiltered takes nothing returns boolean\n```\n\n\n---\n\nFilters valid targets for the arrow.\n\n**_>:** `Pruebas/MissileExamples/Rogue/Guided Arrow.j`",
+      "sortText": "1_func_ConsiderUnitsFiltered",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Guided Arrow.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GuidedArrow",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct GuidedArrow extends array\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Guided Arrow.j`",
+      "sortText": "1_struct_GuidedArrow",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Guided Arrow.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "OnEffect",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnEffect takes nothing returns nothing\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Guided Arrow.j`",
+      "sortText": "1_func_OnEffect",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Guided Arrow.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Guided Arrow.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Guided Arrow.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1776550709562
+}

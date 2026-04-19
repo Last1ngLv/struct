@@ -1,0 +1,708 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+  "items": [
+    {
+      "label": "WAVE_HSOR_UNIT_ID",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_HSOR_UNIT_ID\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "2_var_WAVE_HSOR_UNIT_ID",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HSOR_BOSS_UNIT_ID",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_HSOR_BOSS_UNIT_ID\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "2_var_WAVE_HSOR_BOSS_UNIT_ID",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HSOR_PROJECTILE_MODEL",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string WAVE_HSOR_PROJECTILE_MODEL\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "2_var_WAVE_HSOR_PROJECTILE_MODEL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HSOR_BOSS_PROJECTILE_MODEL",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string WAVE_HSOR_BOSS_PROJECTILE_MODEL\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "2_var_WAVE_HSOR_BOSS_PROJECTILE_MODEL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HSOR_PROJECTILE_SPEED",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HSOR_PROJECTILE_SPEED\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "2_var_WAVE_HSOR_PROJECTILE_SPEED",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HSOR_PROJECTILE_START_Z",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HSOR_PROJECTILE_START_Z\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "2_var_WAVE_HSOR_PROJECTILE_START_Z",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HSOR_PROJECTILE_ARC",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HSOR_PROJECTILE_ARC\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "2_var_WAVE_HSOR_PROJECTILE_ARC",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HSOR_PROJECTILE_CATCH_RADIUS",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HSOR_PROJECTILE_CATCH_RADIUS\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "2_var_WAVE_HSOR_PROJECTILE_CATCH_RADIUS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HSOR_WINDUP",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HSOR_WINDUP\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "2_var_WAVE_HSOR_WINDUP",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HSOR_CAST_RANGE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HSOR_CAST_RANGE\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "2_var_WAVE_HSOR_CAST_RANGE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HSOR_TRAP_RADIUS",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HSOR_TRAP_RADIUS\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "2_var_WAVE_HSOR_TRAP_RADIUS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HSOR_TRAP_DURATION",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HSOR_TRAP_DURATION\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "2_var_WAVE_HSOR_TRAP_DURATION",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HSOR_INITIAL_DELAY_MIN",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HSOR_INITIAL_DELAY_MIN\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "2_var_WAVE_HSOR_INITIAL_DELAY_MIN",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HSOR_INITIAL_DELAY_MAX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HSOR_INITIAL_DELAY_MAX\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "2_var_WAVE_HSOR_INITIAL_DELAY_MAX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HSOR_COOLDOWN_MIN",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HSOR_COOLDOWN_MIN\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "2_var_WAVE_HSOR_COOLDOWN_MIN",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HSOR_COOLDOWN_MAX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HSOR_COOLDOWN_MAX\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "2_var_WAVE_HSOR_COOLDOWN_MAX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HSOR_BOSS_TRAP_RADIUS",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HSOR_BOSS_TRAP_RADIUS\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "2_var_WAVE_HSOR_BOSS_TRAP_RADIUS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HSOR_BOSS_TRAP_DURATION",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HSOR_BOSS_TRAP_DURATION\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "2_var_WAVE_HSOR_BOSS_TRAP_DURATION",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HSOR_BOSS_INITIAL_DELAY_MIN",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HSOR_BOSS_INITIAL_DELAY_MIN\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "2_var_WAVE_HSOR_BOSS_INITIAL_DELAY_MIN",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HSOR_BOSS_INITIAL_DELAY_MAX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HSOR_BOSS_INITIAL_DELAY_MAX\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "2_var_WAVE_HSOR_BOSS_INITIAL_DELAY_MAX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HSOR_BOSS_COOLDOWN_MIN",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HSOR_BOSS_COOLDOWN_MIN\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "2_var_WAVE_HSOR_BOSS_COOLDOWN_MIN",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HSOR_BOSS_COOLDOWN_MAX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HSOR_BOSS_COOLDOWN_MAX\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "2_var_WAVE_HSOR_BOSS_COOLDOWN_MAX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HSOR_TICK",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HSOR_TICK\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "2_var_WAVE_HSOR_TICK",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveTrapNextCastMs",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable WaveTrapNextCastMs\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "2_var_WaveTrapNextCastMs",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveTrapActiveCastByUnit",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable WaveTrapActiveCastByUnit\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "2_var_WaveTrapActiveCastByUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveTrapTimer",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ntimer WaveTrapTimer\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "2_var_WaveTrapTimer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveTrapTimerRunning",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean WaveTrapTimerRunning\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "2_var_WaveTrapTimerRunning",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveTrapCastHead",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger WaveTrapCastHead\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "2_var_WaveTrapCastHead",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveTrapCastCount",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger WaveTrapCastCount\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "2_var_WaveTrapCastCount",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveTrapHead",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger WaveTrapHead\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "2_var_WaveTrapHead",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveTrapCount",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger WaveTrapCount\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "2_var_WaveTrapCount",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveTrapCastNext",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array WaveTrapCastNext\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "2_var_WaveTrapCastNext",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveTrapCastPrev",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array WaveTrapCastPrev\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "2_var_WaveTrapCastPrev",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveTrapCastSource",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nunit array WaveTrapCastSource\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "2_var_WaveTrapCastSource",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveTrapCastTargetX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array WaveTrapCastTargetX\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "2_var_WaveTrapCastTargetX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveTrapCastTargetY",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array WaveTrapCastTargetY\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "2_var_WaveTrapCastTargetY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveTrapCastRemaining",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array WaveTrapCastRemaining\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "2_var_WaveTrapCastRemaining",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveTrapCastRadius",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array WaveTrapCastRadius\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "2_var_WaveTrapCastRadius",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveTrapCastDuration",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array WaveTrapCastDuration\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "2_var_WaveTrapCastDuration",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveTrapCastModel",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring array WaveTrapCastModel\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "2_var_WaveTrapCastModel",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveTrapCastPaused",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean array WaveTrapCastPaused\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "2_var_WaveTrapCastPaused",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveTrapNext",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array WaveTrapNext\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "2_var_WaveTrapNext",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveTrapPrev",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array WaveTrapPrev\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "2_var_WaveTrapPrev",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveTrapOwner",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nplayer array WaveTrapOwner\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "2_var_WaveTrapOwner",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveTrapX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array WaveTrapX\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "2_var_WaveTrapX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveTrapY",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array WaveTrapY\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "2_var_WaveTrapY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveTrapRadius",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array WaveTrapRadius\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "2_var_WaveTrapRadius",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveTrapRemaining",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array WaveTrapRemaining\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "2_var_WaveTrapRemaining",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveTrapVisualId",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array WaveTrapVisualId\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "2_var_WaveTrapVisualId",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveTrapMissileOwner",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nplayer array WaveTrapMissileOwner\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "2_var_WaveTrapMissileOwner",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveTrapMissileRadius",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array WaveTrapMissileRadius\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "2_var_WaveTrapMissileRadius",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveTrapMissileDuration",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array WaveTrapMissileDuration\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "2_var_WaveTrapMissileDuration",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveTrapMissileModel",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring array WaveTrapMissileModel\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "2_var_WaveTrapMissileModel",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveTrapMissilePlanted",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean array WaveTrapMissilePlanted\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "2_var_WaveTrapMissilePlanted",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveTrapComputedStunByPlayer",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array WaveTrapComputedStunByPlayer\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "2_var_WaveTrapComputedStunByPlayer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveTrapHeroStunnedByPlayer",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean array WaveTrapHeroStunnedByPlayer\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "2_var_WaveTrapHeroStunnedByPlayer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveTrapSecToMs",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveTrapSecToMs takes real sec returns integer\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "1_func_WaveTrapSecToMs",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveTrapRandomMsRange",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveTrapRandomMsRange takes real minSec, real maxSec returns integer\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "1_func_WaveTrapRandomMsRange",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveTrapUnitAlive",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveTrapUnitAlive takes unit u returns boolean\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "1_func_WaveTrapUnitAlive",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveTrapTargetInCastRange",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveTrapTargetInCastRange takes unit source, unit target returns boolean\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "1_func_WaveTrapTargetInCastRange",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveTrapIsBoss",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveTrapIsBoss takes unit source returns boolean\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "1_func_WaveTrapIsBoss",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveTrapAddCast",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveTrapAddCast takes integer castId returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "1_func_WaveTrapAddCast",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveTrapRemoveCast",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveTrapRemoveCast takes integer castId returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "1_func_WaveTrapRemoveCast",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveTrapDestroyCast",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveTrapDestroyCast takes integer castId returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "1_func_WaveTrapDestroyCast",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveTrapAdd",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveTrapAdd takes integer trapId returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "1_func_WaveTrapAdd",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveTrapRemove",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveTrapRemove takes integer trapId returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "1_func_WaveTrapRemove",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveTrapDestroy",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveTrapDestroy takes integer trapId returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "1_func_WaveTrapDestroy",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveTrapPlant",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveTrapPlant takes player owner, real x, real y, real radius, real duration, string modelPath returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "1_func_WaveTrapPlant",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveTrapCanCatchHero",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveTrapCanCatchHero takes player owner, unit target returns boolean\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "1_func_WaveTrapCanCatchHero",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveTrapMissile",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct WaveTrapMissile extends array\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "1_struct_WaveTrapMissile",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "WaveTrapLaunchProjectile",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveTrapLaunchProjectile takes unit source, real tx, real ty, real radius, real duration, string modelPath returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "1_func_WaveTrapLaunchProjectile",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveTrapStartCast",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveTrapStartCast takes unit source, real tx, real ty, real radius, real duration, string modelPath returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "1_func_WaveTrapStartCast",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveTrapUpdateStuns",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveTrapUpdateStuns takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "1_func_WaveTrapUpdateStuns",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveTrapOnTick",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveTrapOnTick takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "1_func_WaveTrapOnTick",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveTrapCleanupWaveDeath",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveTrapCleanupWaveDeath takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "1_func_WaveTrapCleanupWaveDeath",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveTrapOnPlayerUnitDeath",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveTrapOnPlayerUnitDeath takes nothing returns boolean\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "1_func_WaveTrapOnPlayerUnitDeath",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveTrapSkillsTryExecute",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveTrapSkillsTryExecute takes unit source, unit target, integer nowMs returns boolean\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "1_func_WaveTrapSkillsTryExecute",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveTrapSkills.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1776550709713
+}

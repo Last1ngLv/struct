@@ -1,0 +1,105 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileCore.j",
+  "items": [
+    {
+      "label": "WaveProjectileTypeByMissile",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array WaveProjectileTypeByMissile\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileCore.j`",
+      "sortText": "2_var_WaveProjectileTypeByMissile",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileCore.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveProjectileDamageByMissile",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array WaveProjectileDamageByMissile\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileCore.j`",
+      "sortText": "2_var_WaveProjectileDamageByMissile",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileCore.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveProjectileClampDamage",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveProjectileClampDamage takes integer projectileId, real damage returns real\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileCore.j`",
+      "sortText": "1_func_WaveProjectileClampDamage",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileCore.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveProjectileApplyTemplate",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveProjectileApplyTemplate takes integer projectileId, unit source, Missile missile, real damage returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileCore.j`",
+      "sortText": "1_func_WaveProjectileApplyTemplate",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileCore.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveProjectileStruct",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct WaveProjectileStruct extends array\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileCore.j`",
+      "sortText": "1_struct_WaveProjectileStruct",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileCore.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "WaveProjectileLaunch",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveProjectileLaunch takes integer projectileId, unit source, real startX, real startY, real angleInRadians, real damage returns Missile\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileCore.j`",
+      "sortText": "1_func_WaveProjectileLaunch",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileCore.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveProjectileLaunchFromSourceAngle",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveProjectileLaunchFromSourceAngle takes integer projectileId, unit source, real angleInRadians, real damage returns Missile\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileCore.j`",
+      "sortText": "1_func_WaveProjectileLaunchFromSourceAngle",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileCore.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveProjectileLaunchFromSourceToPoint",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveProjectileLaunchFromSourceToPoint takes integer projectileId, unit source, real tx, real ty, real damage returns Missile\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileCore.j`",
+      "sortText": "1_func_WaveProjectileLaunchFromSourceToPoint",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileCore.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveProjectileLaunchFromSourceToUnit",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveProjectileLaunchFromSourceToUnit takes integer projectileId, unit source, unit target, real damage returns Missile\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileCore.j`",
+      "sortText": "1_func_WaveProjectileLaunchFromSourceToUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileCore.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveProjectileLaunchToPointExact",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveProjectileLaunchToPointExact takes integer projectileId, unit source, real startX, real startY, real tx, real ty, real damage returns Missile\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileCore.j`",
+      "sortText": "1_func_WaveProjectileLaunchToPointExact",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileCore.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveProjectileLaunchFromSourceToPointExact",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveProjectileLaunchFromSourceToPointExact takes integer projectileId, unit source, real tx, real ty, real damage returns Missile\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveProjectileCore.j`",
+      "sortText": "1_func_WaveProjectileLaunchFromSourceToPointExact",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveProjectileCore.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1776550709694
+}

@@ -1,0 +1,46 @@
+{
+  "filePath": "c:\\Users\\Leon\\.antigravity\\extensions\\jass.jass-1.9.4\\static\\common.j",
+  "items": [
+    {
+      "symbolName": "DestroyEffect",
+      "filePath": "c:\\Users\\Leon\\.antigravity\\extensions\\jass.jass-1.9.4\\static\\common.j",
+      "content": "\n```jass\nnative DestroyEffect takes effect whichEffect returns nothing\n```\n\n\n---\n\n销毁特效\n\n**文件:** `c:\\Users\\Leon\\.antigravity\\extensions\\jass.jass-1.9.4\\static\\common.j`"
+    },
+    {
+      "symbolName": "timer",
+      "filePath": "c:\\Users\\Leon\\.antigravity\\extensions\\jass.jass-1.9.4\\static\\common.j",
+      "content": "\n```jass\ntype timer = agent\n```\n\n\n---\n\n计时器\n\n**文件:** `c:\\Users\\Leon\\.antigravity\\extensions\\jass.jass-1.9.4\\static\\common.j`"
+    },
+    {
+      "symbolName": "CreateTimer",
+      "filePath": "c:\\Users\\Leon\\.antigravity\\extensions\\jass.jass-1.9.4\\static\\common.j",
+      "content": "\n```jass\nnative CreateTimer takes nothing returns timer\n```\n\n\n---\n\nTimer API\n\n新建计时器 [R]\n\n**文件:** `c:\\Users\\Leon\\.antigravity\\extensions\\jass.jass-1.9.4\\static\\common.j`"
+    },
+    {
+      "symbolName": "IssueTargetOrderById",
+      "filePath": "c:\\Users\\Leon\\.antigravity\\extensions\\jass.jass-1.9.4\\static\\common.j",
+      "content": "\n```jass\nnative IssueTargetOrderById takes unit whichUnit, integer order, widget targetWidget returns boolean\n```\n\n\n---\n\n按ID发布命令(指定单位/物品/可破坏物)\n\n**Parameters:**\n- **`order`**: 技能命令ID可在 记录物编的文件 找到\n\n**文件:** `c:\\Users\\Leon\\.antigravity\\extensions\\jass.jass-1.9.4\\static\\common.j`"
+    },
+    {
+      "symbolName": "AddUnitAnimationProperties",
+      "filePath": "c:\\Users\\Leon\\.antigravity\\extensions\\jass.jass-1.9.4\\static\\common.j",
+      "content": "\n```jass\nnative AddUnitAnimationProperties takes unit whichUnit, string animProperties, boolean add returns nothing\n```\n\n\n---\n\n添加/删除 指定单位指定动画附加名 [R]\n\n**文件:** `c:\\Users\\Leon\\.antigravity\\extensions\\jass.jass-1.9.4\\static\\common.j`"
+    },
+    {
+      "symbolName": "GetUnitDefaultFlyHeight",
+      "filePath": "c:\\Users\\Leon\\.antigravity\\extensions\\jass.jass-1.9.4\\static\\common.j",
+      "content": "\n```jass\nnative GetUnitDefaultFlyHeight takes unit whichUnit returns real\n```\n\n\n---\n\n获取指定单位飞行高度 (默认值)\n\n**文件:** `c:\\Users\\Leon\\.antigravity\\extensions\\jass.jass-1.9.4\\static\\common.j`"
+    },
+    {
+      "symbolName": "CAMERA_FIELD_ANGLE_OF_ATTACK",
+      "filePath": "c:\\Users\\Leon\\.antigravity\\extensions\\jass.jass-1.9.4\\static\\common.j",
+      "content": "\n```jass\nconstant camerafield CAMERA_FIELD_ANGLE_OF_ATTACK\n```\n\n\n---\n\n镜头属性 X 轴旋转角度(水平/攻击角度)\n\n**文件:** `c:\\Users\\Leon\\.antigravity\\extensions\\jass.jass-1.9.4\\static\\common.j`"
+    },
+    {
+      "symbolName": "EnablePreSelect",
+      "filePath": "c:\\Users\\Leon\\.antigravity\\extensions\\jass.jass-1.9.4\\static\\common.j",
+      "content": "\n```jass\nnative EnablePreSelect takes boolean state, boolean ui returns nothing\n```\n\n\n---\n\n启用/禁用 预选\n\n**文件:** `c:\\Users\\Leon\\.antigravity\\extensions\\jass.jass-1.9.4\\static\\common.j`"
+    }
+  ],
+  "timestamp": 1776464782985
+}

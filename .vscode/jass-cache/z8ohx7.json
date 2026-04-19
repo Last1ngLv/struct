@@ -1,0 +1,1746 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+  "items": [
+    {
+      "label": "less",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger less\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_less",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "more",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger more\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_more",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "ht",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nhashtable ht\n```\n\n\n---\n\nConfigure it if you use more than 8190 \"key\" variables in your map (this will never happen though).\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_ht",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "sizeK",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nkey sizeK\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_sizeK",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "listK",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nkey listK\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_listK",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "dex",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct dex extends array\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_struct_dex",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "handles",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct handles extends array\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_struct_handles",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "agents",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct agents extends array\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_struct_agents",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "NEW_ARRAY_BASIC",
+      "kind": 14,
+      "detail": "TextMacro",
+      "documentation": "\n```jass\ntextmacro NEW_ARRAY_BASIC takes SUPER, FUNC, TYPE\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "insertText": "NEW_ARRAY_BASIC",
+      "sortText": "3_macro_NEW_ARRAY_BASIC",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "TextMacroStatement"
+    },
+    {
+      "label": "NEW_ARRAY",
+      "kind": 14,
+      "detail": "TextMacro",
+      "documentation": "\n```jass\ntextmacro NEW_ARRAY takes FUNC, TYPE\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "insertText": "NEW_ARRAY",
+      "sortText": "3_macro_NEW_ARRAY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "TextMacroStatement"
+    },
+    {
+      "label": "reals",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct reals extends array\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_struct_reals",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "realm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule realm\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_module_realm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "booleans",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct booleans extends array\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_struct_booleans",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "booleanm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule booleanm\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_module_booleanm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "strings",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct strings extends array\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_struct_strings",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "stringm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule stringm\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_module_stringm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "players",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct players extends array\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_struct_players",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "playerm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule playerm\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_module_playerm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "widgets",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct widgets extends array\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_struct_widgets",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "widgetm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule widgetm\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_module_widgetm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "destructables",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct destructables extends array\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_struct_destructables",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "destructablem",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule destructablem\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_module_destructablem",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "items",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct items extends array\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_struct_items",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "itemm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule itemm\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_module_itemm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "units",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct units extends array\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_struct_units",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "unitm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule unitm\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_module_unitm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "abilitys",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct abilitys extends array\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_struct_abilitys",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "abilitym",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule abilitym\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_module_abilitym",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "timers",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct timers extends array\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_struct_timers",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "timerm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule timerm\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_module_timerm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "triggers",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct triggers extends array\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_struct_triggers",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "triggerm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule triggerm\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_module_triggerm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "triggerconditions",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct triggerconditions extends array\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_struct_triggerconditions",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "triggerconditionm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule triggerconditionm\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_module_triggerconditionm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "triggeractions",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct triggeractions extends array\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_struct_triggeractions",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "triggeractionm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule triggeractionm\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_module_triggeractionm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "events",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct events extends array\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_struct_events",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "eventm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule eventm\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_module_eventm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "forces",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct forces extends array\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_struct_forces",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "forcem",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule forcem\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_module_forcem",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "groups",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct groups extends array\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_struct_groups",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "groupm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule groupm\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_module_groupm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "locations",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct locations extends array\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_struct_locations",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "locationm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule locationm\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_module_locationm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "rects",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct rects extends array\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_struct_rects",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "rectm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule rectm\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_module_rectm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "boolexprs",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct boolexprs extends array\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_struct_boolexprs",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "boolexprm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule boolexprm\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_module_boolexprm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "sounds",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct sounds extends array\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_struct_sounds",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "soundm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule soundm\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_module_soundm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "effects",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct effects extends array\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_struct_effects",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "effectm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule effectm\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_module_effectm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "unitpools",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct unitpools extends array\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_struct_unitpools",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "unitpoolm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule unitpoolm\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_module_unitpoolm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "itempools",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct itempools extends array\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_struct_itempools",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "itempoolm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule itempoolm\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_module_itempoolm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "quests",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct quests extends array\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_struct_quests",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "questm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule questm\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_module_questm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "questitems",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct questitems extends array\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_struct_questitems",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "questitemm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule questitemm\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_module_questitemm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "defeatconditions",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct defeatconditions extends array\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_struct_defeatconditions",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "defeatconditionm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule defeatconditionm\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_module_defeatconditionm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "timerdialogs",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct timerdialogs extends array\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_struct_timerdialogs",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "timerdialogm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule timerdialogm\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_module_timerdialogm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "leaderboards",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct leaderboards extends array\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_struct_leaderboards",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "leaderboardm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule leaderboardm\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_module_leaderboardm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "multiboards",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct multiboards extends array\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_struct_multiboards",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "multiboardm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule multiboardm\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_module_multiboardm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "multiboarditems",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct multiboarditems extends array\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_struct_multiboarditems",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "multiboarditemm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule multiboarditemm\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_module_multiboarditemm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "trackables",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct trackables extends array\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_struct_trackables",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "trackablem",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule trackablem\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_module_trackablem",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "dialogs",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct dialogs extends array\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_struct_dialogs",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "dialogm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule dialogm\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_module_dialogm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "buttons",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct buttons extends array\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_struct_buttons",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "buttonm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule buttonm\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_module_buttonm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "texttags",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct texttags extends array\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_struct_texttags",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "texttagm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule texttagm\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_module_texttagm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "lightnings",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct lightnings extends array\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_struct_lightnings",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "lightningm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule lightningm\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_module_lightningm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "images",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct images extends array\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_struct_images",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "imagem",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule imagem\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_module_imagem",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "ubersplats",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct ubersplats extends array\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_struct_ubersplats",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "ubersplatm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule ubersplatm\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_module_ubersplatm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "regions",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct regions extends array\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_struct_regions",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "regionm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule regionm\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_module_regionm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "fogstates",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct fogstates extends array\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_struct_fogstates",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "fogstatem",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule fogstatem\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_module_fogstatem",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "fogmodifiers",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct fogmodifiers extends array\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_struct_fogmodifiers",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "fogmodifierm",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule fogmodifierm\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_module_fogmodifierm",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "hashtables",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct hashtables extends array\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_struct_hashtables",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "hashtablem",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule hashtablem\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_module_hashtablem",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "Table",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct Table extends array\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_struct_Table",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "USE_HASH_TABLE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant boolean USE_HASH_TABLE\n```\n\n\n---\n\nHow to tweak timer utils:\n\nUSE_HASH_TABLE = true  (new blue)\n\n* SAFEST\n\n* SLOWEST (though hash tables are kind of fast)\n\nUSE_HASH_TABLE = false, USE_FLEXIBLE_OFFSET = true  (orange)\n\n* kinda safe (except there is a limit in the number of timers)\n\n* ALMOST FAST\n\nUSE_HASH_TABLE = false, USE_FLEXIBLE_OFFSET = false (red)\n\n* THE FASTEST (though is only  faster than the previous method\n\nafter using the optimizer on the map)\n\n* THE LEAST SAFE ( you may have to tweak OFSSET manually for it to\n\nwork)\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_USE_HASH_TABLE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "USE_FLEXIBLE_OFFSET",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant boolean USE_FLEXIBLE_OFFSET\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_USE_FLEXIBLE_OFFSET",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "OFFSET",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer OFFSET\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_OFFSET",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "VOFFSET",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger VOFFSET\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_VOFFSET",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "QUANTITY",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer QUANTITY\n```\n\n\n---\n\nTimers to preload at map init:\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_QUANTITY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "ARRAY_SIZE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer ARRAY_SIZE\n```\n\n\n---\n\nChanging this  to something big will allow you to keep recycling\n\ntimers even when there are already AN INCREDIBLE AMOUNT of timers in\n\nthe stack. But it will make things far slower so that's probably a bad idea...\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_ARRAY_SIZE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TIMER_DEBUG_TAG_NONE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer TIMER_DEBUG_TAG_NONE\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_TIMER_DEBUG_TAG_NONE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TIMER_DEBUG_TAG_LOADOUT_CONTROL",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer TIMER_DEBUG_TAG_LOADOUT_CONTROL\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_TIMER_DEBUG_TAG_LOADOUT_CONTROL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TIMER_DEBUG_TAG_LOADOUT_MISSILE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer TIMER_DEBUG_TAG_LOADOUT_MISSILE\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_TIMER_DEBUG_TAG_LOADOUT_MISSILE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TIMER_DEBUG_TAG_LOADOUT_LEAP",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer TIMER_DEBUG_TAG_LOADOUT_LEAP\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_TIMER_DEBUG_TAG_LOADOUT_LEAP",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TIMER_DEBUG_TAG_LOADOUT_LEAP_MISS",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer TIMER_DEBUG_TAG_LOADOUT_LEAP_MISS\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_TIMER_DEBUG_TAG_LOADOUT_LEAP_MISS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TIMER_DEBUG_TAG_LOADOUT_ROCKET",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer TIMER_DEBUG_TAG_LOADOUT_ROCKET\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_TIMER_DEBUG_TAG_LOADOUT_ROCKET",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TIMER_DEBUG_TAG_WAVE_CORE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer TIMER_DEBUG_TAG_WAVE_CORE\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_TIMER_DEBUG_TAG_WAVE_CORE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TIMER_DEBUG_TAG_AI",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer TIMER_DEBUG_TAG_AI\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_TIMER_DEBUG_TAG_AI",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TIMER_DEBUG_TAG_UNIT_SKILLS",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer TIMER_DEBUG_TAG_UNIT_SKILLS\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_TIMER_DEBUG_TAG_UNIT_SKILLS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TIMER_DEBUG_TAG_MOVECAST",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer TIMER_DEBUG_TAG_MOVECAST\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_TIMER_DEBUG_TAG_MOVECAST",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TIMER_DEBUG_TAG_OTHER",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer TIMER_DEBUG_TAG_OTHER\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_TIMER_DEBUG_TAG_OTHER",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TIMER_DEBUG_MAX_TAG",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer TIMER_DEBUG_MAX_TAG\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_TIMER_DEBUG_MAX_TAG",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "debugTagLive",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array[17] debugTagLive\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_debugTagLive",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "debugTagPeak",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array[17] debugTagPeak\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_debugTagPeak",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "debugTagBorrows",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array[17] debugTagBorrows\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_debugTagBorrows",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "debugHt",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nhashtable debugHt\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_debugHt",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "SetTimerData",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SetTimerData takes timer t, integer value returns nothing\n```\n\n\n---\n\nIt is dependent on jasshelper's recent inlining optimization in order to perform correctly.\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_SetTimerData",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetTimerData",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetTimerData takes timer t returns integer\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_GetTimerData",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetTimerDebugTag",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetTimerDebugTag takes timer t returns integer\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_GetTimerDebugTag",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "SetTimerDebugTag",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SetTimerDebugTag takes timer t, integer tag returns nothing\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_SetTimerDebugTag",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "ClearTimerDebugTag",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ClearTimerDebugTag takes timer t returns nothing\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_ClearTimerDebugTag",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetTimerDebugLive",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetTimerDebugLive takes integer tag returns integer\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_GetTimerDebugLive",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetTimerDebugPeak",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetTimerDebugPeak takes integer tag returns integer\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_GetTimerDebugPeak",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetTimerDebugBorrows",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetTimerDebugBorrows takes integer tag returns integer\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_GetTimerDebugBorrows",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "tN",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger tN\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_tN",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HELD",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer HELD\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_HELD",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "didinit",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean didinit\n```\n\n\n---\n\nuse a totally random number here, the more improbable someone uses it, the better.\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_didinit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "borrowedTimers",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger borrowedTimers\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_borrowedTimers",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "peakBorrowedTimers",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger peakBorrowedTimers\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_peakBorrowedTimers",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TIMERUTIS_PRIVATE_NewTimerCommon",
+      "kind": 14,
+      "detail": "TextMacro",
+      "documentation": "\n```jass\ntextmacro TIMERUTIS_PRIVATE_NewTimerCommon takes VALUE\n```\n\n\n---\n\n==========================================================================================\n\nI needed to decide between duplicating code ignoring the \"Once and only once\" rule\n\nand using the ugly textmacros. I guess textmacros won.\n\n**_>:** `build/AllCode.generated.j`",
+      "insertText": "TIMERUTIS_PRIVATE_NewTimerCommon",
+      "sortText": "3_macro_TIMERUTIS_PRIVATE_NewTimerCommon",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "TextMacroStatement"
+    },
+    {
+      "label": "NewTimerEx",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction NewTimerEx takes integer value returns timer\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_NewTimerEx",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "NewTimer",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction NewTimer takes nothing returns timer\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_NewTimer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "ReleaseTimer",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ReleaseTimer takes timer t returns nothing\n```\n\n\n---\n\n==========================================================================================\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_ReleaseTimer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetTimerUtilsCapacity",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetTimerUtilsCapacity takes nothing returns integer\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_GetTimerUtilsCapacity",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetTimerUtilsAvailable",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetTimerUtilsAvailable takes nothing returns integer\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_GetTimerUtilsAvailable",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetTimerUtilsInUse",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetTimerUtilsInUse takes nothing returns integer\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_GetTimerUtilsInUse",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetTimerUtilsPeakInUse",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetTimerUtilsPeakInUse takes nothing returns integer\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_GetTimerUtilsPeakInUse",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction init takes nothing returns nothing\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "SwlsDistanceSq",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SwlsDistanceSq takes real x1, real y1, real x2, real y2 returns real\n```\n\n\n---\n\nDistancia al cuadrado (sin SquareRoot, ideal para comparaciones).\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_SwlsDistanceSq",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "SwlsDistance",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SwlsDistance takes real x1, real y1, real x2, real y2 returns real\n```\n\n\n---\n\nDistancia real (usa SquareRoot).\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_SwlsDistance",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "HeroModels",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable HeroModels\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_HeroModels",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "Path",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring array Path\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_Path",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "Models",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger Models\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_Models",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HeroModelData",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct HeroModelData\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_struct_HeroModelData",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "EquipSetHeroModel",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction EquipSetHeroModel takes integer utype, real scale, string path returns nothing\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_EquipSetHeroModel",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "EquipGetHeroModel",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction EquipGetHeroModel takes integer id returns HeroModelData\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_EquipGetHeroModel",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "MZ",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ntrigger MZ\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_MZ",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "SZ",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ntrigger SZ\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_SZ",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "SmartIDHide",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer SmartIDHide\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_SmartIDHide",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "KeyStringCMD",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string KeyStringCMD\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_KeyStringCMD",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AuxiliarDataUnit",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct AuxiliarDataUnit\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_struct_AuxiliarDataUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "SILENCE_TESTUNIT_AMOV",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SILENCE_TESTUNIT_AMOV takes unit a returns nothing\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_SILENCE_TESTUNIT_AMOV",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "EButts",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction EButts takes nothing returns nothing\n```\n\n\n---\n\n+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_EButts",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "clock",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ntimer array clock\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_clock",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "StopCameraEQNoise",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction StopCameraEQNoise takes player whichPlayer returns nothing\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_StopCameraEQNoise",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TimerExpire",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction TimerExpire takes nothing returns nothing\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_TimerExpire",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "CameraSetEQNoise",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction CameraSetEQNoise takes player whichPlayer, real magnitude, real duration returns nothing\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_CameraSetEQNoise",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "FormatLoadoutDamageText",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction FormatLoadoutDamageText takes real amount returns string\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_FormatLoadoutDamageText",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "ShowCustomLoadoutText",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ShowCustomLoadoutText takes unit target, string msg, integer r, integer g, integer b returns nothing\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_ShowCustomLoadoutText",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "UNITS_DUMMY_CASTER",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer UNITS_DUMMY_CASTER\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_UNITS_DUMMY_CASTER",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "PLAYER_OWNER",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant player PLAYER_OWNER\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_PLAYER_OWNER",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "u",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nunit u\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_u",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "N",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule N\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_module_N",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "DummyCaster",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct DummyCaster extends array\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_struct_DummyCaster",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "HARVESTER_UNIT_ID",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer HARVESTER_UNIT_ID\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_HARVESTER_UNIT_ID",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HARVEST_ABILITY",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer HARVEST_ABILITY\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_HARVEST_ABILITY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HARVEST_ORDER_ID",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer HARVEST_ORDER_ID\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_HARVEST_ORDER_ID",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "NEUTRAL_PLAYER",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant player NEUTRAL_PLAYER\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_NEUTRAL_PLAYER",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "harvester",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nunit harvester\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_harvester",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "IsDestructableTree",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction IsDestructableTree takes destructable d returns boolean\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_IsDestructableTree",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "IsDestructableDead",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction IsDestructableDead takes destructable d returns boolean\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_IsDestructableDead",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "IsDestructableAlive",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction IsDestructableAlive takes destructable d returns boolean\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_IsDestructableAlive",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "IsTreeAlive",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction IsTreeAlive takes destructable tree returns boolean\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_IsTreeAlive",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "KillTree",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction KillTree takes destructable tree returns boolean\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_KillTree",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Inits",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule Inits\n```\n\n\n---\n\n*  Seriously?\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_module_Inits",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "I",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct I extends array\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_struct_I",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "TIMER_TIMEOUT",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real TIMER_TIMEOUT\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_TIMER_TIMEOUT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "NEUTRAL_PASSIVE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant player NEUTRAL_PASSIVE\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_NEUTRAL_PASSIVE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DUMMY_UNIT_ID",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer DUMMY_UNIT_ID\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_DUMMY_UNIT_ID",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "MAXIMUM_COLLISION_SIZE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real MAXIMUM_COLLISION_SIZE\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_MAXIMUM_COLLISION_SIZE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "COLLISION_TYPE_CIRCLE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer COLLISION_TYPE_CIRCLE\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_COLLISION_TYPE_CIRCLE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "COLLISION_TYPE_RECTANGLE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer COLLISION_TYPE_RECTANGLE\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_COLLISION_TYPE_RECTANGLE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "COLLISION_ACCURACY_FACTOR",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real COLLISION_ACCURACY_FACTOR\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_COLLISION_ACCURACY_FACTOR",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "USE_COLLISION_Z_FILTER",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant boolean USE_COLLISION_Z_FILTER\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_USE_COLLISION_Z_FILTER",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WRITE_DELAYED_MISSILE_RECYCLING",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant boolean WRITE_DELAYED_MISSILE_RECYCLING\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_WRITE_DELAYED_MISSILE_RECYCLING",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DELAYED_MISSILE_DEATH_ANIMATION_TIME",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real DELAYED_MISSILE_DEATH_ANIMATION_TIME\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_DELAYED_MISSILE_DEATH_ANIMATION_TIME",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "USE_DESTRUCTABLE_FILTER",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant boolean USE_DESTRUCTABLE_FILTER\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_USE_DESTRUCTABLE_FILTER",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "USE_ITEM_FILTER",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant boolean USE_ITEM_FILTER\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_USE_ITEM_FILTER",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "GetUnitBodySize",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetUnitBodySize takes unit whichUnit returns real\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_GetUnitBodySize",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetDestructableHeight",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetDestructableHeight takes destructable d returns real\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_GetDestructableHeight",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetItemHeight",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetItemHeight takes item i returns real\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_GetItemHeight",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "ToogleUnitIndexer",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ToogleUnitIndexer takes boolean enable returns boolean\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_ToogleUnitIndexer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Missile",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct Missile extends array\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_struct_Missile",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "StructDeclaration"
+    }
+  ],
+  "timestamp": 1776550872218
+}

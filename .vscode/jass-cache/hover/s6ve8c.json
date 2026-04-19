@@ -1,0 +1,26 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\HideIcons.j",
+  "items": [
+    {
+      "symbolName": "SILENCE_TESTUNIT_AMOV",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\HideIcons.j",
+      "content": "\n```jass\nfunction SILENCE_TESTUNIT_AMOV takes unit a returns nothing\n```\n\n\n**文件:** `InitMap/HideIcons.j`"
+    },
+    {
+      "symbolName": "u",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\HideIcons.j",
+      "content": "\n```jass\nunit u\n```\n\n\n**所属:** `AuxiliarDataUnit`\n**文件:** `InitMap/HideIcons.j`"
+    },
+    {
+      "symbolName": "x",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\HideIcons.j",
+      "content": "\n```jass\nreal x\n```\n\n\n**所属:** `AuxiliarDataUnit`\n**文件:** `InitMap/HideIcons.j`"
+    },
+    {
+      "symbolName": "y",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\HideIcons.j",
+      "content": "\n```jass\nreal y\n```\n\n\n**所属:** `AuxiliarDataUnit`\n**文件:** `InitMap/HideIcons.j`"
+    }
+  ],
+  "timestamp": 1774860564627
+}

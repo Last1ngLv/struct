@@ -1,0 +1,66 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+  "items": [
+    {
+      "symbolName": "AIIndexByUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "content": "\n```jass\nTable AIIndexByUnit\n```\n\n\n**文件:** `WaveSysAnAI/AI/IAManager.j`"
+    },
+    {
+      "symbolName": "AISetUseGroupFallbackNoHeroes",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "content": "\n```jass\nfunction AISetUseGroupFallbackNoHeroes takes boolean enabled returns nothing\n```\n\n\n---\n\ntrue: si no hay heroes registrados, usa GroupEnumUnitsInRange (modo compatible).\n\nfalse: si no hay heroes registrados, no hace fallback por grupo (modo estricto/optimizado).\n\n**文件:** `WaveSysAnAI/AI/IAManager.j`"
+    },
+    {
+      "symbolName": "AI_TELEPORT_ATTACH_POINT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "content": "\n```jass\nconstant string AI_TELEPORT_ATTACH_POINT\n```\n\n\n**文件:** `WaveSysAnAI/AI/IAManager.j`"
+    },
+    {
+      "symbolName": "AIUnitTeleportReadyMs",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "content": "\n```jass\nTable AIUnitTeleportReadyMs\n```\n\n\n**文件:** `WaveSysAnAI/AI/IAManager.j`"
+    },
+    {
+      "symbolName": "AICalcDynamicBudget",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "content": "\n```jass\nfunction AICalcDynamicBudget takes integer unitCount returns integer\n```\n\n\n**文件:** `WaveSysAnAI/AI/IAManager.j`"
+    },
+    {
+      "symbolName": "AIFixedTickMs",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "content": "\n```jass\ninteger AIFixedTickMs\n```\n\n\n**文件:** `WaveSysAnAI/AI/IAManager.j`"
+    },
+    {
+      "symbolName": "AISetTrackedHero",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "content": "\n```jass\nfunction AISetTrackedHero takes unit hero returns nothing\n```\n\n\n---\n\nHelper: registra por owner de la unidad.\n\n**文件:** `WaveSysAnAI/AI/IAManager.j`"
+    },
+    {
+      "symbolName": "AI_BOSS_REINFORCEMENT_INITIAL_MIN_MS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "content": "\n```jass\nconstant integer AI_BOSS_REINFORCEMENT_INITIAL_MIN_MS\n```\n\n\n**文件:** `WaveSysAnAI/AI/IAManager.j`"
+    },
+    {
+      "symbolName": "AI_TELEPORT_FALLBACK_ATTEMPTS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "content": "\n```jass\nconstant integer AI_TELEPORT_FALLBACK_ATTEMPTS\n```\n\n\n**文件:** `WaveSysAnAI/AI/IAManager.j`"
+    },
+    {
+      "symbolName": "Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "content": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**文件:** `WaveSysAnAI/AI/IAManager.j`"
+    },
+    {
+      "symbolName": "AI_BOSS_REINFORCEMENT_TEXT_RISE_SPEED",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "content": "\n```jass\nconstant real AI_BOSS_REINFORCEMENT_TEXT_RISE_SPEED\n```\n\n\n**文件:** `WaveSysAnAI/AI/IAManager.j`"
+    },
+    {
+      "symbolName": "AI_BOSS_REINFORCEMENT_TEXT_Z_OFFSET",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "content": "\n```jass\nconstant real AI_BOSS_REINFORCEMENT_TEXT_Z_OFFSET\n```\n\n\n**文件:** `WaveSysAnAI/AI/IAManager.j`"
+    }
+  ],
+  "timestamp": 1776475581427
+}

@@ -1,0 +1,76 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\StartSelection.j",
+  "items": [
+    {
+      "symbolName": "heroDialog",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\StartSelection.j",
+      "content": "\n```jass\ndialog array heroDialog\n```\n\n\n**文件:** `InitMap/StartSelection.j`"
+    },
+    {
+      "symbolName": "PlayerCamera",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\StartSelection.j",
+      "content": "\n```jass\nCamera array PlayerCamera\n```\n\n\n**文件:** `InitMap/StartSelection.j`"
+    },
+    {
+      "symbolName": "SelectionSystem",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\StartSelection.j",
+      "content": "\n```jass\nlibrary SelectionSystem requires PlayerUtils, PlayerMissileLoadout, OrderSmartChannel, Camera, MenuClient\n```\n\n\n**文件:** `InitMap/StartSelection.j`"
+    },
+    {
+      "symbolName": "SelectionSystem",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\StartSelection.j",
+      "content": "\n```jass\nstruct SelectionSystem\n```\n\n\n**文件:** `InitMap/StartSelection.j`"
+    },
+    {
+      "symbolName": "SPAWN_Y",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\StartSelection.j",
+      "content": "\n```jass\nconstant real SPAWN_Y\n```\n\n\n**文件:** `InitMap/StartSelection.j`"
+    },
+    {
+      "symbolName": "totalFinished",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\StartSelection.j",
+      "content": "\n```jass\ninteger totalFinished\n```\n\n\n**文件:** `InitMap/StartSelection.j`"
+    },
+    {
+      "symbolName": "elementChoice",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\StartSelection.j",
+      "content": "\n```jass\ninteger array elementChoice\n```\n\n\n**文件:** `InitMap/StartSelection.j`"
+    },
+    {
+      "symbolName": "SELECTION_PHASE_TIMEOUT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\StartSelection.j",
+      "content": "\n```jass\nconstant real SELECTION_PHASE_TIMEOUT\n```\n\n\n**文件:** `InitMap/StartSelection.j`"
+    },
+    {
+      "symbolName": "totalElementChosen",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\StartSelection.j",
+      "content": "\n```jass\ninteger totalElementChosen\n```\n\n\n**文件:** `InitMap/StartSelection.j`"
+    },
+    {
+      "symbolName": "PlayerHero",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\StartSelection.j",
+      "content": "\n```jass\nunit array PlayerHero\n```\n\n\n**文件:** `InitMap/StartSelection.j`"
+    },
+    {
+      "symbolName": "onAllSelected",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\StartSelection.j",
+      "content": "\n```jass\nstatic method onAllSelected takes nothing returns nothing\n```\n\n\n**所属:** `SelectionSystem`\n**文件:** `InitMap/StartSelection.j`"
+    },
+    {
+      "symbolName": "SELECTION_PHASE_NONE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\StartSelection.j",
+      "content": "\n```jass\nconstant integer SELECTION_PHASE_NONE\n```\n\n\n**文件:** `InitMap/StartSelection.j`"
+    },
+    {
+      "symbolName": "setupHeroVisual",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\StartSelection.j",
+      "content": "\n```jass\nmethod setupHeroVisual takes integer heroId, player p returns nothing\n```\n\n\n---\n\n==================================================\n\nHERO VISUAL CONFIG\n\n==================================================\n\n**所属:** `SelectionSystem`\n**文件:** `InitMap/StartSelection.j`"
+    },
+    {
+      "symbolName": "heroChoice",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\StartSelection.j",
+      "content": "\n```jass\ninteger array heroChoice\n```\n\n\n**文件:** `InitMap/StartSelection.j`"
+    }
+  ],
+  "timestamp": 1775953779587
+}

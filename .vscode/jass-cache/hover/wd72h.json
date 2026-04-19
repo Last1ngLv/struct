@@ -1,0 +1,16 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Target Sling.j",
+  "items": [
+    {
+      "symbolName": "SlingCore",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Target Sling.j",
+      "content": "\n```jass\nstruct SlingCore extends array\n```\n\n\n**文件:** `Pruebas/MissileExamples/Rogue/Target Sling.j`"
+    },
+    {
+      "symbolName": "Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Target Sling.j",
+      "content": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**文件:** `Pruebas/MissileExamples/Rogue/Target Sling.j`"
+    }
+  ],
+  "timestamp": 1775665632208
+}

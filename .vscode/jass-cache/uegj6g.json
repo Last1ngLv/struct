@@ -1,0 +1,114 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\WaveDamageCredit.j",
+  "items": [
+    {
+      "label": "WAVE_DAMAGE_CREDIT_TTL",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_DAMAGE_CREDIT_TTL\n```\n\n\n---\n\nFallback window for last-damage credit. Short on purpose:\n\nit covers death-event latency / proxy damage, but avoids carrying\n\nstale damage credit across later unrelated deaths.\n\n**_>:** `libraries/WaveDamageCredit.j`",
+      "sortText": "2_var_WAVE_DAMAGE_CREDIT_TTL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\WaveDamageCredit.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveDamageCreditOwnerPidByTarget",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable WaveDamageCreditOwnerPidByTarget\n```\n\n\n**_>:** `libraries/WaveDamageCredit.j`",
+      "sortText": "2_var_WaveDamageCreditOwnerPidByTarget",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\WaveDamageCredit.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveDamageCreditSourceHidByTarget",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable WaveDamageCreditSourceHidByTarget\n```\n\n\n**_>:** `libraries/WaveDamageCredit.j`",
+      "sortText": "2_var_WaveDamageCreditSourceHidByTarget",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\WaveDamageCredit.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveDamageCreditTimeByTarget",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable WaveDamageCreditTimeByTarget\n```\n\n\n**_>:** `libraries/WaveDamageCredit.j`",
+      "sortText": "2_var_WaveDamageCreditTimeByTarget",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\WaveDamageCredit.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveDamageCreditClock",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ntimer WaveDamageCreditClock\n```\n\n\n**_>:** `libraries/WaveDamageCredit.j`",
+      "sortText": "2_var_WaveDamageCreditClock",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\WaveDamageCredit.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveDamageCreditNow",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveDamageCreditNow takes nothing returns real\n```\n\n\n**_>:** `libraries/WaveDamageCredit.j`",
+      "sortText": "1_func_WaveDamageCreditNow",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\WaveDamageCredit.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveDamageCreditResolveOwnerPid",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveDamageCreditResolveOwnerPid takes unit source returns integer\n```\n\n\n**_>:** `libraries/WaveDamageCredit.j`",
+      "sortText": "1_func_WaveDamageCreditResolveOwnerPid",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\WaveDamageCredit.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveRecordDamageCredit",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveRecordDamageCredit takes unit source, unit target returns nothing\n```\n\n\n**_>:** `libraries/WaveDamageCredit.j`",
+      "sortText": "1_func_WaveRecordDamageCredit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\WaveDamageCredit.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveClearDamageCredit",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveClearDamageCredit takes unit target returns nothing\n```\n\n\n**_>:** `libraries/WaveDamageCredit.j`",
+      "sortText": "1_func_WaveClearDamageCredit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\WaveDamageCredit.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveGetDamageCreditOwnerPid",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveGetDamageCreditOwnerPid takes unit target returns integer\n```\n\n\n**_>:** `libraries/WaveDamageCredit.j`",
+      "sortText": "1_func_WaveGetDamageCreditOwnerPid",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\WaveDamageCredit.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveDamageCreditClockNoop",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveDamageCreditClockNoop takes nothing returns nothing\n```\n\n\n**_>:** `libraries/WaveDamageCredit.j`",
+      "sortText": "1_func_WaveDamageCreditClockNoop",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\WaveDamageCredit.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**_>:** `libraries/WaveDamageCredit.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\WaveDamageCredit.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1776571462199
+}

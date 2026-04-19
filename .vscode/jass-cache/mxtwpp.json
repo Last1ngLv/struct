@@ -1,0 +1,412 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TimerUtils.j",
+  "items": [
+    {
+      "label": "USE_HASH_TABLE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant boolean USE_HASH_TABLE\n```\n\n\n---\n\nHow to tweak timer utils:\n\nUSE_HASH_TABLE = true  (new blue)\n\n* SAFEST\n\n* SLOWEST (though hash tables are kind of fast)\n\nUSE_HASH_TABLE = false, USE_FLEXIBLE_OFFSET = true  (orange)\n\n* kinda safe (except there is a limit in the number of timers)\n\n* ALMOST FAST\n\nUSE_HASH_TABLE = false, USE_FLEXIBLE_OFFSET = false (red)\n\n* THE FASTEST (though is only  faster than the previous method\n\nafter using the optimizer on the map)\n\n* THE LEAST SAFE ( you may have to tweak OFSSET manually for it to\n\nwork)\n\n**_>:** `libraries/TimerUtils.j`",
+      "sortText": "2_var_USE_HASH_TABLE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TimerUtils.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "USE_FLEXIBLE_OFFSET",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant boolean USE_FLEXIBLE_OFFSET\n```\n\n\n**_>:** `libraries/TimerUtils.j`",
+      "sortText": "2_var_USE_FLEXIBLE_OFFSET",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TimerUtils.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "OFFSET",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer OFFSET\n```\n\n\n**_>:** `libraries/TimerUtils.j`",
+      "sortText": "2_var_OFFSET",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TimerUtils.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "VOFFSET",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger VOFFSET\n```\n\n\n**_>:** `libraries/TimerUtils.j`",
+      "sortText": "2_var_VOFFSET",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TimerUtils.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "QUANTITY",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer QUANTITY\n```\n\n\n---\n\nTimers to preload at map init:\n\n**_>:** `libraries/TimerUtils.j`",
+      "sortText": "2_var_QUANTITY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TimerUtils.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "ARRAY_SIZE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer ARRAY_SIZE\n```\n\n\n---\n\nChanging this  to something big will allow you to keep recycling\n\ntimers even when there are already AN INCREDIBLE AMOUNT of timers in\n\nthe stack. But it will make things far slower so that's probably a bad idea...\n\n**_>:** `libraries/TimerUtils.j`",
+      "sortText": "2_var_ARRAY_SIZE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TimerUtils.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TIMER_DEBUG_TAG_NONE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer TIMER_DEBUG_TAG_NONE\n```\n\n\n**_>:** `libraries/TimerUtils.j`",
+      "sortText": "2_var_TIMER_DEBUG_TAG_NONE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TimerUtils.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TIMER_DEBUG_TAG_LOADOUT_CONTROL",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer TIMER_DEBUG_TAG_LOADOUT_CONTROL\n```\n\n\n**_>:** `libraries/TimerUtils.j`",
+      "sortText": "2_var_TIMER_DEBUG_TAG_LOADOUT_CONTROL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TimerUtils.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TIMER_DEBUG_TAG_LOADOUT_MISSILE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer TIMER_DEBUG_TAG_LOADOUT_MISSILE\n```\n\n\n**_>:** `libraries/TimerUtils.j`",
+      "sortText": "2_var_TIMER_DEBUG_TAG_LOADOUT_MISSILE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TimerUtils.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TIMER_DEBUG_TAG_LOADOUT_LEAP",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer TIMER_DEBUG_TAG_LOADOUT_LEAP\n```\n\n\n**_>:** `libraries/TimerUtils.j`",
+      "sortText": "2_var_TIMER_DEBUG_TAG_LOADOUT_LEAP",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TimerUtils.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TIMER_DEBUG_TAG_LOADOUT_LEAP_MISS",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer TIMER_DEBUG_TAG_LOADOUT_LEAP_MISS\n```\n\n\n**_>:** `libraries/TimerUtils.j`",
+      "sortText": "2_var_TIMER_DEBUG_TAG_LOADOUT_LEAP_MISS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TimerUtils.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TIMER_DEBUG_TAG_LOADOUT_ROCKET",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer TIMER_DEBUG_TAG_LOADOUT_ROCKET\n```\n\n\n**_>:** `libraries/TimerUtils.j`",
+      "sortText": "2_var_TIMER_DEBUG_TAG_LOADOUT_ROCKET",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TimerUtils.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TIMER_DEBUG_TAG_WAVE_CORE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer TIMER_DEBUG_TAG_WAVE_CORE\n```\n\n\n**_>:** `libraries/TimerUtils.j`",
+      "sortText": "2_var_TIMER_DEBUG_TAG_WAVE_CORE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TimerUtils.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TIMER_DEBUG_TAG_AI",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer TIMER_DEBUG_TAG_AI\n```\n\n\n**_>:** `libraries/TimerUtils.j`",
+      "sortText": "2_var_TIMER_DEBUG_TAG_AI",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TimerUtils.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TIMER_DEBUG_TAG_UNIT_SKILLS",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer TIMER_DEBUG_TAG_UNIT_SKILLS\n```\n\n\n**_>:** `libraries/TimerUtils.j`",
+      "sortText": "2_var_TIMER_DEBUG_TAG_UNIT_SKILLS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TimerUtils.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TIMER_DEBUG_TAG_MOVECAST",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer TIMER_DEBUG_TAG_MOVECAST\n```\n\n\n**_>:** `libraries/TimerUtils.j`",
+      "sortText": "2_var_TIMER_DEBUG_TAG_MOVECAST",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TimerUtils.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TIMER_DEBUG_TAG_OTHER",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer TIMER_DEBUG_TAG_OTHER\n```\n\n\n**_>:** `libraries/TimerUtils.j`",
+      "sortText": "2_var_TIMER_DEBUG_TAG_OTHER",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TimerUtils.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TIMER_DEBUG_MAX_TAG",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer TIMER_DEBUG_MAX_TAG\n```\n\n\n**_>:** `libraries/TimerUtils.j`",
+      "sortText": "2_var_TIMER_DEBUG_MAX_TAG",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TimerUtils.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "debugTagLive",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array[17] debugTagLive\n```\n\n\n**_>:** `libraries/TimerUtils.j`",
+      "sortText": "2_var_debugTagLive",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TimerUtils.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "debugTagPeak",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array[17] debugTagPeak\n```\n\n\n**_>:** `libraries/TimerUtils.j`",
+      "sortText": "2_var_debugTagPeak",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TimerUtils.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "debugTagBorrows",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array[17] debugTagBorrows\n```\n\n\n**_>:** `libraries/TimerUtils.j`",
+      "sortText": "2_var_debugTagBorrows",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TimerUtils.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "ht",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nhashtable ht\n```\n\n\n**_>:** `libraries/TimerUtils.j`",
+      "sortText": "2_var_ht",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TimerUtils.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "debugHt",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nhashtable debugHt\n```\n\n\n**_>:** `libraries/TimerUtils.j`",
+      "sortText": "2_var_debugHt",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TimerUtils.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "SetTimerData",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SetTimerData takes timer t, integer value returns nothing\n```\n\n\n---\n\nIt is dependent on jasshelper's recent inlining optimization in order to perform correctly.\n\n**_>:** `libraries/TimerUtils.j`",
+      "sortText": "1_func_SetTimerData",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TimerUtils.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetTimerData",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetTimerData takes timer t returns integer\n```\n\n\n**_>:** `libraries/TimerUtils.j`",
+      "sortText": "1_func_GetTimerData",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TimerUtils.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetTimerDebugTag",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetTimerDebugTag takes timer t returns integer\n```\n\n\n**_>:** `libraries/TimerUtils.j`",
+      "sortText": "1_func_GetTimerDebugTag",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TimerUtils.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "SetTimerDebugTag",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SetTimerDebugTag takes timer t, integer tag returns nothing\n```\n\n\n**_>:** `libraries/TimerUtils.j`",
+      "sortText": "1_func_SetTimerDebugTag",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TimerUtils.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "ClearTimerDebugTag",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ClearTimerDebugTag takes timer t returns nothing\n```\n\n\n**_>:** `libraries/TimerUtils.j`",
+      "sortText": "1_func_ClearTimerDebugTag",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TimerUtils.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetTimerDebugLive",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetTimerDebugLive takes integer tag returns integer\n```\n\n\n**_>:** `libraries/TimerUtils.j`",
+      "sortText": "1_func_GetTimerDebugLive",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TimerUtils.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetTimerDebugPeak",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetTimerDebugPeak takes integer tag returns integer\n```\n\n\n**_>:** `libraries/TimerUtils.j`",
+      "sortText": "1_func_GetTimerDebugPeak",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TimerUtils.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetTimerDebugBorrows",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetTimerDebugBorrows takes integer tag returns integer\n```\n\n\n**_>:** `libraries/TimerUtils.j`",
+      "sortText": "1_func_GetTimerDebugBorrows",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TimerUtils.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "tN",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger tN\n```\n\n\n**_>:** `libraries/TimerUtils.j`",
+      "sortText": "2_var_tN",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TimerUtils.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HELD",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer HELD\n```\n\n\n**_>:** `libraries/TimerUtils.j`",
+      "sortText": "2_var_HELD",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TimerUtils.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "didinit",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean didinit\n```\n\n\n---\n\nuse a totally random number here, the more improbable someone uses it, the better.\n\n**_>:** `libraries/TimerUtils.j`",
+      "sortText": "2_var_didinit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TimerUtils.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "borrowedTimers",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger borrowedTimers\n```\n\n\n**_>:** `libraries/TimerUtils.j`",
+      "sortText": "2_var_borrowedTimers",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TimerUtils.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "peakBorrowedTimers",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger peakBorrowedTimers\n```\n\n\n**_>:** `libraries/TimerUtils.j`",
+      "sortText": "2_var_peakBorrowedTimers",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TimerUtils.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TIMERUTIS_PRIVATE_NewTimerCommon",
+      "kind": 14,
+      "detail": "TextMacro",
+      "documentation": "\n```jass\ntextmacro TIMERUTIS_PRIVATE_NewTimerCommon takes VALUE\n```\n\n\n---\n\n==========================================================================================\n\nI needed to decide between duplicating code ignoring the \"Once and only once\" rule\n\nand using the ugly textmacros. I guess textmacros won.\n\n**_>:** `libraries/TimerUtils.j`",
+      "insertText": "TIMERUTIS_PRIVATE_NewTimerCommon",
+      "sortText": "3_macro_TIMERUTIS_PRIVATE_NewTimerCommon",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TimerUtils.j",
+      "statementType": "TextMacroStatement"
+    },
+    {
+      "label": "NewTimerEx",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction NewTimerEx takes integer value returns timer\n```\n\n\n**_>:** `libraries/TimerUtils.j`",
+      "sortText": "1_func_NewTimerEx",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TimerUtils.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "NewTimer",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction NewTimer takes nothing returns timer\n```\n\n\n**_>:** `libraries/TimerUtils.j`",
+      "sortText": "1_func_NewTimer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TimerUtils.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "ReleaseTimer",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ReleaseTimer takes timer t returns nothing\n```\n\n\n---\n\n==========================================================================================\n\n**_>:** `libraries/TimerUtils.j`",
+      "sortText": "1_func_ReleaseTimer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TimerUtils.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetTimerUtilsCapacity",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetTimerUtilsCapacity takes nothing returns integer\n```\n\n\n**_>:** `libraries/TimerUtils.j`",
+      "sortText": "1_func_GetTimerUtilsCapacity",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TimerUtils.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetTimerUtilsAvailable",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetTimerUtilsAvailable takes nothing returns integer\n```\n\n\n**_>:** `libraries/TimerUtils.j`",
+      "sortText": "1_func_GetTimerUtilsAvailable",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TimerUtils.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetTimerUtilsInUse",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetTimerUtilsInUse takes nothing returns integer\n```\n\n\n**_>:** `libraries/TimerUtils.j`",
+      "sortText": "1_func_GetTimerUtilsInUse",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TimerUtils.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetTimerUtilsPeakInUse",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetTimerUtilsPeakInUse takes nothing returns integer\n```\n\n\n**_>:** `libraries/TimerUtils.j`",
+      "sortText": "1_func_GetTimerUtilsPeakInUse",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TimerUtils.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction init takes nothing returns nothing\n```\n\n\n**_>:** `libraries/TimerUtils.j`",
+      "sortText": "1_func_init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TimerUtils.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1776550709288
+}

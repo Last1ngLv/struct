@@ -1,0 +1,26 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\HeroLives.j",
+  "items": [
+    {
+      "symbolName": "ReviveAndHealHeroes",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\HeroLives.j",
+      "content": "\n```jass\nfunction ReviveAndHealHeroes takes nothing returns nothing\n```\n\n\n**文件:** `InitMap/HeroLives.j`"
+    },
+    {
+      "symbolName": "ReviveAndHealHeroesZ",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\HeroLives.j",
+      "content": "\n```jass\nfunction ReviveAndHealHeroesZ takes nothing returns nothing\n```\n\n\n**文件:** `InitMap/HeroLives.j`"
+    },
+    {
+      "symbolName": "ReviveAndHealHeroesA",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\HeroLives.j",
+      "content": "\n```jass\nfunction ReviveAndHealHeroesA takes nothing returns nothing\n```\n\n\n**文件:** `InitMap/HeroLives.j`"
+    },
+    {
+      "symbolName": "HERO_LIVES_BASE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\HeroLives.j",
+      "content": "\n```jass\nconstant integer HERO_LIVES_BASE\n```\n\n\n**文件:** `InitMap/HeroLives.j`"
+    }
+  ],
+  "timestamp": 1775672867734
+}

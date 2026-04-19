@@ -18,7 +18,7 @@ library LoadoutControl initializer Init requires TimerUtils, SpellIndex, Missile
         private constant attacktype ATTACK_TYPE = ATTACK_TYPE_NORMAL
         private constant damagetype DAMAGE_TYPE = DAMAGE_TYPE_MAGIC
 
-        private constant integer BURST_COUNT = 5
+        private constant integer BURST_COUNT = 3
         private constant real BURST_SPREAD_DEG = 05.
         private constant real BURST_STAGGER_INTERVAL = 0.03
         private constant real MISSILE_START_Z = 75.
@@ -27,7 +27,7 @@ library LoadoutControl initializer Init requires TimerUtils, SpellIndex, Missile
         private constant real SHOT_DISTANCE = 2000.
         private constant real MISSILE_COLLISION = 96.
         private constant real MISSILE_SCALE = 1.00
-        private constant real BASE_DAMAGE_MULT = 2
+        private constant real BASE_DAMAGE_MULT = 1
         private constant string BASE_MISSILE_MODEL = "Abilities\\Weapons\\Bolt\\BoltImpact.mdl"
         private constant string WRAP_ATTACH_POINT = "origin"
 

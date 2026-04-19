@@ -1,0 +1,36 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\PlayerUtils.j",
+  "items": [
+    {
+      "symbolName": "id",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\PlayerUtils.j",
+      "content": "\n```jass\nreadonly integer id\n```\n\n\n**所属:** `User`\n**文件:** `libraries/PlayerUtils.j`"
+    },
+    {
+      "symbolName": "fromPlaying",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\PlayerUtils.j",
+      "content": "\n```jass\nstatic method fromPlaying takes integer index returns thistype\n```\n\n\n---\n\naccess active players array\n\n**所属:** `User`\n**文件:** `libraries/PlayerUtils.j`"
+    },
+    {
+      "symbolName": "static",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\PlayerUtils.j",
+      "content": "\n```jass\nreadonly static\n```\n\n\n**所属:** `User`\n**文件:** `libraries/PlayerUtils.j`"
+    },
+    {
+      "symbolName": "toPlayer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\PlayerUtils.j",
+      "content": "\n```jass\nmethod toPlayer takes nothing returns player\n```\n\n\n**所属:** `User`\n**文件:** `libraries/PlayerUtils.j`"
+    },
+    {
+      "symbolName": "AmountPlaying",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\PlayerUtils.j",
+      "content": "\n```jass\nstatic readonly integer AmountPlaying\n```\n\n\n**所属:** `User`\n**文件:** `libraries/PlayerUtils.j`"
+    },
+    {
+      "symbolName": "onInit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\PlayerUtils.j",
+      "content": "\n```jass\nstatic method onInit takes nothing returns nothing\n```\n\n\n**所属:** `PlayerUtilsInit`\n**文件:** `libraries/PlayerUtils.j`"
+    }
+  ],
+  "timestamp": 1775421274334
+}

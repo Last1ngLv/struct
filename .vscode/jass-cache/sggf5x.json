@@ -1,0 +1,60 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\BloodMage\\Ice Siege.j",
+  "items": [
+    {
+      "label": "GetDamage",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetDamage takes integer level returns real\n```\n\n\n---\n\n*  Set the damage.\n\n**_>:** `Pruebas/MissileExamples/BloodMage/Ice Siege.j`",
+      "sortText": "1_func_GetDamage",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\BloodMage\\Ice Siege.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetWaves",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetWaves takes integer level returns integer\n```\n\n\n---\n\n*  Set how often periodic damage is applied.\n\n**_>:** `Pruebas/MissileExamples/BloodMage/Ice Siege.j`",
+      "sortText": "1_func_GetWaves",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\BloodMage\\Ice Siege.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetRange",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetRange takes integer level returns integer\n```\n\n\n---\n\n*  Set the collision size of the spell.\n\n**_>:** `Pruebas/MissileExamples/BloodMage/Ice Siege.j`",
+      "sortText": "1_func_GetRange",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\BloodMage\\Ice Siege.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnPeriodic",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnPeriodic takes nothing returns nothing\n```\n\n\n---\n\n========================================================================\n\n*  Ice siege code. Make changes carefully.\n\n========================================================================\n\n**_>:** `Pruebas/MissileExamples/BloodMage/Ice Siege.j`",
+      "sortText": "1_func_OnPeriodic",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\BloodMage\\Ice Siege.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnEffect",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnEffect takes nothing returns nothing\n```\n\n\n**_>:** `Pruebas/MissileExamples/BloodMage/Ice Siege.j`",
+      "sortText": "1_func_OnEffect",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\BloodMage\\Ice Siege.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**_>:** `Pruebas/MissileExamples/BloodMage/Ice Siege.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\BloodMage\\Ice Siege.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1776550709535
+}

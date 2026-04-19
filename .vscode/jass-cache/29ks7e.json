@@ -1,0 +1,681 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+  "items": [
+    {
+      "label": "TERRAIN_REPLACE_MAX_RULES",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer TERRAIN_REPLACE_MAX_RULES\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "2_var_TERRAIN_REPLACE_MAX_RULES",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TERRAIN_REPLACE_TILE_SIZE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real TERRAIN_REPLACE_TILE_SIZE\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "2_var_TERRAIN_REPLACE_TILE_SIZE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TerrainReplaceRuleCount",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger TerrainReplaceRuleCount\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "2_var_TerrainReplaceRuleCount",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TerrainReplaceBaseTile",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array TerrainReplaceBaseTile\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "2_var_TerrainReplaceBaseTile",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TerrainReplaceNewTile",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array TerrainReplaceNewTile\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "2_var_TerrainReplaceNewTile",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TerrainReplaceVariation",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array TerrainReplaceVariation\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "2_var_TerrainReplaceVariation",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TerrainReplaceEnabled",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean array TerrainReplaceEnabled\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "2_var_TerrainReplaceEnabled",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TerrainReplaceDebugEnabled",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean TerrainReplaceDebugEnabled\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "2_var_TerrainReplaceDebugEnabled",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TerrainReplaceDebugVisitedTiles",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger TerrainReplaceDebugVisitedTiles\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "2_var_TerrainReplaceDebugVisitedTiles",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TerrainReplaceDebugChangedTiles",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger TerrainReplaceDebugChangedTiles\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "2_var_TerrainReplaceDebugChangedTiles",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TerrainReplaceDebugRuleHits",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array TerrainReplaceDebugRuleHits\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "2_var_TerrainReplaceDebugRuleHits",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TerrainReplaceBatchTilesPerTick",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger TerrainReplaceBatchTilesPerTick\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "2_var_TerrainReplaceBatchTilesPerTick",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TerrainReplaceBatchTickSec",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal TerrainReplaceBatchTickSec\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "2_var_TerrainReplaceBatchTickSec",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TerrainReplaceBatchTimer",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ntimer TerrainReplaceBatchTimer\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "2_var_TerrainReplaceBatchTimer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TerrainReplaceBatchRunning",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean TerrainReplaceBatchRunning\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "2_var_TerrainReplaceBatchRunning",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TerrainReplaceBatchExpectedTiles",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger TerrainReplaceBatchExpectedTiles\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "2_var_TerrainReplaceBatchExpectedTiles",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TerrainReplaceBatchMinTileX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger TerrainReplaceBatchMinTileX\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "2_var_TerrainReplaceBatchMinTileX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TerrainReplaceBatchMaxTileX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger TerrainReplaceBatchMaxTileX\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "2_var_TerrainReplaceBatchMaxTileX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TerrainReplaceBatchMinTileY",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger TerrainReplaceBatchMinTileY\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "2_var_TerrainReplaceBatchMinTileY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TerrainReplaceBatchMaxTileY",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger TerrainReplaceBatchMaxTileY\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "2_var_TerrainReplaceBatchMaxTileY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TerrainReplaceBatchCurrentTileX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger TerrainReplaceBatchCurrentTileX\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "2_var_TerrainReplaceBatchCurrentTileX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TerrainReplaceBatchCurrentTileY",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger TerrainReplaceBatchCurrentTileY\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "2_var_TerrainReplaceBatchCurrentTileY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TerrainReplaceBatchLabel",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring TerrainReplaceBatchLabel\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "2_var_TerrainReplaceBatchLabel",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TerrainReplaceGetTileSize",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction TerrainReplaceGetTileSize takes nothing returns real\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "1_func_TerrainReplaceGetTileSize",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TerrainReplaceGetMaxRules",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction TerrainReplaceGetMaxRules takes nothing returns integer\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "1_func_TerrainReplaceGetMaxRules",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TerrainReplaceFloorTileIndex",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction TerrainReplaceFloorTileIndex takes real coord returns integer\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "1_func_TerrainReplaceFloorTileIndex",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TerrainReplaceNormalizeMinIndex",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction TerrainReplaceNormalizeMinIndex takes real minCoord, real maxCoord returns integer\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "1_func_TerrainReplaceNormalizeMinIndex",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TerrainReplaceNormalizeMaxIndex",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction TerrainReplaceNormalizeMaxIndex takes real minCoord, real maxCoord returns integer\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "1_func_TerrainReplaceNormalizeMaxIndex",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TerrainReplaceTileCenter",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction TerrainReplaceTileCenter takes integer tileIndex returns real\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "1_func_TerrainReplaceTileCenter",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TerrainReplaceGetWorldMinTileX",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction TerrainReplaceGetWorldMinTileX takes nothing returns integer\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "1_func_TerrainReplaceGetWorldMinTileX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TerrainReplaceGetWorldMaxTileX",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction TerrainReplaceGetWorldMaxTileX takes nothing returns integer\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "1_func_TerrainReplaceGetWorldMaxTileX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TerrainReplaceGetWorldMinTileY",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction TerrainReplaceGetWorldMinTileY takes nothing returns integer\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "1_func_TerrainReplaceGetWorldMinTileY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TerrainReplaceGetWorldMaxTileY",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction TerrainReplaceGetWorldMaxTileY takes nothing returns integer\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "1_func_TerrainReplaceGetWorldMaxTileY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TerrainReplaceClampTileRangeToWorld",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction TerrainReplaceClampTileRangeToWorld takes integer minTileX, integer maxTileX, integer minTileY, integer maxTileY returns nothing\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "1_func_TerrainReplaceClampTileRangeToWorld",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TerrainReplaceClampNonNegative",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction TerrainReplaceClampNonNegative takes integer v returns integer\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "1_func_TerrainReplaceClampNonNegative",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TerrainReplaceSetBatchTilesPerTick",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction TerrainReplaceSetBatchTilesPerTick takes integer value returns nothing\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "1_func_TerrainReplaceSetBatchTilesPerTick",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TerrainReplaceGetBatchTilesPerTick",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction TerrainReplaceGetBatchTilesPerTick takes nothing returns integer\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "1_func_TerrainReplaceGetBatchTilesPerTick",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TerrainReplaceSetBatchTickSec",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction TerrainReplaceSetBatchTickSec takes real value returns nothing\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "1_func_TerrainReplaceSetBatchTickSec",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TerrainReplaceGetBatchTickSec",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction TerrainReplaceGetBatchTickSec takes nothing returns real\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "1_func_TerrainReplaceGetBatchTickSec",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TerrainReplaceIsBatchRunning",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction TerrainReplaceIsBatchRunning takes nothing returns boolean\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "1_func_TerrainReplaceIsBatchRunning",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TerrainReplaceStopBatch",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction TerrainReplaceStopBatch takes nothing returns nothing\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "1_func_TerrainReplaceStopBatch",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TerrainReplaceIsValidSlot",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction TerrainReplaceIsValidSlot takes integer slot returns boolean\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "1_func_TerrainReplaceIsValidSlot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TerrainReplaceClearRules",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction TerrainReplaceClearRules takes nothing returns nothing\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "1_func_TerrainReplaceClearRules",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TerrainReplaceDisableRule",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction TerrainReplaceDisableRule takes integer slot returns nothing\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "1_func_TerrainReplaceDisableRule",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TerrainReplaceSetRuleEx",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction TerrainReplaceSetRuleEx takes integer slot, integer baseTile, integer newTile, integer variation returns nothing\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "1_func_TerrainReplaceSetRuleEx",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TerrainReplaceSetRule",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction TerrainReplaceSetRule takes integer slot, integer baseTile, integer newTile returns nothing\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "1_func_TerrainReplaceSetRule",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TerrainReplaceSetRuleVariation",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction TerrainReplaceSetRuleVariation takes integer slot, integer variation returns nothing\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "1_func_TerrainReplaceSetRuleVariation",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TerrainReplaceAddRuleEx",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction TerrainReplaceAddRuleEx takes integer baseTile, integer newTile, integer variation returns integer\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "1_func_TerrainReplaceAddRuleEx",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TerrainReplaceAddRule",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction TerrainReplaceAddRule takes integer baseTile, integer newTile returns integer\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "1_func_TerrainReplaceAddRule",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TerrainReplaceGetRuleCount",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction TerrainReplaceGetRuleCount takes nothing returns integer\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "1_func_TerrainReplaceGetRuleCount",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TerrainReplaceSetDebug",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction TerrainReplaceSetDebug takes boolean enabled returns nothing\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "1_func_TerrainReplaceSetDebug",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TerrainReplaceClearDebugStats",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction TerrainReplaceClearDebugStats takes nothing returns nothing\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "1_func_TerrainReplaceClearDebugStats",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TerrainReplaceGetDebugVisitedTiles",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction TerrainReplaceGetDebugVisitedTiles takes nothing returns integer\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "1_func_TerrainReplaceGetDebugVisitedTiles",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TerrainReplaceGetDebugChangedTiles",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction TerrainReplaceGetDebugChangedTiles takes nothing returns integer\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "1_func_TerrainReplaceGetDebugChangedTiles",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TerrainReplaceGetDebugRuleHits",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction TerrainReplaceGetDebugRuleHits takes integer slot returns integer\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "1_func_TerrainReplaceGetDebugRuleHits",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TerrainReplaceDebugDump",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction TerrainReplaceDebugDump takes string label returns nothing\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "1_func_TerrainReplaceDebugDump",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TerrainReplaceCountTilesBounds",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction TerrainReplaceCountTilesBounds takes real minX, real minY, real maxX, real maxY returns integer\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "1_func_TerrainReplaceCountTilesBounds",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TerrainReplaceCountTilesFromCenter",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction TerrainReplaceCountTilesFromCenter takes integer leftTiles, integer rightTiles, integer upTiles, integer downTiles returns integer\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "1_func_TerrainReplaceCountTilesFromCenter",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TerrainReplaceApplyAtTile",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction TerrainReplaceApplyAtTile takes real x, real y returns boolean\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "1_func_TerrainReplaceApplyAtTile",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TerrainReplaceApplyTileRange",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction TerrainReplaceApplyTileRange takes integer minTileX, integer maxTileX, integer minTileY, integer maxTileY returns integer\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "1_func_TerrainReplaceApplyTileRange",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TerrainReplaceApplyBounds",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction TerrainReplaceApplyBounds takes real minX, real minY, real maxX, real maxY returns integer\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "1_func_TerrainReplaceApplyBounds",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TerrainReplaceApplyFromCenter",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction TerrainReplaceApplyFromCenter takes real centerX, real centerY, integer leftTiles, integer rightTiles, integer upTiles, integer downTiles returns integer\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "1_func_TerrainReplaceApplyFromCenter",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TerrainReplaceBatchFinish",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction TerrainReplaceBatchFinish takes nothing returns nothing\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "1_func_TerrainReplaceBatchFinish",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TerrainReplaceBatchTick",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction TerrainReplaceBatchTick takes nothing returns nothing\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "1_func_TerrainReplaceBatchTick",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TerrainReplaceStartTileRange",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction TerrainReplaceStartTileRange takes integer minTileX, integer maxTileX, integer minTileY, integer maxTileY, string label returns integer\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "1_func_TerrainReplaceStartTileRange",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TerrainReplaceDebugApplyBounds",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction TerrainReplaceDebugApplyBounds takes real minX, real minY, real maxX, real maxY returns integer\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "1_func_TerrainReplaceDebugApplyBounds",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TerrainReplaceDebugApplyFromCenter",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction TerrainReplaceDebugApplyFromCenter takes real centerX, real centerY, integer leftTiles, integer rightTiles, integer upTiles, integer downTiles returns integer\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "1_func_TerrainReplaceDebugApplyFromCenter",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TerrainReplaceDebugApplyRect",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction TerrainReplaceDebugApplyRect takes rect r returns integer\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "1_func_TerrainReplaceDebugApplyRect",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TerrainReplaceApplyFromCenterRect",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction TerrainReplaceApplyFromCenterRect takes real centerX, real centerY, integer leftTiles, integer rightTiles, integer upTiles, integer downTiles returns integer\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "1_func_TerrainReplaceApplyFromCenterRect",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TerrainReplaceDebugApplyFromCenterRect",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction TerrainReplaceDebugApplyFromCenterRect takes real centerX, real centerY, integer leftTiles, integer rightTiles, integer upTiles, integer downTiles returns integer\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "1_func_TerrainReplaceDebugApplyFromCenterRect",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TerrainReplaceApplyRect",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction TerrainReplaceApplyRect takes rect r returns integer\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "1_func_TerrainReplaceApplyRect",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TerrainReplaceStartBounds",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction TerrainReplaceStartBounds takes real minX, real minY, real maxX, real maxY returns integer\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "1_func_TerrainReplaceStartBounds",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TerrainReplaceStartFromCenter",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction TerrainReplaceStartFromCenter takes real centerX, real centerY, integer leftTiles, integer rightTiles, integer upTiles, integer downTiles returns integer\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "1_func_TerrainReplaceStartFromCenter",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TerrainReplaceStartRect",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction TerrainReplaceStartRect takes rect r returns integer\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "1_func_TerrainReplaceStartRect",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**_>:** `libraries/TerrainReplace.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainReplace.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1776550709287
+}

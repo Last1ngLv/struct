@@ -1,0 +1,654 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+  "items": [
+    {
+      "label": "WAVE_HMTT_UNIT_ID",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_HMTT_UNIT_ID\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "2_var_WAVE_HMTT_UNIT_ID",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMTT_BOSS_UNIT_ID",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_HMTT_BOSS_UNIT_ID\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "2_var_WAVE_HMTT_BOSS_UNIT_ID",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMTT_ZONE_MODEL",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string WAVE_HMTT_ZONE_MODEL\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "2_var_WAVE_HMTT_ZONE_MODEL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMTT_AREA_MODEL",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string WAVE_HMTT_AREA_MODEL\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "2_var_WAVE_HMTT_AREA_MODEL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMTT_WINDUP",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HMTT_WINDUP\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "2_var_WAVE_HMTT_WINDUP",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMTT_ZONE_DURATION",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HMTT_ZONE_DURATION\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "2_var_WAVE_HMTT_ZONE_DURATION",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMTT_ZONE_TICK",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HMTT_ZONE_TICK\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "2_var_WAVE_HMTT_ZONE_TICK",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMTT_CAST_RANGE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HMTT_CAST_RANGE\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "2_var_WAVE_HMTT_CAST_RANGE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMTT_RADIUS",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HMTT_RADIUS\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "2_var_WAVE_HMTT_RADIUS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMTT_DAMAGE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HMTT_DAMAGE\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "2_var_WAVE_HMTT_DAMAGE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMTT_INITIAL_DELAY_MIN",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HMTT_INITIAL_DELAY_MIN\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "2_var_WAVE_HMTT_INITIAL_DELAY_MIN",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMTT_INITIAL_DELAY_MAX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HMTT_INITIAL_DELAY_MAX\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "2_var_WAVE_HMTT_INITIAL_DELAY_MAX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMTT_COOLDOWN_MIN",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HMTT_COOLDOWN_MIN\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "2_var_WAVE_HMTT_COOLDOWN_MIN",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMTT_COOLDOWN_MAX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HMTT_COOLDOWN_MAX\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "2_var_WAVE_HMTT_COOLDOWN_MAX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMTT_BOSS_RADIUS",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HMTT_BOSS_RADIUS\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "2_var_WAVE_HMTT_BOSS_RADIUS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMTT_BOSS_DAMAGE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HMTT_BOSS_DAMAGE\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "2_var_WAVE_HMTT_BOSS_DAMAGE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMTT_BOSS_INITIAL_DELAY_MIN",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HMTT_BOSS_INITIAL_DELAY_MIN\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "2_var_WAVE_HMTT_BOSS_INITIAL_DELAY_MIN",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMTT_BOSS_INITIAL_DELAY_MAX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HMTT_BOSS_INITIAL_DELAY_MAX\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "2_var_WAVE_HMTT_BOSS_INITIAL_DELAY_MAX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMTT_BOSS_COOLDOWN_MIN",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HMTT_BOSS_COOLDOWN_MIN\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "2_var_WAVE_HMTT_BOSS_COOLDOWN_MIN",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMTT_BOSS_COOLDOWN_MAX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HMTT_BOSS_COOLDOWN_MAX\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "2_var_WAVE_HMTT_BOSS_COOLDOWN_MAX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMTT_TICK",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HMTT_TICK\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "2_var_WAVE_HMTT_TICK",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMTT_DUMMY_ID",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_HMTT_DUMMY_ID\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "2_var_WAVE_HMTT_DUMMY_ID",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMTT_LOCUST_ID",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_HMTT_LOCUST_ID\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "2_var_WAVE_HMTT_LOCUST_ID",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMTT_INVUL_ID",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_HMTT_INVUL_ID\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "2_var_WAVE_HMTT_INVUL_ID",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveSiegeZoneNextCastMs",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable WaveSiegeZoneNextCastMs\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "2_var_WaveSiegeZoneNextCastMs",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveSiegeZoneActiveCastByUnit",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable WaveSiegeZoneActiveCastByUnit\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "2_var_WaveSiegeZoneActiveCastByUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveSiegeZoneTimer",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ntimer WaveSiegeZoneTimer\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "2_var_WaveSiegeZoneTimer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveSiegeZoneTimerRunning",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean WaveSiegeZoneTimerRunning\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "2_var_WaveSiegeZoneTimerRunning",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveSiegeZoneCastHead",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger WaveSiegeZoneCastHead\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "2_var_WaveSiegeZoneCastHead",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveSiegeZoneCastCount",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger WaveSiegeZoneCastCount\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "2_var_WaveSiegeZoneCastCount",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveSiegeZoneHead",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger WaveSiegeZoneHead\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "2_var_WaveSiegeZoneHead",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveSiegeZoneCount",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger WaveSiegeZoneCount\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "2_var_WaveSiegeZoneCount",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveSiegeZoneCastNext",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array WaveSiegeZoneCastNext\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "2_var_WaveSiegeZoneCastNext",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveSiegeZoneCastPrev",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array WaveSiegeZoneCastPrev\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "2_var_WaveSiegeZoneCastPrev",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveSiegeZoneCastSource",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nunit array WaveSiegeZoneCastSource\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "2_var_WaveSiegeZoneCastSource",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveSiegeZoneCastTargetX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array WaveSiegeZoneCastTargetX\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "2_var_WaveSiegeZoneCastTargetX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveSiegeZoneCastTargetY",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array WaveSiegeZoneCastTargetY\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "2_var_WaveSiegeZoneCastTargetY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveSiegeZoneCastRemaining",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array WaveSiegeZoneCastRemaining\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "2_var_WaveSiegeZoneCastRemaining",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveSiegeZoneCastRadius",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array WaveSiegeZoneCastRadius\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "2_var_WaveSiegeZoneCastRadius",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveSiegeZoneCastDamage",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array WaveSiegeZoneCastDamage\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "2_var_WaveSiegeZoneCastDamage",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveSiegeZoneCastPaused",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean array WaveSiegeZoneCastPaused\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "2_var_WaveSiegeZoneCastPaused",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveSiegeZoneNext",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array WaveSiegeZoneNext\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "2_var_WaveSiegeZoneNext",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveSiegeZonePrev",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array WaveSiegeZonePrev\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "2_var_WaveSiegeZonePrev",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveSiegeZoneSource",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nunit array WaveSiegeZoneSource\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "2_var_WaveSiegeZoneSource",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveSiegeZoneOwner",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nplayer array WaveSiegeZoneOwner\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "2_var_WaveSiegeZoneOwner",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveSiegeZoneX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array WaveSiegeZoneX\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "2_var_WaveSiegeZoneX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveSiegeZoneY",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array WaveSiegeZoneY\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "2_var_WaveSiegeZoneY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveSiegeZoneRadius",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array WaveSiegeZoneRadius\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "2_var_WaveSiegeZoneRadius",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveSiegeZoneDamage",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array WaveSiegeZoneDamage\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "2_var_WaveSiegeZoneDamage",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveSiegeZoneRemaining",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array WaveSiegeZoneRemaining\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "2_var_WaveSiegeZoneRemaining",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveSiegeZoneAccumulator",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array WaveSiegeZoneAccumulator\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "2_var_WaveSiegeZoneAccumulator",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveSiegeZoneDummy",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nunit array WaveSiegeZoneDummy\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "2_var_WaveSiegeZoneDummy",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveSiegeZoneFx",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\neffect array WaveSiegeZoneFx\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "2_var_WaveSiegeZoneFx",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveSiegeZoneAreaFx",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\neffect array WaveSiegeZoneAreaFx\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "2_var_WaveSiegeZoneAreaFx",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveSiegeZoneScaleForRadius",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveSiegeZoneScaleForRadius takes real radius returns real\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "1_func_WaveSiegeZoneScaleForRadius",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveSiegeZoneSecToMs",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveSiegeZoneSecToMs takes real sec returns integer\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "1_func_WaveSiegeZoneSecToMs",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveSiegeZoneRandomMsRange",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveSiegeZoneRandomMsRange takes real minSec, real maxSec returns integer\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "1_func_WaveSiegeZoneRandomMsRange",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveSiegeZoneUnitAlive",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveSiegeZoneUnitAlive takes unit u returns boolean\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "1_func_WaveSiegeZoneUnitAlive",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveSiegeZoneAddCast",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveSiegeZoneAddCast takes integer castId returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "1_func_WaveSiegeZoneAddCast",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveSiegeZoneRemoveCast",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveSiegeZoneRemoveCast takes integer castId returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "1_func_WaveSiegeZoneRemoveCast",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveSiegeZoneDestroyCast",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveSiegeZoneDestroyCast takes integer castId returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "1_func_WaveSiegeZoneDestroyCast",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveSiegeZoneAdd",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveSiegeZoneAdd takes integer zoneId returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "1_func_WaveSiegeZoneAdd",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveSiegeZoneRemove",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveSiegeZoneRemove takes integer zoneId returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "1_func_WaveSiegeZoneRemove",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveSiegeZoneDestroy",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveSiegeZoneDestroy takes integer zoneId returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "1_func_WaveSiegeZoneDestroy",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveSiegeZoneCreate",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveSiegeZoneCreate takes unit source, real x, real y, real radius, real damage returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "1_func_WaveSiegeZoneCreate",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveSiegeZoneApplyDamage",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveSiegeZoneApplyDamage takes integer zoneId returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "1_func_WaveSiegeZoneApplyDamage",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveSiegeZoneOnTick",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveSiegeZoneOnTick takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "1_func_WaveSiegeZoneOnTick",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveSiegeZoneEnsureTimer",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveSiegeZoneEnsureTimer takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "1_func_WaveSiegeZoneEnsureTimer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveSiegeZoneStartCast",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveSiegeZoneStartCast takes unit source, real tx, real ty, real radius, real damage returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "1_func_WaveSiegeZoneStartCast",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveSiegeZoneCleanupWaveDeath",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveSiegeZoneCleanupWaveDeath takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "1_func_WaveSiegeZoneCleanupWaveDeath",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveSiegeZoneSkillsTryExecute",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveSiegeZoneSkillsTryExecute takes unit source, unit target, integer nowMs returns boolean\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "1_func_WaveSiegeZoneSkillsTryExecute",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSiegeZoneSkills.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1776556540671
+}

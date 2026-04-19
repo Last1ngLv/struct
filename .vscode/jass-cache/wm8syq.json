@@ -1,0 +1,528 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveMortarSkills.j",
+  "items": [
+    {
+      "label": "WAVE_HMTM_UNIT_ID",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_HMTM_UNIT_ID\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j`",
+      "sortText": "2_var_WAVE_HMTM_UNIT_ID",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveMortarSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMTM_BOSS_UNIT_ID",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_HMTM_BOSS_UNIT_ID\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j`",
+      "sortText": "2_var_WAVE_HMTM_BOSS_UNIT_ID",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveMortarSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMTM_PROJECTILE_MODEL",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string WAVE_HMTM_PROJECTILE_MODEL\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j`",
+      "sortText": "2_var_WAVE_HMTM_PROJECTILE_MODEL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveMortarSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMTM_IMPACT_FX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string WAVE_HMTM_IMPACT_FX\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j`",
+      "sortText": "2_var_WAVE_HMTM_IMPACT_FX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveMortarSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMTM_TARGET_MARKER_MODEL",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string WAVE_HMTM_TARGET_MARKER_MODEL\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j`",
+      "sortText": "2_var_WAVE_HMTM_TARGET_MARKER_MODEL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveMortarSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMTM_PROJECTILE_SPEED",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HMTM_PROJECTILE_SPEED\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j`",
+      "sortText": "2_var_WAVE_HMTM_PROJECTILE_SPEED",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveMortarSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMTM_PROJECTILE_START_Z",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HMTM_PROJECTILE_START_Z\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j`",
+      "sortText": "2_var_WAVE_HMTM_PROJECTILE_START_Z",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveMortarSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMTM_PROJECTILE_ARC",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HMTM_PROJECTILE_ARC\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j`",
+      "sortText": "2_var_WAVE_HMTM_PROJECTILE_ARC",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveMortarSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMTM_CAST_RANGE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HMTM_CAST_RANGE\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j`",
+      "sortText": "2_var_WAVE_HMTM_CAST_RANGE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveMortarSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMTM_IMPACT_DAMAGE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HMTM_IMPACT_DAMAGE\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j`",
+      "sortText": "2_var_WAVE_HMTM_IMPACT_DAMAGE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveMortarSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMTM_IMPACT_AOE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HMTM_IMPACT_AOE\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j`",
+      "sortText": "2_var_WAVE_HMTM_IMPACT_AOE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveMortarSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMTM_INITIAL_DELAY_MIN",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HMTM_INITIAL_DELAY_MIN\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j`",
+      "sortText": "2_var_WAVE_HMTM_INITIAL_DELAY_MIN",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveMortarSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMTM_INITIAL_DELAY_MAX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HMTM_INITIAL_DELAY_MAX\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j`",
+      "sortText": "2_var_WAVE_HMTM_INITIAL_DELAY_MAX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveMortarSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMTM_COOLDOWN",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HMTM_COOLDOWN\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j`",
+      "sortText": "2_var_WAVE_HMTM_COOLDOWN",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveMortarSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMTM_BOSS_IMPACT_DAMAGE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HMTM_BOSS_IMPACT_DAMAGE\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j`",
+      "sortText": "2_var_WAVE_HMTM_BOSS_IMPACT_DAMAGE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveMortarSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMTM_BOSS_IMPACT_AOE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HMTM_BOSS_IMPACT_AOE\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j`",
+      "sortText": "2_var_WAVE_HMTM_BOSS_IMPACT_AOE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveMortarSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMTM_BOSS_VOLLEY_COUNT",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_HMTM_BOSS_VOLLEY_COUNT\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j`",
+      "sortText": "2_var_WAVE_HMTM_BOSS_VOLLEY_COUNT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveMortarSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMTM_BOSS_VOLLEY_INTERVAL",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HMTM_BOSS_VOLLEY_INTERVAL\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j`",
+      "sortText": "2_var_WAVE_HMTM_BOSS_VOLLEY_INTERVAL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveMortarSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMTM_BOSS_INITIAL_DELAY_MIN",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HMTM_BOSS_INITIAL_DELAY_MIN\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j`",
+      "sortText": "2_var_WAVE_HMTM_BOSS_INITIAL_DELAY_MIN",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveMortarSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMTM_BOSS_INITIAL_DELAY_MAX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HMTM_BOSS_INITIAL_DELAY_MAX\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j`",
+      "sortText": "2_var_WAVE_HMTM_BOSS_INITIAL_DELAY_MAX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveMortarSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMTM_BOSS_COOLDOWN_MIN",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HMTM_BOSS_COOLDOWN_MIN\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j`",
+      "sortText": "2_var_WAVE_HMTM_BOSS_COOLDOWN_MIN",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveMortarSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMTM_BOSS_COOLDOWN_MAX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HMTM_BOSS_COOLDOWN_MAX\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j`",
+      "sortText": "2_var_WAVE_HMTM_BOSS_COOLDOWN_MAX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveMortarSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HMTM_BARRAGE_TICK",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HMTM_BARRAGE_TICK\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j`",
+      "sortText": "2_var_WAVE_HMTM_BARRAGE_TICK",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveMortarSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveMortarNextCastMs",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable WaveMortarNextCastMs\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j`",
+      "sortText": "2_var_WaveMortarNextCastMs",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveMortarSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveMortarActiveBarrageByUnit",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable WaveMortarActiveBarrageByUnit\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j`",
+      "sortText": "2_var_WaveMortarActiveBarrageByUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveMortarSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveMortarBarrageTimer",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ntimer WaveMortarBarrageTimer\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j`",
+      "sortText": "2_var_WaveMortarBarrageTimer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveMortarSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveMortarBarrageTimerRunning",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean WaveMortarBarrageTimerRunning\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j`",
+      "sortText": "2_var_WaveMortarBarrageTimerRunning",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveMortarSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveMortarBarrageHead",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger WaveMortarBarrageHead\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j`",
+      "sortText": "2_var_WaveMortarBarrageHead",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveMortarSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveMortarBarrageCount",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger WaveMortarBarrageCount\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j`",
+      "sortText": "2_var_WaveMortarBarrageCount",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveMortarSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveMortarMissileDamage",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array WaveMortarMissileDamage\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j`",
+      "sortText": "2_var_WaveMortarMissileDamage",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveMortarSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveMortarMissileAoe",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array WaveMortarMissileAoe\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j`",
+      "sortText": "2_var_WaveMortarMissileAoe",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveMortarSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveMortarMissileImpactX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array WaveMortarMissileImpactX\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j`",
+      "sortText": "2_var_WaveMortarMissileImpactX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveMortarSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveMortarMissileImpactY",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array WaveMortarMissileImpactY\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j`",
+      "sortText": "2_var_WaveMortarMissileImpactY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveMortarSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveMortarMissileMarker",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array WaveMortarMissileMarker\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j`",
+      "sortText": "2_var_WaveMortarMissileMarker",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveMortarSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveMortarBarrageNext",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array WaveMortarBarrageNext\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j`",
+      "sortText": "2_var_WaveMortarBarrageNext",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveMortarSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveMortarBarragePrev",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array WaveMortarBarragePrev\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j`",
+      "sortText": "2_var_WaveMortarBarragePrev",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveMortarSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveMortarBarrageShotsRemaining",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array WaveMortarBarrageShotsRemaining\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j`",
+      "sortText": "2_var_WaveMortarBarrageShotsRemaining",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveMortarSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveMortarBarrageAccumulator",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array WaveMortarBarrageAccumulator\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j`",
+      "sortText": "2_var_WaveMortarBarrageAccumulator",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveMortarSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveMortarBarrageSource",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nunit array WaveMortarBarrageSource\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j`",
+      "sortText": "2_var_WaveMortarBarrageSource",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveMortarSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveMortarSecToMs",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveMortarSecToMs takes real sec returns integer\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j`",
+      "sortText": "1_func_WaveMortarSecToMs",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveMortarSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveMortarRandomMsRange",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveMortarRandomMsRange takes real minSec, real maxSec returns integer\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j`",
+      "sortText": "1_func_WaveMortarRandomMsRange",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveMortarSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveMortarUnitAlive",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveMortarUnitAlive takes unit u returns boolean\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j`",
+      "sortText": "1_func_WaveMortarUnitAlive",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveMortarSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveMortarTargetInCastRange",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveMortarTargetInCastRange takes unit source, unit target returns boolean\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j`",
+      "sortText": "1_func_WaveMortarTargetInCastRange",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveMortarSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveMortarCanDamageTarget",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveMortarCanDamageTarget takes Missile missile, unit hit returns boolean\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j`",
+      "sortText": "1_func_WaveMortarCanDamageTarget",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveMortarSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveMortarTravelDuration",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveMortarTravelDuration takes real sx, real sy, real tx, real ty returns real\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j`",
+      "sortText": "1_func_WaveMortarTravelDuration",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveMortarSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveMortarCreateImpactFx",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveMortarCreateImpactFx takes real x, real y returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j`",
+      "sortText": "1_func_WaveMortarCreateImpactFx",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveMortarSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveMortarMissile",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct WaveMortarMissile extends array\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j`",
+      "sortText": "1_struct_WaveMortarMissile",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveMortarSkills.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "WaveMortarLaunchProjectile",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveMortarLaunchProjectile takes unit source, real tx, real ty, real damage, real aoe returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j`",
+      "sortText": "1_func_WaveMortarLaunchProjectile",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveMortarSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveMortarBarrageAdd",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveMortarBarrageAdd takes integer barrageId returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j`",
+      "sortText": "1_func_WaveMortarBarrageAdd",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveMortarSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveMortarBarrageRemove",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveMortarBarrageRemove takes integer barrageId returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j`",
+      "sortText": "1_func_WaveMortarBarrageRemove",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveMortarSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveMortarBarrageDestroy",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveMortarBarrageDestroy takes integer barrageId returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j`",
+      "sortText": "1_func_WaveMortarBarrageDestroy",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveMortarSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveMortarFireBossRound",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveMortarFireBossRound takes integer barrageId returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j`",
+      "sortText": "1_func_WaveMortarFireBossRound",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveMortarSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveMortarOnBarrageTick",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveMortarOnBarrageTick takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j`",
+      "sortText": "1_func_WaveMortarOnBarrageTick",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveMortarSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveMortarEnsureBarrageTimer",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveMortarEnsureBarrageTimer takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j`",
+      "sortText": "1_func_WaveMortarEnsureBarrageTimer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveMortarSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveMortarStartBossBarrage",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveMortarStartBossBarrage takes unit source returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j`",
+      "sortText": "1_func_WaveMortarStartBossBarrage",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveMortarSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveMortarCleanupWaveDeath",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveMortarCleanupWaveDeath takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j`",
+      "sortText": "1_func_WaveMortarCleanupWaveDeath",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveMortarSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveMortarSkillsTryExecute",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveMortarSkillsTryExecute takes unit source, unit target, integer nowMs returns boolean\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j`",
+      "sortText": "1_func_WaveMortarSkillsTryExecute",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveMortarSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveMortarSkills.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1776550709667
+}

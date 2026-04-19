@@ -1,0 +1,16 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\IsDestructableTree.j",
+  "items": [
+    {
+      "symbolName": "onInit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\IsDestructableTree.j",
+      "content": "\n```jass\nstatic method onInit takes nothing returns nothing\n```\n\n\n**所属:** `Inits`\n**文件:** `libraries/IsDestructableTree.j`"
+    },
+    {
+      "symbolName": "Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\IsDestructableTree.j",
+      "content": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**文件:** `libraries/IsDestructableTree.j`"
+    }
+  ],
+  "timestamp": 1775665632190
+}

@@ -1,0 +1,31 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainPathability.j",
+  "items": [
+    {
+      "symbolName": "IsTerrainWalkable",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainPathability.j",
+      "content": "\n```jass\nfunction IsTerrainWalkable takes real x, real y returns boolean\n```\n\n\n**文件:** `libraries/TerrainPathability.j`"
+    },
+    {
+      "symbolName": "IsTerrainWalkable",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainPathability.j",
+      "content": "\n```jass\nlibrary IsTerrainWalkable requires TerrainPathability\n```\n\n\n**文件:** `libraries/TerrainPathability.j`"
+    },
+    {
+      "symbolName": "IsTerrainPlatform",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainPathability.j",
+      "content": "\n```jass\nfunction IsTerrainPlatform takes real x, real y returns boolean\n```\n\n\n**文件:** `libraries/TerrainPathability.j`"
+    },
+    {
+      "symbolName": "IsTerrainShallowWater",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainPathability.j",
+      "content": "\n```jass\nfunction IsTerrainShallowWater takes real x, real y returns boolean\n```\n\n\n**文件:** `libraries/TerrainPathability.j`"
+    },
+    {
+      "symbolName": "Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\TerrainPathability.j",
+      "content": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**文件:** `libraries/TerrainPathability.j`"
+    }
+  ],
+  "timestamp": 1775665632190
+}

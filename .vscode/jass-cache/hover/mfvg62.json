@@ -1,0 +1,21 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\TerrainReplaceConfi.j",
+  "items": [
+    {
+      "symbolName": "ApplyDefaultTerrainReplaceRect",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\TerrainReplaceConfi.j",
+      "content": "\n```jass\nfunction ApplyDefaultTerrainReplaceRect takes rect r returns integer\n```\n\n\n**文件:** `InitMap/TerrainReplaceConfi.j`"
+    },
+    {
+      "symbolName": "ApplyDefaultTerrainReplaceRectAsync",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\TerrainReplaceConfi.j",
+      "content": "\n```jass\nfunction ApplyDefaultTerrainReplaceRectAsync takes rect r returns integer\n```\n\n\n**文件:** `InitMap/TerrainReplaceConfi.j`"
+    },
+    {
+      "symbolName": "ApplyDefaultTerrainReplaceFromCenterAsync",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\TerrainReplaceConfi.j",
+      "content": "\n```jass\nfunction ApplyDefaultTerrainReplaceFromCenterAsync takes real centerX, real centerY, integer leftTiles, integer rightTiles, integer upTiles, integer downTiles returns integer\n```\n\n\n**文件:** `InitMap/TerrainReplaceConfi.j`"
+    }
+  ],
+  "timestamp": 1774853410308
+}

@@ -1,0 +1,15 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\StageExample.j",
+  "items": [
+    {
+      "label": "Trig_w1_Actions",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Trig_w1_Actions takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/StageExample.j`",
+      "sortText": "1_func_Trig_w1_Actions",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\StageExample.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1776566000484
+}

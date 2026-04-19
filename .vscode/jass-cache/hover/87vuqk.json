@@ -1,0 +1,11 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\IsUnitChanneling.j",
+  "items": [
+    {
+      "symbolName": "onInit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\IsUnitChanneling.j",
+      "content": "\n```jass\nmethod onInit takes nothing returns nothing\n```\n\n\n**所属:** `OnChannel`\n**文件:** `libraries/IsUnitChanneling.j`"
+    }
+  ],
+  "timestamp": 1775421274334
+}

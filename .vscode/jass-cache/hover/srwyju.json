@@ -1,0 +1,11 @@
+{
+  "filePath": "c:\\Users\\Leon\\.antigravity\\extensions\\jass.jass-1.9.4\\static\\AIScripts.ai",
+  "items": [
+    {
+      "symbolName": "slot",
+      "filePath": "c:\\Users\\Leon\\.antigravity\\extensions\\jass.jass-1.9.4\\static\\AIScripts.ai",
+      "content": "\n```jass\nconstant integer slot\n```\n\n\n---\n\n玩家标识，标记AI自己的玩家编号\n\n部分官方战役AI脚本的变量\n\n**文件:** `c:\\Users\\Leon\\.antigravity\\extensions\\jass.jass-1.9.4\\static\\AIScripts.ai`"
+    }
+  ],
+  "timestamp": 1776464731531
+}

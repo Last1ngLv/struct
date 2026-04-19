@@ -1,0 +1,46 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Loadout Missile(test v2).j",
+  "items": [
+    {
+      "symbolName": "DAMAGE_TYPE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Loadout Missile(test v2).j",
+      "content": "\n```jass\nconstant damagetype DAMAGE_TYPE\n```\n\n\n**文件:** `Pruebas/MissileExamples/Loadout Missile(test v2).j`"
+    },
+    {
+      "symbolName": "Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Loadout Missile(test v2).j",
+      "content": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**文件:** `Pruebas/MissileExamples/Loadout Missile(test v2).j`"
+    },
+    {
+      "symbolName": "FIRE_TEXT_B",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Loadout Missile(test v2).j",
+      "content": "\n```jass\nconstant integer FIRE_TEXT_B\n```\n\n\n**文件:** `Pruebas/MissileExamples/Loadout Missile(test v2).j`"
+    },
+    {
+      "symbolName": "RAPID_FIRE_ANIMATION_TIME_SCALE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Loadout Missile(test v2).j",
+      "content": "\n```jass\nconstant real RAPID_FIRE_ANIMATION_TIME_SCALE\n```\n\n\n**文件:** `Pruebas/MissileExamples/Loadout Missile(test v2).j`"
+    },
+    {
+      "symbolName": "MISSILE_COLLISION",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Loadout Missile(test v2).j",
+      "content": "\n```jass\nconstant real MISSILE_COLLISION\n```\n\n\n**文件:** `Pruebas/MissileExamples/Loadout Missile(test v2).j`"
+    },
+    {
+      "symbolName": "MISSILE_SCALE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Loadout Missile(test v2).j",
+      "content": "\n```jass\nconstant real MISSILE_SCALE\n```\n\n\n**文件:** `Pruebas/MissileExamples/Loadout Missile(test v2).j`"
+    },
+    {
+      "symbolName": "FIRE_TEXT_G",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Loadout Missile(test v2).j",
+      "content": "\n```jass\nconstant integer FIRE_TEXT_G\n```\n\n\n**文件:** `Pruebas/MissileExamples/Loadout Missile(test v2).j`"
+    },
+    {
+      "symbolName": "FIRE_TEXT_R",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Loadout Missile(test v2).j",
+      "content": "\n```jass\nconstant integer FIRE_TEXT_R\n```\n\n\n**文件:** `Pruebas/MissileExamples/Loadout Missile(test v2).j`"
+    }
+  ],
+  "timestamp": 1776204759943
+}

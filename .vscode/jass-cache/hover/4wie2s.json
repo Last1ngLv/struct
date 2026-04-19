@@ -1,0 +1,136 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\MoveSys\\MoveCast.j",
+  "items": [
+    {
+      "symbolName": "RegisterMovementSpellRecast",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MoveSys\\MoveCast.j",
+      "content": "\n```jass\nfunction RegisterMovementSpellRecast takes integer abilityId, string orderId returns nothing\n```\n\n\n---\n\n===========================================================================\n\nRegistrar hechizo con recast habilitado (POINT ORDER)\n\n===========================================================================\n\n**文件:** `MoveSys/MoveCast.j`"
+    },
+    {
+      "symbolName": "dummy",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MoveSys\\MoveCast.j",
+      "content": "\n```jass\nunit dummy\n```\n\n\n**所属:** `MovementData`\n**文件:** `MoveSys/MoveCast.j`"
+    },
+    {
+      "symbolName": "getDistanceSquared",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MoveSys\\MoveCast.j",
+      "content": "\n```jass\nmethod getDistanceSquared takes real x1, real y1, real x2, real y2 returns real\n```\n\n\n---\n\n=======================================================================\n\n**所属:** `MovementData`\n**文件:** `MoveSys/MoveCast.j`"
+    },
+    {
+      "symbolName": "source",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MoveSys\\MoveCast.j",
+      "content": "\n```jass\nunit source\n```\n\n\n**所属:** `MovementData`\n**文件:** `MoveSys/MoveCast.j`"
+    },
+    {
+      "symbolName": "has",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MoveSys\\MoveCast.j",
+      "content": "\n```jass\nstatic method has takes unit u returns boolean\n```\n\n\n---\n\n=======================================================================\n\n**所属:** `MovementData`\n**文件:** `MoveSys/MoveCast.j`"
+    },
+    {
+      "symbolName": "create",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MoveSys\\MoveCast.j",
+      "content": "\n```jass\nstatic method create takes unit u returns thistype\n```\n\n\n---\n\n=======================================================================\n\nConstructor\n\n=======================================================================\n\n**所属:** `MovementData`\n**文件:** `MoveSys/MoveCast.j`"
+    },
+    {
+      "symbolName": "destroy",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MoveSys\\MoveCast.j",
+      "content": "\n```jass\nmethod destroy takes nothing returns nothing\n```\n\n\n---\n\n=======================================================================\n\nDestruir\n\n=======================================================================\n\n**所属:** `MovementData`\n**文件:** `MoveSys/MoveCast.j`"
+    },
+    {
+      "symbolName": "onInit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MoveSys\\MoveCast.j",
+      "content": "\n```jass\nmethod onInit takes nothing returns nothing\n```\n\n\n---\n\n=======================================================================\n\nInicialización estática\n\n=======================================================================\n\n**所属:** `MovementData`\n**文件:** `MoveSys/MoveCast.j`"
+    },
+    {
+      "symbolName": "Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MoveSys\\MoveCast.j",
+      "content": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n---\n\n===========================================================================\n\nInicialización\n\n===========================================================================\n\n**文件:** `MoveSys/MoveCast.j`"
+    },
+    {
+      "symbolName": "ConfigureMovementSpellCastSession",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MoveSys\\MoveCast.j",
+      "content": "\n```jass\nfunction ConfigureMovementSpellCastSession takes integer abilityId, real castDuration, boolean allowSmartRecast, integer maxSmartRecasts returns nothing\n```\n\n\n**文件:** `MoveSys/MoveCast.j`"
+    },
+    {
+      "symbolName": "abilityOrderSpells",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MoveSys\\MoveCast.j",
+      "content": "\n```jass\nTable abilityOrderSpells\n```\n\n\n---\n\nTabla inversa: AbilityId -> OrderId\n\n**文件:** `MoveSys/MoveCast.j`"
+    },
+    {
+      "symbolName": "RegisterMovementSpellTargetRecast",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MoveSys\\MoveCast.j",
+      "content": "\n```jass\nfunction RegisterMovementSpellTargetRecast takes integer abilityId, string orderId returns nothing\n```\n\n\n---\n\n===========================================================================\n\nRegistrar hechizo TARGET con recast habilitado (TARGET ORDER)\n\n===========================================================================\n\n**文件:** `MoveSys/MoveCast.j`"
+    },
+    {
+      "symbolName": "MovementData",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MoveSys\\MoveCast.j",
+      "content": "\n```jass\nstruct MovementData\n```\n\n\n---\n\n===========================================================================\n\nStruct principal\n\n===========================================================================\n\n**文件:** `MoveSys/MoveCast.j`"
+    },
+    {
+      "symbolName": "smartRecastsMax",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MoveSys\\MoveCast.j",
+      "content": "\n```jass\ninteger smartRecastsMax\n```\n\n\n**所属:** `MovementData`\n**文件:** `MoveSys/MoveCast.j`"
+    },
+    {
+      "symbolName": "smartRecastsRemaining",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MoveSys\\MoveCast.j",
+      "content": "\n```jass\ninteger smartRecastsRemaining\n```\n\n\n**所属:** `MovementData`\n**文件:** `MoveSys/MoveCast.j`"
+    },
+    {
+      "symbolName": "stopDummyMovement",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MoveSys\\MoveCast.j",
+      "content": "\n```jass\nmethod stopDummyMovement takes nothing returns nothing\n```\n\n\n---\n\n=======================================================================\n\nDetener movimiento con dummy\n\n=======================================================================\n\n**所属:** `MovementData`\n**文件:** `MoveSys/MoveCast.j`"
+    },
+    {
+      "symbolName": "RegisterMovementSpell",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MoveSys\\MoveCast.j",
+      "content": "\n```jass\nfunction RegisterMovementSpell takes integer abilityId, string orderId returns nothing\n```\n\n\n---\n\n===========================================================================\n\nAPI - Funciones públicas para registrar hechizos\n\n===========================================================================\n\n===========================================================================\n\nRegistrar hechizo con OrderId string\n\n===========================================================================\n\n**文件:** `MoveSys/MoveCast.j`"
+    },
+    {
+      "symbolName": "OnSpellEffect",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MoveSys\\MoveCast.j",
+      "content": "\n```jass\nfunction OnSpellEffect takes nothing returns boolean\n```\n\n\n---\n\n===========================================================================\n\nEvento: Efecto de hechizo (para verificar channeling)\n\n===========================================================================\n\n**文件:** `MoveSys/MoveCast.j`"
+    },
+    {
+      "symbolName": "ORDER_ID_MOVE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MoveSys\\MoveCast.j",
+      "content": "\n```jass\ninteger ORDER_ID_MOVE\n```\n\n\n**文件:** `MoveSys/MoveCast.j`"
+    },
+    {
+      "symbolName": "followY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MoveSys\\MoveCast.j",
+      "content": "\n```jass\nreal followY\n```\n\n\n**所属:** `MovementData`\n**文件:** `MoveSys/MoveCast.j`"
+    },
+    {
+      "symbolName": "ORDER_ID_FLARE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MoveSys\\MoveCast.j",
+      "content": "\n```jass\ninteger ORDER_ID_FLARE\n```\n\n\n**文件:** `MoveSys/MoveCast.j`"
+    },
+    {
+      "symbolName": "aimY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MoveSys\\MoveCast.j",
+      "content": "\n```jass\nreal aimY\n```\n\n\n**所属:** `MovementData`\n**文件:** `MoveSys/MoveCast.j`"
+    },
+    {
+      "symbolName": "aimX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MoveSys\\MoveCast.j",
+      "content": "\n```jass\nreal aimX\n```\n\n\n**所属:** `MovementData`\n**文件:** `MoveSys/MoveCast.j`"
+    },
+    {
+      "symbolName": "smartRecastCountByAbility",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MoveSys\\MoveCast.j",
+      "content": "\n```jass\nTable smartRecastCountByAbility\n```\n\n\n**文件:** `MoveSys/MoveCast.j`"
+    },
+    {
+      "symbolName": "registeredOrderByAbility",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MoveSys\\MoveCast.j",
+      "content": "\n```jass\nTable registeredOrderByAbility\n```\n\n\n**文件:** `MoveSys/MoveCast.j`"
+    },
+    {
+      "symbolName": "PULSE_DELAY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MoveSys\\MoveCast.j",
+      "content": "\n```jass\nconstant real PULSE_DELAY\n```\n\n\n**文件:** `MoveSys/MoveCast.j`"
+    }
+  ],
+  "timestamp": 1775949657956
+}

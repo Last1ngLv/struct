@@ -1,0 +1,131 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Camera.j",
+  "items": [
+    {
+      "symbolName": "applyCameraForPlayer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Camera.j",
+      "content": "\n```jass\nmethod applyCameraForPlayer takes player p, boolean ignoreChange returns boolean\n```\n\n\n**所属:** `Camera`\n**文件:** `libraries/Camera.j`"
+    },
+    {
+      "symbolName": "setPosition",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Camera.j",
+      "content": "\n```jass\nmethod setPosition takes real x, real y, real z returns nothing\n```\n\n\n**所属:** `Camera`\n**文件:** `libraries/Camera.j`"
+    },
+    {
+      "symbolName": "CAMERA_DUMMY_PLAYER",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Camera.j",
+      "content": "\n```jass\nconstant player CAMERA_DUMMY_PLAYER\n```\n\n\n**文件:** `libraries/Camera.j`"
+    },
+    {
+      "symbolName": "target",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Camera.j",
+      "content": "\n```jass\nunit target\n```\n\n\n**所属:** `Camera`\n**文件:** `libraries/Camera.j`"
+    },
+    {
+      "symbolName": "SCREEN_WIDTH",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Camera.j",
+      "content": "\n```jass\nconstant real SCREEN_WIDTH\n```\n\n\n**文件:** `libraries/Camera.j`"
+    },
+    {
+      "symbolName": "CHECK_DELTAZ_Y",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Camera.j",
+      "content": "\n```jass\nconstant real CHECK_DELTAZ_Y\n```\n\n\n**文件:** `libraries/Camera.j`"
+    },
+    {
+      "symbolName": "CHECK_DELTAZ_X",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Camera.j",
+      "content": "\n```jass\nconstant real CHECK_DELTAZ_X\n```\n\n\n---\n\nconfiguration\n\nlocation on the map where the terrain is the default level\n\n**文件:** `libraries/Camera.j`"
+    },
+    {
+      "symbolName": "at",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Camera.j",
+      "content": "\n```jass\nVECTOR3 at\n```\n\n\n**所属:** `Camera`\n**文件:** `libraries/Camera.j`"
+    },
+    {
+      "symbolName": "CamInitModule",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Camera.j",
+      "content": "\n```jass\nmodule CamInitModule\n```\n\n\n**文件:** `libraries/Camera.j`"
+    },
+    {
+      "symbolName": "CamInitModule",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Camera.j",
+      "content": "\n```jass\nimplement CamInitModule\n```\n\n\n**所属:** `CamInit`\n**文件:** `libraries/Camera.j`"
+    },
+    {
+      "symbolName": "SCREEN_HEIGHT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Camera.j",
+      "content": "\n```jass\nconstant real SCREEN_HEIGHT\n```\n\n\n**文件:** `libraries/Camera.j`"
+    },
+    {
+      "symbolName": "DummyLoc",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Camera.j",
+      "content": "\n```jass\nlocation DummyLoc\n```\n\n\n**文件:** `libraries/Camera.j`"
+    },
+    {
+      "symbolName": "create",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Camera.j",
+      "content": "\n```jass\nstatic method create takes nothing returns thistype\n```\n\n\n**所属:** `Camera`\n**文件:** `libraries/Camera.j`"
+    },
+    {
+      "symbolName": "win2World",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Camera.j",
+      "content": "\n```jass\nmethod win2World takes real X, real Y, real Range returns VECTOR3\n```\n\n\n**所属:** `Camera`\n**文件:** `libraries/Camera.j`"
+    },
+    {
+      "symbolName": "pitch",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Camera.j",
+      "content": "\n```jass\nreal pitch\n```\n\n\n**所属:** `Camera`\n**文件:** `libraries/Camera.j`"
+    },
+    {
+      "symbolName": "destroy",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Camera.j",
+      "content": "\n```jass\nmethod destroy takes nothing returns nothing\n```\n\n\n**所属:** `Camera`\n**文件:** `libraries/Camera.j`"
+    },
+    {
+      "symbolName": "onInit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Camera.j",
+      "content": "\n```jass\nstatic method onInit takes nothing returns nothing\n```\n\n\n**所属:** `CamInitModule`\n**文件:** `libraries/Camera.j`"
+    },
+    {
+      "symbolName": "axisX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Camera.j",
+      "content": "\n```jass\nVECTOR3 axisX\n```\n\n\n**所属:** `Camera`\n**文件:** `libraries/Camera.j`"
+    },
+    {
+      "symbolName": "CAMERA_DUMMY_TYPE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Camera.j",
+      "content": "\n```jass\nconstant integer CAMERA_DUMMY_TYPE\n```\n\n\n**文件:** `libraries/Camera.j`"
+    },
+    {
+      "symbolName": "SCREEN_ASPECT_RATIO",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Camera.j",
+      "content": "\n```jass\nconstant real SCREEN_ASPECT_RATIO\n```\n\n\n**文件:** `libraries/Camera.j`"
+    },
+    {
+      "symbolName": "CAMS_OFFSET",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Camera.j",
+      "content": "\n```jass\nconstant real CAMS_OFFSET\n```\n\n\n**文件:** `libraries/Camera.j`"
+    },
+    {
+      "symbolName": "DeltaZ",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Camera.j",
+      "content": "\n```jass\nreal DeltaZ\n```\n\n\n**文件:** `libraries/Camera.j`"
+    },
+    {
+      "symbolName": "axisY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Camera.j",
+      "content": "\n```jass\nVECTOR3 axisY\n```\n\n\n**所属:** `Camera`\n**文件:** `libraries/Camera.j`"
+    },
+    {
+      "symbolName": "GetTerrainZ",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Camera.j",
+      "content": "\n```jass\nfunction GetTerrainZ takes real x, real y returns real\n```\n\n\n**文件:** `libraries/Camera.j`"
+    },
+    {
+      "symbolName": "customValue",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\Camera.j",
+      "content": "\n```jass\ninteger customValue\n```\n\n\n**所属:** `Camera`\n**文件:** `libraries/Camera.j`"
+    }
+  ],
+  "timestamp": 1775649200484
+}

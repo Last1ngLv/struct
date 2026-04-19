@@ -1,0 +1,16 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\RegisterPlayerUnitEvent.j",
+  "items": [
+    {
+      "symbolName": "RegisterPlayerUnitEvent",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\RegisterPlayerUnitEvent.j",
+      "content": "\n```jass\nlibrary RegisterPlayerUnitEvent\n```\n\n\n**文件:** `libraries/RegisterPlayerUnitEvent.j`"
+    },
+    {
+      "symbolName": "RegisterPlayerUnitEvent",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\RegisterPlayerUnitEvent.j",
+      "content": "\n```jass\nfunction RegisterPlayerUnitEvent takes playerunitevent p, code c returns nothing\n```\n\n\n**文件:** `libraries/RegisterPlayerUnitEvent.j`"
+    }
+  ],
+  "timestamp": 1775930525093
+}

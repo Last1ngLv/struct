@@ -1,0 +1,339 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WavePointGroups.j",
+  "items": [
+    {
+      "label": "WPG_MAX_GROUPS",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WPG_MAX_GROUPS\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WavePointGroups.j`",
+      "sortText": "2_var_WPG_MAX_GROUPS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WavePointGroups.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WPG_MAX_POINTS_PER_GROUP",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WPG_MAX_POINTS_PER_GROUP\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WavePointGroups.j`",
+      "sortText": "2_var_WPG_MAX_POINTS_PER_GROUP",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WavePointGroups.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WPG_POINT_EPSILON",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WPG_POINT_EPSILON\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WavePointGroups.j`",
+      "sortText": "2_var_WPG_POINT_EPSILON",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WavePointGroups.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WPG_SORT_Y_DESC_X_ASC",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WPG_SORT_Y_DESC_X_ASC\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WavePointGroups.j`",
+      "sortText": "2_var_WPG_SORT_Y_DESC_X_ASC",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WavePointGroups.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WPGGroupByHash",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable WPGGroupByHash\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WavePointGroups.j`",
+      "sortText": "2_var_WPGGroupByHash",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WavePointGroups.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WPGGroupCount",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger WPGGroupCount\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WavePointGroups.j`",
+      "sortText": "2_var_WPGGroupCount",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WavePointGroups.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WPGDebugEnabled",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean WPGDebugEnabled\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WavePointGroups.j`",
+      "sortText": "2_var_WPGDebugEnabled",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WavePointGroups.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WPGGroupName",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring array WPGGroupName\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WavePointGroups.j`",
+      "sortText": "2_var_WPGGroupName",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WavePointGroups.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WPGGroupRect",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nrect array WPGGroupRect\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WavePointGroups.j`",
+      "sortText": "2_var_WPGGroupRect",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WavePointGroups.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WPGGroupMarkerRawcode",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array WPGGroupMarkerRawcode\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WavePointGroups.j`",
+      "sortText": "2_var_WPGGroupMarkerRawcode",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WavePointGroups.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WPGGroupSortMode",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array WPGGroupSortMode\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WavePointGroups.j`",
+      "sortText": "2_var_WPGGroupSortMode",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WavePointGroups.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WPGGroupRegistered",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean array WPGGroupRegistered\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WavePointGroups.j`",
+      "sortText": "2_var_WPGGroupRegistered",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WavePointGroups.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WPGGroupBuilt",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean array WPGGroupBuilt\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WavePointGroups.j`",
+      "sortText": "2_var_WPGGroupBuilt",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WavePointGroups.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WPGGroupPointCount",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array WPGGroupPointCount\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WavePointGroups.j`",
+      "sortText": "2_var_WPGGroupPointCount",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WavePointGroups.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WPGGroupPointX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array WPGGroupPointX\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WavePointGroups.j`",
+      "sortText": "2_var_WPGGroupPointX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WavePointGroups.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WPGGroupPointY",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array WPGGroupPointY\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WavePointGroups.j`",
+      "sortText": "2_var_WPGGroupPointY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WavePointGroups.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WPGTempGroup",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ngroup WPGTempGroup\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WavePointGroups.j`",
+      "sortText": "2_var_WPGTempGroup",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WavePointGroups.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WPG_GroupKey",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WPG_GroupKey takes integer groupId, integer pointIndex returns integer\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WavePointGroups.j`",
+      "sortText": "1_func_WPG_GroupKey",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WavePointGroups.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WPG_SafeHash",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WPG_SafeHash takes string name returns integer\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WavePointGroups.j`",
+      "sortText": "1_func_WPG_SafeHash",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WavePointGroups.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WPG_AbsReal",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WPG_AbsReal takes real value returns real\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WavePointGroups.j`",
+      "sortText": "1_func_WPG_AbsReal",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WavePointGroups.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WPG_GetGroupId",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WPG_GetGroupId takes string groupName returns integer\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WavePointGroups.j`",
+      "sortText": "1_func_WPG_GetGroupId",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WavePointGroups.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WPG_IsSamePoint",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WPG_IsSamePoint takes integer groupId, integer pointIndex, real x, real y returns boolean\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WavePointGroups.j`",
+      "sortText": "1_func_WPG_IsSamePoint",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WavePointGroups.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WPG_BoolToInt",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WPG_BoolToInt takes boolean b returns integer\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WavePointGroups.j`",
+      "sortText": "1_func_WPG_BoolToInt",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WavePointGroups.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WPG_AddPointToGroup",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WPG_AddPointToGroup takes integer groupId, real x, real y returns boolean\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WavePointGroups.j`",
+      "sortText": "1_func_WPG_AddPointToGroup",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WavePointGroups.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WPG_SortGroup",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WPG_SortGroup takes integer groupId returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WavePointGroups.j`",
+      "sortText": "1_func_WPG_SortGroup",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WavePointGroups.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WPG_ClearGroupPoints",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WPG_ClearGroupPoints takes integer groupId returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WavePointGroups.j`",
+      "sortText": "1_func_WPG_ClearGroupPoints",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WavePointGroups.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WPG_BuildOneGroup",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WPG_BuildOneGroup takes integer groupId returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WavePointGroups.j`",
+      "sortText": "1_func_WPG_BuildOneGroup",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WavePointGroups.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WavePointGroupsSetDebug",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WavePointGroupsSetDebug takes boolean enabled returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WavePointGroups.j`",
+      "sortText": "1_func_WavePointGroupsSetDebug",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WavePointGroups.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WavePointGroupsClear",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WavePointGroupsClear takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WavePointGroups.j`",
+      "sortText": "1_func_WavePointGroupsClear",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WavePointGroups.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WavePointGroupRegister",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WavePointGroupRegister takes string groupName, rect area, integer markerRawcode returns integer\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WavePointGroups.j`",
+      "sortText": "1_func_WavePointGroupRegister",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WavePointGroups.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WavePointGroupCount",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WavePointGroupCount takes string groupName returns integer\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WavePointGroups.j`",
+      "sortText": "1_func_WavePointGroupCount",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WavePointGroups.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WavePointGroupGetPointX",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WavePointGroupGetPointX takes string groupName, integer pointIndex returns real\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WavePointGroups.j`",
+      "sortText": "1_func_WavePointGroupGetPointX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WavePointGroups.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WavePointGroupGetPointY",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WavePointGroupGetPointY takes string groupName, integer pointIndex returns real\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WavePointGroups.j`",
+      "sortText": "1_func_WavePointGroupGetPointY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WavePointGroups.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WavePointGroupsBuild",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WavePointGroupsBuild takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WavePointGroups.j`",
+      "sortText": "1_func_WavePointGroupsBuild",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WavePointGroups.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WavePointGroupApplyToWave",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WavePointGroupApplyToWave takes Wave w, string groupName returns integer\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WavePointGroups.j`",
+      "sortText": "1_func_WavePointGroupApplyToWave",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WavePointGroups.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WavePointGroupsDebugDump",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WavePointGroupsDebugDump takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WavePointGroups.j`",
+      "sortText": "1_func_WavePointGroupsDebugDump",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WavePointGroups.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WavePointGroups.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WavePointGroups.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1776550709643
+}

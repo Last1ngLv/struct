@@ -401,7 +401,6 @@ library HealthBarTextTags initializer Init requires Table, TimerUtils, PlayerUti
     endfunction
 
     function HealthBarsNotifyEnemyDamagedByPid takes integer ownerPid, unit target returns nothing
-        local player ownerPlayer
         local integer slotIndex
         local integer key
         if ownerPid < 0 or ownerPid >= bj_MAX_PLAYER_SLOTS then
@@ -411,19 +410,15 @@ library HealthBarTextTags initializer Init requires Table, TimerUtils, PlayerUti
             return
         endif
 
-        set ownerPlayer = Player(ownerPid)
-        if IsPlayerAlly(User.Local, ownerPlayer) then
-            set slotIndex = HealthBarEnemyFindSlot(target)
-            set key = HealthBarEnemyKey(GetHandleId(target))
-            set EnemyBarTarget[slotIndex] = target
-            set EnemyBarTargetHid[slotIndex] = GetHandleId(target)
-            set EnemyBarExpireAt[slotIndex] = HealthBarEnemyNow + HEALTH_BAR_ENEMY_TIMEOUT
-            if not EnemySlotByKey.has(key) or EnemySlotByKey[key] != slotIndex then
-                set EnemySlotByKey[key] = slotIndex
-            endif
-            call HealthBarEnemyRefreshSlot(slotIndex)
+        set slotIndex = HealthBarEnemyFindSlot(target)
+        set key = HealthBarEnemyKey(GetHandleId(target))
+        set EnemyBarTarget[slotIndex] = target
+        set EnemyBarTargetHid[slotIndex] = GetHandleId(target)
+        set EnemyBarExpireAt[slotIndex] = HealthBarEnemyNow + HEALTH_BAR_ENEMY_TIMEOUT
+        if not EnemySlotByKey.has(key) or EnemySlotByKey[key] != slotIndex then
+            set EnemySlotByKey[key] = slotIndex
         endif
-        set ownerPlayer = null
+        call HealthBarEnemyRefreshSlot(slotIndex)
     endfunction
 
     function HealthBarsNotifyEnemyDamaged takes unit source, unit target returns nothing

@@ -1,0 +1,312 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSkillVisuals.j",
+  "items": [
+    {
+      "label": "WAVE_SKILL_VISUAL_DUMMY_ID",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_SKILL_VISUAL_DUMMY_ID\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSkillVisuals.j`",
+      "sortText": "2_var_WAVE_SKILL_VISUAL_DUMMY_ID",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSkillVisuals.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_SKILL_VISUAL_LOCUST_ID",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_SKILL_VISUAL_LOCUST_ID\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSkillVisuals.j`",
+      "sortText": "2_var_WAVE_SKILL_VISUAL_LOCUST_ID",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSkillVisuals.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_SKILL_VISUAL_INVUL_ID",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_SKILL_VISUAL_INVUL_ID\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSkillVisuals.j`",
+      "sortText": "2_var_WAVE_SKILL_VISUAL_INVUL_ID",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSkillVisuals.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_SKILL_VISUAL_ATTACH_POINT",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string WAVE_SKILL_VISUAL_ATTACH_POINT\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSkillVisuals.j`",
+      "sortText": "2_var_WAVE_SKILL_VISUAL_ATTACH_POINT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSkillVisuals.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_SKILL_VISUAL_TICK",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_SKILL_VISUAL_TICK\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSkillVisuals.j`",
+      "sortText": "2_var_WAVE_SKILL_VISUAL_TICK",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSkillVisuals.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_SKILL_VISUAL_KIND_FOLLOWER",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_SKILL_VISUAL_KIND_FOLLOWER\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSkillVisuals.j`",
+      "sortText": "2_var_WAVE_SKILL_VISUAL_KIND_FOLLOWER",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSkillVisuals.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_SKILL_VISUAL_KIND_TIMED",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_SKILL_VISUAL_KIND_TIMED\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSkillVisuals.j`",
+      "sortText": "2_var_WAVE_SKILL_VISUAL_KIND_TIMED",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSkillVisuals.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveSkillVisualTimer",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ntimer WaveSkillVisualTimer\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSkillVisuals.j`",
+      "sortText": "2_var_WaveSkillVisualTimer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSkillVisuals.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveSkillVisualTimerRunning",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean WaveSkillVisualTimerRunning\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSkillVisuals.j`",
+      "sortText": "2_var_WaveSkillVisualTimerRunning",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSkillVisuals.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveSkillVisualHead",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger WaveSkillVisualHead\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSkillVisuals.j`",
+      "sortText": "2_var_WaveSkillVisualHead",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSkillVisuals.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveSkillVisualCount",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger WaveSkillVisualCount\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSkillVisuals.j`",
+      "sortText": "2_var_WaveSkillVisualCount",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSkillVisuals.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveSkillVisualNext",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array WaveSkillVisualNext\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSkillVisuals.j`",
+      "sortText": "2_var_WaveSkillVisualNext",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSkillVisuals.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveSkillVisualPrev",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array WaveSkillVisualPrev\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSkillVisuals.j`",
+      "sortText": "2_var_WaveSkillVisualPrev",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSkillVisuals.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveSkillVisualKind",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array WaveSkillVisualKind\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSkillVisuals.j`",
+      "sortText": "2_var_WaveSkillVisualKind",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSkillVisuals.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveSkillVisualSource",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nunit array WaveSkillVisualSource\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSkillVisuals.j`",
+      "sortText": "2_var_WaveSkillVisualSource",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSkillVisuals.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveSkillVisualDummy",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nunit array WaveSkillVisualDummy\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSkillVisuals.j`",
+      "sortText": "2_var_WaveSkillVisualDummy",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSkillVisuals.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveSkillVisualFx",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\neffect array WaveSkillVisualFx\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSkillVisuals.j`",
+      "sortText": "2_var_WaveSkillVisualFx",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSkillVisuals.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveSkillVisualRemaining",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array WaveSkillVisualRemaining\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSkillVisuals.j`",
+      "sortText": "2_var_WaveSkillVisualRemaining",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSkillVisuals.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveSkillVisualUnitAlive",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveSkillVisualUnitAlive takes unit u returns boolean\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSkillVisuals.j`",
+      "sortText": "1_func_WaveSkillVisualUnitAlive",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSkillVisuals.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveSkillVisualScaleForRadius",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveSkillVisualScaleForRadius takes real radius returns real\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSkillVisuals.j`",
+      "sortText": "1_func_WaveSkillVisualScaleForRadius",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSkillVisuals.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveSkillVisualShieldScaleForRadius",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveSkillVisualShieldScaleForRadius takes real radius returns real\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSkillVisuals.j`",
+      "sortText": "1_func_WaveSkillVisualShieldScaleForRadius",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSkillVisuals.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveSkillVisualAdd",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveSkillVisualAdd takes integer visualId returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSkillVisuals.j`",
+      "sortText": "1_func_WaveSkillVisualAdd",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSkillVisuals.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveSkillVisualRemove",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveSkillVisualRemove takes integer visualId returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSkillVisuals.j`",
+      "sortText": "1_func_WaveSkillVisualRemove",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSkillVisuals.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveSkillVisualCreateDummy",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveSkillVisualCreateDummy takes real x, real y, real facing, real scale returns unit\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSkillVisuals.j`",
+      "sortText": "1_func_WaveSkillVisualCreateDummy",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSkillVisuals.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveSkillVisualDestroy",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveSkillVisualDestroy takes integer visualId returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSkillVisuals.j`",
+      "sortText": "1_func_WaveSkillVisualDestroy",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSkillVisuals.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveSkillVisualSetPosition",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveSkillVisualSetPosition takes integer visualId, real x, real y, real facing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSkillVisuals.j`",
+      "sortText": "1_func_WaveSkillVisualSetPosition",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSkillVisuals.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveSkillVisualSetRemaining",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveSkillVisualSetRemaining takes integer visualId, real duration returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSkillVisuals.j`",
+      "sortText": "1_func_WaveSkillVisualSetRemaining",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSkillVisuals.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveSkillVisualTick",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveSkillVisualTick takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSkillVisuals.j`",
+      "sortText": "1_func_WaveSkillVisualTick",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSkillVisuals.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveSkillVisualEnsureTimer",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveSkillVisualEnsureTimer takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSkillVisuals.j`",
+      "sortText": "1_func_WaveSkillVisualEnsureTimer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSkillVisuals.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveSkillVisualCreateFollowerScaled",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveSkillVisualCreateFollowerScaled takes unit source, string modelPath, real scale returns integer\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSkillVisuals.j`",
+      "sortText": "1_func_WaveSkillVisualCreateFollowerScaled",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSkillVisuals.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveSkillVisualCreateFollower",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveSkillVisualCreateFollower takes unit source, string modelPath, real radius returns integer\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSkillVisuals.j`",
+      "sortText": "1_func_WaveSkillVisualCreateFollower",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSkillVisuals.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveSkillVisualCreateTimedMarkerScaled",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveSkillVisualCreateTimedMarkerScaled takes real x, real y, real facing, string modelPath, real scale, real duration returns integer\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSkillVisuals.j`",
+      "sortText": "1_func_WaveSkillVisualCreateTimedMarkerScaled",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSkillVisuals.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveSkillVisualCreateTimedMarker",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveSkillVisualCreateTimedMarker takes real x, real y, real facing, string modelPath, real radius, real duration returns integer\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSkillVisuals.j`",
+      "sortText": "1_func_WaveSkillVisualCreateTimedMarker",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSkillVisuals.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveSkillVisuals.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveSkillVisuals.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1776550709711
+}

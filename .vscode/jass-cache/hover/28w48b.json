@@ -1,0 +1,31 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\DummyCaster.j",
+  "items": [
+    {
+      "symbolName": "u",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\DummyCaster.j",
+      "content": "\n```jass\nunit u\n```\n\n\n**文件:** `libraries/DummyCaster.j`"
+    },
+    {
+      "symbolName": "cast",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\DummyCaster.j",
+      "content": "\n```jass\nmethod cast takes player p, integer level, integer order, real x, real y returns boolean\n```\n\n\n**所属:** `DummyCaster`\n**文件:** `libraries/DummyCaster.j`"
+    },
+    {
+      "symbolName": "onInit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\DummyCaster.j",
+      "content": "\n```jass\nstatic method onInit takes nothing returns nothing\n```\n\n\n**所属:** `N`\n**文件:** `libraries/DummyCaster.j`"
+    },
+    {
+      "symbolName": "UNITS_DUMMY_CASTER",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\DummyCaster.j",
+      "content": "\n```jass\nconstant integer UNITS_DUMMY_CASTER\n```\n\n\n**文件:** `libraries/DummyCaster.j`"
+    },
+    {
+      "symbolName": "finish",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\DummyCaster.j",
+      "content": "\n```jass\nmethod finish takes integer a returns nothing\n```\n\n\n**所属:** `DummyCaster`\n**文件:** `libraries/DummyCaster.j`"
+    }
+  ],
+  "timestamp": 1776205003424
+}

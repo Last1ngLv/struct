@@ -9,7 +9,7 @@ library LoadoutRocketLauncher initializer Init requires TimerUtils, SpellIndex, 
 
         //* Rapid Fire options.
         private constant real FIRE_DURATION = 1.00
-        private constant integer FIRE_COUNT = 4
+        private constant integer FIRE_COUNT = 6
         private constant string CAST_ANIMATION = "attack"
         private constant real FIRST_ANIMATION_DELAY = 0.03
         private constant real RAPID_FIRE_ANIMATION_TIME_SCALE = 5.25
@@ -18,7 +18,7 @@ library LoadoutRocketLauncher initializer Init requires TimerUtils, SpellIndex, 
         private constant attacktype ATTACK_TYPE = ATTACK_TYPE_NORMAL
         private constant damagetype DAMAGE_TYPE = DAMAGE_TYPE_MAGIC
 
-        private constant integer BURST_COUNT = 1
+        private constant integer BURST_COUNT = 2
         private constant real BURST_SPREAD_DEG = 05.
         private constant real BURST_STAGGER_INTERVAL = 0.03
         private constant real MISSILE_START_Z = 75.

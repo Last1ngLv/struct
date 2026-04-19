@@ -1,0 +1,16 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout RocketLauncher.j",
+  "items": [
+    {
+      "symbolName": "FIRE_TEXT_R",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout RocketLauncher.j",
+      "content": "\n```jass\nconstant integer FIRE_TEXT_R\n```\n\n\n**文件:** `MyMissiles/Loadout RocketLauncher.j`"
+    },
+    {
+      "symbolName": "BASE_DAMAGE_MULT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout RocketLauncher.j",
+      "content": "\n```jass\nconstant real BASE_DAMAGE_MULT\n```\n\n\n**文件:** `MyMissiles/Loadout RocketLauncher.j`"
+    }
+  ],
+  "timestamp": 1776205293124
+}

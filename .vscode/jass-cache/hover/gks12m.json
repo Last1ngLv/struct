@@ -1,0 +1,11 @@
+{
+  "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\war3map.j",
+  "items": [
+    {
+      "symbolName": "config",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\war3map.j",
+      "content": "\n```jass\nfunction config takes nothing returns nothing\n```\n\n\n---\n\n***************************************************************************\n\n*\n\n*  Map Configuration\n\n*\n\n***************************************************************************\n\n全局配置\n\n设置地图名称和说明、设置玩家数量、设置玩家队伍数量、配置游戏出生点放置方式、设置玩家默认队伍、初始化玩家插槽状态、设置玩家插槽可用性、唤起初始化玩家队伍、设置盟友出生点优先权\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\war3map.j`"
+    }
+  ],
+  "timestamp": 1775678393016
+}

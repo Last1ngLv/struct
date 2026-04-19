@@ -1,0 +1,411 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Lunar Slash.j",
+  "items": [
+    {
+      "label": "LUNAR_SLASH_ABILITY",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer LUNAR_SLASH_ABILITY\n```\n\n\n**_>:** `Pruebas/MissileExamples/Lunar Slash.j`",
+      "sortText": "2_var_LUNAR_SLASH_ABILITY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Lunar Slash.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "ATTACK_TYPE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant attacktype ATTACK_TYPE\n```\n\n\n---\n\n* Damage options.\n\n**_>:** `Pruebas/MissileExamples/Lunar Slash.j`",
+      "sortText": "2_var_ATTACK_TYPE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Lunar Slash.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DAMAGE_TYPE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant damagetype DAMAGE_TYPE\n```\n\n\n**_>:** `Pruebas/MissileExamples/Lunar Slash.j`",
+      "sortText": "2_var_DAMAGE_TYPE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Lunar Slash.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "RAPID_FIRE_DURATION",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real RAPID_FIRE_DURATION\n```\n\n\n---\n\n* Rapid fire options.\n\n**_>:** `Pruebas/MissileExamples/Lunar Slash.j`",
+      "sortText": "2_var_RAPID_FIRE_DURATION",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Lunar Slash.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "RAPID_FIRE_INTERVAL",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real RAPID_FIRE_INTERVAL\n```\n\n\n**_>:** `Pruebas/MissileExamples/Lunar Slash.j`",
+      "sortText": "2_var_RAPID_FIRE_INTERVAL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Lunar Slash.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "CANCEL_MOVE_DISTANCE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real CANCEL_MOVE_DISTANCE\n```\n\n\n**_>:** `Pruebas/MissileExamples/Lunar Slash.j`",
+      "sortText": "2_var_CANCEL_MOVE_DISTANCE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Lunar Slash.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "CONE_ANGLE_DEGREES",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real CONE_ANGLE_DEGREES\n```\n\n\n---\n\n* Arc shape options.\n\n**_>:** `Pruebas/MissileExamples/Lunar Slash.j`",
+      "sortText": "2_var_CONE_ANGLE_DEGREES",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Lunar Slash.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "NEXT_TICK_EXTRA_ANGLE_DEGREES",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real NEXT_TICK_EXTRA_ANGLE_DEGREES\n```\n\n\n**_>:** `Pruebas/MissileExamples/Lunar Slash.j`",
+      "sortText": "2_var_NEXT_TICK_EXTRA_ANGLE_DEGREES",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Lunar Slash.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "INNER_RADIUS",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real INNER_RADIUS\n```\n\n\n**_>:** `Pruebas/MissileExamples/Lunar Slash.j`",
+      "sortText": "2_var_INNER_RADIUS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Lunar Slash.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "OUTER_EDGE_START_FACTOR",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real OUTER_EDGE_START_FACTOR\n```\n\n\n**_>:** `Pruebas/MissileExamples/Lunar Slash.j`",
+      "sortText": "2_var_OUTER_EDGE_START_FACTOR",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Lunar Slash.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "OUTER_EDGE_BONUS_DAMAGE_FACTOR",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real OUTER_EDGE_BONUS_DAMAGE_FACTOR\n```\n\n\n**_>:** `Pruebas/MissileExamples/Lunar Slash.j`",
+      "sortText": "2_var_OUTER_EDGE_BONUS_DAMAGE_FACTOR",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Lunar Slash.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "NEXT_TICK_EXTRA_RADIUS",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real NEXT_TICK_EXTRA_RADIUS\n```\n\n\n---\n\n* Tick scaling options.\n\n**_>:** `Pruebas/MissileExamples/Lunar Slash.j`",
+      "sortText": "2_var_NEXT_TICK_EXTRA_RADIUS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Lunar Slash.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "NEXT_TICK_EXTRA_DAMAGE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real NEXT_TICK_EXTRA_DAMAGE\n```\n\n\n**_>:** `Pruebas/MissileExamples/Lunar Slash.j`",
+      "sortText": "2_var_NEXT_TICK_EXTRA_DAMAGE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Lunar Slash.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "NEXT_TICK_EXTRA_DAMAGE_PER_LEVEL",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real NEXT_TICK_EXTRA_DAMAGE_PER_LEVEL\n```\n\n\n**_>:** `Pruebas/MissileExamples/Lunar Slash.j`",
+      "sortText": "2_var_NEXT_TICK_EXTRA_DAMAGE_PER_LEVEL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Lunar Slash.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "CAST_FX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string CAST_FX\n```\n\n\n---\n\n* Effect options.\n\n**_>:** `Pruebas/MissileExamples/Lunar Slash.j`",
+      "sortText": "2_var_CAST_FX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Lunar Slash.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "CAST_FX_ATTACH_POINT",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string CAST_FX_ATTACH_POINT\n```\n\n\n**_>:** `Pruebas/MissileExamples/Lunar Slash.j`",
+      "sortText": "2_var_CAST_FX_ATTACH_POINT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Lunar Slash.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "ARC_FX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string ARC_FX\n```\n\n\n**_>:** `Pruebas/MissileExamples/Lunar Slash.j`",
+      "sortText": "2_var_ARC_FX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Lunar Slash.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HIT_FX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string HIT_FX\n```\n\n\n**_>:** `Pruebas/MissileExamples/Lunar Slash.j`",
+      "sortText": "2_var_HIT_FX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Lunar Slash.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HIT_FX_ATTACH_POINT",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string HIT_FX_ATTACH_POINT\n```\n\n\n**_>:** `Pruebas/MissileExamples/Lunar Slash.j`",
+      "sortText": "2_var_HIT_FX_ATTACH_POINT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Lunar Slash.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "SLASH_ANIMATION",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string SLASH_ANIMATION\n```\n\n\n**_>:** `Pruebas/MissileExamples/Lunar Slash.j`",
+      "sortText": "2_var_SLASH_ANIMATION",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Lunar Slash.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "GetOuterRadius",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetOuterRadius takes integer level returns real\n```\n\n\n---\n\n* Set arc radius.\n\n**_>:** `Pruebas/MissileExamples/Lunar Slash.j`",
+      "sortText": "1_func_GetOuterRadius",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Lunar Slash.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetBaseDamage",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetBaseDamage takes integer level returns real\n```\n\n\n---\n\n* Set base damage.\n\n**_>:** `Pruebas/MissileExamples/Lunar Slash.j`",
+      "sortText": "1_func_GetBaseDamage",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Lunar Slash.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetTickOuterRadius",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetTickOuterRadius takes integer level, integer tick returns real\n```\n\n\n---\n\n* Scale radius for following rapid-fire ticks.\n\n**_>:** `Pruebas/MissileExamples/Lunar Slash.j`",
+      "sortText": "1_func_GetTickOuterRadius",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Lunar Slash.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetTickBaseDamage",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetTickBaseDamage takes integer level, integer tick returns real\n```\n\n\n---\n\n* Scale base damage for following rapid-fire ticks.\n\n**_>:** `Pruebas/MissileExamples/Lunar Slash.j`",
+      "sortText": "1_func_GetTickBaseDamage",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Lunar Slash.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetTickConeHalfAngle",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetTickConeHalfAngle takes integer tick returns real\n```\n\n\n---\n\n* Scale cone angle for following rapid-fire ticks.\n\n**_>:** `Pruebas/MissileExamples/Lunar Slash.j`",
+      "sortText": "1_func_GetTickConeHalfAngle",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Lunar Slash.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetArcEffectCount",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetArcEffectCount takes integer level returns integer\n```\n\n\n---\n\n* Set how many visual points are used for the crescent effect.\n\n**_>:** `Pruebas/MissileExamples/Lunar Slash.j`",
+      "sortText": "1_func_GetArcEffectCount",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Lunar Slash.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "FilterUnits",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction FilterUnits takes unit target, player owner returns boolean\n```\n\n\n---\n\n* Filter valid targets.\n\n**_>:** `Pruebas/MissileExamples/Lunar Slash.j`",
+      "sortText": "1_func_FilterUnits",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Lunar Slash.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "active",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable active\n```\n\n\n**_>:** `Pruebas/MissileExamples/Lunar Slash.j`",
+      "sortText": "2_var_active",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Lunar Slash.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "startX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array startX\n```\n\n\n**_>:** `Pruebas/MissileExamples/Lunar Slash.j`",
+      "sortText": "2_var_startX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Lunar Slash.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "startY",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array startY\n```\n\n\n**_>:** `Pruebas/MissileExamples/Lunar Slash.j`",
+      "sortText": "2_var_startY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Lunar Slash.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "facing",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array facing\n```\n\n\n**_>:** `Pruebas/MissileExamples/Lunar Slash.j`",
+      "sortText": "2_var_facing",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Lunar Slash.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AbsReal",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AbsReal takes real r returns real\n```\n\n\n**_>:** `Pruebas/MissileExamples/Lunar Slash.j`",
+      "sortText": "1_func_AbsReal",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Lunar Slash.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AngleDiff",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AngleDiff takes real a, real b returns real\n```\n\n\n**_>:** `Pruebas/MissileExamples/Lunar Slash.j`",
+      "sortText": "1_func_AngleDiff",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Lunar Slash.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "IsInLunarArc",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction IsInLunarArc takes unit u, real x, real y, real facing, real halfAngle, real innerSq, real outerSq returns boolean\n```\n\n\n**_>:** `Pruebas/MissileExamples/Lunar Slash.j`",
+      "sortText": "1_func_IsInLunarArc",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Lunar Slash.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "RunArcEffects",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction RunArcEffects takes real x, real y, real facing, real outerRadius, integer count, real halfAngle returns nothing\n```\n\n\n**_>:** `Pruebas/MissileExamples/Lunar Slash.j`",
+      "sortText": "1_func_RunArcEffects",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Lunar Slash.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "DoSlashTick",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction DoSlashTick takes SpellIndex dex returns nothing\n```\n\n\n**_>:** `Pruebas/MissileExamples/Lunar Slash.j`",
+      "sortText": "1_func_DoSlashTick",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Lunar Slash.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "IsCanceledByMovement",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction IsCanceledByMovement takes SpellIndex dex returns boolean\n```\n\n\n**_>:** `Pruebas/MissileExamples/Lunar Slash.j`",
+      "sortText": "1_func_IsCanceledByMovement",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Lunar Slash.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Cleanup",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Cleanup takes SpellIndex dex returns nothing\n```\n\n\n**_>:** `Pruebas/MissileExamples/Lunar Slash.j`",
+      "sortText": "1_func_Cleanup",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Lunar Slash.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnPeriodic",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnPeriodic takes nothing returns nothing\n```\n\n\n**_>:** `Pruebas/MissileExamples/Lunar Slash.j`",
+      "sortText": "1_func_OnPeriodic",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Lunar Slash.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnEffect",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnEffect takes nothing returns nothing\n```\n\n\n**_>:** `Pruebas/MissileExamples/Lunar Slash.j`",
+      "sortText": "1_func_OnEffect",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Lunar Slash.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "MarkCanceled",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction MarkCanceled takes unit whichUnit returns nothing\n```\n\n\n**_>:** `Pruebas/MissileExamples/Lunar Slash.j`",
+      "sortText": "1_func_MarkCanceled",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Lunar Slash.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnOrder",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnOrder takes nothing returns nothing\n```\n\n\n**_>:** `Pruebas/MissileExamples/Lunar Slash.j`",
+      "sortText": "1_func_OnOrder",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Lunar Slash.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnPointOrder",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnPointOrder takes nothing returns nothing\n```\n\n\n**_>:** `Pruebas/MissileExamples/Lunar Slash.j`",
+      "sortText": "1_func_OnPointOrder",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Lunar Slash.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnTargetOrder",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnTargetOrder takes nothing returns nothing\n```\n\n\n**_>:** `Pruebas/MissileExamples/Lunar Slash.j`",
+      "sortText": "1_func_OnTargetOrder",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Lunar Slash.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**_>:** `Pruebas/MissileExamples/Lunar Slash.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Lunar Slash.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1776550709542
+}

@@ -1,0 +1,31 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UIMath.j",
+  "items": [
+    {
+      "symbolName": "x",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UIMath.j",
+      "content": "\n```jass\nreal x\n```\n\n\n**所属:** `VECTOR3`\n**文件:** `libraries/UIMath.j`"
+    },
+    {
+      "symbolName": "y",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UIMath.j",
+      "content": "\n```jass\nreal y\n```\n\n\n**所属:** `VECTOR3`\n**文件:** `libraries/UIMath.j`"
+    },
+    {
+      "symbolName": "z",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UIMath.j",
+      "content": "\n```jass\nreal z\n```\n\n\n**所属:** `VECTOR3`\n**文件:** `libraries/UIMath.j`"
+    },
+    {
+      "symbolName": "VECTOR3",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UIMath.j",
+      "content": "\n```jass\nstruct VECTOR3\n```\n\n\n**文件:** `libraries/UIMath.j`"
+    },
+    {
+      "symbolName": "Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UIMath.j",
+      "content": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**文件:** `libraries/UIMath.j`"
+    }
+  ],
+  "timestamp": 1775665632191
+}

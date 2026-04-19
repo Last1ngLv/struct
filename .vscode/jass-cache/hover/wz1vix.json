@@ -1,0 +1,56 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Leap.j",
+  "items": [
+    {
+      "symbolName": "DAMAGE_TYPE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Leap.j",
+      "content": "\n```jass\nconstant damagetype DAMAGE_TYPE\n```\n\n\n**文件:** `MyMissiles/Loadout Leap.j`"
+    },
+    {
+      "symbolName": "IMPACT_DUMMY_BASE_SCALE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Leap.j",
+      "content": "\n```jass\nconstant real IMPACT_DUMMY_BASE_SCALE\n```\n\n\n**文件:** `MyMissiles/Loadout Leap.j`"
+    },
+    {
+      "symbolName": "FIRST_ANIMATION_DELAY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Leap.j",
+      "content": "\n```jass\nconstant real FIRST_ANIMATION_DELAY\n```\n\n\n**文件:** `MyMissiles/Loadout Leap.j`"
+    },
+    {
+      "symbolName": "Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Leap.j",
+      "content": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**文件:** `MyMissiles/Loadout Leap.j`"
+    },
+    {
+      "symbolName": "FIRE_TEXT_B",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Leap.j",
+      "content": "\n```jass\nconstant integer FIRE_TEXT_B\n```\n\n\n**文件:** `MyMissiles/Loadout Leap.j`"
+    },
+    {
+      "symbolName": "dummyFx2",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Leap.j",
+      "content": "\n```jass\neffect array dummyFx2\n```\n\n\n**文件:** `MyMissiles/Loadout Leap.j`"
+    },
+    {
+      "symbolName": "impactFx",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Leap.j",
+      "content": "\n```jass\neffect array impactFx\n```\n\n\n**文件:** `MyMissiles/Loadout Leap.j`"
+    },
+    {
+      "symbolName": "FIRE_TEXT_G",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Leap.j",
+      "content": "\n```jass\nconstant integer FIRE_TEXT_G\n```\n\n\n**文件:** `MyMissiles/Loadout Leap.j`"
+    },
+    {
+      "symbolName": "LOADOUT_LEAP_SPELL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Leap.j",
+      "content": "\n```jass\nconstant integer LOADOUT_LEAP_SPELL\n```\n\n\n**文件:** `MyMissiles/Loadout Leap.j`"
+    },
+    {
+      "symbolName": "FIRE_TEXT_R",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Leap.j",
+      "content": "\n```jass\nconstant integer FIRE_TEXT_R\n```\n\n\n**文件:** `MyMissiles/Loadout Leap.j`"
+    }
+  ],
+  "timestamp": 1776204759941
+}

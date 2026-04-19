@@ -1,0 +1,555 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveBarrierSkills.j",
+  "items": [
+    {
+      "label": "WAVE_HFOO_UNIT_ID",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_HFOO_UNIT_ID\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j`",
+      "sortText": "2_var_WAVE_HFOO_UNIT_ID",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveBarrierSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HFOO_BOSS_UNIT_ID",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_HFOO_BOSS_UNIT_ID\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j`",
+      "sortText": "2_var_WAVE_HFOO_BOSS_UNIT_ID",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveBarrierSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HFOO_BARRIER_VISUAL_MODEL",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string WAVE_HFOO_BARRIER_VISUAL_MODEL\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j`",
+      "sortText": "2_var_WAVE_HFOO_BARRIER_VISUAL_MODEL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveBarrierSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HFOO_BOSS_BARRIER_VISUAL_MODEL",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string WAVE_HFOO_BOSS_BARRIER_VISUAL_MODEL\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j`",
+      "sortText": "2_var_WAVE_HFOO_BOSS_BARRIER_VISUAL_MODEL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveBarrierSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_BARRIER_PROJECTILE_KIND_NORMAL",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_BARRIER_PROJECTILE_KIND_NORMAL\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j`",
+      "sortText": "2_var_WAVE_BARRIER_PROJECTILE_KIND_NORMAL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveBarrierSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_BARRIER_PROJECTILE_KIND_WIND",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_BARRIER_PROJECTILE_KIND_WIND\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j`",
+      "sortText": "2_var_WAVE_BARRIER_PROJECTILE_KIND_WIND",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveBarrierSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_BARRIER_PROJECTILE_KIND_RAY",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_BARRIER_PROJECTILE_KIND_RAY\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j`",
+      "sortText": "2_var_WAVE_BARRIER_PROJECTILE_KIND_RAY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveBarrierSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_BARRIER_INTERACTION_NONE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_BARRIER_INTERACTION_NONE\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j`",
+      "sortText": "2_var_WAVE_BARRIER_INTERACTION_NONE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveBarrierSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_BARRIER_INTERACTION_BLOCK",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_BARRIER_INTERACTION_BLOCK\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j`",
+      "sortText": "2_var_WAVE_BARRIER_INTERACTION_BLOCK",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveBarrierSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_BARRIER_INTERACTION_WIND",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_BARRIER_INTERACTION_WIND\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j`",
+      "sortText": "2_var_WAVE_BARRIER_INTERACTION_WIND",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveBarrierSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_BARRIER_INTERACTION_RAY",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WAVE_BARRIER_INTERACTION_RAY\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j`",
+      "sortText": "2_var_WAVE_BARRIER_INTERACTION_RAY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveBarrierSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HFOO_DEFEND_TAG",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string WAVE_HFOO_DEFEND_TAG\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j`",
+      "sortText": "2_var_WAVE_HFOO_DEFEND_TAG",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveBarrierSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HFOO_BARRIER_RADIUS",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HFOO_BARRIER_RADIUS\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j`",
+      "sortText": "2_var_WAVE_HFOO_BARRIER_RADIUS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveBarrierSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HFOO_BARRIER_DURATION",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HFOO_BARRIER_DURATION\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j`",
+      "sortText": "2_var_WAVE_HFOO_BARRIER_DURATION",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveBarrierSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HFOO_BARRIER_TICK",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HFOO_BARRIER_TICK\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j`",
+      "sortText": "2_var_WAVE_HFOO_BARRIER_TICK",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveBarrierSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HFOO_INITIAL_DELAY_MIN",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HFOO_INITIAL_DELAY_MIN\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j`",
+      "sortText": "2_var_WAVE_HFOO_INITIAL_DELAY_MIN",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveBarrierSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HFOO_INITIAL_DELAY_MAX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HFOO_INITIAL_DELAY_MAX\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j`",
+      "sortText": "2_var_WAVE_HFOO_INITIAL_DELAY_MAX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveBarrierSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HFOO_COOLDOWN_MIN",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HFOO_COOLDOWN_MIN\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j`",
+      "sortText": "2_var_WAVE_HFOO_COOLDOWN_MIN",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveBarrierSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HFOO_COOLDOWN_MAX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HFOO_COOLDOWN_MAX\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j`",
+      "sortText": "2_var_WAVE_HFOO_COOLDOWN_MAX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveBarrierSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HFOO_BOSS_BARRIER_RADIUS",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HFOO_BOSS_BARRIER_RADIUS\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j`",
+      "sortText": "2_var_WAVE_HFOO_BOSS_BARRIER_RADIUS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveBarrierSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HFOO_BOSS_BARRIER_DURATION",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HFOO_BOSS_BARRIER_DURATION\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j`",
+      "sortText": "2_var_WAVE_HFOO_BOSS_BARRIER_DURATION",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveBarrierSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HFOO_BOSS_INITIAL_DELAY_MIN",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HFOO_BOSS_INITIAL_DELAY_MIN\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j`",
+      "sortText": "2_var_WAVE_HFOO_BOSS_INITIAL_DELAY_MIN",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveBarrierSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HFOO_BOSS_INITIAL_DELAY_MAX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HFOO_BOSS_INITIAL_DELAY_MAX\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j`",
+      "sortText": "2_var_WAVE_HFOO_BOSS_INITIAL_DELAY_MAX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveBarrierSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HFOO_BOSS_COOLDOWN_MIN",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HFOO_BOSS_COOLDOWN_MIN\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j`",
+      "sortText": "2_var_WAVE_HFOO_BOSS_COOLDOWN_MIN",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveBarrierSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WAVE_HFOO_BOSS_COOLDOWN_MAX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real WAVE_HFOO_BOSS_COOLDOWN_MAX\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j`",
+      "sortText": "2_var_WAVE_HFOO_BOSS_COOLDOWN_MAX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveBarrierSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveBarrierNextCastMs",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable WaveBarrierNextCastMs\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j`",
+      "sortText": "2_var_WaveBarrierNextCastMs",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveBarrierSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveBarrierActiveBarrierByUnit",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable WaveBarrierActiveBarrierByUnit\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j`",
+      "sortText": "2_var_WaveBarrierActiveBarrierByUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveBarrierSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveBarrierVisualByUnit",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable WaveBarrierVisualByUnit\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j`",
+      "sortText": "2_var_WaveBarrierVisualByUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveBarrierSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveBarrierTimer",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ntimer WaveBarrierTimer\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j`",
+      "sortText": "2_var_WaveBarrierTimer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveBarrierSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveBarrierTimerRunning",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean WaveBarrierTimerRunning\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j`",
+      "sortText": "2_var_WaveBarrierTimerRunning",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveBarrierSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveBarrierHead",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger WaveBarrierHead\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j`",
+      "sortText": "2_var_WaveBarrierHead",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveBarrierSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveBarrierCount",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger WaveBarrierCount\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j`",
+      "sortText": "2_var_WaveBarrierCount",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveBarrierSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveBarrierNext",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array WaveBarrierNext\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j`",
+      "sortText": "2_var_WaveBarrierNext",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveBarrierSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveBarrierPrev",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array WaveBarrierPrev\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j`",
+      "sortText": "2_var_WaveBarrierPrev",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveBarrierSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveBarrierSource",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nunit array WaveBarrierSource\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j`",
+      "sortText": "2_var_WaveBarrierSource",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveBarrierSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveBarrierVisualFx",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array WaveBarrierVisualFx\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j`",
+      "sortText": "2_var_WaveBarrierVisualFx",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveBarrierSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveBarrierRadius",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array WaveBarrierRadius\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j`",
+      "sortText": "2_var_WaveBarrierRadius",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveBarrierSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveBarrierRemaining",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array WaveBarrierRemaining\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j`",
+      "sortText": "2_var_WaveBarrierRemaining",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveBarrierSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveBarrierProjectileBarrierId",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array WaveBarrierProjectileBarrierId\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j`",
+      "sortText": "2_var_WaveBarrierProjectileBarrierId",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveBarrierSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveBarrierProjectileInteractionByKind",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array WaveBarrierProjectileInteractionByKind\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j`",
+      "sortText": "2_var_WaveBarrierProjectileInteractionByKind",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveBarrierSkills.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveBarrierSecToMs",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveBarrierSecToMs takes real sec returns integer\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j`",
+      "sortText": "1_func_WaveBarrierSecToMs",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveBarrierSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveBarrierRandomMsRange",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveBarrierRandomMsRange takes real minSec, real maxSec returns integer\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j`",
+      "sortText": "1_func_WaveBarrierRandomMsRange",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveBarrierSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveBarrierUnitAlive",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveBarrierUnitAlive takes unit u returns boolean\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j`",
+      "sortText": "1_func_WaveBarrierUnitAlive",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveBarrierSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveBarrierIsHfoo",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveBarrierIsHfoo takes unit source returns boolean\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j`",
+      "sortText": "1_func_WaveBarrierIsHfoo",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveBarrierSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveBarrierIsHfooBoss",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveBarrierIsHfooBoss takes unit source returns boolean\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j`",
+      "sortText": "1_func_WaveBarrierIsHfooBoss",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveBarrierSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveBarrierVisualModelForSource",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveBarrierVisualModelForSource takes unit source returns string\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j`",
+      "sortText": "1_func_WaveBarrierVisualModelForSource",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveBarrierSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveBarrierAdd",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveBarrierAdd takes integer barrierId returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j`",
+      "sortText": "1_func_WaveBarrierAdd",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveBarrierSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveBarrierRemove",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveBarrierRemove takes integer barrierId returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j`",
+      "sortText": "1_func_WaveBarrierRemove",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveBarrierSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveBarrierContains",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveBarrierContains takes integer barrierId, player projectileOwner, real x, real y returns boolean\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j`",
+      "sortText": "1_func_WaveBarrierContains",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveBarrierSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveBarrierFindAt",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveBarrierFindAt takes player projectileOwner, real x, real y returns integer\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j`",
+      "sortText": "1_func_WaveBarrierFindAt",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveBarrierSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveBarrierDestroyVisual",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveBarrierDestroyVisual takes integer barrierId returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j`",
+      "sortText": "1_func_WaveBarrierDestroyVisual",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveBarrierSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveBarrierDestroy",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveBarrierDestroy takes integer barrierId returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j`",
+      "sortText": "1_func_WaveBarrierDestroy",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveBarrierSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveBarrierTick",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveBarrierTick takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j`",
+      "sortText": "1_func_WaveBarrierTick",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveBarrierSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveBarrierEnsureTimer",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveBarrierEnsureTimer takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j`",
+      "sortText": "1_func_WaveBarrierEnsureTimer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveBarrierSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveBarrierStart",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveBarrierStart takes unit source, real radius, real duration returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j`",
+      "sortText": "1_func_WaveBarrierStart",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveBarrierSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveBarrierSetProjectileInteraction",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveBarrierSetProjectileInteraction takes integer projectileKind, integer interaction returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j`",
+      "sortText": "1_func_WaveBarrierSetProjectileInteraction",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveBarrierSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveBarrierClearProjectileTrace",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveBarrierClearProjectileTrace takes integer projectileId returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j`",
+      "sortText": "1_func_WaveBarrierClearProjectileTrace",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveBarrierSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveBarrierCheckPlayerProjectile",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveBarrierCheckPlayerProjectile takes integer projectileId, player projectileOwner, real x, real y, integer projectileKind returns integer\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j`",
+      "sortText": "1_func_WaveBarrierCheckPlayerProjectile",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveBarrierSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveBarrierSkillsTryExecute",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveBarrierSkillsTryExecute takes unit source, unit target, integer nowMs returns boolean\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j`",
+      "sortText": "1_func_WaveBarrierSkillsTryExecute",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveBarrierSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveBarrierCleanupDeadSource",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveBarrierCleanupDeadSource takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j`",
+      "sortText": "1_func_WaveBarrierCleanupDeadSource",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveBarrierSkills.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveBarrierSkills.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1776550709666
+}

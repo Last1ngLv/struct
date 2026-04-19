@@ -1,0 +1,61 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+  "items": [
+    {
+      "symbolName": "WaveRangedTickTimer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "content": "\n```jass\ntimer WaveRangedTickTimer\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`"
+    },
+    {
+      "symbolName": "WaveRangedActiveCastByUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "content": "\n```jass\nTable WaveRangedActiveCastByUnit\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`"
+    },
+    {
+      "symbolName": "WaveRangedCastTargetX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "content": "\n```jass\nreal array WaveRangedCastTargetX\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`"
+    },
+    {
+      "symbolName": "WAVE_HRIF_BOSS_SUMMON_AROUND_COUNT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "content": "\n```jass\nconstant integer WAVE_HRIF_BOSS_SUMMON_AROUND_COUNT\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`"
+    },
+    {
+      "symbolName": "WAVE_RANGED_MODE_HRIF_BOSS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "content": "\n```jass\nconstant integer WAVE_RANGED_MODE_HRIF_BOSS\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`"
+    },
+    {
+      "symbolName": "WAVE_HRIF_BOSS_COOLDOWN_MAX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "content": "\n```jass\nconstant real WAVE_HRIF_BOSS_COOLDOWN_MAX\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`"
+    },
+    {
+      "symbolName": "WAVE_HRIF_BOSS_VOLLEY_COUNT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "content": "\n```jass\nconstant integer WAVE_HRIF_BOSS_VOLLEY_COUNT\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`"
+    },
+    {
+      "symbolName": "WAVE_HRIF_BOSS_INITIAL_DELAY_MIN",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "content": "\n```jass\nconstant real WAVE_HRIF_BOSS_INITIAL_DELAY_MIN\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`"
+    },
+    {
+      "symbolName": "WaveRangedTickRunning",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "content": "\n```jass\nboolean WaveRangedTickRunning\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`"
+    },
+    {
+      "symbolName": "WAVE_BOSS_SUMMON_WINDUP_DURATION",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "content": "\n```jass\nconstant real WAVE_BOSS_SUMMON_WINDUP_DURATION\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`"
+    },
+    {
+      "symbolName": "Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\WaveProjectiles\\WaveRangedSkills.j",
+      "content": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**文件:** `WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j`"
+    }
+  ],
+  "timestamp": 1775665632214
+}

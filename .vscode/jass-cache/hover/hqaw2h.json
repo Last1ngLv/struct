@@ -1,0 +1,21 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Grenade.j",
+  "items": [
+    {
+      "symbolName": "chargeTimer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Grenade.j",
+      "content": "\n```jass\ntimer array chargeTimer\n```\n\n\n**文件:** `MyMissiles/Loadout Grenade.j`"
+    },
+    {
+      "symbolName": "BASE_IMPACT_DAMAGE_MULT_PER_100_AREA",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Grenade.j",
+      "content": "\n```jass\nconstant real BASE_IMPACT_DAMAGE_MULT_PER_100_AREA\n```\n\n\n**文件:** `MyMissiles/Loadout Grenade.j`"
+    },
+    {
+      "symbolName": "FIRE_TEXT_G",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Grenade.j",
+      "content": "\n```jass\nconstant integer FIRE_TEXT_G\n```\n\n\n**文件:** `MyMissiles/Loadout Grenade.j`"
+    }
+  ],
+  "timestamp": 1776020049104
+}

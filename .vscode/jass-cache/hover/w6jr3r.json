@@ -1,0 +1,81 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+  "items": [
+    {
+      "symbolName": "AI_PROFILE_MELEE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "content": "\n```jass\nconstant integer AI_PROFILE_MELEE\n```\n\n\n**文件:** `WaveSysAnAI/AI/AIProfiles.j`"
+    },
+    {
+      "symbolName": "AI_PROFILE_CASTER",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "content": "\n```jass\nconstant integer AI_PROFILE_CASTER\n```\n\n\n**文件:** `WaveSysAnAI/AI/AIProfiles.j`"
+    },
+    {
+      "symbolName": "AIDefaultProfileByUnitType",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "content": "\n```jass\nTable AIDefaultProfileByUnitType\n```\n\n\n**文件:** `WaveSysAnAI/AI/AIProfiles.j`"
+    },
+    {
+      "symbolName": "AIRuleEnemyHpMaxPct",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "content": "\n```jass\nTable AIRuleEnemyHpMaxPct\n```\n\n\n**文件:** `WaveSysAnAI/AI/AIProfiles.j`"
+    },
+    {
+      "symbolName": "AIRuleIsChanneling",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "content": "\n```jass\nTable AIRuleIsChanneling\n```\n\n\n**文件:** `WaveSysAnAI/AI/AIProfiles.j`"
+    },
+    {
+      "symbolName": "AI_PROFILE_RANGED",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "content": "\n```jass\nconstant integer AI_PROFILE_RANGED\n```\n\n\n**文件:** `WaveSysAnAI/AI/AIProfiles.j`"
+    },
+    {
+      "symbolName": "AI_BEHAVIOR_KEEP_DISTANCE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "content": "\n```jass\nconstant integer AI_BEHAVIOR_KEEP_DISTANCE\n```\n\n\n**文件:** `WaveSysAnAI/AI/AIProfiles.j`"
+    },
+    {
+      "symbolName": "AIAddAbilityRuleEx",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "content": "\n```jass\nfunction AIAddAbilityRuleEx takes integer profileId, integer abilityId, string orderString, integer targetType, real minRange, real maxRange, real selfHpMaxPct, real enemyHpMaxPct, integer minEnemiesInRadius, real radius, integer priority, real localCooldown, boolean isChanneling, real channelLockSeconds returns nothing\n```\n\n\n---\n\nVariante extendida: permite definir channeling al crear la regla.\n\n**文件:** `WaveSysAnAI/AI/AIProfiles.j`"
+    },
+    {
+      "symbolName": "AISetDefaultProfileForUnitType",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "content": "\n```jass\nfunction AISetDefaultProfileForUnitType takes integer unitTypeId, integer profileId returns nothing\n```\n\n\n**文件:** `WaveSysAnAI/AI/AIProfiles.j`"
+    },
+    {
+      "symbolName": "AIGetProfileDefaultFlags",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "content": "\n```jass\nfunction AIGetProfileDefaultFlags takes integer profileId returns integer\n```\n\n\n**文件:** `WaveSysAnAI/AI/AIProfiles.j`"
+    },
+    {
+      "symbolName": "Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "content": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**文件:** `WaveSysAnAI/AI/AIProfiles.j`"
+    },
+    {
+      "symbolName": "AI_TARGET_POINT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "content": "\n```jass\nconstant integer AI_TARGET_POINT\n```\n\n\n**文件:** `WaveSysAnAI/AI/AIProfiles.j`"
+    },
+    {
+      "symbolName": "AI_BEHAVIOR_LOW_HP_BIAS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "content": "\n```jass\nconstant integer AI_BEHAVIOR_LOW_HP_BIAS\n```\n\n\n**文件:** `WaveSysAnAI/AI/AIProfiles.j`"
+    },
+    {
+      "symbolName": "AIProfTeleportCooldownMax",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "content": "\n```jass\nTable AIProfTeleportCooldownMax\n```\n\n\n**文件:** `WaveSysAnAI/AI/AIProfiles.j`"
+    },
+    {
+      "symbolName": "AISetProfileTeleport",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIProfiles.j",
+      "content": "\n```jass\nfunction AISetProfileTeleport takes integer profileId, boolean enabled, boolean prioritizeFarthestTrackedHero, real cooldownMinSec, real cooldownMaxSec, real entryDelayMinSec, real entryDelayMaxSec, real offsetMin, real offsetMax, string preFxPath returns nothing\n```\n\n\n**文件:** `WaveSysAnAI/AI/AIProfiles.j`"
+    }
+  ],
+  "timestamp": 1775911827374
+}

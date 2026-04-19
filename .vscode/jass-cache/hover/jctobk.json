@@ -1,0 +1,26 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Tiny\\Tiny Building Toss.j",
+  "items": [
+    {
+      "symbolName": "GetProjectileStartHeightOffset",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Tiny\\Tiny Building Toss.j",
+      "content": "\n```jass\nfunction GetProjectileStartHeightOffset takes integer level returns real\n```\n\n\n---\n\nAltura inicial adicional sobre la altura actual del edificio.\n\n**文件:** `Pruebas/MissileExamples/Tiny/Tiny Building Toss.j`"
+    },
+    {
+      "symbolName": "resolvedLandingX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Tiny\\Tiny Building Toss.j",
+      "content": "\n```jass\nreal resolvedLandingX\n```\n\n\n**文件:** `Pruebas/MissileExamples/Tiny/Tiny Building Toss.j`"
+    },
+    {
+      "symbolName": "PlaceBuilding",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Tiny\\Tiny Building Toss.j",
+      "content": "\n```jass\nfunction PlaceBuilding takes unit u, real x, real y returns nothing\n```\n\n\n**文件:** `Pruebas/MissileExamples/Tiny/Tiny Building Toss.j`"
+    },
+    {
+      "symbolName": "Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Tiny\\Tiny Building Toss.j",
+      "content": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**文件:** `Pruebas/MissileExamples/Tiny/Tiny Building Toss.j`"
+    }
+  ],
+  "timestamp": 1775665632208
+}

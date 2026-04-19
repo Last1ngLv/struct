@@ -1,0 +1,501 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gun Barrage.j",
+  "items": [
+    {
+      "label": "GUN_BARRAGE_ABILITY",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer GUN_BARRAGE_ABILITY\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gun Barrage.j`",
+      "sortText": "2_var_GUN_BARRAGE_ABILITY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "ATTACK_TYPE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant attacktype ATTACK_TYPE\n```\n\n\n---\n\n* Damage options.\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gun Barrage.j`",
+      "sortText": "2_var_ATTACK_TYPE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DAMAGE_TYPE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant damagetype DAMAGE_TYPE\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gun Barrage.j`",
+      "sortText": "2_var_DAMAGE_TYPE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DAMAGE_IN_AOE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant boolean DAMAGE_IN_AOE\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gun Barrage.j`",
+      "sortText": "2_var_DAMAGE_IN_AOE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AOE_DAMAGE_RADIUS",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real AOE_DAMAGE_RADIUS\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gun Barrage.j`",
+      "sortText": "2_var_AOE_DAMAGE_RADIUS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AOE_CENTER_ON_HIT_UNIT",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant boolean AOE_CENTER_ON_HIT_UNIT\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gun Barrage.j`",
+      "sortText": "2_var_AOE_CENTER_ON_HIT_UNIT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "FIRE_DURATION",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real FIRE_DURATION\n```\n\n\n---\n\n* Firing behavior.\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gun Barrage.j`",
+      "sortText": "2_var_FIRE_DURATION",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "FIRE_INTERVAL",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real FIRE_INTERVAL\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gun Barrage.j`",
+      "sortText": "2_var_FIRE_INTERVAL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "CANCEL_MOVE_DISTANCE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real CANCEL_MOVE_DISTANCE\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gun Barrage.j`",
+      "sortText": "2_var_CANCEL_MOVE_DISTANCE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "CAST_ANIMATION",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string CAST_ANIMATION\n```\n\n\n---\n\n* Visual and animation options.\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gun Barrage.j`",
+      "sortText": "2_var_CAST_ANIMATION",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "FIRST_ANIMATION_DELAY",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real FIRST_ANIMATION_DELAY\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gun Barrage.j`",
+      "sortText": "2_var_FIRST_ANIMATION_DELAY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "RAPID_FIRE_ANIMATION_TIME_SCALE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real RAPID_FIRE_ANIMATION_TIME_SCALE\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gun Barrage.j`",
+      "sortText": "2_var_RAPID_FIRE_ANIMATION_TIME_SCALE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "ANIMATION_TIME_SCALE_ON_END",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real ANIMATION_TIME_SCALE_ON_END\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gun Barrage.j`",
+      "sortText": "2_var_ANIMATION_TIME_SCALE_ON_END",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "MUZZLE_FX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string MUZZLE_FX\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gun Barrage.j`",
+      "sortText": "2_var_MUZZLE_FX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "MUZZLE_ATTACH_POINT",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string MUZZLE_ATTACH_POINT\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gun Barrage.j`",
+      "sortText": "2_var_MUZZLE_ATTACH_POINT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "ON_HIT_FX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string ON_HIT_FX\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gun Barrage.j`",
+      "sortText": "2_var_ON_HIT_FX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "ON_HIT_FX_ATTACH_POINT",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string ON_HIT_FX_ATTACH_POINT\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gun Barrage.j`",
+      "sortText": "2_var_ON_HIT_FX_ATTACH_POINT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "ON_DEATH_FX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string ON_DEATH_FX\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gun Barrage.j`",
+      "sortText": "2_var_ON_DEATH_FX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "Missile_ORIGIN",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string Missile_ORIGIN\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gun Barrage.j`",
+      "sortText": "2_var_Missile_ORIGIN",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "SHOT_FLY_HEIGHT",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real SHOT_FLY_HEIGHT\n```\n\n\n---\n\n* Missile options.\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gun Barrage.j`",
+      "sortText": "2_var_SHOT_FLY_HEIGHT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "MISSILE_DURATION",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real MISSILE_DURATION\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gun Barrage.j`",
+      "sortText": "2_var_MISSILE_DURATION",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "SHOT_MISSILE_SPEED",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real SHOT_MISSILE_SPEED\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gun Barrage.j`",
+      "sortText": "2_var_SHOT_MISSILE_SPEED",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "SHOT_MISSILE_MODEL",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string SHOT_MISSILE_MODEL\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gun Barrage.j`",
+      "sortText": "2_var_SHOT_MISSILE_MODEL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "SHOT_MISSILE_SCALE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real SHOT_MISSILE_SCALE\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gun Barrage.j`",
+      "sortText": "2_var_SHOT_MISSILE_SCALE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "KILL_ON_UPHILL_CLIFF",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant boolean KILL_ON_UPHILL_CLIFF\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gun Barrage.j`",
+      "sortText": "2_var_KILL_ON_UPHILL_CLIFF",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "KILL_ON_TREE_COLLISION",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant boolean KILL_ON_TREE_COLLISION\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gun Barrage.j`",
+      "sortText": "2_var_KILL_ON_TREE_COLLISION",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DESTROY_TREE_ON_COLLISION",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant boolean DESTROY_TREE_ON_COLLISION\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gun Barrage.j`",
+      "sortText": "2_var_DESTROY_TREE_ON_COLLISION",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "BASE_SHOT_COLLISION",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real BASE_SHOT_COLLISION\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gun Barrage.j`",
+      "sortText": "2_var_BASE_SHOT_COLLISION",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "NEXT_TICK_EXTRA_COLLISION",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real NEXT_TICK_EXTRA_COLLISION\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gun Barrage.j`",
+      "sortText": "2_var_NEXT_TICK_EXTRA_COLLISION",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "NEXT_TICK_EXTRA_DAMAGE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real NEXT_TICK_EXTRA_DAMAGE\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gun Barrage.j`",
+      "sortText": "2_var_NEXT_TICK_EXTRA_DAMAGE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "NEXT_TICK_EXTRA_DAMAGE_PER_LEVEL",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real NEXT_TICK_EXTRA_DAMAGE_PER_LEVEL\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gun Barrage.j`",
+      "sortText": "2_var_NEXT_TICK_EXTRA_DAMAGE_PER_LEVEL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "GetFlyDistance",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetFlyDistance takes integer level returns real\n```\n\n\n---\n\n* Set projectile travel distance.\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gun Barrage.j`",
+      "sortText": "1_func_GetFlyDistance",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetShotDamage",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetShotDamage takes integer level returns real\n```\n\n\n---\n\n* Set damage per projectile.\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gun Barrage.j`",
+      "sortText": "1_func_GetShotDamage",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetShotCollision",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetShotCollision takes integer level, integer shotIndex returns real\n```\n\n\n---\n\n*  Set area scaling by shot index in the same rapid-fire window.\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gun Barrage.j`",
+      "sortText": "1_func_GetShotCollision",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetShotBonusDamage",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetShotBonusDamage takes integer level, integer shotIndex returns real\n```\n\n\n---\n\n*  Set bonus damage scaling by shot index in the same rapid-fire window.\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gun Barrage.j`",
+      "sortText": "1_func_GetShotBonusDamage",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "FilterUnits",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction FilterUnits takes unit target, player owner returns boolean\n```\n\n\n---\n\n* Filter valid targets.\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gun Barrage.j`",
+      "sortText": "1_func_FilterUnits",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "DealAreaDamage",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction DealAreaDamage takes Missile missile, real x, real y returns nothing\n```\n\n\n---\n\n* Deal optional area damage around impact.\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gun Barrage.j`",
+      "sortText": "1_func_DealAreaDamage",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "CustomizeMissile",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction CustomizeMissile takes Missile missile, integer level, integer shotIndex returns nothing\n```\n\n\n---\n\n* Customize projectile options.\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gun Barrage.j`",
+      "sortText": "1_func_CustomizeMissile",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "active",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable active\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gun Barrage.j`",
+      "sortText": "2_var_active",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "startX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array startX\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gun Barrage.j`",
+      "sortText": "2_var_startX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "startY",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array startY\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gun Barrage.j`",
+      "sortText": "2_var_startY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "aim",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array aim\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gun Barrage.j`",
+      "sortText": "2_var_aim",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "startCliff",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array startCliff\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gun Barrage.j`",
+      "sortText": "2_var_startCliff",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "GunBullet",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct GunBullet extends array\n```\n\n\n---\n\n* Missile behavior for each bullet.\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gun Barrage.j`",
+      "sortText": "1_struct_GunBullet",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "IsCanceledByMovement",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction IsCanceledByMovement takes SpellIndex dex returns boolean\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gun Barrage.j`",
+      "sortText": "1_func_IsCanceledByMovement",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Cleanup",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Cleanup takes SpellIndex dex returns nothing\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gun Barrage.j`",
+      "sortText": "1_func_Cleanup",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "FireBullet",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction FireBullet takes SpellIndex dex returns nothing\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gun Barrage.j`",
+      "sortText": "1_func_FireBullet",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnPeriodic",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnPeriodic takes nothing returns nothing\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gun Barrage.j`",
+      "sortText": "1_func_OnPeriodic",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "MarkCanceled",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction MarkCanceled takes unit whichUnit returns nothing\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gun Barrage.j`",
+      "sortText": "1_func_MarkCanceled",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnOrder",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnOrder takes nothing returns nothing\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gun Barrage.j`",
+      "sortText": "1_func_OnOrder",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnPointOrder",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnPointOrder takes nothing returns nothing\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gun Barrage.j`",
+      "sortText": "1_func_OnPointOrder",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnTargetOrder",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnTargetOrder takes nothing returns nothing\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gun Barrage.j`",
+      "sortText": "1_func_OnTargetOrder",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "DelayedStartAnimation",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction DelayedStartAnimation takes nothing returns nothing\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gun Barrage.j`",
+      "sortText": "1_func_DelayedStartAnimation",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnEffect",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnEffect takes nothing returns nothing\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gun Barrage.j`",
+      "sortText": "1_func_OnEffect",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**_>:** `Pruebas/MissileExamples/Rogue/Gun Barrage.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Rogue\\Gun Barrage.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1776550709564
+}

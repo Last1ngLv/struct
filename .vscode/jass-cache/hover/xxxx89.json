@@ -1,0 +1,11 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+  "items": [
+    {
+      "symbolName": "Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\UnitTypeMissileLoadout.j",
+      "content": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**文件:** `MyMissiles/UnitTypeMissileLoadout.j`"
+    }
+  ],
+  "timestamp": 1775665632195
+}

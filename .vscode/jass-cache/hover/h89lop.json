@@ -1,0 +1,16 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+  "items": [
+    {
+      "symbolName": "LOADOUT_LEAP_SPELL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "content": "\n```jass\nconstant integer LOADOUT_LEAP_SPELL\n```\n\n\n**文件:** `MyMissiles/Loadout LeapMissile.j`"
+    },
+    {
+      "symbolName": "FIRE_TEXT_R",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "content": "\n```jass\nconstant integer FIRE_TEXT_R\n```\n\n\n**文件:** `MyMissiles/Loadout LeapMissile.j`"
+    }
+  ],
+  "timestamp": 1776204759942
+}

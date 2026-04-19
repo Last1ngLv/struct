@@ -1,0 +1,416 @@
+{
+  "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+  "items": [
+    {
+      "symbolName": "CAMERA_FIELD_FARZ",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nconstant camerafield CAMERA_FIELD_FARZ\n```\n\n\n---\n\n镜头属性 远景截断距离(远景裁剪)\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "FOG_OF_WAR_VISIBLE",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nconstant fogstate FOG_OF_WAR_VISIBLE\n```\n\n\n---\n\n迷雾状态 可见\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "Player",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nconstant native Player takes integer number returns player\n```\n\n\n---\n\nPlayer API\n\n查询玩家（指定编号）\n\n**Parameters:**\n- **`number`**: 玩家编号，编号从0开始，即玩家1编号为0\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "PLAYER_NEUTRAL_PASSIVE",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nconstant integer PLAYER_NEUTRAL_PASSIVE\n```\n\n\n---\n\n中立被动玩家编号(15/27，以1.29区分)\n\n其他玩家编号：中立敌对(12/24)，中立受害(13/25)，中立特殊(14/26)\n\n不随地图12/24人自动变化（以保存地图的编辑器版本为准），即在1.29或以上版本运行低版本编辑器制作的地图时，该值仍是15\n\n在低版本编辑器打开1.29或以上版本编辑器保存的地图时(如能打开)，中立玩家的单位会全部消失，需手动在物体管理器重设所属玩家，否则在游戏中(如能运行)这些单位也会消失\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "CreateUnit",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nnative CreateUnit takes player id, integer unitid, real x, real y, real face returns unit\n```\n\n\n---\n\nUnit API\n\nFacing arguments are specified in degrees\n\n新建单位(指定单位类型及坐标) [R]\n\n创建单位\n\n在指定位置创建一个单位\n\n示例: set u = CreateUnit(Player(0), FourCC(\"hfoo\"), 0.0, 0.0, 0.0) // 在原点创建步兵\n\n**Parameters:**\n- **`id`**: 拥有者玩家\n- **`unitid`**: 单位类型ID（使用FourCC获取，如FourCC(\"hfoo\")）\n- **`x`**: X坐标位置\n- **`y`**: Y坐标位置\n- **`face`**: 面向角度（弧度）\n\n**Returns:** 创建的单位\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "GetUnitX",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nconstant native GetUnitX takes unit whichUnit returns real\n```\n\n\n---\n\n获取指定单位 X 坐标 [R]\n\n获取单位X坐标\n\n获取指定单位的X坐标位置\n\n示例: set x = GetUnitX(u) // 获取单位u的X坐标\n\n**Parameters:**\n- **`whichUnit`**: 要获取坐标的单位\n\n**Returns:** 单位的X坐标\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "SetPlayerState",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nnative SetPlayerState takes player whichPlayer, playerstate whichPlayerState, integer value returns nothing\n```\n\n\n---\n\n设置玩家状态（指定数值）\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "PLAYER_STATE_GIVES_BOUNTY",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nconstant playerstate PLAYER_STATE_GIVES_BOUNTY\n```\n\n\n---\n\n玩家状态 给予奖励\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "RemoveUnit",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nnative RemoveUnit takes unit whichUnit returns nothing\n```\n\n\n---\n\n删除单位\n\n立即删除指定单位，不会留下尸体，不会触发死亡事件\n\n示例: call RemoveUnit(u) // 删除单位u\n\n**Parameters:**\n- **`whichUnit`**: 要删除的单位\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "CreateMultiboard",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nnative CreateMultiboard takes nothing returns multiboard\n```\n\n\n---\n\nMultiboard API\n\nCreate a multiboard object\n\n新建多面板 [R]\n\n不能在游戏初始化事件的触发器内创建，必须有时间差\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "SquareRoot",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nnative SquareRoot takes real x returns real\n```\n\n\n---\n\n平方根\n\n计算给定数值的平方根\n\n示例: SquareRoot(16) = 4, SquareRoot(25) = 5, SquareRoot(-4) = 0\n\n**Parameters:**\n- **`x`**: 输入数值\n\n**Returns:** 平方根值，如果 x <= 0 则返回 0\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "GetUnitTypeId",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nconstant native GetUnitTypeId takes unit whichUnit returns integer\n```\n\n\n---\n\n获取指定单位类型(返回四字符码)\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "StringLength",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nnative StringLength takes string s returns integer\n```\n\n\n---\n\n获取字符串长度\n\n计算字符串的字符数量\n\n示例: StringLength(\"Hello\") = 5, StringLength(\"\") = 0\n\n**Parameters:**\n- **`s`**: 要计算长度的字符串\n\n**Returns:** 字符串的字符数量\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "DialogAddButton",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nnative DialogAddButton takes dialog whichDialog, string buttonText, integer hotkey returns button\n```\n\n\n---\n\n添加指定对话框按钮 [R]\n\n即使按钮内容是用全局变量写入，按钮内容也不会随变量变化，添加时已经写死，除非清空重新添加按钮\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "CreateTrigger",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nnative CreateTrigger takes nothing returns trigger\n```\n\n\n---\n\nNative trigger interface\n\n新建触发器 [R]\n\n创建触发器\n\n创建一个新的触发器对象\n\n示例: set t = CreateTrigger() // 创建触发器\n\n**Returns:** 新创建的触发器\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "GetPlayerState",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nconstant native GetPlayerState takes player whichPlayer, playerstate whichPlayerState returns integer\n```\n\n\n---\n\n获取玩家指定状态\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "GetOwningPlayer",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nconstant native GetOwningPlayer takes unit whichUnit returns player\n```\n\n\n---\n\n获取指定单位所属玩家\n\n获取单位的拥有者玩家\n\n示例: set p = GetOwningPlayer(u) // 获取单位u的拥有者\n\n**Parameters:**\n- **`whichUnit`**: 要获取拥有者的单位\n\n**Returns:** 单位的拥有者玩家\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "PLAYER_NEUTRAL_AGGRESSIVE",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nconstant integer PLAYER_NEUTRAL_AGGRESSIVE\n```\n\n\n---\n\n中立敌对玩家编号(12/24，以1.29区分)\n\n其他玩家编号：中立受害(13/25)，中立特殊(14/26)，中立被动(15/27)\n\n不随地图12/24人自动变化（以保存地图的编辑器版本为准），即在1.29或以上版本运行低版本编辑器制作的地图时，该值仍是12\n\n在低版本编辑器打开1.29或以上版本编辑器保存的地图时(如能打开)，中立玩家的单位会全部消失，需手动在物体管理器重设所属玩家，否则在游戏中(如能运行)这些单位也会消失\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "sound",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\ntype sound = agent\n```\n\n\n---\n\n音效\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "SetUnitPosition",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nnative SetUnitPosition takes unit whichUnit, real newX, real newY returns nothing\n```\n\n\n---\n\n移动指定单位(立即)(指定坐标) [R]\n\n设置单位位置\n\n立即将单位移动到指定坐标位置\n\n示例: call SetUnitPosition(u, 100.0, 200.0) // 将单位移动到(100,200)\n\n**Parameters:**\n- **`whichUnit`**: 要移动的单位\n- **`newX`**: 新的X坐标\n- **`newY`**: 新的Y坐标\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "GetSpellTargetY",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nconstant native GetSpellTargetY takes nothing returns real\n```\n\n\n---\n\n事件响应 获取被释放技能的目标(点 Y 坐标)\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "CreateSound",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nnative CreateSound takes string fileName, boolean looping, boolean is3D, boolean stopwhenoutofrange, integer fadeInRate, integer fadeOutRate, string eaxSetting returns sound\n```\n\n\n---\n\n创建音效\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "Preload",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nnative Preload takes string filename returns nothing\n```\n\n\n---\n\n预载文件\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "KillSoundWhenDone",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nnative KillSoundWhenDone takes sound soundHandle returns nothing\n```\n\n\n---\n\n播放完成时关闭音效\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "SetSoundVolume",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nnative SetSoundVolume takes sound soundHandle, integer volume returns nothing\n```\n\n\n---\n\n设置音效播放音量 [R]\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "SetSoundPitch",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nnative SetSoundPitch takes sound soundHandle, real pitch returns nothing\n```\n\n\n---\n\n设置音效播放速率\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "TriggerAddAction",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nnative TriggerAddAction takes trigger whichTrigger, code actionFunc returns triggeraction\n```\n\n\n---\n\n添加触发器动作\n\n为触发器添加执行动作，当条件满足时会执行此动作\n\n示例: call TriggerAddAction(t, function MyAction) // 添加动作\n\n**Parameters:**\n- **`whichTrigger`**: 要添加动作的触发器\n- **`actionFunc`**: 动作函数\n\n**Returns:** 添加的动作对象\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "rect",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\ntype rect = agent\n```\n\n\n---\n\n矩形区域\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "trigger",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\ntype trigger = agent\n```\n\n\n---\n\n触发器\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "I2S",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nnative I2S takes integer i returns string\n```\n\n\n---\n\n转换整数成字符串\n\n将整数值转换为字符串\n\n示例: I2S(123) = \"123\", I2S(-45) = \"-45\"\n\n**Parameters:**\n- **`i`**: 要转换的整数\n\n**Returns:** 对应的字符串\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "SetUnitPathing",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nnative SetUnitPathing takes unit whichUnit, boolean flag returns nothing\n```\n\n\n---\n\n打开/关闭 指定单位碰撞体积\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "CreateFogModifierRadius",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nnative CreateFogModifierRadius takes player forWhichPlayer, fogstate whichState, real centerx, real centerY, real radius, boolean useSharedVision, boolean afterUnits returns fogmodifier\n```\n\n\n---\n\n新建可见度修正器(圆形范围) [R]\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "FogModifierStart",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nnative FogModifierStart takes fogmodifier whichFogModifier returns nothing\n```\n\n\n---\n\n启用指定可见度修正器\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "FogMaskEnable",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nnative FogMaskEnable takes boolean enable returns nothing\n```\n\n\n---\n\n启用/禁用 黑色阴影 [R]\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "FogEnable",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nnative FogEnable takes boolean enable returns nothing\n```\n\n\n---\n\n启用/禁用 迷雾 [R]\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "DisplayTimedTextToPlayer",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nnative DisplayTimedTextToPlayer takes player toPlayer, real x, real y, real duration, string message returns nothing\n```\n\n\n---\n\n对指定玩家显示文本(指定时间) [R]\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "ClearTextMessages",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nnative ClearTextMessages takes nothing returns nothing\n```\n\n\n---\n\n清空文本信息(所有玩家) [R]\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "TimerStart",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nnative TimerStart takes timer whichTimer, real timeout, boolean periodic, code handlerFunc returns nothing\n```\n\n\n---\n\n开始计时器(计时) [C]\n\n**Parameters:**\n- **`whichTimer`**: 计时器\n- **`timeout`**: 超时/倒计时初始值\n- **`periodic`**: 是否循环\n- **`handlerFunc`**: 到期后运行的函数\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "item",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\ntype item = widget\n```\n\n\n---\n\n物品\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "SetTextTagText",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nnative SetTextTagText takes texttag t, string s, real height returns nothing\n```\n\n\n---\n\n设置漂浮文字文本 [R]\n\n**Parameters:**\n- **`height`**: 文字高度，可使用 TextTagSize2Height(任意实数) 转换字号(字体大小)获得\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "R2S",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nnative R2S takes real r returns string\n```\n\n\n---\n\n转换实数成字符串\n\n将实数值转换为字符串（默认精度）\n\n示例: R2S(3.14) = \"3.14\", R2S(-2.5) = \"-2.5\"\n\n**Parameters:**\n- **`r`**: 要转换的实数\n\n**Returns:** 对应的字符串\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "unit",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\ntype unit = widget\n```\n\n\n---\n\n单位\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "AddSpecialEffectTarget",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nnative AddSpecialEffectTarget takes string modelName, widget targetWidget, string attachPointName returns effect\n```\n\n\n---\n\n新建特效(绑定到单位/物品/可破坏物) [R]\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "UnitAddAbility",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nnative UnitAddAbility takes unit whichUnit, integer abilityId returns boolean\n```\n\n\n---\n\n添加指定技能到指定单位 [R]\n\n添加的技能默认为非永久性，会在单位变身恢复时消失，若要不消失，需设置技能永久性 UnitMakeAbilityPermanent\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "group",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\ntype group = agent\n```\n\n\n---\n\n单位组\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "effect",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\ntype effect = agent\n```\n\n\n---\n\n特效\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "IssueImmediateOrder",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nnative IssueImmediateOrder takes unit whichUnit, string order returns boolean\n```\n\n\n---\n\n发布命令(无目标)\n\n**Parameters:**\n- **`order`**: 技能命令字符串可在 记录物编的文件 找到\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "GetUnitAbilityLevel",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nnative GetUnitAbilityLevel takes unit whichUnit, integer abilcode returns integer\n```\n\n\n---\n\n获取指定单位技能等级 [R]\n\n对于触发器添加的技能，在AI脚本中似乎只返回0，不论技能是否存在\n\n某些技能本身的等级为0，但在AI脚本中，只要单位拥有技能，也会返回等级大于0，比如'Apit'\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "GetRectMaxY",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nnative GetRectMaxY takes rect whichRect returns real\n```\n\n\n---\n\n获取矩形区域最大 Y 坐标\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "SetCameraTargetController",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nnative SetCameraTargetController takes unit whichUnit, real xoffset, real yoffset, boolean inheritOrientation returns nothing\n```\n\n\n---\n\n锁定镜头到单位(所有玩家) [R]\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "SetCameraField",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nnative SetCameraField takes camerafield whichField, real value, real duration returns nothing\n```\n\n\n---\n\n设置镜头属性(所有玩家)(限时) [R]\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "CAMERA_FIELD_ROTATION",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nconstant camerafield CAMERA_FIELD_ROTATION\n```\n\n\n---\n\n镜头属性 Z 轴旋转角度(旋转)\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "Location",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nnative Location takes real x, real y returns location\n```\n\n\n---\n\n转换坐标成点\n\n会创建点，用完请注意排泄\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "SetUnitFlyHeight",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nnative SetUnitFlyHeight takes unit whichUnit, real newHeight, real rate returns nothing\n```\n\n\n---\n\n设置指定单位飞行高度\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "R2I",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nnative R2I takes real r returns integer\n```\n\n\n---\n\n转换实数成整数\n\n将实数值转换为整数值（截断小数部分）\n\n示例: R2I(7.9) = 7, R2I(-7.9) = -7, R2I(3.2) = 3\n\n**Parameters:**\n- **`r`**: 要转换的实数\n\n**Returns:** 截断小数后的整数值（大于0时向下取整，小于0时向上取整）\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "GetWorldBounds",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nnative GetWorldBounds takes nothing returns rect\n```\n\n\n---\n\nReturns full map bounds, including unplayable borders, in world coordinates\n\nReturns full map bounds, including unplayable borders, in world coordinates\n\n获取完整地图区域(包括不可玩的边界)\n\n会创建区域，用完请注意排泄\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "GetRectMaxX",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nnative GetRectMaxX takes rect whichRect returns real\n```\n\n\n---\n\n获取矩形区域最大 X 坐标\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "CreateRegion",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nnative CreateRegion takes nothing returns region\n```\n\n\n---\n\n新建不规则区域 [R]\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "GetRectMinY",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nnative GetRectMinY takes rect whichRect returns real\n```\n\n\n---\n\n获取矩形区域最小 Y 坐标\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "RegionAddRect",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nnative RegionAddRect takes region whichRegion, rect r returns nothing\n```\n\n\n---\n\n在指定不规则区域添加矩形区域 [R]\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "GetPlayerId",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nconstant native GetPlayerId takes player whichPlayer returns integer\n```\n\n\n---\n\n获取玩家编号 [R]\n\n编号从0开始，即玩家1编号为0\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "CAMERA_FIELD_ZOFFSET",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nconstant camerafield CAMERA_FIELD_ZOFFSET\n```\n\n\n---\n\n镜头属性 Z 轴偏移(高度位移)\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "FOG_OF_WAR_MASKED",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nconstant fogstate FOG_OF_WAR_MASKED\n```\n\n\n---\n\n迷雾状态 黑色阴影\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "SetUnitState",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nnative SetUnitState takes unit whichUnit, unitstate whichUnitState, real newVal returns nothing\n```\n\n\n---\n\n设置指定单位属性 [R]\n\n设置单位状态\n\n设置单位的各种状态值（生命值、魔法值等）\n\n示例: call SetUnitState(u, UNIT_STATE_LIFE, 100.0) // 设置单位生命值为100\n\n**Parameters:**\n- **`whichUnitState`**: 单位状态类型 (UNIT_STATE_LIFE, UNIT_STATE_MANA, UNIT_STATE_MAX_LIFE, UNIT_STATE_MAX_MANA等)\n- **`whichUnit`**: 要设置的单位\n- **`newVal`**: 新的状态值\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "UNIT_STATE_MANA",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nconstant unitstate UNIT_STATE_MANA\n```\n\n\n---\n\n单位状态 单位当前法力值\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "PauseTimer",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nnative PauseTimer takes timer whichTimer returns nothing\n```\n\n\n---\n\n暂停计时器(计时) [R]\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "TimerGetRemaining",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nnative TimerGetRemaining takes timer whichTimer returns real\n```\n\n\n---\n\n获取计时器剩余时间\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "DAMAGE_TYPE_MAGIC",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nconstant damagetype DAMAGE_TYPE_MAGIC\n```\n\n\n---\n\n伤害类型 魔法\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "ATTACK_TYPE_NORMAL",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nconstant attacktype ATTACK_TYPE_NORMAL\n```\n\n\n---\n\n攻击类型 普通\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "EVENT_PLAYER_UNIT_SPELL_ENDCAST",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nconstant playerunitevent EVENT_PLAYER_UNIT_SPELL_ENDCAST\n```\n\n\n---\n\n玩家单位事件 停止施放技能\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "EVENT_PLAYER_UNIT_ISSUED_POINT_ORDER",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nconstant playerunitevent EVENT_PLAYER_UNIT_ISSUED_POINT_ORDER\n```\n\n\n---\n\n玩家单位事件 发布命令(指定点)\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "EVENT_PLAYER_UNIT_DEATH",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nconstant playerunitevent EVENT_PLAYER_UNIT_DEATH\n```\n\n\n---\n\n玩家单位事件 单位死亡\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "OrderId",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nconstant native OrderId takes string orderIdString returns integer\n```\n\n\n---\n\n转换命令字符串成命令ID\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "GetUnitY",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nconstant native GetUnitY takes unit whichUnit returns real\n```\n\n\n---\n\n获取指定单位 Y 坐标 [R]\n\n获取单位Y坐标\n\n获取指定单位的Y坐标位置\n\n示例: set y = GetUnitY(u) // 获取单位u的Y坐标\n\n**Parameters:**\n- **`whichUnit`**: 要获取坐标的单位\n\n**Returns:** 单位的Y坐标\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "GetOrderPointY",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nconstant native GetOrderPointY takes nothing returns real\n```\n\n\n---\n\n事件响应 获取命令目标点 Y 坐标 [R](对应发布命令(指定点)等事件)\n\nEVENT_PLAYER_UNIT_ISSUED_POINT_ORDER\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "GetOrderPointX",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nconstant native GetOrderPointX takes nothing returns real\n```\n\n\n---\n\n事件响应 获取命令目标点 X 坐标 [R](对应发布命令(指定点)等事件)\n\nEVENT_PLAYER_UNIT_ISSUED_POINT_ORDER\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "IssuePointOrder",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nnative IssuePointOrder takes unit whichUnit, string order, real x, real y returns boolean\n```\n\n\n---\n\n发布命令(指定坐标)\n\n可能只返回false，不论执行成败\n\n**Parameters:**\n- **`order`**: 技能命令字符串可在 记录物编的文件 找到\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "SetTextTagVisibility",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nnative SetTextTagVisibility takes texttag t, boolean flag returns nothing\n```\n\n\n---\n\n显示/隐藏 漂浮文字 (所有玩家) [R]\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "IssueImmediateOrderById",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nnative IssueImmediateOrderById takes unit whichUnit, integer order returns boolean\n```\n\n\n---\n\n按ID发布命令(无目标)\n\n**Parameters:**\n- **`order`**: 技能命令ID可在 记录物编的文件 找到\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "GetIssuedOrderId",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nconstant native GetIssuedOrderId takes nothing returns integer\n```\n\n\n---\n\n事件响应 获取发布的命令ID\n\nEVENT_PLAYER_UNIT_ISSUED_ORDER\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "DialogSetMessage",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nnative DialogSetMessage takes dialog whichDialog, string messageText returns nothing\n```\n\n\n---\n\n设置指定对话框标题\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    },
+    {
+      "symbolName": "HaveSavedString",
+      "filePath": "c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j",
+      "content": "\n```jass\nnative HaveSavedString takes hashtable table, integer parentKey, integer childKey returns boolean\n```\n\n\n---\n\n查询指定哈希表的指定位置是否记录了字符串\n\n@version 1.24\n\n**文件:** `c:\\Users\\Leon\\.vscode\\extensions\\jass.jass-1.9.7\\static\\common.j`"
+    }
+  ],
+  "timestamp": 1775953541960
+}

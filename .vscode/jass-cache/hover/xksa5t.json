@@ -1,0 +1,321 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UserInterface.j",
+  "items": [
+    {
+      "symbolName": "UserInterface",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UserInterface.j",
+      "content": "\n```jass\nlibrary UserInterface requires UnitDex, Camera initializer Init\n```\n\n\n**文件:** `libraries/UserInterface.j`"
+    },
+    {
+      "symbolName": "show",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UserInterface.j",
+      "content": "\n```jass\nmethod show takes boolean flag, Camera Cam returns nothing\n```\n\n\n**所属:** `UIButton`\n**文件:** `libraries/UserInterface.j`"
+    },
+    {
+      "symbolName": "show",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UserInterface.j",
+      "content": "\n```jass\nmethod show takes boolean show, Camera Cam returns nothing\n```\n\n\n**所属:** `UIPicture`\n**文件:** `libraries/UserInterface.j`"
+    },
+    {
+      "symbolName": "show",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UserInterface.j",
+      "content": "\n```jass\nmethod show takes boolean show, Camera Cam returns nothing\n```\n\n\n**所属:** `UIText`\n**文件:** `libraries/UserInterface.j`"
+    },
+    {
+      "symbolName": "showPlayer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UserInterface.j",
+      "content": "\n```jass\nmethod showPlayer takes player p, boolean flag, Camera cam returns nothing\n```\n\n\n**所属:** `UIButton`\n**文件:** `libraries/UserInterface.j`"
+    },
+    {
+      "symbolName": "showPlayer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UserInterface.j",
+      "content": "\n```jass\nmethod showPlayer takes player p, boolean flag, Camera cam returns nothing\n```\n\n\n**所属:** `UIPicture`\n**文件:** `libraries/UserInterface.j`"
+    },
+    {
+      "symbolName": "dummy",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UserInterface.j",
+      "content": "\n```jass\nreadonly unit dummy\n```\n\n\n**所属:** `UIText`\n**文件:** `libraries/UserInterface.j`"
+    },
+    {
+      "symbolName": "Interface",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UserInterface.j",
+      "content": "\n```jass\nstruct Interface extends array\n```\n\n\n**文件:** `libraries/UserInterface.j`"
+    },
+    {
+      "symbolName": "GetClickingPlayer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UserInterface.j",
+      "content": "\n```jass\nfunction GetClickingPlayer takes nothing returns player\n```\n\n\n**文件:** `libraries/UserInterface.j`"
+    },
+    {
+      "symbolName": "picture",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UserInterface.j",
+      "content": "\n```jass\nreadonly unit picture\n```\n\n\n**所属:** `UIButton`\n**文件:** `libraries/UserInterface.j`"
+    },
+    {
+      "symbolName": "picture",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UserInterface.j",
+      "content": "\n```jass\nreadonly unit picture\n```\n\n\n**所属:** `UIPicture`\n**文件:** `libraries/UserInterface.j`"
+    },
+    {
+      "symbolName": "z",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UserInterface.j",
+      "content": "\n```jass\nreadonly real z\n```\n\n\n**所属:** `UIButton`\n**文件:** `libraries/UserInterface.j`"
+    },
+    {
+      "symbolName": "z",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UserInterface.j",
+      "content": "\n```jass\nreadonly real z\n```\n\n\n**所属:** `UIPicture`\n**文件:** `libraries/UserInterface.j`"
+    },
+    {
+      "symbolName": "z",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UserInterface.j",
+      "content": "\n```jass\nreadonly real z\n```\n\n\n**所属:** `UIText`\n**文件:** `libraries/UserInterface.j`"
+    },
+    {
+      "symbolName": "setPosition",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UserInterface.j",
+      "content": "\n```jass\nmethod setPosition takes real minx, real maxy returns nothing\n```\n\n\n**所属:** `UIButton`\n**文件:** `libraries/UserInterface.j`"
+    },
+    {
+      "symbolName": "setPosition",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UserInterface.j",
+      "content": "\n```jass\nmethod setPosition takes real minx, real maxy returns nothing\n```\n\n\n**所属:** `UIPicture`\n**文件:** `libraries/UserInterface.j`"
+    },
+    {
+      "symbolName": "setPosition",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UserInterface.j",
+      "content": "\n```jass\nmethod setPosition takes real minx, real maxy returns nothing\n```\n\n\n**所属:** `UIText`\n**文件:** `libraries/UserInterface.j`"
+    },
+    {
+      "symbolName": "camera",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UserInterface.j",
+      "content": "\n```jass\nreadonly Camera camera\n```\n\n\n**所属:** `UIButton`\n**文件:** `libraries/UserInterface.j`"
+    },
+    {
+      "symbolName": "camera",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UserInterface.j",
+      "content": "\n```jass\nreadonly Camera camera\n```\n\n\n**所属:** `UIPicture`\n**文件:** `libraries/UserInterface.j`"
+    },
+    {
+      "symbolName": "camera",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UserInterface.j",
+      "content": "\n```jass\nreadonly Camera camera\n```\n\n\n**所属:** `UIText`\n**文件:** `libraries/UserInterface.j`"
+    },
+    {
+      "symbolName": "FindModelAnimIndex",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UserInterface.j",
+      "content": "\n```jass\nfunction FindModelAnimIndex takes real w, real h, real z returns integer\n```\n\n\n---\n\nadjusts\n\n**文件:** `libraries/UserInterface.j`"
+    },
+    {
+      "symbolName": "DummyLoc",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UserInterface.j",
+      "content": "\n```jass\nlocation DummyLoc\n```\n\n\n**文件:** `libraries/UserInterface.j`"
+    },
+    {
+      "symbolName": "create",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UserInterface.j",
+      "content": "\n```jass\nstatic method create takes real minx, real maxy, real W, real H, real z, integer texture returns thistype\n```\n\n\n**所属:** `UIButton`\n**文件:** `libraries/UserInterface.j`"
+    },
+    {
+      "symbolName": "create",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UserInterface.j",
+      "content": "\n```jass\nstatic method create takes real minx, real maxy, real w, real h, real z, integer texture returns thistype\n```\n\n\n**所属:** `UIPicture`\n**文件:** `libraries/UserInterface.j`"
+    },
+    {
+      "symbolName": "create",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UserInterface.j",
+      "content": "\n```jass\nstatic method create takes real minx, real maxy, real z returns thistype\n```\n\n\n**所属:** `UIText`\n**文件:** `libraries/UserInterface.j`"
+    },
+    {
+      "symbolName": "displayed",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UserInterface.j",
+      "content": "\n```jass\nreadonly boolean displayed\n```\n\n\n**所属:** `UIButton`\n**文件:** `libraries/UserInterface.j`"
+    },
+    {
+      "symbolName": "displayed",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UserInterface.j",
+      "content": "\n```jass\nreadonly boolean displayed\n```\n\n\n**所属:** `UIPicture`\n**文件:** `libraries/UserInterface.j`"
+    },
+    {
+      "symbolName": "displayed",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UserInterface.j",
+      "content": "\n```jass\nreadonly boolean displayed\n```\n\n\n**所属:** `UIText`\n**文件:** `libraries/UserInterface.j`"
+    },
+    {
+      "symbolName": "update",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UserInterface.j",
+      "content": "\n```jass\nmethod update takes nothing returns nothing\n```\n\n\n**所属:** `UIButton`\n**文件:** `libraries/UserInterface.j`"
+    },
+    {
+      "symbolName": "update",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UserInterface.j",
+      "content": "\n```jass\nmethod update takes nothing returns nothing\n```\n\n\n**所属:** `UIPicture`\n**文件:** `libraries/UserInterface.j`"
+    },
+    {
+      "symbolName": "update",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UserInterface.j",
+      "content": "\n```jass\nmethod update takes nothing returns nothing\n```\n\n\n**所属:** `UIText`\n**文件:** `libraries/UserInterface.j`"
+    },
+    {
+      "symbolName": "triggerR",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UserInterface.j",
+      "content": "\n```jass\ntrigger triggerR\n```\n\n\n**所属:** `UIButton`\n**文件:** `libraries/UserInterface.j`"
+    },
+    {
+      "symbolName": "destroy",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UserInterface.j",
+      "content": "\n```jass\nmethod destroy takes nothing returns nothing\n```\n\n\n**所属:** `UIButton`\n**文件:** `libraries/UserInterface.j`"
+    },
+    {
+      "symbolName": "destroy",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UserInterface.j",
+      "content": "\n```jass\nmethod destroy takes nothing returns nothing\n```\n\n\n**所属:** `UIPicture`\n**文件:** `libraries/UserInterface.j`"
+    },
+    {
+      "symbolName": "destroy",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UserInterface.j",
+      "content": "\n```jass\nmethod destroy takes nothing returns nothing\n```\n\n\n**所属:** `UIText`\n**文件:** `libraries/UserInterface.j`"
+    },
+    {
+      "symbolName": "updateAll",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UserInterface.j",
+      "content": "\n```jass\nstatic method updateAll takes nothing returns nothing\n```\n\n\n**所属:** `UIButton`\n**文件:** `libraries/UserInterface.j`"
+    },
+    {
+      "symbolName": "updateAll",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UserInterface.j",
+      "content": "\n```jass\nstatic method updateAll takes nothing returns nothing\n```\n\n\n**所属:** `UIPicture`\n**文件:** `libraries/UserInterface.j`"
+    },
+    {
+      "symbolName": "updateAll",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UserInterface.j",
+      "content": "\n```jass\nstatic method updateAll takes nothing returns nothing\n```\n\n\n**所属:** `UIText`\n**文件:** `libraries/UserInterface.j`"
+    },
+    {
+      "symbolName": "updateAll",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UserInterface.j",
+      "content": "\n```jass\nstatic method updateAll takes boolean but, boolean pic, boolean tex returns nothing\n```\n\n\n**所属:** `Interface`\n**文件:** `libraries/UserInterface.j`"
+    },
+    {
+      "symbolName": "onLeftClick",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UserInterface.j",
+      "content": "\n```jass\nfilterfunc onLeftClick\n```\n\n\n**所属:** `UIButton`\n**文件:** `libraries/UserInterface.j`"
+    },
+    {
+      "symbolName": "AllShow",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UserInterface.j",
+      "content": "\n```jass\nstatic readonly thistype array AllShow\n```\n\n\n**所属:** `UIButton`\n**文件:** `libraries/UserInterface.j`"
+    },
+    {
+      "symbolName": "AllShow",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UserInterface.j",
+      "content": "\n```jass\nstatic readonly thistype array AllShow\n```\n\n\n**所属:** `UIPicture`\n**文件:** `libraries/UserInterface.j`"
+    },
+    {
+      "symbolName": "AllShow",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UserInterface.j",
+      "content": "\n```jass\nstatic readonly thistype array AllShow\n```\n\n\n**所属:** `UIText`\n**文件:** `libraries/UserInterface.j`"
+    },
+    {
+      "symbolName": "DummyTree",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UserInterface.j",
+      "content": "\n```jass\ndestructable DummyTree\n```\n\n\n**文件:** `libraries/UserInterface.j`"
+    },
+    {
+      "symbolName": "createEx",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UserInterface.j",
+      "content": "\n```jass\nstatic method createEx takes real minx, real maxy, real z, real scale, integer unitId, real modelWidth, real modelHeight, integer texture returns thistype\n```\n\n\n**所属:** `UIPicture`\n**文件:** `libraries/UserInterface.j`"
+    },
+    {
+      "symbolName": "createEx",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UserInterface.j",
+      "content": "\n```jass\nstatic method createEx takes player p, real minx, real maxy, real z returns thistype\n```\n\n\n**所属:** `UIText`\n**文件:** `libraries/UserInterface.j`"
+    },
+    {
+      "symbolName": "InterfaceClickL_Timer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UserInterface.j",
+      "content": "\n```jass\nfunction InterfaceClickL_Timer takes nothing returns nothing\n```\n\n\n**文件:** `libraries/UserInterface.j`"
+    },
+    {
+      "symbolName": "GetTerrainZ",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UserInterface.j",
+      "content": "\n```jass\nfunction GetTerrainZ takes real x, real y returns real\n```\n\n\n**文件:** `libraries/UserInterface.j`"
+    },
+    {
+      "symbolName": "width",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UserInterface.j",
+      "content": "\n```jass\nreadonly real width\n```\n\n\n**所属:** `UIButton`\n**文件:** `libraries/UserInterface.j`"
+    },
+    {
+      "symbolName": "width",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UserInterface.j",
+      "content": "\n```jass\nreadonly real width\n```\n\n\n**所属:** `UIPicture`\n**文件:** `libraries/UserInterface.j`"
+    },
+    {
+      "symbolName": "height",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UserInterface.j",
+      "content": "\n```jass\nreadonly real height\n```\n\n\n**所属:** `UIButton`\n**文件:** `libraries/UserInterface.j`"
+    },
+    {
+      "symbolName": "height",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UserInterface.j",
+      "content": "\n```jass\nreadonly real height\n```\n\n\n**所属:** `UIPicture`\n**文件:** `libraries/UserInterface.j`"
+    },
+    {
+      "symbolName": "animIndex",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UserInterface.j",
+      "content": "\n```jass\ninteger animIndex\n```\n\n\n**所属:** `UIButton`\n**文件:** `libraries/UserInterface.j`"
+    },
+    {
+      "symbolName": "animIndex",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UserInterface.j",
+      "content": "\n```jass\ninteger animIndex\n```\n\n\n**所属:** `UIPicture`\n**文件:** `libraries/UserInterface.j`"
+    },
+    {
+      "symbolName": "UIButton",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UserInterface.j",
+      "content": "\n```jass\nstruct UIButton\n```\n\n\n**文件:** `libraries/UserInterface.j`"
+    },
+    {
+      "symbolName": "text",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UserInterface.j",
+      "content": "\n```jass\nreadonly texttag text\n```\n\n\n**所属:** `UIText`\n**文件:** `libraries/UserInterface.j`"
+    },
+    {
+      "symbolName": "selectUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UserInterface.j",
+      "content": "\n```jass\nunit selectUnit\n```\n\n\n**所属:** `UIButton`\n**文件:** `libraries/UserInterface.j`"
+    },
+    {
+      "symbolName": "customValue",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UserInterface.j",
+      "content": "\n```jass\ninteger customValue\n```\n\n\n**所属:** `UIButton`\n**文件:** `libraries/UserInterface.j`"
+    },
+    {
+      "symbolName": "customValue",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UserInterface.j",
+      "content": "\n```jass\ninteger customValue\n```\n\n\n**所属:** `UIPicture`\n**文件:** `libraries/UserInterface.j`"
+    },
+    {
+      "symbolName": "customValue",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UserInterface.j",
+      "content": "\n```jass\ninteger customValue\n```\n\n\n**所属:** `UIText`\n**文件:** `libraries/UserInterface.j`"
+    },
+    {
+      "symbolName": "UIPicture",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UserInterface.j",
+      "content": "\n```jass\nstruct UIPicture\n```\n\n\n**文件:** `libraries/UserInterface.j`"
+    },
+    {
+      "symbolName": "Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UserInterface.j",
+      "content": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**文件:** `libraries/UserInterface.j`"
+    },
+    {
+      "symbolName": "onRightClick",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UserInterface.j",
+      "content": "\n```jass\nfilterfunc onRightClick\n```\n\n\n**所属:** `UIButton`\n**文件:** `libraries/UserInterface.j`"
+    }
+  ],
+  "timestamp": 1776566547882
+}
