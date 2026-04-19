@@ -185,7 +185,12 @@
       "symbolName": "GetWaveSlotByUnit",
       "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
       "content": "\n```jass\nfunction GetWaveSlotByUnit takes unit u returns WaveSlot\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/SwlsWave.j`"
+    },
+    {
+      "symbolName": "WaveEventIsBoss",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "content": "\n```jass\nboolean WaveEventIsBoss\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/SwlsWave.j`"
     }
   ],
-  "timestamp": 1776464768268
+  "timestamp": 1776580972668
 }

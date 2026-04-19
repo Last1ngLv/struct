@@ -85,7 +85,12 @@
       "symbolName": "TRADER_TRACK_COUNT",
       "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime.j",
       "content": "\n```jass\nconstant integer TRADER_TRACK_COUNT\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/RestTime.j`"
+    },
+    {
+      "symbolName": "TenderAreaSound",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime.j",
+      "content": "\n```jass\nsound TenderAreaSound\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/RestTime.j`"
     }
   ],
-  "timestamp": 1776569161640
+  "timestamp": 1776589999607
 }

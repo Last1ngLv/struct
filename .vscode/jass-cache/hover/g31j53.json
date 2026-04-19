@@ -40,7 +40,12 @@
       "symbolName": "EnablePreSelect",
       "filePath": "c:\\Users\\Leon\\.antigravity\\extensions\\jass.jass-1.9.4\\static\\common.j",
       "content": "\n```jass\nnative EnablePreSelect takes boolean state, boolean ui returns nothing\n```\n\n\n---\n\n启用/禁用 预选\n\n**文件:** `c:\\Users\\Leon\\.antigravity\\extensions\\jass.jass-1.9.4\\static\\common.j`"
+    },
+    {
+      "symbolName": "GetHandleId",
+      "filePath": "c:\\Users\\Leon\\.antigravity\\extensions\\jass.jass-1.9.4\\static\\common.j",
+      "content": "\n```jass\nnative GetHandleId takes handle h returns integer\n```\n\n\n---\n\n获取句柄ID\n\n获取任意句柄对象的唯一标识符\n\n示例: GetHandleId(GetTriggerUnit()) = 单位的唯一ID\n\n注意: 一般用于哈希表键值（hashtable key）\n\n**Parameters:**\n- **`h`**: 任意handle子类型（单位、物品、特效等）\n\n**Returns:** 句柄的唯一ID\n\n**文件:** `c:\\Users\\Leon\\.antigravity\\extensions\\jass.jass-1.9.4\\static\\common.j`"
     }
   ],
-  "timestamp": 1776464782985
+  "timestamp": 1776580975444
 }
