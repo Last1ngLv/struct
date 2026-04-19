@@ -20,8 +20,7 @@ library HealthBarTextTags initializer Init requires Table, TimerUtils, PlayerUti
         private timer HealthBarEnemyTicker = null
         private real HealthBarEnemyNow = 0.00
 
-        private texttag array HeroNameTag
-        private texttag array HeroBarTag
+        private texttag array HeroTag
         private integer array HeroBoundHandleId
         private integer array HeroLastPercent
 
@@ -195,6 +194,10 @@ library HealthBarTextTags initializer Init requires Table, TimerUtils, PlayerUti
         return result + "|r |cffffffff" + I2S(percent) + "%|r"
     endfunction
 
+    private function HealthBarGetHeroText takes integer pid, integer percent returns string
+        return User.fromIndex(pid).nameColored + "\n" + HealthBarGetBarText(percent)
+    endfunction
+
     private function HealthBarGetLifeColorR takes integer percent returns integer
         local integer filled = HealthBarGetFilledSegments(percent)
         if filled >= 7 then
@@ -254,7 +257,7 @@ library HealthBarTextTags initializer Init requires Table, TimerUtils, PlayerUti
     endfunction
 
     function GetHealthBarTextTagCap takes nothing returns integer
-        return HEALTH_BAR_ENEMY_SLOTS_PER_VIEWER + User.AmountPlaying*2
+        return HEALTH_BAR_ENEMY_SLOTS_PER_VIEWER + User.AmountPlaying
     endfunction
 
     private function HealthBarSetTagPosition takes texttag tag, unit u, real xOffset, real zOffset returns nothing
@@ -271,58 +274,42 @@ library HealthBarTextTags initializer Init requires Table, TimerUtils, PlayerUti
 
     private function HealthBarUpdateHeroEntry takes integer pid returns nothing
         local unit hero = PlayerHero[pid]
-        local texttag nameTag = HeroNameTag[pid]
-        local texttag barTag = HeroBarTag[pid]
+        local texttag heroTag = HeroTag[pid]
         local integer hid = 0
         local integer percent
 
         if not User.fromIndex(pid).isPlaying or not HealthBarIsTrackedUnit(hero) then
-            if nameTag != null then
-                call SetTextTagVisibility(nameTag, false)
-            endif
-            if barTag != null then
-                call SetTextTagVisibility(barTag, false)
+            if heroTag != null then
+                call SetTextTagVisibility(heroTag, false)
             endif
             set HeroBoundHandleId[pid] = 0
             set HeroLastPercent[pid] = -1
             set hero = null
-            set nameTag = null
-            set barTag = null
+            set heroTag = null
             return
         endif
 
-        if nameTag == null then
-            set nameTag = HealthBarCreatePersistentTextTag()
-            set HeroNameTag[pid] = nameTag
-        endif
-        if barTag == null then
-            set barTag = HealthBarCreatePersistentTextTag()
-            set HeroBarTag[pid] = barTag
+        if heroTag == null then
+            set heroTag = HealthBarCreatePersistentTextTag()
+            set HeroTag[pid] = heroTag
         endif
 
         set hid = GetHandleId(hero)
-        call SetTextTagVisibility(nameTag, true)
-        call SetTextTagVisibility(barTag, true)
-        call HealthBarSetTagPosition(nameTag, hero, HEALTH_BAR_HERO_X_OFFSET, HEALTH_BAR_HERO_NAME_Z)
-        call HealthBarSetTagPosition(barTag, hero, HEALTH_BAR_HERO_X_OFFSET, HEALTH_BAR_HERO_BAR_Z)
+        call SetTextTagVisibility(heroTag, true)
+        call HealthBarSetTagPosition(heroTag, hero, HEALTH_BAR_HERO_X_OFFSET, HEALTH_BAR_HERO_BAR_Z)
 
         if HeroBoundHandleId[pid] != hid then
             set HeroBoundHandleId[pid] = hid
             set HeroLastPercent[pid] = -1
-            call SetTextTagText(nameTag, User.fromIndex(pid).name, HEALTH_BAR_HERO_NAME_SIZE)
-            call SetTextTagColor(nameTag, HealthBarGetPlayerColorR(pid), HealthBarGetPlayerColorG(pid), HealthBarGetPlayerColorB(pid), HEALTH_BAR_ALPHA)
         endif
 
         set percent = HealthBarGetPercent(hero)
-        if HeroLastPercent[pid] != percent then
-            set HeroLastPercent[pid] = percent
-            call SetTextTagText(barTag, HealthBarGetBarText(percent), HEALTH_BAR_HERO_BAR_SIZE)
-            call SetTextTagColor(barTag, HealthBarGetLifeColorR(percent), HealthBarGetLifeColorG(percent), HealthBarGetLifeColorB(percent), HEALTH_BAR_ALPHA)
-        endif
+        set HeroLastPercent[pid] = percent
+        call SetTextTagText(heroTag, HealthBarGetHeroText(pid, percent), HEALTH_BAR_HERO_BAR_SIZE)
+        call SetTextTagColor(heroTag, 255, 255, 255, HEALTH_BAR_ALPHA)
 
         set hero = null
-        set nameTag = null
-        set barTag = null
+        set heroTag = null
     endfunction
 
     private function HealthBarHeroTick takes nothing returns nothing
