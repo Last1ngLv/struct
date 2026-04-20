@@ -60,7 +60,12 @@
       "symbolName": "AI_BOSS_REINFORCEMENT_TEXT_Z_OFFSET",
       "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
       "content": "\n```jass\nconstant real AI_BOSS_REINFORCEMENT_TEXT_Z_OFFSET\n```\n\n\n**文件:** `WaveSysAnAI/AI/IAManager.j`"
+    },
+    {
+      "symbolName": "AI_BOSS_REINFORCEMENT_TEXT_LIFESPAN",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "content": "\n```jass\nconstant real AI_BOSS_REINFORCEMENT_TEXT_LIFESPAN\n```\n\n\n**文件:** `WaveSysAnAI/AI/IAManager.j`"
     }
   ],
-  "timestamp": 1776475581427
+  "timestamp": 1776650023076
 }

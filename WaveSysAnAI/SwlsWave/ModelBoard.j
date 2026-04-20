@@ -65,6 +65,10 @@ scope ModelBoard
         return "|cFFFF6666Muertes|r|cFFFFFFFF: |r|cFFFFB3B3" + I2S(GetWavePlayerTotalDeaths(pid)) + "|r"
     endfunction
 
+    private function MBPlayerLivesText takes integer pid returns string
+        return "|cFF66FF99Vidas|r|cFFFFFFFF: |r|cFFCCFFDD" + I2S(HeroLivesGetRemaining(pid)) + "|r"
+    endfunction
+
     private function MBDebugInUse takes nothing returns string
         return "|cFF66CCFFInUse|r|cFFFFFFFF: |r|cFFFFFF00" + I2S(GetTimerUtilsInUse()) + "|r"
     endfunction
@@ -146,7 +150,7 @@ scope ModelBoard
             call MBSetCell(w.board, row, 2, MBPlayerStreakText(pid), 0.10)
             call MBSetCell(w.board, row, 3, MBPlayerMultiText(pid), 0.10)
             call MBSetCell(w.board, row, 4, MBPlayerDeathsText(pid), 0.11)
-            call MBSetCell(w.board, row, 5, "", 0.01)
+            call MBSetCell(w.board, row, 5, MBPlayerLivesText(pid), 0.10)
 
             set i = i + 1
         endloop

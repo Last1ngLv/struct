@@ -1,6 +1,6 @@
 // AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY.
 // Source manifest: jass-order.txt
-// Generated at: 2026-04-19 20:01:23
+// Generated at: 2026-04-19 20:54:42
 
 // ===== BEGIN: libraries/Table.j =====
 //TESH.scrollpos=0
@@ -9224,6 +9224,10 @@ library AIConfig initializer Init requires AIProfiles
         constant integer AI_STAGE1_SLOT_GROUP_HWT3 = 2010
     endglobals
 
+    private function AIApplyBossTeleportDefaults takes integer profileId returns nothing
+        call AISetProfileTeleport(profileId, true, false, 10.0, 16.0, 5.0, 9.0, 120.0, 360.0, "Abilities\\Spells\\NightElf\\Blink\\BlinkCaster.mdl")
+    endfunction
+
     private function Init takes nothing returns nothing
         call AIRegisterProfile(AI_DEFAULT_PROFILE_ID, 0.25, 0.50, 10500.0, 6000.0, 10.0)
         call AISetProfileBehavior(AI_DEFAULT_PROFILE_ID, 1.00, 0)
@@ -9262,7 +9266,7 @@ library AIConfig initializer Init requires AIProfiles
         call AIRegisterProfile(AI_PROFILE_BOSS, 0.20, 0.45, 6000.0, 10000.0, 10.0)
         call AISetProfileBehavior(AI_PROFILE_BOSS, 1.10, AI_BEHAVIOR_KEEP_DISTANCE + AI_BEHAVIOR_LOW_HP_BIAS)
         call AISetProfileOrderInterval(AI_PROFILE_BOSS, 0.40)
-        call AISetProfileTeleport(AI_PROFILE_BOSS, true, false, 10.0, 16.0, 5.0, 9.0, 120.0, 360.0, "Abilities\\Spells\\NightElf\\Blink\\BlinkCaster.mdl")
+        call AIApplyBossTeleportDefaults(AI_PROFILE_BOSS)
 
         call AIRegisterProfile(AI_PROFILE_WAVE6_SPELL, 0.25, 0.50, 10500.0, 6000.0, 2000.0)
         call AISetProfileBehavior(AI_PROFILE_WAVE6_SPELL, 1.00, AI_BEHAVIOR_KEEP_DISTANCE)
@@ -9287,22 +9291,27 @@ library AIConfig initializer Init requires AIProfiles
         call AIRegisterProfile(AI_PROFILE_WAVE6_BOSS, 0.20, 0.45, 6000.0, 10000.0, 2000.0)
         call AISetProfileBehavior(AI_PROFILE_WAVE6_BOSS, 1.05, AI_BEHAVIOR_KEEP_DISTANCE + AI_BEHAVIOR_LOW_HP_BIAS)
         call AISetProfileOrderInterval(AI_PROFILE_WAVE6_BOSS, 0.40)
+        call AIApplyBossTeleportDefaults(AI_PROFILE_WAVE6_BOSS)
 
         call AIRegisterProfile(AI_PROFILE_WAVE7_BOSS, 0.20, 0.45, 6000.0, 10000.0, 1500.0)
         call AISetProfileBehavior(AI_PROFILE_WAVE7_BOSS, 1.05, AI_BEHAVIOR_KEEP_DISTANCE + AI_BEHAVIOR_LOW_HP_BIAS)
         call AISetProfileOrderInterval(AI_PROFILE_WAVE7_BOSS, 0.40)
+        call AIApplyBossTeleportDefaults(AI_PROFILE_WAVE7_BOSS)
 
         call AIRegisterProfile(AI_PROFILE_WAVE8_BOSS, 0.20, 0.45, 6000.0, 10000.0, 2000.0)
         call AISetProfileBehavior(AI_PROFILE_WAVE8_BOSS, 1.05, AI_BEHAVIOR_KEEP_DISTANCE + AI_BEHAVIOR_LOW_HP_BIAS)
         call AISetProfileOrderInterval(AI_PROFILE_WAVE8_BOSS, 0.40)
+        call AIApplyBossTeleportDefaults(AI_PROFILE_WAVE8_BOSS)
 
         call AIRegisterProfile(AI_PROFILE_WAVE9_BOSS, 0.20, 0.45, 6000.0, 10000.0, 300.0)
         call AISetProfileBehavior(AI_PROFILE_WAVE9_BOSS, 1.05, AI_BEHAVIOR_KEEP_DISTANCE + AI_BEHAVIOR_LOW_HP_BIAS)
         call AISetProfileOrderInterval(AI_PROFILE_WAVE9_BOSS, 0.40)
+        call AIApplyBossTeleportDefaults(AI_PROFILE_WAVE9_BOSS)
 
         call AIRegisterProfile(AI_PROFILE_WAVE10_BOSS, 0.20, 0.45, 6000.0, 10000.0, 900.0)
         call AISetProfileBehavior(AI_PROFILE_WAVE10_BOSS, 1.05, AI_BEHAVIOR_KEEP_DISTANCE + AI_BEHAVIOR_LOW_HP_BIAS)
         call AISetProfileOrderInterval(AI_PROFILE_WAVE10_BOSS, 0.40)
+        call AIApplyBossTeleportDefaults(AI_PROFILE_WAVE10_BOSS)
 
         call AISetDefaultProfileForUnitType('hrif', AI_PROFILE_WAVE4_SPELL)
         call AISetDefaultProfileForUnitType('hmil', AI_PROFILE_MELEE)
@@ -23853,8 +23862,8 @@ library IAManager initializer Init requires Table, TimerUtils, WaveTest, TenderS
         private constant real AI_TELEPORT_FRONTBACK_DOT_THRESHOLD = 0.35
         private constant string AI_TELEPORT_ATTACH_POINT = "origin"
         private constant integer AI_BOSS_REINFORCEMENT_WINDUP_MS = 1500
-        private constant integer AI_BOSS_REINFORCEMENT_INITIAL_MIN_MS = 4000
-        private constant integer AI_BOSS_REINFORCEMENT_INITIAL_MAX_MS = 8000
+        private constant integer AI_BOSS_REINFORCEMENT_INITIAL_MIN_MS = 15000
+        private constant integer AI_BOSS_REINFORCEMENT_INITIAL_MAX_MS = 20000
         private constant integer AI_BOSS_REINFORCEMENT_COOLDOWN_MIN_MS = 50000
         private constant integer AI_BOSS_REINFORCEMENT_COOLDOWN_MAX_MS = 60000
         private constant string AI_BOSS_REINFORCEMENT_START_FX = "war3mapImported\\Bondage Blue SD.mdx"
@@ -29699,6 +29708,10 @@ scope ModelBoard
         return "|cFFFF6666Muertes|r|cFFFFFFFF: |r|cFFFFB3B3" + I2S(GetWavePlayerTotalDeaths(pid)) + "|r"
     endfunction
 
+    private function MBPlayerLivesText takes integer pid returns string
+        return "|cFF66FF99Vidas|r|cFFFFFFFF: |r|cFFCCFFDD" + I2S(HeroLivesGetRemaining(pid)) + "|r"
+    endfunction
+
     private function MBDebugInUse takes nothing returns string
         return "|cFF66CCFFInUse|r|cFFFFFFFF: |r|cFFFFFF00" + I2S(GetTimerUtilsInUse()) + "|r"
     endfunction
@@ -29780,7 +29793,7 @@ scope ModelBoard
             call MBSetCell(w.board, row, 2, MBPlayerStreakText(pid), 0.10)
             call MBSetCell(w.board, row, 3, MBPlayerMultiText(pid), 0.10)
             call MBSetCell(w.board, row, 4, MBPlayerDeathsText(pid), 0.11)
-            call MBSetCell(w.board, row, 5, "", 0.01)
+            call MBSetCell(w.board, row, 5, MBPlayerLivesText(pid), 0.10)
 
             set i = i + 1
         endloop

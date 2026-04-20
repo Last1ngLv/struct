@@ -20,8 +20,8 @@ library IAManager initializer Init requires Table, TimerUtils, WaveTest, TenderS
         private constant real AI_TELEPORT_FRONTBACK_DOT_THRESHOLD = 0.35
         private constant string AI_TELEPORT_ATTACH_POINT = "origin"
         private constant integer AI_BOSS_REINFORCEMENT_WINDUP_MS = 1500
-        private constant integer AI_BOSS_REINFORCEMENT_INITIAL_MIN_MS = 4000
-        private constant integer AI_BOSS_REINFORCEMENT_INITIAL_MAX_MS = 8000
+        private constant integer AI_BOSS_REINFORCEMENT_INITIAL_MIN_MS = 15000
+        private constant integer AI_BOSS_REINFORCEMENT_INITIAL_MAX_MS = 20000
         private constant integer AI_BOSS_REINFORCEMENT_COOLDOWN_MIN_MS = 50000
         private constant integer AI_BOSS_REINFORCEMENT_COOLDOWN_MAX_MS = 60000
         private constant string AI_BOSS_REINFORCEMENT_START_FX = "war3mapImported\\Bondage Blue SD.mdx"
