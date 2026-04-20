@@ -56,38 +56,11 @@
       "statementType": "VariableDeclaration"
     },
     {
-      "label": "TRADER_TRACK_COUNT",
-      "kind": 5,
-      "detail": "Global Variable",
-      "documentation": "\n```jass\nconstant integer TRADER_TRACK_COUNT\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime.j`",
-      "sortText": "2_var_TRADER_TRACK_COUNT",
-      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime.j",
-      "statementType": "VariableDeclaration"
-    },
-    {
       "label": "SURVIVAL_END_DELAY",
       "kind": 5,
       "detail": "Global Variable",
       "documentation": "\n```jass\nconstant real SURVIVAL_END_DELAY\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime.j`",
       "sortText": "2_var_SURVIVAL_END_DELAY",
-      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime.j",
-      "statementType": "VariableDeclaration"
-    },
-    {
-      "label": "TENDER_SOUND_VOLUME",
-      "kind": 5,
-      "detail": "Global Variable",
-      "documentation": "\n```jass\nconstant integer TENDER_SOUND_VOLUME\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime.j`",
-      "sortText": "2_var_TENDER_SOUND_VOLUME",
-      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime.j",
-      "statementType": "VariableDeclaration"
-    },
-    {
-      "label": "TENDER_SOUND_PITCH",
-      "kind": 5,
-      "detail": "Global Variable",
-      "documentation": "\n```jass\nconstant real TENDER_SOUND_PITCH\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime.j`",
-      "sortText": "2_var_TENDER_SOUND_PITCH",
       "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime.j",
       "statementType": "VariableDeclaration"
     },
@@ -155,15 +128,6 @@
       "statementType": "VariableDeclaration"
     },
     {
-      "label": "TenderAreaSound",
-      "kind": 5,
-      "detail": "Global Variable",
-      "documentation": "\n```jass\nsound TenderAreaSound\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime.j`",
-      "sortText": "2_var_TenderAreaSound",
-      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime.j",
-      "statementType": "VariableDeclaration"
-    },
-    {
       "label": "SurvivalEndSound",
       "kind": 5,
       "detail": "Global Variable",
@@ -182,42 +146,6 @@
       "statementType": "VariableDeclaration"
     },
     {
-      "label": "CurrentTenderTrackIndex",
-      "kind": 5,
-      "detail": "Global Variable",
-      "documentation": "\n```jass\ninteger CurrentTenderTrackIndex\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime.j`",
-      "sortText": "2_var_CurrentTenderTrackIndex",
-      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime.j",
-      "statementType": "VariableDeclaration"
-    },
-    {
-      "label": "TraderTrackBagRemaining",
-      "kind": 5,
-      "detail": "Global Variable",
-      "documentation": "\n```jass\ninteger TraderTrackBagRemaining\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime.j`",
-      "sortText": "2_var_TraderTrackBagRemaining",
-      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime.j",
-      "statementType": "VariableDeclaration"
-    },
-    {
-      "label": "TraderTrackSeed",
-      "kind": 5,
-      "detail": "Global Variable",
-      "documentation": "\n```jass\ninteger TraderTrackSeed\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime.j`",
-      "sortText": "2_var_TraderTrackSeed",
-      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime.j",
-      "statementType": "VariableDeclaration"
-    },
-    {
-      "label": "TraderTrackBag",
-      "kind": 5,
-      "detail": "Global Variable",
-      "documentation": "\n```jass\ninteger array TraderTrackBag\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime.j`",
-      "sortText": "2_var_TraderTrackBag",
-      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime.j",
-      "statementType": "VariableDeclaration"
-    },
-    {
       "label": "SurvivalEndSequenceActive",
       "kind": 5,
       "detail": "Global Variable",
@@ -225,33 +153,6 @@
       "sortText": "2_var_SurvivalEndSequenceActive",
       "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime.j",
       "statementType": "VariableDeclaration"
-    },
-    {
-      "label": "GetTraderTrackPath",
-      "kind": 2,
-      "detail": "Function",
-      "documentation": "\n```jass\nfunction GetTraderTrackPath takes integer idx returns string\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime.j`",
-      "sortText": "1_func_GetTraderTrackPath",
-      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime.j",
-      "statementType": "FunctionDeclaration"
-    },
-    {
-      "label": "ResetTraderTrackBag",
-      "kind": 2,
-      "detail": "Function",
-      "documentation": "\n```jass\nfunction ResetTraderTrackBag takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime.j`",
-      "sortText": "1_func_ResetTraderTrackBag",
-      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime.j",
-      "statementType": "FunctionDeclaration"
-    },
-    {
-      "label": "PickTraderTrackIndex",
-      "kind": 2,
-      "detail": "Function",
-      "documentation": "\n```jass\nfunction PickTraderTrackIndex takes integer lastIndex returns integer\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime.j`",
-      "sortText": "1_func_PickTraderTrackIndex",
-      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime.j",
-      "statementType": "FunctionDeclaration"
     },
     {
       "label": "SetWaveStatusTextForActivePlayers",
@@ -286,24 +187,6 @@
       "detail": "Function",
       "documentation": "\n```jass\nfunction StartAmbientTownSound takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime.j`",
       "sortText": "1_func_StartAmbientTownSound",
-      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime.j",
-      "statementType": "FunctionDeclaration"
-    },
-    {
-      "label": "StopTenderAreaSound",
-      "kind": 2,
-      "detail": "Function",
-      "documentation": "\n```jass\nfunction StopTenderAreaSound takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime.j`",
-      "sortText": "1_func_StopTenderAreaSound",
-      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime.j",
-      "statementType": "FunctionDeclaration"
-    },
-    {
-      "label": "StartTenderAreaSound",
-      "kind": 2,
-      "detail": "Function",
-      "documentation": "\n```jass\nfunction StartTenderAreaSound takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime.j`",
-      "sortText": "1_func_StartTenderAreaSound",
       "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime.j",
       "statementType": "FunctionDeclaration"
     },
@@ -398,5 +281,5 @@
       "statementType": "FunctionDeclaration"
     }
   ],
-  "timestamp": 1776592174305
+  "timestamp": 1776636501164
 }

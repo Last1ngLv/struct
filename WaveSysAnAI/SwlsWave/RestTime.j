@@ -1,4 +1,4 @@
-library TheEnd requires HeroLives, TenderSystem, PreConfi
+library TheEnd requires HeroLives, TenderSystem, TenderAudio, PreConfi
     globals
         private constant integer WAVE_PHASE_NONE = 0
         private constant integer WAVE_PHASE_START = 1
@@ -6,10 +6,7 @@ library TheEnd requires HeroLives, TenderSystem, PreConfi
         private constant integer INITIAL_WAVE_COUNTDOWN = 5
         private constant integer PURCHASE_COUNTDOWN = 50
         private constant real WAVE_PHASE_TICK_SEC = 1.00
-        private constant integer TRADER_TRACK_COUNT = 6
         private constant real SURVIVAL_END_DELAY = 18.00
-        private constant integer TENDER_SOUND_VOLUME = 96
-        private constant real TENDER_SOUND_PITCH = 1.00
         private constant string AMBIENT_TOWN_SOUND_PATH = "war3mapImported\\emptytown.wav"
         private constant string SURVIVAL_END_SOUND_PATH = "war3mapImported\\SurvivalEnd.wav"
 
@@ -18,72 +15,10 @@ library TheEnd requires HeroLives, TenderSystem, PreConfi
         private integer WavePhaseState = WAVE_PHASE_NONE
         private integer WavePhaseRemaining = 0
         private sound AmbientTownSound = null
-        private sound TenderAreaSound = null
         private sound SurvivalEndSound = null
         private integer LastTenderTrackIndex = 0
-        private integer CurrentTenderTrackIndex = 0
-        private integer TraderTrackBagRemaining = 0
-        private integer TraderTrackSeed = 1
-        private integer array TraderTrackBag
         private boolean SurvivalEndSequenceActive = false
     endglobals
-
-    private function GetTraderTrackPath takes integer idx returns string
-        if idx == 1 then
-            return "war3mapImported\\Trader --- - Never Gonna Stay in The Abyss.wav"
-        elseif idx == 2 then
-            return "war3mapImported\\Trader 1 - Meanwhile, in The Abyss.wav"
-        elseif idx == 3 then
-            return "war3mapImported\\Trader 10 - Columba Noachi.wav"
-        elseif idx == 4 then
-            return "war3mapImported\\Trader 11 - Cold Wind.wav"
-        elseif idx == 5 then
-            return "war3mapImported\\Trader 12 - Crystal Breakin' Time.wav"
-        elseif idx == 6 then
-            return "war3mapImported\\Trader 9 - Weapon Check-up.wav"
-        endif
-        return ""
-    endfunction
-
-    private function ResetTraderTrackBag takes nothing returns nothing
-        local integer i = 1
-        loop
-            exitwhen i > TRADER_TRACK_COUNT
-            set TraderTrackBag[i] = i
-            set i = i + 1
-        endloop
-        set TraderTrackBagRemaining = TRADER_TRACK_COUNT
-    endfunction
-
-    private function PickTraderTrackIndex takes integer lastIndex returns integer
-        local integer pickSlot
-        local integer pickedTrack
-        local integer swapValue
-        if TRADER_TRACK_COUNT <= 1 then
-            return 1
-        endif
-        set TraderTrackSeed = ModuloInteger(TraderTrackSeed + (TargetWave * 17) + (lastIndex * 7) + 29, 104729)
-        if TraderTrackSeed <= 0 then
-            set TraderTrackSeed = 1
-        endif
-        if TraderTrackBagRemaining <= 0 then
-            call ResetTraderTrackBag()
-        endif
-        set pickSlot = ModuloInteger(TraderTrackSeed, TraderTrackBagRemaining) + 1
-        set pickedTrack = TraderTrackBag[pickSlot]
-        if pickedTrack == lastIndex and TraderTrackBagRemaining > 1 then
-            set pickSlot = pickSlot + 1
-            if pickSlot > TraderTrackBagRemaining then
-                set pickSlot = 1
-            endif
-            set pickedTrack = TraderTrackBag[pickSlot]
-        endif
-        set swapValue = TraderTrackBag[TraderTrackBagRemaining]
-        set TraderTrackBag[TraderTrackBagRemaining] = TraderTrackBag[pickSlot]
-        set TraderTrackBag[pickSlot] = swapValue
-        set TraderTrackBagRemaining = TraderTrackBagRemaining - 1
-        return pickedTrack
-    endfunction
 
     private function SetWaveStatusTextForActivePlayers takes string statusText returns nothing
         local integer i = 0
@@ -149,35 +84,6 @@ library TheEnd requires HeroLives, TenderSystem, PreConfi
         endif
     endfunction
 
-    private function StopTenderAreaSound takes nothing returns nothing
-        if TenderAreaSound != null then
-            call StopSound(TenderAreaSound, true, false)
-            call KillSoundWhenDone(TenderAreaSound)
-            set TenderAreaSound = null
-        endif
-    endfunction
-
-    private function StartTenderAreaSound takes nothing returns nothing
-        local string trackPath
-        call StopTenderAreaSound()
-        if WavePhaseState != WAVE_PHASE_PURCHASE then
-            return
-        endif
-        if CurrentTenderTrackIndex <= 0 then
-            return
-        endif
-        set trackPath = GetTraderTrackPath(CurrentTenderTrackIndex)
-        if trackPath == null or trackPath == "" then
-            return
-        endif
-        set TenderAreaSound = CreateSound(trackPath, true, false, false, 12700, 12700, "")
-        if TenderAreaSound != null then
-            call SetSoundPitch(TenderAreaSound, TENDER_SOUND_PITCH)
-            call SetSoundVolume(TenderAreaSound, TENDER_SOUND_VOLUME)
-            call StartSound(TenderAreaSound)
-        endif
-    endfunction
-
     private function StopSurvivalEndSound takes nothing returns nothing
         if SurvivalEndSound != null then
             call StopSound(SurvivalEndSound, true, false)
@@ -219,7 +125,7 @@ library TheEnd requires HeroLives, TenderSystem, PreConfi
             call PauseTimer(WavePhaseTimer)
         endif
         call StopAmbientTownSound()
-        call StopTenderAreaSound()
+        call TenderAudioStop()
         call BJDebugMsg("|cff66ff66Superaste las 10 waves|r")
         call SetWaveStatusTextForActivePlayers("|cff66ff66Superaste las 10 waves|r")
         if SurvivalEndSound == null and SURVIVAL_END_SOUND_PATH != null and SURVIVAL_END_SOUND_PATH != "" then
@@ -240,12 +146,11 @@ library TheEnd requires HeroLives, TenderSystem, PreConfi
 
     private function LaunchCurrentWave takes nothing returns nothing
         call StopAmbientTownSound()
-        call StopTenderAreaSound()
+        call TenderAudioStop()
         call CloseTenderForActivePlayers()
         call ExecuteFunc("MenuClientClearEnemyPreviewForActivePlayers")
         set WavePhaseState = WAVE_PHASE_NONE
         set WavePhaseRemaining = 0
-        set CurrentTenderTrackIndex = 0
         call SetWaveStatusTextForActivePlayers("Wave " + I2S(TargetWave))
         if WavePhaseTimer != null then
             call PauseTimer(WavePhaseTimer)
@@ -279,15 +184,12 @@ library TheEnd requires HeroLives, TenderSystem, PreConfi
         set WavePhaseRemaining = seconds
         if phaseState == WAVE_PHASE_PURCHASE then
             set SurvivalEndSequenceActive = false
-            set CurrentTenderTrackIndex = PickTraderTrackIndex(LastTenderTrackIndex)
-            set LastTenderTrackIndex = CurrentTenderTrackIndex
+            set LastTenderTrackIndex = TenderAudioStartRest(TargetWave, LastTenderTrackIndex)
             call StartAmbientTownSound()
-            call StartTenderAreaSound()
             call ExecuteFunc("MenuClientRefreshEnemyPreviewForActivePlayers")
             call SetWaveStatusTextForActivePlayers("TimeOfPurchase: " + I2S(WavePhaseRemaining))
         else
-            call StopTenderAreaSound()
-            set CurrentTenderTrackIndex = 0
+            call TenderAudioStop()
             call SetWaveStatusTextForActivePlayers("WaveIn: " + I2S(WavePhaseRemaining))
         endif
         call PauseTimer(WavePhaseTimer)

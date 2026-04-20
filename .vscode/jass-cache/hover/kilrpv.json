@@ -190,7 +190,12 @@
       "symbolName": "WaveEventIsBoss",
       "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
       "content": "\n```jass\nboolean WaveEventIsBoss\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/SwlsWave.j`"
+    },
+    {
+      "symbolName": "pickSlot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\SwlsWave.j",
+      "content": "\n```jass\nmethod pickSlot takes nothing returns WaveSlot\n```\n\n\n---\n\n==================================================\n\nElegir slot ()\n\n==================================================\n\n**所属:** `Wave`\n**文件:** `WaveSysAnAI/SwlsWave/SwlsWave.j`"
     }
   ],
-  "timestamp": 1776580972668
+  "timestamp": 1776636576665
 }

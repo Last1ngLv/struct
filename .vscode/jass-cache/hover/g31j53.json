@@ -45,7 +45,12 @@
       "symbolName": "GetHandleId",
       "filePath": "c:\\Users\\Leon\\.antigravity\\extensions\\jass.jass-1.9.4\\static\\common.j",
       "content": "\n```jass\nnative GetHandleId takes handle h returns integer\n```\n\n\n---\n\n获取句柄ID\n\n获取任意句柄对象的唯一标识符\n\n示例: GetHandleId(GetTriggerUnit()) = 单位的唯一ID\n\n注意: 一般用于哈希表键值（hashtable key）\n\n**Parameters:**\n- **`h`**: 任意handle子类型（单位、物品、特效等）\n\n**Returns:** 句柄的唯一ID\n\n**文件:** `c:\\Users\\Leon\\.antigravity\\extensions\\jass.jass-1.9.4\\static\\common.j`"
+    },
+    {
+      "symbolName": "GetLocalPlayer",
+      "filePath": "c:\\Users\\Leon\\.antigravity\\extensions\\jass.jass-1.9.4\\static\\common.j",
+      "content": "\n```jass\nconstant native GetLocalPlayer takes nothing returns player\n```\n\n\n---\n\n获取本地玩家 [R]\n\n常用于异步判断，同时返回多位玩家，包含AI玩家、裁判和观战者\n\n使用不当可能引起玩家掉线\n\n**文件:** `c:\\Users\\Leon\\.antigravity\\extensions\\jass.jass-1.9.4\\static\\common.j`"
     }
   ],
-  "timestamp": 1776580975444
+  "timestamp": 1776639723930
 }

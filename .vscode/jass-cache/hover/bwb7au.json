@@ -1,0 +1,46 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\TenderAudio.j",
+  "items": [
+    {
+      "symbolName": "UpdateTenderAreaSoundVolume",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\TenderAudio.j",
+      "content": "\n```jass\nfunction UpdateTenderAreaSoundVolume takes nothing returns nothing\n```\n\n\n**文件:** `InitMap/TenderAudio.j`"
+    },
+    {
+      "symbolName": "TENDER_SOUND_VOLUME_OFF",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\TenderAudio.j",
+      "content": "\n```jass\nconstant integer TENDER_SOUND_VOLUME_OFF\n```\n\n\n**文件:** `InitMap/TenderAudio.j`"
+    },
+    {
+      "symbolName": "OnTenderSoundTick",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\TenderAudio.j",
+      "content": "\n```jass\nfunction OnTenderSoundTick takes nothing returns nothing\n```\n\n\n**文件:** `InitMap/TenderAudio.j`"
+    },
+    {
+      "symbolName": "TenderAudioDebug",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\TenderAudio.j",
+      "content": "\n```jass\nfunction TenderAudioDebug takes string msg returns nothing\n```\n\n\n**文件:** `InitMap/TenderAudio.j`"
+    },
+    {
+      "symbolName": "LastAppliedLocalVolume",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\TenderAudio.j",
+      "content": "\n```jass\ninteger LastAppliedLocalVolume\n```\n\n\n**文件:** `InitMap/TenderAudio.j`"
+    },
+    {
+      "symbolName": "TENDER_SOUND_TICK",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\TenderAudio.j",
+      "content": "\n```jass\nconstant real TENDER_SOUND_TICK\n```\n\n\n**文件:** `InitMap/TenderAudio.j`"
+    },
+    {
+      "symbolName": "ApplyLocalTenderVolume",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\TenderAudio.j",
+      "content": "\n```jass\nfunction ApplyLocalTenderVolume takes nothing returns nothing\n```\n\n\n**文件:** `InitMap/TenderAudio.j`"
+    },
+    {
+      "symbolName": "StopPlayerTenderSound",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\TenderAudio.j",
+      "content": "\n```jass\nfunction StopPlayerTenderSound takes integer pid returns nothing\n```\n\n\n**文件:** `InitMap/TenderAudio.j`"
+    }
+  ],
+  "timestamp": 1776646800245
+}

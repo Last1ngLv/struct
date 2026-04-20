@@ -1238,6 +1238,51 @@
       "statementType": "FunctionDeclaration"
     },
     {
+      "label": "LocalFileTestInit",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule LocalFileTestInit\n```\n\n\n---\n\nTests if the player can read files\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_module_LocalFileTestInit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "LocalFileTest",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct LocalFileTest extends array\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_struct_LocalFileTest",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "FlagG",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct FlagG extends array\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_struct_FlagG",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "FileInit",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule FileInit\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_module_FileInit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "File",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct File extends array\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_struct_File",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "StructDeclaration"
+    },
+    {
       "label": "SwlsDistanceSq",
       "kind": 2,
       "detail": "Function",
@@ -1414,6 +1459,231 @@
       "detail": "Function",
       "documentation": "\n```jass\nfunction CameraSetEQNoise takes player whichPlayer, real magnitude, real duration returns nothing\n```\n\n\n**_>:** `build/AllCode.generated.j`",
       "sortText": "1_func_CameraSetEQNoise",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TEXTTAG_DEBUG_NONE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer TEXTTAG_DEBUG_NONE\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_TEXTTAG_DEBUG_NONE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TEXTTAG_DEBUG_UI",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer TEXTTAG_DEBUG_UI\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_TEXTTAG_DEBUG_UI",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TEXTTAG_DEBUG_MOVECAST",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer TEXTTAG_DEBUG_MOVECAST\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_TEXTTAG_DEBUG_MOVECAST",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TEXTTAG_DEBUG_AI",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer TEXTTAG_DEBUG_AI\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_TEXTTAG_DEBUG_AI",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TEXTTAG_DEBUG_DAMAGE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer TEXTTAG_DEBUG_DAMAGE\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_TEXTTAG_DEBUG_DAMAGE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TEXTTAG_DEBUG_HEALTHBAR",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer TEXTTAG_DEBUG_HEALTHBAR\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_TEXTTAG_DEBUG_HEALTHBAR",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TEXTTAG_DEBUG_MAX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer TEXTTAG_DEBUG_MAX\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_TEXTTAG_DEBUG_MAX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TextTagCreated",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array[8] TextTagCreated\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_TextTagCreated",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TextTagLive",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array[8] TextTagLive\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_TextTagLive",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TextTagPeak",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array[8] TextTagPeak\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_TextTagPeak",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TextTagCreatedTotal",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger TextTagCreatedTotal\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_TextTagCreatedTotal",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TextTagLiveTotal",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger TextTagLiveTotal\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_TextTagLiveTotal",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TextTagPeakTotal",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger TextTagPeakTotal\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_TextTagPeakTotal",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TextTagDebugNormalize",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction TextTagDebugNormalize takes integer category returns integer\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_TextTagDebugNormalize",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TextTagDebugInc",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction TextTagDebugInc takes integer category returns nothing\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_TextTagDebugInc",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TextTagDebugDec",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction TextTagDebugDec takes integer category returns nothing\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_TextTagDebugDec",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "CreateTrackedTextTag",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction CreateTrackedTextTag takes integer category returns texttag\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_CreateTrackedTextTag",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "ReleaseTrackedTextTag",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ReleaseTrackedTextTag takes integer category returns nothing\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_ReleaseTrackedTextTag",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "DestroyTrackedTextTag",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction DestroyTrackedTextTag takes texttag tag, integer category returns nothing\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_DestroyTrackedTextTag",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetTextTagDebugCreated",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetTextTagDebugCreated takes integer category returns integer\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_GetTextTagDebugCreated",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetTextTagDebugLive",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetTextTagDebugLive takes integer category returns integer\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_GetTextTagDebugLive",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetTextTagDebugPeak",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetTextTagDebugPeak takes integer category returns integer\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_GetTextTagDebugPeak",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetTextTagDebugCreatedTotal",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetTextTagDebugCreatedTotal takes nothing returns integer\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_GetTextTagDebugCreatedTotal",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetTextTagDebugLiveTotal",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetTextTagDebugLiveTotal takes nothing returns integer\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_GetTextTagDebugLiveTotal",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetTextTagDebugPeakTotal",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetTextTagDebugPeakTotal takes nothing returns integer\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_GetTextTagDebugPeakTotal",
       "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
       "statementType": "FunctionDeclaration"
     },
@@ -1742,5 +2012,5 @@
       "statementType": "StructDeclaration"
     }
   ],
-  "timestamp": 1776550872218
+  "timestamp": 1776636497777
 }
