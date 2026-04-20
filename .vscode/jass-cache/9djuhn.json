@@ -1,0 +1,249 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\tenderoff.j",
+  "items": [
+    {
+      "label": "TENDER_AUDIO_DEBUG",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant boolean TENDER_AUDIO_DEBUG\n```\n\n\n**_>:** `Pruebas/tenderoff.j`",
+      "sortText": "2_var_TENDER_AUDIO_DEBUG",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\tenderoff.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TENDER_AUDIO_ENABLED",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant boolean TENDER_AUDIO_ENABLED\n```\n\n\n**_>:** `Pruebas/tenderoff.j`",
+      "sortText": "2_var_TENDER_AUDIO_ENABLED",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\tenderoff.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TRADER_TRACK_COUNT",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer TRADER_TRACK_COUNT\n```\n\n\n**_>:** `Pruebas/tenderoff.j`",
+      "sortText": "2_var_TRADER_TRACK_COUNT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\tenderoff.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TENDER_SOUND_VOLUME",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer TENDER_SOUND_VOLUME\n```\n\n\n**_>:** `Pruebas/tenderoff.j`",
+      "sortText": "2_var_TENDER_SOUND_VOLUME",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\tenderoff.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TENDER_SOUND_PITCH",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real TENDER_SOUND_PITCH\n```\n\n\n**_>:** `Pruebas/tenderoff.j`",
+      "sortText": "2_var_TENDER_SOUND_PITCH",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\tenderoff.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TENDER_SOUND_RADIUS",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real TENDER_SOUND_RADIUS\n```\n\n\n**_>:** `Pruebas/tenderoff.j`",
+      "sortText": "2_var_TENDER_SOUND_RADIUS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\tenderoff.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TENDER_SOUND_TICK",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real TENDER_SOUND_TICK\n```\n\n\n**_>:** `Pruebas/tenderoff.j`",
+      "sortText": "2_var_TENDER_SOUND_TICK",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\tenderoff.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TenderSoundTimer",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ntimer TenderSoundTimer\n```\n\n\n**_>:** `Pruebas/tenderoff.j`",
+      "sortText": "2_var_TenderSoundTimer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\tenderoff.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "CurrentTenderTrackIndex",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger CurrentTenderTrackIndex\n```\n\n\n**_>:** `Pruebas/tenderoff.j`",
+      "sortText": "2_var_CurrentTenderTrackIndex",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\tenderoff.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TraderTrackBagRemaining",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger TraderTrackBagRemaining\n```\n\n\n**_>:** `Pruebas/tenderoff.j`",
+      "sortText": "2_var_TraderTrackBagRemaining",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\tenderoff.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TraderTrackSeed",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger TraderTrackSeed\n```\n\n\n**_>:** `Pruebas/tenderoff.j`",
+      "sortText": "2_var_TraderTrackSeed",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\tenderoff.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TraderTrackBag",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array TraderTrackBag\n```\n\n\n**_>:** `Pruebas/tenderoff.j`",
+      "sortText": "2_var_TraderTrackBag",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\tenderoff.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TenderSoundByPid",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nsound array TenderSoundByPid\n```\n\n\n**_>:** `Pruebas/tenderoff.j`",
+      "sortText": "2_var_TenderSoundByPid",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\tenderoff.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "InRangeByPid",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean array InRangeByPid\n```\n\n\n**_>:** `Pruebas/tenderoff.j`",
+      "sortText": "2_var_InRangeByPid",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\tenderoff.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "SoundActiveByPid",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean array SoundActiveByPid\n```\n\n\n**_>:** `Pruebas/tenderoff.j`",
+      "sortText": "2_var_SoundActiveByPid",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\tenderoff.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TenderAudioDebug",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction TenderAudioDebug takes string msg returns nothing\n```\n\n\n**_>:** `Pruebas/tenderoff.j`",
+      "sortText": "1_func_TenderAudioDebug",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\tenderoff.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetTraderTrackPath",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetTraderTrackPath takes integer idx returns string\n```\n\n\n**_>:** `Pruebas/tenderoff.j`",
+      "sortText": "1_func_GetTraderTrackPath",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\tenderoff.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "ResetTraderTrackBag",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ResetTraderTrackBag takes nothing returns nothing\n```\n\n\n**_>:** `Pruebas/tenderoff.j`",
+      "sortText": "1_func_ResetTraderTrackBag",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\tenderoff.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "PickTraderTrackIndex",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction PickTraderTrackIndex takes integer waveIndex, integer lastIndex returns integer\n```\n\n\n**_>:** `Pruebas/tenderoff.j`",
+      "sortText": "1_func_PickTraderTrackIndex",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\tenderoff.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "ResetTenderAudioState",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ResetTenderAudioState takes nothing returns nothing\n```\n\n\n**_>:** `Pruebas/tenderoff.j`",
+      "sortText": "1_func_ResetTenderAudioState",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\tenderoff.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "StopTenderSoundTracker",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction StopTenderSoundTracker takes nothing returns nothing\n```\n\n\n**_>:** `Pruebas/tenderoff.j`",
+      "sortText": "1_func_StopTenderSoundTracker",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\tenderoff.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "StopPlayerTenderSound",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction StopPlayerTenderSound takes integer pid returns nothing\n```\n\n\n**_>:** `Pruebas/tenderoff.j`",
+      "sortText": "1_func_StopPlayerTenderSound",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\tenderoff.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "StartPlayerTenderSound",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction StartPlayerTenderSound takes User u returns nothing\n```\n\n\n**_>:** `Pruebas/tenderoff.j`",
+      "sortText": "1_func_StartPlayerTenderSound",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\tenderoff.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnTenderSoundTick",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnTenderSoundTick takes nothing returns nothing\n```\n\n\n**_>:** `Pruebas/tenderoff.j`",
+      "sortText": "1_func_OnTenderSoundTick",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\tenderoff.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "StartTenderSoundTracker",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction StartTenderSoundTracker takes nothing returns nothing\n```\n\n\n**_>:** `Pruebas/tenderoff.j`",
+      "sortText": "1_func_StartTenderSoundTracker",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\tenderoff.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TenderAudioStop",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction TenderAudioStop takes nothing returns nothing\n```\n\n\n**_>:** `Pruebas/tenderoff.j`",
+      "sortText": "1_func_TenderAudioStop",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\tenderoff.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TenderAudioStartRest",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction TenderAudioStartRest takes integer waveIndex, integer lastIndex returns integer\n```\n\n\n**_>:** `Pruebas/tenderoff.j`",
+      "sortText": "1_func_TenderAudioStartRest",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\tenderoff.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1776671666237
+}

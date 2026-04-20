@@ -137,15 +137,6 @@
       "statementType": "VariableDeclaration"
     },
     {
-      "label": "LastTenderTrackIndex",
-      "kind": 5,
-      "detail": "Global Variable",
-      "documentation": "\n```jass\ninteger LastTenderTrackIndex\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime.j`",
-      "sortText": "2_var_LastTenderTrackIndex",
-      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime.j",
-      "statementType": "VariableDeclaration"
-    },
-    {
       "label": "SurvivalEndSequenceActive",
       "kind": 5,
       "detail": "Global Variable",
@@ -281,5 +272,5 @@
       "statementType": "FunctionDeclaration"
     }
   ],
-  "timestamp": 1776636501164
+  "timestamp": 1776671614653
 }

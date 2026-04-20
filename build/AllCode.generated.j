@@ -1,6 +1,6 @@
 // AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY.
 // Source manifest: jass-order.txt
-// Generated at: 2026-04-19 20:54:42
+// Generated at: 2026-04-20 03:12:33
 
 // ===== BEGIN: libraries/Table.j =====
 //TESH.scrollpos=0
@@ -7751,220 +7751,6 @@ endlibrary
 
 // ===== END: InitMap/TenderSystem.j =====
 
-// ===== BEGIN: InitMap/TenderAudio.j =====
-library TenderAudio requires PlayerUtils, TenderSystem
-
-    globals
-        private constant boolean TENDER_AUDIO_DEBUG = false
-        private constant integer TRADER_TRACK_COUNT = 6
-        private constant integer TENDER_SOUND_VOLUME = 127
-        private constant real TENDER_SOUND_PITCH = 1.00
-        private constant real TENDER_SOUND_RADIUS = 500.0
-        private constant real TENDER_SOUND_TICK = 0.10
-
-        private timer TenderSoundTimer = null
-        private integer CurrentTenderTrackIndex = 0
-        private integer TraderTrackBagRemaining = 0
-        private integer TraderTrackSeed = 1
-        private integer array TraderTrackBag
-        private sound array TenderSoundByPid
-        private boolean array InRangeByPid
-        private boolean array SoundActiveByPid
-    endglobals
-
-    private function TenderAudioDebug takes string msg returns nothing
-        if TENDER_AUDIO_DEBUG then
-            call BJDebugMsg("|cff99ccff[TenderAudio]|r " + msg)
-        endif
-    endfunction
-
-    private function GetTraderTrackPath takes integer idx returns string
-        if idx == 1 then
-            return "war3mapImported\\Trader --- - Never Gonna Stay in The Abyss.wav"
-        elseif idx == 2 then
-            return "war3mapImported\\Trader 1 - Meanwhile, in The Abyss.wav"
-        elseif idx == 3 then
-            return "war3mapImported\\Trader 10 - Columba Noachi.wav"
-        elseif idx == 4 then
-            return "war3mapImported\\Trader 11 - Cold Wind.wav"
-        elseif idx == 5 then
-            return "war3mapImported\\Trader 12 - Crystal Breakin' Time.wav"
-        elseif idx == 6 then
-            return "war3mapImported\\Trader 9 - Weapon Check-up.wav"
-        endif
-        return ""
-    endfunction
-
-    private function ResetTraderTrackBag takes nothing returns nothing
-        local integer i = 1
-        loop
-            exitwhen i > TRADER_TRACK_COUNT
-            set TraderTrackBag[i] = i
-            set i = i + 1
-        endloop
-        set TraderTrackBagRemaining = TRADER_TRACK_COUNT
-    endfunction
-
-    private function PickTraderTrackIndex takes integer waveIndex, integer lastIndex returns integer
-        local integer pickSlot
-        local integer pickedTrack
-        local integer swapValue
-
-        if TRADER_TRACK_COUNT <= 1 then
-            return 1
-        endif
-        if TraderTrackBagRemaining <= 0 then
-            call ResetTraderTrackBag()
-        endif
-
-        set TraderTrackSeed = ModuloInteger(TraderTrackSeed + (waveIndex * 17) + (lastIndex * 7) + 29, 104729)
-        if TraderTrackSeed <= 0 then
-            set TraderTrackSeed = 1
-        endif
-
-        set pickSlot = ModuloInteger(TraderTrackSeed, TraderTrackBagRemaining) + 1
-        set pickedTrack = TraderTrackBag[pickSlot]
-        if pickedTrack == lastIndex and TraderTrackBagRemaining > 1 then
-            set pickSlot = pickSlot + 1
-            if pickSlot > TraderTrackBagRemaining then
-                set pickSlot = 1
-            endif
-            set pickedTrack = TraderTrackBag[pickSlot]
-        endif
-
-        set swapValue = TraderTrackBag[TraderTrackBagRemaining]
-        set TraderTrackBag[TraderTrackBagRemaining] = TraderTrackBag[pickSlot]
-        set TraderTrackBag[pickSlot] = swapValue
-        set TraderTrackBagRemaining = TraderTrackBagRemaining - 1
-        return pickedTrack
-    endfunction
-
-    private function ResetTenderAudioState takes nothing returns nothing
-        local integer i = 0
-        loop
-            exitwhen i >= bj_MAX_PLAYER_SLOTS
-            set InRangeByPid[i] = false
-            set SoundActiveByPid[i] = false
-            set i = i + 1
-        endloop
-    endfunction
-
-    private function StopTenderSoundTracker takes nothing returns nothing
-        if TenderSoundTimer != null then
-            call PauseTimer(TenderSoundTimer)
-            call DestroyTimer(TenderSoundTimer)
-            set TenderSoundTimer = null
-            call TenderAudioDebug("tracker stop")
-        endif
-    endfunction
-
-    private function StopPlayerTenderSound takes integer pid returns nothing
-        if pid < 0 or pid >= bj_MAX_PLAYER_SLOTS then
-            return
-        endif
-        if TenderSoundByPid[pid] != null then
-            call StopSound(TenderSoundByPid[pid], true, false)
-            call KillSoundWhenDone(TenderSoundByPid[pid])
-            set TenderSoundByPid[pid] = null
-        endif
-        set SoundActiveByPid[pid] = false
-        set InRangeByPid[pid] = false
-    endfunction
-
-    private function StartPlayerTenderSound takes User u returns nothing
-        local string trackPath = ""
-        if CurrentTenderTrackIndex < 1 or CurrentTenderTrackIndex > TRADER_TRACK_COUNT then
-            return
-        endif
-        call StopPlayerTenderSound(u.id)
-
-        if GetLocalPlayer() == u.toPlayer() then
-            set trackPath = GetTraderTrackPath(CurrentTenderTrackIndex)
-        endif
-
-        set TenderSoundByPid[u.id] = CreateSound(trackPath, true, false, false, 12700, 12700, "")
-        if TenderSoundByPid[u.id] != null then
-            call SetSoundPitch(TenderSoundByPid[u.id], TENDER_SOUND_PITCH)
-            call SetSoundVolume(TenderSoundByPid[u.id], TENDER_SOUND_VOLUME)
-            call StartSound(TenderSoundByPid[u.id])
-        endif
-        set SoundActiveByPid[u.id] = true
-        call TenderAudioDebug("player sound start pid=" + I2S(u.id) + " track=" + I2S(CurrentTenderTrackIndex))
-    endfunction
-
-    private function OnTenderSoundTick takes nothing returns nothing
-        local integer i = 0
-        local User u
-        local unit hero
-        local boolean inRange
-
-        if CurrentTenderTrackIndex < 1 or CurrentTenderTrackIndex > TRADER_TRACK_COUNT then
-            set hero = null
-            return
-        endif
-
-        loop
-            exitwhen i == User.AmountPlaying
-            set u = User.fromPlaying(i)
-            set hero = PlayerHero[u.id]
-            set inRange = false
-            if hero != null and GetUnitTypeId(hero) != 0 then
-                set inRange = IsUnitNearTender(hero, TENDER_SOUND_RADIUS)
-            endif
-            set InRangeByPid[u.id] = inRange
-            if InRangeByPid[u.id] != SoundActiveByPid[u.id] then
-                if InRangeByPid[u.id] then
-                    call StartPlayerTenderSound(u)
-                else
-                    call StopPlayerTenderSound(u.id)
-                endif
-            endif
-            set i = i + 1
-        endloop
-        set hero = null
-    endfunction
-
-    private function StartTenderSoundTracker takes nothing returns nothing
-        call StopTenderSoundTracker()
-        set TenderSoundTimer = CreateTimer()
-        call TimerStart(TenderSoundTimer, TENDER_SOUND_TICK, true, function OnTenderSoundTick)
-        call TenderAudioDebug("tracker start tick=" + R2S(TENDER_SOUND_TICK))
-    endfunction
-
-    function TenderAudioStop takes nothing returns nothing
-        local integer i = 0
-        call StopTenderSoundTracker()
-        loop
-            exitwhen i >= bj_MAX_PLAYER_SLOTS
-            call StopPlayerTenderSound(i)
-            set i = i + 1
-        endloop
-        call ResetTenderAudioState()
-        set CurrentTenderTrackIndex = 0
-        call TenderAudioDebug("stop all player sounds")
-    endfunction
-
-    function TenderAudioStartRest takes integer waveIndex, integer lastIndex returns integer
-        local integer nextTrack = PickTraderTrackIndex(waveIndex, lastIndex)
-
-        call TenderAudioStop()
-        if nextTrack < 1 or nextTrack > TRADER_TRACK_COUNT or GetTraderTrackPath(nextTrack) == "" then
-            call TenderAudioDebug("start rest skipped wave=" + I2S(waveIndex) + " track=" + I2S(nextTrack))
-            return lastIndex
-        endif
-
-        call ResetTenderAudioState()
-        set CurrentTenderTrackIndex = nextTrack
-        call TenderAudioDebug("start rest wave=" + I2S(waveIndex) + " last=" + I2S(lastIndex) + " next=" + I2S(nextTrack))
-        call StartTenderSoundTracker()
-        call OnTenderSoundTick()
-        return nextTrack
-    endfunction
-
-endlibrary
-
-// ===== END: InitMap/TenderAudio.j =====
-
 // ===== BEGIN: libraries/UnitIndexer.j =====
 library UnitIndexer requires UnitDex
   
@@ -10297,11 +10083,6 @@ library WaveTest initializer Init /*
             call w.registerWaveUnit(summoned, 0, isBoss, true)
             call WaveDebugLog("registerExternalUnit wave=" + I2S(w) + " source=" + WaveDebugUnitSummary(source) + " summoned=" + WaveDebugUnitSummary(summoned) + " ownerPid=" + I2S(ownerPid) + " external=1 boss=" + I2S(WaveDebugBoolToInt(isBoss)))
 
-            if w.board != null and w.titleFunc != "" then
-                set CurrentBoardContext = w.board
-                call ExecuteFunc(w.titleFunc)
-                set CurrentBoardContext = null
-            endif
         endmethod
 
 
@@ -11354,12 +11135,6 @@ library WaveTest initializer Init /*
 
             call w.untrackUnitByHandle(hid)
             call WaveFireDeath(w, u, killer, s, isBoss, isExternal)
-
-            if w.board != null and w.titleFunc != "" then
-                set CurrentBoardContext = w.board
-                call ExecuteFunc(w.titleFunc)
-                set CurrentBoardContext = null
-            endif
 
             call WaveByUnit.remove(hid)
             call SlotByUnit.remove(hid)
@@ -19311,6 +19086,7 @@ globals
     private constant integer DUMMY_UNIT_ID = 'h003'
     private constant integer LOADOUT_LEAP_SPELL_ID = 'U0A2'
     private constant integer LEAP_BUFF_ID = 'BB01'
+    private constant integer MAX_MOVECAST_PLAYER_ID = 7
     private constant real PULSE_DELAY = 0.03
     private constant boolean DEBUG_MODE = false
 
@@ -19340,6 +19116,41 @@ private function IsLeapBuffActive takes unit u returns boolean
     return GetUnitAbilityLevel(u, LEAP_BUFF_ID) > 0
 endfunction
 
+private function IsMoveCastTrackedUnit takes unit u returns boolean
+    local player owner
+    local integer pid
+
+    if (u == null) or (GetUnitTypeId(u) == 0) then
+        return false
+    endif
+
+    set owner = GetOwningPlayer(u)
+    set pid = GetPlayerId(owner)
+
+    if (pid < 0) or (pid > MAX_MOVECAST_PLAYER_ID) then
+        set owner = null
+        return false
+    endif
+
+    if GetPlayerSlotState(owner) != PLAYER_SLOT_STATE_PLAYING then
+        set owner = null
+        return false
+    endif
+
+    if GetPlayerController(owner) != MAP_CONTROL_USER then
+        set owner = null
+        return false
+    endif
+
+    if not IsUnitType(u, UNIT_TYPE_HERO) then
+        set owner = null
+        return false
+    endif
+
+    set owner = null
+    return true
+endfunction
+
 struct MovementData
     unit source
     unit dummy
@@ -19361,6 +19172,7 @@ struct MovementData
     unit lastCastTargetUnit
     boolean isFollowing
     boolean sessionActive
+    boolean isDestroying
     real sessionDuration
     real sessionRemaining
     integer recastsLeft
@@ -19369,6 +19181,10 @@ struct MovementData
 
     static method create takes unit u returns thistype
         local thistype this = thistype.allocate()
+
+        if this == 0 then
+            return 0
+        endif
 
         set .source = u
         set .dummy = null
@@ -19390,6 +19206,7 @@ struct MovementData
         set .lastCastTargetUnit = null
         set .isFollowing = false
         set .sessionActive = false
+        set .isDestroying = false
         set .sessionDuration = 0.
         set .sessionRemaining = 0.
         set .recastsLeft = 0
@@ -19404,6 +19221,12 @@ struct MovementData
 
     static method get takes unit u returns thistype
         return table[GetHandleId(u)]
+    endmethod
+
+    static method forget takes unit u returns nothing
+        if (u != null) and (GetUnitTypeId(u) != 0) then
+            call table.remove(GetHandleId(u))
+        endif
     endmethod
 
     private method syncCastTextTagPosition takes nothing returns nothing
@@ -19673,11 +19496,22 @@ struct MovementData
     endmethod
 
     method destroy takes nothing returns nothing
-        call .endSession()
-        if .source != null then
-            call table.remove(GetHandleId(.source))
+        local unit u
+
+        if .isDestroying then
+            return
         endif
+
+        set .isDestroying = true
+        set u = .source
+
+        if u != null then
+            call table.remove(GetHandleId(u))
+        endif
+
+        call .endSession()
         set .source = null
+        set u = null
         set .hasLastSmart = false
         call .deallocate()
     endmethod
@@ -19690,13 +19524,11 @@ struct MovementData
         local real distSq
 
         if this == 0 then
-            call ReleaseTimer(t)
             set t = null
             return
         endif
 
         if .followTim != t then
-            call ReleaseTimer(t)
             set t = null
             return
         endif
@@ -19739,13 +19571,11 @@ struct MovementData
         local thistype this = GetTimerData(t)
 
         if this == 0 then
-            call ReleaseTimer(t)
             set t = null
             return
         endif
 
         if .sessionTim != t then
-            call ReleaseTimer(t)
             set t = null
             return
         endif
@@ -19783,13 +19613,11 @@ struct MovementData
         local thistype this = GetTimerData(t)
 
         if this == 0 then
-            call ReleaseTimer(t)
             set t = null
             return
         endif
 
         if .pulseTim != t then
-            call ReleaseTimer(t)
             set t = null
             return
         endif
@@ -19833,6 +19661,46 @@ struct MovementData
         set table = Table.create()
     endmethod
 endstruct
+
+private function GetOrCreateMovementData takes unit u returns MovementData
+    local MovementData data = 0
+
+    if not IsMoveCastTrackedUnit(u) then
+        return 0
+    endif
+
+    if MovementData.has(u) then
+        set data = MovementData.get(u)
+        if data != 0 then
+            if data.source == u then
+                return data
+            endif
+        endif
+        call MovementData.forget(u)
+    endif
+
+    set data = MovementData.create(u)
+    return data
+endfunction
+
+private function DestroyMovementDataForUnit takes unit u returns nothing
+    local MovementData data
+
+    if (u == null) or (GetUnitTypeId(u) == 0) then
+        return
+    endif
+
+    if MovementData.has(u) then
+        set data = MovementData.get(u)
+        if data != 0 then
+            if data.source == u then
+                call data.destroy()
+                return
+            endif
+        endif
+        call MovementData.forget(u)
+    endif
+endfunction
 
 //===========================================================================
 function RegisterMovementSpell takes integer abilityId, string orderId returns nothing
@@ -19879,14 +19747,10 @@ endfunction
 
 //===========================================================================
 function CancelMovementSpellSessionForUnit takes unit u returns nothing
-    local MovementData data
     if u == null or GetUnitTypeId(u) == 0 then
         return
     endif
-    if MovementData.has(u) then
-        set data = MovementData.get(u)
-        call data.destroy()
-    endif
+    call DestroyMovementDataForUnit(u)
 endfunction
 
 //===========================================================================
@@ -19897,21 +19761,23 @@ private function OnPointOrder takes nothing returns boolean
     local real x
     local real y
 
+    if not IsMoveCastTrackedUnit(u) then
+        set u = null
+        return false
+    endif
+
     if (orderId == ORDER_ID_MOVE) or (orderId == ORDER_ID_SMART) then
         if IsLeapBuffActive(u) then
-            if MovementData.has(u) then
-                set data = MovementData.get(u)
-                call data.destroy()
-            endif
+            call DestroyMovementDataForUnit(u)
             set u = null
             return false
         endif
         set x = GetOrderPointX()
         set y = GetOrderPointY()
-        if MovementData.has(u) then
-            set data = MovementData.get(u)
-        else
-            set data = MovementData.create(u)
+        set data = GetOrCreateMovementData(u)
+        if data == 0 then
+            set u = null
+            return false
         endif
 
         if not data.sessionActive then
@@ -19944,22 +19810,26 @@ private function OnTargetOrder takes nothing returns boolean
     local real x
     local real y
 
+    if not IsMoveCastTrackedUnit(u) then
+        set targetU = null
+        set u = null
+        return false
+    endif
+
     if (orderId == ORDER_ID_SMART) and (targetU != null) and (GetUnitTypeId(targetU) != 0) then
         if IsLeapBuffActive(u) then
-            if MovementData.has(u) then
-                set data = MovementData.get(u)
-                call data.destroy()
-            endif
+            call DestroyMovementDataForUnit(u)
             set targetU = null
             set u = null
             return false
         endif
         set x = GetUnitX(targetU)
         set y = GetUnitY(targetU)
-        if MovementData.has(u) then
-            set data = MovementData.get(u)
-        else
-            set data = MovementData.create(u)
+        set data = GetOrCreateMovementData(u)
+        if data == 0 then
+            set targetU = null
+            set u = null
+            return false
         endif
 
         if not data.sessionActive then
@@ -19993,31 +19863,32 @@ private function OnSpellEffect takes nothing returns boolean
     local real ty = GetSpellTargetY()
     local MovementData data
 
+    if not IsMoveCastTrackedUnit(u) then
+        set targetU = null
+        set u = null
+        return false
+    endif
+
     if abilityId == LOADOUT_LEAP_SPELL_ID then
-        if MovementData.has(u) then
-            set data = MovementData.get(u)
-            call data.destroy()
-        endif
+        call DestroyMovementDataForUnit(u)
         set targetU = null
         set u = null
         return false
     endif
 
     if IsLeapBuffActive(u) then
-        if MovementData.has(u) then
-            set data = MovementData.get(u)
-            call data.destroy()
-        endif
+        call DestroyMovementDataForUnit(u)
         set targetU = null
         set u = null
         return false
     endif
 
     if registeredAbilityFlags.boolean[abilityId] then
-        if MovementData.has(u) then
-            set data = MovementData.get(u)
-        else
-            set data = MovementData.create(u)
+        set data = GetOrCreateMovementData(u)
+        if data == 0 then
+            set targetU = null
+            set u = null
+            return false
         endif
 
         if (targetU != null) and (GetUnitTypeId(targetU) != 0) then
@@ -20047,12 +19918,8 @@ endfunction
 //===========================================================================
 private function OnUnitDeath takes nothing returns boolean
     local unit u = GetTriggerUnit()
-    local MovementData data
 
-    if MovementData.has(u) then
-        set data = MovementData.get(u)
-        call data.destroy()
-    endif
+    call DestroyMovementDataForUnit(u)
     set u = null
     return false
 endfunction
@@ -26569,7 +26436,7 @@ function Trig_w1_Actions takes nothing returns nothing
     //call w.addSlot('n00B', 10, 2, 2, 5,  50, true, Player(11)) AI_PROFILE_WAVE1_SPELL
     
     if TargetWave >= 1 then
-        call w.upsertSlotExByPlayers(AI_STAGE1_SLOT_GROUP_HPEA, 'hpea', 2, true, 2, 1, 1, -1, false, AI_PROFILE_MELEE, 0, 0, 1.00)
+        call w.upsertSlotExByPlayers(AI_STAGE1_SLOT_GROUP_HPEA, 'hpea', 1, false, 2, 1, 1, -1, false, AI_PROFILE_MELEE, 0, 0, 1.00)
         //call w.upsertSlotExByPlayers(AI_STAGE1_SLOT_GROUP_HKNI, 'hkni', 2, true, 2, 1, 5, -1, false, AI_PROFILE_MELEE, 0, 0, 1.00)
         //call w.addSlotExByPlayer('zA04', 1,true, 2, 1, 1, 15, true,Player(11), AI_PROFILE_BOSS, 0, 0, 1.00)
         //call w.upsertSlotExByPlayers(AI_STAGE1_SLOT_GROUP_HMPR, 'hmpr', 1, true, 2, 1, 7, -1, false, AI_PROFILE_WAVE7_SPELL, 0, 0, 1.10)
@@ -26584,19 +26451,19 @@ function Trig_w1_Actions takes nothing returns nothing
         //call w.addSlotExByPlayer('hmpr', 2,false, 2, 1, 1, -1, false,Player(11), AI_PROFILE_WAVE7_SPELL, 0, 0, 1.00)
         endif
         if TargetWave >= 2 then
-            call w.upsertSlotExByPlayers(AI_STAGE1_SLOT_GROUP_HMIL, 'hmil', 2, true, 2, 1, 2, -1, false, AI_PROFILE_MELEE, 0, 0, 1.00)
+            call w.upsertSlotExByPlayers(AI_STAGE1_SLOT_GROUP_HMIL, 'hmil', 1, false, 2, 1, 2, -1, false, AI_PROFILE_MELEE, 0, 0, 1.00)
             if TargetWave == 2 then
                 call w.addSlotExByPlayer('zA01', 2,false, 2, 1, 1, 5, true,Player(11), AI_PROFILE_BOSS, 0, 0, 1.00)
             endif
         endif
         if TargetWave >= 3 then
-            call w.upsertSlotExByPlayers(AI_STAGE1_SLOT_GROUP_HFOO, 'hfoo', 2, true, 2, 1, 3, -1, false, AI_PROFILE_MELEE, 0, 0, 1.00)
+            call w.upsertSlotExByPlayers(AI_STAGE1_SLOT_GROUP_HFOO, 'hfoo', 1, false, 2, 1, 3, -1, false, AI_PROFILE_MELEE, 0, 0, 1.00)
             if TargetWave == 3 then
             call w.addSlotExByPlayer('zA02', 2,false, 2, 1, 1, 10, true,Player(11), AI_PROFILE_BOSS, 0, 0, 1.00)
         endif
             endif
         if TargetWave >= 4 then
-            call w.upsertSlotExByPlayers(AI_STAGE1_SLOT_GROUP_HRIF, 'hrif', 2, true, 2, 1, 4, -1, false, AI_PROFILE_WAVE4_SPELL, 0, 0, 1.00)
+            call w.upsertSlotExByPlayers(AI_STAGE1_SLOT_GROUP_HRIF, 'hrif', 1, false, 2, 1, 4, -1, false, AI_PROFILE_WAVE4_SPELL, 0, 0, 1.00)
             if TargetWave == 4 then
             call w.addSlotExByPlayer('zA03', 2,false, 2, 1, 1, 15, true,Player(11), AI_PROFILE_BOSS, 0, 0, 1.00)
         endif
@@ -26661,7 +26528,7 @@ endlibrary
 // ===== END: WaveSysAnAI/SwlsWave/StageExample.j =====
 
 // ===== BEGIN: WaveSysAnAI/SwlsWave/RestTime.j =====
-library TheEnd requires HeroLives, TenderSystem, TenderAudio, PreConfi
+library TheEnd requires HeroLives, TenderSystem, PreConfi
     globals
         private constant integer WAVE_PHASE_NONE = 0
         private constant integer WAVE_PHASE_START = 1
@@ -26679,7 +26546,6 @@ library TheEnd requires HeroLives, TenderSystem, TenderAudio, PreConfi
         private integer WavePhaseRemaining = 0
         private sound AmbientTownSound = null
         private sound SurvivalEndSound = null
-        private integer LastTenderTrackIndex = 0
         private boolean SurvivalEndSequenceActive = false
     endglobals
 
@@ -26788,7 +26654,6 @@ library TheEnd requires HeroLives, TenderSystem, TenderAudio, PreConfi
             call PauseTimer(WavePhaseTimer)
         endif
         call StopAmbientTownSound()
-        call TenderAudioStop()
         call BJDebugMsg("|cff66ff66Superaste las 10 waves|r")
         call SetWaveStatusTextForActivePlayers("|cff66ff66Superaste las 10 waves|r")
         if SurvivalEndSound == null and SURVIVAL_END_SOUND_PATH != null and SURVIVAL_END_SOUND_PATH != "" then
@@ -26809,7 +26674,6 @@ library TheEnd requires HeroLives, TenderSystem, TenderAudio, PreConfi
 
     private function LaunchCurrentWave takes nothing returns nothing
         call StopAmbientTownSound()
-        call TenderAudioStop()
         call CloseTenderForActivePlayers()
         call ExecuteFunc("MenuClientClearEnemyPreviewForActivePlayers")
         set WavePhaseState = WAVE_PHASE_NONE
@@ -26847,12 +26711,10 @@ library TheEnd requires HeroLives, TenderSystem, TenderAudio, PreConfi
         set WavePhaseRemaining = seconds
         if phaseState == WAVE_PHASE_PURCHASE then
             set SurvivalEndSequenceActive = false
-            set LastTenderTrackIndex = TenderAudioStartRest(TargetWave, LastTenderTrackIndex)
             call StartAmbientTownSound()
             call ExecuteFunc("MenuClientRefreshEnemyPreviewForActivePlayers")
             call SetWaveStatusTextForActivePlayers("TimeOfPurchase: " + I2S(WavePhaseRemaining))
         else
-            call TenderAudioStop()
             call SetWaveStatusTextForActivePlayers("WaveIn: " + I2S(WavePhaseRemaining))
         endif
         call PauseTimer(WavePhaseTimer)
@@ -29642,6 +29504,18 @@ endlibrary
 
 // ===== BEGIN: WaveSysAnAI/SwlsWave/ModelBoard.j =====
 scope ModelBoard
+    globals
+        private constant integer MB_MAX_PLAYERS = 8
+        private constant integer MB_COLUMN_COUNT = 7
+        private constant integer MB_ROW_COUNT = 13
+        private constant integer MB_ROW_WAVE = 0
+        private constant integer MB_ROW_PLAYER_START = 1
+        private constant integer MB_ROW_DEBUG_TIMER = 9
+        private constant integer MB_ROW_DEBUG_LOADOUT = 10
+        private constant integer MB_ROW_DEBUG_SYSTEMS = 11
+        private constant integer MB_ROW_DEBUG_TEXTTAGS = 12
+    endglobals
+
     private function MBSetCell takes multiboard board, integer row, integer column, string value, real width returns nothing
         local multiboarditem boardItem = MultiboardGetItem(board, row, column)
         call MultiboardSetItemStyle(boardItem, true, false)
@@ -29649,6 +29523,18 @@ scope ModelBoard
         call MultiboardSetItemValue(boardItem, value)
         call MultiboardReleaseItem(boardItem)
         set boardItem = null
+    endfunction
+
+    private function MBEnsureLayout takes multiboard board returns nothing
+        if board == null then
+            return
+        endif
+        if MultiboardGetColumnCount(board) != MB_COLUMN_COUNT then
+            call MultiboardSetColumnCount(board, MB_COLUMN_COUNT)
+        endif
+        if MultiboardGetRowCount(board) != MB_ROW_COUNT then
+            call MultiboardSetRowCount(board, MB_ROW_COUNT)
+        endif
     endfunction
 
     private function MBWaveStateText takes Wave w returns string
@@ -29692,24 +29578,105 @@ scope ModelBoard
         return "|cFF66FF99O|r|cFF4DFF88n|r|cFF33FF77M|r|cFF1AFF66a|r|cFF00CC55p|r|cFFFFFFFF: |r|cFF00FF00" + I2S(w.activeOnMap) + "|r"
     endfunction
 
+    private function MBPlayerIsActive takes integer pid returns boolean
+        if pid < 0 or pid >= MB_MAX_PLAYERS then
+            return false
+        endif
+        return User.fromIndex(pid).isPlaying
+    endfunction
+
+    private function MBActivePlayerCount takes nothing returns integer
+        local integer pid = 0
+        local integer count = 0
+        loop
+            exitwhen pid >= MB_MAX_PLAYERS
+            if MBPlayerIsActive(pid) then
+                set count = count + 1
+            endif
+            set pid = pid + 1
+        endloop
+        return count
+    endfunction
+
+    private function MBPlayersCell takes nothing returns string
+        return "|cFF66FF99Jug|r|cFFFFFFFF: |r|cFFFFFFCC" + I2S(MBActivePlayerCount()) + "|r|cFFFF8C00/|r|cFFFFFFCC" + I2S(MB_MAX_PLAYERS) + "|r"
+    endfunction
+
+    private function MBPlayerStatusText takes integer pid returns string
+        if MBPlayerIsActive(pid) then
+            return "|cFF66FF99Activo|r"
+        endif
+        return "|cFFFF6666Descon.|r"
+    endfunction
+
+    private function MBPlayerColorHex takes integer pid returns string
+        if pid == 0 then
+            return "|cffff0303"
+        elseif pid == 1 then
+            return "|cff0042ff"
+        elseif pid == 2 then
+            return "|cff1ce6b9"
+        elseif pid == 3 then
+            return "|cff540081"
+        elseif pid == 4 then
+            return "|cfffffc01"
+        elseif pid == 5 then
+            return "|cfffe8a0e"
+        elseif pid == 6 then
+            return "|cff20c000"
+        elseif pid == 7 then
+            return "|cffe55bb0"
+        endif
+        return "|cffffffff"
+    endfunction
+
+    private function MBPlayerSlotFallbackName takes integer pid returns string
+        if pid == 0 then
+            return "Rojo"
+        elseif pid == 1 then
+            return "Azul"
+        elseif pid == 2 then
+            return "Teal"
+        elseif pid == 3 then
+            return "Morado"
+        elseif pid == 4 then
+            return "Amarillo"
+        elseif pid == 5 then
+            return "Naranja"
+        elseif pid == 6 then
+            return "Verde"
+        elseif pid == 7 then
+            return "Rosa"
+        endif
+        return "Slot"
+    endfunction
+
+    private function MBPlayerNameText takes integer pid returns string
+        local string playerName = GetPlayerName(Player(pid))
+        if playerName == "" then
+            set playerName = MBPlayerSlotFallbackName(pid)
+        endif
+        return MBPlayerColorHex(pid) + playerName + "|r"
+    endfunction
+
     private function MBPlayerKillsText takes integer pid returns string
-        return "|cFFFFFF00Kills|r|cFFFFFFFF: |r|cFFFFFFCC" + I2S(GetWavePlayerTotalKills(pid)) + "|r"
+        return "|cFFFFFF00K|r|cFFFFFFFF: |r|cFFFFFFCC" + I2S(GetWavePlayerTotalKills(pid)) + "|r"
     endfunction
 
     private function MBPlayerStreakText takes integer pid returns string
-        return "|cFFFF9933Racha|r|cFFFFFFFF: |r|cFFFFCC66" + I2S(GetWavePlayerCurrentStreak(pid)) + "|r"
+        return "|cFFFF9933R|r|cFFFFFFFF: |r|cFFFFCC66" + I2S(GetWavePlayerCurrentStreak(pid)) + "|r"
     endfunction
 
     private function MBPlayerMultiText takes integer pid returns string
-        return "|cFF66CCFFMulti|r|cFFFFFFFF: |r|cFF99E6FF" + I2S(GetWavePlayerCurrentMulti(pid)) + "|r"
+        return "|cFF66CCFFM|r|cFFFFFFFF: |r|cFF99E6FF" + I2S(GetWavePlayerCurrentMulti(pid)) + "|r"
     endfunction
 
     private function MBPlayerDeathsText takes integer pid returns string
-        return "|cFFFF6666Muertes|r|cFFFFFFFF: |r|cFFFFB3B3" + I2S(GetWavePlayerTotalDeaths(pid)) + "|r"
+        return "|cFFFF6666D|r|cFFFFFFFF: |r|cFFFFB3B3" + I2S(GetWavePlayerTotalDeaths(pid)) + "|r"
     endfunction
 
     private function MBPlayerLivesText takes integer pid returns string
-        return "|cFF66FF99Vidas|r|cFFFFFFFF: |r|cFFCCFFDD" + I2S(HeroLivesGetRemaining(pid)) + "|r"
+        return "|cFF66FF99V|r|cFFFFFFFF: |r|cFFCCFFDD" + I2S(HeroLivesGetRemaining(pid)) + "|r"
     endfunction
 
     private function MBDebugInUse takes nothing returns string
@@ -29742,15 +29709,8 @@ scope ModelBoard
 
     function BMT1 takes nothing returns nothing
         local Wave w
-        local integer activePlayers
         local integer row
-        local integer i
-        local User u
         local integer pid
-        local integer debugRow
-        local integer loadoutDebugRow
-        local integer systemsDebugRow
-        local integer textTagDebugRow
 
         if CurrentBoardContext == null then
             return
@@ -29761,73 +29721,69 @@ scope ModelBoard
             return
         endif
 
-        set activePlayers = User.AmountPlaying
-        set debugRow = activePlayers + 1
-        set loadoutDebugRow = activePlayers + 2
-        set systemsDebugRow = activePlayers + 3
-        set textTagDebugRow = activePlayers + 4
-
-        call MultiboardDisplay(w.board, true)
-        call MultiboardSetColumnCount(w.board, 6)
-        call MultiboardSetRowCount(w.board, activePlayers + 5)
+        call MBEnsureLayout(w.board)
         call MultiboardSetTitleText(w.board, MBWaveTitle(w))
 
-        // Row 0: m?tricas completas de la wave con colores del t?tulo viejo
-        call MBSetCell(w.board, 0, 0, MBWaveCell(w), 0.09)
-        call MBSetCell(w.board, 0, 1, MBToSpawnCell(w), 0.15)
-        call MBSetCell(w.board, 0, 2, MBUnitsCell(w), 0.14)
-        call MBSetCell(w.board, 0, 3, MBBossCell(w), 0.13)
-        call MBSetCell(w.board, 0, 4, MBToKillCell(w), 0.12)
-        call MBSetCell(w.board, 0, 5, MBOnMapCell(w), 0.10)
+        // Row 0: metricas completas de la wave con layout fijo.
+        call MBSetCell(w.board, MB_ROW_WAVE, 0, MBWaveCell(w), 0.08)
+        call MBSetCell(w.board, MB_ROW_WAVE, 1, MBToSpawnCell(w), 0.14)
+        call MBSetCell(w.board, MB_ROW_WAVE, 2, MBUnitsCell(w), 0.13)
+        call MBSetCell(w.board, MB_ROW_WAVE, 3, MBBossCell(w), 0.11)
+        call MBSetCell(w.board, MB_ROW_WAVE, 4, MBToKillCell(w), 0.12)
+        call MBSetCell(w.board, MB_ROW_WAVE, 5, MBOnMapCell(w), 0.09)
+        call MBSetCell(w.board, MB_ROW_WAVE, 6, MBPlayersCell(), 0.08)
 
-        // Rows 1..N: jugadores activos
-        set i = 0
+        // Rows 1..8: slots fijos rojo..rosa. Nunca mover debug por AmountPlaying.
+        set pid = 0
         loop
-            exitwhen i >= activePlayers
-            set u = User.fromPlaying(i)
-            set pid = u.id
-            set row = i + 1
+            exitwhen pid >= MB_MAX_PLAYERS
+            set row = MB_ROW_PLAYER_START + pid
 
-            call MBSetCell(w.board, row, 0, u.nameColored, 0.15)
-            call MBSetCell(w.board, row, 1, MBPlayerKillsText(pid), 0.11)
-            call MBSetCell(w.board, row, 2, MBPlayerStreakText(pid), 0.10)
-            call MBSetCell(w.board, row, 3, MBPlayerMultiText(pid), 0.10)
-            call MBSetCell(w.board, row, 4, MBPlayerDeathsText(pid), 0.11)
-            call MBSetCell(w.board, row, 5, MBPlayerLivesText(pid), 0.10)
+            call MBSetCell(w.board, row, 0, MBPlayerNameText(pid), 0.14)
+            call MBSetCell(w.board, row, 1, MBPlayerStatusText(pid), 0.09)
+            call MBSetCell(w.board, row, 2, MBPlayerKillsText(pid), 0.09)
+            call MBSetCell(w.board, row, 3, MBPlayerStreakText(pid), 0.09)
+            call MBSetCell(w.board, row, 4, MBPlayerMultiText(pid), 0.08)
+            call MBSetCell(w.board, row, 5, MBPlayerDeathsText(pid), 0.09)
+            call MBSetCell(w.board, row, 6, MBPlayerLivesText(pid), 0.08)
 
-            set i = i + 1
+            set pid = pid + 1
         endloop
 
         // Fila debug general: TimerUtils
-        call MBSetCell(w.board, debugRow, 0, "|cFFBBBBBBDebug TimerUtils|r", 0.15)
-        call MBSetCell(w.board, debugRow, 1, MBDebugInUse(), 0.11)
-        call MBSetCell(w.board, debugRow, 2, MBDebugCap(), 0.10)
-        call MBSetCell(w.board, debugRow, 3, MBDebugPeak(), 0.10)
-        call MBSetCell(w.board, debugRow, 4, MBDebugAvail(), 0.10)
-        call MBSetCell(w.board, debugRow, 5, "", 0.01)
+        call MBSetCell(w.board, MB_ROW_DEBUG_TIMER, 0, "|cFFBBBBBBDebug Timer|r", 0.14)
+        call MBSetCell(w.board, MB_ROW_DEBUG_TIMER, 1, MBDebugInUse(), 0.09)
+        call MBSetCell(w.board, MB_ROW_DEBUG_TIMER, 2, MBDebugCap(), 0.09)
+        call MBSetCell(w.board, MB_ROW_DEBUG_TIMER, 3, MBDebugPeak(), 0.09)
+        call MBSetCell(w.board, MB_ROW_DEBUG_TIMER, 4, MBDebugAvail(), 0.09)
+        call MBSetCell(w.board, MB_ROW_DEBUG_TIMER, 5, "", 0.09)
+        call MBSetCell(w.board, MB_ROW_DEBUG_TIMER, 6, "", 0.08)
 
         // Fila debug loadouts: live/peak por sistema
-        call MBSetCell(w.board, loadoutDebugRow, 0, "|cFFBBBBBBDebug Loadouts|r", 0.15)
-        call MBSetCell(w.board, loadoutDebugRow, 1, MBLoadoutDebugCell("Control", "|cFFFF6666", TIMER_DEBUG_TAG_LOADOUT_CONTROL), 0.11)
-        call MBSetCell(w.board, loadoutDebugRow, 2, MBLoadoutDebugCell("Missile", "|cFF66CCFF", TIMER_DEBUG_TAG_LOADOUT_MISSILE), 0.11)
-        call MBSetCell(w.board, loadoutDebugRow, 3, MBLoadoutDebugCell("Leap", "|cFF66FF99", TIMER_DEBUG_TAG_LOADOUT_LEAP), 0.10)
-        call MBSetCell(w.board, loadoutDebugRow, 4, MBLoadoutDebugCell("LeapMs", "|cFFFFCC66", TIMER_DEBUG_TAG_LOADOUT_LEAP_MISS), 0.10)
-        call MBSetCell(w.board, loadoutDebugRow, 5, MBLoadoutDebugCell("Rocket", "|cFFFF99CC", TIMER_DEBUG_TAG_LOADOUT_ROCKET), 0.10)
+        call MBSetCell(w.board, MB_ROW_DEBUG_LOADOUT, 0, "|cFFBBBBBBDebug Load|r", 0.14)
+        call MBSetCell(w.board, MB_ROW_DEBUG_LOADOUT, 1, MBLoadoutDebugCell("Ctrl", "|cFFFF6666", TIMER_DEBUG_TAG_LOADOUT_CONTROL), 0.09)
+        call MBSetCell(w.board, MB_ROW_DEBUG_LOADOUT, 2, MBLoadoutDebugCell("Miss", "|cFF66CCFF", TIMER_DEBUG_TAG_LOADOUT_MISSILE), 0.09)
+        call MBSetCell(w.board, MB_ROW_DEBUG_LOADOUT, 3, MBLoadoutDebugCell("Leap", "|cFF66FF99", TIMER_DEBUG_TAG_LOADOUT_LEAP), 0.09)
+        call MBSetCell(w.board, MB_ROW_DEBUG_LOADOUT, 4, MBLoadoutDebugCell("LpMs", "|cFFFFCC66", TIMER_DEBUG_TAG_LOADOUT_LEAP_MISS), 0.09)
+        call MBSetCell(w.board, MB_ROW_DEBUG_LOADOUT, 5, MBLoadoutDebugCell("Rckt", "|cFFFF99CC", TIMER_DEBUG_TAG_LOADOUT_ROCKET), 0.09)
+        call MBSetCell(w.board, MB_ROW_DEBUG_LOADOUT, 6, "", 0.08)
 
         // Fila debug sistemas: wave / ia / skills / movecast / otros
-        call MBSetCell(w.board, systemsDebugRow, 0, "|cFFBBBBBBDebug Systems|r", 0.15)
-        call MBSetCell(w.board, systemsDebugRow, 1, MBTaggedDebugCell("Wave", "|cFF99CCFF", TIMER_DEBUG_TAG_WAVE_CORE), 0.11)
-        call MBSetCell(w.board, systemsDebugRow, 2, MBTaggedDebugCell("IA", "|cFFFF9999", TIMER_DEBUG_TAG_AI), 0.10)
-        call MBSetCell(w.board, systemsDebugRow, 3, MBTaggedDebugCell("UnitSkills", "|cFF99FF99", TIMER_DEBUG_TAG_UNIT_SKILLS), 0.12)
-        call MBSetCell(w.board, systemsDebugRow, 4, MBTaggedDebugCell("MoveCast", "|cFFFFCC66", TIMER_DEBUG_TAG_MOVECAST), 0.12)
-        call MBSetCell(w.board, systemsDebugRow, 5, MBTaggedDebugCell("Other", "|cFFD6B3FF", TIMER_DEBUG_TAG_OTHER), 0.11)
+        call MBSetCell(w.board, MB_ROW_DEBUG_SYSTEMS, 0, "|cFFBBBBBBDebug Sys|r", 0.14)
+        call MBSetCell(w.board, MB_ROW_DEBUG_SYSTEMS, 1, MBTaggedDebugCell("Wave", "|cFF99CCFF", TIMER_DEBUG_TAG_WAVE_CORE), 0.09)
+        call MBSetCell(w.board, MB_ROW_DEBUG_SYSTEMS, 2, MBTaggedDebugCell("IA", "|cFFFF9999", TIMER_DEBUG_TAG_AI), 0.09)
+        call MBSetCell(w.board, MB_ROW_DEBUG_SYSTEMS, 3, MBTaggedDebugCell("Skill", "|cFF99FF99", TIMER_DEBUG_TAG_UNIT_SKILLS), 0.09)
+        call MBSetCell(w.board, MB_ROW_DEBUG_SYSTEMS, 4, MBTaggedDebugCell("Move", "|cFFFFCC66", TIMER_DEBUG_TAG_MOVECAST), 0.09)
+        call MBSetCell(w.board, MB_ROW_DEBUG_SYSTEMS, 5, MBTaggedDebugCell("Other", "|cFFD6B3FF", TIMER_DEBUG_TAG_OTHER), 0.09)
+        call MBSetCell(w.board, MB_ROW_DEBUG_SYSTEMS, 6, "", 0.08)
 
-        call MBSetCell(w.board, textTagDebugRow, 0, "|cFFBBBBBBDebug TextTags|r", 0.15)
-        call MBSetCell(w.board, textTagDebugRow, 1, MBTextTagTotalCell("Total", "|cFF66CCFF", GetTextTagDebugLiveTotal(), GetTextTagDebugPeakTotal()), 0.11)
-        call MBSetCell(w.board, textTagDebugRow, 2, MBTextTagTotalCell("UI", "|cFFFF9999", GetTextTagDebugLive(TEXTTAG_DEBUG_UI), GetTextTagDebugPeak(TEXTTAG_DEBUG_UI)), 0.10)
-        call MBSetCell(w.board, textTagDebugRow, 3, MBTextTagTotalCell("Move", "|cFFFFCC66", GetTextTagDebugLive(TEXTTAG_DEBUG_MOVECAST), GetTextTagDebugPeak(TEXTTAG_DEBUG_MOVECAST)), 0.10)
-        call MBSetCell(w.board, textTagDebugRow, 4, MBTextTagTotalCell("Dmg", "|cFFD6B3FF", GetTextTagDebugLive(TEXTTAG_DEBUG_DAMAGE), GetTextTagDebugPeak(TEXTTAG_DEBUG_DAMAGE)), 0.11)
-        call MBSetCell(w.board, textTagDebugRow, 5, MBTextTagTotalCell("Health", "|cFF99FF99", GetHealthBarVisibleCount(), GetHealthBarTextTagCap()), 0.12)
+        call MBSetCell(w.board, MB_ROW_DEBUG_TEXTTAGS, 0, "|cFFBBBBBBDebug Tags|r", 0.14)
+        call MBSetCell(w.board, MB_ROW_DEBUG_TEXTTAGS, 1, MBTextTagTotalCell("Total", "|cFF66CCFF", GetTextTagDebugLiveTotal(), GetTextTagDebugPeakTotal()), 0.09)
+        call MBSetCell(w.board, MB_ROW_DEBUG_TEXTTAGS, 2, MBTextTagTotalCell("UI", "|cFFFF9999", GetTextTagDebugLive(TEXTTAG_DEBUG_UI), GetTextTagDebugPeak(TEXTTAG_DEBUG_UI)), 0.09)
+        call MBSetCell(w.board, MB_ROW_DEBUG_TEXTTAGS, 3, MBTextTagTotalCell("Move", "|cFFFFCC66", GetTextTagDebugLive(TEXTTAG_DEBUG_MOVECAST), GetTextTagDebugPeak(TEXTTAG_DEBUG_MOVECAST)), 0.09)
+        call MBSetCell(w.board, MB_ROW_DEBUG_TEXTTAGS, 4, MBTextTagTotalCell("Dmg", "|cFFD6B3FF", GetTextTagDebugLive(TEXTTAG_DEBUG_DAMAGE), GetTextTagDebugPeak(TEXTTAG_DEBUG_DAMAGE)), 0.09)
+        call MBSetCell(w.board, MB_ROW_DEBUG_TEXTTAGS, 5, MBTextTagTotalCell("HP", "|cFF99FF99", GetHealthBarVisibleCount(), GetHealthBarTextTagCap()), 0.09)
+        call MBSetCell(w.board, MB_ROW_DEBUG_TEXTTAGS, 6, "", 0.08)
     endfunction
 endscope
 

@@ -16,6 +16,7 @@ globals
     private constant integer DUMMY_UNIT_ID = 'h003'
     private constant integer LOADOUT_LEAP_SPELL_ID = 'U0A2'
     private constant integer LEAP_BUFF_ID = 'BB01'
+    private constant integer MAX_MOVECAST_PLAYER_ID = 7
     private constant real PULSE_DELAY = 0.03
     private constant boolean DEBUG_MODE = false
 
@@ -45,6 +46,41 @@ private function IsLeapBuffActive takes unit u returns boolean
     return GetUnitAbilityLevel(u, LEAP_BUFF_ID) > 0
 endfunction
 
+private function IsMoveCastTrackedUnit takes unit u returns boolean
+    local player owner
+    local integer pid
+
+    if (u == null) or (GetUnitTypeId(u) == 0) then
+        return false
+    endif
+
+    set owner = GetOwningPlayer(u)
+    set pid = GetPlayerId(owner)
+
+    if (pid < 0) or (pid > MAX_MOVECAST_PLAYER_ID) then
+        set owner = null
+        return false
+    endif
+
+    if GetPlayerSlotState(owner) != PLAYER_SLOT_STATE_PLAYING then
+        set owner = null
+        return false
+    endif
+
+    if GetPlayerController(owner) != MAP_CONTROL_USER then
+        set owner = null
+        return false
+    endif
+
+    if not IsUnitType(u, UNIT_TYPE_HERO) then
+        set owner = null
+        return false
+    endif
+
+    set owner = null
+    return true
+endfunction
+
 struct MovementData
     unit source
     unit dummy
@@ -66,6 +102,7 @@ struct MovementData
     unit lastCastTargetUnit
     boolean isFollowing
     boolean sessionActive
+    boolean isDestroying
     real sessionDuration
     real sessionRemaining
     integer recastsLeft
@@ -74,6 +111,10 @@ struct MovementData
 
     static method create takes unit u returns thistype
         local thistype this = thistype.allocate()
+
+        if this == 0 then
+            return 0
+        endif
 
         set .source = u
         set .dummy = null
@@ -95,6 +136,7 @@ struct MovementData
         set .lastCastTargetUnit = null
         set .isFollowing = false
         set .sessionActive = false
+        set .isDestroying = false
         set .sessionDuration = 0.
         set .sessionRemaining = 0.
         set .recastsLeft = 0
@@ -109,6 +151,12 @@ struct MovementData
 
     static method get takes unit u returns thistype
         return table[GetHandleId(u)]
+    endmethod
+
+    static method forget takes unit u returns nothing
+        if (u != null) and (GetUnitTypeId(u) != 0) then
+            call table.remove(GetHandleId(u))
+        endif
     endmethod
 
     private method syncCastTextTagPosition takes nothing returns nothing
@@ -378,11 +426,22 @@ struct MovementData
     endmethod
 
     method destroy takes nothing returns nothing
-        call .endSession()
-        if .source != null then
-            call table.remove(GetHandleId(.source))
+        local unit u
+
+        if .isDestroying then
+            return
         endif
+
+        set .isDestroying = true
+        set u = .source
+
+        if u != null then
+            call table.remove(GetHandleId(u))
+        endif
+
+        call .endSession()
         set .source = null
+        set u = null
         set .hasLastSmart = false
         call .deallocate()
     endmethod
@@ -395,13 +454,11 @@ struct MovementData
         local real distSq
 
         if this == 0 then
-            call ReleaseTimer(t)
             set t = null
             return
         endif
 
         if .followTim != t then
-            call ReleaseTimer(t)
             set t = null
             return
         endif
@@ -444,13 +501,11 @@ struct MovementData
         local thistype this = GetTimerData(t)
 
         if this == 0 then
-            call ReleaseTimer(t)
             set t = null
             return
         endif
 
         if .sessionTim != t then
-            call ReleaseTimer(t)
             set t = null
             return
         endif
@@ -488,13 +543,11 @@ struct MovementData
         local thistype this = GetTimerData(t)
 
         if this == 0 then
-            call ReleaseTimer(t)
             set t = null
             return
         endif
 
         if .pulseTim != t then
-            call ReleaseTimer(t)
             set t = null
             return
         endif
@@ -538,6 +591,46 @@ struct MovementData
         set table = Table.create()
     endmethod
 endstruct
+
+private function GetOrCreateMovementData takes unit u returns MovementData
+    local MovementData data = 0
+
+    if not IsMoveCastTrackedUnit(u) then
+        return 0
+    endif
+
+    if MovementData.has(u) then
+        set data = MovementData.get(u)
+        if data != 0 then
+            if data.source == u then
+                return data
+            endif
+        endif
+        call MovementData.forget(u)
+    endif
+
+    set data = MovementData.create(u)
+    return data
+endfunction
+
+private function DestroyMovementDataForUnit takes unit u returns nothing
+    local MovementData data
+
+    if (u == null) or (GetUnitTypeId(u) == 0) then
+        return
+    endif
+
+    if MovementData.has(u) then
+        set data = MovementData.get(u)
+        if data != 0 then
+            if data.source == u then
+                call data.destroy()
+                return
+            endif
+        endif
+        call MovementData.forget(u)
+    endif
+endfunction
 
 //===========================================================================
 function RegisterMovementSpell takes integer abilityId, string orderId returns nothing
@@ -584,14 +677,10 @@ endfunction
 
 //===========================================================================
 function CancelMovementSpellSessionForUnit takes unit u returns nothing
-    local MovementData data
     if u == null or GetUnitTypeId(u) == 0 then
         return
     endif
-    if MovementData.has(u) then
-        set data = MovementData.get(u)
-        call data.destroy()
-    endif
+    call DestroyMovementDataForUnit(u)
 endfunction
 
 //===========================================================================
@@ -602,21 +691,23 @@ private function OnPointOrder takes nothing returns boolean
     local real x
     local real y
 
+    if not IsMoveCastTrackedUnit(u) then
+        set u = null
+        return false
+    endif
+
     if (orderId == ORDER_ID_MOVE) or (orderId == ORDER_ID_SMART) then
         if IsLeapBuffActive(u) then
-            if MovementData.has(u) then
-                set data = MovementData.get(u)
-                call data.destroy()
-            endif
+            call DestroyMovementDataForUnit(u)
             set u = null
             return false
         endif
         set x = GetOrderPointX()
         set y = GetOrderPointY()
-        if MovementData.has(u) then
-            set data = MovementData.get(u)
-        else
-            set data = MovementData.create(u)
+        set data = GetOrCreateMovementData(u)
+        if data == 0 then
+            set u = null
+            return false
         endif
 
         if not data.sessionActive then
@@ -649,22 +740,26 @@ private function OnTargetOrder takes nothing returns boolean
     local real x
     local real y
 
+    if not IsMoveCastTrackedUnit(u) then
+        set targetU = null
+        set u = null
+        return false
+    endif
+
     if (orderId == ORDER_ID_SMART) and (targetU != null) and (GetUnitTypeId(targetU) != 0) then
         if IsLeapBuffActive(u) then
-            if MovementData.has(u) then
-                set data = MovementData.get(u)
-                call data.destroy()
-            endif
+            call DestroyMovementDataForUnit(u)
             set targetU = null
             set u = null
             return false
         endif
         set x = GetUnitX(targetU)
         set y = GetUnitY(targetU)
-        if MovementData.has(u) then
-            set data = MovementData.get(u)
-        else
-            set data = MovementData.create(u)
+        set data = GetOrCreateMovementData(u)
+        if data == 0 then
+            set targetU = null
+            set u = null
+            return false
         endif
 
         if not data.sessionActive then
@@ -698,31 +793,32 @@ private function OnSpellEffect takes nothing returns boolean
     local real ty = GetSpellTargetY()
     local MovementData data
 
+    if not IsMoveCastTrackedUnit(u) then
+        set targetU = null
+        set u = null
+        return false
+    endif
+
     if abilityId == LOADOUT_LEAP_SPELL_ID then
-        if MovementData.has(u) then
-            set data = MovementData.get(u)
-            call data.destroy()
-        endif
+        call DestroyMovementDataForUnit(u)
         set targetU = null
         set u = null
         return false
     endif
 
     if IsLeapBuffActive(u) then
-        if MovementData.has(u) then
-            set data = MovementData.get(u)
-            call data.destroy()
-        endif
+        call DestroyMovementDataForUnit(u)
         set targetU = null
         set u = null
         return false
     endif
 
     if registeredAbilityFlags.boolean[abilityId] then
-        if MovementData.has(u) then
-            set data = MovementData.get(u)
-        else
-            set data = MovementData.create(u)
+        set data = GetOrCreateMovementData(u)
+        if data == 0 then
+            set targetU = null
+            set u = null
+            return false
         endif
 
         if (targetU != null) and (GetUnitTypeId(targetU) != 0) then
@@ -752,12 +848,8 @@ endfunction
 //===========================================================================
 private function OnUnitDeath takes nothing returns boolean
     local unit u = GetTriggerUnit()
-    local MovementData data
 
-    if MovementData.has(u) then
-        set data = MovementData.get(u)
-        call data.destroy()
-    endif
+    call DestroyMovementDataForUnit(u)
     set u = null
     return false
 endfunction

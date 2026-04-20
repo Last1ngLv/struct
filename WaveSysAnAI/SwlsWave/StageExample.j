@@ -106,7 +106,7 @@ function Trig_w1_Actions takes nothing returns nothing
     //call w.addSlot('n00B', 10, 2, 2, 5,  50, true, Player(11)) AI_PROFILE_WAVE1_SPELL
     
     if TargetWave >= 1 then
-        call w.upsertSlotExByPlayers(AI_STAGE1_SLOT_GROUP_HPEA, 'hpea', 2, true, 2, 1, 1, -1, false, AI_PROFILE_MELEE, 0, 0, 1.00)
+        call w.upsertSlotExByPlayers(AI_STAGE1_SLOT_GROUP_HPEA, 'hpea', 1, false, 2, 1, 1, -1, false, AI_PROFILE_MELEE, 0, 0, 1.00)
         //call w.upsertSlotExByPlayers(AI_STAGE1_SLOT_GROUP_HKNI, 'hkni', 2, true, 2, 1, 5, -1, false, AI_PROFILE_MELEE, 0, 0, 1.00)
         //call w.addSlotExByPlayer('zA04', 1,true, 2, 1, 1, 15, true,Player(11), AI_PROFILE_BOSS, 0, 0, 1.00)
         //call w.upsertSlotExByPlayers(AI_STAGE1_SLOT_GROUP_HMPR, 'hmpr', 1, true, 2, 1, 7, -1, false, AI_PROFILE_WAVE7_SPELL, 0, 0, 1.10)
@@ -121,19 +121,19 @@ function Trig_w1_Actions takes nothing returns nothing
         //call w.addSlotExByPlayer('hmpr', 2,false, 2, 1, 1, -1, false,Player(11), AI_PROFILE_WAVE7_SPELL, 0, 0, 1.00)
         endif
         if TargetWave >= 2 then
-            call w.upsertSlotExByPlayers(AI_STAGE1_SLOT_GROUP_HMIL, 'hmil', 2, true, 2, 1, 2, -1, false, AI_PROFILE_MELEE, 0, 0, 1.00)
+            call w.upsertSlotExByPlayers(AI_STAGE1_SLOT_GROUP_HMIL, 'hmil', 1, false, 2, 1, 2, -1, false, AI_PROFILE_MELEE, 0, 0, 1.00)
             if TargetWave == 2 then
                 call w.addSlotExByPlayer('zA01', 2,false, 2, 1, 1, 5, true,Player(11), AI_PROFILE_BOSS, 0, 0, 1.00)
             endif
         endif
         if TargetWave >= 3 then
-            call w.upsertSlotExByPlayers(AI_STAGE1_SLOT_GROUP_HFOO, 'hfoo', 2, true, 2, 1, 3, -1, false, AI_PROFILE_MELEE, 0, 0, 1.00)
+            call w.upsertSlotExByPlayers(AI_STAGE1_SLOT_GROUP_HFOO, 'hfoo', 1, false, 2, 1, 3, -1, false, AI_PROFILE_MELEE, 0, 0, 1.00)
             if TargetWave == 3 then
             call w.addSlotExByPlayer('zA02', 2,false, 2, 1, 1, 10, true,Player(11), AI_PROFILE_BOSS, 0, 0, 1.00)
         endif
             endif
         if TargetWave >= 4 then
-            call w.upsertSlotExByPlayers(AI_STAGE1_SLOT_GROUP_HRIF, 'hrif', 2, true, 2, 1, 4, -1, false, AI_PROFILE_WAVE4_SPELL, 0, 0, 1.00)
+            call w.upsertSlotExByPlayers(AI_STAGE1_SLOT_GROUP_HRIF, 'hrif', 1, false, 2, 1, 4, -1, false, AI_PROFILE_WAVE4_SPELL, 0, 0, 1.00)
             if TargetWave == 4 then
             call w.addSlotExByPlayer('zA03', 2,false, 2, 1, 1, 15, true,Player(11), AI_PROFILE_BOSS, 0, 0, 1.00)
         endif

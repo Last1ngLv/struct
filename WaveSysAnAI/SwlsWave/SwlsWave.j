@@ -961,11 +961,6 @@ library WaveTest initializer Init /*
             call w.registerWaveUnit(summoned, 0, isBoss, true)
             call WaveDebugLog("registerExternalUnit wave=" + I2S(w) + " source=" + WaveDebugUnitSummary(source) + " summoned=" + WaveDebugUnitSummary(summoned) + " ownerPid=" + I2S(ownerPid) + " external=1 boss=" + I2S(WaveDebugBoolToInt(isBoss)))
 
-            if w.board != null and w.titleFunc != "" then
-                set CurrentBoardContext = w.board
-                call ExecuteFunc(w.titleFunc)
-                set CurrentBoardContext = null
-            endif
         endmethod
 
 
@@ -2018,12 +2013,6 @@ library WaveTest initializer Init /*
 
             call w.untrackUnitByHandle(hid)
             call WaveFireDeath(w, u, killer, s, isBoss, isExternal)
-
-            if w.board != null and w.titleFunc != "" then
-                set CurrentBoardContext = w.board
-                call ExecuteFunc(w.titleFunc)
-                set CurrentBoardContext = null
-            endif
 
             call WaveByUnit.remove(hid)
             call SlotByUnit.remove(hid)

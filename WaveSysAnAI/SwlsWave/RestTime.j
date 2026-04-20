@@ -1,4 +1,4 @@
-library TheEnd requires HeroLives, TenderSystem, TenderAudio, PreConfi
+library TheEnd requires HeroLives, TenderSystem, PreConfi
     globals
         private constant integer WAVE_PHASE_NONE = 0
         private constant integer WAVE_PHASE_START = 1
@@ -16,7 +16,6 @@ library TheEnd requires HeroLives, TenderSystem, TenderAudio, PreConfi
         private integer WavePhaseRemaining = 0
         private sound AmbientTownSound = null
         private sound SurvivalEndSound = null
-        private integer LastTenderTrackIndex = 0
         private boolean SurvivalEndSequenceActive = false
     endglobals
 
@@ -125,7 +124,6 @@ library TheEnd requires HeroLives, TenderSystem, TenderAudio, PreConfi
             call PauseTimer(WavePhaseTimer)
         endif
         call StopAmbientTownSound()
-        call TenderAudioStop()
         call BJDebugMsg("|cff66ff66Superaste las 10 waves|r")
         call SetWaveStatusTextForActivePlayers("|cff66ff66Superaste las 10 waves|r")
         if SurvivalEndSound == null and SURVIVAL_END_SOUND_PATH != null and SURVIVAL_END_SOUND_PATH != "" then
@@ -146,7 +144,6 @@ library TheEnd requires HeroLives, TenderSystem, TenderAudio, PreConfi
 
     private function LaunchCurrentWave takes nothing returns nothing
         call StopAmbientTownSound()
-        call TenderAudioStop()
         call CloseTenderForActivePlayers()
         call ExecuteFunc("MenuClientClearEnemyPreviewForActivePlayers")
         set WavePhaseState = WAVE_PHASE_NONE
@@ -184,12 +181,10 @@ library TheEnd requires HeroLives, TenderSystem, TenderAudio, PreConfi
         set WavePhaseRemaining = seconds
         if phaseState == WAVE_PHASE_PURCHASE then
             set SurvivalEndSequenceActive = false
-            set LastTenderTrackIndex = TenderAudioStartRest(TargetWave, LastTenderTrackIndex)
             call StartAmbientTownSound()
             call ExecuteFunc("MenuClientRefreshEnemyPreviewForActivePlayers")
             call SetWaveStatusTextForActivePlayers("TimeOfPurchase: " + I2S(WavePhaseRemaining))
         else
-            call TenderAudioStop()
             call SetWaveStatusTextForActivePlayers("WaveIn: " + I2S(WavePhaseRemaining))
         endif
         call PauseTimer(WavePhaseTimer)

@@ -30,7 +30,6 @@ libraries/Camera.j
 libraries/UnitDex.j
 libraries/UserInterface.j
 InitMap/TenderSystem.j
-InitMap/TenderAudio.j
 libraries/UnitIndexer.j
 libraries/IsUnitChanneling.j
 InitMap/VisionConfi.j
