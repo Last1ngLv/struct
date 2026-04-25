@@ -1,0 +1,42 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\Environment\\Config\\VisionConfig.j",
+  "items": [
+    {
+      "label": "ApplyVisionConfig",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ApplyVisionConfig takes nothing returns nothing\n```\n\n\n**_>:** `Environment/Config/VisionConfig.j`",
+      "sortText": "1_func_ApplyVisionConfig",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Environment\\Config\\VisionConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Trig_Event_Actions",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Trig_Event_Actions takes nothing returns nothing\n```\n\n\n---\n\nCompatibilidad con detonador clásico (si alguien todavía llama esta función).\n\n**_>:** `Environment/Config/VisionConfig.j`",
+      "sortText": "1_func_Trig_Event_Actions",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Environment\\Config\\VisionConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "InitTrig_Event",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction InitTrig_Event takes nothing returns nothing\n```\n\n\n---\n\nCompatibilidad con InitTrig_... sin depender de gg_trg_Event.\n\n**_>:** `Environment/Config/VisionConfig.j`",
+      "sortText": "1_func_InitTrig_Event",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Environment\\Config\\VisionConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**_>:** `Environment/Config/VisionConfig.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Environment\\Config\\VisionConfig.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1777049211106
+}

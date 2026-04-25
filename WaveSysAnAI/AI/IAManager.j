@@ -1,4 +1,4 @@
-library IAManager initializer Init requires Table, TimerUtils, WaveTest, TenderSystem, AIProfiles, AIConfig, TerrainPathability, WaveBarrierSkills, WaveAuraSkills, WaveRangedSkills, WaveSiegeSkills, WaveMortarSkills, WavePriestSkills, WaveTrapSkills, WaveSiegeZoneSkills, WaveWaveformSkills, TextTagDebug
+library IAManager initializer Init requires Table, TimerUtils, WaveTest, TenderSystem, AIProfiles, AIConfig, TerrainPathability, WaveBarrierSkills, WaveAuraSkills, WaveRangedSkills, WaveSiegeSkills, WaveMortarSkills, WavePriestSkills, WaveTrapSkills, WaveSiegeZoneSkills, WaveWaveformSkills, TextTagDebug, AIManagerUtils
 
     globals
         private constant integer AI_TICK_MS = 500
@@ -102,77 +102,6 @@ library IAManager initializer Init requires Table, TimerUtils, WaveTest, TenderS
         endif
         set AIDebugLogsThisTick = AIDebugLogsThisTick + 1
         call BJDebugMsg("[IAManager] " + msg)
-    endfunction
-
-    private function AIBoolToInt takes boolean b returns integer
-        if b then
-            return 1
-        endif
-        return 0
-    endfunction
-
-    private function AIIntervalToMs takes real sec, integer fallback returns integer
-        local integer ms
-        if sec <= 0.0 then
-            return fallback
-        endif
-        set ms = R2I(sec*1000.0 + 0.5)
-        if ms < 50 then
-            set ms = 50
-        endif
-        return ms
-    endfunction
-
-    private function AIClampInt takes integer v, integer minV, integer maxV returns integer
-        if v < minV then
-            return minV
-        endif
-        if v > maxV then
-            return maxV
-        endif
-        return v
-    endfunction
-
-    private function AIClampReal takes real v, real minV, real maxV returns real
-        if v < minV then
-            return minV
-        endif
-        if v > maxV then
-            return maxV
-        endif
-        return v
-    endfunction
-
-    private function AIGetRandomRealRange takes real minV, real maxV returns real
-        local real tmp
-        if maxV < minV then
-            set tmp = minV
-            set minV = maxV
-            set maxV = tmp
-        endif
-        if maxV <= minV then
-            return minV
-        endif
-        return GetRandomReal(minV, maxV)
-    endfunction
-
-    private function AIGetRandomMsRange takes real minSec, real maxSec, integer fallbackMs, integer minMs returns integer
-        local integer value
-        local real tmp
-        if maxSec < minSec then
-            set tmp = minSec
-            set minSec = maxSec
-            set maxSec = tmp
-        endif
-        if minSec <= 0.0 and maxSec <= 0.0 then
-            set value = fallbackMs
-        else
-            set value = AIIntervalToMs(AIGetRandomRealRange(minSec, maxSec), fallbackMs)
-        endif
-        if value < minMs then
-            set value = minMs
-        endif
-        return value
     endfunction
 
     private function AIBossReinforcementRollInitialMs takes nothing returns integer
@@ -1971,3 +1900,4 @@ private function AIApplyMovement takes unit u, unit target, integer hid, integer
         call AILog("Initialized")
     endfunction
 endlibrary
+

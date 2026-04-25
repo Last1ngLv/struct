@@ -1,0 +1,42 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeAudio.j",
+  "items": [
+    {
+      "label": "StopAmbientTownSound",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction StopAmbientTownSound takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime/RestTimeAudio.j`",
+      "sortText": "1_func_StopAmbientTownSound",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeAudio.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "StartAmbientTownSound",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction StartAmbientTownSound takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime/RestTimeAudio.j`",
+      "sortText": "1_func_StartAmbientTownSound",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeAudio.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "RestTimeStopSurvivalEndSound",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction RestTimeStopSurvivalEndSound takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime/RestTimeAudio.j`",
+      "sortText": "1_func_RestTimeStopSurvivalEndSound",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeAudio.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "RestTimeStartSurvivalEndSound",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction RestTimeStartSurvivalEndSound takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime/RestTimeAudio.j`",
+      "sortText": "1_func_RestTimeStartSurvivalEndSound",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeAudio.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1777054088265
+}

@@ -1,0 +1,24 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\Players\\PlayerHeroState.j",
+  "items": [
+    {
+      "label": "PlayerHero",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nunit array PlayerHero\n```\n\n\n**_>:** `Players/PlayerHeroState.j`",
+      "sortText": "2_var_PlayerHero",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Players\\PlayerHeroState.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "PlayerCamera",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nCamera array PlayerCamera\n```\n\n\n**_>:** `Players/PlayerHeroState.j`",
+      "sortText": "2_var_PlayerCamera",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Players\\PlayerHeroState.j",
+      "statementType": "VariableDeclaration"
+    }
+  ],
+  "timestamp": 1777050871263
+}

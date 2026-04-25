@@ -1,4 +1,4 @@
-library HealthBarTextTags initializer Init requires Table, TimerUtils, PlayerUtils
+library HealthBarTextTags initializer Init requires Table, TimerUtils, PlayerUtils, PlayerHeroState
 
     globals
         private constant real HEALTH_BAR_HERO_PERIOD = 0.03
@@ -407,3 +407,4 @@ library HealthBarTextTags initializer Init requires Table, TimerUtils, PlayerUti
     endfunction
 
 endlibrary
+

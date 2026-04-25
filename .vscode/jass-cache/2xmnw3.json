@@ -1,0 +1,33 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeMenuBridge.j",
+  "items": [
+    {
+      "label": "RestTimeMenuApplyStatusForActivePlayers",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction RestTimeMenuApplyStatusForActivePlayers takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime/RestTimeMenuBridge.j`",
+      "sortText": "1_func_RestTimeMenuApplyStatusForActivePlayers",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeMenuBridge.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "RestTimeMenuCloseTenderForActivePlayers",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction RestTimeMenuCloseTenderForActivePlayers takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime/RestTimeMenuBridge.j`",
+      "sortText": "1_func_RestTimeMenuCloseTenderForActivePlayers",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeMenuBridge.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "RestTimeMenuShowClientsForActivePlayers",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction RestTimeMenuShowClientsForActivePlayers takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime/RestTimeMenuBridge.j`",
+      "sortText": "1_func_RestTimeMenuShowClientsForActivePlayers",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeMenuBridge.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1777054099097
+}

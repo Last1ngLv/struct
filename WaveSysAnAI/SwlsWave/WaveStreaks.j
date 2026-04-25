@@ -1,4 +1,4 @@
-ï»¿library WaveStreaks initializer Init requires Table, TimerUtils, PlayerUtils, WaveTest, SelectionSystem, WaveDamageCredit
+library WaveStreaks initializer Init requires Table, TimerUtils, PlayerUtils, WaveTest, SelectionSystem, WaveDamageCredit, PlayerHeroState
 
     globals
         private constant integer WAVE_STREAK_MAX_TIERS = 8
@@ -215,7 +215,7 @@
         if WaveQueueCount < WAVE_STREAK_QUEUE_MAX then
             set WaveQueueCount = WaveQueueCount + 1
         else
-            // Cola llena: descarta el mï¿½s viejo.
+            // Cola llena: descarta el m?s viejo.
             set WaveQueueRead = WaveWrapQueueIndex(WaveQueueRead + 1)
         endif
 
@@ -311,12 +311,12 @@
         if pid < 0 or pid >= bj_MAX_PLAYER_SLOTS then
             return -1
         endif
-        // Los owners default del sistema wave tambiï¿½n deben contar para rachas,
-        // aunque no estï¿½n en la lista de jugadores humanos activos.
+        // Los owners default del sistema wave tambi?n deben contar para rachas,
+        // aunque no est?n en la lista de jugadores humanos activos.
         if WaveIsDefaultOwnerPlayerId(pid) then
             return pid
         endif
-        // Para el resto de jugadores, solo creditamos si estï¿½n realmente activos.
+        // Para el resto de jugadores, solo creditamos si est?n realmente activos.
         if not User.fromIndex(pid).isPlaying then
             return -1
         endif
@@ -381,14 +381,14 @@
     endfunction
 
     private function WaveQueueBreakStreak takes integer pid, integer kills returns nothing
-        call WaveQueuePushTyped(WaveStreakBreakSoundPath, WaveGetPlayerNameColoredById(pid) + " |cffff6666perdiÃ³ su racha|r (" + I2S(kills) + ")", WAVE_QUEUE_KIND_BREAK_STREAK, pid)
+        call WaveQueuePushTyped(WaveStreakBreakSoundPath, WaveGetPlayerNameColoredById(pid) + " |cffff6666perdió su racha|r (" + I2S(kills) + ")", WAVE_QUEUE_KIND_BREAK_STREAK, pid)
     endfunction
 
     private function WaveQueueBreakMulti takes integer pid, integer tier returns nothing
         if tier <= 2 then
-            call WaveQueuePushTyped(WaveMultiBreakLowSoundPath, WaveGetPlayerNameColoredById(pid) + " |cff66ccffperdiÃ³ su multi kill|r (I-II)", WAVE_QUEUE_KIND_BREAK_MULTI, pid)
+            call WaveQueuePushTyped(WaveMultiBreakLowSoundPath, WaveGetPlayerNameColoredById(pid) + " |cff66ccffperdió su multi kill|r (I-II)", WAVE_QUEUE_KIND_BREAK_MULTI, pid)
         else
-            call WaveQueuePushTyped(WaveMultiBreakHighSoundPath, WaveGetPlayerNameColoredById(pid) + " |cff66ccffperdiÃ³ su multi kill|r (III-IV)", WAVE_QUEUE_KIND_BREAK_MULTI, pid)
+            call WaveQueuePushTyped(WaveMultiBreakHighSoundPath, WaveGetPlayerNameColoredById(pid) + " |cff66ccffperdió su multi kill|r (III-IV)", WAVE_QUEUE_KIND_BREAK_MULTI, pid)
         endif
     endfunction
 
@@ -455,7 +455,7 @@
             return
         endif
 
-        // First Blood por wave (solo hÃ©roe -> wave).
+        // First Blood por wave (solo héroe -> wave).
         if waveId != 0 then
             if (not WaveFirstBloodDoneByWave.has(waveId)) or WaveFirstBloodDoneByWave[waveId] == 0 then
                 set WaveFirstBloodDoneByWave[waveId] = 1
@@ -718,3 +718,4 @@
     endfunction
 
 endlibrary
+

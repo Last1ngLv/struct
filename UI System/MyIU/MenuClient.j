@@ -1,16 +1,16 @@
-library MenuClient initializer Init requires UserInterface,EquipHeroModels,PlayerMissileLoadout,TimerUtils,WaveTest,stage1,TenderSystem,PreConfi,EnemyPreviewConfig // requires InventoryCore, EquipmentItem
+library MenuClient initializer Init requires UserInterface,EquipHeroModels,PlayerMissileLoadout,TimerUtils,WaveTest,TenderSystem,PreConfi,EnemyPreviewConfig,PlayerHeroState // requires InventoryCore, EquipmentItem
     
 globals
     public filterfunc FuncLClickSlot = null
     public filterfunc FuncRClickSlot = null
     public integer array PlayerLastSlot 
+    public UIButton array PlayerLastButton
     private string array WaveStatusText
     private effect array WaveEnemyPreviewFx
     private integer array WaveEnemyPreviewWaveId
     private string array WaveEnemyPreviewModelPath
     private real array PlayerMenuCameraHeight
     private real array PlayerMenuCameraOffset
-    private boolean array PlayerMenuHealthBarPreSelect
     private real array PlayerMenuFogAppliedHeight
 endglobals
     
@@ -257,7 +257,8 @@ endglobals
                 // middle
                 call this.setButton(0, UIButton.create(x1 + (.SLOT_WIDTH*0.75)+1.00+0.1, y1 - (.SLOT_HEIGHT*5)-0.15, .SLOT_WIDTH, .SLOT_HEIGHT, 10, 'M00D'))
                 
-                call this.setButton(1, UIButton.create(x1 + (.SLOT_WIDTH*0.75)+0.10, y1 - (.SLOT_HEIGHT*5)+0.85, .SLOT_WIDTH, .SLOT_HEIGHT, 10, 'M00B'))
+                // Slot 1 era el boton viejo para abrir/cerrar Tender.
+                // Ahora el Tender se abre con ESC desde TenderEscInteraction.
                 
                 call this.setButton(2, UIButton.create(x1 + (.SLOT_WIDTH*0.75)-1.00, y1 - (.SLOT_HEIGHT*5)+1.05, .SLOT_WIDTH, .SLOT_HEIGHT, 10, 'M00G'))
                 
@@ -275,7 +276,6 @@ endglobals
                 //call this.setButton(7, UIButton.create(x1 + (.SLOT_WIDTH*0.75)+1.00, y1 - (.SLOT_HEIGHT*5)-0.20, .SLOT_WIDTH, .SLOT_HEIGHT, 10, 'M00F')) // int
                 
                 /*
-                call this.setButton(1, UIButton.create(x2 - (.SLOT_WIDTH*0.70), y1 - (.SLOT_HEIGHT*5), .SLOT_WIDTH, .SLOT_HEIGHT, 10, 'M00A'))
                 call this.setButton(2, UIButton.create(x2 - (.SLOT_WIDTH*2.00), y1 - (.SLOT_HEIGHT*5), .SLOT_WIDTH, .SLOT_HEIGHT, 10, 'M00A'))
                 
                 call this.setButton(3, UIButton.create(x2 - (.SLOT_WIDTH*12), y1 + (.SLOT_HEIGHT*0.4), .SLOT_WIDTH, .SLOT_HEIGHT, 10, 'M00A'))
@@ -291,15 +291,14 @@ endglobals
                 
                 loop
                     exitwhen i == 11 // numero de botones siempre + 1, and charge too Max_SLOTS
-                    set this.getButton(i).customValue = i
-                    
-                    set this.getButton(i).selectUnit = this.unit
-                    
-                    set this.getButton(i).onLeftClick = FuncLClickSlot
-                    //set this.getButton(i).onRightClick = FuncRClickSlot
-                    
-                    set this.slotButton[(this.user.id * MAX_SLOTS) + i] = UIPicture.create(this.getButton(i).minx + (.SLOT_WIDTH/6.3), this.getButton(i).maxy - 0.022, .SLOT_WIDTH * .7, .SLOT_HEIGHT * .7, 9, 'dbnk')
-                    set this.slotButton[(this.user.id * MAX_SLOTS) + i].customValue = i
+                    if this.getButton(i) != 0 then
+                        set this.getButton(i).customValue = i
+                        set this.getButton(i).selectUnit = this.unit
+                        set this.getButton(i).onLeftClick = FuncLClickSlot
+                        set this.getButton(i).onRightClick = FuncRClickSlot
+                        set this.slotButton[(this.user.id * MAX_SLOTS) + i] = UIPicture.create(this.getButton(i).minx + (.SLOT_WIDTH/6.3), this.getButton(i).maxy - 0.022, .SLOT_WIDTH * .7, .SLOT_HEIGHT * .7, 9, 'dbnk')
+                        set this.slotButton[(this.user.id * MAX_SLOTS) + i].customValue = i
+                    endif
 
                     set i = i + 1
                 endloop
@@ -357,7 +356,6 @@ endglobals
             call SetUnitColor(.charMOrb[3].picture, this.user.color)
             call AddSpecialEffectTarget(HeroModelData(i).path, .charMOrb[3].picture, "origin")
 
-            call AddSpecialEffectTarget("war3mapImported\\ttEmber Blue.mdx", .getButton(1).picture, "origin")
             /*
             call .pictures[(this.user.id * .MAX_SLOTS) + 1].showPlayer(this.user.handle, true, this.camera)
             call .pictures[(this.user.id * .MAX_SLOTS) + 2].showPlayer(this.user.handle, true, this.camera)
@@ -569,22 +567,133 @@ endglobals
             endif
         endmethod
         
-        method show takes boolean flag, Camera cam returns nothing
+        private method isTenderPanelVisible takes nothing returns boolean
+            return this.displayed and isTender[this.user.id]
+        endmethod
+
+        private method shouldShowButton takes integer slot returns boolean
+            if not this.displayed then
+                return false
+            endif
+
+            if slot == 2 or slot == 7 then
+                return true
+            endif
+
+            if slot == 0 or slot == 3 or slot == 4 or slot == 6 then
+                return isTender[this.user.id]
+            endif
+
+            return false
+        endmethod
+
+        private method applyButtonVisibility takes nothing returns nothing
             local integer i = 0
+            loop
+                exitwhen i == thistype.MAX_SLOTS
+                if this.getButton(i) != 0 then
+                    call this.getButton(i).showPlayer(this.user.handle, this.shouldShowButton(i), this.camera)
+                endif
+                set i = i + 1
+            endloop
+        endmethod
+
+        private method applyTitleLayout takes nothing returns nothing
+            call .title[(this.user.id * MAX_SLOTS) + 0].setPosition(X + HERO_NAME_X-0.12, HERO_NAME_Y-.28)
+            call .title[(this.user.id * MAX_SLOTS) + 1].setPosition(X + HERO_NAME_X-.27-0.12+.18, HERO_NAME_Y-1.73)
+            call .title[(this.user.id * MAX_SLOTS) + 2].setPosition(X + HERO_NAME_X+.01-0.54+.18, HERO_NAME_Y-1.80)
+            call .title[(this.user.id * MAX_SLOTS) + 3].setPosition(X + HERO_NAME_X+0.95, HERO_NAME_Y-0.85)
+            call .title[(this.user.id * MAX_SLOTS) + 4].setPosition(X + HERO_NAME_X+1.4, HERO_NAME_Y-0.85)
+            call .title[(this.user.id * MAX_SLOTS) + 5].setPosition(X + HERO_NAME_X-0.55, HERO_NAME_Y-0.85)
+            call .title[(this.user.id * MAX_SLOTS) + 6].setPosition(X + HERO_NAME_X-1.05, HERO_NAME_Y-0.85)
+            call .title[(this.user.id * MAX_SLOTS) + 7].setPosition(X + HERO_NAME_X-0.12, HERO_NAME_Y-1.05)
+            call .title[(this.user.id * MAX_SLOTS) + 8].setPosition(X + HERO_NAME_X+0.45, HERO_NAME_Y-0.85)
+            call .title[(this.user.id * MAX_SLOTS) + 9].setPosition(X + HERO_NAME_X-0.14, HERO_NAME_Y+0.08)
+            call .title[(this.user.id * MAX_SLOTS) + 10].setPosition(X + HERO_NAME_X-0.0, HERO_NAME_Y+0.22)
+        endmethod
+
+        private method applyTitleText takes nothing returns nothing
+            call SetTextTagText(.title[(this.user.id * MAX_SLOTS) + 0].text, "NextEnemyInformation", 8 * 0.0023)
+            call SetTextTagText(.title[(this.user.id * MAX_SLOTS) + 1].text, Message, 8 * 0.0020)
+            call SetTextTagText(.title[(this.user.id * MAX_SLOTS) + 2].text, "Fuente", 8 * 0.0020)
+            call SetTextTagText(.title[(this.user.id * MAX_SLOTS) + 3].text, "Improve Instance\nNumer instancia: "+ I2S(GetPlayerMissileInstanceCount(this.user.toPlayer())), 8 * 0.0020)
+            call SetTextTagText(.title[(this.user.id * MAX_SLOTS) + 4].text, "|cffff6a00L|cffff7400O|cffff7e00R|cffff8800D|cffff9200S|cffff6a00 E|cffff7400N|cffff7e00G|cffff8800I|cffff9200N|cffff9c00E|cffffa600S|r", 8 * 0.0025)
+            call SetTextTagText(.title[(this.user.id * MAX_SLOTS) + 5].text, "Improve RegeShot\nReg impact en: "+ R2S(GetPlayerMissileHealOnHit(this.user.toPlayer())), 8 * 0.0020)
+            call SetTextTagText(.title[(this.user.id * MAX_SLOTS) + 6].text, "Improve Damage\nBase Dmg en: "+ R2S(GetPlayerMissileDamageValue(this.user.toPlayer())), 8 * 0.0020)
+            call SetTextTagText(.title[(this.user.id * MAX_SLOTS) + 7].text, EnemyPreviewGetText(TargetWave), 8 * 0.0018)
+            call SetTextTagText(.title[(this.user.id * MAX_SLOTS) + 8].text, "Improve OrbLevel\nMax4, OrbLevel: "+ I2S(GetPlayerOrbLevel(this.user.toPlayer())), 8 * 0.0020)
+            call SetTextTagText(.title[(this.user.id * MAX_SLOTS) + 9].text, "Welcome To LordsEngines", 8 * 0.0027)
+            call SetTextTagText(.title[(this.user.id * MAX_SLOTS) + 10].text, thistype.getWaveStatusText(this.user.id), 8 * 0.0027)
+        endmethod
+
+        private method applyTitleVisibility takes nothing returns nothing
+            local boolean tenderVisible = this.isTenderPanelVisible()
+            call this.title[(this.user.id * MAX_SLOTS) + 0].show(tenderVisible, this.camera)
+            call this.title[(this.user.id * MAX_SLOTS) + 1].show(tenderVisible, this.camera)
+            call this.title[(this.user.id * MAX_SLOTS) + 2].show(tenderVisible, this.camera)
+            call this.title[(this.user.id * MAX_SLOTS) + 3].show(tenderVisible, this.camera)
+            call this.title[(this.user.id * MAX_SLOTS) + 4].show(false, this.camera)
+            call this.title[(this.user.id * MAX_SLOTS) + 5].show(tenderVisible, this.camera)
+            call this.title[(this.user.id * MAX_SLOTS) + 6].show(tenderVisible, this.camera)
+            call this.title[(this.user.id * MAX_SLOTS) + 7].show(tenderVisible, this.camera)
+            call this.title[(this.user.id * MAX_SLOTS) + 8].show(tenderVisible, this.camera)
+            call this.title[(this.user.id * MAX_SLOTS) + 9].show(tenderVisible, this.camera)
+            call this.title[(this.user.id * MAX_SLOTS) + 10].show(this.displayed, this.camera)
+        endmethod
+
+        private method applyPictureVisibility takes nothing returns nothing
+            local integer i = 0
+            local boolean tenderVisible = this.isTenderPanelVisible()
+            loop
+                exitwhen i == 8
+                if .pictures[(this.user.id * .MAX_SLOTS) + i] != 0 then
+                    call .pictures[(this.user.id * .MAX_SLOTS) + i].showPlayer(this.user.handle, tenderVisible, this.camera)
+                endif
+                set i = i + 1
+            endloop
+        endmethod
+
+        private method applyModelVisibility takes nothing returns nothing
+            local integer i = 0
+            local boolean tenderVisible = this.isTenderPanelVisible()
+            call SetUnitColor(.charModel.picture, this.user.color)
+            call SetUnitColor(.charModel2.picture, this.user.color)
+            call this.charModel2.showPlayer(this.user.toPlayer(), tenderVisible, this.camera)
+            call this.charModel.showPlayer(this.user.toPlayer(), tenderVisible, this.camera)
+            loop
+                exitwhen i == 4
+                call this.charMOrb[i].showPlayer(this.user.toPlayer(), tenderVisible, this.camera)
+                set i = i + 1
+            endloop
+        endmethod
+
+        private method applyVisualState takes nothing returns nothing
+            call this.applyTitleLayout()
+            call this.applyTitleText()
+            call this.applyTitleVisibility()
+            call this.applyPictureVisibility()
+            call this.applyModelVisibility()
+            call this.applyButtonVisibility()
+            if not this.displayed and selector[this.user.id] != 0 then
+                call selector[this.user.id].showPlayer(this.user.handle, false, this.camera)
+                set PlayerLastSlot[this.user.id] = 0
+                set PlayerLastButton[this.user.id] = 0
+            endif
+        endmethod
+
+        method show takes boolean flag, Camera cam returns nothing
             local thistype equip = 0
-            local integer len
-            local real timeout
+            local boolean wasDisplayed = this.displayed
             
-            set this.displayed = flag
             set this.camera = cam
             
             if (flag) then
-                set .DisplayCount = .DisplayCount + 1
-
-                if (DisplayCount >= 1) then
-                    call PauseTimer(.UpdateTimer)
-                    
-                    call TimerStart(.UpdateTimer, 0.01, true, function thistype.onDisplay)
+                if not wasDisplayed then
+                    set .DisplayCount = .DisplayCount + 1
+                    if (DisplayCount >= 1) then
+                        call PauseTimer(.UpdateTimer)
+                        call TimerStart(.UpdateTimer, 0.01, true, function thistype.onDisplay)
+                    endif
                 endif
                 
                 if (.PlayerCurrentUnit[this.user.id] != null) then
@@ -596,16 +705,13 @@ endglobals
                 endif
                 
                 set .PlayerCurrentUnit[this.user.id] = this.unit
-                
-                /*
-                if (Inventory.PlayerCurrent[this.user.id] > 0 and Inventory.PlayerCurrent[this.user.id].owner != this.unit) then
-                    call Inventory.PlayerCurrent[this.user.id].show(false, this.camera)
-                endif */
-                //para inventario de otra unidad del  mismo esquipo, la oculta para evitar un hero panel con el inventario de otra unida
-
-            else
-                set .DisplayCount = .DisplayCount - 1
-                set .PlayerCurrentUnit[this.user.id] = null
+            elseif wasDisplayed then
+                if .DisplayCount > 0 then
+                    set .DisplayCount = .DisplayCount - 1
+                endif
+                if .PlayerCurrentUnit[this.user.id] == this.unit then
+                    set .PlayerCurrentUnit[this.user.id] = null
+                endif
                 
                 if (DisplayCount == 0) then
                     call PauseTimer(.UpdateTimer)
@@ -620,132 +726,8 @@ endglobals
                 endif
             endif
             
-            
-            call this.charModel2.showPlayer(this.user.toPlayer(), isTender[this.user.id], this.camera)
-            //call this.selector[this.user.id].show(flag, cam)
-            
-            call SetUnitColor(.charModel.picture, this.user.color)
-            call SetUnitColor(.charModel2.picture, this.user.color)
-            
-            call .getButton(1).showPlayer(this.user.handle, not isWavez, this.camera)
-            
-            
-
-            // todo: make one line / recode :linea muerta, sin usar
-            //set len = StringLength(this.user.name)
-            
-            call .title[(this.user.id * MAX_SLOTS) + 0].setPosition(X + HERO_NAME_X-0.12, HERO_NAME_Y-.28)
-            //call .title[(this.user.id * MAX_SLOTS) + 1].setPosition(X + HERO_NAME_X-.02-1.03, HERO_NAME_Y-1.54)
-            call .title[(this.user.id * MAX_SLOTS) + 1].setPosition(X + HERO_NAME_X-.27-0.12+.18, HERO_NAME_Y-1.73)
-            
-            call .title[(this.user.id * MAX_SLOTS) + 2].setPosition(X + HERO_NAME_X+.01-0.54+.18, HERO_NAME_Y-1.80)//text position
-            
-            call .title[(this.user.id * MAX_SLOTS) + 3].setPosition(X + HERO_NAME_X+0.95, HERO_NAME_Y-0.85)
-            
-            call .title[(this.user.id * MAX_SLOTS) + 4].setPosition(X + HERO_NAME_X+1.4, HERO_NAME_Y-0.85)
-            ////
-            
-            call .title[(this.user.id * MAX_SLOTS) + 5].setPosition(X + HERO_NAME_X-0.55, HERO_NAME_Y-0.85)
-         
-            call .title[(this.user.id * MAX_SLOTS) + 6].setPosition(X + HERO_NAME_X-1.05, HERO_NAME_Y-0.85)
-            
-            call .title[(this.user.id * MAX_SLOTS) + 7].setPosition(X + HERO_NAME_X-0.12, HERO_NAME_Y-1.05)
-            
-            call .title[(this.user.id * MAX_SLOTS) + 8].setPosition(X + HERO_NAME_X+0.45, HERO_NAME_Y-0.85)
-            
-            call .title[(this.user.id * MAX_SLOTS) + 9].setPosition(X + HERO_NAME_X-0.14, HERO_NAME_Y+0.08)
-
-            call .title[(this.user.id * MAX_SLOTS) + 10].setPosition(X + HERO_NAME_X-0.0, HERO_NAME_Y+0.22)
-            //call .title[(this.user.id * MAX_SLOTS) + 5].setPosition(X + HERO_NAME_X+1.4, HERO_NAME_Y-1.30)
-            
-
-            //call SetTextTagText(.title[this.user.id].text, "Uplates"/*HERO_WINDOW_NAME(this.unit)*/, 8 * 0.0023) //uplate text
-            
-            call SetTextTagText(.title[(this.user.id * MAX_SLOTS) + 0].text, "NextEnemyInformation"/*HERO_WINDOW_NAME(this.unit)*/, 8 * 0.0023) //uplate text
-            //call SetTextTagText(.title[(this.user.id * MAX_SLOTS) + 1].text, "Mensaje del Dia"/*HERO_WINDOW_NAME(this.unit)*/, 8 * 0.0023) //uplate text
-            call SetTextTagText(.title[(this.user.id * MAX_SLOTS) + 1].text, Message/*HERO_WINDOW_NAME(this.unit)*/, 8 * 0.0020) //uplate text
-            call SetTextTagText(.title[(this.user.id * MAX_SLOTS) + 2].text, "Fuente"/*HERO_WINDOW_NAME(this.unit)*/, 8 * 0.0020)
-            call SetTextTagText(.title[(this.user.id * MAX_SLOTS) + 3].text, "Improve Instance\nNumer instancia: "+ I2S(GetPlayerMissileInstanceCount(this.user.toPlayer()))/*HERO_WINDOW_NAME(this.unit)*/, 8 * 0.0020)
-            call SetTextTagText(.title[(this.user.id * MAX_SLOTS) + 4].text, "|cffff6a00L|cffff7400O|cffff7e00R|cffff8800D|cffff9200S|cffff6a00 E|cffff7400N|cffff7e00G|cffff8800I|cffff9200N|cffff9c00E|cffffa600S|r"/*HERO_WINDOW_NAME(this.unit)*/, 8 * 0.0025)
-            //call SetTextTagText(.title[(this.user.id * MAX_SLOTS) + 5].text, "|cffffb300A\n|cffffbf00C\n|cffffcc00T\n|cffffd900I\n|cffffe600V\n|cfffff200E|r"/*HERO_WINDOW_NAME(this.unit)*/, 8 * 0.0026)
-            call SetTextTagText(.title[(this.user.id * MAX_SLOTS) + 5].text, "Improve RegeShot\nReg impact en: "+ R2S(GetPlayerMissileHealOnHit(this.user.toPlayer()))/*HERO_WINDOW_NAME(this.unit)*/, 8 * 0.0020)
-            call SetTextTagText(.title[(this.user.id * MAX_SLOTS) + 6].text, "Improve Damage\nBase Dmg en: "+ R2S(GetPlayerMissileDamageValue(this.user.toPlayer()))/*HERO_WINDOW_NAME(this.unit)*/, 8 * 0.0020)
-            call SetTextTagText(.title[(this.user.id * MAX_SLOTS) + 7].text, EnemyPreviewGetText(TargetWave)/*HERO_WINDOW_NAME(this.unit)*/, 8 * 0.0018)
-            call SetTextTagText(.title[(this.user.id * MAX_SLOTS) + 8].text, "Improve OrbLevel\nMax4, OrbLevel: "+ I2S(GetPlayerOrbLevel(this.user.toPlayer()))/*HERO_WINDOW_NAME(this.unit)*/, 8 * 0.0020)
-            call SetTextTagText(.title[(this.user.id * MAX_SLOTS) + 9].text, "Welcome To LordsEngines"/*HERO_WINDOW_NAME(this.unit)*/, 8 * 0.0027)
-            call SetTextTagText(.title[(this.user.id * MAX_SLOTS) + 10].text, thistype.getWaveStatusText(this.user.id)/*HERO_WINDOW_NAME(this.unit)*/, 8 * 0.0027)
-
-            call this.title[(this.user.id * MAX_SLOTS) + 0].show(isTender[this.user.id], this.camera)
-            call this.title[(this.user.id * MAX_SLOTS) + 1].show(isTender[this.user.id], this.camera)
-            call this.title[(this.user.id * MAX_SLOTS) + 2].show(isTender[this.user.id], this.camera)
-            call this.title[(this.user.id * MAX_SLOTS) + 3].show(isTender[this.user.id], this.camera)//mostrar o no depende del flag
-            call this.title[(this.user.id * MAX_SLOTS) + 4].show(false, this.camera)//mostrar o no depende del flag
-            //call this.title[(this.user.id * MAX_SLOTS) + 5].show(flag, this.camera)//mostrar o no depende del flag
-            call this.title[(this.user.id * MAX_SLOTS) + 5].show(isTender[this.user.id], this.camera)
-            call this.title[(this.user.id * MAX_SLOTS) + 6].show(isTender[this.user.id], this.camera)
-            call this.title[(this.user.id * MAX_SLOTS) + 7].show(isTender[this.user.id], this.camera)
-            call this.title[(this.user.id * MAX_SLOTS) + 8].show(isTender[this.user.id], this.camera)
-            call this.title[(this.user.id * MAX_SLOTS) + 9].show(isTender[this.user.id], this.camera)
-            call this.title[(this.user.id * MAX_SLOTS) + 10].show(true, this.camera)
-            
-            call .pictures[(this.user.id * .MAX_SLOTS) + 1].showPlayer(this.user.handle, true, this.camera)
-            call .pictures[(this.user.id * .MAX_SLOTS) + 2].showPlayer(this.user.handle, true, this.camera)
-            call .pictures[(this.user.id * .MAX_SLOTS) + 3].showPlayer(this.user.handle, true, this.camera)
-            
-            call .pictures[(this.user.id * .MAX_SLOTS) + 0].showPlayer(this.user.handle, isTender[this.user.id], this.camera)
-            
-            call .pictures[(this.user.id * .MAX_SLOTS) + 1].showPlayer(this.user.handle, isTender[this.user.id], this.camera)
-            call .pictures[(this.user.id * .MAX_SLOTS) + 2].showPlayer(this.user.handle, isTender[this.user.id], this.camera)
-            call .pictures[(this.user.id * .MAX_SLOTS) + 3].showPlayer(this.user.handle, isTender[this.user.id], this.camera)
-            
-            call .pictures[(this.user.id * .MAX_SLOTS) + 4].showPlayer(this.user.handle, isTender[this.user.id], this.camera)
-            call .pictures[(this.user.id * .MAX_SLOTS) + 5].showPlayer(this.user.handle, isTender[this.user.id], this.camera)
-            call .pictures[(this.user.id * .MAX_SLOTS) + 6].showPlayer(this.user.handle, isTender[this.user.id], this.camera)
-            call .pictures[(this.user.id * .MAX_SLOTS) + 7].showPlayer(this.user.handle, isTender[this.user.id], this.camera)
-            
-            call this.charMOrb[0].showPlayer(this.user.toPlayer(), isTender[this.user.id], this.camera)
-            call this.charMOrb[1].showPlayer(this.user.toPlayer(), isTender[this.user.id], this.camera)
-            call this.charMOrb[2].showPlayer(this.user.toPlayer(), isTender[this.user.id], this.camera)
-            call this.charMOrb[3].showPlayer(this.user.toPlayer(), isTender[this.user.id], this.camera)
-            call this.charModel.showPlayer(this.user.toPlayer(), isTender[this.user.id], this.camera)
-            
-            call .getButton(0).showPlayer(this.user.handle, isTender[this.user.id], this.camera)
-            call .getButton(3).showPlayer(this.user.handle, isTender[this.user.id], this.camera)
-            call .getButton(4).showPlayer(this.user.handle, isTender[this.user.id], this.camera)
-            call .getButton(5).showPlayer(this.user.handle, false, this.camera)
-            call .getButton(6).showPlayer(this.user.handle, isTender[this.user.id], this.camera)
-
-            call .getButton(2).showPlayer(this.user.handle, true, this.camera)
-            call .getButton(7).showPlayer(this.user.handle, true, this.camera)
-            call .getButton(8).showPlayer(this.user.handle, false, this.camera)
-
-            
-            
-            /*
-            set i = 0 
-            
-
-            loop
-                exitwhen i == thistype.MAX_SLOTS
-                
-                if (.getButton(i) != 0) then
-                    if i != 2 then
-                    call .getButton(i).showPlayer(this.user.handle, flag, this.camera)
-                    endif
-                    //call AddSpecialEffectTarget("war3mapImported\\Bondage Blue SDA.mdx", .getButton(i).picture, "origin")
-                endif
-                
-                if (this.pictures[(this.user.id * .MAX_SLOTS) + i] != 0) then
-                    call .pictures[(this.user.id * .MAX_SLOTS) + i].showPlayer(this.user.handle, flag, this.camera)
-                endif
-                
-                /*if (this.item[i] > 0) then
-                    call slotButton[(this.user.id * .MAX_SLOTS) + i].showPlayer(this.user.handle, flag, this.camera)
-                endif */
-                
-                set i = i + 1
-            endloop
-            */
+            set this.displayed = flag
+            call this.applyVisualState()
         endmethod
         
         private static method onInit takes nothing returns nothing
@@ -921,7 +903,35 @@ endglobals
         return false
     endfunction */
     
-    private function LClickItemSlot takes nothing returns boolean
+    private function MenuClientGetSlotTooltip takes player p, integer slot returns string
+        local integer pid = GetPlayerId(p)
+        if slot == 0 then
+            return "|cffffcc00Improve Instance|r\nCosto: 1 oro\nActual: " + I2S(GetPlayerMissileInstanceCount(p))
+        elseif slot == 2 then
+            return "|cffffcc00Camara +|r\nSube la altura de camara.\nActual: " + I2S(R2I(PlayerMenuCameraHeight[pid]))
+        elseif slot == 3 then
+            return "|cffffcc00Improve Damage|r\nCosto: 1 oro\nActual: " + R2S(GetPlayerMissileDamageValue(p))
+        elseif slot == 4 then
+            return "|cffffcc00Improve RegeShot|r\nCosto: 1 oro\nActual: " + R2S(GetPlayerMissileHealOnHit(p))
+        elseif slot == 5 then
+            if GetPlayerMissileUseSmartRecast(p) then
+                return "|cffffcc00Smart Recast|r\nCosto: 10 oro\nEstado: ON"
+            endif
+            return "|cffffcc00Smart Recast|r\nCosto: 10 oro\nEstado: OFF"
+        elseif slot == 6 then
+            return "|cffffcc00Improve Orb Level|r\nCosto: 1 oro\nMax: 4\nActual: " + I2S(GetPlayerOrbLevel(p))
+        elseif slot == 7 then
+            return "|cffffcc00Camara -|r\nBaja la altura de camara.\nActual: " + I2S(R2I(PlayerMenuCameraHeight[pid]))
+        endif
+        return "|cffffcc00Boton sin accion activa|r"
+    endfunction
+
+    private function MenuClientShowSlotTooltip takes UIButton but, player p returns nothing
+        local integer slot = but.customValue
+        call DisplayTimedTextToPlayer(p, .52, .82, 3.5, MenuClientGetSlotTooltip(p, slot) + "\n|cff999999Click derecho: seleccionar / confirmar.|r")
+    endfunction
+
+    private function ExecuteMenuSlotAction takes nothing returns boolean
         local UIButton but = GetTriggerButton()
         local player p = GetClickingPlayer()
         local integer pdex = GetPlayerId(p)
@@ -937,20 +947,22 @@ endglobals
         
         //local UIButton lastButton = InvPlayerLastButton[equip.user.id]
         //local InvItem itm
+        if equip == 0 then
+            return false
+        endif
+        if (p != equip.user.handle) then
+            return false
+        endif
         if (User.Local == p) then
             call SelectUnit(but.picture, false)
             call SelectUnit(equip.unit, true)
-        endif
-        
-        if (p != equip.user.handle) then
-            return false
         endif
         
         if (slot == 0) then
             if oro > 0 and isTender[pdex] and IsUnitNearTender(PlayerHero[pdex], 500.0) then
                 call SetPlayerState(p, PLAYER_STATE_RESOURCE_GOLD, oro - 1)
                 call SetPlayerMissileInstanceCount(GetClickingPlayer(),GetPlayerMissileInstanceCount(GetClickingPlayer())+1)
-                call DestroyEffect(AddSpecialEffectTarget("Abilities\\Spells\\Items\\AIem\\AIemTarget.mdl",Client[PlayerHero[pdex]].getButton(1).picture,"origin"))
+                call DestroyEffect(AddSpecialEffectTarget("Abilities\\Spells\\Items\\AIem\\AIemTarget.mdl", but.picture, "origin"))
                 // Acción que quieres ejecutar
                 //call DisplayTextToPlayer(p,0,0,"Se restó 1 de oro")
             elseif oro <= 0 and isTender[pdex] and IsUnitNearTender(PlayerHero[pdex], 500.0) then
@@ -970,34 +982,6 @@ endglobals
             endif
         endif
         
-        if (slot == 1) then
-            
-            if (IsUnitNearTender(PlayerHero[pdex], 500.0) and isWavez == false) or (isTender[pdex] == true and IsUnitNearTender(PlayerHero[pdex], 10000.0)) then
-                if isTender[pdex] == false then
-                    set isTender[pdex] = true
-                else
-                    set isTender[pdex] = false
-                    if GetClickingPlayer() == Player(0) then
-                        call Client[PlayerHero[pdex]].getButton(2).showPlayer(Client[PlayerHero[pdex]].user.handle, false, Client[PlayerHero[pdex]].camera)
-                    endif                    
-                endif
-
-            elseif not IsUnitNearTender(PlayerHero[pdex], 500.0) and isWavez == false then
-                if User.fromLocal() == u then
-                        call StartSound(error_Neg)
-                        call ClearTextMessages()                        
-                endif
-                call DisplayTimedTextToPlayer(u.toPlayer(), .52, .96, 2., "|cffffcc00Fuera De Distacia Del Lords Engines!|r")
-            else
-                if User.fromLocal() == u then
-                        call StartSound(error_Neg)
-                        call ClearTextMessages()                        
-                endif
-                call DisplayTimedTextToPlayer(u.toPlayer(), .52, .96, 2., "|cffffcc00Wave En Proceso!|r")
-            endif
-
-        endif
-        
         if (slot == 2) then
             call StepMenuCameraHeight(pdex, GetMenuCameraHeightStep())
             call DisplayTimedTextToPlayer(u.toPlayer(), .52, .96, 2., "|cffffcc00Cam Height:|r " + I2S(R2I(PlayerMenuCameraHeight[pdex])) + " |cffffcc00Offset:|r -" + I2S(R2I(PlayerMenuCameraOffset[pdex])))
@@ -1007,7 +991,7 @@ endglobals
             if oro > 0 and isTender[pdex] and IsUnitNearTender(PlayerHero[pdex], 500.0) then
                 call SetPlayerState(p, PLAYER_STATE_RESOURCE_GOLD, oro - 1)
                 call SetPlayerMissileDamageValue(GetClickingPlayer(),GetPlayerMissileDamageValue(GetClickingPlayer())+0.05)
-                call DestroyEffect(AddSpecialEffectTarget("Abilities\\Spells\\Items\\AIem\\AIemTarget.mdl",Client[PlayerHero[pdex]].getButton(1).picture,"origin"))
+                call DestroyEffect(AddSpecialEffectTarget("Abilities\\Spells\\Items\\AIem\\AIemTarget.mdl", but.picture, "origin"))
                 // Acción que quieres ejecutar
                 //call DisplayTextToPlayer(p,0,0,"Se restó 1 de oro")
             elseif oro <= 0 and isTender[pdex] and IsUnitNearTender(PlayerHero[pdex], 500.0) then
@@ -1032,7 +1016,7 @@ endglobals
             if oro > 0 and isTender[pdex] and IsUnitNearTender(PlayerHero[pdex], 500.0) then
                 call SetPlayerState(p, PLAYER_STATE_RESOURCE_GOLD, oro - 1)
                 call SetPlayerMissileHealOnHit(GetClickingPlayer(),GetPlayerMissileHealOnHit(GetClickingPlayer())+2.5)
-                call DestroyEffect(AddSpecialEffectTarget("Abilities\\Spells\\Items\\AIem\\AIemTarget.mdl",Client[PlayerHero[pdex]].getButton(1).picture,"origin"))
+                call DestroyEffect(AddSpecialEffectTarget("Abilities\\Spells\\Items\\AIem\\AIemTarget.mdl", but.picture, "origin"))
                 // Acción que quieres ejecutar
                 //call DisplayTextToPlayer(p,0,0,"Se restó 1 de oro")
             elseif oro <= 0 and isTender[pdex] and IsUnitNearTender(PlayerHero[pdex], 500.0) then
@@ -1057,7 +1041,7 @@ endglobals
             if oro > 5 and isTender[pdex] and IsUnitNearTender(PlayerHero[pdex], 500.0) and GetPlayerMissileUseSmartRecast(GetClickingPlayer()) == false then
                 call SetPlayerState(p, PLAYER_STATE_RESOURCE_GOLD, oro - 10)
                 call SetPlayerMissileUseSmartRecast(GetClickingPlayer(),true)
-                call DestroyEffect(AddSpecialEffectTarget("Abilities\\Spells\\Items\\AIem\\AIemTarget.mdl",Client[PlayerHero[pdex]].getButton(1).picture,"origin"))
+                call DestroyEffect(AddSpecialEffectTarget("Abilities\\Spells\\Items\\AIem\\AIemTarget.mdl", but.picture, "origin"))
                 // Acción que quieres ejecutar
                 //call DisplayTextToPlayer(p,0,0,"Se restó 1 de oro")
             elseif oro <= 5 and isTender[pdex] and IsUnitNearTender(PlayerHero[pdex], 500.0) and GetPlayerMissileUseSmartRecast(GetClickingPlayer()) == false then
@@ -1091,7 +1075,7 @@ endglobals
             if oro > 0 and isTender[pdex] and IsUnitNearTender(PlayerHero[pdex], 500.0) and GetPlayerOrbLevel(GetClickingPlayer()) <= 3 then
                 call SetPlayerState(p, PLAYER_STATE_RESOURCE_GOLD, oro - 1)
                 call SetPlayerOrbLevel(GetClickingPlayer(),GetPlayerOrbLevel(GetClickingPlayer())+1)
-                call DestroyEffect(AddSpecialEffectTarget("Abilities\\Spells\\Items\\AIem\\AIemTarget.mdl",Client[PlayerHero[pdex]].getButton(1).picture,"origin"))
+                call DestroyEffect(AddSpecialEffectTarget("Abilities\\Spells\\Items\\AIem\\AIemTarget.mdl", but.picture, "origin"))
                 // Acción que quieres ejecutar
                 //call DisplayTextToPlayer(p,0,0,"Se restó 1 de oro")
             elseif oro <= 0 and isTender[pdex] and IsUnitNearTender(PlayerHero[pdex], 500.0) and GetPlayerOrbLevel(GetClickingPlayer()) <= 3 then
@@ -1124,22 +1108,7 @@ endglobals
             call DisplayTimedTextToPlayer(u.toPlayer(), .52, .96, 2., "|cffffcc00Cam Height:|r " + I2S(R2I(PlayerMenuCameraHeight[pdex])) + " |cffffcc00Offset:|r -" + I2S(R2I(PlayerMenuCameraOffset[pdex])))
         endif
 
-        if (slot == 8) then 
-            set PlayerMenuHealthBarPreSelect[pdex] = not PlayerMenuHealthBarPreSelect[pdex]
-            if User.Local == p then
-                call EnablePreSelect(true, PlayerMenuHealthBarPreSelect[pdex])
-            endif
-            if PlayerMenuHealthBarPreSelect[pdex] then
-                call DisplayTimedTextToPlayer(u.toPlayer(), .52, .96, 2., "|cffffcc00PreSelect HP Bars:|r ON")
-            else
-                call DisplayTimedTextToPlayer(u.toPlayer(), .52, .96, 2., "|cffffcc00PreSelect HP Bars:|r OFF")
-            endif
-        endif
-        
         /*
-        if (slot == 1) then
-            call UnitAddItemSwapped(CreateItem('tint',0.,0.),PlayerHero[GetPlayerId(p)])
-        endif
         if (slot == 2) then
             call UnitAddItemSwapped(CreateItem('tdex',0.,0.),PlayerHero[GetPlayerId(p)])
         endif
@@ -1234,21 +1203,90 @@ endglobals
         
         call Inventory.showTooltip(inv, itemId > 0)
         */ 
+        call equip.show(true, equip.camera)
+        set p = null
         return false
     endfunction
     
+    private function LClickItemSlot takes nothing returns boolean
+        local UIButton but = GetTriggerButton()
+        local player p = GetClickingPlayer()
+        local integer pdex = GetPlayerId(p)
+        local Client equip = Client[Client.PlayerCurrentUnit[pdex]]
+
+        if equip == 0 then
+            set p = null
+            return false
+        endif
+        if p != equip.user.handle then
+            set p = null
+            return false
+        endif
+
+        if (User.Local == p) then
+            call SelectUnit(but.picture, false)
+            call SelectUnit(equip.unit, true)
+        endif
+
+        call MenuClientShowSlotTooltip(but, p)
+        set p = null
+        return false
+    endfunction
+
+    private function RClickItemSlot takes nothing returns boolean
+        local UIButton but = GetTriggerButton()
+        local player p = GetClickingPlayer()
+        local integer pdex = GetPlayerId(p)
+        local Client equip = Client[Client.PlayerCurrentUnit[pdex]]
+        local integer slot = but.customValue
+
+        if equip == 0 then
+            set p = null
+            return false
+        endif
+        if p != equip.user.handle then
+            set p = null
+            return false
+        endif
+
+        if (User.Local == p) then
+            call SelectUnit(but.picture, false)
+            call SelectUnit(equip.unit, true)
+        endif
+
+        if PlayerLastButton[pdex] == but and PlayerLastSlot[pdex] == slot + 1 then
+            set PlayerLastButton[pdex] = 0
+            set PlayerLastSlot[pdex] = 0
+            if Client.selector[pdex] != 0 then
+                call Client.selector[pdex].showPlayer(p, false, equip.camera)
+            endif
+            set p = null
+            return ExecuteMenuSlotAction()
+        endif
+
+        set PlayerLastButton[pdex] = but
+        set PlayerLastSlot[pdex] = slot + 1
+        if Client.selector[pdex] != 0 then
+            call Client.selector[pdex].setPosition(but.centerx - 0.007, but.centery + 0.0272)
+            call Client.selector[pdex].showPlayer(p, true, equip.camera)
+        endif
+        call MenuClientShowSlotTooltip(but, p)
+
+        set p = null
+        return false
+    endfunction
+
     private function Init takes nothing returns nothing
         local User user = User.first
         loop
             exitwhen user == User.NULL
             set PlayerMenuCameraHeight[user.id] = GetDefaultMenuCameraHeight()
             set PlayerMenuCameraOffset[user.id] = GetDefaultMenuCameraOffset()
-            set PlayerMenuHealthBarPreSelect[user.id] = false
             set PlayerMenuFogAppliedHeight[user.id] = -1.
             set user = user.next
         endloop
         set FuncLClickSlot = Filter(function LClickItemSlot)
-        //set FuncRClickSlot = Filter(function RClickItemSlot)
+        set FuncRClickSlot = Filter(function RClickItemSlot)
         //call Inventory.addLeftClickHook(function OnInventoryItemClick)
         //call Inventory.addRightClickHook(function OnInventoryItemRightClick)
     endfunction

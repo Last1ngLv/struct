@@ -1,0 +1,60 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\Audio\\Config\\AudioPreload.j",
+  "items": [
+    {
+      "label": "PreloadResTimer",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ntimer PreloadResTimer\n```\n\n\n**_>:** `Audio/Config/AudioPreload.j`",
+      "sortText": "2_var_PreloadResTimer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Audio\\Config\\AudioPreload.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "PreloadResCursor",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger PreloadResCursor\n```\n\n\n**_>:** `Audio/Config/AudioPreload.j`",
+      "sortText": "2_var_PreloadResCursor",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Audio\\Config\\AudioPreload.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WarmupSound",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WarmupSound takes string path returns nothing\n```\n\n\n**_>:** `Audio/Config/AudioPreload.j`",
+      "sortText": "1_func_WarmupSound",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Audio\\Config\\AudioPreload.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetPreloadSoundPath",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetPreloadSoundPath takes integer idx returns string\n```\n\n\n**_>:** `Audio/Config/AudioPreload.j`",
+      "sortText": "1_func_GetPreloadSoundPath",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Audio\\Config\\AudioPreload.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "PreloadMapResourcesTick",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction PreloadMapResourcesTick takes nothing returns nothing\n```\n\n\n**_>:** `Audio/Config/AudioPreload.j`",
+      "sortText": "1_func_PreloadMapResourcesTick",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Audio\\Config\\AudioPreload.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "PreloadMapResources",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction PreloadMapResources takes nothing returns nothing\n```\n\n\n**_>:** `Audio/Config/AudioPreload.j`",
+      "sortText": "1_func_PreloadMapResources",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Audio\\Config\\AudioPreload.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1777049211104
+}

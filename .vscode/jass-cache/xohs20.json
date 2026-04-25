@@ -1,0 +1,123 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\Terrain\\Config\\TerrainReplaceConfig.j",
+  "items": [
+    {
+      "label": "SetupDefaultTerrainReplaceRules",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SetupDefaultTerrainReplaceRules takes nothing returns nothing\n```\n\n\n**_>:** `Terrain/Config/TerrainReplaceConfig.j`",
+      "sortText": "1_func_SetupDefaultTerrainReplaceRules",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Terrain\\Config\\TerrainReplaceConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "ApplyDefaultTerrainReplaceRect",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ApplyDefaultTerrainReplaceRect takes rect r returns integer\n```\n\n\n**_>:** `Terrain/Config/TerrainReplaceConfig.j`",
+      "sortText": "1_func_ApplyDefaultTerrainReplaceRect",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Terrain\\Config\\TerrainReplaceConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "ApplyDefaultTerrainReplaceRectAsync",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ApplyDefaultTerrainReplaceRectAsync takes rect r returns integer\n```\n\n\n**_>:** `Terrain/Config/TerrainReplaceConfig.j`",
+      "sortText": "1_func_ApplyDefaultTerrainReplaceRectAsync",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Terrain\\Config\\TerrainReplaceConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "ApplyDefaultTerrainReplaceDebugRect",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ApplyDefaultTerrainReplaceDebugRect takes rect r returns integer\n```\n\n\n**_>:** `Terrain/Config/TerrainReplaceConfig.j`",
+      "sortText": "1_func_ApplyDefaultTerrainReplaceDebugRect",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Terrain\\Config\\TerrainReplaceConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "ApplyDefaultTerrainReplaceDebugRectAsync",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ApplyDefaultTerrainReplaceDebugRectAsync takes rect r returns integer\n```\n\n\n**_>:** `Terrain/Config/TerrainReplaceConfig.j`",
+      "sortText": "1_func_ApplyDefaultTerrainReplaceDebugRectAsync",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Terrain\\Config\\TerrainReplaceConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "ApplyDefaultTerrainReplaceBounds",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ApplyDefaultTerrainReplaceBounds takes real minX, real minY, real maxX, real maxY returns integer\n```\n\n\n**_>:** `Terrain/Config/TerrainReplaceConfig.j`",
+      "sortText": "1_func_ApplyDefaultTerrainReplaceBounds",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Terrain\\Config\\TerrainReplaceConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "ApplyDefaultTerrainReplaceBoundsAsync",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ApplyDefaultTerrainReplaceBoundsAsync takes real minX, real minY, real maxX, real maxY returns integer\n```\n\n\n**_>:** `Terrain/Config/TerrainReplaceConfig.j`",
+      "sortText": "1_func_ApplyDefaultTerrainReplaceBoundsAsync",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Terrain\\Config\\TerrainReplaceConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "ApplyDefaultTerrainReplaceDebugBounds",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ApplyDefaultTerrainReplaceDebugBounds takes real minX, real minY, real maxX, real maxY returns integer\n```\n\n\n**_>:** `Terrain/Config/TerrainReplaceConfig.j`",
+      "sortText": "1_func_ApplyDefaultTerrainReplaceDebugBounds",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Terrain\\Config\\TerrainReplaceConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "ApplyDefaultTerrainReplaceDebugBoundsAsync",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ApplyDefaultTerrainReplaceDebugBoundsAsync takes real minX, real minY, real maxX, real maxY returns integer\n```\n\n\n**_>:** `Terrain/Config/TerrainReplaceConfig.j`",
+      "sortText": "1_func_ApplyDefaultTerrainReplaceDebugBoundsAsync",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Terrain\\Config\\TerrainReplaceConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "ApplyDefaultTerrainReplaceFromCenter",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ApplyDefaultTerrainReplaceFromCenter takes real centerX, real centerY, integer leftTiles, integer rightTiles, integer upTiles, integer downTiles returns integer\n```\n\n\n**_>:** `Terrain/Config/TerrainReplaceConfig.j`",
+      "sortText": "1_func_ApplyDefaultTerrainReplaceFromCenter",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Terrain\\Config\\TerrainReplaceConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "ApplyDefaultTerrainReplaceFromCenterAsync",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ApplyDefaultTerrainReplaceFromCenterAsync takes real centerX, real centerY, integer leftTiles, integer rightTiles, integer upTiles, integer downTiles returns integer\n```\n\n\n**_>:** `Terrain/Config/TerrainReplaceConfig.j`",
+      "sortText": "1_func_ApplyDefaultTerrainReplaceFromCenterAsync",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Terrain\\Config\\TerrainReplaceConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "ApplyDefaultTerrainReplaceDebugFromCenter",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ApplyDefaultTerrainReplaceDebugFromCenter takes real centerX, real centerY, integer leftTiles, integer rightTiles, integer upTiles, integer downTiles returns integer\n```\n\n\n**_>:** `Terrain/Config/TerrainReplaceConfig.j`",
+      "sortText": "1_func_ApplyDefaultTerrainReplaceDebugFromCenter",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Terrain\\Config\\TerrainReplaceConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "ApplyDefaultTerrainReplaceDebugFromCenterAsync",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ApplyDefaultTerrainReplaceDebugFromCenterAsync takes real centerX, real centerY, integer leftTiles, integer rightTiles, integer upTiles, integer downTiles returns integer\n```\n\n\n**_>:** `Terrain/Config/TerrainReplaceConfig.j`",
+      "sortText": "1_func_ApplyDefaultTerrainReplaceDebugFromCenterAsync",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Terrain\\Config\\TerrainReplaceConfig.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1777049211191
+}

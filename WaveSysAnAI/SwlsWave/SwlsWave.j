@@ -1,11 +1,11 @@
-﻿
+
 library WaveTest initializer Init /*
 
     */requires Table,/*
     */TimerUtils, TheEnd, SwlsMath 
     /*
     ==========================================================================
-    WaveTest (SwlsWave) - Documentación práctica
+    WaveTest (SwlsWave) - Documentaci�n pr�ctica
     ==========================================================================
 
     IDEA GENERAL
@@ -13,7 +13,7 @@ library WaveTest initializer Init /*
     Wave es una instancia independiente de spawn PvE.
     Cada Wave tiene su propio timer, slots, conteos, estado y eventos.
 
-    FLUJO BÁSICO
+    FLUJO B�SICO
     ------------
     1) set w = Wave.create(...)
     2) call w.addPoint(...) / call w.addNearUnit(...)
@@ -35,29 +35,29 @@ library WaveTest initializer Init /*
         finishFuncName           // string callback al finalizar ("" permitido)
     )
 
-    Parámetros:
+    Par�metros:
     - perPlayerLimit:
-      Límite de unidades activas por owner de slot (dentro de esa Wave).
+      L�mite de unidades activas por owner de slot (dentro de esa Wave).
     - spawnNearChancePercent:
       Chance de usar near units para spawnear; si falla usa points.
     - intervalSec:
       Tick interno de spawn.
     - board / titleFuncName:
-      Integración opcional con multiboard.
+      Integraci�n opcional con multiboard.
     - waveIndex / waveTotal:
       Datos para UI/progreso.
     - finishFuncName:
-      Nombre de función global a ejecutar cuando termina.
+      Nombre de funci�n global a ejecutar cuando termina.
 
     --------------------------------------------------------------------------
-    FAMILIA ADDSLOT (qué usar y cuándo)
+    FAMILIA ADDSLOT (qu� usar y cu�ndo)
     --------------------------------------------------------------------------
-    A) Slot fijo por owner puntual (SIN escalado automático por players activos)
+    A) Slot fijo por owner puntual (SIN escalado autom�tico por players activos)
        addSlot(uId, amount, lim, prio, fxId, killGate, isBoss, playerOwner)
        addSlotEx(... + aiProfileId, laneId, behaviorFlags, threatWeight)
 
-       Uso típico:
-       - Boss único real (1 unidad total) en un owner específico.
+       Uso t�pico:
+       - Boss �nico real (1 unidad total) en un owner espec�fico.
        - Spawns especiales scriptados.
 
     B) Slots para owners default Player(8..12)
@@ -65,30 +65,30 @@ library WaveTest initializer Init /*
        addSlotByPlayersPct(...)
        addSlotExByPlayers(...)
 
-       Estos métodos SIEMPRE crean un slot por cada owner default.
+       Estos m�todos SIEMPRE crean un slot por cada owner default.
        El boolean scaleWithActivePlayers SOLO define si escala la cantidad.
 
-    C) Slot por owner puntual con opción de escalado
+    C) Slot por owner puntual con opci�n de escalado
        addSlotByPlayer(...)
        addSlotByPlayerPct(...)
        addSlotExByPlayer(...)
 
     --------------------------------------------------------------------------
-    PARÁMETROS DE ADDSLOT (significado)
+    PAR�METROS DE ADDSLOT (significado)
     --------------------------------------------------------------------------
     uId:
       Rawcode de unidad.
     amount / baseAmount:
       Cantidad base a crear desde ese slot.
-    scaleWithActivePlayers (métodos ByPlayers/ByPlayer):
-      true  -> escala amount según users activos y additionalPerPlayerPct.
+    scaleWithActivePlayers (m�todos ByPlayers/ByPlayer):
+      true  -> escala amount seg�n users activos y additionalPerPlayerPct.
       false -> usa baseAmount exacto.
     lim:
-      Máximo de unidades activas simultáneas para ESE slot.
+      M�ximo de unidades activas simult�neas para ESE slot.
     prio:
-      Prioridad de spawn (más alto = sale antes).
+      Prioridad de spawn (m�s alto = sale antes).
     fxId:
-      Índice de FX de entrada/salida (0 = sin FX).
+      �ndice de FX de entrada/salida (0 = sin FX).
     killGate:
       -1 sin bloqueo; >=0 requiere totalKilled <= killGate
       (es decir: faltantes directos para terminar wave).
@@ -99,11 +99,11 @@ library WaveTest initializer Init /*
     aiProfileId:
       Perfil de IA (AIProfiles).
     laneId:
-      Carril/meta para lógica externa.
+      Carril/meta para l�gica externa.
     behaviorFlags:
       Banderas de comportamiento IA.
     threatWeight:
-      Peso de amenaza para selección de target.
+      Peso de amenaza para selecci�n de target.
 
     --------------------------------------------------------------------------
     EJEMPLOS CORTOS
@@ -111,7 +111,7 @@ library WaveTest initializer Init /*
     // Miniboss escalable (owners default 8..12)
     call w.addSlotExByPlayers('nmb', 1, true, 1, 8, 2, -1, true, AI_PROFILE_MELEE, 0, 0, 1.20)
 
-    // Boss único real (solo Player(10), sin escalado)
+    // Boss �nico real (solo Player(10), sin escalado)
     call w.addSlotExByPlayer('nbs', 1, false, 1, 10, 3, -1, true, Player(10), AI_PROFILE_CASTER, 0, 0, 2.00)
 
     // Unit normal fija por owner puntual
@@ -130,7 +130,7 @@ library WaveTest initializer Init /*
     --------------------------------------------------------------------------
     NOTA CLAVE PARA BOSS VS MINIBOSS
     --------------------------------------------------------------------------
-    - Boss único real:
+    - Boss �nico real:
       usar addSlotExByPlayer(..., false, ..., Player(x), ...)
     - Miniboss escalable:
       usar addSlotExByPlayers(..., true, ...)
@@ -447,7 +447,7 @@ library WaveTest initializer Init /*
         real array pointY[100]
 
         // --- NUEVO: spawn cerca de unidad ---
-        integer nearUnitChance   // 0â€“100
+        integer nearUnitChance   // 0–100
         integer nearUnitCount
         unit array nearUnits[100]
 
@@ -470,7 +470,7 @@ library WaveTest initializer Init /*
         integer totalUnits
         integer totalBosses
 
-        // --- DinÃ¡micos ---
+        // --- Dinámicos ---
         integer remainingToSpawn
         
         integer remainingUnits
@@ -721,7 +721,7 @@ library WaveTest initializer Init /*
             call this.addSlotInternal(0, uId, amount, lim, prio, fxId, killGate, isBoss, p, 0, 0, 0, 1.0)
         endmethod
 
-        // VersiÃƒÂ³n extendida para IA: perfil/carril/banderas/peso
+        // VersiÃ³n extendida para IA: perfil/carril/banderas/peso
         method addSlotEx takes integer uId, integer amount, integer lim, integer prio, integer fxId, integer killGate, boolean isBoss, player p, integer aiProfileId, integer laneId, integer behaviorFlags, real threatWeight returns nothing
             call this.addSlotInternal(0, uId, amount, lim, prio, fxId, killGate, isBoss, p, aiProfileId, laneId, behaviorFlags, threatWeight)
         endmethod
@@ -823,7 +823,7 @@ library WaveTest initializer Init /*
             call this.addSlotScaledForDefaultPlayers(slotGroupId, uId, baseAmount, this.additionalPerPlayerPct, scaleWithActivePlayers, lim, prio, fxId, killGate, isBoss, aiProfileId, laneId, behaviorFlags, threatWeight)
         endmethod
 
-        // Variante explÃƒÆ’Ã‚Â­cita por jugador para casos especiales.
+        // Variante explÃƒÂ­cita por jugador para casos especiales.
         method addSlotByPlayer takes integer uId, integer baseAmount, boolean scaleWithActivePlayers, integer lim, integer prio, integer fxId, integer killGate, boolean isBoss, player p returns nothing
             local integer amount = baseAmount
             if scaleWithActivePlayers then
@@ -1248,7 +1248,7 @@ library WaveTest initializer Init /*
             endif
             set this.terminateRequested = true
             set this.cancelPendingPermanently = true
-            // Al terminar por API tambiÃ©n queremos ejecutar callback final (RestTime/endF).
+            // Al terminar por API también queremos ejecutar callback final (RestTime/endF).
             set this.suppressEndCallback = false
             set this.isRunning = false
             set this.isPaused = true
@@ -1421,7 +1421,7 @@ library WaveTest initializer Init /*
             local integer pid
             local integer maxPrio = -1
 
-            // 1. Encontrar prioridad mÃ¡s alta vÃ¡lida
+            // 1. Encontrar prioridad más alta válida
             loop
                 exitwhen i >= this.slotCount
                 set s = this.slots[i]
@@ -1556,7 +1556,7 @@ library WaveTest initializer Init /*
             return true
         endmethod
 
-        // API semÃƒÂ¡ntica para IA/UI (sin romper legacy)
+        // API semÃ¡ntica para IA/UI (sin romper legacy)
         method getToKillRemaining takes nothing returns integer
             return this.totalKilled
         endmethod
@@ -1681,7 +1681,7 @@ library WaveTest initializer Init /*
 
             // endFunct
             if (not this.suppressEndCallback) and this.finishFuncName != "" then 
-                // RestTime: recibe el nombre de la funciÃƒÂ³n a ejecutar luego.
+                // RestTime: recibe el nombre de la funciÃ³n a ejecutar luego.
                 call endF(this.finishFuncName)
             endif
 
@@ -1852,7 +1852,7 @@ library WaveTest initializer Init /*
         // 1. Teletransporte masivo humano
         set FX_UnitIn[1]  = "Abilities\\Spells\\Human\\MassTeleport\\MassTeleportCaster.mdl"
         set FX_UnitOut[1] = "Abilities\\Spells\\Human\\MassTeleport\\MassTeleportTarget.mdl"
-        // 2. ResurrecciÃ³n humana
+        // 2. Resurrección humana
         set FX_UnitIn[2]  = "Abilities\\Spells\\Human\\Resurrect\\ResurrectCaster.mdl"
         set FX_UnitOut[2] = "Abilities\\Spells\\Human\\Resurrect\\ResurrectTarget.mdl"
         // 3. Animar muerto no-muerto
@@ -1861,10 +1861,10 @@ library WaveTest initializer Init /*
         // 4. Artefacto especial (AIil)
         set FX_UnitIn[4]  = "Abilities\\Spells\\Items\\AIil\\AIilTarget.mdl"
         set FX_UnitOut[4] = "Abilities\\Spells\\Undead\\DeathCoil\\DeathCoilSpecialArt.mdl"
-        // 5. DisipaciÃ³n no-muerto
+        // 5. Disipación no-muerto
         set FX_UnitIn[5]  = "Objects\\Spawnmodels\\Undead\\UndeadDissipate\\UndeadDissipate.mdl"
         set FX_UnitOut[5] = "Abilities\\Spells\\Human\\MarkOfChaos\\MarkOfChaosDone.mdl"
-        // 6. PurificaciÃ³n de objeto
+        // 6. Purificación de objeto
         set FX_UnitIn[6]  = "Abilities\\Spells\\Items\\StaffOfPurification\\PurificationCaster.mdl"
         set FX_UnitOut[6] = "Abilities\\Spells\\Items\\StaffOfPurification\\PurificationTarget.mdl"
         // 7. Invocar esqueleto guerrero
@@ -1873,10 +1873,10 @@ library WaveTest initializer Init /*
         // 8.  / batalla
         set FX_UnitIn[8]  = "Abilities\\Spells\\Orc\\FeralSpirit\\feralspirittarget.mdl"
         set FX_UnitOut[8] = "Abilities\\Spells\\NightElf\\BattleRoar\\RoarCaster.mdl"
-        // 9. Ola aplastante / daÃ±o
+        // 9. Ola aplastante / daño
         set FX_UnitIn[9]  = "Abilities\\Spells\\Other\\CrushingWave\\CrushingWaveDamage.mdl"
         set FX_UnitOut[9] = "Objects\\Spawnmodels\\Naga\\NagaDeath\\NagaDeath.mdl"
-        // 10. DisipaciÃ³n / cancelaciÃ³n no-muerto
+        // 10. Disipación / cancelación no-muerto
         set FX_UnitIn[10]  = "Objects\\Spawnmodels\\Undead\\UndeadDissipate\\UndeadDissipate.mdl"
         set FX_UnitOut[10] = "Objects\\Spawnmodels\\Undead\\UCancelDeath\\UCancelDeath.mdl"
         // 11. Polvo de empalamiento / humano
@@ -1897,7 +1897,7 @@ library WaveTest initializer Init /*
         // 17. Feedback / WarStomp
         set FX_UnitIn[16]  = "Abilities\\Spells\\Human\\Feedback\\SpellBreakerAttack.mdl"
         set FX_UnitOut[16] = "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl"
-        // 18. Control mÃ¡gico
+        // 18. Control mágico
         set FX_UnitIn[17]  = "Abilities\\Spells\\Human\\ControlMagic\\ControlMagicTarget.mdl"
         set FX_UnitOut[17] = "Abilities\\Spells\\Undead\\DarkRitual\\DarkRitualTarget.mdl"
         // 19. Impacto de proyectil / Bolt
@@ -2142,38 +2142,7 @@ library WaveTest initializer Init /*
         set summoned = WaveSpawnUnitFromDefaultOwnerPid(source, unitTypeId, pid, x, y)
         return summoned
     endfunction
-
-    function WaveGetPointCount takes Wave w returns integer
-        if w == 0 then
-            return 0
-        endif
-        return w.pointCount
-    endfunction
-
-    function WaveGetPointX takes Wave w, integer pointIndex returns real
-        if w == 0 then
-            return 0.0
-        endif
-        if pointIndex < 0 or pointIndex >= w.pointCount then
-            return 0.0
-        endif
-        return w.pointX[pointIndex]
-    endfunction
-
-    function WaveGetPointY takes Wave w, integer pointIndex returns real
-        if w == 0 then
-            return 0.0
-        endif
-        if pointIndex < 0 or pointIndex >= w.pointCount then
-            return 0.0
-        endif
-        return w.pointY[pointIndex]
-    endfunction
     
-    function DistanceBetweenCoords takes real x1, real y1, real x2, real y2 returns real
-        return SwlsDistance(x1, y1, x2, y2)
-    endfunction
-
     //==================================================
     // Init
     //==================================================
@@ -2210,3 +2179,4 @@ library WaveTest initializer Init /*
         call TriggerAddAction(t, function OnUnitDeath)
     endfunction 
 endlibrary
+

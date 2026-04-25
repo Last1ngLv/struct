@@ -1,0 +1,11 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\MoveSys\\Config\\MovementSpellTargetConfig.j",
+  "items": [
+    {
+      "symbolName": "InitMovementSpellTargetConfig",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MoveSys\\Config\\MovementSpellTargetConfig.j",
+      "content": "\n```jass\nfunction InitMovementSpellTargetConfig takes nothing returns nothing\n```\n\n\n**文件:** `MoveSys/Config/MovementSpellTargetConfig.j`"
+    }
+  ],
+  "timestamp": 1777049314168
+}

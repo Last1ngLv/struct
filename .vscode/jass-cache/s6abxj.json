@@ -1,0 +1,357 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\Multiboard\\WaveMultiboard.j",
+  "items": [
+    {
+      "label": "MB_MAX_PLAYERS",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer MB_MAX_PLAYERS\n```\n\n\n**_>:** `Multiboard/WaveMultiboard.j`",
+      "sortText": "2_var_MB_MAX_PLAYERS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Multiboard\\WaveMultiboard.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "MB_COLUMN_COUNT",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer MB_COLUMN_COUNT\n```\n\n\n**_>:** `Multiboard/WaveMultiboard.j`",
+      "sortText": "2_var_MB_COLUMN_COUNT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Multiboard\\WaveMultiboard.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "MB_ROW_COUNT",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer MB_ROW_COUNT\n```\n\n\n**_>:** `Multiboard/WaveMultiboard.j`",
+      "sortText": "2_var_MB_ROW_COUNT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Multiboard\\WaveMultiboard.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "MB_ROW_WAVE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer MB_ROW_WAVE\n```\n\n\n**_>:** `Multiboard/WaveMultiboard.j`",
+      "sortText": "2_var_MB_ROW_WAVE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Multiboard\\WaveMultiboard.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "MB_ROW_PLAYER_START",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer MB_ROW_PLAYER_START\n```\n\n\n**_>:** `Multiboard/WaveMultiboard.j`",
+      "sortText": "2_var_MB_ROW_PLAYER_START",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Multiboard\\WaveMultiboard.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "MB_ROW_DEBUG_TIMER",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer MB_ROW_DEBUG_TIMER\n```\n\n\n**_>:** `Multiboard/WaveMultiboard.j`",
+      "sortText": "2_var_MB_ROW_DEBUG_TIMER",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Multiboard\\WaveMultiboard.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "MB_ROW_DEBUG_LOADOUT",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer MB_ROW_DEBUG_LOADOUT\n```\n\n\n**_>:** `Multiboard/WaveMultiboard.j`",
+      "sortText": "2_var_MB_ROW_DEBUG_LOADOUT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Multiboard\\WaveMultiboard.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "MB_ROW_DEBUG_SYSTEMS",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer MB_ROW_DEBUG_SYSTEMS\n```\n\n\n**_>:** `Multiboard/WaveMultiboard.j`",
+      "sortText": "2_var_MB_ROW_DEBUG_SYSTEMS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Multiboard\\WaveMultiboard.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "MB_ROW_DEBUG_TEXTTAGS",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer MB_ROW_DEBUG_TEXTTAGS\n```\n\n\n**_>:** `Multiboard/WaveMultiboard.j`",
+      "sortText": "2_var_MB_ROW_DEBUG_TEXTTAGS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Multiboard\\WaveMultiboard.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "MBSetCell",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction MBSetCell takes multiboard board, integer row, integer column, string value, real width returns nothing\n```\n\n\n**_>:** `Multiboard/WaveMultiboard.j`",
+      "sortText": "1_func_MBSetCell",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Multiboard\\WaveMultiboard.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "MBEnsureLayout",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction MBEnsureLayout takes multiboard board returns nothing\n```\n\n\n**_>:** `Multiboard/WaveMultiboard.j`",
+      "sortText": "1_func_MBEnsureLayout",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Multiboard\\WaveMultiboard.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "MBWaveStateText",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction MBWaveStateText takes Wave w returns string\n```\n\n\n**_>:** `Multiboard/WaveMultiboard.j`",
+      "sortText": "1_func_MBWaveStateText",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Multiboard\\WaveMultiboard.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "MBWaveTitle",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction MBWaveTitle takes Wave w returns string\n```\n\n\n**_>:** `Multiboard/WaveMultiboard.j`",
+      "sortText": "1_func_MBWaveTitle",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Multiboard\\WaveMultiboard.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "MBWaveCell",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction MBWaveCell takes Wave w returns string\n```\n\n\n**_>:** `Multiboard/WaveMultiboard.j`",
+      "sortText": "1_func_MBWaveCell",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Multiboard\\WaveMultiboard.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "MBToSpawnCell",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction MBToSpawnCell takes Wave w returns string\n```\n\n\n**_>:** `Multiboard/WaveMultiboard.j`",
+      "sortText": "1_func_MBToSpawnCell",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Multiboard\\WaveMultiboard.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "MBUnitsCell",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction MBUnitsCell takes Wave w returns string\n```\n\n\n**_>:** `Multiboard/WaveMultiboard.j`",
+      "sortText": "1_func_MBUnitsCell",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Multiboard\\WaveMultiboard.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "MBBossCell",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction MBBossCell takes Wave w returns string\n```\n\n\n**_>:** `Multiboard/WaveMultiboard.j`",
+      "sortText": "1_func_MBBossCell",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Multiboard\\WaveMultiboard.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "MBToKillCell",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction MBToKillCell takes Wave w returns string\n```\n\n\n**_>:** `Multiboard/WaveMultiboard.j`",
+      "sortText": "1_func_MBToKillCell",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Multiboard\\WaveMultiboard.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "MBOnMapCell",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction MBOnMapCell takes Wave w returns string\n```\n\n\n**_>:** `Multiboard/WaveMultiboard.j`",
+      "sortText": "1_func_MBOnMapCell",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Multiboard\\WaveMultiboard.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "MBPlayerIsActive",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction MBPlayerIsActive takes integer pid returns boolean\n```\n\n\n**_>:** `Multiboard/WaveMultiboard.j`",
+      "sortText": "1_func_MBPlayerIsActive",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Multiboard\\WaveMultiboard.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "MBActivePlayerCount",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction MBActivePlayerCount takes nothing returns integer\n```\n\n\n**_>:** `Multiboard/WaveMultiboard.j`",
+      "sortText": "1_func_MBActivePlayerCount",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Multiboard\\WaveMultiboard.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "MBPlayersCell",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction MBPlayersCell takes nothing returns string\n```\n\n\n**_>:** `Multiboard/WaveMultiboard.j`",
+      "sortText": "1_func_MBPlayersCell",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Multiboard\\WaveMultiboard.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "MBPlayerStatusText",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction MBPlayerStatusText takes integer pid returns string\n```\n\n\n**_>:** `Multiboard/WaveMultiboard.j`",
+      "sortText": "1_func_MBPlayerStatusText",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Multiboard\\WaveMultiboard.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "MBPlayerColorHex",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction MBPlayerColorHex takes integer pid returns string\n```\n\n\n**_>:** `Multiboard/WaveMultiboard.j`",
+      "sortText": "1_func_MBPlayerColorHex",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Multiboard\\WaveMultiboard.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "MBPlayerSlotFallbackName",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction MBPlayerSlotFallbackName takes integer pid returns string\n```\n\n\n**_>:** `Multiboard/WaveMultiboard.j`",
+      "sortText": "1_func_MBPlayerSlotFallbackName",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Multiboard\\WaveMultiboard.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "MBPlayerNameText",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction MBPlayerNameText takes integer pid returns string\n```\n\n\n**_>:** `Multiboard/WaveMultiboard.j`",
+      "sortText": "1_func_MBPlayerNameText",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Multiboard\\WaveMultiboard.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "MBPlayerKillsText",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction MBPlayerKillsText takes integer pid returns string\n```\n\n\n**_>:** `Multiboard/WaveMultiboard.j`",
+      "sortText": "1_func_MBPlayerKillsText",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Multiboard\\WaveMultiboard.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "MBPlayerStreakText",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction MBPlayerStreakText takes integer pid returns string\n```\n\n\n**_>:** `Multiboard/WaveMultiboard.j`",
+      "sortText": "1_func_MBPlayerStreakText",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Multiboard\\WaveMultiboard.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "MBPlayerMultiText",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction MBPlayerMultiText takes integer pid returns string\n```\n\n\n**_>:** `Multiboard/WaveMultiboard.j`",
+      "sortText": "1_func_MBPlayerMultiText",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Multiboard\\WaveMultiboard.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "MBPlayerDeathsText",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction MBPlayerDeathsText takes integer pid returns string\n```\n\n\n**_>:** `Multiboard/WaveMultiboard.j`",
+      "sortText": "1_func_MBPlayerDeathsText",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Multiboard\\WaveMultiboard.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "MBPlayerLivesText",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction MBPlayerLivesText takes integer pid returns string\n```\n\n\n**_>:** `Multiboard/WaveMultiboard.j`",
+      "sortText": "1_func_MBPlayerLivesText",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Multiboard\\WaveMultiboard.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "MBDebugInUse",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction MBDebugInUse takes nothing returns string\n```\n\n\n**_>:** `Multiboard/WaveMultiboard.j`",
+      "sortText": "1_func_MBDebugInUse",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Multiboard\\WaveMultiboard.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "MBDebugCap",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction MBDebugCap takes nothing returns string\n```\n\n\n**_>:** `Multiboard/WaveMultiboard.j`",
+      "sortText": "1_func_MBDebugCap",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Multiboard\\WaveMultiboard.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "MBDebugPeak",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction MBDebugPeak takes nothing returns string\n```\n\n\n**_>:** `Multiboard/WaveMultiboard.j`",
+      "sortText": "1_func_MBDebugPeak",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Multiboard\\WaveMultiboard.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "MBDebugAvail",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction MBDebugAvail takes nothing returns string\n```\n\n\n**_>:** `Multiboard/WaveMultiboard.j`",
+      "sortText": "1_func_MBDebugAvail",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Multiboard\\WaveMultiboard.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "MBLoadoutDebugCell",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction MBLoadoutDebugCell takes string label, string color, integer tag returns string\n```\n\n\n**_>:** `Multiboard/WaveMultiboard.j`",
+      "sortText": "1_func_MBLoadoutDebugCell",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Multiboard\\WaveMultiboard.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "MBTaggedDebugCell",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction MBTaggedDebugCell takes string label, string color, integer tag returns string\n```\n\n\n**_>:** `Multiboard/WaveMultiboard.j`",
+      "sortText": "1_func_MBTaggedDebugCell",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Multiboard\\WaveMultiboard.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "MBTextTagTotalCell",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction MBTextTagTotalCell takes string label, string color, integer liveValue, integer peakValue returns string\n```\n\n\n**_>:** `Multiboard/WaveMultiboard.j`",
+      "sortText": "1_func_MBTextTagTotalCell",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Multiboard\\WaveMultiboard.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "BMT1",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction BMT1 takes nothing returns nothing\n```\n\n\n**_>:** `Multiboard/WaveMultiboard.j`",
+      "sortText": "1_func_BMT1",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Multiboard\\WaveMultiboard.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1777051450663
+}

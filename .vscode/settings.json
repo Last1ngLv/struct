@@ -3,14 +3,9 @@
     "emeraldwalk.runonsave": {
         "commands": [
             {
-                "match": "^(.*[\\\\/](UI System|InitMap|WaveSysAnAI|MyMissiles|libraries)[\\\\/].*\\.j)$",
+                "match": "^(?!.*[\\\\/](build|Pruebas|MissileExamples|logs)[\\\\/]).*\\.j$",
                 "isAsync": false,
-                "cmd": "powershell -NoProfile -ExecutionPolicy Bypass -File \"${workspaceFolder}/build/build-jass.ps1\" -AutoSyncManifest -AutoOrderManifest"
-            },
-            {
-                "match": "^(.*[\\\\/]build[\\\\/]jass-order\\.txt)$",
-                "isAsync": false,
-                "cmd": "powershell -NoProfile -ExecutionPolicy Bypass -File \"${workspaceFolder}/build/build-jass.ps1\" -AutoSyncManifest -AutoOrderManifest"
+                "cmd": "powershell -NoProfile -ExecutionPolicy Bypass -File \"${workspaceFolder}/build/build-jass.ps1\""
             }
         ]
     }

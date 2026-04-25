@@ -1,0 +1,78 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeTenderAudio.j",
+  "items": [
+    {
+      "label": "RestTimeTenderAudioTrackCount",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction RestTimeTenderAudioTrackCount takes nothing returns integer\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime/RestTimeTenderAudio.j`",
+      "sortText": "1_func_RestTimeTenderAudioTrackCount",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeTenderAudio.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "RestTimeTenderAudioPath",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction RestTimeTenderAudioPath takes integer index returns string\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime/RestTimeTenderAudio.j`",
+      "sortText": "1_func_RestTimeTenderAudioPath",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeTenderAudio.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "RestTimeTenderAudioPickTrack",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction RestTimeTenderAudioPickTrack takes nothing returns integer\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime/RestTimeTenderAudio.j`",
+      "sortText": "1_func_RestTimeTenderAudioPickTrack",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeTenderAudio.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "RestTimeTenderAudioStopForPid",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction RestTimeTenderAudioStopForPid takes integer pid returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime/RestTimeTenderAudio.j`",
+      "sortText": "1_func_RestTimeTenderAudioStopForPid",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeTenderAudio.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "RestTimeTenderAudioStartForUser",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction RestTimeTenderAudioStartForUser takes User u returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime/RestTimeTenderAudio.j`",
+      "sortText": "1_func_RestTimeTenderAudioStartForUser",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeTenderAudio.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "RestTimeTenderAudioTick",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction RestTimeTenderAudioTick takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime/RestTimeTenderAudio.j`",
+      "sortText": "1_func_RestTimeTenderAudioTick",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeTenderAudio.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "RestTimeTenderAudioStart",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction RestTimeTenderAudioStart takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime/RestTimeTenderAudio.j`",
+      "sortText": "1_func_RestTimeTenderAudioStart",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeTenderAudio.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "RestTimeTenderAudioStop",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction RestTimeTenderAudioStop takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime/RestTimeTenderAudio.j`",
+      "sortText": "1_func_RestTimeTenderAudioStop",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeTenderAudio.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1777054407336
+}

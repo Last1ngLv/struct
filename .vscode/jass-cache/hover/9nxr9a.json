@@ -1,0 +1,11 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeState.j",
+  "items": [
+    {
+      "symbolName": "REST_SURVIVAL_END_SOUND_PATH",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeState.j",
+      "content": "\n```jass\nconstant string REST_SURVIVAL_END_SOUND_PATH\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/RestTime/RestTimeState.j`"
+    }
+  ],
+  "timestamp": 1777054175489
+}

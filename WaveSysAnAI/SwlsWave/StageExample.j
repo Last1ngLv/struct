@@ -1,5 +1,5 @@
-﻿
-library stage1 requires PlayerUtils, WaveTest, HeroLives, AIProfiles, AIConfig, IAManager, TenderSystem, PreConfi, WavePointGroupsConfig
+
+library stage1 requires PlayerUtils, WaveTest, HeroLives, AIProfiles, AIConfig, IAManager, TenderSystem, PreConfi, WavePointGroupsConfig, PlayerHeroState, WaveMultiboard
 
 function Trig_w1_Actions takes nothing returns nothing
     local Wave w
@@ -192,5 +192,7 @@ endfunction
 
 //===========================================================================
 endlibrary
+
+
 
 

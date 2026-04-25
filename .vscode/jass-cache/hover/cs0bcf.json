@@ -5,7 +5,12 @@
       "symbolName": "smartRecastCountByAbility",
       "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\movecast_rework_experimental.j",
       "content": "\n```jass\nTable smartRecastCountByAbility\n```\n\n\n**文件:** `Pruebas/Reworks/movecast_rework_experimental.j`"
+    },
+    {
+      "symbolName": "RegisterMovementSpellTarget",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\movecast_rework_experimental.j",
+      "content": "\n```jass\nfunction RegisterMovementSpellTarget takes integer abilityId, string orderId returns nothing\n```\n\n\n---\n\n===========================================================================\n\nRegistrar hechizo TARGET con OrderId string\n\n===========================================================================\n\n**文件:** `Pruebas/Reworks/movecast_rework_experimental.j`"
     }
   ],
-  "timestamp": 1775949390749
+  "timestamp": 1776678211363
 }

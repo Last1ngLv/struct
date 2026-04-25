@@ -1,0 +1,15 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\Config\\MenuClientInitConfig.j",
+  "items": [
+    {
+      "label": "InitMenuClientDefaults",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction InitMenuClientDefaults takes nothing returns nothing\n```\n\n\n**_>:** `UI System/MyIU/Config/MenuClientInitConfig.j`",
+      "sortText": "1_func_InitMenuClientDefaults",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\Config\\MenuClientInitConfig.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1777049211192
+}

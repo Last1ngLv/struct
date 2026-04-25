@@ -130,7 +130,12 @@
       "symbolName": "PULSE_DELAY",
       "filePath": "c:\\Users\\Leon\\Documents\\struct\\MoveSys\\MoveCast.j",
       "content": "\n```jass\nconstant real PULSE_DELAY\n```\n\n\n**文件:** `MoveSys/MoveCast.j`"
+    },
+    {
+      "symbolName": "RegisterMovementSpellTarget",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MoveSys\\MoveCast.j",
+      "content": "\n```jass\nfunction RegisterMovementSpellTarget takes integer abilityId, string orderId returns nothing\n```\n\n\n---\n\n===========================================================================\n\n**文件:** `MoveSys/MoveCast.j`"
     }
   ],
-  "timestamp": 1775949657956
+  "timestamp": 1776678211362
 }

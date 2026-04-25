@@ -1,0 +1,105 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\Core\\GameState.j",
+  "items": [
+    {
+      "label": "ManaPassiveUnit",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array ManaPassiveUnit\n```\n\n\n**_>:** `Core/GameState.j`",
+      "sortText": "2_var_ManaPassiveUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Core\\GameState.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "SwlsMultiboard",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nmultiboard SwlsMultiboard\n```\n\n\n**_>:** `Core/GameState.j`",
+      "sortText": "2_var_SwlsMultiboard",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Core\\GameState.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "SwlsSound",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nsound SwlsSound\n```\n\n\n**_>:** `Core/GameState.j`",
+      "sortText": "2_var_SwlsSound",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Core\\GameState.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TargetWave",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger TargetWave\n```\n\n\n**_>:** `Core/GameState.j`",
+      "sortText": "2_var_TargetWave",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Core\\GameState.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "error",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nsound error\n```\n\n\n**_>:** `Core/GameState.j`",
+      "sortText": "2_var_error",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Core\\GameState.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "error_Neg",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nsound error_Neg\n```\n\n\n**_>:** `Core/GameState.j`",
+      "sortText": "2_var_error_Neg",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Core\\GameState.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "Message",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring Message\n```\n\n\n**_>:** `Core/GameState.j`",
+      "sortText": "2_var_Message",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Core\\GameState.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveTgg",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring WaveTgg\n```\n\n\n**_>:** `Core/GameState.j`",
+      "sortText": "2_var_WaveTgg",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Core\\GameState.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "isTender",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean array[11] isTender\n```\n\n\n**_>:** `Core/GameState.j`",
+      "sortText": "2_var_isTender",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Core\\GameState.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "isWavez",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean isWavez\n```\n\n\n**_>:** `Core/GameState.j`",
+      "sortText": "2_var_isWavez",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Core\\GameState.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "GameStateInitDefaults",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GameStateInitDefaults takes nothing returns nothing\n```\n\n\n**_>:** `Core/GameState.j`",
+      "sortText": "1_func_GameStateInitDefaults",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Core\\GameState.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1777049211106
+}

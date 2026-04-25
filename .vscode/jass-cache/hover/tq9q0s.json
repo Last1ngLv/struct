@@ -1,0 +1,16 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SyncInteger.j",
+  "items": [
+    {
+      "symbolName": "FireEvents",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SyncInteger.j",
+      "content": "\n```jass\nfunction FireEvents takes real eventtype returns nothing\n```\n\n\n**文件:** `libraries/SyncInteger.j`"
+    },
+    {
+      "symbolName": "SyncNotifyCreate",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SyncInteger.j",
+      "content": "\n```jass\nfunction SyncNotifyCreate takes nothing returns integer\n```\n\n\n**文件:** `libraries/SyncInteger.j`"
+    }
+  ],
+  "timestamp": 1777094047390
+}

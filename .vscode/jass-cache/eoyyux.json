@@ -1,0 +1,33 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\Selection\\SelectionHeroSpawn.j",
+  "items": [
+    {
+      "label": "SELECTION_SPAWN_X",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real SELECTION_SPAWN_X\n```\n\n\n**_>:** `Selection/SelectionHeroSpawn.j`",
+      "sortText": "2_var_SELECTION_SPAWN_X",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Selection\\SelectionHeroSpawn.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "SELECTION_SPAWN_Y",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real SELECTION_SPAWN_Y\n```\n\n\n**_>:** `Selection/SelectionHeroSpawn.j`",
+      "sortText": "2_var_SELECTION_SPAWN_Y",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Selection\\SelectionHeroSpawn.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "SelectionEnsureHeroCreated",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SelectionEnsureHeroCreated takes User u, integer heroChoice returns nothing\n```\n\n\n**_>:** `Selection/SelectionHeroSpawn.j`",
+      "sortText": "1_func_SelectionEnsureHeroCreated",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Selection\\SelectionHeroSpawn.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1777050717071
+}

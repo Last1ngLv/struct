@@ -1,4 +1,4 @@
-library WaveTrapSkills initializer Init requires Table, TimerUtils, Missile, SpellIndex, RegisterPlayerUnitEvent, WaveTest, WaveSkillVisuals
+library WaveTrapSkills initializer Init requires Table, TimerUtils, Missile, SpellIndex, RegisterPlayerUnitEvent, WaveTest, WaveSkillVisuals, PlayerHeroState
 
     globals
         public constant integer WAVE_HSOR_UNIT_ID = 'hsor'
@@ -508,3 +508,4 @@ library WaveTrapSkills initializer Init requires Table, TimerUtils, Missile, Spe
         call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_DEATH, function WaveTrapOnPlayerUnitDeath)
     endfunction
 endlibrary
+

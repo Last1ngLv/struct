@@ -1,0 +1,177 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeState.j",
+  "items": [
+    {
+      "label": "REST_PHASE_NONE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer REST_PHASE_NONE\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime/RestTimeState.j`",
+      "sortText": "2_var_REST_PHASE_NONE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeState.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "REST_PHASE_INITIAL",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer REST_PHASE_INITIAL\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime/RestTimeState.j`",
+      "sortText": "2_var_REST_PHASE_INITIAL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeState.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "REST_PHASE_PURCHASE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer REST_PHASE_PURCHASE\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime/RestTimeState.j`",
+      "sortText": "2_var_REST_PHASE_PURCHASE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeState.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "REST_INITIAL_WAVE_COUNTDOWN",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer REST_INITIAL_WAVE_COUNTDOWN\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime/RestTimeState.j`",
+      "sortText": "2_var_REST_INITIAL_WAVE_COUNTDOWN",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeState.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "REST_PURCHASE_COUNTDOWN",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer REST_PURCHASE_COUNTDOWN\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime/RestTimeState.j`",
+      "sortText": "2_var_REST_PURCHASE_COUNTDOWN",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeState.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "REST_PHASE_TICK_SEC",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real REST_PHASE_TICK_SEC\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime/RestTimeState.j`",
+      "sortText": "2_var_REST_PHASE_TICK_SEC",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeState.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "REST_SURVIVAL_END_DELAY",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real REST_SURVIVAL_END_DELAY\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime/RestTimeState.j`",
+      "sortText": "2_var_REST_SURVIVAL_END_DELAY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeState.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "REST_FINAL_WAVE_DONE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer REST_FINAL_WAVE_DONE\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime/RestTimeState.j`",
+      "sortText": "2_var_REST_FINAL_WAVE_DONE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeState.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "REST_GOLD_REWARD",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer REST_GOLD_REWARD\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime/RestTimeState.j`",
+      "sortText": "2_var_REST_GOLD_REWARD",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeState.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "REST_AMBIENT_TOWN_SOUND_PATH",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string REST_AMBIENT_TOWN_SOUND_PATH\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime/RestTimeState.j`",
+      "sortText": "2_var_REST_AMBIENT_TOWN_SOUND_PATH",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeState.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "REST_SURVIVAL_END_SOUND_PATH",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string REST_SURVIVAL_END_SOUND_PATH\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime/RestTimeState.j`",
+      "sortText": "2_var_REST_SURVIVAL_END_SOUND_PATH",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeState.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "RestPhaseTimer",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ntimer RestPhaseTimer\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime/RestTimeState.j`",
+      "sortText": "2_var_RestPhaseTimer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeState.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "RestSurvivalEndTimer",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ntimer RestSurvivalEndTimer\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime/RestTimeState.j`",
+      "sortText": "2_var_RestSurvivalEndTimer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeState.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "RestPhaseState",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger RestPhaseState\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime/RestTimeState.j`",
+      "sortText": "2_var_RestPhaseState",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeState.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "RestPhaseRemaining",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger RestPhaseRemaining\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime/RestTimeState.j`",
+      "sortText": "2_var_RestPhaseRemaining",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeState.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "RestAmbientTownSound",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nsound RestAmbientTownSound\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime/RestTimeState.j`",
+      "sortText": "2_var_RestAmbientTownSound",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeState.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "RestSurvivalEndSound",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nsound RestSurvivalEndSound\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime/RestTimeState.j`",
+      "sortText": "2_var_RestSurvivalEndSound",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeState.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "RestSurvivalEndSequenceActive",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean RestSurvivalEndSequenceActive\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime/RestTimeState.j`",
+      "sortText": "2_var_RestSurvivalEndSequenceActive",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeState.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "RestStatusText",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring RestStatusText\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime/RestTimeState.j`",
+      "sortText": "2_var_RestStatusText",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeState.j",
+      "statementType": "VariableDeclaration"
+    }
+  ],
+  "timestamp": 1777054099097
+}

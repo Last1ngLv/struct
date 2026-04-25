@@ -1,0 +1,33 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WavePointApi.j",
+  "items": [
+    {
+      "label": "WaveGetPointCount",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveGetPointCount takes Wave w returns integer\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WavePointApi.j`",
+      "sortText": "1_func_WaveGetPointCount",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WavePointApi.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveGetPointX",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveGetPointX takes Wave w, integer pointIndex returns real\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WavePointApi.j`",
+      "sortText": "1_func_WaveGetPointX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WavePointApi.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WaveGetPointY",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WaveGetPointY takes Wave w, integer pointIndex returns real\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/WavePointApi.j`",
+      "sortText": "1_func_WaveGetPointY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\WavePointApi.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1777052036120
+}

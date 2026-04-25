@@ -56,6 +56,15 @@
       "statementType": "VariableDeclaration"
     },
     {
+      "label": "MAX_MOVECAST_PLAYER_ID",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer MAX_MOVECAST_PLAYER_ID\n```\n\n\n**_>:** `MoveSys/MoveCast.j`",
+      "sortText": "2_var_MAX_MOVECAST_PLAYER_ID",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MoveSys\\MoveCast.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
       "label": "PULSE_DELAY",
       "kind": 5,
       "detail": "Global Variable",
@@ -227,6 +236,15 @@
       "statementType": "FunctionDeclaration"
     },
     {
+      "label": "IsMoveCastTrackedUnit",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction IsMoveCastTrackedUnit takes unit u returns boolean\n```\n\n\n**_>:** `MoveSys/MoveCast.j`",
+      "sortText": "1_func_IsMoveCastTrackedUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MoveSys\\MoveCast.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
       "label": "MovementData",
       "kind": 21,
       "detail": "Struct",
@@ -234,6 +252,24 @@
       "sortText": "1_struct_MovementData",
       "filePath": "c:\\Users\\Leon\\Documents\\struct\\MoveSys\\MoveCast.j",
       "statementType": "StructDeclaration"
+    },
+    {
+      "label": "GetOrCreateMovementData",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetOrCreateMovementData takes unit u returns MovementData\n```\n\n\n**_>:** `MoveSys/MoveCast.j`",
+      "sortText": "1_func_GetOrCreateMovementData",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MoveSys\\MoveCast.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "DestroyMovementDataForUnit",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction DestroyMovementDataForUnit takes unit u returns nothing\n```\n\n\n**_>:** `MoveSys/MoveCast.j`",
+      "sortText": "1_func_DestroyMovementDataForUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MoveSys\\MoveCast.j",
+      "statementType": "FunctionDeclaration"
     },
     {
       "label": "RegisterMovementSpell",
@@ -335,5 +371,5 @@
       "statementType": "FunctionDeclaration"
     }
   ],
-  "timestamp": 1776636497829
+  "timestamp": 1777049211137
 }

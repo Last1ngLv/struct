@@ -1,0 +1,15 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\LoadoutMoveCastConfig.j",
+  "items": [
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n---\n\n===========================================================================\n\nLoadout MoveCast integration config\n\n- Keeps loadout spell registration out of PreConfi to avoid dependency cycles.\n\n- Uses public duration getters from the owning loadout spell libraries.\n\n===========================================================================\n\n**_>:** `MyMissiles/Config/LoadoutMoveCastConfig.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\LoadoutMoveCastConfig.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1777049211138
+}

@@ -1,0 +1,40 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\Confis\\testss.j",
+  "items": [
+    {
+      "symbolName": "SpacebarTest",
+      "location": {
+        "uri": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+        "range": {
+          "start": {
+            "line": 204,
+            "character": 6
+          },
+          "end": {
+            "line": 204,
+            "character": 18
+          }
+        }
+      },
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j"
+    },
+    {
+      "symbolName": "SpacebarTest",
+      "location": {
+        "uri": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\Confis\\testss.j",
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 6
+          },
+          "end": {
+            "line": 0,
+            "character": 18
+          }
+        }
+      },
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\InitMap\\Confis\\testss.j"
+    }
+  ],
+  "timestamp": 1777091347973
+}

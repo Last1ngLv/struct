@@ -1,0 +1,438 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SyncInteger.j",
+  "items": [
+    {
+      "label": "AUTO_INIT",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant boolean AUTO_INIT\n```\n\n\n---\n\ncalls SyncInitialize automatically\n\n**_>:** `libraries/SyncInteger.j`",
+      "sortText": "2_var_AUTO_INIT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SyncInteger.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DUMMY_PLAYER",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant player DUMMY_PLAYER\n```\n\n\n---\n\nowner of the dummy units\n\n**_>:** `libraries/SyncInteger.j`",
+      "sortText": "2_var_DUMMY_PLAYER",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SyncInteger.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DUMMY_ID",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer DUMMY_ID\n```\n\n\n---\n\ndummy can *not* have locust (must be selectabe)\n\nbasically anything should work (like 'hfoo')\n\n**_>:** `libraries/SyncInteger.j`",
+      "sortText": "2_var_DUMMY_ID",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SyncInteger.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DUMMY_ABILITY",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer DUMMY_ABILITY\n```\n\n\n---\n\ndummy ghost ability\n\n**_>:** `libraries/SyncInteger.j`",
+      "sortText": "2_var_DUMMY_ABILITY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SyncInteger.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "ALLOW_DEBUGGING",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant boolean ALLOW_DEBUGGING\n```\n\n\n---\n\ndebug mode\n\n**_>:** `libraries/SyncInteger.j`",
+      "sortText": "2_var_ALLOW_DEBUGGING",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SyncInteger.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "BASE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer BASE\n```\n\n\n---\n\nhigher == more dummies but faster\n\n**_>:** `libraries/SyncInteger.j`",
+      "sortText": "2_var_BASE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SyncInteger.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DUMMY_COUNT",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer DUMMY_COUNT\n```\n\n\n---\n\ndon't need to change this\n\n**_>:** `libraries/SyncInteger.j`",
+      "sortText": "2_var_DUMMY_COUNT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SyncInteger.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "EVENT_SYNC_INTEGER",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer EVENT_SYNC_INTEGER\n```\n\n\n---\n\nendconfig\n\n**_>:** `libraries/SyncInteger.j`",
+      "sortText": "2_var_EVENT_SYNC_INTEGER",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SyncInteger.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "OnSelectTrigger",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ntrigger OnSelectTrigger\n```\n\n\n**_>:** `libraries/SyncInteger.j`",
+      "sortText": "2_var_OnSelectTrigger",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SyncInteger.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "EventTrig",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ntrigger EventTrig\n```\n\n\n**_>:** `libraries/SyncInteger.j`",
+      "sortText": "2_var_EventTrig",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SyncInteger.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "NotifyTrig",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ntrigger NotifyTrig\n```\n\n\n**_>:** `libraries/SyncInteger.j`",
+      "sortText": "2_var_NotifyTrig",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SyncInteger.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "FireEvent",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal FireEvent\n```\n\n\n**_>:** `libraries/SyncInteger.j`",
+      "sortText": "2_var_FireEvent",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SyncInteger.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "SelectionGroup",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ngroup SelectionGroup\n```\n\n\n**_>:** `libraries/SyncInteger.j`",
+      "sortText": "2_var_SelectionGroup",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SyncInteger.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "SyncedInt",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array SyncedInt\n```\n\n\n**_>:** `libraries/SyncInteger.j`",
+      "sortText": "2_var_SyncedInt",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SyncInteger.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "LastPlayer",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger LastPlayer\n```\n\n\n**_>:** `libraries/SyncInteger.j`",
+      "sortText": "2_var_LastPlayer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SyncInteger.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "LastSync",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger LastSync\n```\n\n\n**_>:** `libraries/SyncInteger.j`",
+      "sortText": "2_var_LastSync",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SyncInteger.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "SyncIntegerDummy",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nunit array SyncIntegerDummy\n```\n\n\n**_>:** `libraries/SyncInteger.j`",
+      "sortText": "2_var_SyncIntegerDummy",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SyncInteger.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AttachedInteger",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array AttachedInteger\n```\n\n\n**_>:** `libraries/SyncInteger.j`",
+      "sortText": "2_var_AttachedInteger",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SyncInteger.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "LocalPlayer",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nplayer LocalPlayer\n```\n\n\n**_>:** `libraries/SyncInteger.j`",
+      "sortText": "2_var_LocalPlayer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SyncInteger.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "NotifyUnit",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nunit array NotifyUnit\n```\n\n\n**_>:** `libraries/SyncInteger.j`",
+      "sortText": "2_var_NotifyUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SyncInteger.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "NotifyCount",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger NotifyCount\n```\n\n\n**_>:** `libraries/SyncInteger.j`",
+      "sortText": "2_var_NotifyCount",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SyncInteger.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "NotifyIndex",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array NotifyIndex\n```\n\n\n**_>:** `libraries/SyncInteger.j`",
+      "sortText": "2_var_NotifyIndex",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SyncInteger.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DUMMY_X",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal DUMMY_X\n```\n\n\n**_>:** `libraries/SyncInteger.j`",
+      "sortText": "2_var_DUMMY_X",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SyncInteger.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DUMMY_Y",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal DUMMY_Y\n```\n\n\n**_>:** `libraries/SyncInteger.j`",
+      "sortText": "2_var_DUMMY_Y",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SyncInteger.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "GetSyncedInteger",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetSyncedInteger takes nothing returns integer\n```\n\n\n**_>:** `libraries/SyncInteger.j`",
+      "sortText": "1_func_GetSyncedInteger",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SyncInteger.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetSyncedPlayer",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetSyncedPlayer takes nothing returns player\n```\n\n\n**_>:** `libraries/SyncInteger.j`",
+      "sortText": "1_func_GetSyncedPlayer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SyncInteger.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetSyncedPlayerId",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetSyncedPlayerId takes nothing returns integer\n```\n\n\n**_>:** `libraries/SyncInteger.j`",
+      "sortText": "1_func_GetSyncedPlayerId",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SyncInteger.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "IsPlayerSyncing",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction IsPlayerSyncing takes player p returns boolean\n```\n\n\n**_>:** `libraries/SyncInteger.j`",
+      "sortText": "1_func_IsPlayerSyncing",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SyncInteger.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "IsPlayerIdSyncing",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction IsPlayerIdSyncing takes integer pid returns boolean\n```\n\n\n**_>:** `libraries/SyncInteger.j`",
+      "sortText": "1_func_IsPlayerIdSyncing",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SyncInteger.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "IsSyncEnabled",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction IsSyncEnabled takes nothing returns boolean\n```\n\n\n**_>:** `libraries/SyncInteger.j`",
+      "sortText": "1_func_IsSyncEnabled",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SyncInteger.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "SyncIntegerEnable",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SyncIntegerEnable takes nothing returns nothing\n```\n\n\n**_>:** `libraries/SyncInteger.j`",
+      "sortText": "1_func_SyncIntegerEnable",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SyncInteger.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "SyncIntegerDisable",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SyncIntegerDisable takes nothing returns nothing\n```\n\n\n**_>:** `libraries/SyncInteger.j`",
+      "sortText": "1_func_SyncIntegerDisable",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SyncInteger.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "SyncIntegerToggle",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SyncIntegerToggle takes boolean flag returns nothing\n```\n\n\n**_>:** `libraries/SyncInteger.j`",
+      "sortText": "1_func_SyncIntegerToggle",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SyncInteger.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnSyncInteger",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnSyncInteger takes filterfunc func returns triggercondition\n```\n\n\n**_>:** `libraries/SyncInteger.j`",
+      "sortText": "1_func_OnSyncInteger",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SyncInteger.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "RemoveSyncEvent",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction RemoveSyncEvent takes triggercondition action returns nothing\n```\n\n\n**_>:** `libraries/SyncInteger.j`",
+      "sortText": "1_func_RemoveSyncEvent",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SyncInteger.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TriggerRegisterSyncEvent",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction TriggerRegisterSyncEvent takes trigger t, integer eventtype returns nothing\n```\n\n\n**_>:** `libraries/SyncInteger.j`",
+      "sortText": "1_func_TriggerRegisterSyncEvent",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SyncInteger.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnSyncNotify",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnSyncNotify takes filterfunc func returns nothing\n```\n\n\n**_>:** `libraries/SyncInteger.j`",
+      "sortText": "1_func_OnSyncNotify",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SyncInteger.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "RemoveNotifyEvent",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction RemoveNotifyEvent takes triggercondition action returns nothing\n```\n\n\n**_>:** `libraries/SyncInteger.j`",
+      "sortText": "1_func_RemoveNotifyEvent",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SyncInteger.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "SyncNotify",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SyncNotify takes player p, integer notifyId returns nothing\n```\n\n\n**_>:** `libraries/SyncInteger.j`",
+      "sortText": "1_func_SyncNotify",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SyncInteger.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "FireEvents",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction FireEvents takes real eventtype returns nothing\n```\n\n\n**_>:** `libraries/SyncInteger.j`",
+      "sortText": "1_func_FireEvents",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SyncInteger.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Debug",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Debug takes boolean b, string s returns nothing\n```\n\n\n**_>:** `libraries/SyncInteger.j`",
+      "sortText": "1_func_Debug",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SyncInteger.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "SyncNotifyCreate",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SyncNotifyCreate takes nothing returns integer\n```\n\n\n**_>:** `libraries/SyncInteger.j`",
+      "sortText": "1_func_SyncNotifyCreate",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SyncInteger.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "SyncInteger",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SyncInteger takes player p, integer number returns boolean\n```\n\n\n**_>:** `libraries/SyncInteger.j`",
+      "sortText": "1_func_SyncInteger",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SyncInteger.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "SyncTerminate",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SyncTerminate takes boolean destroyEvents returns nothing\n```\n\n\n---\n\nthis cleans up all dummies and triggers created by the system\n\n**_>:** `libraries/SyncInteger.j`",
+      "sortText": "1_func_SyncTerminate",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SyncInteger.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "SyncInitialize",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SyncInitialize takes nothing returns nothing\n```\n\n\n**_>:** `libraries/SyncInteger.j`",
+      "sortText": "1_func_SyncInitialize",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SyncInteger.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnSelect",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnSelect takes nothing returns boolean\n```\n\n\n**_>:** `libraries/SyncInteger.j`",
+      "sortText": "1_func_OnSelect",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SyncInteger.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnMapStart",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnMapStart takes nothing returns nothing\n```\n\n\n**_>:** `libraries/SyncInteger.j`",
+      "sortText": "1_func_OnMapStart",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SyncInteger.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n---\n\n===========================================================================\n\n**_>:** `libraries/SyncInteger.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SyncInteger.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1777091197813
+}

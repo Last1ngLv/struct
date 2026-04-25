@@ -1,0 +1,11 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\tenderoff.j",
+  "items": [
+    {
+      "symbolName": "ResetTraderTrackBag",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\tenderoff.j",
+      "content": "\n```jass\nfunction ResetTraderTrackBag takes nothing returns nothing\n```\n\n\n**文件:** `Pruebas/tenderoff.j`"
+    }
+  ],
+  "timestamp": 1777054360022
+}

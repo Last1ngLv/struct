@@ -29,6 +29,15 @@
       "statementType": "VariableDeclaration"
     },
     {
+      "label": "PlayerLastButton",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nUIButton array PlayerLastButton\n```\n\n\n**_>:** `UI System/MyIU/MenuClient.j`",
+      "sortText": "2_var_PlayerLastButton",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
       "label": "WaveStatusText",
       "kind": 5,
       "detail": "Global Variable",
@@ -79,15 +88,6 @@
       "detail": "Global Variable",
       "documentation": "\n```jass\nreal array PlayerMenuCameraOffset\n```\n\n\n**_>:** `UI System/MyIU/MenuClient.j`",
       "sortText": "2_var_PlayerMenuCameraOffset",
-      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
-      "statementType": "VariableDeclaration"
-    },
-    {
-      "label": "PlayerMenuHealthBarPreSelect",
-      "kind": 5,
-      "detail": "Global Variable",
-      "documentation": "\n```jass\nboolean array PlayerMenuHealthBarPreSelect\n```\n\n\n**_>:** `UI System/MyIU/MenuClient.j`",
-      "sortText": "2_var_PlayerMenuHealthBarPreSelect",
       "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
       "statementType": "VariableDeclaration"
     },
@@ -245,11 +245,47 @@
       "statementType": "FunctionDeclaration"
     },
     {
+      "label": "MenuClientGetSlotTooltip",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction MenuClientGetSlotTooltip takes player p, integer slot returns string\n```\n\n\n**_>:** `UI System/MyIU/MenuClient.j`",
+      "sortText": "1_func_MenuClientGetSlotTooltip",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "MenuClientShowSlotTooltip",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction MenuClientShowSlotTooltip takes UIButton but, player p returns nothing\n```\n\n\n**_>:** `UI System/MyIU/MenuClient.j`",
+      "sortText": "1_func_MenuClientShowSlotTooltip",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "ExecuteMenuSlotAction",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ExecuteMenuSlotAction takes nothing returns boolean\n```\n\n\n**_>:** `UI System/MyIU/MenuClient.j`",
+      "sortText": "1_func_ExecuteMenuSlotAction",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
       "label": "LClickItemSlot",
       "kind": 2,
       "detail": "Function",
       "documentation": "\n```jass\nfunction LClickItemSlot takes nothing returns boolean\n```\n\n\n**_>:** `UI System/MyIU/MenuClient.j`",
       "sortText": "1_func_LClickItemSlot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "RClickItemSlot",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction RClickItemSlot takes nothing returns boolean\n```\n\n\n**_>:** `UI System/MyIU/MenuClient.j`",
+      "sortText": "1_func_RClickItemSlot",
       "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
       "statementType": "FunctionDeclaration"
     },
@@ -263,5 +299,5 @@
       "statementType": "FunctionDeclaration"
     }
   ],
-  "timestamp": 1776636497870
+  "timestamp": 1777095357089
 }

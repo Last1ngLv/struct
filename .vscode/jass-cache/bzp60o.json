@@ -1,0 +1,15 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\Selection\\SelectionStartFlow.j",
+  "items": [
+    {
+      "label": "SelectionStartGameAfterAllSelected",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SelectionStartGameAfterAllSelected takes nothing returns nothing\n```\n\n\n**_>:** `Selection/SelectionStartFlow.j`",
+      "sortText": "1_func_SelectionStartGameAfterAllSelected",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Selection\\SelectionStartFlow.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1777050721898
+}

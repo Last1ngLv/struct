@@ -95,7 +95,12 @@
       "symbolName": "SurvivalEndSound",
       "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime.j",
       "content": "\n```jass\nsound SurvivalEndSound\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/RestTime.j`"
+    },
+    {
+      "symbolName": "SurvivalEndTimer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime.j",
+      "content": "\n```jass\ntimer SurvivalEndTimer\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/RestTime.j`"
     }
   ],
-  "timestamp": 1776636580650
+  "timestamp": 1776674932077
 }

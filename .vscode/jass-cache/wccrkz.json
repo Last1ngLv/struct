@@ -1,0 +1,69 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\BoundSentinel.j",
+  "items": [
+    {
+      "label": "EXTRA",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real EXTRA\n```\n\n\n---\n\nHigh enough so the unit is no longer visible, low enough so the\n\ngame doesn't crash...\n\nI think you need 0.0 or soemthing negative prior to patch 1.22\n\n**_>:** `libraries/BoundSentinel.j`",
+      "sortText": "2_var_EXTRA",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\BoundSentinel.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "maxx",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal maxx\n```\n\n\n**_>:** `libraries/BoundSentinel.j`",
+      "sortText": "2_var_maxx",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\BoundSentinel.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "maxy",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal maxy\n```\n\n\n**_>:** `libraries/BoundSentinel.j`",
+      "sortText": "2_var_maxy",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\BoundSentinel.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "minx",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal minx\n```\n\n\n**_>:** `libraries/BoundSentinel.j`",
+      "sortText": "2_var_minx",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\BoundSentinel.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "miny",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal miny\n```\n\n\n**_>:** `libraries/BoundSentinel.j`",
+      "sortText": "2_var_miny",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\BoundSentinel.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "dis",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction dis takes nothing returns nothing\n```\n\n\n---\n\n=======================================================================\n\n**_>:** `libraries/BoundSentinel.j`",
+      "sortText": "1_func_dis",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\BoundSentinel.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction init takes nothing returns nothing\n```\n\n\n**_>:** `libraries/BoundSentinel.j`",
+      "sortText": "1_func_init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\BoundSentinel.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1777091583508
+}

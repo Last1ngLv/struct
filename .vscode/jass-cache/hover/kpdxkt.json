@@ -15,7 +15,12 @@
       "symbolName": "ORDER_ID_MOVE",
       "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\movecast_viejo.j",
       "content": "\n```jass\ninteger ORDER_ID_MOVE\n```\n\n\n**文件:** `Pruebas/Reworks/movecast_viejo.j`"
+    },
+    {
+      "symbolName": "RegisterMovementSpellTarget",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\movecast_viejo.j",
+      "content": "\n```jass\nfunction RegisterMovementSpellTarget takes integer abilityId, string orderId returns nothing\n```\n\n\n---\n\n===========================================================================\n\nRegistrar hechizo TARGET con OrderId string\n\n===========================================================================\n\n**文件:** `Pruebas/Reworks/movecast_viejo.j`"
     }
   ],
-  "timestamp": 1775930548205
+  "timestamp": 1776678211364
 }

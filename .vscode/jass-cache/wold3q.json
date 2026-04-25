@@ -1,0 +1,294 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\Systems\\HeroLives\\HeroLives.j",
+  "items": [
+    {
+      "label": "HERO_LIVES_BASE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer HERO_LIVES_BASE\n```\n\n\n**_>:** `Systems/HeroLives/HeroLives.j`",
+      "sortText": "2_var_HERO_LIVES_BASE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Systems\\HeroLives\\HeroLives.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HERO_LIVES_REVIVE_DELAY",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real HERO_LIVES_REVIVE_DELAY\n```\n\n\n**_>:** `Systems/HeroLives/HeroLives.j`",
+      "sortText": "2_var_HERO_LIVES_REVIVE_DELAY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Systems\\HeroLives\\HeroLives.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HERO_LIVES_INVULN_DURATION",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real HERO_LIVES_INVULN_DURATION\n```\n\n\n**_>:** `Systems/HeroLives/HeroLives.j`",
+      "sortText": "2_var_HERO_LIVES_INVULN_DURATION",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Systems\\HeroLives\\HeroLives.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HERO_LIVES_REVIVE_FX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string HERO_LIVES_REVIVE_FX\n```\n\n\n**_>:** `Systems/HeroLives/HeroLives.j`",
+      "sortText": "2_var_HERO_LIVES_REVIVE_FX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Systems\\HeroLives\\HeroLives.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HERO_LIVES_INVULN_FX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string HERO_LIVES_INVULN_FX\n```\n\n\n**_>:** `Systems/HeroLives/HeroLives.j`",
+      "sortText": "2_var_HERO_LIVES_INVULN_FX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Systems\\HeroLives\\HeroLives.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HeroLivesCurrent",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array HeroLivesCurrent\n```\n\n\n**_>:** `Systems/HeroLives/HeroLives.j`",
+      "sortText": "2_var_HeroLivesCurrent",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Systems\\HeroLives\\HeroLives.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HeroLivesState",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array HeroLivesState\n```\n\n\n**_>:** `Systems/HeroLives/HeroLives.j`",
+      "sortText": "2_var_HeroLivesState",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Systems\\HeroLives\\HeroLives.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HeroLivesTimer",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ntimer array HeroLivesTimer\n```\n\n\n**_>:** `Systems/HeroLives/HeroLives.j`",
+      "sortText": "2_var_HeroLivesTimer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Systems\\HeroLives\\HeroLives.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HeroLivesFx",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\neffect array HeroLivesFx\n```\n\n\n**_>:** `Systems/HeroLives/HeroLives.j`",
+      "sortText": "2_var_HeroLivesFx",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Systems\\HeroLives\\HeroLives.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HeroLivesDeathX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array HeroLivesDeathX\n```\n\n\n**_>:** `Systems/HeroLives/HeroLives.j`",
+      "sortText": "2_var_HeroLivesDeathX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Systems\\HeroLives\\HeroLives.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HeroLivesDeathY",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array HeroLivesDeathY\n```\n\n\n**_>:** `Systems/HeroLives/HeroLives.j`",
+      "sortText": "2_var_HeroLivesDeathY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Systems\\HeroLives\\HeroLives.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HeroLivesDeathTrigger",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ntrigger HeroLivesDeathTrigger\n```\n\n\n**_>:** `Systems/HeroLives/HeroLives.j`",
+      "sortText": "2_var_HeroLivesDeathTrigger",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Systems\\HeroLives\\HeroLives.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HeroLivesLeaveTrigger",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ntrigger HeroLivesLeaveTrigger\n```\n\n\n**_>:** `Systems/HeroLives/HeroLives.j`",
+      "sortText": "2_var_HeroLivesLeaveTrigger",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Systems\\HeroLives\\HeroLives.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HeroLivesIsTrackedPlayer",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HeroLivesIsTrackedPlayer takes integer pid returns boolean\n```\n\n\n**_>:** `Systems/HeroLives/HeroLives.j`",
+      "sortText": "1_func_HeroLivesIsTrackedPlayer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Systems\\HeroLives\\HeroLives.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "HeroLivesClearFx",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HeroLivesClearFx takes integer pid returns nothing\n```\n\n\n**_>:** `Systems/HeroLives/HeroLives.j`",
+      "sortText": "1_func_HeroLivesClearFx",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Systems\\HeroLives\\HeroLives.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "HeroLivesAbort",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HeroLivesAbort takes integer pid returns nothing\n```\n\n\n**_>:** `Systems/HeroLives/HeroLives.j`",
+      "sortText": "1_func_HeroLivesAbort",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Systems\\HeroLives\\HeroLives.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "HeroLivesGetCurrent",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HeroLivesGetCurrent takes integer pid returns integer\n```\n\n\n**_>:** `Systems/HeroLives/HeroLives.j`",
+      "sortText": "1_func_HeroLivesGetCurrent",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Systems\\HeroLives\\HeroLives.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "HeroLivesGetRemaining",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HeroLivesGetRemaining takes integer pid returns integer\n```\n\n\n**_>:** `Systems/HeroLives/HeroLives.j`",
+      "sortText": "1_func_HeroLivesGetRemaining",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Systems\\HeroLives\\HeroLives.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "HeroLivesSetCurrent",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HeroLivesSetCurrent takes integer pid, integer lives returns nothing\n```\n\n\n**_>:** `Systems/HeroLives/HeroLives.j`",
+      "sortText": "1_func_HeroLivesSetCurrent",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Systems\\HeroLives\\HeroLives.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "HeroLivesCancelPlayerState",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HeroLivesCancelPlayerState takes integer pid returns nothing\n```\n\n\n**_>:** `Systems/HeroLives/HeroLives.j`",
+      "sortText": "1_func_HeroLivesCancelPlayerState",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Systems\\HeroLives\\HeroLives.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "HeroLivesInitHero",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HeroLivesInitHero takes integer pid, unit hero returns nothing\n```\n\n\n**_>:** `Systems/HeroLives/HeroLives.j`",
+      "sortText": "1_func_HeroLivesInitHero",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Systems\\HeroLives\\HeroLives.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "HeroLivesRefreshActivePlayers",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HeroLivesRefreshActivePlayers takes nothing returns nothing\n```\n\n\n**_>:** `Systems/HeroLives/HeroLives.j`",
+      "sortText": "1_func_HeroLivesRefreshActivePlayers",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Systems\\HeroLives\\HeroLives.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "HeroLivesRefreshAll",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HeroLivesRefreshAll takes nothing returns nothing\n```\n\n\n**_>:** `Systems/HeroLives/HeroLives.j`",
+      "sortText": "1_func_HeroLivesRefreshAll",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Systems\\HeroLives\\HeroLives.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "HeroLivesEndInvulnerability",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HeroLivesEndInvulnerability takes nothing returns boolean\n```\n\n\n**_>:** `Systems/HeroLives/HeroLives.j`",
+      "sortText": "1_func_HeroLivesEndInvulnerability",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Systems\\HeroLives\\HeroLives.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "HeroLivesStartInvulnerability",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HeroLivesStartInvulnerability takes integer pid returns nothing\n```\n\n\n**_>:** `Systems/HeroLives/HeroLives.j`",
+      "sortText": "1_func_HeroLivesStartInvulnerability",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Systems\\HeroLives\\HeroLives.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "HeroLivesReviveHero",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HeroLivesReviveHero takes integer pid returns nothing\n```\n\n\n**_>:** `Systems/HeroLives/HeroLives.j`",
+      "sortText": "1_func_HeroLivesReviveHero",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Systems\\HeroLives\\HeroLives.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "HeroLivesOnReviveTimer",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HeroLivesOnReviveTimer takes nothing returns boolean\n```\n\n\n**_>:** `Systems/HeroLives/HeroLives.j`",
+      "sortText": "1_func_HeroLivesOnReviveTimer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Systems\\HeroLives\\HeroLives.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "HeroLivesHandleDeath",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HeroLivesHandleDeath takes unit hero returns nothing\n```\n\n\n**_>:** `Systems/HeroLives/HeroLives.j`",
+      "sortText": "1_func_HeroLivesHandleDeath",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Systems\\HeroLives\\HeroLives.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "HeroLivesOnDeath",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HeroLivesOnDeath takes nothing returns boolean\n```\n\n\n**_>:** `Systems/HeroLives/HeroLives.j`",
+      "sortText": "1_func_HeroLivesOnDeath",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Systems\\HeroLives\\HeroLives.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "HeroLivesOnLeave",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HeroLivesOnLeave takes nothing returns boolean\n```\n\n\n**_>:** `Systems/HeroLives/HeroLives.j`",
+      "sortText": "1_func_HeroLivesOnLeave",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Systems\\HeroLives\\HeroLives.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "ReviveAndHealHeroes",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ReviveAndHealHeroes takes nothing returns nothing\n```\n\n\n**_>:** `Systems/HeroLives/HeroLives.j`",
+      "sortText": "1_func_ReviveAndHealHeroes",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Systems\\HeroLives\\HeroLives.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**_>:** `Systems/HeroLives/HeroLives.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Systems\\HeroLives\\HeroLives.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1777049211187
+}

@@ -1,0 +1,42 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeUI.j",
+  "items": [
+    {
+      "label": "RestTimeSetBoardTitle",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction RestTimeSetBoardTitle takes string title returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime/RestTimeUI.j`",
+      "sortText": "1_func_RestTimeSetBoardTitle",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeUI.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "RestTimeSetStatusForActivePlayers",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction RestTimeSetStatusForActivePlayers takes string statusText returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime/RestTimeUI.j`",
+      "sortText": "1_func_RestTimeSetStatusForActivePlayers",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeUI.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "RestTimeCloseTenderForActivePlayers",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction RestTimeCloseTenderForActivePlayers takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime/RestTimeUI.j`",
+      "sortText": "1_func_RestTimeCloseTenderForActivePlayers",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeUI.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "RestTimeShowClientsForActivePlayers",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction RestTimeShowClientsForActivePlayers takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime/RestTimeUI.j`",
+      "sortText": "1_func_RestTimeShowClientsForActivePlayers",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeUI.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1777054099098
+}

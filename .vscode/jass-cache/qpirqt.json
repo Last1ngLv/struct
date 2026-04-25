@@ -1,0 +1,15 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\Config\\WaveOwnerConfig.j",
+  "items": [
+    {
+      "label": "InitDefaultWaveOwnerResearches",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction InitDefaultWaveOwnerResearches takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/Config/WaveOwnerConfig.j`",
+      "sortText": "1_func_InitDefaultWaveOwnerResearches",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\Config\\WaveOwnerConfig.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1777049211198
+}

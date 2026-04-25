@@ -12,4 +12,9 @@ library SwlsMath
         return SquareRoot(SwlsDistanceSq(x1, y1, x2, y2))
     endfunction
 
+    // Compatibilidad legacy: varios sistemas antiguos usan este nombre.
+    function DistanceBetweenCoords takes real x1, real y1, real x2, real y2 returns real
+        return SwlsDistance(x1, y1, x2, y2)
+    endfunction
+
 endlibrary

@@ -1,0 +1,42 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\TheEnd.j",
+  "items": [
+    {
+      "label": "CloseTenderForActivePlayers",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction CloseTenderForActivePlayers takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime/TheEnd.j`",
+      "sortText": "1_func_CloseTenderForActivePlayers",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\TheEnd.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "StartInitialWaveCountdown",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction StartInitialWaveCountdown takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime/TheEnd.j`",
+      "sortText": "1_func_StartInitialWaveCountdown",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\TheEnd.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "StartPurchaseCountdown",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction StartPurchaseCountdown takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime/TheEnd.j`",
+      "sortText": "1_func_StartPurchaseCountdown",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\TheEnd.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "endF",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction endF takes string nextWaveFunc returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime/TheEnd.j`",
+      "sortText": "1_func_endF",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\TheEnd.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1777054059496
+}

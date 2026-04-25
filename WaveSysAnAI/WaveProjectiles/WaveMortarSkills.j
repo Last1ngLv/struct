@@ -1,4 +1,4 @@
-library WaveMortarSkills initializer Init requires Table, TimerUtils, Missile, SpellIndex, WaveTest, WaveSkillVisuals
+library WaveMortarSkills initializer Init requires Table, TimerUtils, Missile, SpellIndex, WaveTest, WaveSkillVisuals, PlayerHeroState
 
     globals
         public constant integer WAVE_HMTM_UNIT_ID = 'hmtm'
@@ -376,3 +376,4 @@ library WaveMortarSkills initializer Init requires Table, TimerUtils, Missile, S
         call RegisterWaveDeathEvent(function WaveMortarCleanupWaveDeath)
     endfunction
 endlibrary
+

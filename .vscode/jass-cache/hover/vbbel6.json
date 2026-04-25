@@ -1,0 +1,11 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\AllScripts\\castpremier.j",
+  "items": [
+    {
+      "symbolName": "RegisterMovementSpellTarget",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\AllScripts\\castpremier.j",
+      "content": "\n```jass\nfunction RegisterMovementSpellTarget takes integer abilityId, string orderId returns nothing\n```\n\n\n---\n\n===========================================================================\n\n**文件:** `Pruebas/AllScripts/castpremier.j`"
+    }
+  ],
+  "timestamp": 1776678211363
+}

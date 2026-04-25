@@ -1,4 +1,4 @@
-library LoadoutIntFullManaSwapNew initializer Init uses Table, SpellIndex
+library LoadoutIntFullManaSwapNew initializer Init requires Table, SpellIndex, TimerUtils, SpellFinishEvent, PlayerMissileLoadout
 //*******************************************************************************
 // Guarda inteligencia y mana actual, sube INT a 500 y mana a full.
 // Al disparar un orb: restaura INT y mana original y nivel de habilidad temporal (CD_LEVEL)

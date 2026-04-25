@@ -1,0 +1,24 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\Players\\Config\\AllianceConfig.j",
+  "items": [
+    {
+      "label": "InitHostileNeutralAlliances",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction InitHostileNeutralAlliances takes nothing returns nothing\n```\n\n\n**_>:** `Players/Config/AllianceConfig.j`",
+      "sortText": "1_func_InitHostileNeutralAlliances",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Players\\Config\\AllianceConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "InitPlayerBountyStates",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction InitPlayerBountyStates takes nothing returns nothing\n```\n\n\n**_>:** `Players/Config/AllianceConfig.j`",
+      "sortText": "1_func_InitPlayerBountyStates",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Players\\Config\\AllianceConfig.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1777049211150
+}

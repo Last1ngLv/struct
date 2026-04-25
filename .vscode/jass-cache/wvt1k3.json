@@ -1,0 +1,15 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\Systems\\Tender\\Config\\TenderSpawnConfig.j",
+  "items": [
+    {
+      "label": "InitTenderSpawnConfig",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction InitTenderSpawnConfig takes nothing returns nothing\n```\n\n\n**_>:** `Systems/Tender/Config/TenderSpawnConfig.j`",
+      "sortText": "1_func_InitTenderSpawnConfig",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Systems\\Tender\\Config\\TenderSpawnConfig.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1777049211188
+}

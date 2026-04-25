@@ -1,0 +1,24 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\Selection\\SelectionClientBridge.j",
+  "items": [
+    {
+      "label": "SelectionCreateClients",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SelectionCreateClients takes nothing returns nothing\n```\n\n\n**_>:** `Selection/SelectionClientBridge.j`",
+      "sortText": "1_func_SelectionCreateClients",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Selection\\SelectionClientBridge.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "SelectionShowClients",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SelectionShowClients takes nothing returns nothing\n```\n\n\n**_>:** `Selection/SelectionClientBridge.j`",
+      "sortText": "1_func_SelectionShowClients",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Selection\\SelectionClientBridge.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1777050715658
+}

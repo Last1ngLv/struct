@@ -1,0 +1,150 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SpacebarDetect.j",
+  "items": [
+    {
+      "label": "CHECK_INTERVAL",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real CHECK_INTERVAL\n```\n\n\n---\n\nconfig\n\n**_>:** `libraries/SpacebarDetect.j`",
+      "sortText": "2_var_CHECK_INTERVAL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SpacebarDetect.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DETECT_X",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real DETECT_X\n```\n\n\n**_>:** `libraries/SpacebarDetect.j`",
+      "sortText": "2_var_DETECT_X",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SpacebarDetect.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DETECT_Y",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real DETECT_Y\n```\n\n\n**_>:** `libraries/SpacebarDetect.j`",
+      "sortText": "2_var_DETECT_Y",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SpacebarDetect.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "FireEvent",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal FireEvent\n```\n\n\n---\n\nend\n\n**_>:** `libraries/SpacebarDetect.j`",
+      "sortText": "2_var_FireEvent",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SpacebarDetect.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "EventTrig",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ntrigger EventTrig\n```\n\n\n**_>:** `libraries/SpacebarDetect.j`",
+      "sortText": "2_var_EventTrig",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SpacebarDetect.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "NotifyID",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger NotifyID\n```\n\n\n**_>:** `libraries/SpacebarDetect.j`",
+      "sortText": "2_var_NotifyID",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SpacebarDetect.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "QP_X",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal QP_X\n```\n\n\n**_>:** `libraries/SpacebarDetect.j`",
+      "sortText": "2_var_QP_X",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SpacebarDetect.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "QP_Y",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal QP_Y\n```\n\n\n**_>:** `libraries/SpacebarDetect.j`",
+      "sortText": "2_var_QP_Y",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SpacebarDetect.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "OnSpacebarPress",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnSpacebarPress takes filterfunc func returns triggercondition\n```\n\n\n**_>:** `libraries/SpacebarDetect.j`",
+      "sortText": "1_func_OnSpacebarPress",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SpacebarDetect.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "SpacebarRemoveEvent",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SpacebarRemoveEvent takes triggercondition func returns nothing\n```\n\n\n**_>:** `libraries/SpacebarDetect.j`",
+      "sortText": "1_func_SpacebarRemoveEvent",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SpacebarDetect.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TriggerRegisterSpacebarEvent",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction TriggerRegisterSpacebarEvent takes trigger t returns nothing\n```\n\n\n**_>:** `libraries/SpacebarDetect.j`",
+      "sortText": "1_func_TriggerRegisterSpacebarEvent",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SpacebarDetect.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "SetCameraQuickPositionEx",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SetCameraQuickPositionEx takes real x, real y returns nothing\n```\n\n\n**_>:** `libraries/SpacebarDetect.j`",
+      "sortText": "1_func_SetCameraQuickPositionEx",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SpacebarDetect.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "FireEvents",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction FireEvents takes nothing returns nothing\n```\n\n\n**_>:** `libraries/SpacebarDetect.j`",
+      "sortText": "1_func_FireEvents",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SpacebarDetect.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnSync",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnSync takes nothing returns boolean\n```\n\n\n**_>:** `libraries/SpacebarDetect.j`",
+      "sortText": "1_func_OnSync",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SpacebarDetect.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnMapStart",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnMapStart takes nothing returns nothing\n```\n\n\n**_>:** `libraries/SpacebarDetect.j`",
+      "sortText": "1_func_OnMapStart",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SpacebarDetect.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**_>:** `libraries/SpacebarDetect.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SpacebarDetect.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1777091811046
+}

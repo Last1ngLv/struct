@@ -1,0 +1,51 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeCountdown.j",
+  "items": [
+    {
+      "label": "RestTimeStopPhaseTimer",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction RestTimeStopPhaseTimer takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime/RestTimeCountdown.j`",
+      "sortText": "1_func_RestTimeStopPhaseTimer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeCountdown.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "RestTimeSetCountdownStatus",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction RestTimeSetCountdownStatus takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime/RestTimeCountdown.j`",
+      "sortText": "1_func_RestTimeSetCountdownStatus",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeCountdown.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "RestTimeLaunchCurrentWave",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction RestTimeLaunchCurrentWave takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime/RestTimeCountdown.j`",
+      "sortText": "1_func_RestTimeLaunchCurrentWave",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeCountdown.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "RestTimePhaseTick",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction RestTimePhaseTick takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime/RestTimeCountdown.j`",
+      "sortText": "1_func_RestTimePhaseTick",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeCountdown.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "RestTimeBeginCountdown",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction RestTimeBeginCountdown takes integer seconds, integer phaseState returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime/RestTimeCountdown.j`",
+      "sortText": "1_func_RestTimeBeginCountdown",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeCountdown.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1777054090795
+}

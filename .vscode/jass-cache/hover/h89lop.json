@@ -10,7 +10,17 @@
       "symbolName": "FIRE_TEXT_R",
       "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
       "content": "\n```jass\nconstant integer FIRE_TEXT_R\n```\n\n\n**文件:** `MyMissiles/Loadout LeapMissile.j`"
+    },
+    {
+      "symbolName": "dummyFx1",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "content": "\n```jass\neffect array dummyFx1\n```\n\n\n**文件:** `MyMissiles/Loadout LeapMissile.j`"
+    },
+    {
+      "symbolName": "casterFx1",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "content": "\n```jass\neffect array casterFx1\n```\n\n\n---\n\nFX arrays\n\n**文件:** `MyMissiles/Loadout LeapMissile.j`"
     }
   ],
-  "timestamp": 1776204759942
+  "timestamp": 1777049362522
 }

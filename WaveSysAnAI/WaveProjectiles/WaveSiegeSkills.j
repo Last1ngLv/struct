@@ -1,4 +1,4 @@
-library WaveSiegeSkills initializer Init requires Table, TimerUtils, Missile, SpellIndex, WaveTest, TerrainPathability, WaveProjectileConfig, WaveSkillVisuals
+library WaveSiegeSkills initializer Init requires Table, TimerUtils, Missile, SpellIndex, WaveTest, TerrainPathability, WaveProjectileConfig, WaveSkillVisuals, PlayerHeroState
 
     globals
         public constant integer WAVE_HMIL_UNIT_ID = 'hmil'
@@ -216,3 +216,4 @@ library WaveSiegeSkills initializer Init requires Table, TimerUtils, Missile, Sp
         call RegisterWaveDeathEvent(function WaveSiegeCleanupWaveDeath)
     endfunction
 endlibrary
+

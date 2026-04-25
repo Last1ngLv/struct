@@ -1,0 +1,69 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\Systems\\Orders\\OrderSmartChannel.j",
+  "items": [
+    {
+      "label": "MZ",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ntrigger MZ\n```\n\n\n**_>:** `Systems/Orders/OrderSmartChannel.j`",
+      "sortText": "2_var_MZ",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Systems\\Orders\\OrderSmartChannel.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "SZ",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ntrigger SZ\n```\n\n\n**_>:** `Systems/Orders/OrderSmartChannel.j`",
+      "sortText": "2_var_SZ",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Systems\\Orders\\OrderSmartChannel.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "SmartIDHide",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer SmartIDHide\n```\n\n\n**_>:** `Systems/Orders/OrderSmartChannel.j`",
+      "sortText": "2_var_SmartIDHide",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Systems\\Orders\\OrderSmartChannel.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "KeyStringCMD",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string KeyStringCMD\n```\n\n\n**_>:** `Systems/Orders/OrderSmartChannel.j`",
+      "sortText": "2_var_KeyStringCMD",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Systems\\Orders\\OrderSmartChannel.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "AuxiliarDataUnit",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct AuxiliarDataUnit\n```\n\n\n**_>:** `Systems/Orders/OrderSmartChannel.j`",
+      "sortText": "1_struct_AuxiliarDataUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Systems\\Orders\\OrderSmartChannel.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "SILENCE_TESTUNIT_AMOV",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SILENCE_TESTUNIT_AMOV takes unit a returns nothing\n```\n\n\n**_>:** `Systems/Orders/OrderSmartChannel.j`",
+      "sortText": "1_func_SILENCE_TESTUNIT_AMOV",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Systems\\Orders\\OrderSmartChannel.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "EButts",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction EButts takes nothing returns nothing\n```\n\n\n---\n\n+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n\n**_>:** `Systems/Orders/OrderSmartChannel.j`",
+      "sortText": "1_func_EButts",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Systems\\Orders\\OrderSmartChannel.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1777049211188
+}

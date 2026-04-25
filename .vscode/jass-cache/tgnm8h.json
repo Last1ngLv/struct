@@ -1,0 +1,60 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\Multiboard\\InitialWaveMultiboard.j",
+  "items": [
+    {
+      "label": "InitialBoardTimer",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ntimer InitialBoardTimer\n```\n\n\n**_>:** `Multiboard/InitialWaveMultiboard.j`",
+      "sortText": "2_var_InitialBoardTimer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Multiboard\\InitialWaveMultiboard.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "SetInitialBoardCell",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SetInitialBoardCell takes integer row, integer column, string value, real width returns nothing\n```\n\n\n**_>:** `Multiboard/InitialWaveMultiboard.j`",
+      "sortText": "1_func_SetInitialBoardCell",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Multiboard\\InitialWaveMultiboard.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "PopulateInitialWaveMultiboard",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction PopulateInitialWaveMultiboard takes nothing returns nothing\n```\n\n\n**_>:** `Multiboard/InitialWaveMultiboard.j`",
+      "sortText": "1_func_PopulateInitialWaveMultiboard",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Multiboard\\InitialWaveMultiboard.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "InitialWaveMultiboardTick",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction InitialWaveMultiboardTick takes nothing returns nothing\n```\n\n\n**_>:** `Multiboard/InitialWaveMultiboard.j`",
+      "sortText": "1_func_InitialWaveMultiboardTick",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Multiboard\\InitialWaveMultiboard.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "ShowInitialWaveMultiboard",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ShowInitialWaveMultiboard takes nothing returns nothing\n```\n\n\n**_>:** `Multiboard/InitialWaveMultiboard.j`",
+      "sortText": "1_func_ShowInitialWaveMultiboard",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Multiboard\\InitialWaveMultiboard.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "InitInitialWaveMultiboard",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction InitInitialWaveMultiboard takes nothing returns nothing\n```\n\n\n**_>:** `Multiboard/InitialWaveMultiboard.j`",
+      "sortText": "1_func_InitInitialWaveMultiboard",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Multiboard\\InitialWaveMultiboard.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1777049211138
+}

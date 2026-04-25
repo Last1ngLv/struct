@@ -227,6 +227,15 @@
       "statementType": "VariableDeclaration"
     },
     {
+      "label": "AIApplyBossTeleportDefaults",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AIApplyBossTeleportDefaults takes integer profileId returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/AI/AIConfig.j`",
+      "sortText": "1_func_AIApplyBossTeleportDefaults",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\AIConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
       "label": "Init",
       "kind": 2,
       "detail": "Function",
@@ -236,5 +245,5 @@
       "statementType": "FunctionDeclaration"
     }
   ],
-  "timestamp": 1776636497874
+  "timestamp": 1777049211195
 }

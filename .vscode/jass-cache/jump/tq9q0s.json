@@ -1,0 +1,23 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SyncInteger.j",
+  "items": [
+    {
+      "symbolName": "BASE",
+      "location": {
+        "uri": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SyncInteger.j",
+        "range": {
+          "start": {
+            "line": 85,
+            "character": 36
+          },
+          "end": {
+            "line": 85,
+            "character": 40
+          }
+        }
+      },
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SyncInteger.j"
+    }
+  ],
+  "timestamp": 1777091246610
+}

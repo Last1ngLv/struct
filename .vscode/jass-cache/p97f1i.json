@@ -1,0 +1,15 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\MoveSys\\Config\\MovementSpellTargetConfig.j",
+  "items": [
+    {
+      "label": "InitMovementSpellTargetConfig",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction InitMovementSpellTargetConfig takes nothing returns nothing\n```\n\n\n**_>:** `MoveSys/Config/MovementSpellTargetConfig.j`",
+      "sortText": "1_func_InitMovementSpellTargetConfig",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MoveSys\\Config\\MovementSpellTargetConfig.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1777049211136
+}

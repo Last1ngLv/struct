@@ -1,0 +1,16 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SpacebarDetect.j",
+  "items": [
+    {
+      "symbolName": "SetCameraQuickPositionEx",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SpacebarDetect.j",
+      "content": "\n```jass\nfunction SetCameraQuickPositionEx takes real x, real y returns nothing\n```\n\n\n**文件:** `libraries/SpacebarDetect.j`"
+    },
+    {
+      "symbolName": "FireEvents",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SpacebarDetect.j",
+      "content": "\n```jass\nfunction FireEvents takes nothing returns nothing\n```\n\n\n**文件:** `libraries/SpacebarDetect.j`"
+    }
+  ],
+  "timestamp": 1777094043802
+}
