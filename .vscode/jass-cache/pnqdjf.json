@@ -9,7 +9,16 @@
       "sortText": "1_func_Trig_w1_Actions",
       "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\StageExample.j",
       "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "InitStage1",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction InitStage1 takes nothing returns nothing\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/StageExample.j`",
+      "sortText": "1_func_InitStage1",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\StageExample.j",
+      "statementType": "FunctionDeclaration"
     }
   ],
-  "timestamp": 1777049211201
+  "timestamp": 1777597823818
 }

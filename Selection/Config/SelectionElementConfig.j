@@ -73,7 +73,9 @@ library SelectionElementConfig requires PlayerMissileLoadout
             set casterFx2 = "Miss\\Valiant Charge.mdx"
         endif
 
-        call UnitAddAbility(hero, abilityId)
+        // El PreSelect ya no otorga habilidad de orbe/elemento.
+        // El elementId queda solo como perfil visual/color del proyectil.
+        // Tier 1 usa Blue; futuros tiers pueden llamar esta config con otro elementId.
         call SetPlayerLeapCasterFx(p, casterFx1, casterFx2)
         call SetPlayerMissileLoadout(p, abilityId, speed, damage, instances, model, overlay)
         call SetPlayerLeapImpactFx(p, impactFx)

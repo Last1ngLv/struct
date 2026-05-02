@@ -1,0 +1,375 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\MenuClient_full_legacy_before_cleanup.j",
+  "items": [
+    {
+      "label": "FuncLClickSlot",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nfilterfunc FuncLClickSlot\n```\n\n\n**_>:** `Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j`",
+      "sortText": "2_var_FuncLClickSlot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\MenuClient_full_legacy_before_cleanup.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "FuncRClickSlot",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nfilterfunc FuncRClickSlot\n```\n\n\n**_>:** `Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j`",
+      "sortText": "2_var_FuncRClickSlot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\MenuClient_full_legacy_before_cleanup.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "PlayerLastSlot",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array PlayerLastSlot\n```\n\n\n**_>:** `Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j`",
+      "sortText": "2_var_PlayerLastSlot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\MenuClient_full_legacy_before_cleanup.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "PlayerLastButton",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nUIButton array PlayerLastButton\n```\n\n\n**_>:** `Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j`",
+      "sortText": "2_var_PlayerLastButton",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\MenuClient_full_legacy_before_cleanup.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveStatusText",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring array WaveStatusText\n```\n\n\n**_>:** `Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j`",
+      "sortText": "2_var_WaveStatusText",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\MenuClient_full_legacy_before_cleanup.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveEnemyPreviewFx",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\neffect array WaveEnemyPreviewFx\n```\n\n\n**_>:** `Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j`",
+      "sortText": "2_var_WaveEnemyPreviewFx",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\MenuClient_full_legacy_before_cleanup.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveEnemyPreviewWaveId",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array WaveEnemyPreviewWaveId\n```\n\n\n**_>:** `Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j`",
+      "sortText": "2_var_WaveEnemyPreviewWaveId",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\MenuClient_full_legacy_before_cleanup.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveEnemyPreviewModelPath",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring array WaveEnemyPreviewModelPath\n```\n\n\n**_>:** `Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j`",
+      "sortText": "2_var_WaveEnemyPreviewModelPath",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\MenuClient_full_legacy_before_cleanup.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "PlayerMenuCameraHeight",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array PlayerMenuCameraHeight\n```\n\n\n**_>:** `Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j`",
+      "sortText": "2_var_PlayerMenuCameraHeight",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\MenuClient_full_legacy_before_cleanup.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "PlayerMenuCameraOffset",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array PlayerMenuCameraOffset\n```\n\n\n**_>:** `Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j`",
+      "sortText": "2_var_PlayerMenuCameraOffset",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\MenuClient_full_legacy_before_cleanup.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "PlayerMenuFogAppliedHeight",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array PlayerMenuFogAppliedHeight\n```\n\n\n**_>:** `Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j`",
+      "sortText": "2_var_PlayerMenuFogAppliedHeight",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\MenuClient_full_legacy_before_cleanup.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "PlayerMenuSelectedShopWeapon",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array PlayerMenuSelectedShopWeapon\n```\n\n\n**_>:** `Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j`",
+      "sortText": "2_var_PlayerMenuSelectedShopWeapon",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\MenuClient_full_legacy_before_cleanup.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "PlayerMenuRenderedShopWeapon",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array PlayerMenuRenderedShopWeapon\n```\n\n\n**_>:** `Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j`",
+      "sortText": "2_var_PlayerMenuRenderedShopWeapon",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\MenuClient_full_legacy_before_cleanup.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "PlayerMenuClickText",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring array PlayerMenuClickText\n```\n\n\n**_>:** `Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j`",
+      "sortText": "2_var_PlayerMenuClickText",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\MenuClient_full_legacy_before_cleanup.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "PlayerMenuShowShop",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean array PlayerMenuShowShop\n```\n\n\n**_>:** `Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j`",
+      "sortText": "2_var_PlayerMenuShowShop",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\MenuClient_full_legacy_before_cleanup.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "PlayerMenuShowTree",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean array PlayerMenuShowTree\n```\n\n\n**_>:** `Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j`",
+      "sortText": "2_var_PlayerMenuShowTree",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\MenuClient_full_legacy_before_cleanup.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "PlayerMenuShowEnemies",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean array PlayerMenuShowEnemies\n```\n\n\n**_>:** `Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j`",
+      "sortText": "2_var_PlayerMenuShowEnemies",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\MenuClient_full_legacy_before_cleanup.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HERO_WINDOW_NAME",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HERO_WINDOW_NAME takes unit u returns string\n```\n\n\n**_>:** `Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j`",
+      "sortText": "1_func_HERO_WINDOW_NAME",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\MenuClient_full_legacy_before_cleanup.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "DesignLocalInt",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction DesignLocalInt takes integer pid, integer value, integer other returns integer\n```\n\n\n---\n\nVersion local de Inventory.localInt para mostrar solo al jugador local.\n\n**_>:** `Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j`",
+      "sortText": "1_func_DesignLocalInt",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\MenuClient_full_legacy_before_cleanup.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetDefaultMenuCameraHeight",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetDefaultMenuCameraHeight takes nothing returns real\n```\n\n\n**_>:** `Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j`",
+      "sortText": "1_func_GetDefaultMenuCameraHeight",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\MenuClient_full_legacy_before_cleanup.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetDefaultMenuCameraOffset",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetDefaultMenuCameraOffset takes nothing returns real\n```\n\n\n**_>:** `Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j`",
+      "sortText": "1_func_GetDefaultMenuCameraOffset",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\MenuClient_full_legacy_before_cleanup.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetMinMenuCameraHeight",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetMinMenuCameraHeight takes nothing returns real\n```\n\n\n**_>:** `Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j`",
+      "sortText": "1_func_GetMinMenuCameraHeight",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\MenuClient_full_legacy_before_cleanup.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetMaxMenuCameraHeight",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetMaxMenuCameraHeight takes nothing returns real\n```\n\n\n**_>:** `Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j`",
+      "sortText": "1_func_GetMaxMenuCameraHeight",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\MenuClient_full_legacy_before_cleanup.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetMenuCameraHeightStep",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetMenuCameraHeightStep takes nothing returns real\n```\n\n\n**_>:** `Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j`",
+      "sortText": "1_func_GetMenuCameraHeightStep",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\MenuClient_full_legacy_before_cleanup.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetMenuCameraOffsetForHeight",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetMenuCameraOffsetForHeight takes real height returns real\n```\n\n\n**_>:** `Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j`",
+      "sortText": "1_func_GetMenuCameraOffsetForHeight",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\MenuClient_full_legacy_before_cleanup.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetMenuCameraFogEnd",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetMenuCameraFogEnd takes real height returns real\n```\n\n\n**_>:** `Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j`",
+      "sortText": "1_func_GetMenuCameraFogEnd",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\MenuClient_full_legacy_before_cleanup.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "ApplyMenuCameraFog",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ApplyMenuCameraFog takes player p, real height returns nothing\n```\n\n\n**_>:** `Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j`",
+      "sortText": "1_func_ApplyMenuCameraFog",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\MenuClient_full_legacy_before_cleanup.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "ResetMenuCameraFog",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ResetMenuCameraFog takes player p returns nothing\n```\n\n\n**_>:** `Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j`",
+      "sortText": "1_func_ResetMenuCameraFog",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\MenuClient_full_legacy_before_cleanup.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "EnsureMenuCameraSettings",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction EnsureMenuCameraSettings takes integer pid returns nothing\n```\n\n\n**_>:** `Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j`",
+      "sortText": "1_func_EnsureMenuCameraSettings",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\MenuClient_full_legacy_before_cleanup.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "StepMenuCameraHeight",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction StepMenuCameraHeight takes integer pid, real delta returns nothing\n```\n\n\n**_>:** `Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j`",
+      "sortText": "1_func_StepMenuCameraHeight",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\MenuClient_full_legacy_before_cleanup.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Client",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct Client\n```\n\n\n**_>:** `Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j`",
+      "sortText": "1_struct_Client",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\MenuClient_full_legacy_before_cleanup.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "MenuClientRefreshEnemyPreviewForActivePlayers",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction MenuClientRefreshEnemyPreviewForActivePlayers takes nothing returns nothing\n```\n\n\n**_>:** `Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j`",
+      "sortText": "1_func_MenuClientRefreshEnemyPreviewForActivePlayers",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\MenuClient_full_legacy_before_cleanup.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "MenuClientClearEnemyPreviewForActivePlayers",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction MenuClientClearEnemyPreviewForActivePlayers takes nothing returns nothing\n```\n\n\n**_>:** `Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j`",
+      "sortText": "1_func_MenuClientClearEnemyPreviewForActivePlayers",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\MenuClient_full_legacy_before_cleanup.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "MenuClientGetSlotTooltip",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction MenuClientGetSlotTooltip takes player p, integer slot returns string\n```\n\n\n**_>:** `Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j`",
+      "sortText": "1_func_MenuClientGetSlotTooltip",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\MenuClient_full_legacy_before_cleanup.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "MenuClientSetClickText",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction MenuClientSetClickText takes Client equip, string text returns nothing\n```\n\n\n**_>:** `Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j`",
+      "sortText": "1_func_MenuClientSetClickText",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\MenuClient_full_legacy_before_cleanup.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "MenuClientShowSlotTooltip",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction MenuClientShowSlotTooltip takes UIButton but, player p returns nothing\n```\n\n\n**_>:** `Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j`",
+      "sortText": "1_func_MenuClientShowSlotTooltip",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\MenuClient_full_legacy_before_cleanup.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "MenuClientSelectPanel",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction MenuClientSelectPanel takes Client equip, integer panelSlot returns nothing\n```\n\n\n**_>:** `Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j`",
+      "sortText": "1_func_MenuClientSelectPanel",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\MenuClient_full_legacy_before_cleanup.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "ExecuteMenuSlotAction",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ExecuteMenuSlotAction takes nothing returns boolean\n```\n\n\n**_>:** `Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j`",
+      "sortText": "1_func_ExecuteMenuSlotAction",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\MenuClient_full_legacy_before_cleanup.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "LClickItemSlot",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction LClickItemSlot takes nothing returns boolean\n```\n\n\n**_>:** `Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j`",
+      "sortText": "1_func_LClickItemSlot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\MenuClient_full_legacy_before_cleanup.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "RClickItemSlot",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction RClickItemSlot takes nothing returns boolean\n```\n\n\n**_>:** `Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j`",
+      "sortText": "1_func_RClickItemSlot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\MenuClient_full_legacy_before_cleanup.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**_>:** `Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\MenuClient_full_legacy_before_cleanup.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1777579694742
+}

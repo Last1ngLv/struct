@@ -1,4 +1,4 @@
-library RestTimeCountdown requires RestTimeState, RestTimeAudio, RestTimeTenderAudio, RestTimeUI
+library RestTimeCountdown requires RestTimeState, RestTimeAudio, RestTimeUI
 
     function RestTimeStopPhaseTimer takes nothing returns nothing
         if RestPhaseTimer != null then
@@ -8,7 +8,7 @@ library RestTimeCountdown requires RestTimeState, RestTimeAudio, RestTimeTenderA
 
     private function RestTimeSetCountdownStatus takes nothing returns nothing
         if RestPhaseState == REST_PHASE_PURCHASE then
-            call RestTimeSetStatusForActivePlayers("TradeTime: " + I2S(RestPhaseRemaining))
+            call RestTimeSetStatusForActivePlayers("InterMission: " + I2S(RestPhaseRemaining))
             call RestTimeSetBoardTitle("|cFFFFFF99Descanso|r |cFFFFFFFFWave |r|cFFE6E6E6" + I2S(TargetWave) + "|r|cFFFF8C00/|r|cFFE6E6E610|r |cFFFFFFFF- Tienda: |r|cFF66FF99" + I2S(RestPhaseRemaining) + "|r")
         elseif RestPhaseState == REST_PHASE_INITIAL then
             call RestTimeSetStatusForActivePlayers("WaveIn: " + I2S(RestPhaseRemaining))
@@ -17,16 +17,15 @@ library RestTimeCountdown requires RestTimeState, RestTimeAudio, RestTimeTenderA
     endfunction
 
     function RestTimeLaunchCurrentWave takes nothing returns nothing
-        call RestTimeTenderAudioStop()
-        call StopAmbientTownSound()
         call RestTimeCloseTenderForActivePlayers()
-        call ExecuteFunc("MenuClientClearEnemyPreviewForActivePlayers")
         set RestPhaseState = REST_PHASE_NONE
         set RestPhaseRemaining = 0
         call RestTimeSetStatusForActivePlayers("Wave " + I2S(TargetWave))
         call RestTimeSetBoardTitle("|cFF66FF99Activa|r |cFFFFFFFFWave |r|cFFE6E6E6" + I2S(TargetWave) + "|r|cFFFF8C00/|r|cFFE6E6E610|r")
         call RestTimeStopPhaseTimer()
-        if WaveTgg != null and WaveTgg != "" then
+        if SwlsWaveStartTrigger != null then
+            call TriggerExecute(SwlsWaveStartTrigger)
+        elseif WaveTgg != null and WaveTgg != "" then
             call ExecuteFunc(WaveTgg)
         endif
     endfunction
@@ -51,9 +50,6 @@ library RestTimeCountdown requires RestTimeState, RestTimeAudio, RestTimeTenderA
         set RestPhaseRemaining = seconds
         if phaseState == REST_PHASE_PURCHASE then
             set RestSurvivalEndSequenceActive = false
-            call StartAmbientTownSound()
-            call RestTimeTenderAudioStart()
-            call ExecuteFunc("MenuClientRefreshEnemyPreviewForActivePlayers")
             call RestTimeSetStatusForActivePlayers("TimeOfPurchase: " + I2S(RestPhaseRemaining))
             call RestTimeSetBoardTitle("|cFFFFFF99Descanso|r |cFFFFFFFFWave |r|cFFE6E6E6" + I2S(TargetWave) + "|r|cFFFF8C00/|r|cFFE6E6E610|r |cFFFFFFFF- Tienda: |r|cFF66FF99" + I2S(RestPhaseRemaining) + "|r")
         else

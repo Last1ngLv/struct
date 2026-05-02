@@ -15,4 +15,11 @@ library SelectionHeroConfig
         return 'H007'
     endfunction
 
+    function SelectionGetHeroProjectileElementId takes integer index returns integer
+        // Tier inicial: todos los heroes empiezan con misil Blue.
+        // SelectionElementConfig usa elementId 0 para Blue.
+        // Los futuros tiers de arma deberian cambiar este perfil visual.
+        return 0
+    endfunction
+
 endlibrary

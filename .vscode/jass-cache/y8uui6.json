@@ -1,0 +1,24 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\Selection\\Config\\SelectionHeroConfig.j",
+  "items": [
+    {
+      "label": "SelectionGetHeroUnitId",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SelectionGetHeroUnitId takes integer index returns integer\n```\n\n\n**_>:** `Selection/Config/SelectionHeroConfig.j`",
+      "sortText": "1_func_SelectionGetHeroUnitId",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Selection\\Config\\SelectionHeroConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "SelectionGetHeroProjectileElementId",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SelectionGetHeroProjectileElementId takes integer index returns integer\n```\n\n\n**_>:** `Selection/Config/SelectionHeroConfig.j`",
+      "sortText": "1_func_SelectionGetHeroProjectileElementId",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Selection\\Config\\SelectionHeroConfig.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1777579694744
+}

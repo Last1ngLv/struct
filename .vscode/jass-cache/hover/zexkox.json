@@ -205,7 +205,57 @@
       "symbolName": "DEFAULT_LEAP_DUMMY_SCALE",
       "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
       "content": "\n```jass\nconstant real DEFAULT_LEAP_DUMMY_SCALE\n```\n\n\n**文件:** `MyMissiles/Loadout Missile.j`"
+    },
+    {
+      "symbolName": "GetPlayerMissileInstanceCount",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "content": "\n```jass\nfunction GetPlayerMissileInstanceCount takes player p returns integer\n```\n\n\n**文件:** `MyMissiles/Loadout Missile.j`"
+    },
+    {
+      "symbolName": "RAY_TEXT_B",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "content": "\n```jass\nconstant integer RAY_TEXT_B\n```\n\n\n**文件:** `MyMissiles/Loadout Missile.j`"
+    },
+    {
+      "symbolName": "LOADOUT_ORB_ABILITY_POISON",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "content": "\n```jass\nconstant integer LOADOUT_ORB_ABILITY_POISON\n```\n\n\n**文件:** `MyMissiles/Loadout Missile.j`"
+    },
+    {
+      "symbolName": "LoadoutGetPoisonTickDamage",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "content": "\n```jass\nfunction LoadoutGetPoisonTickDamage takes real baseDamage returns real\n```\n\n\n**文件:** `MyMissiles/Loadout Missile.j`"
+    },
+    {
+      "symbolName": "MAX_PLAYER_SLOTS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "content": "\n```jass\nconstant integer MAX_PLAYER_SLOTS\n```\n\n\n**文件:** `MyMissiles/Loadout Missile.j`"
+    },
+    {
+      "symbolName": "BASE_MISSILE_MODEL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "content": "\n```jass\nconstant string BASE_MISSILE_MODEL\n```\n\n\n**文件:** `MyMissiles/Loadout Missile.j`"
+    },
+    {
+      "symbolName": "FIXED_TRAVEL_DISTANCE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "content": "\n```jass\nconstant real FIXED_TRAVEL_DISTANCE\n```\n\n\n**文件:** `MyMissiles/Loadout Missile.j`"
+    },
+    {
+      "symbolName": "BASE_MISSILE_SPEED",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "content": "\n```jass\nconstant real BASE_MISSILE_SPEED\n```\n\n\n---\n\n* Base missile defaults.\n\n**文件:** `MyMissiles/Loadout Missile.j`"
+    },
+    {
+      "symbolName": "MIN_MISSILE_SPEED",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "content": "\n```jass\nconstant real MIN_MISSILE_SPEED\n```\n\n\n**文件:** `MyMissiles/Loadout Missile.j`"
+    },
+    {
+      "symbolName": "LoadoutMissileFireProfile",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "content": "\n```jass\nfunction LoadoutMissileFireProfile takes unit source, player owner, integer profileId, real tx, real ty returns boolean\n```\n\n\n**文件:** `MyMissiles/Loadout Missile.j`"
     }
   ],
-  "timestamp": 1777049522226
+  "timestamp": 1777580495746
 }

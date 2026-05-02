@@ -83,6 +83,24 @@
       "statementType": "VariableDeclaration"
     },
     {
+      "label": "SwlsWaveStartTrigger",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ntrigger SwlsWaveStartTrigger\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_SwlsWaveStartTrigger",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "SwlsSoundWaveVolume",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger SwlsSoundWaveVolume\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_SwlsSoundWaveVolume",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
       "label": "TargetWave",
       "kind": 5,
       "detail": "Global Variable",
@@ -1361,5 +1379,5 @@
       "statementType": "StructDeclaration"
     }
   ],
-  "timestamp": 1777095437949
+  "timestamp": 1777579694676
 }

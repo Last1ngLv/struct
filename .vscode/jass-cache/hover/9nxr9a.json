@@ -5,7 +5,22 @@
       "symbolName": "REST_SURVIVAL_END_SOUND_PATH",
       "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeState.j",
       "content": "\n```jass\nconstant string REST_SURVIVAL_END_SOUND_PATH\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/RestTime/RestTimeState.j`"
+    },
+    {
+      "symbolName": "REST_AMBIENT_TOWN_SOUND_PATH",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeState.j",
+      "content": "\n```jass\nconstant string REST_AMBIENT_TOWN_SOUND_PATH\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/RestTime/RestTimeState.j`"
+    },
+    {
+      "symbolName": "RestPhaseState",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeState.j",
+      "content": "\n```jass\ninteger RestPhaseState\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/RestTime/RestTimeState.j`"
+    },
+    {
+      "symbolName": "REST_PHASE_NONE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeState.j",
+      "content": "\n```jass\nconstant integer REST_PHASE_NONE\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/RestTime/RestTimeState.j`"
     }
   ],
-  "timestamp": 1777054175489
+  "timestamp": 1777597652334
 }

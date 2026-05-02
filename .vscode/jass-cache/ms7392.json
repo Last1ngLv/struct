@@ -1,0 +1,33 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\Players\\Config\\InitialGoldConfig.j",
+  "items": [
+    {
+      "label": "INITIAL_PLAYER_GOLD",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer INITIAL_PLAYER_GOLD\n```\n\n\n**_>:** `Players/Config/InitialGoldConfig.j`",
+      "sortText": "2_var_INITIAL_PLAYER_GOLD",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Players\\Config\\InitialGoldConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "MAX_HUMAN_PLAYER_SLOTS",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer MAX_HUMAN_PLAYER_SLOTS\n```\n\n\n**_>:** `Players/Config/InitialGoldConfig.j`",
+      "sortText": "2_var_MAX_HUMAN_PLAYER_SLOTS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Players\\Config\\InitialGoldConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "InitInitialPlayerGold",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction InitInitialPlayerGold takes nothing returns nothing\n```\n\n\n**_>:** `Players/Config/InitialGoldConfig.j`",
+      "sortText": "1_func_InitInitialPlayerGold",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Players\\Config\\InitialGoldConfig.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1777579694725
+}

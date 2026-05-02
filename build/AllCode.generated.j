@@ -1,7 +1,7 @@
 // AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY.
 // Source discovery: all .j files excluding: build, Pruebas, MissileExamples, logs
 // Source order: deterministic path sort; vJASS library requires own compile/init order.
-// Generated at: 2026-04-25 00:37:10
+// Generated at: 2026-04-30 20:10:27
 
 // ===== BEGIN: Audio/Config/AudioPreload.j =====
 library AudioPreloadConfig
@@ -72,8 +72,6 @@ library AudioPreloadConfig
         elseif idx == 22 then
             return "war3mapImported\\Trader 9 - Weapon Check-up.wav"
         elseif idx == 23 then
-            return "war3mapImported\\emptytown.wav"
-        elseif idx == 24 then
             return "war3mapImported\\SurvivalEnd.wav"
         endif
         return ""
@@ -113,6 +111,8 @@ library GameState
 
         multiboard SwlsMultiboard
         sound SwlsSound
+        trigger SwlsWaveStartTrigger
+        integer SwlsSoundWaveVolume
         integer TargetWave
         sound error
         sound error_Neg
@@ -124,6 +124,8 @@ library GameState
 
     function GameStateInitDefaults takes nothing returns nothing
         set TargetWave = 1
+        set SwlsWaveStartTrigger = null
+        set SwlsSoundWaveVolume = 80
     endfunction
 
 endlibrary
@@ -231,7 +233,7 @@ endlibrary
 // ===== END: InitMap/MapBootstrap.j =====
 
 // ===== BEGIN: InitMap/PreConfi.j =====
-library PreConfi initializer Init requires GameState, InitialWaveMultiboard, AudioPreloadConfig, WaveOwnerConfig, AllianceConfig, MovementSpellTargetConfig, TenderSpawnConfig, MenuClientInitConfig
+library PreConfi initializer Init requires GameState, InitialWaveMultiboard, AudioPreloadConfig, WaveOwnerConfig, AllianceConfig, InitialGoldConfig, MovementSpellTargetConfig, TenderSpawnConfig, MenuClientInitConfig
 
     function InitTrig_Vars takes nothing returns nothing
         call GameStateInitDefaults()
@@ -240,6 +242,7 @@ library PreConfi initializer Init requires GameState, InitialWaveMultiboard, Aud
         call PreloadMapResources()
         call InitDefaultWaveOwnerResearches()
         call InitHostileNeutralAlliances()
+        call InitInitialPlayerGold()
         call InitMovementSpellTargetConfig()
         call EnablePreSelect(true, false)
         call InitPlayerBountyStates()
@@ -8652,20 +8655,22 @@ endlibrary
 // ===== BEGIN: MoveSys/MoveCast.j =====
 //===========================================================================
 //
-//  MovementSystem v1 - SIMPLE FOLLOW WITH CAST SESSION
-//  - smart/move stores or retargets the dummy path
-//  - registered spell casts refresh aim and session duration
-//  - smart during follow consumes recast charges
-//  - no manual facing; the native dummy order keeps orientation behavior
+//  MovementSystem v2 - DIRECT HERO MOVECAST
+//  - no dummy follower
+//  - registered spell casts open/refresh a fixed 1s move-cast session
+//  - move/smart during the session redirects the hero manually
+//  - smart recasts can re-issue the last registered spell while moving
 //
 //===========================================================================
-library MovementSystem initializer Init requires TimerUtils, Table, RegisterPlayerUnitEvent, TextTagDebug
+library MovementSystem initializer Init requires TimerUtils, Table, RegisterPlayerUnitEvent, TextTagDebug, TerrainPathability
 
 globals
     private constant real INTERVAL = 0.03125
+    private constant real MOVECAST_SESSION_DURATION = 1.00
     private constant real ARRIVAL_THRESHOLD = 50.0
     private constant real ARRIVAL_THRESHOLD_SQ = ARRIVAL_THRESHOLD * ARRIVAL_THRESHOLD
-    private constant integer DUMMY_UNIT_ID = 'h003'
+    private constant real SMART_POINT_TOLERANCE = 128.0
+    private constant real SMART_POINT_TOLERANCE_SQ = SMART_POINT_TOLERANCE * SMART_POINT_TOLERANCE
     private constant integer LOADOUT_LEAP_SPELL_ID = 'U0A2'
     private constant integer LEAP_BUFF_ID = 'BB01'
     private constant integer MAX_MOVECAST_PLAYER_ID = 7
@@ -8681,9 +8686,7 @@ globals
     private constant real CAST_TEXT_RISE_SPEED = 0.035
 
     private Table registeredAbilityFlags
-    private Table registeredOrderFlags
     private Table registeredOrderByAbility
-    private Table castDurationByAbility
     private Table smartRecastEnabledByAbility
     private Table smartRecastCountByAbility
     private integer ORDER_ID_MOVE
@@ -8733,10 +8736,13 @@ private function IsMoveCastTrackedUnit takes unit u returns boolean
     return true
 endfunction
 
+private function DistanceSq takes real ax, real ay, real bx, real by returns real
+    return (ax - bx) * (ax - bx) + (ay - by) * (ay - by)
+endfunction
+
 struct MovementData
     unit source
-    unit dummy
-    timer followTim
+    timer moveTim
     timer sessionTim
     timer pulseTim
     texttag castText
@@ -8745,21 +8751,24 @@ struct MovementData
     boolean hasLastSmart
     real moveX
     real moveY
+    boolean hasMovePoint
     real aimX
     real aimY
-    boolean hasMovePoint
     boolean hasAimPoint
     integer lastCastAbilityId
     integer lastCastOrderId
     unit lastCastTargetUnit
-    boolean isFollowing
+    boolean isMoving
     boolean sessionActive
     boolean isDestroying
-    real sessionDuration
     real sessionRemaining
     integer recastsLeft
 
     private static Table table
+
+    static method init takes nothing returns nothing
+        set table = Table.create()
+    endmethod
 
     static method create takes unit u returns thistype
         local thistype this = thistype.allocate()
@@ -8769,8 +8778,7 @@ struct MovementData
         endif
 
         set .source = u
-        set .dummy = null
-        set .followTim = null
+        set .moveTim = null
         set .sessionTim = null
         set .pulseTim = null
         set .castText = null
@@ -8779,17 +8787,16 @@ struct MovementData
         set .hasLastSmart = false
         set .moveX = 0.
         set .moveY = 0.
+        set .hasMovePoint = false
         set .aimX = 0.
         set .aimY = 0.
-        set .hasMovePoint = false
         set .hasAimPoint = false
         set .lastCastAbilityId = 0
         set .lastCastOrderId = 0
         set .lastCastTargetUnit = null
-        set .isFollowing = false
+        set .isMoving = false
         set .sessionActive = false
         set .isDestroying = false
-        set .sessionDuration = 0.
         set .sessionRemaining = 0.
         set .recastsLeft = 0
 
@@ -8798,15 +8805,18 @@ struct MovementData
     endmethod
 
     static method has takes unit u returns boolean
-        return table.has(GetHandleId(u))
+        return (u != null) and table.has(GetHandleId(u))
     endmethod
 
     static method get takes unit u returns thistype
+        if u == null then
+            return 0
+        endif
         return table[GetHandleId(u)]
     endmethod
 
     static method forget takes unit u returns nothing
-        if (u != null) and (GetUnitTypeId(u) != 0) then
+        if u != null then
             call table.remove(GetHandleId(u))
         endif
     endmethod
@@ -8852,41 +8862,16 @@ struct MovementData
         endif
     endmethod
 
-    private method ensureDummy takes nothing returns boolean
-        local real sx
-        local real sy
-
-        if (.source == null) or (GetUnitTypeId(.source) == 0) or (not UnitAlive(.source)) then
-            return false
-        endif
-
-        if (.dummy != null) and (GetUnitTypeId(.dummy) != 0) then
-            return true
-        endif
-
-        set sx = GetUnitX(.source)
-        set sy = GetUnitY(.source)
-        set .dummy = CreateUnit(Player(PLAYER_NEUTRAL_PASSIVE), DUMMY_UNIT_ID, sx, sy, 0)
-        call SetUnitInvulnerable(.dummy, true)
-        call SetUnitPathing(.dummy, true)
-        call ShowUnit(.dummy, false)
-        return (.dummy != null) and (GetUnitTypeId(.dummy) != 0)
-    endmethod
-
-    private method ensureFollowTimer takes nothing returns nothing
-        if .followTim == null then
-            set .followTim = NewTimerEx(this)
-            call SetTimerDebugTag(.followTim, TIMER_DEBUG_TAG_MOVECAST)
-            call TimerStart(.followTim, INTERVAL, true, function thistype.onFollowTick)
+    private method ensureMoveTimer takes nothing returns nothing
+        if .moveTim == null then
+            set .moveTim = NewTimerEx(this)
+            call SetTimerDebugTag(.moveTim, TIMER_DEBUG_TAG_MOVECAST)
+            call TimerStart(.moveTim, INTERVAL, true, function thistype.onMoveTick)
         endif
     endmethod
 
     private method ensureSessionTimer takes nothing returns nothing
-        if .sessionTim != null then
-            call ReleaseTimer(.sessionTim)
-            set .sessionTim = null
-        endif
-        if .sessionDuration > 0. then
+        if .sessionTim == null then
             set .sessionTim = NewTimerEx(this)
             call SetTimerDebugTag(.sessionTim, TIMER_DEBUG_TAG_MOVECAST)
             call TimerStart(.sessionTim, INTERVAL, true, function thistype.onSessionTick)
@@ -8915,19 +8900,26 @@ struct MovementData
         set .hasAimPoint = true
     endmethod
 
-    method applyMovePoint takes real x, real y, boolean queueAimPulse returns nothing
-        set .moveX = x
-        set .moveY = y
-        set .hasMovePoint = true
-        set .isFollowing = true
+    method isPointTooClose takes real x, real y returns boolean
+        if (.source == null) or (GetUnitTypeId(.source) == 0) then
+            return true
+        endif
+        return DistanceSq(GetUnitX(.source), GetUnitY(.source), x, y) <= SMART_POINT_TOLERANCE_SQ
+    endmethod
 
-        if not .ensureDummy() then
+    method applyMovePoint takes real x, real y, boolean queueAimPulse returns nothing
+        if .isPointTooClose(x, y) then
+            call .rememberPoint(x, y)
             return
         endif
 
+        set .moveX = x
+        set .moveY = y
+        set .hasMovePoint = true
+        set .isMoving = true
+
         call IssueImmediateOrderById(.source, ORDER_ID_STOP)
-        call IssuePointOrder(.dummy, "move", .moveX, .moveY)
-        call .ensureFollowTimer()
+        call .ensureMoveTimer()
 
         if queueAimPulse then
             call .queuePulse()
@@ -8937,22 +8929,16 @@ struct MovementData
     endmethod
 
     method beginOrRefreshSession takes integer abilityId returns nothing
-        local real duration = 0.
         local integer maxRecasts = 0
         local boolean allowSmart = false
         local boolean freshSession = not .sessionActive
-        local string activeStr = "0"
         local string freshStr = "0"
         local string smartStr = "0"
 
-        if .sessionActive then
-            set activeStr = "1"
-        endif
         if freshSession then
             set freshStr = "1"
         endif
 
-        set duration = castDurationByAbility.real[abilityId]
         set allowSmart = smartRecastEnabledByAbility.boolean[abilityId]
         set maxRecasts = R2I(smartRecastCountByAbility.real[abilityId])
         if allowSmart then
@@ -8960,22 +8946,17 @@ struct MovementData
         endif
 
         static if DEBUG_MODE then
-            call BJDebugMsg("[MoveCast] begin ability=" + I2S(abilityId) + " active=" + activeStr + " fresh=" + freshStr + " duration=" + R2S(duration) + " allowSmart=" + smartStr + " maxRecasts=" + I2S(maxRecasts))
+            call BJDebugMsg("[MoveCast] begin ability=" + I2S(abilityId) + " fresh=" + freshStr + " duration=" + R2S(MOVECAST_SESSION_DURATION) + " allowSmart=" + smartStr + " maxRecasts=" + I2S(maxRecasts))
         endif
 
         set .sessionActive = true
-        set .sessionDuration = duration
-        set .sessionRemaining = duration
+        set .sessionRemaining = MOVECAST_SESSION_DURATION
         if freshSession then
             if allowSmart and (maxRecasts > 0) then
                 set .recastsLeft = maxRecasts
             else
                 set .recastsLeft = 0
             endif
-        endif
-
-        static if DEBUG_MODE then
-            call BJDebugMsg("[MoveCast] loaded ability=" + I2S(abilityId) + " recastsLeft=" + I2S(.recastsLeft))
         endif
 
         call .ensureSessionTimer()
@@ -8985,19 +8966,20 @@ struct MovementData
     method consumeSmartRecast takes nothing returns nothing
         if .recastsLeft > 0 then
             set .recastsLeft = .recastsLeft - 1
+            set .sessionRemaining = MOVECAST_SESSION_DURATION
             call .refreshCastTextTag()
         endif
     endmethod
 
     method refreshSessionDuration takes nothing returns nothing
         if .sessionActive then
-            set .sessionRemaining = .sessionDuration
+            set .sessionRemaining = MOVECAST_SESSION_DURATION
             call .refreshCastTextTag()
         endif
     endmethod
 
-    method startFollowToStoredPoint takes nothing returns nothing
-        if .isFollowing then
+    method startMoveToStoredPoint takes nothing returns nothing
+        if .isMoving then
             return
         endif
 
@@ -9008,19 +8990,12 @@ struct MovementData
         call .applyMovePoint(.lastSmartX, .lastSmartY, false)
     endmethod
 
-    private method stopFollow takes nothing returns nothing
-        if .followTim != null then
-            call ReleaseTimer(.followTim)
-            set .followTim = null
+    private method stopMovement takes nothing returns nothing
+        if .moveTim != null then
+            call ReleaseTimer(.moveTim)
+            set .moveTim = null
         endif
-
-        if (.dummy != null) and (GetUnitTypeId(.dummy) != 0) then
-            call RemoveUnit(.dummy)
-        endif
-
-        set .dummy = null
-        set .lastCastTargetUnit = null
-        set .isFollowing = false
+        set .isMoving = false
         set .hasMovePoint = false
     endmethod
 
@@ -9035,11 +9010,10 @@ struct MovementData
             set .pulseTim = null
         endif
 
-        call .stopFollow()
+        call .stopMovement()
         call .releaseCastTextTag()
 
         set .sessionActive = false
-        set .sessionDuration = 0.
         set .sessionRemaining = 0.
         set .recastsLeft = 0
         set .hasAimPoint = false
@@ -9050,15 +9024,13 @@ struct MovementData
 
     private method endSessionAndRestoreMovement takes nothing returns nothing
         local unit u = .source
-        local boolean hadFollow = .isFollowing and .hasMovePoint
+        local boolean hadMove = .isMoving and .hasMovePoint
         local real targetX = .moveX
         local real targetY = .moveY
-        local real dx
-        local real dy
 
         call .endSession()
 
-        if (not hadFollow) or (u == null) or (GetUnitTypeId(u) == 0) or (not UnitAlive(u)) then
+        if (not hadMove) or (u == null) or (GetUnitTypeId(u) == 0) or (not UnitAlive(u)) then
             set u = null
             return
         endif
@@ -9068,13 +9040,18 @@ struct MovementData
             return
         endif
 
-        set dx = targetX - GetUnitX(u)
-        set dy = targetY - GetUnitY(u)
-        if dx * dx + dy * dy > ARRIVAL_THRESHOLD_SQ then
+        if DistanceSq(GetUnitX(u), GetUnitY(u), targetX, targetY) > SMART_POINT_TOLERANCE_SQ then
             call IssuePointOrder(u, "smart", targetX, targetY)
         endif
 
         set u = null
+    endmethod
+
+    private method endSessionByCollision takes nothing returns nothing
+        call .endSession()
+        if (.source != null) and (GetUnitTypeId(.source) != 0) and UnitAlive(.source) then
+            call IssueImmediateOrderById(.source, ORDER_ID_STOP)
+        endif
     endmethod
 
     method destroy takes nothing returns nothing
@@ -9083,34 +9060,40 @@ struct MovementData
         if .isDestroying then
             return
         endif
-
         set .isDestroying = true
         set u = .source
 
-        if u != null then
-            call table.remove(GetHandleId(u))
-        endif
-
         call .endSession()
+        call thistype.forget(u)
+
         set .source = null
-        set u = null
+        set .lastCastTargetUnit = null
         set .hasLastSmart = false
+        set .isDestroying = false
         call .deallocate()
+
+        set u = null
     endmethod
 
-    private static method onFollowTick takes nothing returns nothing
+    private static method onMoveTick takes nothing returns nothing
         local timer t = GetExpiredTimer()
         local thistype this = GetTimerData(t)
+        local real sx
+        local real sy
         local real dx
         local real dy
         local real distSq
+        local real dist
+        local real step
+        local real nx
+        local real ny
 
         if this == 0 then
             set t = null
             return
         endif
 
-        if .followTim != t then
+        if .moveTim != t then
             set t = null
             return
         endif
@@ -9127,23 +9110,47 @@ struct MovementData
             return
         endif
 
-        if (.dummy == null) or (GetUnitTypeId(.dummy) == 0) then
-            call .destroy()
+        if (not .sessionActive) or (not .hasMovePoint) then
+            call .stopMovement()
             set t = null
             return
         endif
 
-        set dx = GetUnitX(.dummy)
-        set dy = GetUnitY(.dummy)
-        set distSq = (.moveX - dx) * (.moveX - dx) + (.moveY - dy) * (.moveY - dy)
-
-        call SetUnitX(.source, dx)
-        call SetUnitY(.source, dy)
-        call .syncCastTextTagPosition()
+        set sx = GetUnitX(.source)
+        set sy = GetUnitY(.source)
+        set dx = .moveX - sx
+        set dy = .moveY - sy
+        set distSq = dx * dx + dy * dy
 
         if distSq <= ARRIVAL_THRESHOLD_SQ then
             call .endSession()
+            set t = null
+            return
         endif
+
+        set dist = SquareRoot(distSq)
+        set step = GetUnitMoveSpeed(.source) * INTERVAL
+        if step <= 0. then
+            call .endSessionByCollision()
+            set t = null
+            return
+        endif
+        if step > dist then
+            set step = dist
+        endif
+
+        set nx = sx + dx / dist * step
+        set ny = sy + dy / dist * step
+
+        if not IsTerrainWalkable(nx, ny) then
+            call .endSessionByCollision()
+            set t = null
+            return
+        endif
+
+        call SetUnitX(.source, nx)
+        call SetUnitY(.source, ny)
+        call .syncCastTextTagPosition()
 
         set t = null
     endmethod
@@ -9170,12 +9177,6 @@ struct MovementData
 
         if IsLeapBuffActive(.source) then
             call .destroy()
-            set t = null
-            return
-        endif
-
-        if .sessionRemaining <= 0. then
-            call .endSessionAndRestoreMovement()
             set t = null
             return
         endif
@@ -9219,46 +9220,28 @@ struct MovementData
             return
         endif
 
-        if (.dummy == null) or (GetUnitTypeId(.dummy) == 0) then
-            call ReleaseTimer(t)
-            set t = null
-            return
-        endif
-
-        if .sessionActive and .hasAimPoint then
-            if (.lastCastOrderId != 0) then
-                if (.lastCastTargetUnit != null) and (GetUnitTypeId(.lastCastTargetUnit) != 0) and UnitAlive(.lastCastTargetUnit) then
-                    call IssueTargetOrderById(.source, .lastCastOrderId, .lastCastTargetUnit)
-                else
-                    call IssuePointOrderById(.source, .lastCastOrderId, .aimX, .aimY)
-                endif
+        if .sessionActive and .hasAimPoint and (.lastCastOrderId != 0) then
+            if (.lastCastTargetUnit != null) and (GetUnitTypeId(.lastCastTargetUnit) != 0) and UnitAlive(.lastCastTargetUnit) then
+                call IssueTargetOrderById(.source, .lastCastOrderId, .lastCastTargetUnit)
+            else
+                call IssuePointOrderById(.source, .lastCastOrderId, .aimX, .aimY)
             endif
         endif
 
         call ReleaseTimer(t)
         set t = null
     endmethod
-
-    private static method onInit takes nothing returns nothing
-        set table = Table.create()
-    endmethod
 endstruct
 
 private function GetOrCreateMovementData takes unit u returns MovementData
-    local MovementData data = 0
+    local MovementData data
 
     if not IsMoveCastTrackedUnit(u) then
         return 0
     endif
 
     if MovementData.has(u) then
-        set data = MovementData.get(u)
-        if data != 0 then
-            if data.source == u then
-                return data
-            endif
-        endif
-        call MovementData.forget(u)
+        return MovementData.get(u)
     endif
 
     set data = MovementData.create(u)
@@ -9268,19 +9251,15 @@ endfunction
 private function DestroyMovementDataForUnit takes unit u returns nothing
     local MovementData data
 
-    if (u == null) or (GetUnitTypeId(u) == 0) then
+    if u == null then
         return
     endif
 
     if MovementData.has(u) then
         set data = MovementData.get(u)
         if data != 0 then
-            if data.source == u then
-                call data.destroy()
-                return
-            endif
+            call data.destroy()
         endif
-        call MovementData.forget(u)
     endif
 endfunction
 
@@ -9288,7 +9267,6 @@ endfunction
 function RegisterMovementSpell takes integer abilityId, string orderId returns nothing
     local integer oid = OrderId(orderId)
     set registeredAbilityFlags.boolean[abilityId] = true
-    set registeredOrderFlags.boolean[oid] = true
     set registeredOrderByAbility.real[abilityId] = I2R(oid)
 endfunction
 
@@ -9299,21 +9277,15 @@ endfunction
 
 //===========================================================================
 function ConfigureMovementSpellCastSession takes integer abilityId, real castDuration, boolean allowSmartRecast, integer maxSmartRecasts returns nothing
-    local string smartStr = "0"
-    if castDuration < 0. then
-        set castDuration = 0.
-    endif
     if maxSmartRecasts < 0 then
         set maxSmartRecasts = 0
     endif
-    if allowSmartRecast then
-        set smartStr = "1"
-    endif
-    set castDurationByAbility.real[abilityId] = castDuration
+
     set smartRecastEnabledByAbility.boolean[abilityId] = allowSmartRecast
     set smartRecastCountByAbility.real[abilityId] = I2R(maxSmartRecasts)
+
     static if DEBUG_MODE then
-        call BJDebugMsg("[MoveCast] configure ability=" + I2S(abilityId) + " duration=" + R2S(castDuration) + " allowSmart=" + smartStr + " maxRecasts=" + I2S(maxSmartRecasts))
+        call BJDebugMsg("[MoveCast] configure ability=" + I2S(abilityId) + " requestedDuration=" + R2S(castDuration) + " fixedDuration=" + R2S(MOVECAST_SESSION_DURATION) + " maxRecasts=" + I2S(maxSmartRecasts))
     endif
 endfunction
 
@@ -9354,6 +9326,7 @@ private function OnPointOrder takes nothing returns boolean
             set u = null
             return false
         endif
+
         set x = GetOrderPointX()
         set y = GetOrderPointY()
         set data = GetOrCreateMovementData(u)
@@ -9364,18 +9337,16 @@ private function OnPointOrder takes nothing returns boolean
 
         if not data.sessionActive then
             call data.rememberPoint(x, y)
+        elseif data.isPointTooClose(x, y) then
+            call data.rememberPoint(x, y)
+        elseif not data.isMoving then
+            call data.applyMovePoint(x, y, false)
+        elseif data.recastsLeft > 0 then
+            call data.consumeSmartRecast()
+            call data.applyMovePoint(x, y, true)
         else
-            if not data.isFollowing then
-                call data.applyMovePoint(x, y, false)
-            else
-                if data.recastsLeft > 0 then
-                    call data.consumeSmartRecast()
-                    call data.applyMovePoint(x, y, true)
-                else
-                    call IssueImmediateOrderById(u, ORDER_ID_STOP)
-                    call data.endSession()
-                endif
-            endif
+            call IssueImmediateOrderById(u, ORDER_ID_STOP)
+            call data.endSession()
         endif
     endif
 
@@ -9405,6 +9376,7 @@ private function OnTargetOrder takes nothing returns boolean
             set u = null
             return false
         endif
+
         set x = GetUnitX(targetU)
         set y = GetUnitY(targetU)
         set data = GetOrCreateMovementData(u)
@@ -9416,18 +9388,16 @@ private function OnTargetOrder takes nothing returns boolean
 
         if not data.sessionActive then
             call data.rememberPoint(x, y)
+        elseif data.isPointTooClose(x, y) then
+            call data.rememberPoint(x, y)
+        elseif not data.isMoving then
+            call data.applyMovePoint(x, y, false)
+        elseif data.recastsLeft > 0 then
+            call data.consumeSmartRecast()
+            call data.applyMovePoint(x, y, true)
         else
-            if not data.isFollowing then
-                call data.applyMovePoint(x, y, false)
-            else
-                if data.recastsLeft > 0 then
-                    call data.consumeSmartRecast()
-                    call data.applyMovePoint(x, y, true)
-                else
-                    call IssueImmediateOrderById(u, ORDER_ID_STOP)
-                    call data.endSession()
-                endif
-            endif
+            call IssueImmediateOrderById(u, ORDER_ID_STOP)
+            call data.endSession()
         endif
     endif
 
@@ -9485,10 +9455,11 @@ private function OnSpellEffect takes nothing returns boolean
             set data.lastCastTargetUnit = targetU
         endif
         call data.setAimPoint(tx, ty)
+        call SetUnitFacing(u, Atan2(ty - GetUnitY(u), tx - GetUnitX(u)) * bj_RADTODEG)
         call data.beginOrRefreshSession(abilityId)
 
-        if (not data.isFollowing) and data.hasLastSmart then
-            call data.startFollowToStoredPoint()
+        if (not data.isMoving) and data.hasLastSmart then
+            call data.startMoveToStoredPoint()
         endif
     endif
 
@@ -9500,7 +9471,6 @@ endfunction
 //===========================================================================
 private function OnUnitDeath takes nothing returns boolean
     local unit u = GetTriggerUnit()
-
     call DestroyMovementDataForUnit(u)
     set u = null
     return false
@@ -9509,23 +9479,19 @@ endfunction
 //===========================================================================
 private function Init takes nothing returns nothing
     set registeredAbilityFlags = Table.create()
-    set registeredOrderFlags = Table.create()
     set registeredOrderByAbility = Table.create()
-    set castDurationByAbility = Table.create()
     set smartRecastEnabledByAbility = Table.create()
     set smartRecastCountByAbility = Table.create()
     set ORDER_ID_MOVE = OrderId("move")
     set ORDER_ID_SMART = OrderId("smart")
     set ORDER_ID_STOP = OrderId("stop")
 
+    call MovementData.init()
+
     call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_ISSUED_POINT_ORDER, function OnPointOrder)
     call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_ISSUED_TARGET_ORDER, function OnTargetOrder)
     call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_SPELL_EFFECT, function OnSpellEffect)
     call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_DEATH, function OnUnitDeath)
-
-    static if DEBUG_MODE then
-        call BJDebugMsg("[MovementSystem] initialized")
-    endif
 endfunction
 
 endlibrary
@@ -9913,117 +9879,694 @@ endlibrary
 // ===== END: Multiboard/WaveMultiboard.j =====
 
 // ===== BEGIN: MyMissiles/Config/LoadoutMoveCastConfig.j =====
-library LoadoutMoveCastConfi initializer Init requires MovementSystem, LoadoutMissile, LoadoutControl, LoadoutLeapMissile, LoadoutRocketLauncher
+library LoadoutMoveCastConfi initializer Init requires MovementSystem, WeaponProfileConfig, LoadoutMissile, LoadoutControl, LoadoutLeapMissile, LoadoutRocketLauncher, LoadoutMetalSlugSpecial, LoadoutIronLizard, LoadoutThunderShot
 //===========================================================================
 // Loadout MoveCast integration config
-// - Keeps loadout spell registration out of PreConfi to avoid dependency cycles.
-// - Uses public duration getters from the owning loadout spell libraries.
+// - Registers every Metal Slug weapon fire ability.
+// - MoveCast uses a fixed directional session duration independent of
+//   weapon profile cast durations.
 //===========================================================================
 
-    private function Init takes nothing returns nothing
-        call RegisterMovementSpell('U0A1', "avatar")
-        call RegisterMovementSpell('U0A3', "banish")
-        call RegisterMovementSpell('U0A4', "barkskin")
-        call RegisterMovementSpell('U0A5', "cripple")
+    globals
+        private constant boolean LOADOUT_MOVECAST_ENABLED = true
+        private constant real LOADOUT_MOVECAST_FIXED_DURATION = 1.00
+        private constant integer LOADOUT_MOVECAST_MAX_SMART_RECASTS = 3
+    endglobals
 
-        call ConfigureMovementSpellCastSession('U0A1', GetLoadoutMissileMoveCastDuration(), true, 3)
-        call ConfigureMovementSpellCastSession('U0A3', GetLoadoutControlMoveCastDuration(), true, 3)
-        call ConfigureMovementSpellCastSession('U0A4', GetLoadoutLeapMissileMoveCastDuration(), true, 3)
-        call ConfigureMovementSpellCastSession('U0A5', GetLoadoutRocketLauncherMoveCastDuration(), true, 3)
+    private function RegisterWeaponMoveCast takes integer abilityId, string orderName returns nothing
+        call RegisterMovementSpell(abilityId, orderName)
+        call ConfigureMovementSpellCastSession(abilityId, LOADOUT_MOVECAST_FIXED_DURATION, true, LOADOUT_MOVECAST_MAX_SMART_RECASTS)
+    endfunction
+
+    private function Init takes nothing returns nothing
+        if LOADOUT_MOVECAST_ENABLED then
+            call RegisterWeaponMoveCast('U0A1', "avatar")
+            call RegisterWeaponMoveCast('U0A3', "banish")
+            call RegisterWeaponMoveCast('U0A4', "barkskin")
+            call RegisterWeaponMoveCast('U0A5', "cripple")
+            call RegisterWeaponMoveCast('U0A6', "barkskinon")
+            call RegisterWeaponMoveCast('U0A7', "battleroar")
+            call RegisterWeaponMoveCast('U0A8', "channel")
+            call RegisterWeaponMoveCast('U0A9', "chainlightning")
+            call RegisterWeaponMoveCast('U0AA', "carrionswarm")
+            call RegisterWeaponMoveCast('U0AB', "breathoffire")
+            call RegisterWeaponMoveCast('U0AC', "blizzard")
+            call RegisterWeaponMoveCast('U0AD', "clusterrockets")
+            call RegisterWeaponMoveCast('U0AE', "thunderbolt")
+            call RegisterWeaponMoveCast(WEAPON_INVENTORY_FIRE_ABILITY, "channel")
+        endif
     endfunction
 
 endlibrary
 
 // ===== END: MyMissiles/Config/LoadoutMoveCastConfig.j =====
 
+// ===== BEGIN: MyMissiles/Config/WeaponProfileConfig.j =====
+library WeaponProfileConfig
+
+globals
+    constant integer WEAPON_PROFILE_NONE = 0
+    constant integer WEAPON_PROFILE_HANDGUN = 1
+    constant integer WEAPON_PROFILE_PISTOL = 1
+    constant integer WEAPON_PROFILE_SHOTGUN = 2
+    constant integer WEAPON_PROFILE_HEAVY_MACHINE_GUN = 3
+    constant integer WEAPON_PROFILE_ASSAULT_RIFLE = 3
+    constant integer WEAPON_PROFILE_TWO_MACHINE_GUN = 4
+    constant integer WEAPON_PROFILE_RIFLE = 4
+    constant integer WEAPON_PROFILE_ROCKET_LAUNCHER = 5
+    constant integer WEAPON_PROFILE_PLASMA_AOE = 5
+    constant integer WEAPON_PROFILE_ENEMY_CHASER = 6
+    constant integer WEAPON_PROFILE_TRACKING_MISSILE = 6
+    constant integer WEAPON_PROFILE_GRENADE = 7
+    constant integer WEAPON_PROFILE_LASER_GUN = 8
+    constant integer WEAPON_PROFILE_DROP_SHOT = 9
+    constant integer WEAPON_PROFILE_FLAME_SHOT = 10
+    constant integer WEAPON_PROFILE_IRON_LIZARD = 11
+    constant integer WEAPON_PROFILE_SUPER_GRENADE = 12
+    constant integer WEAPON_PROFILE_THUNDER_SHOT = 13
+    constant integer WEAPON_PROFILE_LAST = 13
+
+    constant integer WEAPON_MODE_SINGLE = 1
+    constant integer WEAPON_MODE_BURST = 2
+    constant integer WEAPON_MODE_RAPID = 3
+    constant integer WEAPON_MODE_AOE = 4
+    constant integer WEAPON_MODE_HOMING = 5
+    constant integer WEAPON_MODE_DOUBLE_RAPID = 6
+    constant integer WEAPON_MODE_PIERCING_AOE = 7
+    constant integer WEAPON_MODE_BOUNCE_AOE = 8
+    constant integer WEAPON_MODE_CHAINING_HOMING = 9
+
+    constant integer WEAPON_BEHAVIOR_STRAIGHT = 1
+    constant integer WEAPON_BEHAVIOR_DOUBLE_STRAIGHT = 2
+    constant integer WEAPON_BEHAVIOR_STRAIGHT_AOE = 3
+    constant integer WEAPON_BEHAVIOR_HOMING = 4
+    constant integer WEAPON_BEHAVIOR_PIERCING_AOE = 5
+    constant integer WEAPON_BEHAVIOR_DROP_BOUNCE = 6
+    constant integer WEAPON_BEHAVIOR_BILLIARD_BOUNCE = 7
+    constant integer WEAPON_BEHAVIOR_CHAINING_HOMING = 8
+
+    constant integer WEAPON_AMMO_INFINITE = -1
+    constant integer WEAPON_INVENTORY_FIRE_ABILITY = 'U0AF'
+    constant integer WEAPON_INVENTORY_SELECT_SLOT_1_ABILITY = 'U0C1'
+    constant integer WEAPON_INVENTORY_SELECT_SLOT_2_ABILITY = 'U0C2'
+    constant integer WEAPON_PRISONER_UNIT_TYPE = 'pRSN'
+endglobals
+
+function WeaponProfileIsWeapon takes integer profileId returns boolean
+    return profileId >= WEAPON_PROFILE_HANDGUN and profileId <= WEAPON_PROFILE_LAST
+endfunction
+
+function WeaponProfileGetMode takes integer profileId returns integer
+    if profileId == WEAPON_PROFILE_HEAVY_MACHINE_GUN or profileId == WEAPON_PROFILE_LASER_GUN then
+        return WEAPON_MODE_RAPID
+    elseif profileId == WEAPON_PROFILE_TWO_MACHINE_GUN then
+        return WEAPON_MODE_DOUBLE_RAPID
+    elseif profileId == WEAPON_PROFILE_ROCKET_LAUNCHER or profileId == WEAPON_PROFILE_GRENADE or profileId == WEAPON_PROFILE_SUPER_GRENADE then
+        return WEAPON_MODE_AOE
+    elseif profileId == WEAPON_PROFILE_ENEMY_CHASER then
+        return WEAPON_MODE_HOMING
+    elseif profileId == WEAPON_PROFILE_SHOTGUN or profileId == WEAPON_PROFILE_FLAME_SHOT then
+        return WEAPON_MODE_PIERCING_AOE
+    elseif profileId == WEAPON_PROFILE_DROP_SHOT then
+        return WEAPON_MODE_BOUNCE_AOE
+    elseif profileId == WEAPON_PROFILE_IRON_LIZARD then
+        return WEAPON_MODE_BOUNCE_AOE
+    elseif profileId == WEAPON_PROFILE_THUNDER_SHOT then
+        return WEAPON_MODE_CHAINING_HOMING
+    endif
+    return WEAPON_MODE_SINGLE
+endfunction
+
+function WeaponProfileGetBehavior takes integer profileId returns integer
+    if profileId == WEAPON_PROFILE_TWO_MACHINE_GUN then
+        return WEAPON_BEHAVIOR_DOUBLE_STRAIGHT
+    elseif profileId == WEAPON_PROFILE_ROCKET_LAUNCHER or profileId == WEAPON_PROFILE_GRENADE or profileId == WEAPON_PROFILE_SUPER_GRENADE then
+        return WEAPON_BEHAVIOR_STRAIGHT_AOE
+    elseif profileId == WEAPON_PROFILE_ENEMY_CHASER then
+        return WEAPON_BEHAVIOR_HOMING
+    elseif profileId == WEAPON_PROFILE_SHOTGUN or profileId == WEAPON_PROFILE_FLAME_SHOT then
+        return WEAPON_BEHAVIOR_PIERCING_AOE
+    elseif profileId == WEAPON_PROFILE_DROP_SHOT then
+        return WEAPON_BEHAVIOR_DROP_BOUNCE
+    elseif profileId == WEAPON_PROFILE_IRON_LIZARD then
+        return WEAPON_BEHAVIOR_BILLIARD_BOUNCE
+    elseif profileId == WEAPON_PROFILE_THUNDER_SHOT then
+        return WEAPON_BEHAVIOR_CHAINING_HOMING
+    endif
+    return WEAPON_BEHAVIOR_STRAIGHT
+endfunction
+
+function WeaponProfileGetSelectorAbility takes integer profileId returns integer
+    if profileId == WEAPON_PROFILE_HANDGUN then
+        return 'U0B1'
+    elseif profileId == WEAPON_PROFILE_SHOTGUN then
+        return 'U0B2'
+    elseif profileId == WEAPON_PROFILE_ROCKET_LAUNCHER then
+        return 'U0B3'
+    elseif profileId == WEAPON_PROFILE_ENEMY_CHASER then
+        return 'U0B4'
+    elseif profileId == WEAPON_PROFILE_TWO_MACHINE_GUN then
+        return 'U0B5'
+    elseif profileId == WEAPON_PROFILE_HEAVY_MACHINE_GUN then
+        return 'U0B6'
+    elseif profileId == WEAPON_PROFILE_GRENADE then
+        return 'U0B7'
+    elseif profileId == WEAPON_PROFILE_LASER_GUN then
+        return 'U0B8'
+    elseif profileId == WEAPON_PROFILE_DROP_SHOT then
+        return 'U0B9'
+    elseif profileId == WEAPON_PROFILE_FLAME_SHOT then
+        return 'U0BA'
+    elseif profileId == WEAPON_PROFILE_IRON_LIZARD then
+        return 'U0BB'
+    elseif profileId == WEAPON_PROFILE_SUPER_GRENADE then
+        return 'U0BC'
+    elseif profileId == WEAPON_PROFILE_THUNDER_SHOT then
+        return 'U0BD'
+    endif
+    return 0
+endfunction
+
+function WeaponProfileGetFireAbility takes integer profileId returns integer
+    if profileId == WEAPON_PROFILE_HANDGUN then
+        return 'U0A1'
+    elseif profileId == WEAPON_PROFILE_SHOTGUN then
+        return 'U0A3'
+    elseif profileId == WEAPON_PROFILE_ROCKET_LAUNCHER then
+        return 'U0A4'
+    elseif profileId == WEAPON_PROFILE_ENEMY_CHASER then
+        return 'U0A5'
+    elseif profileId == WEAPON_PROFILE_TWO_MACHINE_GUN then
+        return 'U0A6'
+    elseif profileId == WEAPON_PROFILE_HEAVY_MACHINE_GUN then
+        return 'U0A7'
+    elseif profileId == WEAPON_PROFILE_GRENADE then
+        return 'U0A8'
+    elseif profileId == WEAPON_PROFILE_LASER_GUN then
+        return 'U0A9'
+    elseif profileId == WEAPON_PROFILE_DROP_SHOT then
+        return 'U0AA'
+    elseif profileId == WEAPON_PROFILE_FLAME_SHOT then
+        return 'U0AB'
+    elseif profileId == WEAPON_PROFILE_IRON_LIZARD then
+        return 'U0AC'
+    elseif profileId == WEAPON_PROFILE_SUPER_GRENADE then
+        return 'U0AD'
+    elseif profileId == WEAPON_PROFILE_THUNDER_SHOT then
+        return 'U0AE'
+    endif
+    return 0
+endfunction
+
+function WeaponProfileFromSelectorAbility takes integer abilityId returns integer
+    local integer profileId = WEAPON_PROFILE_HANDGUN
+    loop
+        exitwhen profileId > WEAPON_PROFILE_LAST
+        if abilityId == WeaponProfileGetSelectorAbility(profileId) then
+            return profileId
+        endif
+        set profileId = profileId + 1
+    endloop
+    return WEAPON_PROFILE_NONE
+endfunction
+
+function WeaponProfileFromFireAbility takes integer abilityId returns integer
+    local integer profileId = WEAPON_PROFILE_HANDGUN
+    loop
+        exitwhen profileId > WEAPON_PROFILE_LAST
+        if abilityId == WeaponProfileGetFireAbility(profileId) then
+            return profileId
+        endif
+        set profileId = profileId + 1
+    endloop
+    return WEAPON_PROFILE_NONE
+endfunction
+
+function WeaponProfileGetTexture takes integer profileId returns integer
+    if profileId == WEAPON_PROFILE_HANDGUN then
+        return 'MA01'
+    elseif profileId == WEAPON_PROFILE_SHOTGUN then
+        return 'MA02'
+    elseif profileId == WEAPON_PROFILE_HEAVY_MACHINE_GUN then
+        return 'MA03'
+    elseif profileId == WEAPON_PROFILE_TWO_MACHINE_GUN then
+        return 'MA04'
+    elseif profileId == WEAPON_PROFILE_ROCKET_LAUNCHER then
+        return 'MA06'
+    elseif profileId == WEAPON_PROFILE_ENEMY_CHASER then
+        return 'MA05'
+    elseif profileId == WEAPON_PROFILE_THUNDER_SHOT then
+        return 'MA07'
+    endif
+    return 'MA01'
+endfunction
+
+function WeaponProfileGetName takes integer profileId returns string
+    if profileId == WEAPON_PROFILE_HANDGUN then
+        return "Handgun"
+    elseif profileId == WEAPON_PROFILE_SHOTGUN then
+        return "Shotgun"
+    elseif profileId == WEAPON_PROFILE_HEAVY_MACHINE_GUN then
+        return "Heavy Machine Gun"
+    elseif profileId == WEAPON_PROFILE_TWO_MACHINE_GUN then
+        return "Two Machine Gun"
+    elseif profileId == WEAPON_PROFILE_ROCKET_LAUNCHER then
+        return "Rocket Launcher"
+    elseif profileId == WEAPON_PROFILE_ENEMY_CHASER then
+        return "Enemy Chaser"
+    elseif profileId == WEAPON_PROFILE_GRENADE then
+        return "Grenade"
+    elseif profileId == WEAPON_PROFILE_LASER_GUN then
+        return "Laser Gun"
+    elseif profileId == WEAPON_PROFILE_DROP_SHOT then
+        return "Drop Shot"
+    elseif profileId == WEAPON_PROFILE_FLAME_SHOT then
+        return "Flame Shot"
+    elseif profileId == WEAPON_PROFILE_IRON_LIZARD then
+        return "Iron Lizard"
+    elseif profileId == WEAPON_PROFILE_SUPER_GRENADE then
+        return "Super Grenade"
+    elseif profileId == WEAPON_PROFILE_THUNDER_SHOT then
+        return "Thunder Shot"
+    endif
+    return "Arma"
+endfunction
+
+function WeaponProfileGetRole takes integer profileId returns string
+    if profileId == WEAPON_PROFILE_HANDGUN then
+        return "Arma base"
+    elseif profileId == WEAPON_PROFILE_SHOTGUN then
+        return "Blast frontal"
+    elseif profileId == WEAPON_PROFILE_HEAVY_MACHINE_GUN then
+        return "DPS sostenido"
+    elseif profileId == WEAPON_PROFILE_TWO_MACHINE_GUN then
+        return "Doble cadencia"
+    elseif profileId == WEAPON_PROFILE_ROCKET_LAUNCHER then
+        return "Cohete explosivo"
+    elseif profileId == WEAPON_PROFILE_ENEMY_CHASER then
+        return "Misil guiado"
+    elseif profileId == WEAPON_PROFILE_GRENADE then
+        return "Granada"
+    elseif profileId == WEAPON_PROFILE_LASER_GUN then
+        return "Laser rapido"
+    elseif profileId == WEAPON_PROFILE_DROP_SHOT then
+        return "Rebote explosivo"
+    elseif profileId == WEAPON_PROFILE_FLAME_SHOT then
+        return "Llama perforante"
+    elseif profileId == WEAPON_PROFILE_IRON_LIZARD then
+        return "Disparo rasante"
+    elseif profileId == WEAPON_PROFILE_SUPER_GRENADE then
+        return "Granada pesada"
+    elseif profileId == WEAPON_PROFILE_THUNDER_SHOT then
+        return "Rayo encadenado"
+    endif
+    return "Arma"
+endfunction
+
+function WeaponProfileGetDamage takes integer profileId returns real
+    if profileId == WEAPON_PROFILE_HANDGUN then
+        return 1.00
+    elseif profileId == WEAPON_PROFILE_SHOTGUN then
+        return 3.00
+    elseif profileId == WEAPON_PROFILE_HEAVY_MACHINE_GUN then
+        return 0.50
+    elseif profileId == WEAPON_PROFILE_TWO_MACHINE_GUN then
+        return 0.75
+    elseif profileId == WEAPON_PROFILE_ROCKET_LAUNCHER then
+        return 2.00
+    elseif profileId == WEAPON_PROFILE_ENEMY_CHASER then
+        return 2.50
+    elseif profileId == WEAPON_PROFILE_GRENADE then
+        return 5.00
+    elseif profileId == WEAPON_PROFILE_LASER_GUN then
+        return 1.00
+    elseif profileId == WEAPON_PROFILE_DROP_SHOT then
+        return 2.50
+    elseif profileId == WEAPON_PROFILE_FLAME_SHOT then
+        return 2.00
+    elseif profileId == WEAPON_PROFILE_IRON_LIZARD then
+        return 2.75
+    elseif profileId == WEAPON_PROFILE_SUPER_GRENADE then
+        return 3.50
+    elseif profileId == WEAPON_PROFILE_THUNDER_SHOT then
+        return 1.50
+    endif
+    return 1.00
+endfunction
+
+function WeaponProfileGetCastDuration takes integer profileId returns real
+    return 1.00
+endfunction
+
+function WeaponProfileGetCastCount takes integer profileId returns integer
+    if profileId == WEAPON_PROFILE_HANDGUN then
+        return 6
+    elseif profileId == WEAPON_PROFILE_SHOTGUN then
+        return 6
+    elseif profileId == WEAPON_PROFILE_HEAVY_MACHINE_GUN then
+        return 12
+    elseif profileId == WEAPON_PROFILE_TWO_MACHINE_GUN then
+        return 12
+    elseif profileId == WEAPON_PROFILE_ROCKET_LAUNCHER then
+        return 6
+    elseif profileId == WEAPON_PROFILE_ENEMY_CHASER then
+        return 6
+    elseif profileId == WEAPON_PROFILE_GRENADE then
+        return 6
+    elseif profileId == WEAPON_PROFILE_LASER_GUN then
+        return 12
+    elseif profileId == WEAPON_PROFILE_DROP_SHOT then
+        return 6
+    elseif profileId == WEAPON_PROFILE_FLAME_SHOT then
+        return 6
+    elseif profileId == WEAPON_PROFILE_IRON_LIZARD then
+        return 6
+    elseif profileId == WEAPON_PROFILE_SUPER_GRENADE then
+        return 6
+    elseif profileId == WEAPON_PROFILE_THUNDER_SHOT then
+        return 6
+    endif
+    return 1
+endfunction
+
+function WeaponProfileGetShotsPerSecond takes integer profileId returns integer
+    return WeaponProfileGetCastCount(profileId)
+endfunction
+
+function WeaponProfileGetInterval takes integer profileId returns real
+    return WeaponProfileGetCastDuration(profileId) / I2R(WeaponProfileGetCastCount(profileId))
+endfunction
+
+function WeaponProfileGetRange takes integer profileId returns real
+    if profileId == WEAPON_PROFILE_SHOTGUN then
+        return 1250.00
+    elseif profileId == WEAPON_PROFILE_ROCKET_LAUNCHER then
+        return 1750.00
+    elseif profileId == WEAPON_PROFILE_ENEMY_CHASER then
+        return 1750.00
+    elseif profileId == WEAPON_PROFILE_GRENADE or profileId == WEAPON_PROFILE_SUPER_GRENADE then
+        return 1250.00
+    elseif profileId == WEAPON_PROFILE_LASER_GUN then
+        return 1750.00
+    elseif profileId == WEAPON_PROFILE_DROP_SHOT then
+        return 1750.00
+    elseif profileId == WEAPON_PROFILE_FLAME_SHOT then
+        return 1750.00
+    elseif profileId == WEAPON_PROFILE_IRON_LIZARD then
+        return 3000.00
+    elseif profileId == WEAPON_PROFILE_THUNDER_SHOT then
+        return 2000.00
+    elseif profileId == WEAPON_PROFILE_HEAVY_MACHINE_GUN then
+        return 1750.00
+    elseif profileId == WEAPON_PROFILE_TWO_MACHINE_GUN then
+        return 1750.00
+    endif
+    return 1750.00
+endfunction
+
+function WeaponProfileGetProjectileCount takes integer profileId returns integer
+    if profileId == WEAPON_PROFILE_TWO_MACHINE_GUN then
+        return 2
+    elseif profileId == WEAPON_PROFILE_THUNDER_SHOT then
+        return 15
+    endif
+    return 1
+endfunction
+
+function WeaponProfileGetArea takes integer profileId returns real
+    if profileId == WEAPON_PROFILE_SHOTGUN then
+        return 250.00
+    elseif profileId == WEAPON_PROFILE_ROCKET_LAUNCHER then
+        return 250.00
+    elseif profileId == WEAPON_PROFILE_ENEMY_CHASER then
+        return 250.00
+    elseif profileId == WEAPON_PROFILE_GRENADE then
+        return 300.00
+    elseif profileId == WEAPON_PROFILE_DROP_SHOT then
+        return 300.00
+    elseif profileId == WEAPON_PROFILE_FLAME_SHOT then
+        return 250.00
+    elseif profileId == WEAPON_PROFILE_SUPER_GRENADE then
+        return 350.00
+    endif
+    return 0.00
+endfunction
+
+function WeaponProfileGetCost takes integer profileId returns integer
+    if profileId == WEAPON_PROFILE_HANDGUN then
+        return 0
+    elseif profileId == WEAPON_PROFILE_SHOTGUN then
+        return 2
+    elseif profileId == WEAPON_PROFILE_HEAVY_MACHINE_GUN then
+        return 2
+    elseif profileId == WEAPON_PROFILE_TWO_MACHINE_GUN then
+        return 3
+    elseif profileId == WEAPON_PROFILE_ROCKET_LAUNCHER then
+        return 3
+    elseif profileId == WEAPON_PROFILE_ENEMY_CHASER then
+        return 4
+    elseif profileId == WEAPON_PROFILE_GRENADE then
+        return 2
+    elseif profileId == WEAPON_PROFILE_LASER_GUN then
+        return 4
+    elseif profileId == WEAPON_PROFILE_DROP_SHOT then
+        return 4
+    elseif profileId == WEAPON_PROFILE_FLAME_SHOT then
+        return 4
+    elseif profileId == WEAPON_PROFILE_IRON_LIZARD then
+        return 3
+    elseif profileId == WEAPON_PROFILE_SUPER_GRENADE then
+        return 5
+    elseif profileId == WEAPON_PROFILE_THUNDER_SHOT then
+        return 5
+    endif
+    return 1
+endfunction
+
+function WeaponProfileGetDefaultAmmo takes integer profileId returns integer
+    if profileId == WEAPON_PROFILE_HANDGUN then
+        return WEAPON_AMMO_INFINITE
+    elseif profileId == WEAPON_PROFILE_HEAVY_MACHINE_GUN or profileId == WEAPON_PROFILE_TWO_MACHINE_GUN or profileId == WEAPON_PROFILE_LASER_GUN then
+        return 200
+    elseif profileId == WEAPON_PROFILE_GRENADE then
+        return 50
+    elseif profileId == WEAPON_PROFILE_SHOTGUN or profileId == WEAPON_PROFILE_ROCKET_LAUNCHER or profileId == WEAPON_PROFILE_ENEMY_CHASER or profileId == WEAPON_PROFILE_DROP_SHOT or profileId == WEAPON_PROFILE_FLAME_SHOT or profileId == WEAPON_PROFILE_IRON_LIZARD or profileId == WEAPON_PROFILE_SUPER_GRENADE or profileId == WEAPON_PROFILE_THUNDER_SHOT then
+        return 100
+    endif
+    return 0
+endfunction
+
+function WeaponProfileGetPickupUnitType takes integer profileId returns integer
+    if profileId == WEAPON_PROFILE_HANDGUN then
+        return 'wP01'
+    elseif profileId == WEAPON_PROFILE_SHOTGUN then
+        return 'wP02'
+    elseif profileId == WEAPON_PROFILE_HEAVY_MACHINE_GUN then
+        return 'wP03'
+    elseif profileId == WEAPON_PROFILE_TWO_MACHINE_GUN then
+        return 'wP04'
+    elseif profileId == WEAPON_PROFILE_ROCKET_LAUNCHER then
+        return 'wP05'
+    elseif profileId == WEAPON_PROFILE_ENEMY_CHASER then
+        return 'wP06'
+    elseif profileId == WEAPON_PROFILE_GRENADE then
+        return 'wP07'
+    elseif profileId == WEAPON_PROFILE_LASER_GUN then
+        return 'wP08'
+    elseif profileId == WEAPON_PROFILE_DROP_SHOT then
+        return 'wP09'
+    elseif profileId == WEAPON_PROFILE_FLAME_SHOT then
+        return 'wP0A'
+    elseif profileId == WEAPON_PROFILE_IRON_LIZARD then
+        return 'wP0B'
+    elseif profileId == WEAPON_PROFILE_SUPER_GRENADE then
+        return 'wP0C'
+    elseif profileId == WEAPON_PROFILE_THUNDER_SHOT then
+        return 'wP0D'
+    endif
+    return 0
+endfunction
+
+function WeaponProfileFromPickupUnitType takes integer unitTypeId returns integer
+    local integer profileId = WEAPON_PROFILE_HANDGUN
+    loop
+        exitwhen profileId > WEAPON_PROFILE_LAST
+        if unitTypeId == WeaponProfileGetPickupUnitType(profileId) then
+            return profileId
+        endif
+        set profileId = profileId + 1
+    endloop
+    return WEAPON_PROFILE_NONE
+endfunction
+
+function WeaponProfileGetMissileModel takes integer profileId returns string
+    if profileId == WEAPON_PROFILE_HANDGUN then
+        return "Miss\\Shot Blue.mdx"
+    elseif profileId == WEAPON_PROFILE_HEAVY_MACHINE_GUN or profileId == WEAPON_PROFILE_TWO_MACHINE_GUN then
+        return "Miss\\Shot II Blue.mdx"
+    elseif profileId == WEAPON_PROFILE_ROCKET_LAUNCHER then
+        return "Miss\\Runic Rocket.mdx"
+    elseif profileId == WEAPON_PROFILE_SHOTGUN then
+        return "Miss\\Valiant Charge Royal.mdx"
+    elseif profileId == WEAPON_PROFILE_ENEMY_CHASER then
+        return "Miss\\Voyager Rocket.mdx"
+    elseif profileId == WEAPON_PROFILE_GRENADE or profileId == WEAPON_PROFILE_DROP_SHOT or profileId == WEAPON_PROFILE_SUPER_GRENADE then
+        return "Miss\\Chain Grenade Blue.mdx"
+    elseif profileId == WEAPON_PROFILE_LASER_GUN or profileId == WEAPON_PROFILE_THUNDER_SHOT then
+        return "Psionic Shot Blue.mdx"
+    elseif profileId == WEAPON_PROFILE_FLAME_SHOT then
+        return "Miss\\Fireball Major.mdx"
+    elseif profileId == WEAPON_PROFILE_IRON_LIZARD then
+        return "Miss\\Arcade Bolt Blues.mdx"
+    endif
+    return "Miss\\Shot Blue.mdx"
+endfunction
+
+function WeaponProfileGetTierMissileModel takes integer profileId, integer tier returns string
+    // Tier hook: por ahora todos empiezan en Blue. Luego se cambian aca
+    // por Purple/Red/Yellow/Green/Orange sin tocar los loadouts.
+    return WeaponProfileGetMissileModel(profileId)
+endfunction
+
+function WeaponProfileGetMissileScale takes integer profileId returns real
+    if profileId == WEAPON_PROFILE_ROCKET_LAUNCHER then
+        return 2.00
+    elseif profileId == WEAPON_PROFILE_SHOTGUN then
+        return 2.00
+    elseif profileId == WEAPON_PROFILE_ENEMY_CHASER then
+        return 2.00
+    elseif profileId == WEAPON_PROFILE_DROP_SHOT then
+        return 1.25
+    elseif profileId == WEAPON_PROFILE_SUPER_GRENADE then
+        return 2.00
+    elseif profileId == WEAPON_PROFILE_THUNDER_SHOT then
+        return 1.15
+    endif
+    return 1.00
+endfunction
+
+function WeaponProfileGetMissileSpeed takes integer profileId returns real
+    if profileId == WEAPON_PROFILE_LASER_GUN then
+        return 15500.00
+    elseif profileId == WEAPON_PROFILE_THUNDER_SHOT then
+        return 6500.00
+    elseif profileId == WEAPON_PROFILE_SHOTGUN then
+        return 2300.00
+    elseif profileId == WEAPON_PROFILE_FLAME_SHOT then
+        return 900.00
+    elseif profileId == WEAPON_PROFILE_ENEMY_CHASER then
+        return 2000.00
+    elseif profileId == WEAPON_PROFILE_GRENADE or profileId == WEAPON_PROFILE_DROP_SHOT or profileId == WEAPON_PROFILE_SUPER_GRENADE then
+        return 1500.00
+    endif
+    return 2700.00
+endfunction
+
+function WeaponProfileGetAcceleration takes integer profileId returns real
+    if profileId == WEAPON_PROFILE_FLAME_SHOT then
+        return 90.00
+    endif
+    return 0.00
+endfunction
+
+function WeaponProfileGetDescription takes integer profileId returns string
+    if profileId == WEAPON_PROFILE_HANDGUN then
+        return "Disparo normal siempre disponible.\nBase segura aunque mueras."
+    elseif profileId == WEAPON_PROFILE_SHOTGUN then
+        return "Blast grande y rapido.\nAtraviesa enemigos y daÃƒÂ±a\nen area durante el camino."
+    elseif profileId == WEAPON_PROFILE_HEAVY_MACHINE_GUN then
+        return "Cadencia alta y estable.\nMuy buena con efectos por impacto."
+    elseif profileId == WEAPON_PROFILE_TWO_MACHINE_GUN then
+        return "Dos lineas de disparo.\n8 ciclos por segundo, 16 balas reales."
+    elseif profileId == WEAPON_PROFILE_ROCKET_LAUNCHER then
+        return "Cohete recto explosivo.\nBuen area y presion frontal."
+    elseif profileId == WEAPON_PROFILE_ENEMY_CHASER then
+        return "Misil guiado que busca enemigos.\nConsistente contra objetivos moviles."
+    elseif profileId == WEAPON_PROFILE_GRENADE then
+        return "Granadas explosivas.\nArea confiable a media distancia."
+    elseif profileId == WEAPON_PROFILE_LASER_GUN then
+        return "Laser de maxima cadencia.\n10 disparos por segundo y alta velocidad."
+    elseif profileId == WEAPON_PROFILE_DROP_SHOT then
+        return "Rebota continuamente.\nHace area en cada rebote hasta chocar."
+    elseif profileId == WEAPON_PROFILE_FLAME_SHOT then
+        return "Llama corta y perforante.\nLenta al inicio, acelera rapido."
+    elseif profileId == WEAPON_PROFILE_IRON_LIZARD then
+        return "Proyectil rasante de presion.\nFuerte para lineas frontales."
+    elseif profileId == WEAPON_PROFILE_SUPER_GRENADE then
+        return "Granada pesada recta.\nGran escala y gran area."
+    elseif profileId == WEAPON_PROFILE_THUNDER_SHOT then
+        return "Rayo veloz en onda sin objetivo.\nBusca enemigos cercanos hasta 15 impactos."
+    endif
+    return "Selecciona un arma para ver sus datos."
+endfunction
+
+function WeaponProfileGetDetailText takes integer profileId returns string
+    local string projectileText = I2S(WeaponProfileGetProjectileCount(profileId))
+    if profileId == WEAPON_PROFILE_TWO_MACHINE_GUN then
+        set projectileText = "2 por ciclo"
+    endif
+
+    if WeaponProfileGetArea(profileId) > 0.00 then
+        return "|cff99ccffTipo: " + WeaponProfileGetRole(profileId) + "|r\nDano: |cffffcc00" + R2S(WeaponProfileGetDamage(profileId)) + "|r\nDisparos/s: |cffffcc00" + I2S(WeaponProfileGetShotsPerSecond(profileId)) + "|r\nRango: |cffffcc00" + I2S(R2I(WeaponProfileGetRange(profileId))) + "|r\nArea: |cffffcc00" + I2S(R2I(WeaponProfileGetArea(profileId))) + "|r\nProyectiles: |cffffcc00" + projectileText + "|r\nCosto: |cffffcc00" + I2S(WeaponProfileGetCost(profileId)) + " oro|r\n\n" + WeaponProfileGetDescription(profileId)
+    endif
+
+    return "|cff99ccffTipo: " + WeaponProfileGetRole(profileId) + "|r\nDano: |cffffcc00" + R2S(WeaponProfileGetDamage(profileId)) + "|r\nDisparos/s: |cffffcc00" + I2S(WeaponProfileGetShotsPerSecond(profileId)) + "|r\nRango: |cffffcc00" + I2S(R2I(WeaponProfileGetRange(profileId))) + "|r\nProyectiles: |cffffcc00" + projectileText + "|r\nCosto: |cffffcc00" + I2S(WeaponProfileGetCost(profileId)) + " oro|r\n\n" + WeaponProfileGetDescription(profileId)
+endfunction
+
+endlibrary
+
+// ===== END: MyMissiles/Config/WeaponProfileConfig.j =====
+
 // ===== BEGIN: MyMissiles/Loadout Control.j =====
-//TESH.scrollpos=0
-//TESH.alwaysfold=0
-library LoadoutControl initializer Init requires TimerUtils, SpellIndex, Missile, PlayerMissileLoadout, DamageTextUtil, LoadoutOrbBalance, LoadoutIntFullManaSwapNew, Table, WaveBarrierSkills, WaveDamageCredit
-//******************************************************************************
-// Shotgun-style burst spell that reuses TimerUtils, LoadoutMissile orb behavior.
-//******************************************************************************
+library LoadoutControl requires WeaponProfileConfig
+
+// Legacy shotgun/pellet loadout disabled by Metal Slug weapon rework.
+// U0A3 is now handled by LoadoutMetalSlugSpecial as a piercing AoE Shotgun blast.
+
+function GetLoadoutControlMoveCastDuration takes nothing returns real
+    return WeaponProfileGetCastDuration(WEAPON_PROFILE_SHOTGUN)
+endfunction
+
+endlibrary
+
+// ===== END: MyMissiles/Loadout Control.j =====
+
+// ===== BEGIN: MyMissiles/Loadout IronLizard.j =====
+library LoadoutIronLizard initializer Init requires TimerUtils, SpellIndex, Missile, RegisterPlayerUnitEvent, WeaponProfileConfig, WaveDamageCredit, Table, WeaponInventoryCore
+
     globals
-        private constant integer LOADOUT_CONTROL_SPELL = 'U0A3' //* Configure rawcode.
-
-        //* Rapid Fire options.
-        private constant real FIRE_DURATION = 1.00
-        private constant integer FIRE_COUNT = 4
-        private constant string CAST_ANIMATION = "attack"
-        private constant real FIRST_ANIMATION_DELAY = 0.03
-        private constant real RAPID_FIRE_ANIMATION_TIME_SCALE = 5.25
-        private constant real ANIMATION_TIME_SCALE_ON_END = 1.00
-
+        private constant real MISSILE_START_Z = 45.00
+        private constant real MISSILE_COLLISION = 72.00
+        private constant real MISSILE_FORWARD_OFFSET = 96.00
+        private constant real LIZARD_RANGE = 3000.00
+        private constant integer LIZARD_MAX_BOUNCES = 4
+        private constant string IMPACT_ATTACH = "origin"
         private constant attacktype ATTACK_TYPE = ATTACK_TYPE_NORMAL
         private constant damagetype DAMAGE_TYPE = DAMAGE_TYPE_MAGIC
 
-        private constant integer BURST_COUNT = 3
-        private constant real BURST_SPREAD_DEG = 05.
-        private constant real BURST_STAGGER_INTERVAL = 0.03
-        private constant real MISSILE_START_Z = 75.
-        private constant real BASE_MISSILE_SPEED = 2000.
-        private constant real MIN_MISSILE_SPEED = 1.
-        private constant real SHOT_DISTANCE = 2000.
-        private constant real MISSILE_COLLISION = 96.
-        private constant real MISSILE_SCALE = 1.00
-        private constant real BASE_DAMAGE_MULT = 1
-        private constant string BASE_MISSILE_MODEL = "Abilities\\Weapons\\Bolt\\BoltImpact.mdl"
-        private constant string WRAP_ATTACH_POINT = "origin"
-
-        private constant integer CRIT_TEXT_R = 255
-        private constant integer CRIT_TEXT_G = 0
-        private constant integer CRIT_TEXT_B = 0
-        private constant integer DARK_TEXT_R = 170
-        private constant integer DARK_TEXT_G = 80
-        private constant integer DARK_TEXT_B = 255
-        private constant integer FIRE_TEXT_R = 255
-        private constant integer FIRE_TEXT_G = 145
-        private constant integer FIRE_TEXT_B = 40
-        private constant integer POISON_TEXT_R = 60
-        private constant integer POISON_TEXT_G = 255
-        private constant integer POISON_TEXT_B = 60
-        private constant integer RAY_TEXT_R = 70
-        private constant integer RAY_TEXT_G = 170
-        private constant integer RAY_TEXT_B = 255
-        private constant integer WIND_TEXT_R = 255
-        private constant integer WIND_TEXT_G = 225
-        private constant integer WIND_TEXT_B = 40
-        private constant string POISON_DOT_FX = "Abilities\\Spells\\NightElf\\shadowstrike\\shadowstrike.mdl"
-        private constant string POISON_DOT_FX_ATTACH = "head"
-    endglobals
-
-    globals
-        private integer array specialAbility
-        private real array storedDamage
-        private integer array effectInstances
-        private integer array rayHitsLeft
-        private boolean array bonusActive
-        private effect array overlayFx
-        private effect array poisonFx
-        private integer array poisonNext
-        private integer array poisonPrev
-        private integer poisonHead = 0
-        private timer poisonTicker = null
-        private timer array delayedAnimTimer
-
-        private timer array burstTimer
-        private integer array burstShotIndex
-        private real array burstBaseAngle
-        private real array burstX
-        private real array burstY
-        private real array burstDamage
-        private integer array burstInstances
-        private integer array burstChosen
-        private boolean array burstBonusActive
-        private string array burstBaseModel
-        private string array burstWrapModel
-
-        //* Rapid fire state.
         private Table active
-        private real array aim
+
+        private real array castAngle
+        private real array castTargetX
+        private real array castTargetY
+
+        private real array lizardDamage
+        private integer array lizardBouncesLeft
+        private unit array lizardSource
+        private player array lizardOwner
     endglobals
 
-    private keyword ControlCore
+    private function GetSafeFireInterval takes nothing returns real
+        local real duration = WeaponProfileGetCastDuration(WEAPON_PROFILE_IRON_LIZARD)
+        local integer count = WeaponProfileGetCastCount(WEAPON_PROFILE_IRON_LIZARD)
+        if duration <= 0. then
+            return 0.03125
+        endif
+        if count <= 0 then
+            return duration
+        endif
+        return duration / I2R(count)
+    endfunction
 
     private function FilterUnits takes unit target, player owner returns boolean
         return UnitAlive(target) and IsUnitEnemy(target, owner) and not IsUnitType(target, UNIT_TYPE_STRUCTURE)
@@ -10040,281 +10583,53 @@ library LoadoutControl initializer Init requires TimerUtils, SpellIndex, Missile
         return UnitDamageTarget(source, target, amount, false, false, ATTACK_TYPE, DAMAGE_TYPE, null)
     endfunction
 
-    private function DamageArea takes unit source, player owner, real x, real y, real radius, real amount returns nothing
-        local unit u
-        if amount <= 0. or GetUnitTypeId(source) == 0 then
-            return
-        endif
-        call GroupEnumUnitsInRange(SpellIndex.GLOBAL_GROUP, x, y, radius, null)
-        loop
-            set u = FirstOfGroup(SpellIndex.GLOBAL_GROUP)
-            exitwhen u == null
-            call GroupRemoveUnit(SpellIndex.GLOBAL_GROUP, u)
-            if FilterUnits(u, owner) then
-                call WaveRecordDamageCredit(source, u)
-                call UnitDamageTarget(source, u, amount, false, false, ATTACK_TYPE, DAMAGE_TYPE, null)
-            endif
-        endloop
-        set u = null
+    private function ShowIronImpact takes unit target returns nothing
+        local effect fx = AddSpecialEffectTarget(WeaponProfileGetMissileModel(WEAPON_PROFILE_IRON_LIZARD), target, IMPACT_ATTACH)
+        call DestroyEffect(fx)
+        set fx = null
     endfunction
 
-    private function GetBarrierProjectileKind takes Missile missile returns integer
-        if bonusActive[missile] then
-            if specialAbility[missile] == LOADOUT_ORB_ABILITY_WIND then
-                return WAVE_BARRIER_PROJECTILE_KIND_WIND
-            endif
-            if specialAbility[missile] == LOADOUT_ORB_ABILITY_RAY then
-                return WAVE_BARRIER_PROJECTILE_KIND_RAY
-            endif
-        endif
-        return WAVE_BARRIER_PROJECTILE_KIND_NORMAL
-    endfunction
-
-    private function ResolveBarrierIntercept takes Missile missile returns integer
-        local integer interaction = WaveBarrierCheckPlayerProjectile(missile, missile.owner, missile.x, missile.y, GetBarrierProjectileKind(missile))
-        local real radius
-        local real finalDamage
-        if interaction == WAVE_BARRIER_INTERACTION_WIND then
-            if bonusActive[missile] and specialAbility[missile] == LOADOUT_ORB_ABILITY_WIND then
-                set radius = LoadoutGetWindAoe(effectInstances[missile])
-                set finalDamage = LoadoutGetWindDamage(storedDamage[missile])
-                call DamageArea(missile.source, missile.owner, missile.x, missile.y, radius, finalDamage)
-            endif
-            return WAVE_BARRIER_INTERACTION_WIND
-        endif
-        if interaction == WAVE_BARRIER_INTERACTION_RAY then
-            if bonusActive[missile] and specialAbility[missile] == LOADOUT_ORB_ABILITY_RAY and rayHitsLeft[missile] > 0 then
-                set rayHitsLeft[missile] = rayHitsLeft[missile] - 1
-                return WAVE_BARRIER_INTERACTION_RAY
-            endif
-            return WAVE_BARRIER_INTERACTION_BLOCK
-        endif
-        return interaction
-    endfunction
-
-    function GetLoadoutControlMoveCastDuration takes nothing returns real
-        return FIRE_DURATION
-    endfunction
-
-    private function GetSafeFireInterval takes nothing returns real
-        if FIRE_DURATION <= 0. then
-            return 0.03125
-        endif
-        if FIRE_COUNT <= 0 then
-            return FIRE_DURATION
-        endif
-        return FIRE_DURATION / I2R(FIRE_COUNT)
-    endfunction
-
-    private function PoisonListAdd takes SpellIndex dex returns nothing
-        set poisonPrev[dex] = 0
-        set poisonNext[dex] = poisonHead
-        if poisonHead != 0 then
-            set poisonPrev[poisonHead] = dex
-        endif
-        set poisonHead = dex
-    endfunction
-
-    private function PoisonListRemove takes SpellIndex dex returns nothing
-        local integer p = poisonPrev[dex]
-        local integer n = poisonNext[dex]
-        if p != 0 then
-            set poisonNext[p] = n
-        else
-            set poisonHead = n
-        endif
-        if n != 0 then
-            set poisonPrev[n] = p
-        endif
-        set poisonPrev[dex] = 0
-        set poisonNext[dex] = 0
-    endfunction
-
-    private function PoisonDestroy takes SpellIndex dex returns nothing
-        call PoisonListRemove(dex)
-        if poisonFx[dex] != null then
-            call DestroyEffect(poisonFx[dex])
-            set poisonFx[dex] = null
-        endif
-        call dex.destroy()
-    endfunction
-
-    private function OnPoisonTick takes nothing returns nothing
-        local integer node = poisonHead
-        local integer nextNode
-        local SpellIndex dex
-        loop
-            exitwhen node == 0
-            set dex = SpellIndex(node)
-            set nextNode = poisonNext[node]
-            if (dex.count <= 0) or (GetUnitTypeId(dex.target) == 0) or (not UnitAlive(dex.target)) or (GetUnitTypeId(dex.source) == 0) then
-                call PoisonDestroy(dex)
-            else
-                call WaveRecordDamageCredit(dex.source, dex.target)
-                call UnitDamageTarget(dex.source, dex.target, dex.damage, false, false, ATTACK_TYPE, DAMAGE_TYPE, null)
-                call ShowCustomLoadoutText(dex.target, "-" + FormatLoadoutDamageText(dex.damage), POISON_TEXT_R, POISON_TEXT_G, POISON_TEXT_B)
-                set dex.count = dex.count - 1
-                if dex.count <= 0 then
-                    call PoisonDestroy(dex)
-                endif
-            endif
-            set node = nextNode
-        endloop
-        if (poisonHead == 0) and (poisonTicker != null) then
-            call ReleaseTimer(poisonTicker)
-            set poisonTicker = null
-        endif
-    endfunction
-
-    private function ApplyPoison takes unit source, unit target, real damagePerSecond, real duration returns nothing
-        local SpellIndex dex
-        local integer ticks
-        local real covered
-        if (GetUnitTypeId(source) == 0) or (GetUnitTypeId(target) == 0) then
-            return
-        endif
-        if damagePerSecond <= 0. or duration <= 0. or LOADOUT_ORB_POISON_TICK_INTERVAL <= 0. then
-            return
-        endif
-        set ticks = R2I(duration/LOADOUT_ORB_POISON_TICK_INTERVAL)
-        set covered = I2R(ticks)*LOADOUT_ORB_POISON_TICK_INTERVAL
-        if covered < duration then
-            set ticks = ticks + 1
-        endif
-        if ticks < 1 then
-            set ticks = 1
-        endif
-        set dex = SpellIndex.create()
-        set dex.source = source
-        set dex.target = target
-        set dex.damage = damagePerSecond
-        if (POISON_DOT_FX != "") then
-            set poisonFx[dex] = AddSpecialEffectTarget(POISON_DOT_FX, target, POISON_DOT_FX_ATTACH)
-        else
-            set poisonFx[dex] = null
-        endif
-
-        call WaveRecordDamageCredit(source, target)
-        call UnitDamageTarget(source, target, damagePerSecond, false, false, ATTACK_TYPE, DAMAGE_TYPE, null)
-        call ShowCustomLoadoutText(target, FormatLoadoutDamageText(damagePerSecond), POISON_TEXT_R, POISON_TEXT_G, POISON_TEXT_B)
-
-        set dex.count = ticks
-        call PoisonListAdd(dex)
-        if poisonTicker == null then
-            set poisonTicker = NewTimer()
-            call SetTimerDebugTag(poisonTicker, TIMER_DEBUG_TAG_LOADOUT_CONTROL)
-            call TimerStart(poisonTicker, LOADOUT_ORB_POISON_TICK_INTERVAL, true, function OnPoisonTick)
-        endif
-    endfunction
-
-    private struct ControlCore extends array
-        private static method onCollide takes Missile missile, unit hit returns boolean
-            local real baseDamage = storedDamage[missile]
-            local real finalDamage = baseDamage
-            local real extraDamage = 0.
-            local real radius
-            local boolean wasAlive
-            local real bloodMult
-            local integer remaining
-            local integer bloodPct
-            local integer inst = effectInstances[missile]
-            local integer abil = specialAbility[missile]
-            local integer barrierInteraction
-
-            set barrierInteraction = ResolveBarrierIntercept(missile)
-            if barrierInteraction == WAVE_BARRIER_INTERACTION_BLOCK or barrierInteraction == WAVE_BARRIER_INTERACTION_WIND then
-                return true
-            endif
-            if barrierInteraction == WAVE_BARRIER_INTERACTION_RAY then
-                return false
-            endif
-
-            if not FilterUnits(hit, missile.owner) then
-                return false
-            endif
-
-            if not bonusActive[missile] then
-                call DamageUnit(missile.source, hit, baseDamage)
-                return true
-            endif
-
-            if abil == LOADOUT_ORB_ABILITY_RAY then
-                set wasAlive = UnitAlive(hit)
-                call DamageUnit(missile.source, hit, baseDamage)
-                if rayHitsLeft[missile] > 0 then
-                    set remaining = rayHitsLeft[missile]
-                    call ShowCustomLoadoutText(hit, FormatLoadoutDamageText(baseDamage) + "/[" + I2S(remaining) + "]", RAY_TEXT_R, RAY_TEXT_G, RAY_TEXT_B)
-                    if wasAlive and UnitAlive(hit) then
-                        set rayHitsLeft[missile] = rayHitsLeft[missile] - 1
-                    endif
-                    return false
-                endif
-                call ShowCustomLoadoutText(hit, FormatLoadoutDamageText(baseDamage) + "/[0]", RAY_TEXT_R, RAY_TEXT_G, RAY_TEXT_B)
-                return true
-            elseif abil == LOADOUT_ORB_ABILITY_FIRE then
-                set finalDamage = LoadoutGetFireDamage(baseDamage, inst)
-                call DamageUnit(missile.source, hit, finalDamage)
-                call ShowCustomLoadoutText(hit, FormatLoadoutDamageText(finalDamage), FIRE_TEXT_R, FIRE_TEXT_G, FIRE_TEXT_B)
-                return true
-            elseif abil == LOADOUT_ORB_ABILITY_POISON then
-                call ApplyPoison(missile.source, hit, LoadoutGetPoisonTickDamage(baseDamage), LoadoutGetPoisonDuration(inst))
-                return true
-            elseif abil == LOADOUT_ORB_ABILITY_WIND then
-                set radius = LoadoutGetWindAoe(inst)
-                set finalDamage = LoadoutGetWindDamage(baseDamage)
-                call DamageArea(missile.source, missile.owner, missile.x, missile.y, radius, finalDamage)
-                call ShowCustomLoadoutText(hit, FormatLoadoutDamageText(finalDamage) + "/[" + FormatLoadoutDamageText(radius) + "]", WIND_TEXT_R, WIND_TEXT_G, WIND_TEXT_B)
-                return true
-            elseif abil == LOADOUT_ORB_ABILITY_DARK then
-                set extraDamage = LoadoutGetDarkBonus(hit, inst)
-                set finalDamage = baseDamage + extraDamage
-                call DamageUnit(missile.source, hit, finalDamage)
-                call ShowCustomLoadoutText(hit, FormatLoadoutDamageText(finalDamage), DARK_TEXT_R, DARK_TEXT_G, DARK_TEXT_B)
-                return true
-            elseif abil == LOADOUT_ORB_ABILITY_BLOOD then
-                set bloodMult = LoadoutGetBloodRandomMultiplier(inst)
-                set finalDamage = baseDamage*bloodMult
-                set bloodPct = LoadoutBloodMultiplierToPercent(bloodMult)
-                call DamageUnit(missile.source, hit, finalDamage)
-                call ShowCustomLoadoutText(hit, FormatLoadoutDamageText(finalDamage) + "   //" + I2S(bloodPct) + "%", CRIT_TEXT_R, CRIT_TEXT_G, CRIT_TEXT_B)
-                return true
-            endif
-
-            call DamageUnit(missile.source, hit, baseDamage)
+    private function BounceIronLizard takes Missile missile, real normalX, real normalY returns boolean
+        local real newAngle
+        if lizardBouncesLeft[missile] <= 0 then
             return true
+        endif
+        set lizardBouncesLeft[missile] = lizardBouncesLeft[missile] - 1
+        set newAngle = 2.00*Atan2(normalY - missile.y, normalX - missile.x) + bj_PI - missile.angle
+        call missile.impact.move(missile.x + LIZARD_RANGE*Cos(newAngle), missile.y + LIZARD_RANGE*Sin(newAngle), MISSILE_START_Z)
+        call missile.bounce()
+        call missile.flushHitWidgets()
+        set missile.recycle = false
+        return false
+    endfunction
+
+    private struct IronLizardCore extends array
+        private static method onCollide takes Missile missile, unit hit returns boolean
+            if not FilterUnits(hit, lizardOwner[missile]) then
+                return false
+            endif
+            call DamageUnit(lizardSource[missile], hit, lizardDamage[missile])
+            call ShowIronImpact(hit)
+            return false
+        endmethod
+
+        private static method onDestructable takes Missile missile, destructable hit returns boolean
+            return false
+        endmethod
+
+        private static method onTerrain takes Missile missile returns boolean
+            return BounceIronLizard(missile, missile.prevX, missile.prevY)
         endmethod
 
         private static method onFinish takes Missile missile returns boolean
             return true
         endmethod
 
-        private static method onDestructable takes Missile missile, destructable hit returns boolean
-            return true
-        endmethod
-
-        private static method onTerrain takes Missile missile returns boolean
-            return true
-        endmethod
-
-        private static method onPeriod takes Missile missile returns boolean
-            local integer barrierInteraction = ResolveBarrierIntercept(missile)
-            if barrierInteraction == WAVE_BARRIER_INTERACTION_BLOCK or barrierInteraction == WAVE_BARRIER_INTERACTION_WIND then
-                return true
-            endif
-            return false
-        endmethod
-
         private static method onRemove takes Missile missile returns boolean
-            if overlayFx[missile] != null then
-                call DestroyEffect(overlayFx[missile])
-            endif
-            set overlayFx[missile] = null
-            set specialAbility[missile] = 0
-            set storedDamage[missile] = 0.
-            set effectInstances[missile] = 0
-            set rayHitsLeft[missile] = 0
-            set bonusActive[missile] = false
-            call WaveBarrierClearProjectileTrace(missile)
+            set lizardDamage[missile] = 0.00
+            set lizardBouncesLeft[missile] = 0
+            set lizardSource[missile] = null
+            set lizardOwner[missile] = null
             call SpellIndex(missile.data).destroy()
             return true
         endmethod
@@ -10322,352 +10637,143 @@ library LoadoutControl initializer Init requires TimerUtils, SpellIndex, Missile
         implement MissileStruct
     endstruct
 
-    private function LaunchBurstMissile takes unit source, player owner, real x, real y, real angle, integer chosen, boolean burstBonus, real damage, integer instances, string baseModel, string wrapModel returns nothing
-        local SpellIndex mDex = SpellIndex.create()
-        local Missile missile = Missile.create(x, y, MISSILE_START_Z, angle, SHOT_DISTANCE, MISSILE_START_Z)
-        local real speed = BASE_MISSILE_SPEED + GetPlayerMissileSpeedBonus(owner)
+    private function LaunchIronLizard takes unit source, player owner, real angle returns nothing
+        local real x = GetUnitX(source) + MISSILE_FORWARD_OFFSET*Cos(angle)
+        local real y = GetUnitY(source) + MISSILE_FORWARD_OFFSET*Sin(angle)
+        local Missile missile = Missile.create(x, y, MISSILE_START_Z, angle, LIZARD_RANGE, MISSILE_START_Z)
+        local SpellIndex dex = SpellIndex.create()
 
-        if speed < MIN_MISSILE_SPEED then
-            set speed = MIN_MISSILE_SPEED
-        endif
-        set mDex.source = source
-        set mDex.user = owner
+        set dex.source = source
+        set dex.user = owner
         set missile.source = source
         set missile.owner = owner
-        set missile.data = mDex
-        set missile.model = baseModel
-        set missile.scale = MISSILE_SCALE
+        set missile.data = dex
+        set missile.model = WeaponProfileGetTierMissileModel(WEAPON_PROFILE_IRON_LIZARD, 1)
+        set missile.scale = WeaponProfileGetMissileScale(WEAPON_PROFILE_IRON_LIZARD)
         set missile.collision = MISSILE_COLLISION
-        call missile.setMovementSpeed(speed)
+        call missile.setMovementSpeed(WeaponProfileGetMissileSpeed(WEAPON_PROFILE_IRON_LIZARD))
 
-        set specialAbility[missile] = chosen
-        set storedDamage[missile] = damage
-        set effectInstances[missile] = instances
-        set rayHitsLeft[missile] = LoadoutGetRayPierce(instances)
-        set bonusActive[missile] = burstBonus
+        set lizardDamage[missile] = WeaponProfileGetDamage(WEAPON_PROFILE_IRON_LIZARD)
+        set lizardBouncesLeft[missile] = LIZARD_MAX_BOUNCES
+        set lizardSource[missile] = source
+        set lizardOwner[missile] = owner
 
-        if burstBonus and (wrapModel != "") then
-            set overlayFx[missile] = AddSpecialEffectTarget(wrapModel, missile.dummy, WRAP_ATTACH_POINT)
-        else
-            set overlayFx[missile] = null
-        endif
-
-        call ControlCore.launch(missile)
+        call IronLizardCore.launch(missile)
     endfunction
 
-    private function BurstOffsetForShot takes integer shot, integer burstCount returns real
-        local integer pairIndex
-        if burstCount <= 0 then
-            return 0.0
-        endif
-        if ModuloInteger(burstCount, 2) == 1 then
-            if shot == 0 then
-                return 0.0
-            endif
-            set pairIndex = (shot + 1)/2
-            if ModuloInteger(shot, 2) == 1 then
-                return I2R(pairIndex)
-            endif
-            return -I2R(pairIndex)
-        endif
-        set pairIndex = shot/2
-        if ModuloInteger(shot, 2) == 0 then
-            return -(I2R(pairIndex) + 0.5)
-        endif
-        return I2R(pairIndex) + 0.5
-    endfunction
-
-    private function BurstStop takes SpellIndex dex returns nothing
-        if burstTimer[dex] != null then
-            call ReleaseTimer(burstTimer[dex])
-            set burstTimer[dex] = null
-        endif
-        set burstShotIndex[dex] = 0
-        set burstBaseAngle[dex] = 0.0
-        set burstX[dex] = 0.0
-        set burstY[dex] = 0.0
-        set burstDamage[dex] = 0.0
-        set burstInstances[dex] = 0
-        set burstChosen[dex] = 0
-        set burstBonusActive[dex] = false
-        set burstBaseModel[dex] = ""
-        set burstWrapModel[dex] = ""
-    endfunction
-
-    private function GetBurstStaggerInterval takes nothing returns real
-        local real step = GetSafeFireInterval()
-        local real burstStep
-
-        if BURST_COUNT <= 1 then
-            return 0.03125
-        endif
-
-        set burstStep = step / I2R(BURST_COUNT)
-        if burstStep <= 0. then
-            return BURST_STAGGER_INTERVAL
-        endif
-        if burstStep < BURST_STAGGER_INTERVAL then
-            return burstStep
-        endif
-        return BURST_STAGGER_INTERVAL
-    endfunction
-
-    private function BurstLaunchShot takes SpellIndex dex, integer shot returns nothing
-        local integer burstCount = BURST_COUNT
-        local real angle
-        if shot < 0 or shot >= burstCount then
+    private function CleanupCast takes SpellIndex dex returns nothing
+        local integer id = 0
+        if dex == 0 or dex.phase == -999 then
             return
         endif
-        set angle = burstBaseAngle[dex] + (BurstOffsetForShot(shot, burstCount)*BURST_SPREAD_DEG)*bj_DEGTORAD
-        call LaunchBurstMissile(dex.source, dex.user, burstX[dex], burstY[dex], angle, burstChosen[dex], burstBonusActive[dex], burstDamage[dex], burstInstances[dex], burstBaseModel[dex], burstWrapModel[dex])
-    endfunction
-
-    private function OnBurstTick takes nothing returns nothing
-        local timer t = GetExpiredTimer()
-        local SpellIndex dex = GetTimerData(t)
-        local integer shot
-
-        if dex == 0 then
-            call ReleaseTimer(t)
-            set t = null
-            return
-        endif
-
-        if (burstTimer[dex] != t) or (burstShotIndex[dex] >= BURST_COUNT) or (GetUnitTypeId(dex.source) == 0) or (not UnitAlive(dex.source)) or (dex.phase < 0) then
-            call BurstStop(dex)
-            set t = null
-            return
-        endif
-
-        set shot = burstShotIndex[dex]
-        call BurstLaunchShot(dex, shot)
-        set burstShotIndex[dex] = shot + 1
-
-        if burstShotIndex[dex] >= BURST_COUNT then
-            call BurstStop(dex)
-        endif
-
-        set t = null
-    endfunction
-
-    private function FireBurst takes SpellIndex dex returns nothing
-        local unit source = dex.source
-        local player owner = dex.user
-        local real x = GetUnitX(source)
-        local real y = GetUnitY(source)
-        local real baseAngle = aim[dex]
-        local string baseModel = GetPlayerMissileModelPath(owner)
-        local string wrapModel = GetPlayerMissileOverlayModelPath(owner)
-        local real damage = GetPlayerMissileDamageValue(owner)*BASE_DAMAGE_MULT
-        local integer instances = GetPlayerMissileInstanceCount(owner)
-        local integer chosen = GetPlayerMissileAbilityChoice(owner)
-        local integer chosenLevel = 0
-        local boolean burstBonus
-        local integer i = 0
-        local real mid
-        local real angle
-
-        if GetUnitTypeId(source) == 0 then
-            set source = null
-            set owner = null
-            return
-        endif
-
-        if chosen != 0 then
-            set chosenLevel = GetUnitAbilityLevel(source, chosen)
-        endif
-        set burstBonus = (chosen != 0) and (chosenLevel > 0) and (chosenLevel < 5)
-        if burstBonus then
-            call LoadoutIntFullMana(source, chosen)
-        endif
-
-        if instances < 1 then
-            set instances = 1
-        endif
-        if damage < 0. then
-            set damage = 0.
-        endif
-        if (baseModel == "") then
-            set baseModel = BASE_MISSILE_MODEL
-        endif
-
-        set burstBaseAngle[dex] = baseAngle
-        set burstX[dex] = x
-        set burstY[dex] = y
-        set burstDamage[dex] = damage
-        set burstInstances[dex] = instances
-        set burstChosen[dex] = chosen
-        set burstBonusActive[dex] = burstBonus
-        set burstBaseModel[dex] = baseModel
-        set burstWrapModel[dex] = wrapModel
-        set burstShotIndex[dex] = 0
-
-        call BurstLaunchShot(dex, 0)
-        set burstShotIndex[dex] = 1
-
-        if BURST_COUNT > 1 then
-            set burstTimer[dex] = NewTimerEx(dex)
-        call SetTimerDebugTag(burstTimer[dex], TIMER_DEBUG_TAG_LOADOUT_CONTROL)
-            call TimerStart(burstTimer[dex], GetBurstStaggerInterval(), true, function OnBurstTick)
-        else
-            call BurstStop(dex)
-        endif
-        set source = null
-        set owner = null
-    endfunction
-
-    private function Cleanup takes SpellIndex dex returns nothing
-        local integer id = GetHandleId(dex.source)
-        if active.has(id) and (active[id] == dex) then
-            call active.remove(id)
-        endif
+        set dex.phase = -999
         if GetUnitTypeId(dex.source) != 0 then
-            call SetUnitTimeScale(dex.source, ANIMATION_TIME_SCALE_ON_END)
+            set id = GetHandleId(dex.source)
+            if active.has(id) and (active[id] == dex) then
+                call active.remove(id)
+            endif
         endif
-        if delayedAnimTimer[dex] != null then
-            call ReleaseTimer(delayedAnimTimer[dex])
-            set delayedAnimTimer[dex] = null
+        if dex.clock != null then
+            call ReleaseTimer(dex.clock)
+            set dex.clock = null
         endif
-        call BurstStop(dex)
-        set aim[dex] = 0.
-        call ReleaseTimer(dex.clock)
+        set castAngle[dex] = 0.00
+        set castTargetX[dex] = 0.00
+        set castTargetY[dex] = 0.00
         call dex.destroy()
     endfunction
 
-    private function DelayedStartAnimation takes nothing returns nothing
-        local timer t = GetExpiredTimer()
-        local SpellIndex dex = GetTimerData(t)
-        local unit source = dex.source
-        local integer id
-        set delayedAnimTimer[dex] = null
-        if (GetUnitTypeId(source) != 0) and UnitAlive(source) and (dex.phase >= 0) then
-            set id = GetHandleId(source)
-            if active.has(id) and (active[id] == dex) then
-                call SetUnitAnimation(source, CAST_ANIMATION)
-            endif
+    private function FireCastShot takes SpellIndex dex returns nothing
+        if GetUnitTypeId(dex.source) == 0 or not UnitAlive(dex.source) then
+            return
         endif
-        call ReleaseTimer(t)
-        set source = null
-        set t = null
+        if not WeaponInventoryConsumeShotForProfile(dex.user, WEAPON_PROFILE_IRON_LIZARD) then
+            return
+        endif
+        call SetUnitAnimation(dex.source, "attack")
+        call LaunchIronLizard(dex.source, dex.user, castAngle[dex])
     endfunction
 
-    private function OnPeriodic takes nothing returns nothing
+    private function OnCastTick takes nothing returns nothing
         local timer t = GetExpiredTimer()
         local SpellIndex dex = GetTimerData(t)
         local real step = GetSafeFireInterval()
-
-        if (GetUnitTypeId(dex.source) == 0) or (not UnitAlive(dex.source)) or (dex.phase < 0) then
-            call Cleanup(dex)
+        if dex.time <= 0. or GetUnitTypeId(dex.source) == 0 or not UnitAlive(dex.source) then
+            call CleanupCast(dex)
             set t = null
             return
         endif
-
-        if dex.time <= 0. then
-            if burstTimer[dex] == null then
-                call Cleanup(dex)
-            endif
-            set t = null
-            return
-        endif
-
-        call SetUnitAnimation(dex.source, CAST_ANIMATION)
-        call FireBurst(dex)
+        call FireCastShot(dex)
         set dex.time = dex.time - step
-
-        if (dex.time <= 0.) and (burstTimer[dex] == null) then
-            call Cleanup(dex)
+        if dex.time <= 0. then
+            call CleanupCast(dex)
+        else
+            call TimerStart(dex.clock, step, false, function OnCastTick)
         endif
         set t = null
     endfunction
 
-    private function MarkCanceled takes unit whichUnit returns nothing
-        local integer id = GetHandleId(whichUnit)
-        if active.has(id) then
-            // A running cast session is refreshed by recast; orders should not kill it.
-            return
-        endif
-    endfunction
-
-    private function OnOrder takes nothing returns nothing
-        call MarkCanceled(GetTriggerUnit())
-    endfunction
-
-    private function OnPointOrder takes nothing returns nothing
-        call MarkCanceled(GetTriggerUnit())
-    endfunction
-
-    private function OnTargetOrder takes nothing returns nothing
-        call MarkCanceled(GetTriggerUnit())
-    endfunction
-
-    private function OnEffect takes nothing returns nothing
-        local unit source = GetTriggerUnit()
-        local player owner = GetTriggerPlayer()
+    function LoadoutIronLizardFire takes unit source, player owner, real tx, real ty returns boolean
         local integer id = GetHandleId(source)
+        local real duration = WeaponProfileGetCastDuration(WEAPON_PROFILE_IRON_LIZARD)
+        local real step = GetSafeFireInterval()
         local SpellIndex dex
         local real x = GetUnitX(source)
         local real y = GetUnitY(source)
-        local real tx = GetSpellTargetX()
-        local real ty = GetSpellTargetY()
-        local real step = GetSafeFireInterval()
-        local boolean useRapid
-
-        set useRapid = GetPlayerMissileUseRapidFireControl(owner)
 
         if active.has(id) then
             set dex = active[id]
-            if (dex.phase >= 0) and (GetUnitTypeId(dex.source) != 0) and UnitAlive(dex.source) then
-                set aim[dex] = Atan2(ty - y, tx - x)
-                set dex.time = FIRE_DURATION
-                call SetUnitTimeScale(source, RAPID_FIRE_ANIMATION_TIME_SCALE)
-                set source = null
-                set owner = null
-                return
+            if (GetUnitTypeId(dex.source) != 0) and UnitAlive(dex.source) then
+                set castAngle[dex] = Atan2(ty - y, tx - x)
+                set castTargetX[dex] = tx
+                set castTargetY[dex] = ty
+                set dex.time = duration
+                call SetUnitAnimation(dex.source, "attack")
+                return true
             endif
-            call Cleanup(dex)
+            call CleanupCast(dex)
         endif
 
         set dex = SpellIndex.create()
         set dex.source = source
         set dex.user = owner
-        if useRapid and (FIRE_DURATION > 0.) then
-            set dex.time = FIRE_DURATION
-        else
-            set dex.time = 0.
-        endif
+        set dex.time = duration
         set dex.phase = 1
-        set dex.clock = NewTimerEx(dex)
-        call SetTimerDebugTag(dex.clock, TIMER_DEBUG_TAG_LOADOUT_CONTROL)
-        set aim[dex] = Atan2(ty - y, tx - x)
+        set castAngle[dex] = Atan2(ty - y, tx - x)
+        set castTargetX[dex] = tx
+        set castTargetY[dex] = ty
+        set dex.clock = null
         set active[id] = dex
 
-        call SetUnitTimeScale(source, RAPID_FIRE_ANIMATION_TIME_SCALE)
-        set delayedAnimTimer[dex] = NewTimerEx(dex)
-        call SetTimerDebugTag(delayedAnimTimer[dex], TIMER_DEBUG_TAG_LOADOUT_CONTROL)
-        call TimerStart(delayedAnimTimer[dex], FIRST_ANIMATION_DELAY, false, function DelayedStartAnimation)
-        call FireBurst(dex)
+        call FireCastShot(dex)
         set dex.time = dex.time - step
-
         if dex.time > 0. then
-            call TimerStart(dex.clock, step, true, function OnPeriodic)
+            set dex.clock = NewTimerEx(dex)
+            call SetTimerDebugTag(dex.clock, TIMER_DEBUG_TAG_LOADOUT_MISSILE)
+            call TimerStart(dex.clock, step, false, function OnCastTick)
         else
-            call Cleanup(dex)
+            call CleanupCast(dex)
         endif
 
+        return true
+    endfunction
+
+    private function OnEffect takes nothing returns nothing
+        local unit source = GetTriggerUnit()
+        local player owner = GetTriggerPlayer()
+        call LoadoutIronLizardFire(source, owner, GetSpellTargetX(), GetSpellTargetY())
         set source = null
         set owner = null
     endfunction
 
     private function Init takes nothing returns nothing
         set active = Table.create()
-        call RegisterSpellEffectEvent(LOADOUT_CONTROL_SPELL, function OnEffect)
-        //call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_ISSUED_ORDER, function OnOrder)
-        call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_ISSUED_POINT_ORDER, function OnPointOrder)
-        call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_ISSUED_TARGET_ORDER, function OnTargetOrder)
+        call RegisterSpellEffectEvent(WeaponProfileGetFireAbility(WEAPON_PROFILE_IRON_LIZARD), function OnEffect)
     endfunction
+
 endlibrary
 
-// ===== END: MyMissiles/Loadout Control.j =====
+// ===== END: MyMissiles/Loadout IronLizard.j =====
 
 // ===== BEGIN: MyMissiles/Loadout Leap.j =====
 library LoadoutLeap initializer Init uses TimerUtils, Table, SpellIndex, Missile, PlayerMissileLoadout, IsUnitChanneling, DamageTextUtil, LoadoutOrbBalance, IsTerrainWalkable, SimError, WaveDamageCredit
@@ -11402,836 +11508,396 @@ endlibrary
 // ===== END: MyMissiles/Loadout Leap.j =====
 
 // ===== BEGIN: MyMissiles/Loadout LeapMissile.j =====
-library LoadoutLeapMissile initializer Init uses TimerUtils, SpellIndex, Missile, PlayerMissileLoadout, IsUnitChanneling, DamageTextUtil, LoadoutOrbBalance, IsTerrainWalkable, SimError, WaveDamageCredit, Table
-//**
-//* User settings:
-//* ==============
+library LoadoutLeapMissile requires WeaponProfileConfig
+
+// Legacy plasma leap missile disabled by Metal Slug weapon rework.
+// U0A4 is now Rocket Launcher and is handled by LoadoutMetalSlugSpecial.
+
+function GetLoadoutLeapMissileMoveCastDuration takes nothing returns real
+    return WeaponProfileGetCastDuration(WEAPON_PROFILE_ROCKET_LAUNCHER)
+endfunction
+
+endlibrary
+
+// ===== END: MyMissiles/Loadout LeapMissile.j =====
+
+// ===== BEGIN: MyMissiles/Loadout MetalSlugSpecial.j =====
+library LoadoutMetalSlugSpecial initializer Init requires TimerUtils, SpellIndex, Missile, RegisterPlayerUnitEvent, DamageTextUtil, WeaponProfileConfig, WaveDamageCredit, Table, WeaponInventoryCore
+
     globals
-        private constant integer LOADOUT_LEAP_MISSILE_SPELL = 'U0A4'
-        private constant boolean ENABLE_CAST_POINT_VALIDATION = false
-
-        //* Base Jump settings
-        private constant real BASE_JUMP_HEIGHT = 550.0
-        private constant real BASE_JUMP_SPEED = 1200.0
-        private constant boolean USE_FIXED_TIME = false
-        private constant real FIXED_JUMP_TIME = 1.20
-
-        //* Rapid Fire options.
-        private constant real FIRE_DURATION = 1.00
-        private constant integer FIRE_COUNT = 2
-        private constant real RAPID_FIRE_ANIMATION_TIME_SCALE = 5.25
-        private constant real ANIMATION_TIME_SCALE_ON_END = 1.00
-
-        //* Base Impact Settings
-        private constant real BASE_IMPACT_AREA = 350.0
-        private constant real BASE_DAMAGE_MULT = 1.00
+        private constant real MISSILE_START_Z = 75.00
+        private constant real MISSILE_GROUND_Z = 0.00
+        private constant real DEFAULT_COLLISION = 96.00
+        private constant real PIERCING_PULSE_INTERVAL = 0.12
+        private constant real FLAME_PULSE_INTERVAL = 0.10
+        private constant real DROP_BOUNCE_INTERVAL = 0.20
+        private constant real GRENADE_ARC = 0.60
+        private constant real DROP_BOUNCE_ARC = 0.45
         private constant attacktype ATTACK_TYPE = ATTACK_TYPE_NORMAL
         private constant damagetype DAMAGE_TYPE = DAMAGE_TYPE_MAGIC
-        private constant real IMPACT_FX_DURATION = 1.00
-        private constant real DUMMY_SCALE_PER_100_AREA = 0.50
-        private constant string IMPACT_SOUND = "" // Configurable impact sound (e.g. "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.wav")
-        
-        //* Animations
-        private constant string CAST_ANIMATION = "spell" // What animation plays while jumping
-        private constant string ANIMATION_TAG = "" // Added by AddUnitAnimationProperties. Empty if none.
-        private constant real FIRST_ANIMATION_DELAY = 0.03
 
-        //* Companion fallback unit type (used only if loadout returns 0).
-        private constant integer COMPANION_DUMMY_FALLBACK_ID = 'dumi'
-        
-        //* Orbs Visuals
-        private constant string RAY_LIGHTNING_TYPE = "CLPB" // Chain Lightning Primary
-        private constant string RAY_HIT_FX = "Abilities\\Spells\\Orc\\LightningShield\\LightningShieldTarget.mdl"
-        private constant string RAY_HIT_FX_ATTACH = "origin"
-        
-        //* Floating Text Colors 
-        private constant integer DEFAULT_TEXT_R = 255
-        private constant integer DEFAULT_TEXT_G = 255
-        private constant integer DEFAULT_TEXT_B = 255
-        
-        private constant integer POISON_TEXT_R = 100
-        private constant integer POISON_TEXT_G = 255
-        private constant integer POISON_TEXT_B = 50
-        
-        private constant integer FIRE_TEXT_R = 255
-        private constant integer FIRE_TEXT_G = 125
-        private constant integer FIRE_TEXT_B = 40
-        
-        private constant integer BLOOD_TEXT_R = 255
-        private constant integer BLOOD_TEXT_G = 40
-        private constant integer BLOOD_TEXT_B = 40
-
-        private constant integer DARK_TEXT_R = 180
-        private constant integer DARK_TEXT_G = 50
-        private constant integer DARK_TEXT_B = 255
-
-        private constant string POISON_DOT_FX = "Abilities\\Spells\\NightElf\\shadowstrike\\shadowstrike.mdl"
-        private constant string POISON_DOT_FX_ATTACH = "head"
-
-        
-    endglobals
-
-//**
-//* Code:
-//* =====
-    globals
-        private integer array specialAbility
-        private real array storedDamage
-        private integer array effectInstances
-        private boolean array bonusActive
-        private timer array delayedAnimTimer
-        private sound error
         private Table active
-        private real array rapidTargetX
-        private real array rapidTargetY
 
-        // FX arrays
-        private effect array casterFx1
-        private effect array casterFx2
-        private effect array dummyFx1
-        private effect array dummyFx2
-        private unit array companionDummy
-        
-        // Ray Logic
-        private lightning array rayLightning
+        private integer array castProfile
+        private real array castAngle
+        private real array castTargetX
+        private real array castTargetY
 
-        // Impact Effect Dummy
-        private unit array impactDummy
-        private effect array impactFx
-        private real array impactRemaining
-        private integer array impactNext
-        private integer array impactPrev
-        private integer impactHead = 0
-        private timer impactTicker = null
-        private effect array poisonFx
-        private integer array poisonNext
-        private integer array poisonPrev
-        private integer poisonHead = 0
-        private timer poisonTicker = null
+        private integer array missileProfile
+        private real array missileDamage
+        private real array missileArea
+        private real array missilePulseRemaining
+        private real array missileSpeed
+        private real array missileTravel
+        private real array missileMaxRange
+        private real array missileSegmentRange
+        private unit array missileSource
+        private player array missileOwner
     endglobals
-    
-    private keyword LeapMissileCore
 
-    private function IsPointJumpable takes real x, real y returns boolean
-        if not IsTerrainPathable(x, y, PATHING_TYPE_WALKABILITY) then
-            return IsTerrainWalkable(x, y)
+    private function MinReal takes real a, real b returns real
+        if a < b then
+            return a
         endif
-        return false
+        return b
     endfunction
 
-    private function ShouldValidateLeapMissileCastPoint takes unit source returns boolean
-        set source = null
-        return ENABLE_CAST_POINT_VALIDATION
-    endfunction
-
-    private function ValidateLeapMissileCastPoint takes unit source, player owner, real tx, real ty returns boolean
-        if not IsPointJumpable(tx, ty) then
-            call SimError(owner, GetUnitName(source) + " can't jump there!")
-            return false
-        endif
-        if not IsVisibleToPlayer(tx, ty, owner) then
-            call SimError(owner, GetUnitName(source) + " needs vision at target!")
-            return false
-        endif
-        return true
-    endfunction
-
-    private function GetLeapMissileScaleForArea takes real area returns real
-        return (area/100.0)*DUMMY_SCALE_PER_100_AREA
-    endfunction
-
-    private function GetLeapMissileWindArea takes integer inst returns real
-        return BASE_IMPACT_AREA + LOADOUT_ORB_WIND_AOE_PER_INSTANCE*LoadoutClampInstance(inst)
-    endfunction
-
-    private function GetSafeFireInterval takes nothing returns real
-        if FIRE_DURATION <= 0. then
+    private function GetSafeFireInterval takes integer profileId returns real
+        local real duration = WeaponProfileGetCastDuration(profileId)
+        local integer count = WeaponProfileGetCastCount(profileId)
+        if duration <= 0. then
             return 0.03125
         endif
-        if FIRE_COUNT <= 0 then
-            return FIRE_DURATION
+        if count <= 0 then
+            return duration
         endif
-        return FIRE_DURATION / I2R(FIRE_COUNT)
+        return duration / I2R(count)
     endfunction
 
-    function GetLoadoutLeapMissileMoveCastDuration takes nothing returns real
-        return FIRE_DURATION
+    private function FilterUnits takes unit target, player owner returns boolean
+        return UnitAlive(target) and IsUnitEnemy(target, owner) and not IsUnitType(target, UNIT_TYPE_STRUCTURE)
     endfunction
 
-
-    // Poison DOT Logic
-    private function PoisonListAdd takes SpellIndex dex returns nothing
-        set poisonPrev[dex] = 0
-        set poisonNext[dex] = poisonHead
-        if poisonHead != 0 then
-            set poisonPrev[poisonHead] = dex
+    private function DamageUnit takes unit source, unit target, real amount returns boolean
+        if amount <= 0. then
+            return false
         endif
-        set poisonHead = dex
-    endfunction
-
-    private function PoisonListRemove takes SpellIndex dex returns nothing
-        local integer p = poisonPrev[dex]
-        local integer n = poisonNext[dex]
-        if p != 0 then
-            set poisonNext[p] = n
-        else
-            set poisonHead = n
+        if (GetUnitTypeId(source) == 0) or (GetUnitTypeId(target) == 0) then
+            return false
         endif
-        if n != 0 then
-            set poisonPrev[n] = p
-        endif
-        set poisonPrev[dex] = 0
-        set poisonNext[dex] = 0
-    endfunction
-
-    private function PoisonDestroy takes SpellIndex dex returns nothing
-        call PoisonListRemove(dex)
-        if poisonFx[dex] != null then
-            call DestroyEffect(poisonFx[dex])
-            set poisonFx[dex] = null
-        endif
-        call dex.destroy()
-    endfunction
-
-    private function OnPoisonTick takes nothing returns nothing
-        local integer node = poisonHead
-        local integer nextNode
-        local SpellIndex dex
-        local unit target
-        local integer ticks
-        loop
-            exitwhen node == 0
-            set dex = SpellIndex(node)
-            set nextNode = poisonNext[node]
-            set target = dex.target
-            set ticks = R2I(dex.count - 1)
-
-            if (target == null) or (GetUnitTypeId(target) == 0) or (not UnitAlive(target)) or (GetUnitTypeId(dex.source) == 0) then
-                call PoisonDestroy(dex)
-            else
-                call WaveRecordDamageCredit(dex.source, target)
-                call UnitDamageTarget(dex.source, target, dex.damage, false, false, ATTACK_TYPE, DAMAGE_TYPE, null)
-                call ShowCustomLoadoutText(target, "-" + FormatLoadoutDamageText(dex.damage), POISON_TEXT_R, POISON_TEXT_G, POISON_TEXT_B)
-                if ticks <= 0 then
-                    call PoisonDestroy(dex)
-                else
-                    set dex.count = ticks
-                endif
-            endif
-            set node = nextNode
-        endloop
-        if (poisonHead == 0) and (poisonTicker != null) then
-            call ReleaseTimer(poisonTicker)
-            set poisonTicker = null
-        endif
-    endfunction
-
-    private function ApplyPoison takes unit source, unit target, real damagePerSecond, real duration returns nothing
-        local SpellIndex dex
-        local integer ticks
-        local real covered
-        
-        // Initial impact has no minus sign
         call WaveRecordDamageCredit(source, target)
-        call UnitDamageTarget(source, target, damagePerSecond, false, false, ATTACK_TYPE, DAMAGE_TYPE, null)
-        call ShowCustomLoadoutText(target, FormatLoadoutDamageText(damagePerSecond), POISON_TEXT_R, POISON_TEXT_G, POISON_TEXT_B)
+        return UnitDamageTarget(source, target, amount, false, false, ATTACK_TYPE, DAMAGE_TYPE, null)
+    endfunction
 
-        if duration <= 0. then
+    private function DamageArea takes unit source, player owner, real x, real y, real radius, real amount returns nothing
+        local unit u
+        if amount <= 0. or radius <= 0. or GetUnitTypeId(source) == 0 then
             return
         endif
-        if LOADOUT_ORB_POISON_TICK_INTERVAL <= 0. then
-            return
-        endif
-
-        set ticks = R2I(duration/LOADOUT_ORB_POISON_TICK_INTERVAL)
-        set covered = I2R(ticks)*LOADOUT_ORB_POISON_TICK_INTERVAL
-        if covered < duration then
-            set ticks = ticks + 1
-        endif
-        if ticks < 1 then
-            set ticks = 1
-        endif
-        
-        set dex = SpellIndex.create()
-        set dex.source = source
-        set dex.target = target
-        set dex.damage = damagePerSecond
-        if (POISON_DOT_FX != null) and (POISON_DOT_FX != "") then
-            set poisonFx[dex] = AddSpecialEffectTarget(POISON_DOT_FX, target, POISON_DOT_FX_ATTACH)
-        else
-            set poisonFx[dex] = null
-        endif
-
-        set dex.count = ticks
-        call PoisonListAdd(dex)
-        if poisonTicker == null then
-            set poisonTicker = NewTimer()
-            call SetTimerDebugTag(poisonTicker, TIMER_DEBUG_TAG_LOADOUT_LEAP_MISS)
-            call TimerStart(poisonTicker, LOADOUT_ORB_POISON_TICK_INTERVAL, true, function OnPoisonTick)
-        endif
-    endfunction
-
-    // Impact Dummy cleanup
-    private function ImpactListAdd takes integer id returns nothing
-        set impactPrev[id] = 0
-        set impactNext[id] = impactHead
-        if impactHead != 0 then
-            set impactPrev[impactHead] = id
-        endif
-        set impactHead = id
-    endfunction
-
-    private function ImpactListRemove takes integer id returns nothing
-        local integer p = impactPrev[id]
-        local integer n = impactNext[id]
-        if p != 0 then
-            set impactNext[p] = n
-        else
-            set impactHead = n
-        endif
-        if n != 0 then
-            set impactPrev[n] = p
-        endif
-        set impactPrev[id] = 0
-        set impactNext[id] = 0
-    endfunction
-
-    private function DestroyImpactDummy takes integer id returns nothing
-        call ImpactListRemove(id)
-        if impactFx[id] != null then
-            call DestroyEffect(impactFx[id])
-            set impactFx[id] = null
-        endif
-        if impactDummy[id] != null then
-            call RemoveUnit(impactDummy[id])
-            set impactDummy[id] = null
-        endif
-        set impactRemaining[id] = 0.0
-        call SpellIndex(id).destroy()
-    endfunction
-
-    private function OnImpactTicker takes nothing returns nothing
-        local integer node = impactHead
-        local integer nextNode
+        call GroupEnumUnitsInRange(SpellIndex.GLOBAL_GROUP, x, y, radius, null)
         loop
-            exitwhen node == 0
-            set nextNode = impactNext[node]
-            set impactRemaining[node] = impactRemaining[node] - 0.03125
-            if impactRemaining[node] <= 0.0 then
-                call DestroyImpactDummy(node)
+            set u = FirstOfGroup(SpellIndex.GLOBAL_GROUP)
+            exitwhen u == null
+            call GroupRemoveUnit(SpellIndex.GLOBAL_GROUP, u)
+            if FilterUnits(u, owner) then
+                call DamageUnit(source, u, amount)
             endif
-            set node = nextNode
         endloop
-        if (impactHead == 0) and (impactTicker != null) then
-            call ReleaseTimer(impactTicker)
-            set impactTicker = null
+        set u = null
+    endfunction
+
+    private function ImpactFx takes integer profileId, real x, real y returns nothing
+        local effect fx
+        if profileId == WEAPON_PROFILE_DROP_SHOT then
+            set fx = AddSpecialEffect(WeaponProfileGetMissileModel(profileId), x, y)
+            call DestroyEffect(fx)
+            set fx = null
         endif
     endfunction
 
-    private function QueueImpactDummy takes unit whichDummy, string impactModel returns nothing
-        local integer id
-        if whichDummy == null or GetUnitTypeId(whichDummy) == 0 then
-            return
+    private function ConfigureDropBounceSegment takes Missile missile returns nothing
+        local real remaining = missileMaxRange[missile] - missileTravel[missile]
+        local real segment = MinReal(missileSpeed[missile]*DROP_BOUNCE_INTERVAL, remaining)
+        if segment < 1.00 then
+            set segment = 1.00
         endif
-        if impactModel == null or impactModel == "" then
-            call RemoveUnit(whichDummy)
-            return
-        endif
-        set id = SpellIndex.create()
-        set impactDummy[id] = whichDummy
-        set impactFx[id] = AddSpecialEffectTarget(impactModel, whichDummy, "origin")
-        set impactRemaining[id] = IMPACT_FX_DURATION
-        call ImpactListAdd(id)
-        if impactTicker == null then
-            set impactTicker = NewTimer()
-            call SetTimerDebugTag(impactTicker, TIMER_DEBUG_TAG_LOADOUT_LEAP_MISS)
-            call TimerStart(impactTicker, 0.03125, true, function OnImpactTicker)
-        endif
+        set missileSegmentRange[missile] = segment
+        call missile.impact.move(missile.x + segment*Cos(missile.angle), missile.y + segment*Sin(missile.angle), MISSILE_GROUND_Z)
+        call missile.bounce()
+        set missile.arc = DROP_BOUNCE_ARC
+        set missile.recycle = false
     endfunction
 
-    private struct LeapMissileCore extends array
-        private static method onRemove takes Missile missile returns boolean
-            local SpellIndex dex = missile.data
-            
-            // Clean up Caster Fx
-            if casterFx1[missile] != null then
-                call DestroyEffect(casterFx1[missile])
-                set casterFx1[missile] = null
-            endif
-            if casterFx2[missile] != null then
-                call DestroyEffect(casterFx2[missile])
-                set casterFx2[missile] = null
-            endif
-            // Clean up Dummy Fx
-            if dummyFx1[missile] != null then
-                call DestroyEffect(dummyFx1[missile])
-                set dummyFx1[missile] = null
-            endif
-            if dummyFx2[missile] != null then
-                call DestroyEffect(dummyFx2[missile])
-                set dummyFx2[missile] = null
-            endif
-            // Clean up Ray
-            if rayLightning[missile] != null then
-                call DestroyLightning(rayLightning[missile])
-                set rayLightning[missile] = null
-            endif
-            if companionDummy[missile] != null then
-                call RemoveUnit(companionDummy[missile])
-                set companionDummy[missile] = null
-            endif
-            if delayedAnimTimer[dex] != null then
-                call ReleaseTimer(delayedAnimTimer[dex])
-                set delayedAnimTimer[dex] = null
-            endif
-            
-            // Re-enable target unit and reset tags
-            if (GetUnitTypeId(dex.source) != 0) then
-                if ANIMATION_TAG != "" then
-                    call AddUnitAnimationProperties(dex.source, ANIMATION_TAG, false)
+    private struct MetalSlugSpecialCore extends array
+        private static method onCollide takes Missile missile, unit hit returns boolean
+            local integer profileId = missileProfile[missile]
+            if profileId == WEAPON_PROFILE_ROCKET_LAUNCHER or profileId == WEAPON_PROFILE_SUPER_GRENADE then
+                if not FilterUnits(hit, missileOwner[missile]) then
+                    return false
                 endif
+                call DamageArea(missileSource[missile], missileOwner[missile], missile.x, missile.y, missileArea[missile], missileDamage[missile])
+                return true
             endif
-            
-            call dex.destroy()
+            return false
+        endmethod
+
+        private static method onFinish takes Missile missile returns boolean
+            local integer profileId = missileProfile[missile]
+            if profileId == WEAPON_PROFILE_DROP_SHOT then
+                set missileTravel[missile] = missileTravel[missile] + missileSegmentRange[missile]
+                call DamageArea(missileSource[missile], missileOwner[missile], missile.x, missile.y, missileArea[missile], missileDamage[missile])
+                call ImpactFx(profileId, missile.x, missile.y)
+                if missileTravel[missile] >= missileMaxRange[missile] then
+                    return true
+                endif
+                call missile.flushHitWidgets()
+                call ConfigureDropBounceSegment(missile)
+                return false
+            endif
+            if profileId == WEAPON_PROFILE_GRENADE or profileId == WEAPON_PROFILE_SUPER_GRENADE or profileId == WEAPON_PROFILE_ROCKET_LAUNCHER then
+                call DamageArea(missileSource[missile], missileOwner[missile], missile.x, missile.y, missileArea[missile], missileDamage[missile])
+            endif
+            return true
+        endmethod
+
+        private static method onDestructable takes Missile missile, destructable hit returns boolean
+            if missileProfile[missile] == WEAPON_PROFILE_GRENADE then
+                return false
+            endif
+            call DamageArea(missileSource[missile], missileOwner[missile], missile.x, missile.y, missileArea[missile], missileDamage[missile])
+            return true
+        endmethod
+
+        private static method onTerrain takes Missile missile returns boolean
+            if missileProfile[missile] == WEAPON_PROFILE_GRENADE or missileProfile[missile] == WEAPON_PROFILE_DROP_SHOT then
+                return false
+            endif
+            call DamageArea(missileSource[missile], missileOwner[missile], missile.x, missile.y, missileArea[missile], missileDamage[missile])
             return true
         endmethod
 
         private static method onPeriod takes Missile missile returns boolean
-            local SpellIndex dex = missile.data
-            local unit source = dex.source
-            local unit companion = companionDummy[missile]
-            local real x = missile.x
-            local real y = missile.y
-            local real z = missile.z + missile.terrainZ
-            local real flightOffset = GetPlayerLeapDummyFlightOffset(dex.user)
-            local unit enumUnit
-            local real damage
-            
-            if (GetUnitTypeId(source) == 0) or IsUnitType(source, UNIT_TYPE_DEAD) then
-                return true // End leap if caster died
-            endif
-
-            if companion != null and GetUnitTypeId(companion) != 0 then
-                call SetUnitX(companion, x)
-                call SetUnitY(companion, y)
-                call SetUnitFlyHeight(companion, z + flightOffset, 0.0)
-            endif
-            
-            // Move Lightning for Ray
-            if bonusActive[missile] and specialAbility[missile] == LOADOUT_ORB_ABILITY_RAY then
-                if rayLightning[missile] != null then
-                    call MoveLightningEx(rayLightning[missile], true, x, y, missile.z + missile.terrainZ, x, y, missile.terrainZ)
-                endif
-                
-                // Damage targets below
-                set damage = storedDamage[missile]
-                call GroupEnumUnitsInRange(SpellIndex.GLOBAL_GROUP, x, y, BASE_IMPACT_AREA, null)
-                loop
-                    set enumUnit = FirstOfGroup(SpellIndex.GLOBAL_GROUP)
-                    exitwhen enumUnit == null
-                    call GroupRemoveUnit(SpellIndex.GLOBAL_GROUP, enumUnit)
-                    if IsUnitEnemy(enumUnit, dex.user) and not IsUnitType(enumUnit, UNIT_TYPE_DEAD) and not IsUnitType(enumUnit, UNIT_TYPE_MAGIC_IMMUNE) and (not missile.hasHitWidget(enumUnit)) then
-                        call missile.hitWidget(enumUnit)
-                        call WaveRecordDamageCredit(source, enumUnit)
-                        call UnitDamageTarget(source, enumUnit, damage, false, false, ATTACK_TYPE, DAMAGE_TYPE, null)
-                        call DestroyEffect(AddSpecialEffectTarget(RAY_HIT_FX, enumUnit, RAY_HIT_FX_ATTACH))
+            local integer profileId = missileProfile[missile]
+            local real accel
+            if profileId == WEAPON_PROFILE_SHOTGUN or profileId == WEAPON_PROFILE_FLAME_SHOT then
+                set missilePulseRemaining[missile] = missilePulseRemaining[missile] - Missile_TIMER_TIMEOUT
+                if missilePulseRemaining[missile] <= 0. then
+                    call DamageArea(missileSource[missile], missileOwner[missile], missile.x, missile.y, missileArea[missile], missileDamage[missile])
+                    if profileId == WEAPON_PROFILE_FLAME_SHOT then
+                        set missilePulseRemaining[missile] = FLAME_PULSE_INTERVAL
+                    else
+                        set missilePulseRemaining[missile] = PIERCING_PULSE_INTERVAL
                     endif
-                endloop
+                endif
+                set accel = WeaponProfileGetAcceleration(profileId)
+                if accel > 0. then
+                    set missileSpeed[missile] = missileSpeed[missile] + accel
+                    call missile.setMovementSpeed(missileSpeed[missile])
+                endif
             endif
-
             return false
         endmethod
 
-        private static method applyImpact takes Missile missile returns nothing
-            local SpellIndex dex = missile.data
-            local unit source = dex.source
-            local real x = missile.x
-            local real y = missile.y
-            local real baseArea = BASE_IMPACT_AREA
-            local real finalDamage = storedDamage[missile]
-            local real bloodMult
-            local integer inst = effectInstances[missile]
-            local integer abilityChoice = specialAbility[missile]
-            local boolean bonus = bonusActive[missile]
-            local unit enumUnit
-            local integer bloodPct
-            local unit iDummy
-            local sound s
-            local string impactModel = GetPlayerLeapImpactFx(dex.user)
-            local real dummyScale = GetLeapMissileScaleForArea(baseArea)
-
-            if bonus and abilityChoice == LOADOUT_ORB_ABILITY_WIND then
-                set baseArea = GetLeapMissileWindArea(inst)
-            endif
-            set dummyScale = GetLeapMissileScaleForArea(baseArea)
-
-            // Fire modifies raw damage.
-            if bonus and abilityChoice == LOADOUT_ORB_ABILITY_FIRE then
-                set finalDamage = LoadoutGetFireDamage(storedDamage[missile], inst)
-            endif
-
-            // Create Impact Dummy
-            set iDummy = CreateUnit(dex.user, 'dumi', x, y, 270)
-            call UnitAddAbility(iDummy, 'Aloc') // Locust
-            call PauseUnit(iDummy, true)
-            call SetUnitScale(iDummy, dummyScale, dummyScale, dummyScale)
-            
-            if IMPACT_SOUND != "" then
-                set s = CreateSound(IMPACT_SOUND, false, false, false, 10, 10, "")
-                call SetSoundPosition(s, x, y, 0)
-                call SetSoundVolume(s, 127)
-                call StartSound(s)
-                call KillSoundWhenDone(s)
-                set s = null
-            endif
-
-            call QueueImpactDummy(iDummy, impactModel)
-            set iDummy = null
-
-            // Area Damage
-            call GroupEnumUnitsInRange(SpellIndex.GLOBAL_GROUP, x, y, baseArea, null)
-            loop
-                set enumUnit = FirstOfGroup(SpellIndex.GLOBAL_GROUP)
-                exitwhen enumUnit == null
-                
-                if IsUnitEnemy(enumUnit, dex.user) and not IsUnitType(enumUnit, UNIT_TYPE_DEAD) and not IsUnitType(enumUnit, UNIT_TYPE_MAGIC_IMMUNE) then
-                    // Ray: Normal damage
-                    if abilityChoice == LOADOUT_ORB_ABILITY_RAY or not bonus then
-                        call WaveRecordDamageCredit(source, enumUnit)
-                        call UnitDamageTarget(source, enumUnit, finalDamage, false, false, ATTACK_TYPE, DAMAGE_TYPE, null)
-                    
-                    // Poison: DoT
-                    elseif bonus and abilityChoice == LOADOUT_ORB_ABILITY_POISON then
-                        call ApplyPoison(source, enumUnit, LoadoutGetPoisonTickDamage(storedDamage[missile]), LoadoutGetPoisonDuration(inst))
-                    
-                    // Dark: Max HP %
-                    elseif bonus and abilityChoice == LOADOUT_ORB_ABILITY_DARK then
-                        set finalDamage = storedDamage[missile] + LoadoutGetDarkBonus(enumUnit, inst)
-                        call WaveRecordDamageCredit(source, enumUnit)
-                        call UnitDamageTarget(source, enumUnit, finalDamage, false, false, ATTACK_TYPE, DAMAGE_TYPE, null)
-                        call ShowCustomLoadoutText(enumUnit, FormatLoadoutDamageText(finalDamage), DARK_TEXT_R, DARK_TEXT_G, DARK_TEXT_B)
-
-                    // Fire: Just display text
-                    elseif bonus and abilityChoice == LOADOUT_ORB_ABILITY_FIRE then
-                        call WaveRecordDamageCredit(source, enumUnit)
-                        call UnitDamageTarget(source, enumUnit, finalDamage, false, false, ATTACK_TYPE, DAMAGE_TYPE, null)
-                        call ShowCustomLoadoutText(enumUnit, FormatLoadoutDamageText(finalDamage), FIRE_TEXT_R, FIRE_TEXT_G, FIRE_TEXT_B)
-
-                    // Blood: Just display text
-                    elseif bonus and abilityChoice == LOADOUT_ORB_ABILITY_BLOOD then
-                        set bloodMult = LoadoutGetBloodRandomMultiplier(inst)
-                        set finalDamage = storedDamage[missile]*bloodMult
-                        set bloodPct = LoadoutBloodMultiplierToPercent(bloodMult)
-                        call WaveRecordDamageCredit(source, enumUnit)
-                        call UnitDamageTarget(source, enumUnit, finalDamage, false, false, ATTACK_TYPE, DAMAGE_TYPE, null)
-                        call ShowCustomLoadoutText(enumUnit, FormatLoadoutDamageText(finalDamage) + "   //" + I2S(bloodPct) + "%", BLOOD_TEXT_R, BLOOD_TEXT_G, BLOOD_TEXT_B)
-                    
-                    // Wind: Just damage
-                    elseif bonus and abilityChoice == LOADOUT_ORB_ABILITY_WIND then
-                        set finalDamage = LoadoutGetWindDamage(storedDamage[missile])
-                        call WaveRecordDamageCredit(source, enumUnit)
-                        call UnitDamageTarget(source, enumUnit, finalDamage, false, false, ATTACK_TYPE, DAMAGE_TYPE, null)
-                    endif
-                endif
-                
-                call GroupRemoveUnit(SpellIndex.GLOBAL_GROUP, enumUnit)
-            endloop
-        endmethod
-
-        private static method onFinish takes Missile missile returns boolean
-            call applyImpact(missile)
+        private static method onRemove takes Missile missile returns boolean
+            set missileProfile[missile] = WEAPON_PROFILE_NONE
+            set missileDamage[missile] = 0.00
+            set missileArea[missile] = 0.00
+            set missilePulseRemaining[missile] = 0.00
+            set missileSpeed[missile] = 0.00
+            set missileTravel[missile] = 0.00
+            set missileMaxRange[missile] = 0.00
+            set missileSegmentRange[missile] = 0.00
+            set missileSource[missile] = null
+            set missileOwner[missile] = null
+            call SpellIndex(missile.data).destroy()
             return true
-        endmethod
-
-        private static method onCollide takes Missile missile, unit hit returns boolean
-            return false // Leap doesn't collide with units mid-air
-        endmethod
-
-        private static method onDestructable takes Missile missile, destructable dest returns boolean
-            return false // Leap doesn't collide with trees
         endmethod
 
         implement MissileStruct
     endstruct
 
-    private function Cleanup takes SpellIndex dex returns nothing
-        local unit source = dex.source
-        local integer id = GetHandleId(source)
-        if active.has(id) and (active[id] == dex) then
-            call active.remove(id)
-        endif
-        if GetUnitTypeId(source) != 0 then
-            call SetUnitTimeScale(source, ANIMATION_TIME_SCALE_ON_END)
-        endif
-        if delayedAnimTimer[dex] != null then
-            call ReleaseTimer(delayedAnimTimer[dex])
-            set delayedAnimTimer[dex] = null
-        endif
-        set rapidTargetX[dex] = 0.0
-        set rapidTargetY[dex] = 0.0
-        call ReleaseTimer(dex.clock)
-        call dex.destroy()
-        set source = null
-    endfunction
-
-
-    private function DelayedStartAnimation takes nothing returns nothing
-        local timer t = GetExpiredTimer()
-        local SpellIndex dex = GetTimerData(t)
-        local unit source = dex.source
-        local integer id
-        set delayedAnimTimer[dex] = null
-        
-        if (GetUnitTypeId(source) != 0) and UnitAlive(source) and (dex.phase >= 0) then
-            set id = GetHandleId(source)
-            if active.has(id) and (active[id] == dex) then
-                call SetUnitAnimation(source, CAST_ANIMATION)
-                if ANIMATION_TAG != "" then
-                    call AddUnitAnimationProperties(source, ANIMATION_TAG, true)
-                endif
-            endif
-        endif
-        
-        call ReleaseTimer(t)
-        set source = null
-        set t = null
-    endfunction
-
-    private function FireLeapMissile takes SpellIndex dex returns nothing
-        local unit source = dex.source
-        local player owner = dex.user
-        local real x = GetUnitX(source)
-        local real y = GetUnitY(source)
-        local real tx = rapidTargetX[dex]
-        local real ty = rapidTargetY[dex]
-        local real dx = tx - x
-        local real dy = ty - y
-        local real distance = SquareRoot(dx * dx + dy * dy)
-        local real arc = 0.0
-        local real speed
-        local real damage
-        local integer instances
-        local integer chosen
-        local integer chosenLevel
-        local SpellIndex mDex
+    private function LaunchSpecialMissile takes unit source, player owner, integer profileId, real angle, real targetX, real targetY returns nothing
+        local real x = GetUnitX(source) + DEFAULT_COLLISION*Cos(angle)
+        local real y = GetUnitY(source) + DEFAULT_COLLISION*Sin(angle)
+        local real range = WeaponProfileGetRange(profileId)
+        local real endZ = MISSILE_START_Z
         local Missile missile
-        local string cFx1 = GetPlayerLeapCasterFx1(owner)
-        local string cFx2 = GetPlayerLeapCasterFx2(owner)
-        local string dFx1 = GetPlayerLeapDummyFx1(owner)
-        local string dFx2 = GetPlayerLeapDummyFx2(owner)
-        local real dummyScale = 1.0
-        local real companionFacing = Atan2(ty - y, tx - x)*bj_RADTODEG
-        local integer companionUnitId = GetPlayerLeapCompanionUnitId(owner)
-        local unit companion
-        local unit fxTarget
+        local SpellIndex dex = SpellIndex.create()
+        local real speed = WeaponProfileGetMissileSpeed(profileId)
 
-        set chosen = GetPlayerMissileAbilityChoice(owner)
-        set chosenLevel = 0
-        if chosen != 0 then
-            set chosenLevel = GetUnitAbilityLevel(source, chosen)
+        if profileId == WEAPON_PROFILE_GRENADE then
+            set angle = Atan2(targetY - y, targetX - x)
+            set range = SquareRoot((targetX - x)*(targetX - x) + (targetY - y)*(targetY - y))
+            set range = MinReal(range, WeaponProfileGetRange(profileId))
+            set endZ = MISSILE_GROUND_Z
+        elseif profileId == WEAPON_PROFILE_DROP_SHOT then
+            set endZ = MISSILE_GROUND_Z
         endif
+        if range < 1.00 then
+            set range = 1.00
+        endif
+        set missile = Missile.create(x, y, MISSILE_START_Z, angle, range, endZ)
 
-        if USE_FIXED_TIME then
-            if FIXED_JUMP_TIME > 0.0 then
-                set speed = distance / FIXED_JUMP_TIME
-            else
-                set speed = BASE_JUMP_SPEED
-            endif
+        set dex.source = source
+        set dex.user = owner
+        set missile.source = source
+        set missile.owner = owner
+        set missile.data = dex
+        set missile.model = WeaponProfileGetTierMissileModel(profileId, 1)
+        set missile.scale = WeaponProfileGetMissileScale(profileId)
+        set missile.collision = DEFAULT_COLLISION
+        if profileId == WEAPON_PROFILE_GRENADE then
+            set missile.arc = GRENADE_ARC
+        endif
+        call missile.setMovementSpeed(speed)
+
+        set missileProfile[missile] = profileId
+        set missileDamage[missile] = WeaponProfileGetDamage(profileId)
+        set missileArea[missile] = WeaponProfileGetArea(profileId)
+        if profileId == WEAPON_PROFILE_DROP_SHOT then
+            set missilePulseRemaining[missile] = DROP_BOUNCE_INTERVAL
         else
-            set speed = BASE_JUMP_SPEED + GetPlayerMissileSpeedBonus(owner)
+            set missilePulseRemaining[missile] = 0.00
+        endif
+        set missileSpeed[missile] = speed
+        set missileTravel[missile] = 0.00
+        set missileMaxRange[missile] = range
+        set missileSegmentRange[missile] = range
+        set missileSource[missile] = source
+        set missileOwner[missile] = owner
+
+        if profileId == WEAPON_PROFILE_DROP_SHOT then
+            call ConfigureDropBounceSegment(missile)
         endif
 
-        if speed < 1.0 then
-            set speed = 1.0
-        endif
-
-        set damage = GetPlayerMissileDamageValue(owner)*BASE_DAMAGE_MULT
-        if damage < 0. then
-            set damage = 0.
-        endif
-        set instances = GetPlayerMissileInstanceCount(owner)
-        if instances < 1 then
-            set instances = 1
-        endif
-
-        set mDex = SpellIndex.create()
-        set mDex.source = source
-        set mDex.user = owner
-        set missile = Missile.createXYZ(x, y, 0.0, tx, ty, 0.0)
-        set missile.data = mDex
-        set missile.collision = 0.0 // Important so it doesnt collide
-        if distance > 0.0 then
-            set arc = Atan((4.0*BASE_JUMP_HEIGHT)/distance)
-        else
-            set arc = 0.0
-        endif
-        set missile.arc = arc
-        if USE_FIXED_TIME and FIXED_JUMP_TIME > 0.0 then
-            call missile.flightTime2Speed(FIXED_JUMP_TIME)
-        else
-            call missile.setMovementSpeed(speed)
-        endif
-
-        set specialAbility[missile] = chosen
-        set storedDamage[missile] = damage
-        set effectInstances[missile] = instances
-        set bonusActive[missile] = (chosen != 0) and (chosenLevel > 0)
-
-        if companionUnitId == 0 then
-            set companionUnitId = COMPANION_DUMMY_FALLBACK_ID
-        endif
-        set companion = CreateUnit(owner, companionUnitId, x, y, 0.0)
-        if companion != null and GetUnitTypeId(companion) != 0 then
-            call UnitAddAbility(companion, 'Aloc')
-            call UnitAddAbility(companion, 'Amrf')
-            call UnitRemoveAbility(companion, 'Amrf')
-            call SetUnitPathing(companion, false)
-            call PauseUnit(companion, true)
-            call SetUnitFacing(companion, companionFacing)
-            call SetUnitScale(companion, dummyScale, dummyScale, dummyScale)
-            call SetUnitFlyHeight(companion, 0.0, 0.0)
-            set companionDummy[missile] = companion
-        else
-            set companionDummy[missile] = null
-        endif
-        
-        set fxTarget = companionDummy[missile]
-        if fxTarget == null or GetUnitTypeId(fxTarget) == 0 then
-            set fxTarget = missile.dummy
-            call SetUnitScale(fxTarget, dummyScale, dummyScale, dummyScale)
-        endif
-
-        // Attach all launch FX to the dummy visual target
-        if fxTarget != null and GetUnitTypeId(fxTarget) != 0 then
-            if cFx1 != null and cFx1 != "" then
-                set casterFx1[missile] = AddSpecialEffectTarget(cFx1, fxTarget, "chest")
-            endif
-            if cFx2 != null and cFx2 != "" then
-                set casterFx2[missile] = AddSpecialEffectTarget(cFx2, fxTarget, "origin")
-            endif
-            if dFx1 != null and dFx1 != "" then
-                set dummyFx1[missile] = AddSpecialEffectTarget(dFx1, fxTarget, "chest")
-            endif
-            if dFx2 != null and dFx2 != "" then
-                set dummyFx2[missile] = AddSpecialEffectTarget(dFx2, fxTarget, "origin")
-            endif
-        endif
-
-        // Special Ray init
-        if bonusActive[missile] and chosen == LOADOUT_ORB_ABILITY_RAY then
-            set rayLightning[missile] = AddLightningEx(RAY_LIGHTNING_TYPE, true, x, y, 0.0, x, y, 0.0)
-        endif
-        
-        set companion = null
-        set fxTarget = null
-        
-        call LeapMissileCore.launch(missile)
-
-        set source = null
-        set owner = null
+        call MetalSlugSpecialCore.launch(missile)
     endfunction
 
-    private function OnPeriodic takes nothing returns nothing
+    private function CleanupCast takes SpellIndex dex returns nothing
+        local integer id = 0
+        if dex == 0 or dex.phase == -999 then
+            return
+        endif
+        set dex.phase = -999
+        if GetUnitTypeId(dex.source) != 0 then
+            set id = GetHandleId(dex.source)
+            if active.has(id) and (active[id] == dex) then
+                call active.remove(id)
+            endif
+        endif
+        if dex.clock != null then
+            call ReleaseTimer(dex.clock)
+            set dex.clock = null
+        endif
+        set castProfile[dex] = WEAPON_PROFILE_NONE
+        set castAngle[dex] = 0.00
+        set castTargetX[dex] = 0.00
+        set castTargetY[dex] = 0.00
+        call dex.destroy()
+    endfunction
+
+    private function FireCastShot takes SpellIndex dex returns nothing
+        if GetUnitTypeId(dex.source) == 0 or not UnitAlive(dex.source) then
+            return
+        endif
+        if not WeaponInventoryConsumeShotForProfile(dex.user, castProfile[dex]) then
+            return
+        endif
+        call SetUnitAnimation(dex.source, "attack")
+        call LaunchSpecialMissile(dex.source, dex.user, castProfile[dex], castAngle[dex], castTargetX[dex], castTargetY[dex])
+    endfunction
+
+    private function OnCastTick takes nothing returns nothing
         local timer t = GetExpiredTimer()
         local SpellIndex dex = GetTimerData(t)
-        local real step = GetSafeFireInterval()
-
-        if (GetUnitTypeId(dex.source) == 0) or (not UnitAlive(dex.source)) or (dex.phase < 0) then
-            call Cleanup(dex)
+        local real step = GetSafeFireInterval(castProfile[dex])
+        if dex.time <= 0. or GetUnitTypeId(dex.source) == 0 or not UnitAlive(dex.source) then
+            call CleanupCast(dex)
             set t = null
             return
         endif
-
-        if dex.time <= 0. then
-            call Cleanup(dex)
-            set t = null
-            return
-        endif
-
-        call SetUnitAnimation(dex.source, CAST_ANIMATION)
-        call FireLeapMissile(dex)
+        call FireCastShot(dex)
         set dex.time = dex.time - step
-
         if dex.time <= 0. then
-            call Cleanup(dex)
+            call CleanupCast(dex)
+        else
+            call TimerStart(dex.clock, step, false, function OnCastTick)
         endif
-
         set t = null
     endfunction
 
-    private function OnEffect takes nothing returns nothing
-        local unit source = GetTriggerUnit()
-        local player owner = GetTriggerPlayer()
+    function LoadoutMetalSlugSpecialFireProfile takes unit source, player owner, integer profileId, real tx, real ty returns boolean
         local integer id = GetHandleId(source)
+        local real duration = WeaponProfileGetCastDuration(profileId)
+        local real step = GetSafeFireInterval(profileId)
+        local SpellIndex dex
         local real x = GetUnitX(source)
         local real y = GetUnitY(source)
-        local real tx = GetSpellTargetX()
-        local real ty = GetSpellTargetY()
-        local SpellIndex dex
-        local real step = GetSafeFireInterval()
-        local boolean useRapid = GetPlayerMissileUseRapidFire(owner)
 
-        if ShouldValidateLeapMissileCastPoint(source) and not ValidateLeapMissileCastPoint(source, owner, tx, ty) then
-            set source = null
-            set owner = null
-            return
+        if not WeaponProfileIsWeapon(profileId) then
+            return false
         endif
 
         if active.has(id) then
             set dex = active[id]
-            if (dex.phase >= 0) and (GetUnitTypeId(dex.source) != 0) and UnitAlive(dex.source) then
-                set rapidTargetX[dex] = tx
-                set rapidTargetY[dex] = ty
-                set dex.time = FIRE_DURATION
-                call SetUnitTimeScale(source, RAPID_FIRE_ANIMATION_TIME_SCALE)
-                set source = null
-                set owner = null
-                return
+            if (GetUnitTypeId(dex.source) != 0) and UnitAlive(dex.source) then
+                set castProfile[dex] = profileId
+                set castAngle[dex] = Atan2(ty - y, tx - x)
+                set castTargetX[dex] = tx
+                set castTargetY[dex] = ty
+                set dex.time = duration
+                call SetUnitAnimation(dex.source, "attack")
+                return true
             endif
-            call Cleanup(dex)
+            call CleanupCast(dex)
         endif
 
         set dex = SpellIndex.create()
         set dex.source = source
         set dex.user = owner
-        if useRapid and (FIRE_DURATION > 0.) then
-            set dex.time = FIRE_DURATION
-        else
-            set dex.time = 0.
-        endif
+        set dex.time = duration
         set dex.phase = 1
-        set dex.clock = NewTimerEx(dex)
-        call SetTimerDebugTag(dex.clock, TIMER_DEBUG_TAG_LOADOUT_LEAP_MISS)
-        set rapidTargetX[dex] = tx
-        set rapidTargetY[dex] = ty
+        set castProfile[dex] = profileId
+        set castAngle[dex] = Atan2(ty - y, tx - x)
+        set castTargetX[dex] = tx
+        set castTargetY[dex] = ty
+        set dex.clock = null
         set active[id] = dex
 
-        set delayedAnimTimer[dex] = NewTimerEx(dex)
-        call SetTimerDebugTag(delayedAnimTimer[dex], TIMER_DEBUG_TAG_LOADOUT_LEAP_MISS)
-        call TimerStart(delayedAnimTimer[dex], FIRST_ANIMATION_DELAY, false, function DelayedStartAnimation)
-
-        call SetUnitTimeScale(source, RAPID_FIRE_ANIMATION_TIME_SCALE)
-        call FireLeapMissile(dex)
+        call FireCastShot(dex)
         set dex.time = dex.time - step
-
         if dex.time > 0. then
-            call TimerStart(dex.clock, step, true, function OnPeriodic)
+            set dex.clock = NewTimerEx(dex)
+            call SetTimerDebugTag(dex.clock, TIMER_DEBUG_TAG_LOADOUT_MISSILE)
+            call TimerStart(dex.clock, step, false, function OnCastTick)
         else
-            call Cleanup(dex)
+            call CleanupCast(dex)
         endif
 
+        return true
+    endfunction
+
+    private function OnEffect takes nothing returns nothing
+        local unit source = GetTriggerUnit()
+        local player owner = GetTriggerPlayer()
+        call LoadoutMetalSlugSpecialFireProfile(source, owner, WeaponProfileFromFireAbility(GetSpellAbilityId()), GetSpellTargetX(), GetSpellTargetY())
         set source = null
         set owner = null
     endfunction
 
     private function Init takes nothing returns nothing
         set active = Table.create()
-        set error = CreateSoundFromLabel("InterfaceError", false, false, false, 10, 10)
-        call RegisterSpellEffectEvent(LOADOUT_LEAP_MISSILE_SPELL, function OnEffect)
+        call RegisterSpellEffectEvent(WeaponProfileGetFireAbility(WEAPON_PROFILE_SHOTGUN), function OnEffect)
+        call RegisterSpellEffectEvent(WeaponProfileGetFireAbility(WEAPON_PROFILE_ROCKET_LAUNCHER), function OnEffect)
+        call RegisterSpellEffectEvent(WeaponProfileGetFireAbility(WEAPON_PROFILE_GRENADE), function OnEffect)
+        call RegisterSpellEffectEvent(WeaponProfileGetFireAbility(WEAPON_PROFILE_DROP_SHOT), function OnEffect)
+        call RegisterSpellEffectEvent(WeaponProfileGetFireAbility(WEAPON_PROFILE_FLAME_SHOT), function OnEffect)
+        call RegisterSpellEffectEvent(WeaponProfileGetFireAbility(WEAPON_PROFILE_SUPER_GRENADE), function OnEffect)
     endfunction
+
 endlibrary
 
-// ===== END: MyMissiles/Loadout LeapMissile.j =====
+// ===== END: MyMissiles/Loadout MetalSlugSpecial.j =====
 
 // ===== BEGIN: MyMissiles/Loadout Missile.j =====
 //TESH.scrollpos=0
@@ -12686,7 +12352,7 @@ library LoadoutOrbBalance
 endlibrary
 
 
-library LoadoutMissile initializer Init requires TimerUtils, SpellIndex, Missile, PlayerMissileLoadout, DamageTextUtil, LoadoutOrbBalance, LoadoutIntFullManaSwapNew, WaveBarrierSkills /* v2.0
+library LoadoutMissile initializer Init requires TimerUtils, SpellIndex, Missile, PlayerMissileLoadout, DamageTextUtil, LoadoutOrbBalance, LoadoutIntFullManaSwapNew, WaveBarrierSkills, WeaponProfileConfig, WeaponInventoryCore /* v2.0
 *************************************************************************************
 *
 *   Base missile behavior:
@@ -12707,20 +12373,24 @@ library LoadoutMissile initializer Init requires TimerUtils, SpellIndex, Missile
 //* ==============
     globals
         private constant integer LOADOUT_MISSILE_SPELL = 'U0A1'
+        private constant integer LOADOUT_MISSILE_RIFLE_SPELL = 'U0A6'
+        private constant integer LOADOUT_MISSILE_ASSAULT_SPELL = 'U0A7'
+        private constant integer LOADOUT_MISSILE_LASER_SPELL = 'U0A9'
+        private constant integer LOADOUT_MISSILE_IRON_LIZARD_SPELL = 'U0AC'
 
         //* Rapid Fire options.
         private constant real FIRE_DURATION = 0.75
         private constant integer FIRE_COUNT = 5
         private constant string CAST_ANIMATION = "attack"
         private constant real FIRST_ANIMATION_DELAY = 0.03
-        private constant real RAPID_FIRE_ANIMATION_TIME_SCALE = 5.25
+        private constant real RAPID_FIRE_ANIMATION_TIME_SCALE = 10.25
         private constant real ANIMATION_TIME_SCALE_ON_END = 1.00
 
         private constant attacktype ATTACK_TYPE = ATTACK_TYPE_NORMAL
         private constant damagetype DAMAGE_TYPE = DAMAGE_TYPE_MAGIC
 
         //* Base missile defaults.
-        private constant real BASE_MISSILE_SPEED = 1500.
+        private constant real BASE_MISSILE_SPEED = 2500.
         private constant real MIN_MISSILE_SPEED = 1.
         private constant real FIXED_TRAVEL_DISTANCE = 2250.
         private constant real MISSILE_START_Z = 75.
@@ -12775,6 +12445,7 @@ library LoadoutMissile initializer Init requires TimerUtils, SpellIndex, Missile
         //* Rapid fire state.
         private Table active
         private real array aim
+        private integer array activeWeaponProfile
     endglobals
 
     private keyword LoadoutCore
@@ -13009,9 +12680,10 @@ library LoadoutMissile initializer Init requires TimerUtils, SpellIndex, Missile
             endif
 
             if not bonusActive[missile] then
+                set wasAlive = UnitAlive(hit)
                 call DamageUnit(missile.source, hit, baseDamage)
                 call HealCasterOnHit(missile.source, missile.owner)
-                return true
+                return wasAlive and UnitAlive(hit)
             endif
 
             if abil == LOADOUT_ORB_ABILITY_RAY then
@@ -13034,45 +12706,51 @@ library LoadoutMissile initializer Init requires TimerUtils, SpellIndex, Missile
 
             elseif abil == LOADOUT_ORB_ABILITY_FIRE then
                 set finalDamage = LoadoutGetFireDamage(baseDamage, inst)
+                set wasAlive = UnitAlive(hit)
                 call DamageUnit(missile.source, hit, finalDamage)
                 call HealCasterOnHit(missile.source, missile.owner)
                 call ShowCustomLoadoutText(hit, FormatLoadoutDamageText(finalDamage), FIRE_TEXT_R, FIRE_TEXT_G, FIRE_TEXT_B)
-                return true
+                return wasAlive and UnitAlive(hit)
 
             elseif abil == LOADOUT_ORB_ABILITY_POISON then
+                set wasAlive = UnitAlive(hit)
                 call ApplyPoison(missile.source, hit, LoadoutGetPoisonTickDamage(baseDamage), LoadoutGetPoisonDuration(inst))
                 call HealCasterOnHit(missile.source, missile.owner)
-                return true
+                return wasAlive and UnitAlive(hit)
 
             elseif abil == LOADOUT_ORB_ABILITY_WIND then
                 set radius = LoadoutGetWindAoe(inst)
                 set finalDamage = LoadoutGetWindDamage(baseDamage)
+                set wasAlive = UnitAlive(hit)
                 call DamageArea(missile.source, missile.owner, missile.x, missile.y, radius, finalDamage)
                 call HealCasterOnHit(missile.source, missile.owner)
                 call ShowCustomLoadoutText(hit, FormatLoadoutDamageText(finalDamage) + "/[" + FormatLoadoutDamageText(radius) + "]", WIND_TEXT_R, WIND_TEXT_G, WIND_TEXT_B)
-                return true
+                return wasAlive and UnitAlive(hit)
 
             elseif abil == LOADOUT_ORB_ABILITY_DARK then
                 set extraDamage = LoadoutGetDarkBonus(hit, inst)
                 set finalDamage = baseDamage + extraDamage
+                set wasAlive = UnitAlive(hit)
                 call DamageUnit(missile.source, hit, finalDamage)
                 call HealCasterOnHit(missile.source, missile.owner)
                 call ShowCustomLoadoutText(hit, FormatLoadoutDamageText(finalDamage), DARK_TEXT_R, DARK_TEXT_G, DARK_TEXT_B)
-                return true
+                return wasAlive and UnitAlive(hit)
 
             elseif abil == LOADOUT_ORB_ABILITY_BLOOD then
                 set bloodMult = LoadoutGetBloodRandomMultiplier(inst)
                 set finalDamage = baseDamage*bloodMult
                 set bloodPct = LoadoutBloodMultiplierToPercent(bloodMult)
+                set wasAlive = UnitAlive(hit)
                 call DamageUnit(missile.source, hit, finalDamage)
                 call HealCasterOnHit(missile.source, missile.owner)
                 call ShowCustomLoadoutText(hit, FormatLoadoutDamageText(finalDamage) + "   //" + I2S(bloodPct) + "%", CRIT_TEXT_R, CRIT_TEXT_G, CRIT_TEXT_B)
-                return true
+                return wasAlive and UnitAlive(hit)
             endif
 
+            set wasAlive = UnitAlive(hit)
             call DamageUnit(missile.source, hit, baseDamage)
             call HealCasterOnHit(missile.source, missile.owner)
-            return true
+            return wasAlive and UnitAlive(hit)
         endmethod
 
         private static method onFinish takes Missile missile returns boolean
@@ -13114,7 +12792,12 @@ library LoadoutMissile initializer Init requires TimerUtils, SpellIndex, Missile
     endstruct
 
     private function Cleanup takes SpellIndex dex returns nothing
-        local integer id = GetHandleId(dex.source)
+        local integer id = 0
+        if dex == 0 or dex.phase == -999 then
+            return
+        endif
+        set dex.phase = -999
+        set id = GetHandleId(dex.source)
         if active.has(id) and (active[id] == dex) then
             call active.remove(id)
         endif
@@ -13126,7 +12809,11 @@ library LoadoutMissile initializer Init requires TimerUtils, SpellIndex, Missile
             set delayedAnimTimer[dex] = null
         endif
         set aim[dex] = 0.
-        call ReleaseTimer(dex.clock)
+        set activeWeaponProfile[dex] = WEAPON_PROFILE_NONE
+        if dex.clock != null then
+            call ReleaseTimer(dex.clock)
+            set dex.clock = null
+        endif
         call dex.destroy()
     endfunction
 
@@ -13147,12 +12834,9 @@ library LoadoutMissile initializer Init requires TimerUtils, SpellIndex, Missile
         set t = null
     endfunction
 
-    private function FireMissile takes SpellIndex dex returns nothing
-        local unit source = dex.source
-        local player owner = dex.user
-        local real x = GetUnitX(source)
-        local real y = GetUnitY(source)
-        local real angle = aim[dex]
+    private function LaunchSingleLoadoutMissile takes unit source, player owner, real angle, real lateralOffset, integer profileId returns nothing
+        local real x = GetUnitX(source) + lateralOffset*Cos(angle + bj_PI/2.)
+        local real y = GetUnitY(source) + lateralOffset*Sin(angle + bj_PI/2.)
         local string baseModel
         local string wrapModel
         local real speed
@@ -13160,20 +12844,26 @@ library LoadoutMissile initializer Init requires TimerUtils, SpellIndex, Missile
         local integer instances
         local integer chosen
         local integer chosenLevel
-        local SpellIndex mDex = SpellIndex.create()
-        local Missile missile = Missile.create(x, y, MISSILE_START_Z, angle, FIXED_TRAVEL_DISTANCE, MISSILE_START_Z)
+        local SpellIndex mDex
+        local Missile missile
 
+        if not WeaponInventoryConsumeShotForProfile(owner, profileId) then
+            return
+        endif
+
+        set missile = Missile.create(x, y, MISSILE_START_Z, angle, WeaponProfileGetRange(profileId), MISSILE_START_Z)
+        set mDex = SpellIndex.create()
         set chosen = GetPlayerMissileAbilityChoice(owner)
         set chosenLevel = 0
         if chosen != 0 then
             set chosenLevel = GetUnitAbilityLevel(source, chosen)
         endif
 
-        set speed = BASE_MISSILE_SPEED + GetPlayerMissileSpeedBonus(owner)
+        set speed = WeaponProfileGetMissileSpeed(profileId) + GetPlayerMissileSpeedBonus(owner)
         if speed < MIN_MISSILE_SPEED then
             set speed = MIN_MISSILE_SPEED
         endif
-        set damage = GetPlayerMissileDamageValue(owner)
+        set damage = WeaponProfileGetDamage(profileId)
         if damage < 0. then
             set damage = 0.
         endif
@@ -13182,7 +12872,7 @@ library LoadoutMissile initializer Init requires TimerUtils, SpellIndex, Missile
             set instances = 1
         endif
 
-        set baseModel = GetPlayerMissileModelPath(owner)
+        set baseModel = WeaponProfileGetTierMissileModel(profileId, 1)
         if (baseModel == "") then
             set baseModel = BASE_MISSILE_MODEL
         endif
@@ -13194,7 +12884,7 @@ library LoadoutMissile initializer Init requires TimerUtils, SpellIndex, Missile
         set missile.owner = owner
         set missile.data = mDex
         set missile.model = baseModel
-        set missile.scale = MISSILE_SCALE
+        set missile.scale = WeaponProfileGetMissileScale(profileId)
         set missile.collision = MISSILE_COLLISION
         call missile.setMovementSpeed(speed)
 
@@ -13209,35 +12899,62 @@ library LoadoutMissile initializer Init requires TimerUtils, SpellIndex, Missile
 
         if bonusActive[missile] and (wrapModel != "") then
             set overlayFx[missile] = AddSpecialEffectTarget(wrapModel, missile.dummy, WRAP_ATTACH_POINT)
-            //aqui la cosita del mana
         else
             set overlayFx[missile] = null
         endif
 
         call LoadoutCore.launch(missile)
+    endfunction
+
+    private function FireMissile takes SpellIndex dex returns nothing
+        local unit source = dex.source
+        local player owner = dex.user
+        local real angle = aim[dex]
+        local integer profileId = activeWeaponProfile[dex]
+
+        if not WeaponProfileIsWeapon(profileId) then
+            set profileId = WEAPON_PROFILE_HANDGUN
+        endif
+
+        if WeaponProfileGetBehavior(profileId) == WEAPON_BEHAVIOR_DOUBLE_STRAIGHT then
+            call LaunchSingleLoadoutMissile(source, owner, angle, -42.00, profileId)
+            call LaunchSingleLoadoutMissile(source, owner, angle, 42.00, profileId)
+        else
+            call LaunchSingleLoadoutMissile(source, owner, angle, 0.00, profileId)
+        endif
 
         set source = null
         set owner = null
     endfunction
 
     function GetLoadoutMissileMoveCastDuration takes nothing returns real
-        return FIRE_DURATION
+        return WeaponProfileGetCastDuration(WEAPON_PROFILE_HANDGUN)
     endfunction
 
-    private function GetSafeFireInterval takes nothing returns real
-        if FIRE_DURATION <= 0. then
+    function GetLoadoutMissileMoveCastDurationForAbility takes integer abilityId returns real
+        local integer profileId = WeaponProfileFromFireAbility(abilityId)
+        if not WeaponProfileIsWeapon(profileId) then
+            set profileId = WEAPON_PROFILE_HANDGUN
+        endif
+        return WeaponProfileGetCastDuration(profileId)
+    endfunction
+
+    private function GetSafeFireInterval takes integer profileId returns real
+        local real duration = WeaponProfileGetCastDuration(profileId)
+        local integer count = WeaponProfileGetCastCount(profileId)
+        if duration <= 0. then
             return 0.03125
         endif
-        if FIRE_COUNT <= 0 then
-            return FIRE_DURATION
+        if count <= 0 then
+            return duration
         endif
-        return FIRE_DURATION / I2R(FIRE_COUNT)
+        return duration / I2R(count)
     endfunction
 
     private function OnPeriodic takes nothing returns nothing
         local timer t = GetExpiredTimer()
         local SpellIndex dex = GetTimerData(t)
-        local real step = GetSafeFireInterval()
+        local real step = GetSafeFireInterval(activeWeaponProfile[dex])
 
         if (GetUnitTypeId(dex.source) == 0) or (not UnitAlive(dex.source)) or (dex.phase < 0) then
             call Cleanup(dex)
@@ -13282,27 +12999,29 @@ library LoadoutMissile initializer Init requires TimerUtils, SpellIndex, Missile
         call MarkCanceled(GetTriggerUnit())
     endfunction
 
-    private function OnEffect takes nothing returns nothing
-        local unit source = GetTriggerUnit()
-        local player owner = GetTriggerPlayer()
+    function LoadoutMissileFireProfile takes unit source, player owner, integer profileId, real tx, real ty returns boolean
         local integer id = GetHandleId(source)
         local SpellIndex dex
         local real x = GetUnitX(source)
         local real y = GetUnitY(source)
-        local real tx = GetSpellTargetX()
-        local real ty = GetSpellTargetY()
         local boolean useRapid
-        local real step = GetSafeFireInterval()
+        local real duration
+        local real step
+
+        if not WeaponProfileIsWeapon(profileId) then
+            set profileId = WEAPON_PROFILE_HANDGUN
+        endif
+        set duration = WeaponProfileGetCastDuration(profileId)
+        set step = GetSafeFireInterval(profileId)
 
         if active.has(id) then
             set dex = active[id]
             if (dex.phase >= 0) and (GetUnitTypeId(dex.source) != 0) and UnitAlive(dex.source) then
                 set aim[dex] = Atan2(ty - y, tx - x)
-                set dex.time = FIRE_DURATION
+                set activeWeaponProfile[dex] = profileId
+                set dex.time = duration
                 call SetUnitTimeScale(source, RAPID_FIRE_ANIMATION_TIME_SCALE)
-                set source = null
-                set owner = null
-                return
+                return true
             endif
             call Cleanup(dex)
         endif
@@ -13311,8 +13030,9 @@ library LoadoutMissile initializer Init requires TimerUtils, SpellIndex, Missile
         set dex.source = source
         set dex.user = owner
         set useRapid = GetPlayerMissileUseRapidFireMissile(owner)
-        if useRapid and (FIRE_DURATION > 0.) then
-            set dex.time = FIRE_DURATION
+        set activeWeaponProfile[dex] = profileId
+        if useRapid and (duration > 0.) then
+            set dex.time = duration
         else
             set dex.time = 0.
         endif
@@ -13336,6 +13056,13 @@ library LoadoutMissile initializer Init requires TimerUtils, SpellIndex, Missile
             call Cleanup(dex)
         endif
 
+        return true
+    endfunction
+
+    private function OnEffect takes nothing returns nothing
+        local unit source = GetTriggerUnit()
+        local player owner = GetTriggerPlayer()
+        call LoadoutMissileFireProfile(source, owner, WeaponProfileFromFireAbility(GetSpellAbilityId()), GetSpellTargetX(), GetSpellTargetY())
         set source = null
         set owner = null
     endfunction
@@ -13343,6 +13070,10 @@ library LoadoutMissile initializer Init requires TimerUtils, SpellIndex, Missile
     private function Init takes nothing returns nothing
         set active = Table.create()
         call RegisterSpellEffectEvent(LOADOUT_MISSILE_SPELL, function OnEffect)
+        call RegisterSpellEffectEvent(LOADOUT_MISSILE_RIFLE_SPELL, function OnEffect)
+        call RegisterSpellEffectEvent(LOADOUT_MISSILE_ASSAULT_SPELL, function OnEffect)
+        call RegisterSpellEffectEvent(LOADOUT_MISSILE_LASER_SPELL, function OnEffect)
+        // Iron Lizard has a dedicated billiard-bounce behavior in LoadoutIronLizard.
         //call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_ISSUED_ORDER, function OnOrder)
         call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_ISSUED_POINT_ORDER, function OnPointOrder)
         call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_ISSUED_TARGET_ORDER, function OnTargetOrder)
@@ -13354,7 +13085,7 @@ endlibrary
 // ===== BEGIN: MyMissiles/Loadout RocketLauncher.j =====
 //TESH.scrollpos=0
 //TESH.alwaysfold=0
-library LoadoutRocketLauncher initializer Init requires TimerUtils, SpellIndex, Missile, PlayerMissileLoadout, DamageTextUtil, LoadoutOrbBalance, LoadoutIntFullManaSwapNew, Table, WaveBarrierSkills, WaveDamageCredit
+library LoadoutRocketLauncher initializer Init requires TimerUtils, SpellIndex, Missile, PlayerMissileLoadout, DamageTextUtil, LoadoutOrbBalance, LoadoutIntFullManaSwapNew, Table, WaveBarrierSkills, WaveDamageCredit, WeaponProfileConfig, WeaponInventoryCore
 //******************************************************************************
 // Shotgun-style burst spell that reuses TimerUtils, LoadoutMissile orb behavior.
 //******************************************************************************
@@ -13372,7 +13103,7 @@ library LoadoutRocketLauncher initializer Init requires TimerUtils, SpellIndex, 
         private constant attacktype ATTACK_TYPE = ATTACK_TYPE_NORMAL
         private constant damagetype DAMAGE_TYPE = DAMAGE_TYPE_MAGIC
 
-        private constant integer BURST_COUNT = 2
+        private constant integer BURST_COUNT = 1
         private constant real BURST_SPREAD_DEG = 05.
         private constant real BURST_STAGGER_INTERVAL = 0.03
         private constant real MISSILE_START_Z = 75.
@@ -13384,7 +13115,7 @@ library LoadoutRocketLauncher initializer Init requires TimerUtils, SpellIndex, 
         private constant real HOMING_TURN_RATE = 0.60
         private constant real HOMING_SCAN_INTERVAL = 0.10
         private constant real MISSILE_SCALE = 1.00
-        private constant real BASE_DAMAGE_MULT = 2
+        private constant real BASE_DAMAGE_MULT = 1
         private constant string BASE_MISSILE_MODEL = "Abilities\\Weapons\\Bolt\\BoltImpact.mdl"
         private constant string WRAP_ATTACH_POINT = "origin"
 
@@ -13577,18 +13308,27 @@ library LoadoutRocketLauncher initializer Init requires TimerUtils, SpellIndex, 
         set target = null
     endfunction
 
+    private function ContinueHomingAfterKill takes Missile missile returns boolean
+        set missile.target = null
+        set homingScanRemaining[missile] = 0.
+        call ResumeStraightFlight(missile)
+        return false
+    endfunction
+
     function GetLoadoutRocketLauncherMoveCastDuration takes nothing returns real
-        return FIRE_DURATION
+        return WeaponProfileGetCastDuration(WEAPON_PROFILE_ENEMY_CHASER)
     endfunction
 
     private function GetSafeFireInterval takes nothing returns real
-        if FIRE_DURATION <= 0. then
+        local real duration = WeaponProfileGetCastDuration(WEAPON_PROFILE_ENEMY_CHASER)
+        local integer count = WeaponProfileGetCastCount(WEAPON_PROFILE_ENEMY_CHASER)
+        if duration <= 0. then
             return 0.03125
         endif
-        if FIRE_COUNT <= 0 then
-            return FIRE_DURATION
+        if count <= 0 then
+            return duration
         endif
-        return FIRE_DURATION / I2R(FIRE_COUNT)
+        return duration / I2R(count)
     endfunction
 
     private function PoisonListAdd takes SpellIndex dex returns nothing
@@ -13719,7 +13459,11 @@ library LoadoutRocketLauncher initializer Init requires TimerUtils, SpellIndex, 
             endif
 
             if not bonusActive[missile] then
+                set wasAlive = UnitAlive(hit)
                 call DamageUnit(missile.source, hit, baseDamage)
+                if wasAlive and not UnitAlive(hit) then
+                    return ContinueHomingAfterKill(missile)
+                endif
                 return true
             endif
 
@@ -13735,37 +13479,64 @@ library LoadoutRocketLauncher initializer Init requires TimerUtils, SpellIndex, 
                     return false
                 endif
                 call ShowCustomLoadoutText(hit, FormatLoadoutDamageText(baseDamage) + "/[0]", RAY_TEXT_R, RAY_TEXT_G, RAY_TEXT_B)
+                if wasAlive and not UnitAlive(hit) then
+                    return ContinueHomingAfterKill(missile)
+                endif
                 return true
             elseif abil == LOADOUT_ORB_ABILITY_FIRE then
                 set finalDamage = LoadoutGetFireDamage(baseDamage, inst)
+                set wasAlive = UnitAlive(hit)
                 call DamageUnit(missile.source, hit, finalDamage)
                 call ShowCustomLoadoutText(hit, FormatLoadoutDamageText(finalDamage), FIRE_TEXT_R, FIRE_TEXT_G, FIRE_TEXT_B)
+                if wasAlive and not UnitAlive(hit) then
+                    return ContinueHomingAfterKill(missile)
+                endif
                 return true
             elseif abil == LOADOUT_ORB_ABILITY_POISON then
+                set wasAlive = UnitAlive(hit)
                 call ApplyPoison(missile.source, hit, LoadoutGetPoisonTickDamage(baseDamage), LoadoutGetPoisonDuration(inst))
+                if wasAlive and not UnitAlive(hit) then
+                    return ContinueHomingAfterKill(missile)
+                endif
                 return true
             elseif abil == LOADOUT_ORB_ABILITY_WIND then
                 set radius = LoadoutGetWindAoe(inst)
                 set finalDamage = LoadoutGetWindDamage(baseDamage)
+                set wasAlive = UnitAlive(hit)
                 call DamageArea(missile.source, missile.owner, missile.x, missile.y, radius, finalDamage)
                 call ShowCustomLoadoutText(hit, FormatLoadoutDamageText(finalDamage) + "/[" + FormatLoadoutDamageText(radius) + "]", WIND_TEXT_R, WIND_TEXT_G, WIND_TEXT_B)
+                if wasAlive and not UnitAlive(hit) then
+                    return ContinueHomingAfterKill(missile)
+                endif
                 return true
             elseif abil == LOADOUT_ORB_ABILITY_DARK then
                 set extraDamage = LoadoutGetDarkBonus(hit, inst)
                 set finalDamage = baseDamage + extraDamage
+                set wasAlive = UnitAlive(hit)
                 call DamageUnit(missile.source, hit, finalDamage)
                 call ShowCustomLoadoutText(hit, FormatLoadoutDamageText(finalDamage), DARK_TEXT_R, DARK_TEXT_G, DARK_TEXT_B)
+                if wasAlive and not UnitAlive(hit) then
+                    return ContinueHomingAfterKill(missile)
+                endif
                 return true
             elseif abil == LOADOUT_ORB_ABILITY_BLOOD then
                 set bloodMult = LoadoutGetBloodRandomMultiplier(inst)
                 set finalDamage = baseDamage*bloodMult
                 set bloodPct = LoadoutBloodMultiplierToPercent(bloodMult)
+                set wasAlive = UnitAlive(hit)
                 call DamageUnit(missile.source, hit, finalDamage)
                 call ShowCustomLoadoutText(hit, FormatLoadoutDamageText(finalDamage) + "   //" + I2S(bloodPct) + "%", CRIT_TEXT_R, CRIT_TEXT_G, CRIT_TEXT_B)
+                if wasAlive and not UnitAlive(hit) then
+                    return ContinueHomingAfterKill(missile)
+                endif
                 return true
             endif
 
+            set wasAlive = UnitAlive(hit)
             call DamageUnit(missile.source, hit, baseDamage)
+            if wasAlive and not UnitAlive(hit) then
+                return ContinueHomingAfterKill(missile)
+            endif
             return true
         endmethod
 
@@ -13814,7 +13585,7 @@ library LoadoutRocketLauncher initializer Init requires TimerUtils, SpellIndex, 
     private function LaunchBurstMissile takes unit source, player owner, real x, real y, real angle, integer chosen, boolean burstBonus, real damage, integer instances, string baseModel, string wrapModel returns nothing
         local SpellIndex mDex = SpellIndex.create()
         local Missile missile = Missile.create(x, y, MISSILE_START_Z, angle, SHOT_DISTANCE, MISSILE_START_Z)
-        local real speed = BASE_MISSILE_SPEED + GetPlayerMissileSpeedBonus(owner)
+        local real speed = WeaponProfileGetMissileSpeed(WEAPON_PROFILE_ENEMY_CHASER) + GetPlayerMissileSpeedBonus(owner)
 
         if speed < MIN_MISSILE_SPEED then
             set speed = MIN_MISSILE_SPEED
@@ -13825,7 +13596,7 @@ library LoadoutRocketLauncher initializer Init requires TimerUtils, SpellIndex, 
         set missile.owner = owner
         set missile.data = mDex
         set missile.model = baseModel
-        set missile.scale = MISSILE_SCALE
+        set missile.scale = WeaponProfileGetMissileScale(WEAPON_PROFILE_ENEMY_CHASER)
         set missile.collision = MISSILE_COLLISION
         call missile.setMovementSpeed(speed)
         set missile.turn = 0.
@@ -13910,8 +13681,37 @@ library LoadoutRocketLauncher initializer Init requires TimerUtils, SpellIndex, 
         if shot < 0 or shot >= burstCount then
             return
         endif
+        if not WeaponInventoryConsumeShotForProfile(dex.user, WEAPON_PROFILE_ENEMY_CHASER) then
+            return
+        endif
         set angle = burstBaseAngle[dex] + (BurstOffsetForShot(shot, burstCount)*BURST_SPREAD_DEG)*bj_DEGTORAD
         call LaunchBurstMissile(dex.source, dex.user, burstX[dex], burstY[dex], angle, burstChosen[dex], burstBonusActive[dex], burstDamage[dex], burstInstances[dex], burstBaseModel[dex], burstWrapModel[dex])
+    endfunction
+
+    private function Cleanup takes SpellIndex dex returns nothing
+        local integer id = 0
+        if dex == 0 or dex.phase == -999 then
+            return
+        endif
+        set dex.phase = -999
+        set id = GetHandleId(dex.source)
+        if active.has(id) and (active[id] == dex) then
+            call active.remove(id)
+        endif
+        if GetUnitTypeId(dex.source) != 0 then
+            call SetUnitTimeScale(dex.source, ANIMATION_TIME_SCALE_ON_END)
+        endif
+        if delayedAnimTimer[dex] != null then
+            call ReleaseTimer(delayedAnimTimer[dex])
+            set delayedAnimTimer[dex] = null
+        endif
+        call BurstStop(dex)
+        set aim[dex] = 0.
+        if dex.clock != null then
+            call ReleaseTimer(dex.clock)
+            set dex.clock = null
+        endif
+        call dex.destroy()
     endfunction
 
     private function OnBurstTick takes nothing returns nothing
@@ -13925,8 +13725,15 @@ library LoadoutRocketLauncher initializer Init requires TimerUtils, SpellIndex, 
             return
         endif
 
-        if (burstTimer[dex] != t) or (burstShotIndex[dex] >= BURST_COUNT) or (GetUnitTypeId(dex.source) == 0) or (not UnitAlive(dex.source)) or (dex.phase < 0) then
-            call BurstStop(dex)
+        if (burstTimer[dex] != t) then
+            set t = null
+            return
+        endif
+
+        if (burstShotIndex[dex] >= BURST_COUNT) or (GetUnitTypeId(dex.source) == 0) or (not UnitAlive(dex.source)) or (dex.phase < 0) then
+            set burstTimer[dex] = null
+            call Cleanup(dex)
+            call ReleaseTimer(t)
             set t = null
             return
         endif
@@ -13936,7 +13743,15 @@ library LoadoutRocketLauncher initializer Init requires TimerUtils, SpellIndex, 
         set burstShotIndex[dex] = shot + 1
 
         if burstShotIndex[dex] >= BURST_COUNT then
-            call BurstStop(dex)
+            if dex.time <= 0. then
+                set burstTimer[dex] = null
+                call Cleanup(dex)
+                call ReleaseTimer(t)
+                set t = null
+                return
+            else
+                call BurstStop(dex)
+            endif
         endif
 
         set t = null
@@ -13948,9 +13763,9 @@ library LoadoutRocketLauncher initializer Init requires TimerUtils, SpellIndex, 
         local real x = GetUnitX(source)
         local real y = GetUnitY(source)
         local real baseAngle = aim[dex]
-        local string baseModel = GetPlayerMissileModelPath(owner)
+        local string baseModel = WeaponProfileGetTierMissileModel(WEAPON_PROFILE_ENEMY_CHASER, 1)
         local string wrapModel = GetPlayerMissileOverlayModelPath(owner)
-        local real damage = GetPlayerMissileDamageValue(owner)*BASE_DAMAGE_MULT
+        local real damage = WeaponProfileGetDamage(WEAPON_PROFILE_ENEMY_CHASER)*BASE_DAMAGE_MULT
         local integer instances = GetPlayerMissileInstanceCount(owner)
         local integer chosen = GetPlayerMissileAbilityChoice(owner)
         local integer chosenLevel = 0
@@ -13999,31 +13814,13 @@ library LoadoutRocketLauncher initializer Init requires TimerUtils, SpellIndex, 
 
         if BURST_COUNT > 1 then
             set burstTimer[dex] = NewTimerEx(dex)
-        call SetTimerDebugTag(burstTimer[dex], TIMER_DEBUG_TAG_LOADOUT_ROCKET)
+            call SetTimerDebugTag(burstTimer[dex], TIMER_DEBUG_TAG_LOADOUT_ROCKET)
             call TimerStart(burstTimer[dex], GetBurstStaggerInterval(), true, function OnBurstTick)
         else
             call BurstStop(dex)
         endif
         set source = null
         set owner = null
-    endfunction
-
-    private function Cleanup takes SpellIndex dex returns nothing
-        local integer id = GetHandleId(dex.source)
-        if active.has(id) and (active[id] == dex) then
-            call active.remove(id)
-        endif
-        if GetUnitTypeId(dex.source) != 0 then
-            call SetUnitTimeScale(dex.source, ANIMATION_TIME_SCALE_ON_END)
-        endif
-        if delayedAnimTimer[dex] != null then
-            call ReleaseTimer(delayedAnimTimer[dex])
-            set delayedAnimTimer[dex] = null
-        endif
-        call BurstStop(dex)
-        set aim[dex] = 0.
-        call ReleaseTimer(dex.clock)
-        call dex.destroy()
     endfunction
 
     private function DelayedStartAnimation takes nothing returns nothing
@@ -14092,29 +13889,32 @@ library LoadoutRocketLauncher initializer Init requires TimerUtils, SpellIndex, 
         call MarkCanceled(GetTriggerUnit())
     endfunction
 
-    private function OnEffect takes nothing returns nothing
-        local unit source = GetTriggerUnit()
-        local player owner = GetTriggerPlayer()
+    function LoadoutRocketLauncherFire takes unit source, player owner, real tx, real ty returns boolean
         local integer id = GetHandleId(source)
         local SpellIndex dex
         local real x = GetUnitX(source)
         local real y = GetUnitY(source)
-        local real tx = GetSpellTargetX()
-        local real ty = GetSpellTargetY()
         local real step = GetSafeFireInterval()
         local boolean useRapid
+        local real duration = WeaponProfileGetCastDuration(WEAPON_PROFILE_ENEMY_CHASER)
 
-        set useRapid = GetPlayerMissileUseRapidFireControl(owner)
+        set useRapid = true
 
         if active.has(id) then
             set dex = active[id]
             if (dex.phase >= 0) and (GetUnitTypeId(dex.source) != 0) and UnitAlive(dex.source) then
                 set aim[dex] = Atan2(ty - y, tx - x)
-                set dex.time = FIRE_DURATION
+                // If a rocket burst is still emitting missiles, do not promote
+                // this recast into dex.time > 0. Otherwise the last burst tick
+                // only stops the burst timer and leaves active[dex] stuck with
+                // no periodic timer, making future casts return without firing.
+                if burstTimer[dex] != null then
+                    call SetUnitTimeScale(source, RAPID_FIRE_ANIMATION_TIME_SCALE)
+                    return true
+                endif
+                set dex.time = duration
                 call SetUnitTimeScale(source, RAPID_FIRE_ANIMATION_TIME_SCALE)
-                set source = null
-                set owner = null
-                return
+                return true
             endif
             call Cleanup(dex)
         endif
@@ -14122,8 +13922,8 @@ library LoadoutRocketLauncher initializer Init requires TimerUtils, SpellIndex, 
         set dex = SpellIndex.create()
         set dex.source = source
         set dex.user = owner
-        if useRapid and (FIRE_DURATION > 0.) then
-            set dex.time = FIRE_DURATION
+        if useRapid and (duration > 0.) then
+            set dex.time = duration
         else
             set dex.time = 0.
         endif
@@ -14142,10 +13942,17 @@ library LoadoutRocketLauncher initializer Init requires TimerUtils, SpellIndex, 
 
         if dex.time > 0. then
             call TimerStart(dex.clock, step, true, function OnPeriodic)
-        else
+        elseif burstTimer[dex] == null then
             call Cleanup(dex)
         endif
 
+        return true
+    endfunction
+
+    private function OnEffect takes nothing returns nothing
+        local unit source = GetTriggerUnit()
+        local player owner = GetTriggerPlayer()
+        call LoadoutRocketLauncherFire(source, owner, GetSpellTargetX(), GetSpellTargetY())
         set source = null
         set owner = null
     endfunction
@@ -14161,6 +13968,735 @@ endlibrary
 
 
 // ===== END: MyMissiles/Loadout RocketLauncher.j =====
+
+// ===== BEGIN: MyMissiles/Loadout ThunderShot.j =====
+library LoadoutThunderShot initializer Init requires TimerUtils, SpellIndex, Missile, RegisterPlayerUnitEvent, WeaponProfileConfig, WaveDamageCredit, Table, WeaponInventoryCore
+
+    globals
+        private constant real MISSILE_START_Z = 75.00
+        private constant real MISSILE_COLLISION = 96.00
+        private constant real MISSILE_FORWARD_OFFSET = 96.00
+        private constant real THUNDER_SEARCH_RADIUS = 650.00
+        private constant real THUNDER_TURN_RATE = 1.35
+        private constant real THUNDER_SCAN_INTERVAL = 0.05
+        private constant real THUNDER_REPEAT_INTERVAL = 0.06
+        private constant real THUNDER_WAVE_CURVE = 0.18
+        private constant real THUNDER_WAVE_SEGMENT_RANGE = 420.00
+        private constant real THUNDER_FREE_TRAVEL_RANGE = 2000.00
+        private constant integer THUNDER_MAX_HITS = 15
+        private constant string IMPACT_ATTACH = "origin"
+        private constant attacktype ATTACK_TYPE = ATTACK_TYPE_NORMAL
+        private constant damagetype DAMAGE_TYPE = DAMAGE_TYPE_MAGIC
+
+        private Table active
+
+        private real array castAngle
+        private real array castTargetX
+        private real array castTargetY
+
+        private real array thunderDamage
+        private integer array thunderHitsLeft
+        private real array thunderScanRemaining
+        private integer array thunderWaveSign
+        private unit array thunderLastHit
+        private unit array thunderSource
+        private player array thunderOwner
+    endglobals
+
+    private function GetSafeFireInterval takes nothing returns real
+        local real duration = WeaponProfileGetCastDuration(WEAPON_PROFILE_THUNDER_SHOT)
+        local integer count = WeaponProfileGetCastCount(WEAPON_PROFILE_THUNDER_SHOT)
+        if duration <= 0. then
+            return 0.03125
+        endif
+        if count <= 0 then
+            return duration
+        endif
+        return duration / I2R(count)
+    endfunction
+
+    private function FilterUnits takes unit target, player owner returns boolean
+        return UnitAlive(target) and IsUnitEnemy(target, owner) and not IsUnitType(target, UNIT_TYPE_STRUCTURE)
+    endfunction
+
+    private function DamageUnit takes unit source, unit target, real amount returns boolean
+        if amount <= 0. then
+            return false
+        endif
+        if (GetUnitTypeId(source) == 0) or (GetUnitTypeId(target) == 0) then
+            return false
+        endif
+        call WaveRecordDamageCredit(source, target)
+        return UnitDamageTarget(source, target, amount, false, false, ATTACK_TYPE, DAMAGE_TYPE, null)
+    endfunction
+
+    private function ShowThunderImpact takes unit target returns nothing
+        local effect fx = AddSpecialEffectTarget(WeaponProfileGetMissileModel(WEAPON_PROFILE_THUNDER_SHOT), target, IMPACT_ATTACH)
+        call DestroyEffect(fx)
+        set fx = null
+    endfunction
+
+    private function ConfigureThunderWaveSegment takes Missile missile returns boolean
+        local real remaining = THUNDER_FREE_TRAVEL_RANGE - missile.distance
+        local real segment
+        if remaining <= 0.00 then
+            return false
+        endif
+        set segment = remaining
+        if segment > THUNDER_WAVE_SEGMENT_RANGE then
+            set segment = THUNDER_WAVE_SEGMENT_RANGE
+        endif
+        call missile.impact.move(missile.x + segment*Cos(missile.angle), missile.y + segment*Sin(missile.angle), MISSILE_START_Z)
+        call missile.bounce()
+        set missile.target = null
+        set missile.turn = 0.00
+        set missile.curve = THUNDER_WAVE_CURVE*I2R(thunderWaveSign[missile])
+        set thunderWaveSign[missile] = -thunderWaveSign[missile]
+        set missile.recycle = false
+        return true
+    endfunction
+
+    private function FindThunderTarget takes Missile missile, unit excluded returns unit
+        local unit u
+        local unit chosen = null
+        local real dx
+        local real dy
+        local real distSq
+        local real bestSq = 0.00
+        call GroupEnumUnitsInRange(SpellIndex.GLOBAL_GROUP, missile.x, missile.y, THUNDER_SEARCH_RADIUS, null)
+        loop
+            set u = FirstOfGroup(SpellIndex.GLOBAL_GROUP)
+            exitwhen u == null
+            call GroupRemoveUnit(SpellIndex.GLOBAL_GROUP, u)
+            if u != excluded and FilterUnits(u, thunderOwner[missile]) then
+                set dx = GetUnitX(u) - missile.x
+                set dy = GetUnitY(u) - missile.y
+                set distSq = dx*dx + dy*dy
+                if chosen == null or distSq < bestSq then
+                    set chosen = u
+                    set bestSq = distSq
+                endif
+            endif
+        endloop
+        set u = null
+        return chosen
+    endfunction
+
+    private function AssignThunderTarget takes Missile missile, unit target returns nothing
+        if target != null and FilterUnits(target, thunderOwner[missile]) then
+            set missile.target = target
+            set missile.turn = THUNDER_TURN_RATE
+            set missile.curve = 0.00
+            set missile.recycle = false
+        else
+            set missile.target = null
+            set missile.turn = 0.00
+            call ConfigureThunderWaveSegment(missile)
+        endif
+    endfunction
+
+    private function RefreshThunderTarget takes Missile missile returns nothing
+        local unit target = missile.target
+        set thunderScanRemaining[missile] = thunderScanRemaining[missile] - Missile_TIMER_TIMEOUT
+        if target != null and FilterUnits(target, thunderOwner[missile]) then
+            set target = null
+            return
+        endif
+        if thunderScanRemaining[missile] > 0. then
+            set target = null
+            return
+        endif
+        set thunderScanRemaining[missile] = THUNDER_SCAN_INTERVAL
+        set target = FindThunderTarget(missile, null)
+        if target != null then
+            call AssignThunderTarget(missile, target)
+        endif
+        set target = null
+    endfunction
+
+    private function FindNextThunderTarget takes Missile missile, unit excluded, unit fallback returns unit
+        local unit target = FindThunderTarget(missile, excluded)
+        if target == null and fallback != null and FilterUnits(fallback, thunderOwner[missile]) then
+            set target = fallback
+        endif
+        return target
+    endfunction
+
+    private struct ThunderShotCore extends array
+        private static method onCollide takes Missile missile, unit hit returns boolean
+            local unit nextTarget
+            local boolean wasAlive
+            if not FilterUnits(hit, thunderOwner[missile]) then
+                return false
+            endif
+            set wasAlive = UnitAlive(hit)
+            call DamageUnit(thunderSource[missile], hit, thunderDamage[missile])
+            call ShowThunderImpact(hit)
+            set thunderHitsLeft[missile] = thunderHitsLeft[missile] - 1
+            set thunderLastHit[missile] = hit
+            if thunderHitsLeft[missile] <= 0 then
+                set hit = null
+                return true
+            endif
+
+            call missile.enableHitAfter(hit, THUNDER_REPEAT_INTERVAL)
+            set nextTarget = FindThunderTarget(missile, hit)
+            if nextTarget == null then
+                if wasAlive and UnitAlive(hit) then
+                    set nextTarget = hit
+                else
+                    set hit = null
+                    return true
+                endif
+            endif
+            call AssignThunderTarget(missile, nextTarget)
+            set nextTarget = null
+            set hit = null
+            return false
+        endmethod
+
+        private static method onPeriod takes Missile missile returns boolean
+            call RefreshThunderTarget(missile)
+            return false
+        endmethod
+
+        private static method onFinish takes Missile missile returns boolean
+            local unit nextTarget
+            if thunderHitsLeft[missile] <= 0 then
+                return true
+            endif
+            set nextTarget = FindNextThunderTarget(missile, null, thunderLastHit[missile])
+            if nextTarget != null then
+                call AssignThunderTarget(missile, nextTarget)
+                set nextTarget = null
+                return false
+            endif
+            set nextTarget = null
+            if thunderLastHit[missile] != null then
+                return true
+            endif
+            return not ConfigureThunderWaveSegment(missile)
+        endmethod
+
+        private static method onDestructable takes Missile missile, destructable hit returns boolean
+            return false
+        endmethod
+
+        private static method onTerrain takes Missile missile returns boolean
+            return false
+        endmethod
+
+        private static method onRemove takes Missile missile returns boolean
+            set thunderDamage[missile] = 0.00
+            set thunderHitsLeft[missile] = 0
+            set thunderScanRemaining[missile] = 0.00
+            set thunderWaveSign[missile] = 0
+            set thunderLastHit[missile] = null
+            set thunderSource[missile] = null
+            set thunderOwner[missile] = null
+            set missile.target = null
+            set missile.turn = 0.00
+            call SpellIndex(missile.data).destroy()
+            return true
+        endmethod
+
+        implement MissileStruct
+    endstruct
+
+    private function LaunchThunderShot takes unit source, player owner, real angle returns nothing
+        local real x = GetUnitX(source) + MISSILE_FORWARD_OFFSET*Cos(angle)
+        local real y = GetUnitY(source) + MISSILE_FORWARD_OFFSET*Sin(angle)
+        local Missile missile = Missile.create(x, y, MISSILE_START_Z, angle, WeaponProfileGetRange(WEAPON_PROFILE_THUNDER_SHOT), MISSILE_START_Z)
+        local SpellIndex dex = SpellIndex.create()
+
+        set dex.source = source
+        set dex.user = owner
+        set missile.source = source
+        set missile.owner = owner
+        set missile.data = dex
+        set missile.model = WeaponProfileGetTierMissileModel(WEAPON_PROFILE_THUNDER_SHOT, 1)
+        set missile.scale = WeaponProfileGetMissileScale(WEAPON_PROFILE_THUNDER_SHOT)
+        set missile.collision = MISSILE_COLLISION
+        call missile.setMovementSpeed(WeaponProfileGetMissileSpeed(WEAPON_PROFILE_THUNDER_SHOT))
+
+        set thunderDamage[missile] = WeaponProfileGetDamage(WEAPON_PROFILE_THUNDER_SHOT)
+        set thunderHitsLeft[missile] = THUNDER_MAX_HITS
+        set thunderScanRemaining[missile] = 0.00
+        set thunderWaveSign[missile] = 1
+        set thunderLastHit[missile] = null
+        set thunderSource[missile] = source
+        set thunderOwner[missile] = owner
+        call ConfigureThunderWaveSegment(missile)
+
+        call ThunderShotCore.launch(missile)
+    endfunction
+
+    private function CleanupCast takes SpellIndex dex returns nothing
+        local integer id = 0
+        if dex == 0 or dex.phase == -999 then
+            return
+        endif
+        set dex.phase = -999
+        if GetUnitTypeId(dex.source) != 0 then
+            set id = GetHandleId(dex.source)
+            if active.has(id) and (active[id] == dex) then
+                call active.remove(id)
+            endif
+        endif
+        if dex.clock != null then
+            call ReleaseTimer(dex.clock)
+            set dex.clock = null
+        endif
+        set castAngle[dex] = 0.00
+        set castTargetX[dex] = 0.00
+        set castTargetY[dex] = 0.00
+        call dex.destroy()
+    endfunction
+
+    private function FireCastShot takes SpellIndex dex returns nothing
+        if GetUnitTypeId(dex.source) == 0 or not UnitAlive(dex.source) then
+            return
+        endif
+        if not WeaponInventoryConsumeShotForProfile(dex.user, WEAPON_PROFILE_THUNDER_SHOT) then
+            return
+        endif
+        call SetUnitAnimation(dex.source, "attack")
+        call LaunchThunderShot(dex.source, dex.user, castAngle[dex])
+    endfunction
+
+    private function OnCastTick takes nothing returns nothing
+        local timer t = GetExpiredTimer()
+        local SpellIndex dex = GetTimerData(t)
+        local real step = GetSafeFireInterval()
+        if dex.time <= 0. or GetUnitTypeId(dex.source) == 0 or not UnitAlive(dex.source) then
+            call CleanupCast(dex)
+            set t = null
+            return
+        endif
+        call FireCastShot(dex)
+        set dex.time = dex.time - step
+        if dex.time <= 0. then
+            call CleanupCast(dex)
+        else
+            call TimerStart(dex.clock, step, false, function OnCastTick)
+        endif
+        set t = null
+    endfunction
+
+    function LoadoutThunderShotFire takes unit source, player owner, real tx, real ty returns boolean
+        local integer id = GetHandleId(source)
+        local real duration = WeaponProfileGetCastDuration(WEAPON_PROFILE_THUNDER_SHOT)
+        local real step = GetSafeFireInterval()
+        local SpellIndex dex
+        local real x = GetUnitX(source)
+        local real y = GetUnitY(source)
+
+        if active.has(id) then
+            set dex = active[id]
+            if (GetUnitTypeId(dex.source) != 0) and UnitAlive(dex.source) then
+                set castAngle[dex] = Atan2(ty - y, tx - x)
+                set castTargetX[dex] = tx
+                set castTargetY[dex] = ty
+                set dex.time = duration
+                call SetUnitAnimation(dex.source, "attack")
+                return true
+            endif
+            call CleanupCast(dex)
+        endif
+
+        set dex = SpellIndex.create()
+        set dex.source = source
+        set dex.user = owner
+        set dex.time = duration
+        set dex.phase = 1
+        set castAngle[dex] = Atan2(ty - y, tx - x)
+        set castTargetX[dex] = tx
+        set castTargetY[dex] = ty
+        set dex.clock = null
+        set active[id] = dex
+
+        call FireCastShot(dex)
+        set dex.time = dex.time - step
+        if dex.time > 0. then
+            set dex.clock = NewTimerEx(dex)
+            call SetTimerDebugTag(dex.clock, TIMER_DEBUG_TAG_LOADOUT_MISSILE)
+            call TimerStart(dex.clock, step, false, function OnCastTick)
+        else
+            call CleanupCast(dex)
+        endif
+
+        return true
+    endfunction
+
+    private function OnEffect takes nothing returns nothing
+        local unit source = GetTriggerUnit()
+        local player owner = GetTriggerPlayer()
+        call LoadoutThunderShotFire(source, owner, GetSpellTargetX(), GetSpellTargetY())
+        set source = null
+        set owner = null
+    endfunction
+
+    private function Init takes nothing returns nothing
+        set active = Table.create()
+        call RegisterSpellEffectEvent(WeaponProfileGetFireAbility(WEAPON_PROFILE_THUNDER_SHOT), function OnEffect)
+    endfunction
+
+endlibrary
+
+// ===== END: MyMissiles/Loadout ThunderShot.j =====
+
+// ===== BEGIN: MyMissiles/PrisonerDropSystem.j =====
+library PrisonerDropSystem initializer Init requires TimerUtils, PlayerUtils, PlayerHeroState, WeaponInventoryCore, WaveDamageCredit
+
+globals
+    private constant real PRISONER_DROP_CHANCE = 10.00
+    private constant integer PRISONER_CAP = 64
+    private constant integer PICKUP_CAP = 64
+    private constant real PRISONER_TICK = 0.10
+    private constant real PRISONER_RESCUE_RANGE = 250.00
+    private constant real PRISONER_PICKUP_RANGE = 125.00
+    private constant real PRISONER_RESCUE_DELAY = 1.25
+    private constant real PRISONER_DROP_OFFSET = 75.00
+    private constant real PRISONER_ASCEND_TARGET = 5000.00
+    private constant real PRISONER_ASCEND_SPEED = 500.00
+    private constant real PRISONER_WANDER_RADIUS = 420.00
+    private constant real PRISONER_WANDER_INTERVAL = 1.75
+    private constant real PRISONER_LIFETIME = 45.00
+    private constant real PICKUP_LIFETIME = 60.00
+    private constant string PRISONER_RESCUE_SOUND_PATH = "war3mapImported\\tenkiuv2.wav"
+
+    private timer PrisonerTicker = null
+    private sound PrisonerRescueSound = null
+
+    private unit array PrisonerUnit
+    private integer array PrisonerOwnerPid
+    private integer array PrisonerProfile
+    private integer array PrisonerState
+    private real array PrisonerStateTime
+    private real array PrisonerWanderTime
+    private real array PrisonerLifeTime
+
+    private unit array PickupUnit
+    private integer array PickupOwnerPid
+    private integer array PickupProfile
+    private real array PickupLifeTime
+endglobals
+
+private function PrisonerDistanceSq takes real ax, real ay, real bx, real by returns real
+    local real dx = ax - bx
+    local real dy = ay - by
+    return dx*dx + dy*dy
+endfunction
+
+private function PrisonerAnyActive takes nothing returns boolean
+    local integer i = 0
+    loop
+        exitwhen i >= PRISONER_CAP
+        if PrisonerUnit[i] != null then
+            return true
+        endif
+        set i = i + 1
+    endloop
+    set i = 0
+    loop
+        exitwhen i >= PICKUP_CAP
+        if PickupUnit[i] != null then
+            return true
+        endif
+        set i = i + 1
+    endloop
+    return false
+endfunction
+
+private function PrisonerClear takes integer i returns nothing
+    if PrisonerUnit[i] != null then
+        call RemoveUnit(PrisonerUnit[i])
+    endif
+    set PrisonerUnit[i] = null
+    set PrisonerOwnerPid[i] = -1
+    set PrisonerProfile[i] = WEAPON_PROFILE_NONE
+    set PrisonerState[i] = 0
+    set PrisonerStateTime[i] = 0.00
+    set PrisonerWanderTime[i] = 0.00
+    set PrisonerLifeTime[i] = 0.00
+endfunction
+
+private function PickupClear takes integer i, boolean killFirst returns nothing
+    if PickupUnit[i] != null then
+        if killFirst then
+            call KillUnit(PickupUnit[i])
+        endif
+        call RemoveUnit(PickupUnit[i])
+    endif
+    set PickupUnit[i] = null
+    set PickupOwnerPid[i] = -1
+    set PickupProfile[i] = WEAPON_PROFILE_NONE
+    set PickupLifeTime[i] = 0.00
+endfunction
+
+private function PrisonerAlloc takes nothing returns integer
+    local integer i = 0
+    loop
+        exitwhen i >= PRISONER_CAP
+        if PrisonerUnit[i] == null then
+            return i
+        endif
+        set i = i + 1
+    endloop
+    return -1
+endfunction
+
+private function PickupAlloc takes nothing returns integer
+    local integer i = 0
+    loop
+        exitwhen i >= PICKUP_CAP
+        if PickupUnit[i] == null then
+            return i
+        endif
+        set i = i + 1
+    endloop
+    return -1
+endfunction
+
+private function PrisonerRandomProfile takes nothing returns integer
+    return GetRandomInt(WEAPON_PROFILE_SHOTGUN, WEAPON_PROFILE_LAST)
+endfunction
+
+private function PickupCreate takes integer pid, integer profileId, real x, real y, real facing returns nothing
+    local integer slot = PickupAlloc()
+    local integer unitTypeId = WeaponProfileGetPickupUnitType(profileId)
+    if slot < 0 or unitTypeId == 0 then
+        return
+    endif
+    set PickupUnit[slot] = CreateUnit(Player(pid), unitTypeId, x, y, facing)
+    if PickupUnit[slot] == null then
+        set PickupOwnerPid[slot] = -1
+        set PickupProfile[slot] = WEAPON_PROFILE_NONE
+        return
+    endif
+    call UnitAddAbility(PickupUnit[slot], 'Avul')
+    call UnitAddAbility(PickupUnit[slot], 'Aloc')
+    set PickupOwnerPid[slot] = pid
+    set PickupProfile[slot] = profileId
+    set PickupLifeTime[slot] = 0.00
+endfunction
+
+private function PrisonerBeginRescue takes integer i, unit hero returns nothing
+    local real dx = GetUnitX(hero) - GetUnitX(PrisonerUnit[i])
+    local real dy = GetUnitY(hero) - GetUnitY(PrisonerUnit[i])
+    call IssueImmediateOrder(PrisonerUnit[i], "stop")
+    call SetUnitFacing(PrisonerUnit[i], Atan2(dy, dx)*bj_RADTODEG)
+    call SetUnitAnimation(PrisonerUnit[i], "attack")
+    call PauseUnit(PrisonerUnit[i], true)
+    if PrisonerRescueSound != null then
+        call StartSound(PrisonerRescueSound)
+    endif
+    set PrisonerState[i] = 1
+    set PrisonerStateTime[i] = 0.00
+endfunction
+
+private function PrisonerDropWeapon takes integer i returns nothing
+    local real facing = GetUnitFacing(PrisonerUnit[i])
+    local real angle = facing*bj_DEGTORAD
+    local real x = GetUnitX(PrisonerUnit[i]) + PRISONER_DROP_OFFSET*Cos(angle)
+    local real y = GetUnitY(PrisonerUnit[i]) + PRISONER_DROP_OFFSET*Sin(angle)
+    call PickupCreate(PrisonerOwnerPid[i], PrisonerProfile[i], x, y, facing)
+    call PauseUnit(PrisonerUnit[i], false)
+    call SetUnitAnimation(PrisonerUnit[i], "stand")
+    call SetUnitFlyHeight(PrisonerUnit[i], PRISONER_ASCEND_TARGET, PRISONER_ASCEND_SPEED)
+    set PrisonerState[i] = 2
+    set PrisonerStateTime[i] = 0.00
+endfunction
+
+private function PrisonerUpdateWander takes integer i returns nothing
+    local real x
+    local real y
+    set PrisonerWanderTime[i] = PrisonerWanderTime[i] + PRISONER_TICK
+    if PrisonerWanderTime[i] < PRISONER_WANDER_INTERVAL then
+        return
+    endif
+    set PrisonerWanderTime[i] = 0.00
+    if GetRandomInt(0, 2) == 0 then
+        call IssueImmediateOrder(PrisonerUnit[i], "stop")
+    else
+        set x = GetUnitX(PrisonerUnit[i]) + GetRandomReal(-PRISONER_WANDER_RADIUS, PRISONER_WANDER_RADIUS)
+        set y = GetUnitY(PrisonerUnit[i]) + GetRandomReal(-PRISONER_WANDER_RADIUS, PRISONER_WANDER_RADIUS)
+        call IssuePointOrder(PrisonerUnit[i], "move", x, y)
+    endif
+endfunction
+
+private function PrisonerUpdateActive takes integer i returns nothing
+    local unit hero = PlayerHero[PrisonerOwnerPid[i]]
+    local real px = GetUnitX(PrisonerUnit[i])
+    local real py = GetUnitY(PrisonerUnit[i])
+    if hero != null and GetUnitTypeId(hero) != 0 and UnitAlive(hero) then
+        if PrisonerDistanceSq(px, py, GetUnitX(hero), GetUnitY(hero)) <= PRISONER_RESCUE_RANGE*PRISONER_RESCUE_RANGE then
+            call PrisonerBeginRescue(i, hero)
+        else
+            call PrisonerUpdateWander(i)
+        endif
+    else
+        call PrisonerUpdateWander(i)
+    endif
+    set hero = null
+endfunction
+
+private function PrisonerUpdateRescueDelay takes integer i returns nothing
+    set PrisonerStateTime[i] = PrisonerStateTime[i] + PRISONER_TICK
+    if PrisonerStateTime[i] >= PRISONER_RESCUE_DELAY then
+        call PrisonerDropWeapon(i)
+    endif
+endfunction
+
+private function PrisonerUpdateAscend takes integer i returns nothing
+    set PrisonerStateTime[i] = PrisonerStateTime[i] + PRISONER_TICK
+    if GetUnitFlyHeight(PrisonerUnit[i]) >= PRISONER_ASCEND_TARGET - 25.00 or PrisonerStateTime[i] >= (PRISONER_ASCEND_TARGET/PRISONER_ASCEND_SPEED) + 1.00 then
+        call PrisonerClear(i)
+    endif
+endfunction
+
+private function PickupUpdate takes integer i returns nothing
+    local integer playerIndex = 0
+    local User u
+    local unit hero
+    loop
+        exitwhen playerIndex >= User.AmountPlaying
+        set u = User.fromPlaying(playerIndex)
+        set hero = PlayerHero[u.id]
+        if hero != null and GetUnitTypeId(hero) != 0 and UnitAlive(hero) then
+            if PrisonerDistanceSq(GetUnitX(PickupUnit[i]), GetUnitY(PickupUnit[i]), GetUnitX(hero), GetUnitY(hero)) <= PRISONER_PICKUP_RANGE*PRISONER_PICKUP_RANGE then
+                call WeaponInventoryGiveWeapon(u.toPlayer(), PickupProfile[i], WeaponProfileGetDefaultAmmo(PickupProfile[i]))
+                call PickupClear(i, true)
+                set hero = null
+                return
+            endif
+        endif
+        set playerIndex = playerIndex + 1
+    endloop
+    set hero = null
+
+    if PickupOwnerPid[i] >= 0 and PickupOwnerPid[i] < bj_MAX_PLAYER_SLOTS and not User.fromIndex(PickupOwnerPid[i]).isPlaying then
+        if PickupUnit[i] != null then
+            call PickupClear(i, true)
+            return
+        endif
+    endif
+
+    set PickupLifeTime[i] = PickupLifeTime[i] + PRISONER_TICK
+    if PickupLifeTime[i] >= PICKUP_LIFETIME then
+        call PickupClear(i, false)
+    endif
+endfunction
+
+private function PrisonerTick takes nothing returns nothing
+    local integer i = 0
+    loop
+        exitwhen i >= PRISONER_CAP
+        if PrisonerUnit[i] != null then
+            set PrisonerLifeTime[i] = PrisonerLifeTime[i] + PRISONER_TICK
+            if PrisonerLifeTime[i] >= PRISONER_LIFETIME and PrisonerState[i] == 0 then
+                call PrisonerClear(i)
+            elseif PrisonerState[i] == 0 then
+                call PrisonerUpdateActive(i)
+            elseif PrisonerState[i] == 1 then
+                call PrisonerUpdateRescueDelay(i)
+            elseif PrisonerState[i] == 2 then
+                call PrisonerUpdateAscend(i)
+            endif
+        endif
+        set i = i + 1
+    endloop
+    set i = 0
+    loop
+        exitwhen i >= PICKUP_CAP
+        if PickupUnit[i] != null then
+            call PickupUpdate(i)
+        endif
+        set i = i + 1
+    endloop
+    if not PrisonerAnyActive() and PrisonerTicker != null then
+        call PauseTimer(PrisonerTicker)
+    endif
+endfunction
+
+private function PrisonerEnsureTicker takes nothing returns nothing
+    if PrisonerTicker == null then
+        set PrisonerTicker = NewTimer()
+        call SetTimerDebugTag(PrisonerTicker, TIMER_DEBUG_TAG_OTHER)
+    endif
+    call TimerStart(PrisonerTicker, PRISONER_TICK, true, function PrisonerTick)
+endfunction
+
+function PrisonerDropTrySpawnForPid takes unit killedEnemy, integer pid returns boolean
+    local integer slot
+    local integer profileId
+    local real x
+    local real y
+    if killedEnemy == null or GetUnitTypeId(killedEnemy) == 0 then
+        return false
+    endif
+    if pid < 0 or pid >= bj_MAX_PLAYER_SLOTS then
+        return false
+    endif
+    if PlayerHero[pid] == null or GetUnitTypeId(PlayerHero[pid]) == 0 then
+        return false
+    endif
+    if GetRandomReal(0.00, 100.00) > PRISONER_DROP_CHANCE then
+        return false
+    endif
+    set slot = PrisonerAlloc()
+    if slot < 0 then
+        return false
+    endif
+    set profileId = PrisonerRandomProfile()
+    set x = GetUnitX(killedEnemy)
+    set y = GetUnitY(killedEnemy)
+    set PrisonerUnit[slot] = CreateUnit(Player(pid), WEAPON_PRISONER_UNIT_TYPE, x, y, GetRandomReal(0.00, 360.00))
+    if PrisonerUnit[slot] == null then
+        call PrisonerClear(slot)
+        return false
+    endif
+    call UnitAddAbility(PrisonerUnit[slot], 'Avul')
+    call UnitAddAbility(PrisonerUnit[slot], 'Aloc')
+    call UnitAddAbility(PrisonerUnit[slot], 'Amrf')
+    call UnitRemoveAbility(PrisonerUnit[slot], 'Amrf')
+    set PrisonerOwnerPid[slot] = pid
+    set PrisonerProfile[slot] = profileId
+    set PrisonerState[slot] = 0
+    set PrisonerStateTime[slot] = 0.00
+    set PrisonerWanderTime[slot] = PRISONER_WANDER_INTERVAL
+    set PrisonerLifeTime[slot] = 0.00
+    call PrisonerEnsureTicker()
+    return true
+endfunction
+
+function PrisonerDropTrySpawn takes unit killedEnemy returns boolean
+    return PrisonerDropTrySpawnForPid(killedEnemy, WaveGetDamageCreditOwnerPid(killedEnemy))
+endfunction
+
+private function Init takes nothing returns nothing
+    local integer i = 0
+    call Preload(PRISONER_RESCUE_SOUND_PATH)
+    set PrisonerRescueSound = CreateSound(PRISONER_RESCUE_SOUND_PATH, false, false, false, 12700, 12700, "")
+    call SetSoundVolume(PrisonerRescueSound, 127)
+    loop
+        exitwhen i >= PRISONER_CAP
+        set PrisonerOwnerPid[i] = -1
+        set PrisonerProfile[i] = WEAPON_PROFILE_NONE
+        set i = i + 1
+    endloop
+    set i = 0
+    loop
+        exitwhen i >= PICKUP_CAP
+        set PickupOwnerPid[i] = -1
+        set PickupProfile[i] = WEAPON_PROFILE_NONE
+        set i = i + 1
+    endloop
+endfunction
+
+endlibrary
+
+// ===== END: MyMissiles/PrisonerDropSystem.j =====
 
 // ===== BEGIN: MyMissiles/SwapMana.j =====
 library LoadoutIntFullManaSwapNew initializer Init requires Table, SpellIndex, TimerUtils, SpellFinishEvent, PlayerMissileLoadout
@@ -16598,6 +17134,535 @@ endlibrary
 
 // ===== END: MyMissiles/UnitTypeMissileLoadout.j =====
 
+// ===== BEGIN: MyMissiles/WeaponInventoryCore.j =====
+library WeaponInventoryCore initializer Init requires WeaponProfileConfig, PlayerHeroState, PlayerMissileLoadout, TimerUtils
+
+globals
+    constant integer WEAPON_INVENTORY_SLOT_1 = 1
+    constant integer WEAPON_INVENTORY_SLOT_2 = 2
+    private constant integer WEAPON_INVENTORY_SLOT_COUNT = 2
+    private constant integer WEAPON_INVENTORY_SLOT_STRIDE = 3
+
+    private integer array WeaponInventorySlotProfile
+    private integer array WeaponInventorySlotAmmo
+    private integer array WeaponInventoryActiveSlot
+    private integer array WeaponInventoryHudVersion
+    private sound array WeaponInventorySoundA
+    private sound array WeaponInventorySoundB
+    private sound WeaponInventoryReloadSound = null
+    private timer array WeaponInventorySoundTimer
+    private integer array WeaponInventoryPendingSoundProfile
+endglobals
+
+private function WeaponInventoryKey takes integer pid, integer slot returns integer
+    return pid*WEAPON_INVENTORY_SLOT_STRIDE + slot
+endfunction
+
+private function WeaponInventoryValidPid takes integer pid returns boolean
+    return pid >= 0 and pid < bj_MAX_PLAYER_SLOTS
+endfunction
+
+private function WeaponInventoryValidSlot takes integer slot returns boolean
+    return slot == WEAPON_INVENTORY_SLOT_1 or slot == WEAPON_INVENTORY_SLOT_2
+endfunction
+
+private function WeaponInventoryValidHero takes unit hero returns boolean
+    return hero != null and GetUnitTypeId(hero) != 0
+endfunction
+
+private function WeaponInventoryMarkDirtyByPid takes integer pid returns nothing
+    if WeaponInventoryValidPid(pid) then
+        set WeaponInventoryHudVersion[pid] = WeaponInventoryHudVersion[pid] + 1
+    endif
+endfunction
+
+private function WeaponInventoryRemoveLegacyAbilities takes unit hero returns nothing
+    local integer profileId = WEAPON_PROFILE_HANDGUN
+    loop
+        exitwhen profileId > WEAPON_PROFILE_LAST
+        call UnitRemoveAbility(hero, WeaponProfileGetSelectorAbility(profileId))
+        call UnitRemoveAbility(hero, WeaponProfileGetFireAbility(profileId))
+        set profileId = profileId + 1
+    endloop
+endfunction
+
+private function WeaponInventoryApplyProfileStats takes player p, integer profileId returns nothing
+    call SetPlayerMissileDamageValue(p, WeaponProfileGetDamage(profileId))
+    call SetPlayerMissileSpeedBonus(p, 0.00)
+    call SetPlayerMissileModelPath(p, WeaponProfileGetTierMissileModel(profileId, 1))
+    call SetPlayerMissileOverlayModelPath(p, "")
+    call SetPlayerMissileInstanceCount(p, 1)
+    call SetPlayerMissileUseRapidFireMissile(p, true)
+    call SetPlayerMissileUseRapidFireControl(p, false)
+endfunction
+
+private function WeaponInventoryGetSoundPathA takes integer profileId returns string
+    if profileId == WEAPON_PROFILE_SHOTGUN then
+        return "war3mapImported\\MSX_Shotgun.wav"
+    elseif profileId == WEAPON_PROFILE_HEAVY_MACHINE_GUN then
+        return "war3mapImported\\MSX_Heavy_Machinegun.wav"
+    elseif profileId == WEAPON_PROFILE_TWO_MACHINE_GUN then
+        return "war3mapImported\\MS4_Two_Machinegun.wav"
+    elseif profileId == WEAPON_PROFILE_ROCKET_LAUNCHER then
+        return "war3mapImported\\MSX_Rocket_Launcher.wav"
+    elseif profileId == WEAPON_PROFILE_ENEMY_CHASER then
+        return "war3mapImported\\MSX_Enemy_Chaser.wav"
+    elseif profileId == WEAPON_PROFILE_LASER_GUN then
+        return "war3mapImported\\MSX_Laser_Gun.wav"
+    elseif profileId == WEAPON_PROFILE_DROP_SHOT then
+        return "war3mapImported\\MSX_Drop_Shot.wav"
+    elseif profileId == WEAPON_PROFILE_FLAME_SHOT then
+        return "war3mapImported\\MSX_Flame_Shot.wav"
+    elseif profileId == WEAPON_PROFILE_IRON_LIZARD then
+        return "war3mapImported\\MSX_Iron_Lizard.wav"
+    elseif profileId == WEAPON_PROFILE_SUPER_GRENADE then
+        return "war3mapImported\\MSX_Super_Grenade.wav"
+    elseif profileId == WEAPON_PROFILE_THUNDER_SHOT then
+        return "war3mapImported\\MS7_Thunder_Shot.wav"
+    endif
+    return ""
+endfunction
+
+private function WeaponInventoryGetSoundPathB takes integer profileId returns string
+    if profileId == WEAPON_PROFILE_SHOTGUN then
+        return "war3mapImported\\MS_Shotgun.wav"
+    elseif profileId == WEAPON_PROFILE_HEAVY_MACHINE_GUN then
+        return "war3mapImported\\MS_Heavy_Machinegun.wav"
+    elseif profileId == WEAPON_PROFILE_TWO_MACHINE_GUN then
+        return "war3mapImported\\MS5_Two_Machinegun.wav"
+    elseif profileId == WEAPON_PROFILE_ROCKET_LAUNCHER then
+        return "war3mapImported\\MS_Rocket_Launcher.wav"
+    elseif profileId == WEAPON_PROFILE_LASER_GUN then
+        return "war3mapImported\\MS2_Laser.wav"
+    elseif profileId == WEAPON_PROFILE_FLAME_SHOT then
+        return "war3mapImported\\MS_Flame_Shot.wav"
+    endif
+    return ""
+endfunction
+
+private function WeaponInventoryCreateSound takes string path returns sound
+    local sound s
+    if path == "" then
+        return null
+    endif
+    call Preload(path)
+    set s = CreateSound(path, false, false, false, 12700, 12700, "")
+    call SetSoundVolume(s, 127)
+    return s
+endfunction
+
+private function WeaponInventoryPlayLocalSound takes player p, sound s returns nothing
+    if s != null and GetLocalPlayer() == p then
+        call StartSound(s)
+    endif
+endfunction
+
+private function WeaponInventoryPlayWeaponSoundNow takes player p, integer profileId returns nothing
+    local sound s
+    if profileId == WEAPON_PROFILE_HANDGUN or not WeaponProfileIsWeapon(profileId) then
+        return
+    endif
+    set s = WeaponInventorySoundA[profileId]
+    if WeaponInventorySoundB[profileId] != null and GetRandomInt(0, 1) == 1 then
+        set s = WeaponInventorySoundB[profileId]
+    endif
+    call WeaponInventoryPlayLocalSound(p, s)
+    set s = null
+endfunction
+
+private function WeaponInventoryPlayPendingWeaponSound takes nothing returns nothing
+    local timer t = GetExpiredTimer()
+    local integer pid = GetTimerData(t)
+    local integer profileId = WeaponInventoryPendingSoundProfile[pid]
+    set WeaponInventorySoundTimer[pid] = null
+    set WeaponInventoryPendingSoundProfile[pid] = WEAPON_PROFILE_NONE
+    call WeaponInventoryPlayWeaponSoundNow(Player(pid), profileId)
+    call ReleaseTimer(t)
+    set t = null
+endfunction
+
+private function WeaponInventoryQueueWeaponSound takes player p, integer profileId returns nothing
+    local integer pid = GetPlayerId(p)
+    if not WeaponInventoryValidPid(pid) or profileId == WEAPON_PROFILE_HANDGUN or not WeaponProfileIsWeapon(profileId) then
+        return
+    endif
+    set WeaponInventoryPendingSoundProfile[pid] = profileId
+    if WeaponInventorySoundTimer[pid] != null then
+        return
+    endif
+    call WeaponInventoryPlayLocalSound(p, WeaponInventoryReloadSound)
+    set WeaponInventorySoundTimer[pid] = NewTimerEx(pid)
+    call SetTimerDebugTag(WeaponInventorySoundTimer[pid], TIMER_DEBUG_TAG_OTHER)
+    call TimerStart(WeaponInventorySoundTimer[pid], 0.50, false, function WeaponInventoryPlayPendingWeaponSound)
+endfunction
+
+private function WeaponInventoryInitSounds takes nothing returns nothing
+    local integer profileId = WEAPON_PROFILE_HANDGUN
+    set WeaponInventoryReloadSound = WeaponInventoryCreateSound("war3mapImported\\reloadweapon.wav")
+    loop
+        exitwhen profileId > WEAPON_PROFILE_LAST
+        set WeaponInventorySoundA[profileId] = WeaponInventoryCreateSound(WeaponInventoryGetSoundPathA(profileId))
+        set WeaponInventorySoundB[profileId] = WeaponInventoryCreateSound(WeaponInventoryGetSoundPathB(profileId))
+        set profileId = profileId + 1
+    endloop
+endfunction
+
+function WeaponInventoryGetHudVersion takes player p returns integer
+    return WeaponInventoryHudVersion[GetPlayerId(p)]
+endfunction
+
+function WeaponInventoryGetSlotProfile takes player p, integer slot returns integer
+    local integer pid = GetPlayerId(p)
+    local integer profileId
+    if not WeaponInventoryValidPid(pid) or not WeaponInventoryValidSlot(slot) then
+        return WEAPON_PROFILE_HANDGUN
+    endif
+    set profileId = WeaponInventorySlotProfile[WeaponInventoryKey(pid, slot)]
+    if not WeaponProfileIsWeapon(profileId) then
+        return WEAPON_PROFILE_HANDGUN
+    endif
+    return profileId
+endfunction
+
+function WeaponInventoryGetSlotAmmo takes player p, integer slot returns integer
+    local integer pid = GetPlayerId(p)
+    local integer profileId = WeaponInventoryGetSlotProfile(p, slot)
+    if profileId == WEAPON_PROFILE_HANDGUN then
+        return WEAPON_AMMO_INFINITE
+    endif
+    if not WeaponInventoryValidPid(pid) or not WeaponInventoryValidSlot(slot) then
+        return 0
+    endif
+    return WeaponInventorySlotAmmo[WeaponInventoryKey(pid, slot)]
+endfunction
+
+function WeaponInventoryGetActiveSlot takes player p returns integer
+    local integer pid = GetPlayerId(p)
+    if not WeaponInventoryValidPid(pid) then
+        return WEAPON_INVENTORY_SLOT_1
+    endif
+    if not WeaponInventoryValidSlot(WeaponInventoryActiveSlot[pid]) then
+        set WeaponInventoryActiveSlot[pid] = WEAPON_INVENTORY_SLOT_1
+    endif
+    return WeaponInventoryActiveSlot[pid]
+endfunction
+
+function WeaponInventoryGetActiveProfile takes player p returns integer
+    return WeaponInventoryGetSlotProfile(p, WeaponInventoryGetActiveSlot(p))
+endfunction
+
+function WeaponInventoryGetActiveAmmo takes player p returns integer
+    return WeaponInventoryGetSlotAmmo(p, WeaponInventoryGetActiveSlot(p))
+endfunction
+
+function WeaponInventorySetSlotWeapon takes player p, integer slot, integer profileId, integer ammo returns boolean
+    local integer pid = GetPlayerId(p)
+    local integer key
+    if not WeaponInventoryValidPid(pid) or not WeaponInventoryValidSlot(slot) or not WeaponProfileIsWeapon(profileId) then
+        return false
+    endif
+    set key = WeaponInventoryKey(pid, slot)
+    set WeaponInventorySlotProfile[key] = profileId
+    if profileId == WEAPON_PROFILE_HANDGUN then
+        set WeaponInventorySlotAmmo[key] = WEAPON_AMMO_INFINITE
+    else
+        if ammo < 0 then
+            set ammo = 0
+        endif
+        set WeaponInventorySlotAmmo[key] = ammo
+    endif
+    call WeaponInventoryMarkDirtyByPid(pid)
+    if WeaponInventoryActiveSlot[pid] == slot then
+        call WeaponInventoryApplyProfileStats(p, profileId)
+    endif
+    return true
+endfunction
+
+function WeaponInventoryResetSlotToHandgun takes player p, integer slot returns nothing
+    call WeaponInventorySetSlotWeapon(p, slot, WEAPON_PROFILE_HANDGUN, WEAPON_AMMO_INFINITE)
+endfunction
+
+function WeaponInventorySetActiveSlot takes player p, integer slot returns boolean
+    local integer pid = GetPlayerId(p)
+    if not WeaponInventoryValidPid(pid) or not WeaponInventoryValidSlot(slot) then
+        return false
+    endif
+    set WeaponInventoryActiveSlot[pid] = slot
+    call WeaponInventoryApplyProfileStats(p, WeaponInventoryGetSlotProfile(p, slot))
+    call WeaponInventoryQueueWeaponSound(p, WeaponInventoryGetSlotProfile(p, slot))
+    call WeaponInventoryMarkDirtyByPid(pid)
+    return true
+endfunction
+
+function WeaponInventoryEnsurePlayer takes player p returns nothing
+    local integer pid = GetPlayerId(p)
+    local unit hero = PlayerHero[pid]
+    if not WeaponInventoryValidPid(pid) then
+        set hero = null
+        return
+    endif
+    if not WeaponInventoryValidSlot(WeaponInventoryActiveSlot[pid]) then
+        set WeaponInventoryActiveSlot[pid] = WEAPON_INVENTORY_SLOT_1
+    endif
+    if not WeaponProfileIsWeapon(WeaponInventorySlotProfile[WeaponInventoryKey(pid, WEAPON_INVENTORY_SLOT_1)]) then
+        call WeaponInventoryResetSlotToHandgun(p, WEAPON_INVENTORY_SLOT_1)
+    endif
+    if not WeaponProfileIsWeapon(WeaponInventorySlotProfile[WeaponInventoryKey(pid, WEAPON_INVENTORY_SLOT_2)]) then
+        call WeaponInventoryResetSlotToHandgun(p, WEAPON_INVENTORY_SLOT_2)
+    endif
+    if WeaponInventoryValidHero(hero) then
+        call WeaponInventoryRemoveLegacyAbilities(hero)
+        if GetUnitAbilityLevel(hero, WEAPON_INVENTORY_FIRE_ABILITY) <= 0 then
+            call UnitAddAbility(hero, WEAPON_INVENTORY_FIRE_ABILITY)
+            call SetUnitAbilityLevel(hero, WEAPON_INVENTORY_FIRE_ABILITY, 1)
+        endif
+        if GetUnitAbilityLevel(hero, WEAPON_INVENTORY_SELECT_SLOT_1_ABILITY) <= 0 then
+            call UnitAddAbility(hero, WEAPON_INVENTORY_SELECT_SLOT_1_ABILITY)
+            call SetUnitAbilityLevel(hero, WEAPON_INVENTORY_SELECT_SLOT_1_ABILITY, 1)
+        endif
+        if GetUnitAbilityLevel(hero, WEAPON_INVENTORY_SELECT_SLOT_2_ABILITY) <= 0 then
+            call UnitAddAbility(hero, WEAPON_INVENTORY_SELECT_SLOT_2_ABILITY)
+            call SetUnitAbilityLevel(hero, WEAPON_INVENTORY_SELECT_SLOT_2_ABILITY, 1)
+        endif
+    endif
+    call WeaponInventoryApplyProfileStats(p, WeaponInventoryGetActiveProfile(p))
+    call WeaponInventoryMarkDirtyByPid(pid)
+    set hero = null
+endfunction
+
+function WeaponInventoryGiveWeapon takes player p, integer profileId, integer ammo returns boolean
+    local integer pid = GetPlayerId(p)
+    local integer activeSlot
+    local integer otherSlot
+    local integer activeProfile
+    local integer otherProfile
+    local integer targetSlot
+    local integer currentAmmo
+    if not WeaponInventoryValidPid(pid) or not WeaponProfileIsWeapon(profileId) then
+        return false
+    endif
+    call WeaponInventoryEnsurePlayer(p)
+    if profileId == WEAPON_PROFILE_HANDGUN then
+        return true
+    endif
+    if ammo <= 0 then
+        set ammo = WeaponProfileGetDefaultAmmo(profileId)
+    endif
+    if WeaponInventoryGetSlotProfile(p, WEAPON_INVENTORY_SLOT_1) == profileId then
+        set currentAmmo = WeaponInventoryGetSlotAmmo(p, WEAPON_INVENTORY_SLOT_1)
+        call WeaponInventorySetSlotWeapon(p, WEAPON_INVENTORY_SLOT_1, profileId, currentAmmo + ammo)
+        call WeaponInventoryQueueWeaponSound(p, profileId)
+        return true
+    endif
+    if WeaponInventoryGetSlotProfile(p, WEAPON_INVENTORY_SLOT_2) == profileId then
+        set currentAmmo = WeaponInventoryGetSlotAmmo(p, WEAPON_INVENTORY_SLOT_2)
+        call WeaponInventorySetSlotWeapon(p, WEAPON_INVENTORY_SLOT_2, profileId, currentAmmo + ammo)
+        call WeaponInventoryQueueWeaponSound(p, profileId)
+        return true
+    endif
+
+    set activeSlot = WeaponInventoryGetActiveSlot(p)
+    set otherSlot = WEAPON_INVENTORY_SLOT_1
+    if activeSlot == WEAPON_INVENTORY_SLOT_1 then
+        set otherSlot = WEAPON_INVENTORY_SLOT_2
+    endif
+    set activeProfile = WeaponInventoryGetSlotProfile(p, activeSlot)
+    set otherProfile = WeaponInventoryGetSlotProfile(p, otherSlot)
+    if activeProfile == WEAPON_PROFILE_HANDGUN then
+        set targetSlot = activeSlot
+    elseif otherProfile == WEAPON_PROFILE_HANDGUN then
+        set targetSlot = otherSlot
+    else
+        set targetSlot = activeSlot
+    endif
+    if WeaponInventorySetSlotWeapon(p, targetSlot, profileId, ammo) then
+        call WeaponInventoryQueueWeaponSound(p, profileId)
+        return true
+    endif
+    return false
+endfunction
+
+function WeaponInventoryConsumeShotForProfile takes player p, integer profileId returns boolean
+    local integer pid = GetPlayerId(p)
+    local integer slot = WeaponInventoryGetActiveSlot(p)
+    local integer key = WeaponInventoryKey(pid, slot)
+    local integer ammo
+    if not WeaponInventoryValidPid(pid) or not WeaponProfileIsWeapon(profileId) then
+        return false
+    endif
+    if profileId == WEAPON_PROFILE_HANDGUN then
+        return true
+    endif
+    if WeaponInventorySlotProfile[key] != profileId then
+        return false
+    endif
+    set ammo = WeaponInventorySlotAmmo[key]
+    if ammo <= 0 then
+        call WeaponInventoryResetSlotToHandgun(p, slot)
+        return false
+    endif
+    set ammo = ammo - 1
+    if ammo <= 0 then
+        call WeaponInventoryResetSlotToHandgun(p, slot)
+    else
+        set WeaponInventorySlotAmmo[key] = ammo
+        call WeaponInventoryMarkDirtyByPid(pid)
+    endif
+    return true
+endfunction
+
+function WeaponInventoryConsumeShot takes player p returns boolean
+    return WeaponInventoryConsumeShotForProfile(p, WeaponInventoryGetActiveProfile(p))
+endfunction
+
+function WeaponInventoryCanStartFire takes player p returns boolean
+    local integer profileId = WeaponInventoryGetActiveProfile(p)
+    if profileId == WEAPON_PROFILE_HANDGUN then
+        return true
+    endif
+    if WeaponInventoryGetActiveAmmo(p) > 0 then
+        return true
+    endif
+    call WeaponInventoryResetSlotToHandgun(p, WeaponInventoryGetActiveSlot(p))
+    return false
+endfunction
+
+function WeaponInventoryResetActiveSlotOnDeath takes player p returns nothing
+    call WeaponInventoryResetSlotToHandgun(p, WeaponInventoryGetActiveSlot(p))
+endfunction
+
+private function Init takes nothing returns nothing
+    local integer pid = 0
+    call WeaponInventoryInitSounds()
+    loop
+        exitwhen pid >= bj_MAX_PLAYER_SLOTS
+        set WeaponInventoryActiveSlot[pid] = WEAPON_INVENTORY_SLOT_1
+        set WeaponInventorySlotProfile[WeaponInventoryKey(pid, WEAPON_INVENTORY_SLOT_1)] = WEAPON_PROFILE_HANDGUN
+        set WeaponInventorySlotAmmo[WeaponInventoryKey(pid, WEAPON_INVENTORY_SLOT_1)] = WEAPON_AMMO_INFINITE
+        set WeaponInventorySlotProfile[WeaponInventoryKey(pid, WEAPON_INVENTORY_SLOT_2)] = WEAPON_PROFILE_HANDGUN
+        set WeaponInventorySlotAmmo[WeaponInventoryKey(pid, WEAPON_INVENTORY_SLOT_2)] = WEAPON_AMMO_INFINITE
+        set WeaponInventoryHudVersion[pid] = 1
+        set pid = pid + 1
+    endloop
+endfunction
+
+endlibrary
+
+// ===== END: MyMissiles/WeaponInventoryCore.j =====
+
+// ===== BEGIN: MyMissiles/WeaponInventorySystem.j =====
+library WeaponInventorySystem initializer Init requires WeaponInventoryCore, LoadoutMissile, LoadoutMetalSlugSpecial, LoadoutRocketLauncher, LoadoutIronLizard, LoadoutThunderShot, RegisterPlayerUnitEvent
+
+private function WeaponInventoryIsStraightProfile takes integer profileId returns boolean
+    return profileId == WEAPON_PROFILE_HANDGUN or profileId == WEAPON_PROFILE_HEAVY_MACHINE_GUN or profileId == WEAPON_PROFILE_TWO_MACHINE_GUN or profileId == WEAPON_PROFILE_LASER_GUN
+endfunction
+
+function WeaponInventoryFireActive takes player p, real targetX, real targetY returns boolean
+    local integer profileId = WeaponInventoryGetActiveProfile(p)
+    local integer pid = GetPlayerId(p)
+    local unit hero = PlayerHero[pid]
+    local boolean ok = false
+
+    if hero == null or GetUnitTypeId(hero) == 0 or not UnitAlive(hero) then
+        set hero = null
+        return false
+    endif
+    call WeaponInventoryEnsurePlayer(p)
+    if not WeaponInventoryCanStartFire(p) then
+        set hero = null
+        return false
+    endif
+
+    if WeaponInventoryIsStraightProfile(profileId) then
+        set ok = LoadoutMissileFireProfile(hero, p, profileId, targetX, targetY)
+    elseif profileId == WEAPON_PROFILE_ENEMY_CHASER then
+        set ok = LoadoutRocketLauncherFire(hero, p, targetX, targetY)
+    elseif profileId == WEAPON_PROFILE_IRON_LIZARD then
+        set ok = LoadoutIronLizardFire(hero, p, targetX, targetY)
+    elseif profileId == WEAPON_PROFILE_THUNDER_SHOT then
+        set ok = LoadoutThunderShotFire(hero, p, targetX, targetY)
+    else
+        set ok = LoadoutMetalSlugSpecialFireProfile(hero, p, profileId, targetX, targetY)
+    endif
+
+    set hero = null
+    return ok
+endfunction
+
+private function OnFireEffect takes nothing returns nothing
+    call WeaponInventoryFireActive(GetTriggerPlayer(), GetSpellTargetX(), GetSpellTargetY())
+endfunction
+
+private function OnAnySpellCast takes nothing returns nothing
+    local integer abilityId = GetSpellAbilityId()
+    if abilityId == WEAPON_INVENTORY_SELECT_SLOT_1_ABILITY then
+        call WeaponInventorySetActiveSlot(GetTriggerPlayer(), WEAPON_INVENTORY_SLOT_1)
+    elseif abilityId == WEAPON_INVENTORY_SELECT_SLOT_2_ABILITY then
+        call WeaponInventorySetActiveSlot(GetTriggerPlayer(), WEAPON_INVENTORY_SLOT_2)
+    endif
+endfunction
+
+private function Init takes nothing returns nothing
+    call RegisterSpellEffectEvent(WEAPON_INVENTORY_FIRE_ABILITY, function OnFireEffect)
+    call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_SPELL_CAST, function OnAnySpellCast)
+endfunction
+
+endlibrary
+
+// ===== END: MyMissiles/WeaponInventorySystem.j =====
+
+// ===== BEGIN: MyMissiles/WeaponSelectionSystem.j =====
+library WeaponSelectionSystem requires WeaponInventoryCore
+
+// Compatibility layer for older systems that still call the previous
+// weapon-selection API. The actual Metal Slug inventory lives in
+// WeaponInventoryCore/WeaponInventorySystem.
+
+function PlayerHasWeaponProfile takes player p, integer profileId returns boolean
+    return profileId == WEAPON_PROFILE_HANDGUN or WeaponInventoryGetSlotProfile(p, WEAPON_INVENTORY_SLOT_1) == profileId or WeaponInventoryGetSlotProfile(p, WEAPON_INVENTORY_SLOT_2) == profileId
+endfunction
+
+function GetPlayerActiveWeaponProfile takes player p returns integer
+    return WeaponInventoryGetActiveProfile(p)
+endfunction
+
+function SetPlayerActiveWeaponProfile takes player p, integer profileId returns boolean
+    if not WeaponProfileIsWeapon(profileId) then
+        return false
+    endif
+    if profileId != WEAPON_PROFILE_HANDGUN and not PlayerHasWeaponProfile(p, profileId) then
+        call WeaponInventoryGiveWeapon(p, profileId, WeaponProfileGetDefaultAmmo(profileId))
+    endif
+    if WeaponInventoryGetSlotProfile(p, WEAPON_INVENTORY_SLOT_1) == profileId then
+        return WeaponInventorySetActiveSlot(p, WEAPON_INVENTORY_SLOT_1)
+    endif
+    if WeaponInventoryGetSlotProfile(p, WEAPON_INVENTORY_SLOT_2) == profileId then
+        return WeaponInventorySetActiveSlot(p, WEAPON_INVENTORY_SLOT_2)
+    endif
+    call WeaponInventoryResetSlotToHandgun(p, WeaponInventoryGetActiveSlot(p))
+    return WeaponInventorySetActiveSlot(p, WeaponInventoryGetActiveSlot(p))
+endfunction
+
+function UnlockPlayerWeaponProfile takes player p, integer profileId returns boolean
+    if profileId == WEAPON_PROFILE_HANDGUN then
+        call WeaponInventoryEnsurePlayer(p)
+        return true
+    endif
+    return WeaponInventoryGiveWeapon(p, profileId, WeaponProfileGetDefaultAmmo(profileId))
+endfunction
+
+function RefreshPlayerWeaponSelectors takes player p returns nothing
+    call WeaponInventoryEnsurePlayer(p)
+endfunction
+
+function EnsurePlayerDefaultWeaponProfile takes player p returns nothing
+    call WeaponInventoryEnsurePlayer(p)
+endfunction
+
+endlibrary
+
+// ===== END: MyMissiles/WeaponSelectionSystem.j =====
+
 // ===== BEGIN: Players/Config/AllianceConfig.j =====
 library AllianceConfig
 
@@ -16626,6 +17691,38 @@ library AllianceConfig
 endlibrary
 
 // ===== END: Players/Config/AllianceConfig.j =====
+
+// ===== BEGIN: Players/Config/InitialGoldConfig.j =====
+library InitialGoldConfig requires PlayerUtils
+
+    globals
+        private constant integer INITIAL_PLAYER_GOLD = 1
+        private constant integer MAX_HUMAN_PLAYER_SLOTS = 8
+    endglobals
+
+    function InitInitialPlayerGold takes nothing returns nothing
+        local integer i = 0
+        local User u
+        local player p
+        local integer currentGold
+
+        loop
+            exitwhen i == User.AmountPlaying
+            set u = User.fromPlaying(i)
+            if u.id >= 0 and u.id < MAX_HUMAN_PLAYER_SLOTS then
+                set p = u.toPlayer()
+                set currentGold = GetPlayerState(p, PLAYER_STATE_RESOURCE_GOLD)
+                call SetPlayerState(p, PLAYER_STATE_RESOURCE_GOLD, currentGold + INITIAL_PLAYER_GOLD)
+            endif
+            set i = i + 1
+        endloop
+
+        set p = null
+    endfunction
+
+endlibrary
+
+// ===== END: Players/Config/InitialGoldConfig.j =====
 
 // ===== BEGIN: Players/PlayerHeroState.j =====
 library PlayerHeroState requires Camera
@@ -16715,7 +17812,9 @@ library SelectionElementConfig requires PlayerMissileLoadout
             set casterFx2 = "Miss\\Valiant Charge.mdx"
         endif
 
-        call UnitAddAbility(hero, abilityId)
+        // El PreSelect ya no otorga habilidad de orbe/elemento.
+        // El elementId queda solo como perfil visual/color del proyectil.
+        // Tier 1 usa Blue; futuros tiers pueden llamar esta config con otro elementId.
         call SetPlayerLeapCasterFx(p, casterFx1, casterFx2)
         call SetPlayerMissileLoadout(p, abilityId, speed, damage, instances, model, overlay)
         call SetPlayerLeapImpactFx(p, impactFx)
@@ -16743,12 +17842,19 @@ library SelectionHeroConfig
         return 'H007'
     endfunction
 
+    function SelectionGetHeroProjectileElementId takes integer index returns integer
+        // Tier inicial: todos los heroes empiezan con misil Blue.
+        // SelectionElementConfig usa elementId 0 para Blue.
+        // Los futuros tiers de arma deberian cambiar este perfil visual.
+        return 0
+    endfunction
+
 endlibrary
 
 // ===== END: Selection/Config/SelectionHeroConfig.j =====
 
 // ===== BEGIN: Selection/Config/SelectionHeroVisualConfig.j =====
-library SelectionHeroVisualConfig requires PlayerMissileLoadout
+library SelectionHeroVisualConfig requires PlayerMissileLoadout, WeaponProfileConfig, WeaponSelectionSystem
 
     function SelectionSetupHeroVisual takes integer heroId, player p returns nothing
         local string dummyFx1 = ""
@@ -16776,8 +17882,9 @@ library SelectionHeroVisualConfig requires PlayerMissileLoadout
         call SetPlayerOrbLevel(p, 1)
         call SetPlayerMissileHealOnHit(p, 0.00)
         call SetPlayerPointsOfMana(p, 1)
-        call SetPlayerMissileDamageValue(p, 0.50)
+        call SetPlayerMissileDamageValue(p, WeaponProfileGetDamage(WEAPON_PROFILE_HANDGUN))
         call SetPlayerMissileUseRapidFire(p, true)
+        call EnsurePlayerDefaultWeaponProfile(p)
     endfunction
 
 endlibrary
@@ -16878,7 +17985,6 @@ library SelectionStartFlow requires TheEnd, GameState, InitialWaveMultiboard, Se
     function SelectionStartGameAfterAllSelected takes nothing returns nothing
         call SelectionCreateClients()
         call SelectionShowClients()
-        call StartAmbientTownSound()
         call ShowInitialWaveMultiboard()
         set WaveTgg = "Trig_w1_Actions"
         call StartInitialWaveCountdown()
@@ -16889,26 +17995,20 @@ endlibrary
 // ===== END: Selection/SelectionStartFlow.j =====
 
 // ===== BEGIN: Selection/SelectionSystem.j =====
-library SelectionSystem requires PlayerUtils, PlayerHeroState, InitialWaveMultiboard, SelectionElementConfig, SelectionHeroVisualConfig, SelectionHeroSpawn, SelectionStartFlow
+library SelectionSystem requires PlayerUtils, PlayerHeroState, InitialWaveMultiboard, SelectionElementConfig, SelectionHeroVisualConfig, SelectionHeroConfig, SelectionHeroSpawn, SelectionStartFlow
 
 globals
     private constant real SELECTION_PHASE_TIMEOUT = 10.0
     private constant integer SELECTION_PHASE_NONE = 0
-    private constant integer SELECTION_PHASE_ELEMENT = 1
-    private constant integer SELECTION_PHASE_HERO = 2
+    private constant integer SELECTION_PHASE_HERO = 1
 
     private dialog array heroDialog
-    private dialog array elementDialog
 
     private button array heroButton
-    private button array elementButton
 
     private integer array heroChoice
-    private integer array elementChoice
     private boolean array heroChosen
-    private boolean array elementChosen
     private boolean array finished
-    private integer totalElementChosen = 0
     private integer totalFinished = 0
     private trigger dialogTrig = null
     private timer selectionTimer = null
@@ -16918,7 +18018,7 @@ endglobals
 struct SelectionSystem
 
     private static method executeElement takes User u returns nothing
-        call SelectionSetupElement(elementChoice[u.id], u.toPlayer(), PlayerHero[u.id])
+        call SelectionSetupElement(SelectionGetHeroProjectileElementId(heroChoice[u.id]), u.toPlayer(), PlayerHero[u.id])
         call SelectionSetupHeroVisual(heroChoice[u.id], u.toPlayer())
     endmethod
 
@@ -16928,7 +18028,6 @@ struct SelectionSystem
         endif
         call SelectionEnsureHeroCreated(u, heroChoice[u.id])
         call DialogDisplay(u.toPlayer(), heroDialog[u.id], false)
-        call DialogDisplay(u.toPlayer(), elementDialog[u.id], false)
         call thistype.executeElement(u)
         set finished[u.id] = true
         set totalFinished = totalFinished + 1
@@ -16946,7 +18045,6 @@ struct SelectionSystem
         loop
             exitwhen i == User.AmountPlaying
             set u = User.fromPlaying(i)
-            call DialogDisplay(u.toPlayer(), elementDialog[u.id], false)
             if not heroChosen[u.id] then
                 call DialogDisplay(u.toPlayer(), heroDialog[u.id], true)
             endif
@@ -16954,28 +18052,6 @@ struct SelectionSystem
         endloop
 
         call TimerStart(selectionTimer, SELECTION_PHASE_TIMEOUT, false, function thistype.onHeroTimeout)
-    endmethod
-
-    private static method checkAllElementsChosen takes nothing returns nothing
-        if totalElementChosen >= User.AmountPlaying then
-            call PauseTimer(selectionTimer)
-            call thistype.startHeroPhase()
-        endif
-    endmethod
-
-    private static method randomizeMissingElements takes nothing returns nothing
-        local integer i = 0
-        local User u
-        loop
-            exitwhen i == User.AmountPlaying
-            set u = User.fromPlaying(i)
-            if not elementChosen[u.id] then
-                set elementChoice[u.id] = GetRandomInt(0, 5)
-                set elementChosen[u.id] = true
-                set totalElementChosen = totalElementChosen + 1
-            endif
-            set i = i + 1
-        endloop
     endmethod
 
     private static method randomizeMissingHeroes takes nothing returns nothing
@@ -16988,16 +18064,11 @@ struct SelectionSystem
                 set heroChoice[u.id] = GetRandomInt(0, 5)
                 set heroChosen[u.id] = true
             endif
-            if heroChosen[u.id] and elementChosen[u.id] and not finished[u.id] then
+            if heroChosen[u.id] and not finished[u.id] then
                 call thistype.finishSelection(u)
             endif
             set i = i + 1
         endloop
-    endmethod
-
-    private static method onElementTimeout takes nothing returns nothing
-        call thistype.randomizeMissingElements()
-        call thistype.startHeroPhase()
     endmethod
 
     private static method onHeroTimeout takes nothing returns nothing
@@ -17026,17 +18097,6 @@ struct SelectionSystem
         loop
             exitwhen i == 6
             set index = u.id*6 + i
-
-            if GetClickedButton() == elementButton[index] and selectionPhase == SELECTION_PHASE_ELEMENT then
-                set elementChoice[u.id] = i
-                call DialogDisplay(p, elementDialog[u.id], false)
-                if not elementChosen[u.id] then
-                    set elementChosen[u.id] = true
-                    set totalElementChosen = totalElementChosen + 1
-                endif
-                call thistype.checkAllElementsChosen()
-                return
-            endif
 
             if GetClickedButton() == heroButton[index] and selectionPhase == SELECTION_PHASE_HERO then
                 set heroChoice[u.id] = i
@@ -17070,16 +18130,6 @@ struct SelectionSystem
             set heroButton[index+5] = DialogAddButton(heroDialog[u.id], "Yoshi", 0)
             call DialogDisplay(u.toPlayer(), heroDialog[u.id], false)
 
-            set elementDialog[u.id] = DialogCreate()
-            call DialogSetMessage(elementDialog[u.id], "Elige tu elemento")
-            set elementButton[index+0] = DialogAddButton(elementDialog[u.id], "Rayo", 0)
-            set elementButton[index+1] = DialogAddButton(elementDialog[u.id], "Dark", 0)
-            set elementButton[index+2] = DialogAddButton(elementDialog[u.id], "Blood", 0)
-            set elementButton[index+3] = DialogAddButton(elementDialog[u.id], "Wind", 0)
-            set elementButton[index+4] = DialogAddButton(elementDialog[u.id], "Venom", 0)
-            set elementButton[index+5] = DialogAddButton(elementDialog[u.id], "Fire", 0)
-            call DialogDisplay(u.toPlayer(), elementDialog[u.id], true)
-
             set i = i + 1
         endloop
     endmethod
@@ -17090,7 +18140,7 @@ struct SelectionSystem
 
         call thistype.createDialogs()
         call ShowInitialWaveMultiboard()
-        set selectionPhase = SELECTION_PHASE_ELEMENT
+        set selectionPhase = SELECTION_PHASE_HERO
 
         if selectionTimer == null then
             set selectionTimer = CreateTimer()
@@ -17104,12 +18154,12 @@ struct SelectionSystem
             set u = User.fromPlaying(i)
 
             call TriggerRegisterDialogEvent(dialogTrig, heroDialog[u.id])
-            call TriggerRegisterDialogEvent(dialogTrig, elementDialog[u.id])
+            call DialogDisplay(u.toPlayer(), heroDialog[u.id], true)
 
             set i = i + 1
         endloop
 
-        call TimerStart(selectionTimer, SELECTION_PHASE_TIMEOUT, false, function thistype.onElementTimeout)
+        call TimerStart(selectionTimer, SELECTION_PHASE_TIMEOUT, false, function thistype.onHeroTimeout)
     endmethod
 
 endstruct
@@ -17119,7 +18169,7 @@ endlibrary
 // ===== END: Selection/SelectionSystem.j =====
 
 // ===== BEGIN: Systems/HeroLives/HeroLives.j =====
-library HeroLives initializer Init requires PlayerUtils, TimerUtils, PreConfi, PlayerHeroState
+library HeroLives initializer Init requires PlayerUtils, TimerUtils, PreConfi, PlayerHeroState, WeaponSelectionSystem, WeaponInventoryCore
 
     globals
         public constant integer HERO_LIVES_BASE = 10
@@ -17300,6 +18350,7 @@ library HeroLives initializer Init requires PlayerUtils, TimerUtils, PreConfi, P
         if ReviveHero(hero, x, y, true) then
             call SetUnitState(hero, UNIT_STATE_LIFE, GetUnitState(hero, UNIT_STATE_MAX_LIFE))
             call SetUnitState(hero, UNIT_STATE_MANA, GetUnitState(hero, UNIT_STATE_MAX_MANA))
+            call EnsurePlayerDefaultWeaponProfile(Player(pid))
             if HERO_LIVES_REVIVE_FX != "" then
                 set fx = AddSpecialEffect(HERO_LIVES_REVIVE_FX, x, y)
                 call DestroyEffect(fx)
@@ -17382,6 +18433,7 @@ library HeroLives initializer Init requires PlayerUtils, TimerUtils, PreConfi, P
         set HeroLivesDeathY[pid] = GetUnitY(hero)
         set HeroLivesCurrent[pid] = HeroLivesCurrent[pid] - 1
         set HeroLivesState[pid] = 1
+        call WeaponInventoryResetActiveSlotOnDeath(Player(pid))
 
         if HeroLivesTimer[pid] == null then
             set HeroLivesTimer[pid] = NewTimer()
@@ -17608,128 +18660,10 @@ endlibrary
 // ===== END: Systems/Tender/Config/TenderSpawnConfig.j =====
 
 // ===== BEGIN: Systems/Tender/TenderEscInteraction.j =====
-library TenderEscInteraction initializer Init requires PlayerUtils, PlayerHeroState, TenderSystem, RestTimeState, MenuClient, GameState
-
-    globals
-        private constant real TENDER_ESC_RADIUS = 500.0
-        private constant real TENDER_ESC_PROMPT_TICK = 0.50
-        private timer TenderEscPromptTimer = null
-        private boolean array TenderEscPromptShownByPid
-    endglobals
-
-    private function HasValidHero takes integer pid returns boolean
-        return PlayerHero[pid] != null and GetUnitTypeId(PlayerHero[pid]) != 0
-    endfunction
-
-    private function IsHeroInTenderRange takes integer pid returns boolean
-        if not HasValidHero(pid) then
-            return false
-        endif
-        return IsUnitNearTender(PlayerHero[pid], TENDER_ESC_RADIUS)
-    endfunction
-
-    private function RefreshTenderClient takes integer pid returns nothing
-        local unit hero
-        local Client client
-
-        if not HasValidHero(pid) then
-            return
-        endif
-
-        set hero = PlayerHero[pid]
-        set client = Client[hero]
-
-        if client != 0 and PlayerCamera[pid] != 0 then
-            call client.show(true, PlayerCamera[pid])
-        endif
-
-        set hero = null
-    endfunction
-
-    private function ShowToPlayer takes player p, string text returns nothing
-        call DisplayTimedTextToPlayer(p, 0.52, 0.82, 1.50, text)
-    endfunction
-
-    private function CloseTenderForPid takes integer pid returns nothing
-        if isTender[pid] then
-            set isTender[pid] = false
-            call RefreshTenderClient(pid)
-        endif
-    endfunction
-
-    private function ToggleTenderForEsc takes nothing returns nothing
-        local player p = GetTriggerPlayer()
-        local integer pid = GetPlayerId(p)
-
-        if pid < 0 or pid > 7 then
-            set p = null
-            return
-        endif
-
-        if RestPhaseState != REST_PHASE_PURCHASE then
-            call CloseTenderForPid(pid)
-            set TenderEscPromptShownByPid[pid] = false
-            set p = null
-            return
-        endif
-
-        if isTender[pid] then
-            call CloseTenderForPid(pid)
-            call ShowToPlayer(p, "|cffffcc00Tender cerrado.|r")
-        elseif IsHeroInTenderRange(pid) then
-            set isTender[pid] = true
-            call RefreshTenderClient(pid)
-            call ShowToPlayer(p, "|cff00ff99Tender abierto.|r")
-        else
-            call ShowToPlayer(p, "|cffffcc00Acercate al Tender para abrir la tienda.|r")
-        endif
-
-        set p = null
-    endfunction
-
-    private function PromptTenderEsc takes nothing returns nothing
-        local integer i = 0
-        local User u
-        local boolean shouldPrompt
-
-        loop
-            exitwhen i == User.AmountPlaying
-            set u = User.fromPlaying(i)
-            set shouldPrompt = RestPhaseState == REST_PHASE_PURCHASE and not isTender[u.id] and IsHeroInTenderRange(u.id)
-
-            if shouldPrompt and not TenderEscPromptShownByPid[u.id] then
-                call ShowToPlayer(u.toPlayer(), "|cff00ccffPresiona ESC para abrir el Tender|r")
-                set TenderEscPromptShownByPid[u.id] = true
-            elseif not shouldPrompt then
-                set TenderEscPromptShownByPid[u.id] = false
-            endif
-
-            set i = i + 1
-        endloop
-    endfunction
-
-    private function RegisterEscForActivePlayers takes trigger t returns nothing
-        local integer i = 0
-        local User u
-
-        loop
-            exitwhen i == User.AmountPlaying
-            set u = User.fromPlaying(i)
-            call TriggerRegisterPlayerEvent(t, u.toPlayer(), EVENT_PLAYER_END_CINEMATIC)
-            set i = i + 1
-        endloop
-    endfunction
+library TenderEscInteraction initializer Init
 
     private function Init takes nothing returns nothing
-        local trigger escTrigger = CreateTrigger()
-
-        call RegisterEscForActivePlayers(escTrigger)
-        call TriggerAddAction(escTrigger, function ToggleTenderForEsc)
-
-        set TenderEscPromptTimer = CreateTimer()
-        call TimerStart(TenderEscPromptTimer, TENDER_ESC_PROMPT_TICK, true, function PromptTenderEsc)
-
-        set escTrigger = null
+        // Desactivado: ya no se abre/cierra ningun MenuClient especial con ESC.
     endfunction
 
 endlibrary
@@ -18065,33 +18999,22 @@ endlibrary
 // ===== END: UI System/MyIU/Inits.j =====
 
 // ===== BEGIN: UI System/MyIU/MenuClient.j =====
-library MenuClient initializer Init requires UserInterface,EquipHeroModels,PlayerMissileLoadout,TimerUtils,WaveTest,TenderSystem,PreConfi,EnemyPreviewConfig,PlayerHeroState // requires InventoryCore, EquipmentItem
-    
+library MenuClient initializer Init requires UserInterface, GameState, WeaponInventoryCore
+
 globals
     public filterfunc FuncLClickSlot = null
     public filterfunc FuncRClickSlot = null
-    public integer array PlayerLastSlot 
+    public integer array PlayerLastSlot
     public UIButton array PlayerLastButton
     private string array WaveStatusText
-    private effect array WaveEnemyPreviewFx
-    private integer array WaveEnemyPreviewWaveId
-    private string array WaveEnemyPreviewModelPath
     private real array PlayerMenuCameraHeight
     private real array PlayerMenuCameraOffset
     private real array PlayerMenuFogAppliedHeight
+    private integer array WeaponHudLastVersion
 endglobals
-    
+
     public /*constant*/ function HERO_WINDOW_NAME takes unit u returns string
         return User[GetOwningPlayer(u)].nameColored
-        // return GetHeroProperName(u)
-    endfunction
-
-    // Version local de Inventory.localInt para mostrar solo al jugador local.
-    private function DesignLocalInt takes integer pid, integer value, integer other returns integer
-        if (User.Local != User(pid).handle) then
-            set value = other
-        endif
-        return value
     endfunction
 
     private function GetDefaultMenuCameraHeight takes nothing returns real
@@ -18153,78 +19076,60 @@ endglobals
         set PlayerMenuCameraHeight[pid] = nextHeight
         set PlayerMenuCameraOffset[pid] = GetMenuCameraOffsetForHeight(nextHeight)
     endfunction
-    
+
     struct Client
-        //
-        // configuration
-        //
-        static constant real X = -0.32//0.425
+        static constant real X = -0.32
         static constant real Y = .99
-        
-        static constant real WINDOW_SIZE = 0.21
-        
-        static constant real SLOT_OFFSET_Y          = 0.065
-        static constant real SLOT_OFFSET_ROWRIGHT_X = 0.460
-        static constant real SLOT_OFFSET_ROWLEFT_X  = 0.105
-        
+        static constant real SLOT_OFFSET_Y = 0.065
+        static constant real SLOT_OFFSET_ROWLEFT_X = 0.105
         static constant real HERO_NAME_Y = 0.86
         static constant real HERO_NAME_X = 0.28
-        
-        static constant real CHARMODEL_OFFSET_X  = X + 0.32
-        static constant real CHARMODEL_OFFSET_Y  = 0.200
-        
-        static constant integer MAX_SLOTS = 11
-        static constant real SLOT_WIDTH   = 0.095
-        static constant real SLOT_HEIGHT  = 0.095 * SCREEN_ASPECT_RATIO
-        
-        static constant integer MODEL_DUMMY  = 'e000' // for character model
-        static constant integer WINDOW_DUMMY = 'ewin'
-        //
-        // end config
-        //
-        
+        static constant integer MAX_SLOTS = 50
+        static constant integer SLOT_CAMERA_UP = 2
+        static constant integer SLOT_CAMERA_DOWN = 7
+        static constant integer TEXT_WAVE_STATUS = 10
+        static constant integer PICTURE_WEAPON_SLOT_1 = 20
+        static constant integer PICTURE_WEAPON_SLOT_2 = 21
+        static constant integer TEXT_WEAPON_SLOT_1 = 22
+        static constant integer TEXT_WEAPON_SLOT_2 = 23
+        static constant real SLOT_WIDTH = 0.095
+        static constant real SLOT_HEIGHT = 0.095 * SCREEN_ASPECT_RATIO
+        static constant real WEAPON_HUD_X = -0.315-1
+        static constant real WEAPON_HUD_Y = 0.735
+        static constant real WEAPON_HUD_GAP_Y = 0.082+.15
+        static constant real WEAPON_HUD_ICON_SIZE = 0.058
+        static constant real WEAPON_HUD_TEXT_X = -0.250-1
+        static constant real WEAPON_HUD_TEXT_Y = 0.705
+        static constant real WEAPON_HUD_TEXT_GAP_Y = 0.082+.25
+
         readonly static boolean Initialized = false
         readonly static integer DisplayCount = 0
-        readonly static hashtable Hashtable
         readonly static timer UpdateTimer
         readonly static unit array PlayerCurrentUnit
         readonly static thistype array UnitsIndex
-        
-        static UIButton array buttons[.MAX_SLOTS] //
-        static UIPicture array slotButton[.MAX_SLOTS] //
-        //InvItem array item[.MAX_SLOTS]
-        integer array itemId[.MAX_SLOTS]
-        static UIPicture array pictures[.MAX_SLOTS] //
-        static UIPicture array selector //
-        static UIText array title[.MAX_SLOTS] //
-        static trigger onSocket
-        
-        UIPicture charModel
-        UIPicture charModel2
-        UIPicture array charMOrb[.MAX_SLOTS]
-        effect array chain[.MAX_SLOTS]
+
+        static UIButton array buttons[.MAX_SLOTS]
+        static UIPicture array pictures[.MAX_SLOTS]
+        static UIText array title[.MAX_SLOTS]
+
         Camera camera
-    
         unit unit
         player player
         User user
-        
         readonly boolean displayed
-        readonly thistype next
-        readonly thistype prev
-        
+
         static method operator [] takes unit u returns thistype
-            return .UnitsIndex[GetUnitUserData(u)] 
-        endmethod 
- 
+            return .UnitsIndex[GetUnitUserData(u)]
+        endmethod
+
         method getButton takes integer index returns UIButton
             return this.buttons[(this.user.id * .MAX_SLOTS) + index]
         endmethod
-        
-        method getPicture takes integer index returns UIButton
+
+        method getPicture takes integer index returns UIPicture
             return this.pictures[(this.user.id * .MAX_SLOTS) + index]
         endmethod
-        
+
         method setButton takes integer index, UIButton value returns nothing
             set this.buttons[(this.user.id * .MAX_SLOTS) + index] = value
         endmethod
@@ -18236,50 +19141,47 @@ endglobals
             return WaveStatusText[userId]
         endmethod
 
-        private method destroyEnemyPreviewFx takes nothing returns nothing
-            if WaveEnemyPreviewFx[this.user.id] != null then
-                call DestroyEffect(WaveEnemyPreviewFx[this.user.id])
-                set WaveEnemyPreviewFx[this.user.id] = null
+        private static method formatAmmoText takes integer ammo returns string
+            if ammo == WEAPON_AMMO_INFINITE then
+                return "|cff99ff99INF|r"
             endif
-            set WaveEnemyPreviewWaveId[this.user.id] = 0
-            set WaveEnemyPreviewModelPath[this.user.id] = ""
+            return "|cffffcc00" + I2S(ammo) + "|r"
         endmethod
 
-        method setEnemyPreviewWave takes integer waveId returns nothing
-            local string modelPath
-            local string previewText
-            local real previewScale
-            local boolean createFx
-            set modelPath = EnemyPreviewGetModelPath(waveId)
-            set previewText = EnemyPreviewGetText(waveId)
-            set previewScale = EnemyPreviewGetModelScale(waveId)
-            if this.title[(this.user.id * MAX_SLOTS) + 7] != 0 then
-                call SetTextTagText(this.title[(this.user.id * MAX_SLOTS) + 7].text, previewText, 8 * 0.0020)
+        private static method formatWeaponSlotText takes player p, integer slot returns string
+            local integer profileId = WeaponInventoryGetSlotProfile(p, slot)
+            local integer ammo = WeaponInventoryGetSlotAmmo(p, slot)
+            local string prefix = "  "
+            if WeaponInventoryGetActiveSlot(p) == slot then
+                set prefix = "|cffffff00>|r "
             endif
-            if this.charModel != 0 then
-                call SetUnitScale(this.charModel.picture, previewScale, previewScale, previewScale)
-                set createFx = false
-                if modelPath == "" then
-                    call this.destroyEnemyPreviewFx()
-                elseif WaveEnemyPreviewFx[this.user.id] == null then
-                    set createFx = true
-                elseif WaveEnemyPreviewWaveId[this.user.id] != waveId then
-                    call this.destroyEnemyPreviewFx()
-                    set createFx = true
-                elseif WaveEnemyPreviewModelPath[this.user.id] != modelPath then
-                    call this.destroyEnemyPreviewFx()
-                    set createFx = true
-                endif
-                if createFx then
-                    set WaveEnemyPreviewFx[this.user.id] = AddSpecialEffectTarget(modelPath, this.charModel.picture, "origin")
-                    set WaveEnemyPreviewWaveId[this.user.id] = waveId
-                    set WaveEnemyPreviewModelPath[this.user.id] = modelPath
-                endif
-            endif
+            return prefix + WeaponProfileGetName(profileId) + "\nMunicion: " + thistype.formatAmmoText(ammo)
         endmethod
 
-        method clearEnemyPreview takes nothing returns nothing
-            call this.destroyEnemyPreviewFx()
+        private method refreshWeaponHud takes nothing returns nothing
+            local integer pid = this.user.id
+            local integer hudVersion = WeaponInventoryGetHudVersion(this.player)
+            local integer profile1
+            local integer profile2
+
+            if WeaponHudLastVersion[pid] != hudVersion then
+                set profile1 = WeaponInventoryGetSlotProfile(this.player, WEAPON_INVENTORY_SLOT_1)
+                set profile2 = WeaponInventoryGetSlotProfile(this.player, WEAPON_INVENTORY_SLOT_2)
+
+                if .pictures[(pid * .MAX_SLOTS) + thistype.PICTURE_WEAPON_SLOT_1] != 0 then
+                    call .pictures[(pid * .MAX_SLOTS) + thistype.PICTURE_WEAPON_SLOT_1].setTexture(WeaponProfileGetTexture(profile1))
+                endif
+                if .pictures[(pid * .MAX_SLOTS) + thistype.PICTURE_WEAPON_SLOT_2] != 0 then
+                    call .pictures[(pid * .MAX_SLOTS) + thistype.PICTURE_WEAPON_SLOT_2].setTexture(WeaponProfileGetTexture(profile2))
+                endif
+                if .title[(pid * .MAX_SLOTS) + thistype.TEXT_WEAPON_SLOT_1] != 0 then
+                    call SetTextTagText(.title[(pid * .MAX_SLOTS) + thistype.TEXT_WEAPON_SLOT_1].text, thistype.formatWeaponSlotText(this.player, WEAPON_INVENTORY_SLOT_1), 7 * 0.0027)
+                endif
+                if .title[(pid * .MAX_SLOTS) + thistype.TEXT_WEAPON_SLOT_2] != 0 then
+                    call SetTextTagText(.title[(pid * .MAX_SLOTS) + thistype.TEXT_WEAPON_SLOT_2].text, thistype.formatWeaponSlotText(this.player, WEAPON_INVENTORY_SLOT_2), 7 * 0.0027)
+                endif
+                set WeaponHudLastVersion[pid] = hudVersion
+            endif
         endmethod
 
         method setWaveStatusTitle takes string value returns nothing
@@ -18288,310 +19190,83 @@ endglobals
             else
                 set WaveStatusText[this.user.id] = value
             endif
-            if this.title[(this.user.id * MAX_SLOTS) + 10] != 0 then
-                call SetTextTagText(this.title[(this.user.id * MAX_SLOTS) + 10].text, thistype.getWaveStatusText(this.user.id), 8 * 0.0027)
+            if this.title[(this.user.id * .MAX_SLOTS) + thistype.TEXT_WAVE_STATUS] != 0 then
+                call SetTextTagText(this.title[(this.user.id * .MAX_SLOTS) + thistype.TEXT_WAVE_STATUS].text, thistype.getWaveStatusText(this.user.id), 8 * 0.0027)
             endif
         endmethod
-         
+
+        method setEnemyPreviewWave takes integer waveId returns nothing
+            // Desactivado: el MenuClient minimal solo conserva camara, niebla y contador de wave.
+        endmethod
+
+        method clearEnemyPreview takes nothing returns nothing
+            // Desactivado: no se crean previews/modelos en el MenuClient minimal.
+        endmethod
+
+        private method setupCameraButton takes integer slot returns nothing
+            if this.getButton(slot) != 0 then
+                set this.getButton(slot).customValue = slot
+                set this.getButton(slot).selectUnit = this.unit
+                set this.getButton(slot).onLeftClick = FuncLClickSlot
+                set this.getButton(slot).onRightClick = FuncRClickSlot
+            endif
+        endmethod
+
         static method create takes unit u returns thistype
             local thistype this = thistype.allocate()
             local real x1 = X + SLOT_OFFSET_ROWLEFT_X
-            local real x2 = X + SLOT_OFFSET_ROWRIGHT_X
             local real y1 = Y - SLOT_OFFSET_Y
-            local integer i = 0
 
             set this.unit = u
             set this.player = GetOwningPlayer(u)
             set this.user = User[this.player]
+            set this.displayed = false
+            set this.camera = 0
+
             if WaveStatusText[this.user.id] == null or WaveStatusText[this.user.id] == "" then
                 set WaveStatusText[this.user.id] = "Wave"
             endif
-             
+
             set .UnitsIndex[GetUnitUserData(u)] = this
 
-            //
-            // GEAR SLOTS
-            //
-            
-            if (this.getButton(0) == 0) then
-            
-                set selector[this.user.id] = UIPicture.createEx(X - 0.15, (Y + SLOT_OFFSET_Y) - .250, 0, .70, 'e000', 1, 1, 0)
-                set selector[this.user.id].animIndex = 56
-                call selector[this.user.id].show(false, this.camera)
+            call this.setButton(thistype.SLOT_CAMERA_UP, UIButton.create(x1 + (.SLOT_WIDTH*0.75)-1.00, y1 - (.SLOT_HEIGHT*5)+1.05, .SLOT_WIDTH, .SLOT_HEIGHT, 10, 'M00G'))
+            call this.setButton(thistype.SLOT_CAMERA_DOWN, UIButton.create(x1 + (.SLOT_WIDTH*0.75)-1.10, y1 - (.SLOT_HEIGHT*5)+1.05, .SLOT_WIDTH, .SLOT_HEIGHT, 10, 'M00H'))
+            call this.setupCameraButton(thistype.SLOT_CAMERA_UP)
+            call this.setupCameraButton(thistype.SLOT_CAMERA_DOWN)
 
-                call AddSpecialEffectTarget("UI\\TRSHerolevel.mdx", selector[this.user.id].picture, "origin")
-                
-                // middle
-                call this.setButton(0, UIButton.create(x1 + (.SLOT_WIDTH*0.75)+1.00+0.1, y1 - (.SLOT_HEIGHT*5)-0.15, .SLOT_WIDTH, .SLOT_HEIGHT, 10, 'M00D'))
-                
-                // Slot 1 era el boton viejo para abrir/cerrar Tender.
-                // Ahora el Tender se abre con ESC desde TenderEscInteraction.
-                
-                call this.setButton(2, UIButton.create(x1 + (.SLOT_WIDTH*0.75)-1.00, y1 - (.SLOT_HEIGHT*5)+1.05, .SLOT_WIDTH, .SLOT_HEIGHT, 10, 'M00G'))
-                
-                call this.setButton(3, UIButton.create(x1 + (.SLOT_WIDTH*0.75)-1.00+0.1, y1 - (.SLOT_HEIGHT*5)-0.15, .SLOT_WIDTH, .SLOT_HEIGHT, 10, 'M00D')) // intev shot
-                
-                call this.setButton(4, UIButton.create(x1 + (.SLOT_WIDTH*0.75)-0.50+0.1, y1 - (.SLOT_HEIGHT*5)-0.15, .SLOT_WIDTH, .SLOT_HEIGHT, 10, 'M00D')) // intev large
-                
-                call this.setButton(5, UIButton.create(x1 + (.SLOT_WIDTH*0.75)+0.00+0.1, y1 - (.SLOT_HEIGHT*5)-0.15, .SLOT_WIDTH, .SLOT_HEIGHT, 10, 'M00D')) // grade shot
-                
-                call this.setButton(6, UIButton.create(x1 + (.SLOT_WIDTH*0.75)+0.50+0.1, y1 - (.SLOT_HEIGHT*5)-0.15, .SLOT_WIDTH, .SLOT_HEIGHT, 10, 'M00D')) // lvlup orb
-                
-                call this.setButton(7, UIButton.create(x1 + (.SLOT_WIDTH*0.75)-1.10, y1 - (.SLOT_HEIGHT*5)+1.05, .SLOT_WIDTH, .SLOT_HEIGHT, 10, 'M00H'))
+            set .title[(this.user.id * .MAX_SLOTS) + thistype.TEXT_WAVE_STATUS] = UIText.createEx(this.user.toPlayer(), X + HERO_NAME_X, HERO_NAME_Y + 0.22, 1)
+            call this.setWaveStatusTitle(WaveStatusText[this.user.id])
 
-                call this.setButton(8, UIButton.create(x1 + (.SLOT_WIDTH*0.75)-0.90, y1 - (.SLOT_HEIGHT*5)+1.05, .SLOT_WIDTH, .SLOT_HEIGHT, 10, 'M00I'))
-                //call this.setButton(7, UIButton.create(x1 + (.SLOT_WIDTH*0.75)+1.00, y1 - (.SLOT_HEIGHT*5)-0.20, .SLOT_WIDTH, .SLOT_HEIGHT, 10, 'M00F')) // int
-                
-                /*
-                call this.setButton(2, UIButton.create(x2 - (.SLOT_WIDTH*2.00), y1 - (.SLOT_HEIGHT*5), .SLOT_WIDTH, .SLOT_HEIGHT, 10, 'M00A'))
-                
-                call this.setButton(3, UIButton.create(x2 - (.SLOT_WIDTH*12), y1 + (.SLOT_HEIGHT*0.4), .SLOT_WIDTH, .SLOT_HEIGHT, 10, 'M00A'))
-                call this.setButton(4, UIButton.create(x2 + (.SLOT_WIDTH*8), y1 + (.SLOT_HEIGHT*0.4), .SLOT_WIDTH, .SLOT_HEIGHT, 10, 'M00A'))
-                call this.setButton(5, UIButton.create(x2 - (.SLOT_WIDTH*12), y1 - (.SLOT_HEIGHT*5.1), .SLOT_WIDTH, .SLOT_HEIGHT, 10, 'M00A'))
-                call this.setButton(6, UIButton.create(x2 + (.SLOT_WIDTH*8), y1 - (.SLOT_HEIGHT*5.1), .SLOT_WIDTH, .SLOT_HEIGHT, 10, 'M00A'))
-                
-                call this.setButton(7, UIButton.create(x2 - (.SLOT_WIDTH*12), y1 + (.SLOT_HEIGHT*-4), .SLOT_WIDTH, .SLOT_HEIGHT, 10, 'M00A'))
-                call this.setButton(8, UIButton.create(x2 + (.SLOT_WIDTH*8), y1 + (.SLOT_HEIGHT*-4), .SLOT_WIDTH, .SLOT_HEIGHT, 10, 'M00A'))
-                call this.setButton(9, UIButton.create(x2 - (.SLOT_WIDTH*12), y1 - (.SLOT_HEIGHT*9.6), .SLOT_WIDTH, .SLOT_HEIGHT, 10, 'M00A'))
-                call this.setButton(10, UIButton.create(x2 + (.SLOT_WIDTH*8), y1 - (.SLOT_HEIGHT*9.6), .SLOT_WIDTH, .SLOT_HEIGHT, 10, 'M00A'))
-                */
-                
-                loop
-                    exitwhen i == 11 // numero de botones siempre + 1, and charge too Max_SLOTS
-                    if this.getButton(i) != 0 then
-                        set this.getButton(i).customValue = i
-                        set this.getButton(i).selectUnit = this.unit
-                        set this.getButton(i).onLeftClick = FuncLClickSlot
-                        set this.getButton(i).onRightClick = FuncRClickSlot
-                        set this.slotButton[(this.user.id * MAX_SLOTS) + i] = UIPicture.create(this.getButton(i).minx + (.SLOT_WIDTH/6.3), this.getButton(i).maxy - 0.022, .SLOT_WIDTH * .7, .SLOT_HEIGHT * .7, 9, 'dbnk')
-                        set this.slotButton[(this.user.id * MAX_SLOTS) + i].customValue = i
-                    endif
-
-                    set i = i + 1
-                endloop
-                
-                set .pictures[(this.user.id * MAX_SLOTS) + 0] = UIPicture.createEx(X+0.03, Y-0.30, 11, WINDOW_SIZE+0.04, .WINDOW_DUMMY, 140., 130., DesignLocalInt(this.user.id, 'D201' +(GetHandleId(GetPlayerRace(this.player))-1), 'B00S'))
-
-                set .pictures[(this.user.id * MAX_SLOTS) + 1] = UIPicture.createEx(X+0.15, Y - 1.46, 11, WINDOW_SIZE-0.04, 'lewn', 140., 130., DesignLocalInt(this.user.id, 'D201' +(GetHandleId(GetPlayerRace(this.player))-1), 'B00S'))
-                
-                /*
-     /*left*/   set .pictures[(this.user.id * MAX_SLOTS) + 2] = UIPicture.createEx(X - 0.90, Y + 0.10, 11, WINDOW_SIZE, 'bwn2', 140., 130., DesignLocalInt(this.user.id, 'D201' +(GetHandleId(GetPlayerRace(this.player))-1), 'B00S'))
-    /*right*/   set .pictures[(this.user.id * MAX_SLOTS) + 3] = UIPicture.createEx(X + 0.90, Y + 0.10, 11, WINDOW_SIZE, 'bwn2', 140., 130., DesignLocalInt(this.user.id, 'D201' +(GetHandleId(GetPlayerRace(this.player))-1), 'B00S'))
-   /*left*/     set .pictures[(this.user.id * MAX_SLOTS) + 4] = UIPicture.createEx(X - 0.90, Y - 0.80, 11, WINDOW_SIZE, 'bwn2', 140., 130., DesignLocalInt(this.user.id, 'D201' +(GetHandleId(GetPlayerRace(this.player))-1), 'B00S'))
-  /*right*/     set .pictures[(this.user.id * MAX_SLOTS) + 5] = UIPicture.createEx(X + 0.90, Y - 0.80, 11, WINDOW_SIZE, 'bwn2', 140., 130., DesignLocalInt(this.user.id, 'D201' +(GetHandleId(GetPlayerRace(this.player))-1), 'B00S'))
-                */
-                set .pictures[(this.user.id * MAX_SLOTS) + 2] = UIPicture.createEx(X - 0.23 , Y - 0.98-.46, 2, WINDOW_SIZE-0.05, 'pwin', 140., 130., DesignLocalInt(this.user.id, 'D201' +(GetHandleId(GetPlayerRace(this.player))-1), 'B00S'))
-                set .pictures[(this.user.id * MAX_SLOTS) + 3] = UIPicture.createEx(X - 0.24 , Y - 0.98-.46, 11, WINDOW_SIZE + .03-.06, 'pwif', 140., 130., DesignLocalInt(this.user.id, 'D201' +(GetHandleId(GetPlayerRace(this.player))-1), 'B00S'))
-                
-                set .pictures[(this.user.id * MAX_SLOTS) + 4] = UIPicture.createEx(X-.5+.03, Y-0.30, 11, WINDOW_SIZE+0.04, .WINDOW_DUMMY, 140., 130., DesignLocalInt(this.user.id, 'D201' +(GetHandleId(GetPlayerRace(this.player))-1), 'B00S'))
-                set .pictures[(this.user.id * MAX_SLOTS) + 5] = UIPicture.createEx(X-1.+.03, Y-0.30, 11, WINDOW_SIZE+0.04, .WINDOW_DUMMY, 140., 130., DesignLocalInt(this.user.id, 'D201' +(GetHandleId(GetPlayerRace(this.player))-1), 'B00S'))
-                set .pictures[(this.user.id * MAX_SLOTS) + 6] = UIPicture.createEx(X+.5+.03, Y-0.30, 11, WINDOW_SIZE+0.04, .WINDOW_DUMMY, 140., 130., DesignLocalInt(this.user.id, 'D201' +(GetHandleId(GetPlayerRace(this.player))-1), 'B00S'))
-                set .pictures[(this.user.id * MAX_SLOTS) + 7] = UIPicture.createEx(X+1.+.03, Y-0.30, 11, WINDOW_SIZE+0.04, .WINDOW_DUMMY, 140., 130., DesignLocalInt(this.user.id, 'D201' +(GetHandleId(GetPlayerRace(this.player))-1), 'B00S'))
-
-            endif
-            
-            // enemy preview model slot (reused from the old charModel slot)
-            set .charModel = UIPicture.createEx(CHARMODEL_OFFSET_X+0.00, .CHARMODEL_OFFSET_Y-0.15, 5, 0.11, MODEL_DUMMY, 1, 1, 0)
-            set .charModel.animIndex = 140
-            call SetUnitColor(.charModel.picture, this.user.color)
-            //2
-            set i = EquipGetHeroModel('hhou')
-            set .charModel2 = UIPicture.createEx(CHARMODEL_OFFSET_X+0.03-1.117+0.744, .CHARMODEL_OFFSET_Y - 0.97-.063, 6, HeroModelData(i).scale, MODEL_DUMMY, 1, 1, 0)
-            set .charModel2.animIndex = 140
-            call SetUnitColor(.charModel2.picture, this.user.color) //0.03-1.117+0.734
-
-            call AddSpecialEffectTarget(HeroModelData(i).path, .charModel2.picture, "origin")
-            
-            set i = EquipGetHeroModel(GetPlayerMissileAbilityChoice(.player))
-            set .charMOrb[0] = UIPicture.createEx(CHARMODEL_OFFSET_X-.5+.0, .CHARMODEL_OFFSET_Y - 0.20, 6, HeroModelData(i).scale, MODEL_DUMMY, 1, 1, 0)
-            set .charMOrb[0].animIndex = 140
-            call SetUnitColor(.charMOrb[0].picture, this.user.color)
-            call AddSpecialEffectTarget(HeroModelData(i).path, .charMOrb[0].picture, "origin")
-            
-            set .charMOrb[1] = UIPicture.createEx(CHARMODEL_OFFSET_X-1.+.0, .CHARMODEL_OFFSET_Y - 0.20, 6, HeroModelData(i).scale, MODEL_DUMMY, 1, 1, 0)
-            set .charMOrb[1].animIndex = 140
-            call SetUnitColor(.charMOrb[1].picture, this.user.color)
-            call AddSpecialEffectTarget(HeroModelData(i).path, .charMOrb[1].picture, "origin")
-            
-            set .charMOrb[2] = UIPicture.createEx(CHARMODEL_OFFSET_X+.5+.0, .CHARMODEL_OFFSET_Y - 0.20, 6, HeroModelData(i).scale, MODEL_DUMMY, 1, 1, 0)
-            set .charMOrb[2].animIndex = 140
-            call SetUnitColor(.charMOrb[2].picture, this.user.color)
-            call AddSpecialEffectTarget(HeroModelData(i).path, .charMOrb[2].picture, "origin")
-            
-            set .charMOrb[3] = UIPicture.createEx(CHARMODEL_OFFSET_X+1.+.0, .CHARMODEL_OFFSET_Y - 0.20, 6, HeroModelData(i).scale, MODEL_DUMMY, 1, 1, 0)
-            set .charMOrb[3].animIndex = 140
-            call SetUnitColor(.charMOrb[3].picture, this.user.color)
-            call AddSpecialEffectTarget(HeroModelData(i).path, .charMOrb[3].picture, "origin")
-
-            /*
-            call .pictures[(this.user.id * .MAX_SLOTS) + 1].showPlayer(this.user.handle, true, this.camera)
-            call .pictures[(this.user.id * .MAX_SLOTS) + 2].showPlayer(this.user.handle, true, this.camera)
-            call .pictures[(this.user.id * .MAX_SLOTS) + 3].showPlayer(this.user.handle, true, this.camera)
-            */
-            call this.charMOrb[0].showPlayer(this.user.toPlayer(), false, this.camera)
-            call this.charMOrb[1].showPlayer(this.user.toPlayer(), false, this.camera)
-            call this.charMOrb[2].showPlayer(this.user.toPlayer(), false, this.camera)
-            call this.charMOrb[3].showPlayer(this.user.toPlayer(), false, this.camera)
-            call this.charModel.showPlayer(this.user.toPlayer(), false, this.camera)
-            
-            
-            /*
-            set i = 0
-            loop
-                exitwhen i == 3 // numero de botones siempre + 1, and charge too Max_SLOTS
-                
-                set i = i + 1
-            endloop
-            */
-            //set .title[this.user.id] = UIText.createEx(this.user.toPlayer(), X/1.4, 0.1, 1)
-            
-            set .title[(this.user.id * MAX_SLOTS) + 0] = UIText.createEx(this.user.toPlayer(), X/1.4, 0.1, 1)
-            set .title[(this.user.id * MAX_SLOTS) + 1] = UIText.createEx(this.user.toPlayer(), X/1.9, 0.1, 1)
-            set .title[(this.user.id * MAX_SLOTS) + 2] = UIText.createEx(this.user.toPlayer(), X/1.9, 0.1, 1)
-            set .title[(this.user.id * MAX_SLOTS) + 3] = UIText.createEx(this.user.toPlayer(), X/1.7, 0.1, 1)
-            set .title[(this.user.id * MAX_SLOTS) + 4] = UIText.createEx(this.user.toPlayer(), X/1.7, 0.1, 1)
-            //set .title[(this.user.id * MAX_SLOTS) + 5] = UIText.createEx(this.user.toPlayer(), X/1.7, 0.1, 1)
-            set .title[(this.user.id * MAX_SLOTS) + 5] = UIText.createEx(this.user.toPlayer(), X/1.7, 0.1, 1)
-            set .title[(this.user.id * MAX_SLOTS) + 6] = UIText.createEx(this.user.toPlayer(), X/1.7, 0.1, 1)
-            set .title[(this.user.id * MAX_SLOTS) + 7] = UIText.createEx(this.user.toPlayer(), X/1.7, 0.1, 1)
-            set .title[(this.user.id * MAX_SLOTS) + 8] = UIText.createEx(this.user.toPlayer(), X/1.7, 0.1, 1)
-            set .title[(this.user.id * MAX_SLOTS) + 9] = UIText.createEx(this.user.toPlayer(), X/1.7, 0.1, 1)
-            set .title[(this.user.id * MAX_SLOTS) + 10] = UIText.createEx(this.user.toPlayer(), X/1.7, 0.1, 1)
-
-
-            set thistype(0).next.prev = this
-            set this.next = thistype(0).next
-            set thistype(0).next = this
-
-            set this.prev = 0
+            set .pictures[(this.user.id * .MAX_SLOTS) + thistype.PICTURE_WEAPON_SLOT_1] = UIPicture.create(thistype.WEAPON_HUD_X, thistype.WEAPON_HUD_Y, thistype.WEAPON_HUD_ICON_SIZE, thistype.WEAPON_HUD_ICON_SIZE * SCREEN_ASPECT_RATIO, 8, WeaponProfileGetTexture(WEAPON_PROFILE_HANDGUN))
+            set .pictures[(this.user.id * .MAX_SLOTS) + thistype.PICTURE_WEAPON_SLOT_2] = UIPicture.create(thistype.WEAPON_HUD_X, thistype.WEAPON_HUD_Y - thistype.WEAPON_HUD_GAP_Y, thistype.WEAPON_HUD_ICON_SIZE, thistype.WEAPON_HUD_ICON_SIZE * SCREEN_ASPECT_RATIO, 8, WeaponProfileGetTexture(WEAPON_PROFILE_HANDGUN))
+            set .title[(this.user.id * .MAX_SLOTS) + thistype.TEXT_WEAPON_SLOT_1] = UIText.createEx(this.user.toPlayer(), thistype.WEAPON_HUD_TEXT_X, thistype.WEAPON_HUD_TEXT_Y, 1)
+            set .title[(this.user.id * .MAX_SLOTS) + thistype.TEXT_WEAPON_SLOT_2] = UIText.createEx(this.user.toPlayer(), thistype.WEAPON_HUD_TEXT_X, thistype.WEAPON_HUD_TEXT_Y - thistype.WEAPON_HUD_TEXT_GAP_Y, 1)
+            set WeaponHudLastVersion[this.user.id] = -1
+            call this.refreshWeaponHud()
 
             return this
         endmethod
 
-        /* Solo logica de equipamiento jeje guardadita 
-        method equip takes InvItem itm, integer equipSlot returns boolean
-            local integer slot = itm.slot - 1
-            
-            if (slot < 0) then
-                return false
-            endif
-            
-            if (this.item[equipSlot] != 0) then
-                return false
-            endif
-            
-            if (itm.slotAlt - 1 > 0) then
-                if (equipSlot != slot and equipSlot != itm.slotAlt -1) then
-                    call Inventory.err(this.player, "The item doesn't belong in that slot.")
-                    return false
-                endif
-            else
-                if (equipSlot != slot) then
-                    call Inventory.err(this.player, "The item doesn't belong in that slot.")
-                    return false
-                endif
-            endif
-            
-            if (itm.reqUnitType > 0 and GetUnitTypeId(this.unit) != itm.reqUnitType) then
-                call Inventory.err(this.player, "Your unit type cannot equip this item.")
-                return false
-            endif
-            
-            if (itm.reqAbility > 0 and GetUnitAbilityLevel(this.unit, itm.reqAbility) < 0) then
-                call Inventory.err(this.player, "Failed requirements.")
-                return false
-            endif
-            
-            if (GetHeroLevel(this.unit) < itm.reqLevel and GetUnitLevel(this.unit) < itm.reqLevel) then
-                call Inventory.err(this.player, "Your level is too low to equip that item.")
-                return false
-            endif
-            
-            if (itm.equipCondition != null) then
-                call TriggerClearConditions(InvItem.equipEval)
-                call TriggerAddCondition(InvItem.equipEval, itm.equipCondition)
-                set InvItem.eventUnit = this.unit
-                if (not TriggerEvaluate(InvItem.equipEval)) then
-                    return false
-                endif
-            endif
-
-            set slot = equipSlot
-            
-            if (this.item[slot] != 0) then
-                return false
-            endif
-            
-            if (itm.equipAbility > 0) then
-                call UnitAddAbility(this.unit, itm.equipAbility)
-            endif
-            
-            set this.item[slot] = itm
-            set this.itemId[slot] = itm.tempCustomId
-            
-            call this.slotButton[(this.user.id * .MAX_SLOTS) + slot].setTexture(Inventory.localInt(this.user.id, itm.icon, Inventory.ICON_TRANSPARENT))
-            call this.slotButton[(this.user.id * .MAX_SLOTS) + slot].show(true, this.camera)
-
-            set InvEventPlayer = this.player
-            set InvEventItem = itm
-            set InvEventSlot = equipSlot
-            
-            if (InvItem.onEquip != null and TriggerEvaluate(InvItem.onEquip)) then
-                call TriggerExecute(InvItem.onEquip)
-            endif
-                    
-            // add bonuses
-            call itm.applyBonuses(this.unit)
-            
-            set itm.tempCustomId = 0
-            
-            return true
-        endmethod */
-        
-        /* EL par de la otra cosita dksalj
-        method unequip takes InvItem itm, integer slot returns boolean
-            local InvItem i2
-            local integer i = 0
-            local integer cid = itm.tempCustomId
-            
-            if (slot != itm.slot -1 and slot != itm.slotAlt - 1) then
-                return false
-            endif
-            
-            if (itm.equipAbility > 0) then
-                call UnitRemoveAbility(this.unit, itm.equipAbility)
-            endif
-            
-            // run unequip event
-            set InvEventPlayer = this.player
-            set InvEventItem = this.item[slot]
-            set InvEventSlot = slot
-                
-            if (InvItem.onUnequip != null and TriggerEvaluate(InvItem.onUnequip)) then
-                call TriggerExecute(InvItem.onUnequip)
-            endif
-            
-            set this.item[slot] = 0
-
-            call this.slotButton[(this.user.id * .MAX_SLOTS) + slot].setTexture(Inventory.ICON_EMPTY)
-            call this.slotButton[(this.user.id * .MAX_SLOTS) + slot].show(false, this.camera)
-            
-            // remove bonuses
-            call itm.removeBonuses(this.unit)
-
-            return true
-        endmethod */
-        
         method destroy takes nothing returns nothing
-            set this.next.prev = this.prev
-            set this.prev.next = this.next
-            
-            call this.clearEnemyPreview()
-            if this.charModel != 0 then
-                call this.charModel.destroy()
-            endif
-            call this.charModel2.destroy()
-            
+            local integer i = 0
+            call this.show(false, this.camera)
+            loop
+                exitwhen i == thistype.MAX_SLOTS
+                if this.getButton(i) != 0 then
+                    call this.getButton(i).destroy()
+                    call this.setButton(i, 0)
+                endif
+                if .pictures[(this.user.id * .MAX_SLOTS) + i] != 0 then
+                    call .pictures[(this.user.id * .MAX_SLOTS) + i].destroy()
+                    set .pictures[(this.user.id * .MAX_SLOTS) + i] = 0
+                endif
+                if .title[(this.user.id * .MAX_SLOTS) + i] != 0 then
+                    call .title[(this.user.id * .MAX_SLOTS) + i].destroy()
+                    set .title[(this.user.id * .MAX_SLOTS) + i] = 0
+                endif
+                set i = i + 1
+            endloop
+            set .UnitsIndex[GetUnitUserData(this.unit)] = 0
             call this.deallocate()
         endmethod
 
@@ -18599,26 +19274,16 @@ endglobals
             local User user = User(User.LocalId)
             local thistype equipment = Client[Client.PlayerCurrentUnit[user.id]]
             local real x
-            local real y 
+            local real y
             local real z
-                                                            //para doble interfaz y evitar doble cam y sa wea xDD
-            if (equipment == 0 or not equipment.displayed /*or Inventory.PlayerCurrent[equipment.user.id] > 0*/ or User.Local != user.handle) then
+
+            if equipment == 0 or not equipment.displayed or User.Local != user.handle then
                 return
             endif
-            /*
-            equipment == 0
-            No hay instancia de equipo activa para ese jugador.
+            if equipment.unit == null or GetUnitTypeId(equipment.unit) == 0 then
+                return
+            endif
 
-            not equipment.displayed
-            La UI de equipo estÃ¡ oculta.
-
-            Inventory.PlayerCurrent[equipment.user.id] > 0
-            Hay inventario activo para ese jugador (evita conflicto entre paneles).
-
-            User.Local != user.handle
-            No es el cliente local que debe renderizar esa cÃ¡mara/UI.
-            */
-            
             set x = GetUnitX(equipment.unit)
             set y = GetUnitY(equipment.unit)
             call EnsureMenuCameraSettings(user.id)
@@ -18628,149 +19293,65 @@ endglobals
             endif
             set z = GetTerrainZ(x, y) + PlayerMenuCameraHeight[user.id] + GetUnitDefaultFlyHeight(equipment.unit)
             call equipment.camera.setPosition(x, y - PlayerMenuCameraOffset[user.id], z)
-            
+            call equipment.refreshWeaponHud()
+
             if equipment.camera.applyCameraForPlayer(user.handle, false) then
                 call Interface.updateAll(true, true, true)
             endif
         endmethod
-        
-        private method isTenderPanelVisible takes nothing returns boolean
-            return this.displayed and isTender[this.user.id]
-        endmethod
-
-        private method shouldShowButton takes integer slot returns boolean
-            if not this.displayed then
-                return false
-            endif
-
-            if slot == 2 or slot == 7 then
-                return true
-            endif
-
-            if slot == 0 or slot == 3 or slot == 4 or slot == 6 then
-                return isTender[this.user.id]
-            endif
-
-            return false
-        endmethod
-
-        private method applyButtonVisibility takes nothing returns nothing
-            local integer i = 0
-            loop
-                exitwhen i == thistype.MAX_SLOTS
-                if this.getButton(i) != 0 then
-                    call this.getButton(i).showPlayer(this.user.handle, this.shouldShowButton(i), this.camera)
-                endif
-                set i = i + 1
-            endloop
-        endmethod
-
-        private method applyTitleLayout takes nothing returns nothing
-            call .title[(this.user.id * MAX_SLOTS) + 0].setPosition(X + HERO_NAME_X-0.12, HERO_NAME_Y-.28)
-            call .title[(this.user.id * MAX_SLOTS) + 1].setPosition(X + HERO_NAME_X-.27-0.12+.18, HERO_NAME_Y-1.73)
-            call .title[(this.user.id * MAX_SLOTS) + 2].setPosition(X + HERO_NAME_X+.01-0.54+.18, HERO_NAME_Y-1.80)
-            call .title[(this.user.id * MAX_SLOTS) + 3].setPosition(X + HERO_NAME_X+0.95, HERO_NAME_Y-0.85)
-            call .title[(this.user.id * MAX_SLOTS) + 4].setPosition(X + HERO_NAME_X+1.4, HERO_NAME_Y-0.85)
-            call .title[(this.user.id * MAX_SLOTS) + 5].setPosition(X + HERO_NAME_X-0.55, HERO_NAME_Y-0.85)
-            call .title[(this.user.id * MAX_SLOTS) + 6].setPosition(X + HERO_NAME_X-1.05, HERO_NAME_Y-0.85)
-            call .title[(this.user.id * MAX_SLOTS) + 7].setPosition(X + HERO_NAME_X-0.12, HERO_NAME_Y-1.05)
-            call .title[(this.user.id * MAX_SLOTS) + 8].setPosition(X + HERO_NAME_X+0.45, HERO_NAME_Y-0.85)
-            call .title[(this.user.id * MAX_SLOTS) + 9].setPosition(X + HERO_NAME_X-0.14, HERO_NAME_Y+0.08)
-            call .title[(this.user.id * MAX_SLOTS) + 10].setPosition(X + HERO_NAME_X-0.0, HERO_NAME_Y+0.22)
-        endmethod
-
-        private method applyTitleText takes nothing returns nothing
-            call SetTextTagText(.title[(this.user.id * MAX_SLOTS) + 0].text, "NextEnemyInformation", 8 * 0.0023)
-            call SetTextTagText(.title[(this.user.id * MAX_SLOTS) + 1].text, Message, 8 * 0.0020)
-            call SetTextTagText(.title[(this.user.id * MAX_SLOTS) + 2].text, "Fuente", 8 * 0.0020)
-            call SetTextTagText(.title[(this.user.id * MAX_SLOTS) + 3].text, "Improve Instance\nNumer instancia: "+ I2S(GetPlayerMissileInstanceCount(this.user.toPlayer())), 8 * 0.0020)
-            call SetTextTagText(.title[(this.user.id * MAX_SLOTS) + 4].text, "|cffff6a00L|cffff7400O|cffff7e00R|cffff8800D|cffff9200S|cffff6a00 E|cffff7400N|cffff7e00G|cffff8800I|cffff9200N|cffff9c00E|cffffa600S|r", 8 * 0.0025)
-            call SetTextTagText(.title[(this.user.id * MAX_SLOTS) + 5].text, "Improve RegeShot\nReg impact en: "+ R2S(GetPlayerMissileHealOnHit(this.user.toPlayer())), 8 * 0.0020)
-            call SetTextTagText(.title[(this.user.id * MAX_SLOTS) + 6].text, "Improve Damage\nBase Dmg en: "+ R2S(GetPlayerMissileDamageValue(this.user.toPlayer())), 8 * 0.0020)
-            call SetTextTagText(.title[(this.user.id * MAX_SLOTS) + 7].text, EnemyPreviewGetText(TargetWave), 8 * 0.0018)
-            call SetTextTagText(.title[(this.user.id * MAX_SLOTS) + 8].text, "Improve OrbLevel\nMax4, OrbLevel: "+ I2S(GetPlayerOrbLevel(this.user.toPlayer())), 8 * 0.0020)
-            call SetTextTagText(.title[(this.user.id * MAX_SLOTS) + 9].text, "Welcome To LordsEngines", 8 * 0.0027)
-            call SetTextTagText(.title[(this.user.id * MAX_SLOTS) + 10].text, thistype.getWaveStatusText(this.user.id), 8 * 0.0027)
-        endmethod
-
-        private method applyTitleVisibility takes nothing returns nothing
-            local boolean tenderVisible = this.isTenderPanelVisible()
-            call this.title[(this.user.id * MAX_SLOTS) + 0].show(tenderVisible, this.camera)
-            call this.title[(this.user.id * MAX_SLOTS) + 1].show(tenderVisible, this.camera)
-            call this.title[(this.user.id * MAX_SLOTS) + 2].show(tenderVisible, this.camera)
-            call this.title[(this.user.id * MAX_SLOTS) + 3].show(tenderVisible, this.camera)
-            call this.title[(this.user.id * MAX_SLOTS) + 4].show(false, this.camera)
-            call this.title[(this.user.id * MAX_SLOTS) + 5].show(tenderVisible, this.camera)
-            call this.title[(this.user.id * MAX_SLOTS) + 6].show(tenderVisible, this.camera)
-            call this.title[(this.user.id * MAX_SLOTS) + 7].show(tenderVisible, this.camera)
-            call this.title[(this.user.id * MAX_SLOTS) + 8].show(tenderVisible, this.camera)
-            call this.title[(this.user.id * MAX_SLOTS) + 9].show(tenderVisible, this.camera)
-            call this.title[(this.user.id * MAX_SLOTS) + 10].show(this.displayed, this.camera)
-        endmethod
-
-        private method applyPictureVisibility takes nothing returns nothing
-            local integer i = 0
-            local boolean tenderVisible = this.isTenderPanelVisible()
-            loop
-                exitwhen i == 8
-                if .pictures[(this.user.id * .MAX_SLOTS) + i] != 0 then
-                    call .pictures[(this.user.id * .MAX_SLOTS) + i].showPlayer(this.user.handle, tenderVisible, this.camera)
-                endif
-                set i = i + 1
-            endloop
-        endmethod
-
-        private method applyModelVisibility takes nothing returns nothing
-            local integer i = 0
-            local boolean tenderVisible = this.isTenderPanelVisible()
-            call SetUnitColor(.charModel.picture, this.user.color)
-            call SetUnitColor(.charModel2.picture, this.user.color)
-            call this.charModel2.showPlayer(this.user.toPlayer(), tenderVisible, this.camera)
-            call this.charModel.showPlayer(this.user.toPlayer(), tenderVisible, this.camera)
-            loop
-                exitwhen i == 4
-                call this.charMOrb[i].showPlayer(this.user.toPlayer(), tenderVisible, this.camera)
-                set i = i + 1
-            endloop
-        endmethod
 
         private method applyVisualState takes nothing returns nothing
-            call this.applyTitleLayout()
-            call this.applyTitleText()
-            call this.applyTitleVisibility()
-            call this.applyPictureVisibility()
-            call this.applyModelVisibility()
-            call this.applyButtonVisibility()
-            if not this.displayed and selector[this.user.id] != 0 then
-                call selector[this.user.id].showPlayer(this.user.handle, false, this.camera)
-                set PlayerLastSlot[this.user.id] = 0
-                set PlayerLastButton[this.user.id] = 0
+            if this.getButton(thistype.SLOT_CAMERA_UP) != 0 then
+                call this.getButton(thistype.SLOT_CAMERA_UP).showPlayer(this.user.handle, this.displayed, this.camera)
+            endif
+            if this.getButton(thistype.SLOT_CAMERA_DOWN) != 0 then
+                call this.getButton(thistype.SLOT_CAMERA_DOWN).showPlayer(this.user.handle, this.displayed, this.camera)
+            endif
+            if .title[(this.user.id * .MAX_SLOTS) + thistype.TEXT_WAVE_STATUS] != 0 then
+                call SetTextTagText(.title[(this.user.id * .MAX_SLOTS) + thistype.TEXT_WAVE_STATUS].text, thistype.getWaveStatusText(this.user.id), 8 * 0.0027)
+                call .title[(this.user.id * .MAX_SLOTS) + thistype.TEXT_WAVE_STATUS].setPosition(X + HERO_NAME_X, HERO_NAME_Y + 0.22)
+                call .title[(this.user.id * .MAX_SLOTS) + thistype.TEXT_WAVE_STATUS].show(this.displayed, this.camera)
+            endif
+            call this.refreshWeaponHud()
+            if .pictures[(this.user.id * .MAX_SLOTS) + thistype.PICTURE_WEAPON_SLOT_1] != 0 then
+                call .pictures[(this.user.id * .MAX_SLOTS) + thistype.PICTURE_WEAPON_SLOT_1].setPosition(thistype.WEAPON_HUD_X, thistype.WEAPON_HUD_Y)
+                call .pictures[(this.user.id * .MAX_SLOTS) + thistype.PICTURE_WEAPON_SLOT_1].showPlayer(this.user.handle, this.displayed, this.camera)
+            endif
+            if .pictures[(this.user.id * .MAX_SLOTS) + thistype.PICTURE_WEAPON_SLOT_2] != 0 then
+                call .pictures[(this.user.id * .MAX_SLOTS) + thistype.PICTURE_WEAPON_SLOT_2].setPosition(thistype.WEAPON_HUD_X, thistype.WEAPON_HUD_Y - thistype.WEAPON_HUD_GAP_Y)
+                call .pictures[(this.user.id * .MAX_SLOTS) + thistype.PICTURE_WEAPON_SLOT_2].showPlayer(this.user.handle, this.displayed, this.camera)
+            endif
+            if .title[(this.user.id * .MAX_SLOTS) + thistype.TEXT_WEAPON_SLOT_1] != 0 then
+                call .title[(this.user.id * .MAX_SLOTS) + thistype.TEXT_WEAPON_SLOT_1].setPosition(thistype.WEAPON_HUD_TEXT_X, thistype.WEAPON_HUD_TEXT_Y)
+                call .title[(this.user.id * .MAX_SLOTS) + thistype.TEXT_WEAPON_SLOT_1].show(this.displayed, this.camera)
+            endif
+            if .title[(this.user.id * .MAX_SLOTS) + thistype.TEXT_WEAPON_SLOT_2] != 0 then
+                call .title[(this.user.id * .MAX_SLOTS) + thistype.TEXT_WEAPON_SLOT_2].setPosition(thistype.WEAPON_HUD_TEXT_X, thistype.WEAPON_HUD_TEXT_Y - thistype.WEAPON_HUD_TEXT_GAP_Y)
+                call .title[(this.user.id * .MAX_SLOTS) + thistype.TEXT_WEAPON_SLOT_2].show(this.displayed, this.camera)
             endif
         endmethod
 
         method show takes boolean flag, Camera cam returns nothing
-            local thistype equip = 0
+            local thistype current = 0
             local boolean wasDisplayed = this.displayed
-            
+
             set this.camera = cam
-            
-            if (flag) then
+
+            if flag then
                 if not wasDisplayed then
                     set .DisplayCount = .DisplayCount + 1
-                    if (DisplayCount >= 1) then
+                    if .DisplayCount >= 1 then
                         call PauseTimer(.UpdateTimer)
                         call TimerStart(.UpdateTimer, 0.01, true, function thistype.onDisplay)
                     endif
                 endif
-                
-                if (.PlayerCurrentUnit[this.user.id] != null) then
-                    set equip = Client[.PlayerCurrentUnit[this.user.id]]
+
+                if .PlayerCurrentUnit[this.user.id] != null then
+                    set current = Client[.PlayerCurrentUnit[this.user.id]]
                 endif
-                
-                if (.PlayerCurrentUnit[this.user.id] != null and .PlayerCurrentUnit[this.user.id] != this.unit and equip != this) then
-                    call equip.show(false, this.camera)
+                if .PlayerCurrentUnit[this.user.id] != null and .PlayerCurrentUnit[this.user.id] != this.unit and current != 0 and current != this then
+                    call current.show(false, this.camera)
                 endif
-                
                 set .PlayerCurrentUnit[this.user.id] = this.unit
             elseif wasDisplayed then
                 if .DisplayCount > 0 then
@@ -18779,565 +19360,89 @@ endglobals
                 if .PlayerCurrentUnit[this.user.id] == this.unit then
                     set .PlayerCurrentUnit[this.user.id] = null
                 endif
-                
-                if (DisplayCount == 0) then
+                if .DisplayCount == 0 then
                     call PauseTimer(.UpdateTimer)
                 else
                     call PauseTimer(.UpdateTimer)
                     call TimerStart(.UpdateTimer, 0.03125, true, function thistype.onDisplay)
                 endif
-                if (User.Local == this.player) then
-                    call ResetMenuCameraFog(this.player)
-                    set PlayerMenuFogAppliedHeight[this.user.id] = -1.
+                call ResetMenuCameraFog(this.player)
+                set PlayerMenuFogAppliedHeight[this.user.id] = -1.
+                if User.Local == this.player then
                     call ResetToGameCamera(0)
                 endif
             endif
-            
+
             set this.displayed = flag
             call this.applyVisualState()
         endmethod
-        
+
         private static method onInit takes nothing returns nothing
-            set thistype.Hashtable = InitHashtable()
             set thistype.UpdateTimer = CreateTimer()
             set thistype.Initialized = true
         endmethod
-        
     endstruct
 
     function MenuClientRefreshEnemyPreviewForActivePlayers takes nothing returns nothing
-        local integer i = 0
-        local User u
-        local unit hero
-        local Client client
-        loop
-            exitwhen i == User.AmountPlaying
-            set u = User.fromPlaying(i)
-            set hero = PlayerHero[u.id]
-            if hero != null and GetUnitTypeId(hero) != 0 then
-                set client = Client[hero]
-                if client != 0 then
-                    call client.setEnemyPreviewWave(TargetWave)
-                endif
-            endif
-            set i = i + 1
-        endloop
-        set hero = null
+        // Compatibilidad temporal: RestTime ya no debe pedir previews al MenuClient minimal.
     endfunction
 
     function MenuClientClearEnemyPreviewForActivePlayers takes nothing returns nothing
-        local integer i = 0
-        local User u
-        local unit hero
-        local Client client
-        loop
-            exitwhen i == User.AmountPlaying
-            set u = User.fromPlaying(i)
-            set hero = PlayerHero[u.id]
-            if hero != null and GetUnitTypeId(hero) != 0 then
-                set client = Client[hero]
-                if client != 0 then
-                    call client.clearEnemyPreview()
-                endif
-            endif
-            set i = i + 1
-        endloop
-        set hero = null
+        // Compatibilidad temporal: no hay previews/modelos que limpiar.
     endfunction
-    
-    /*
-    private function OnInventoryItemClick takes nothing returns nothing
+
+    private function ExecuteCameraButton takes Client client, integer pid, integer slot returns nothing
+        if slot == Client.SLOT_CAMERA_UP then
+            call StepMenuCameraHeight(pid, GetMenuCameraHeightStep())
+        elseif slot == Client.SLOT_CAMERA_DOWN then
+            call StepMenuCameraHeight(pid, -GetMenuCameraHeightStep())
+        endif
+
+        call client.setWaveStatusTitle(WaveStatusText[pid])
+        call client.show(true, client.camera)
+    endfunction
+
+    private function LeftClickCameraButton takes nothing returns boolean
         local UIButton but = GetTriggerButton()
         local player p = GetClickingPlayer()
         local integer pid = GetPlayerId(p)
-        local Inventory inv =  Inventory.PlayerCurrent[pid]
-        local integer slot =  but.customValue
-        local integer itemId = 0
-        local integer last = InvPlayerLastSlot[inv.pid] - 1
-        local integer lastItemId
-        local UIButton lastButton = InvPlayerLastButton[inv.pid]
-        local Equipment gear = Equipment[Equipment.PlayerCurrentUnit[inv.pid]]
-        local integer gearSlot
-        local InvItem itm
-        
-        call Equipment.selector[inv.pid].show(false, inv.camera)
-       
-        if (gear <= 0) then
-            return
-        endif
-        
-        if (PlayerLastSlot[inv.pid] > 0) then
-            
-            set gearSlot = PlayerLastSlot[inv.pid] - 1
+        local Client client = Client[Client.PlayerCurrentUnit[pid]]
 
-            if (inv.getItem(slot) == 0) then
-                set gear.item[gearSlot].tempCustomId = gear.itemId[gearSlot]
-                call inv.setItem(slot, gear.item[gearSlot])
-                
-                set gear.item[gearSlot].tempCustomId = gear.itemId[gearSlot]
-                call gear.unequip(gear.item[gearSlot], gearSlot)
-            endif
-            
-            set PlayerLastSlot[inv.pid] = 0
-        else
-            set itm = inv.getItem(slot)
-            
-            if (itm > 0 and not itm.isSocket) then
-                set but = gear.getButton(itm.slot - 1)
-                
-                call Equipment.selector[inv.pid].show(true, inv.camera)
-                call Equipment.selector[inv.pid].setPosition(but.centerx - 0.007, but.centery + 0.0272)
-                call Equipment.selector[inv.pid].showPlayer(Player(inv.pid), true, inv.camera)
-            endif
-        endif
-    endfunction
-    
-    private function OnInventoryItemRightClick takes nothing returns nothing
-        local UIButton but = GetTriggerButton()
-        local player p = GetClickingPlayer()
-        local integer pid = GetPlayerId(p)
-        local Inventory inv =  Inventory.PlayerCurrent[pid]
-        local integer slot =  but.customValue
-        local Equipment gear = Equipment[Equipment.PlayerCurrentUnit[inv.pid]]
-        local InvItem itm = inv.getItem(slot)
-        local integer gearSlot = itm.slot - 1
-        local integer unequippedSlot = 0
-        local InvItem unequipItem = 0
-        local integer unequipId = 0
-        
-        if (gear <= 0 or itm <= 0) then
-            return
-        endif
-        
-        set itm.tempCustomId = inv.getItemId(slot)
-        
-        if (gear.item[gearSlot] > 0) then
-            set unequipId = gear.itemId[gearSlot]
-            set gear.item[gearSlot].tempCustomId = unequipId
-            call gear.unequip(gear.item[gearSlot], gearSlot)
-            set unequippedSlot = InvEventSlot
-            set unequipItem = InvEventItem
-        endif
-        
-        set itm.tempCustomId = inv.getItemId(slot)
-        
-        if (gear.equip(itm, itm.slot - 1)) then
-            call inv.setItem(slot, 0)
-            set unequipItem.tempCustomId = unequipId
-            call inv.addItem(unequipItem)
-        elseif (unequipItem > 0) then
-            call gear.equip(unequipItem, unequippedSlot)
-        endif
-    endfunction */ 
-
-    /* derecho, no por ahora
-    private function RClickItemSlot takes nothing returns boolean
-        local UIButton but   = GetTriggerButton()
-        local unit u         = Equipment.PlayerCurrentUnit[GetPlayerId(GetClickingPlayer())]
-        local Equipment gear = Equipment[u]
-        local Inventory inv  = Inventory[u]
-        local integer slot   = but.customValue
-        local integer itemId
-        local InvItem itm
-        local integer cid
-        
-        if (GetClickingPlayer() != User(inv.pid).handle or gear.item[slot] <= 0) then
-            return false
+        if client != 0 and p == client.user.handle and User.Local == p then
+            call SelectUnit(client.unit, true)
         endif
 
-        // clear tooltip
-        call inv.showLines(inv.pid, false, inv.camera)
-        
-        set itm = gear.item[slot]
-        set itemId = itm.id
-        set cid = gear.itemId[slot]
-        
-        set gear.item[slot].tempCustomId = cid
-        
-        if (gear.unequip(itm, slot)) then
-            set itm.tempCustomId = cid
-            if (not inv.addItem(itm)) then
-                set gear.item[slot].tempCustomId = cid
-                call gear.equip(itm, slot)
-                return false
-            endif
-        else
-            return false
-        endif
-    
-        call Inventory.showTooltip(inv, false)
-        
-        return false
-    endfunction */
-    
-    private function MenuClientGetSlotTooltip takes player p, integer slot returns string
-        local integer pid = GetPlayerId(p)
-        if slot == 0 then
-            return "|cffffcc00Improve Instance|r\nCosto: 1 oro\nActual: " + I2S(GetPlayerMissileInstanceCount(p))
-        elseif slot == 2 then
-            return "|cffffcc00Camara +|r\nSube la altura de camara.\nActual: " + I2S(R2I(PlayerMenuCameraHeight[pid]))
-        elseif slot == 3 then
-            return "|cffffcc00Improve Damage|r\nCosto: 1 oro\nActual: " + R2S(GetPlayerMissileDamageValue(p))
-        elseif slot == 4 then
-            return "|cffffcc00Improve RegeShot|r\nCosto: 1 oro\nActual: " + R2S(GetPlayerMissileHealOnHit(p))
-        elseif slot == 5 then
-            if GetPlayerMissileUseSmartRecast(p) then
-                return "|cffffcc00Smart Recast|r\nCosto: 10 oro\nEstado: ON"
-            endif
-            return "|cffffcc00Smart Recast|r\nCosto: 10 oro\nEstado: OFF"
-        elseif slot == 6 then
-            return "|cffffcc00Improve Orb Level|r\nCosto: 1 oro\nMax: 4\nActual: " + I2S(GetPlayerOrbLevel(p))
-        elseif slot == 7 then
-            return "|cffffcc00Camara -|r\nBaja la altura de camara.\nActual: " + I2S(R2I(PlayerMenuCameraHeight[pid]))
-        endif
-        return "|cffffcc00Boton sin accion activa|r"
-    endfunction
-
-    private function MenuClientShowSlotTooltip takes UIButton but, player p returns nothing
-        local integer slot = but.customValue
-        call DisplayTimedTextToPlayer(p, .52, .82, 3.5, MenuClientGetSlotTooltip(p, slot) + "\n|cff999999Click derecho: seleccionar / confirmar.|r")
-    endfunction
-
-    private function ExecuteMenuSlotAction takes nothing returns boolean
-        local UIButton but = GetTriggerButton()
-        local player p = GetClickingPlayer()
-        local integer pdex = GetPlayerId(p)
-        local Client equip = Client[Client.PlayerCurrentUnit[pdex]]
-        //local Inventory inv = Inventory.PlayerCurrent[equip.user.id] //nventario activo asociado al mismo usuario del equip.
-        local integer slot =  but.customValue
-        //local integer last = InvPlayerLastSlot[inv.pid] - 1
-        local integer itemId = 0
-        local User u = User[GetClickingPlayer()]
-        local integer i = 0
-        local integer oro = GetPlayerState(p, PLAYER_STATE_RESOURCE_GOLD)
-        
-        
-        //local UIButton lastButton = InvPlayerLastButton[equip.user.id]
-        //local InvItem itm
-        if equip == 0 then
-            return false
-        endif
-        if (p != equip.user.handle) then
-            return false
-        endif
-        if (User.Local == p) then
-            call SelectUnit(but.picture, false)
-            call SelectUnit(equip.unit, true)
-        endif
-        
-        if (slot == 0) then
-            if oro > 0 and isTender[pdex] and IsUnitNearTender(PlayerHero[pdex], 500.0) then
-                call SetPlayerState(p, PLAYER_STATE_RESOURCE_GOLD, oro - 1)
-                call SetPlayerMissileInstanceCount(GetClickingPlayer(),GetPlayerMissileInstanceCount(GetClickingPlayer())+1)
-                call DestroyEffect(AddSpecialEffectTarget("Abilities\\Spells\\Items\\AIem\\AIemTarget.mdl", but.picture, "origin"))
-                // AcciÃ³n que quieres ejecutar
-                //call DisplayTextToPlayer(p,0,0,"Se restÃ³ 1 de oro")
-            elseif oro <= 0 and isTender[pdex] and IsUnitNearTender(PlayerHero[pdex], 500.0) then
-                if User.fromLocal() == u then
-                    call StartSound(error)
-                    call ClearTextMessages()
-                endif
-
-                call DisplayTimedTextToPlayer(u.toPlayer(), .52, .96, 2., "|cffffcc00Oro Insuficiente Para Comprar Instance!|r")
-            else 
-                if User.fromLocal() == u then
-                    call StartSound(error_Neg)
-                    call ClearTextMessages()
-                endif
-
-                call DisplayTimedTextToPlayer(u.toPlayer(), .52, .96, 2., "|cffffcc00Lords Engines No Activa/Fuera de Distancia!|r")            
-            endif
-        endif
-        
-        if (slot == 2) then
-            call StepMenuCameraHeight(pdex, GetMenuCameraHeightStep())
-            call DisplayTimedTextToPlayer(u.toPlayer(), .52, .96, 2., "|cffffcc00Cam Height:|r " + I2S(R2I(PlayerMenuCameraHeight[pdex])) + " |cffffcc00Offset:|r -" + I2S(R2I(PlayerMenuCameraOffset[pdex])))
-        endif
-        
-        if (slot == 3) then
-            if oro > 0 and isTender[pdex] and IsUnitNearTender(PlayerHero[pdex], 500.0) then
-                call SetPlayerState(p, PLAYER_STATE_RESOURCE_GOLD, oro - 1)
-                call SetPlayerMissileDamageValue(GetClickingPlayer(),GetPlayerMissileDamageValue(GetClickingPlayer())+0.05)
-                call DestroyEffect(AddSpecialEffectTarget("Abilities\\Spells\\Items\\AIem\\AIemTarget.mdl", but.picture, "origin"))
-                // AcciÃ³n que quieres ejecutar
-                //call DisplayTextToPlayer(p,0,0,"Se restÃ³ 1 de oro")
-            elseif oro <= 0 and isTender[pdex] and IsUnitNearTender(PlayerHero[pdex], 500.0) then
-                if User.fromLocal() == u then
-                    call StartSound(error)
-                    call ClearTextMessages()
-                endif
-
-                call DisplayTimedTextToPlayer(u.toPlayer(), .52, .96, 2., "|cffffcc00Oro Insuficiente Para Comprar damage!|r")
-            else 
-                if User.fromLocal() == u then
-                    call StartSound(error_Neg)
-                    call ClearTextMessages()
-                endif
-
-                call DisplayTimedTextToPlayer(u.toPlayer(), .52, .96, 2., "|cffffcc00Lords Engines No Activa/Fuera de Distancia!|r")            
-            endif
-            
-        endif
-        
-        if (slot == 4) then
-            if oro > 0 and isTender[pdex] and IsUnitNearTender(PlayerHero[pdex], 500.0) then
-                call SetPlayerState(p, PLAYER_STATE_RESOURCE_GOLD, oro - 1)
-                call SetPlayerMissileHealOnHit(GetClickingPlayer(),GetPlayerMissileHealOnHit(GetClickingPlayer())+2.5)
-                call DestroyEffect(AddSpecialEffectTarget("Abilities\\Spells\\Items\\AIem\\AIemTarget.mdl", but.picture, "origin"))
-                // AcciÃ³n que quieres ejecutar
-                //call DisplayTextToPlayer(p,0,0,"Se restÃ³ 1 de oro")
-            elseif oro <= 0 and isTender[pdex] and IsUnitNearTender(PlayerHero[pdex], 500.0) then
-                if User.fromLocal() == u then
-                    call StartSound(error)
-                    call ClearTextMessages()
-                endif
-
-                call DisplayTimedTextToPlayer(u.toPlayer(), .52, .96, 2., "|cffffcc00Oro Insuficiente Para Comprar Rege!|r")
-            else 
-                if User.fromLocal() == u then
-                    call StartSound(error_Neg)
-                    call ClearTextMessages()
-                endif
-
-                call DisplayTimedTextToPlayer(u.toPlayer(), .52, .96, 2., "|cffffcc00Lords Engines No Activa/Fuera de Distancia!|r")            
-            endif
-            
-        endif
-        
-        if (slot == 5) then
-            if oro > 5 and isTender[pdex] and IsUnitNearTender(PlayerHero[pdex], 500.0) and GetPlayerMissileUseSmartRecast(GetClickingPlayer()) == false then
-                call SetPlayerState(p, PLAYER_STATE_RESOURCE_GOLD, oro - 10)
-                call SetPlayerMissileUseSmartRecast(GetClickingPlayer(),true)
-                call DestroyEffect(AddSpecialEffectTarget("Abilities\\Spells\\Items\\AIem\\AIemTarget.mdl", but.picture, "origin"))
-                // AcciÃ³n que quieres ejecutar
-                //call DisplayTextToPlayer(p,0,0,"Se restÃ³ 1 de oro")
-            elseif oro <= 5 and isTender[pdex] and IsUnitNearTender(PlayerHero[pdex], 500.0) and GetPlayerMissileUseSmartRecast(GetClickingPlayer()) == false then
-                if User.fromLocal() == u then
-                    call StartSound(error)
-                    call ClearTextMessages()
-                endif
-
-                call DisplayTimedTextToPlayer(u.toPlayer(), .52, .96, 2., "|cffffcc00Oro Insuficiente Para Comprar Smart!|r")
-                
-            elseif GetPlayerMissileUseSmartRecast(GetClickingPlayer()) == true then
-                if User.fromLocal() == u then
-                    call StartSound(error)
-                    call ClearTextMessages()
-                endif
-
-                call DisplayTimedTextToPlayer(u.toPlayer(), .52, .96, 2., "|cffffcc00Smart On!|r")
-            else 
-                if User.fromLocal() == u then
-                    call StartSound(error_Neg)
-                    call ClearTextMessages()
-                endif
-
-                call DisplayTimedTextToPlayer(u.toPlayer(), .52, .96, 2., "|cffffcc00Lords Engines No Activa/Fuera de Distancia!|r")            
-            endif
-            
-            
-        endif
-        
-        if (slot == 6) then
-            if oro > 0 and isTender[pdex] and IsUnitNearTender(PlayerHero[pdex], 500.0) and GetPlayerOrbLevel(GetClickingPlayer()) <= 3 then
-                call SetPlayerState(p, PLAYER_STATE_RESOURCE_GOLD, oro - 1)
-                call SetPlayerOrbLevel(GetClickingPlayer(),GetPlayerOrbLevel(GetClickingPlayer())+1)
-                call DestroyEffect(AddSpecialEffectTarget("Abilities\\Spells\\Items\\AIem\\AIemTarget.mdl", but.picture, "origin"))
-                // AcciÃ³n que quieres ejecutar
-                //call DisplayTextToPlayer(p,0,0,"Se restÃ³ 1 de oro")
-            elseif oro <= 0 and isTender[pdex] and IsUnitNearTender(PlayerHero[pdex], 500.0) and GetPlayerOrbLevel(GetClickingPlayer()) <= 3 then
-                if User.fromLocal() == u then
-                    call StartSound(error)
-                    call ClearTextMessages()
-                endif
-
-                call DisplayTimedTextToPlayer(u.toPlayer(), .52, .96, 2., "|cffffcc00Oro Insuficiente Para Comprar LevelOrb!|r")
-                
-            elseif GetPlayerOrbLevel(GetClickingPlayer()) == 4 then
-                if User.fromLocal() == u then
-                    call StartSound(error)
-                    call ClearTextMessages()
-                endif
-
-                call DisplayTimedTextToPlayer(u.toPlayer(), .52, .96, 2., "|cffffcc00Max LevelOrb!|r")
-            else 
-                if User.fromLocal() == u then
-                    call StartSound(error_Neg)
-                    call ClearTextMessages()
-                endif
-
-                call DisplayTimedTextToPlayer(u.toPlayer(), .52, .96, 2., "|cffffcc00Lords Engines No Activa/Fuera de Distancia!|r")            
-            endif
-        endif
-        
-        if (slot == 7) then 
-            call StepMenuCameraHeight(pdex, -GetMenuCameraHeightStep())
-            call DisplayTimedTextToPlayer(u.toPlayer(), .52, .96, 2., "|cffffcc00Cam Height:|r " + I2S(R2I(PlayerMenuCameraHeight[pdex])) + " |cffffcc00Offset:|r -" + I2S(R2I(PlayerMenuCameraOffset[pdex])))
-        endif
-
-        /*
-        if (slot == 2) then
-            call UnitAddItemSwapped(CreateItem('tdex',0.,0.),PlayerHero[GetPlayerId(p)])
-        endif
-        if (slot == 3) then
-            call SelectHeroSkill( PlayerHero[GetPlayerId(p)], 'AHfs' )
-        endif
-        if (slot == 4) then
-            call SelectHeroSkill( PlayerHero[GetPlayerId(p)], 'AHbn' )
-        endif
-        if (slot == 5) then
-            call SelectHeroSkill( PlayerHero[GetPlayerId(p)], 'AHdr' )
-        endif
-        if (slot == 6) then
-            call SelectHeroSkill( PlayerHero[GetPlayerId(p)], 'AHpx' )
-        endif
-        if (slot == 7) then
-            call IncUnitAbilityLevel(PlayerHero[GetPlayerId(p)],'AHfs')
-        endif
-        if (slot == 8) then
-            call IncUnitAbilityLevel(PlayerHero[GetPlayerId(p)],'AHbn')
-        endif
-        if (slot == 9) then
-            call IncUnitAbilityLevel(PlayerHero[GetPlayerId(p)],'AHdr')
-        endif
-        if (slot == 10) then
-            call IncUnitAbilityLevel(PlayerHero[GetPlayerId(p)],'AHpx')
-        endif
-        */
-        
-        /*
-        if (InvButtonDisabled[but]) then
-            return false
-        endif
-        */
-        //call inv.showLines(inv.pid, false, inv.camera) Oculta lÃ­neas/guÃ­as visuales del inventario antes de seguir.
-        
-        //set PlayerLastSlot[equip.user.id] = slot + 1
-        
-        // equip item
-        /*
-        if (inv > 0 and last+1 > 0) then
-        
-            set last = (Inventory.MAX_SLOTS * inv.currentPage) + last
-            
-            set itm = inv.getItem(last)
-            
-            if (itm.slot - 1 == slot or itm.slotAlt - 1 == slot) then
-                set itm.tempCustomId = inv.getItemId(last)
-                
-                if (equip.equip(itm, slot)) then
-                    set PlayerLastSlot[inv.pid] = 0
-                    call inv.setItem(last, 0)
-            
-                    call TimerStart(NewTimerEx(but), 2, false, function InventoryCore_GracePeriod)
-                    set InvButtonDisabled[but] = true
-                endif
-            endif
-        endif
-        */ 
-
-        //set InvPlayerLastButton[equip.user.id] = but
-        //set InvPlayerLastSlot[equip.user.id] = 0
-        
-        /*
-        if (but != lastButton) then
-            call SetUnitVertexColor(lastButton.picture, 255, 255, 255, 255)
-            call SetUnitVertexColor(but.picture, 175, 175, 175, 255)
-        endif
-        
-        set itemId = equip.item[slot].id
-        */
-        /*
-        call Inventory.selector[inv.pid].show(false, inv.camera)
-        call Equipment.selector[inv.pid].setPosition(but.centerx - 0.007, but.centery + 0.0272)
-        call Equipment.selector[inv.pid].showPlayer(Player(inv.pid), true, inv.camera)
-        */
-        /*
-        if (itemId > 0) then
-            set equip.item[slot].tempCustomId = equip.itemId[slot]
-            
-            call inv.setTooltipTitle(GetObjectName(itemId))
-            call GetInvItem(itemId).buildDescription(inv.owner)
-            call inv.setTooltipCost("|cffffcc00" + I2S(GetInvItem(itemId).cost) + "|r")
-            call inv.setTooltipIcon(inv.localInt(inv.pid, GetItemIcon(itemId), Inventory.ICON_TRANSPARENT))
-            
-            set equip.item[slot].tempCustomId = 0
-        endif
-        
-        // display tooltip
-        set Inventory.TOOLTIP_X = but.minx - 0.4
-        set Inventory.TOOLTIP_Y = but.miny - 0.08
-        
-        call Inventory.showTooltip(inv, itemId > 0)
-        */ 
-        call equip.show(true, equip.camera)
-        set p = null
-        return false
-    endfunction
-    
-    private function LClickItemSlot takes nothing returns boolean
-        local UIButton but = GetTriggerButton()
-        local player p = GetClickingPlayer()
-        local integer pdex = GetPlayerId(p)
-        local Client equip = Client[Client.PlayerCurrentUnit[pdex]]
-
-        if equip == 0 then
-            set p = null
-            return false
-        endif
-        if p != equip.user.handle then
-            set p = null
-            return false
-        endif
-
-        if (User.Local == p) then
-            call SelectUnit(but.picture, false)
-            call SelectUnit(equip.unit, true)
-        endif
-
-        call MenuClientShowSlotTooltip(but, p)
         set p = null
         return false
     endfunction
 
-    private function RClickItemSlot takes nothing returns boolean
+    private function RightClickCameraButton takes nothing returns boolean
         local UIButton but = GetTriggerButton()
         local player p = GetClickingPlayer()
-        local integer pdex = GetPlayerId(p)
-        local Client equip = Client[Client.PlayerCurrentUnit[pdex]]
-        local integer slot = but.customValue
+        local integer pid = GetPlayerId(p)
+        local Client client = Client[Client.PlayerCurrentUnit[pid]]
+        local integer slot = 0
 
-        if equip == 0 then
+        if but != 0 then
+            set slot = but.customValue
+        endif
+        if client == 0 or p != client.user.handle then
             set p = null
             return false
         endif
-        if p != equip.user.handle then
-            set p = null
-            return false
+
+        if PlayerLastButton[pid] == but and PlayerLastSlot[pid] == slot + 1 then
+            set PlayerLastButton[pid] = 0
+            set PlayerLastSlot[pid] = 0
+            call ExecuteCameraButton(client, pid, slot)
+        else
+            set PlayerLastButton[pid] = but
+            set PlayerLastSlot[pid] = slot + 1
         endif
 
-        if (User.Local == p) then
-            call SelectUnit(but.picture, false)
-            call SelectUnit(equip.unit, true)
+        if User.Local == p then
+            call SelectUnit(client.unit, true)
         endif
-
-        if PlayerLastButton[pdex] == but and PlayerLastSlot[pdex] == slot + 1 then
-            set PlayerLastButton[pdex] = 0
-            set PlayerLastSlot[pdex] = 0
-            if Client.selector[pdex] != 0 then
-                call Client.selector[pdex].showPlayer(p, false, equip.camera)
-            endif
-            set p = null
-            return ExecuteMenuSlotAction()
-        endif
-
-        set PlayerLastButton[pdex] = but
-        set PlayerLastSlot[pdex] = slot + 1
-        if Client.selector[pdex] != 0 then
-            call Client.selector[pdex].setPosition(but.centerx - 0.007, but.centery + 0.0272)
-            call Client.selector[pdex].showPlayer(p, true, equip.camera)
-        endif
-        call MenuClientShowSlotTooltip(but, p)
 
         set p = null
         return false
@@ -19350,12 +19455,14 @@ endglobals
             set PlayerMenuCameraHeight[user.id] = GetDefaultMenuCameraHeight()
             set PlayerMenuCameraOffset[user.id] = GetDefaultMenuCameraOffset()
             set PlayerMenuFogAppliedHeight[user.id] = -1.
+            set WeaponHudLastVersion[user.id] = -1
+            set WaveStatusText[user.id] = "Wave"
+            set PlayerLastSlot[user.id] = 0
+            set PlayerLastButton[user.id] = 0
             set user = user.next
         endloop
-        set FuncLClickSlot = Filter(function LClickItemSlot)
-        set FuncRClickSlot = Filter(function RClickItemSlot)
-        //call Inventory.addLeftClickHook(function OnInventoryItemClick)
-        //call Inventory.addRightClickHook(function OnInventoryItemRightClick)
+        set FuncLClickSlot = Filter(function LeftClickCameraButton)
+        set FuncRClickSlot = Filter(function RightClickCameraButton)
     endfunction
 
 endlibrary
@@ -22108,16 +22215,7 @@ library RestTimeAudio requires RestTimeState
     endfunction
 
     function StartAmbientTownSound takes nothing returns nothing
-        call StopAmbientTownSound()
-        if REST_AMBIENT_TOWN_SOUND_PATH == null or REST_AMBIENT_TOWN_SOUND_PATH == "" then
-            return
-        endif
-        set RestAmbientTownSound = CreateSound(REST_AMBIENT_TOWN_SOUND_PATH, true, false, false, 12700, 12700, "")
-        if RestAmbientTownSound != null then
-            call SetSoundVolume(RestAmbientTownSound, 72)
-            call SetSoundPitch(RestAmbientTownSound, 1.00)
-            call StartSound(RestAmbientTownSound)
-        endif
+        // Desactivado: no hay ambiente emptytown al inicio ni en RestTime.
     endfunction
 
     function RestTimeStopSurvivalEndSound takes nothing returns nothing
@@ -22145,7 +22243,7 @@ endlibrary
 // ===== END: WaveSysAnAI/SwlsWave/RestTime/RestTimeAudio.j =====
 
 // ===== BEGIN: WaveSysAnAI/SwlsWave/RestTime/RestTimeCountdown.j =====
-library RestTimeCountdown requires RestTimeState, RestTimeAudio, RestTimeTenderAudio, RestTimeUI
+library RestTimeCountdown requires RestTimeState, RestTimeAudio, RestTimeUI
 
     function RestTimeStopPhaseTimer takes nothing returns nothing
         if RestPhaseTimer != null then
@@ -22155,7 +22253,7 @@ library RestTimeCountdown requires RestTimeState, RestTimeAudio, RestTimeTenderA
 
     private function RestTimeSetCountdownStatus takes nothing returns nothing
         if RestPhaseState == REST_PHASE_PURCHASE then
-            call RestTimeSetStatusForActivePlayers("TradeTime: " + I2S(RestPhaseRemaining))
+            call RestTimeSetStatusForActivePlayers("InterMission: " + I2S(RestPhaseRemaining))
             call RestTimeSetBoardTitle("|cFFFFFF99Descanso|r |cFFFFFFFFWave |r|cFFE6E6E6" + I2S(TargetWave) + "|r|cFFFF8C00/|r|cFFE6E6E610|r |cFFFFFFFF- Tienda: |r|cFF66FF99" + I2S(RestPhaseRemaining) + "|r")
         elseif RestPhaseState == REST_PHASE_INITIAL then
             call RestTimeSetStatusForActivePlayers("WaveIn: " + I2S(RestPhaseRemaining))
@@ -22164,16 +22262,15 @@ library RestTimeCountdown requires RestTimeState, RestTimeAudio, RestTimeTenderA
     endfunction
 
     function RestTimeLaunchCurrentWave takes nothing returns nothing
-        call RestTimeTenderAudioStop()
-        call StopAmbientTownSound()
         call RestTimeCloseTenderForActivePlayers()
-        call ExecuteFunc("MenuClientClearEnemyPreviewForActivePlayers")
         set RestPhaseState = REST_PHASE_NONE
         set RestPhaseRemaining = 0
         call RestTimeSetStatusForActivePlayers("Wave " + I2S(TargetWave))
         call RestTimeSetBoardTitle("|cFF66FF99Activa|r |cFFFFFFFFWave |r|cFFE6E6E6" + I2S(TargetWave) + "|r|cFFFF8C00/|r|cFFE6E6E610|r")
         call RestTimeStopPhaseTimer()
-        if WaveTgg != null and WaveTgg != "" then
+        if SwlsWaveStartTrigger != null then
+            call TriggerExecute(SwlsWaveStartTrigger)
+        elseif WaveTgg != null and WaveTgg != "" then
             call ExecuteFunc(WaveTgg)
         endif
     endfunction
@@ -22198,9 +22295,6 @@ library RestTimeCountdown requires RestTimeState, RestTimeAudio, RestTimeTenderA
         set RestPhaseRemaining = seconds
         if phaseState == REST_PHASE_PURCHASE then
             set RestSurvivalEndSequenceActive = false
-            call StartAmbientTownSound()
-            call RestTimeTenderAudioStart()
-            call ExecuteFunc("MenuClientRefreshEnemyPreviewForActivePlayers")
             call RestTimeSetStatusForActivePlayers("TimeOfPurchase: " + I2S(RestPhaseRemaining))
             call RestTimeSetBoardTitle("|cFFFFFF99Descanso|r |cFFFFFFFFWave |r|cFFE6E6E6" + I2S(TargetWave) + "|r|cFFFF8C00/|r|cFFE6E6E610|r |cFFFFFFFF- Tienda: |r|cFF66FF99" + I2S(RestPhaseRemaining) + "|r")
         else
@@ -22241,11 +22335,6 @@ library RestTimeEndFlow requires HeroLives, TenderSystem, PreConfi, PlayerUtils,
         if SwlsMultiboard != null then
             call MultiboardSetTitleText(SwlsMultiboard, "|cFF66FF99Wave completada|r")
         endif
-        if SwlsSound != null then
-            call StopSound(SwlsSound, true, false)
-            set SwlsSound = null
-        endif
-
         set TargetWave = TargetWave + 1
         set WaveTgg = nextWaveFunc
         set isWavez = false
@@ -22254,11 +22343,17 @@ library RestTimeEndFlow requires HeroLives, TenderSystem, PreConfi, PlayerUtils,
         call ReviveAndHealHeroes()
 
         if TargetWave >= REST_FINAL_WAVE_DONE then
+            if SwlsSound != null then
+                call StopSound(SwlsSound, true, false)
+                set SwlsSound = null
+            endif
             call RestTimeStartSurvivalEndSequence()
             return
         endif
 
-        call RestTimeShowClientsForActivePlayers()
+        if SwlsSound != null then
+            call SetSoundVolume(SwlsSound, R2I(I2R(SwlsSoundWaveVolume) * 0.50))
+        endif
         call RestTimeRewardActivePlayers()
         call RestTimeAnimateTender()
         call RestTimeBeginCountdown(REST_PURCHASE_COUNTDOWN, REST_PHASE_PURCHASE)
@@ -22292,43 +22387,11 @@ library RestTimeMenuBridge requires PlayerUtils, PlayerHeroState, MenuClient, Re
     endfunction
 
     function RestTimeMenuCloseTenderForActivePlayers takes nothing returns nothing
-        local integer i = 0
-        local User u
-        local unit hero
-        local Client client
-        loop
-            exitwhen i == User.AmountPlaying
-            set u = User.fromPlaying(i)
-            set hero = PlayerHero[u.id]
-            if hero != null and GetUnitTypeId(hero) != 0 then
-                set client = Client[hero]
-                if client != 0 then
-                    call client.getButton(2).showPlayer(client.user.handle, false, client.camera)
-                endif
-            endif
-            set i = i + 1
-        endloop
-        set hero = null
+        // No-op: RestTime ya no abre/cierra paneles especiales del MenuClient.
     endfunction
 
     function RestTimeMenuShowClientsForActivePlayers takes nothing returns nothing
-        local integer i = 0
-        local User u
-        local unit hero
-        local Client client
-        loop
-            exitwhen i == User.AmountPlaying
-            set u = User.fromPlaying(i)
-            set hero = PlayerHero[u.id]
-            if hero != null and GetUnitTypeId(hero) != 0 then
-                set client = Client[hero]
-                if client != 0 and PlayerCamera[u.id] != 0 then
-                    call client.show(true, PlayerCamera[u.id])
-                endif
-            endif
-            set i = i + 1
-        endloop
-        set hero = null
+        // No-op: el MenuClient minimal se muestra desde Selection/Stage, no desde RestTime.
     endfunction
 
 endlibrary
@@ -22343,17 +22406,17 @@ library RestTimeState
         constant integer REST_PHASE_INITIAL = 1
         constant integer REST_PHASE_PURCHASE = 2
         constant integer REST_INITIAL_WAVE_COUNTDOWN = 5
-        constant integer REST_PURCHASE_COUNTDOWN = 50
+        constant integer REST_PURCHASE_COUNTDOWN = 10
         constant real REST_PHASE_TICK_SEC = 1.00
         constant real REST_SURVIVAL_END_DELAY = 18.00
         constant integer REST_FINAL_WAVE_DONE = 11
-        constant integer REST_GOLD_REWARD = 5
-        constant string REST_AMBIENT_TOWN_SOUND_PATH = "war3mapImported\\emptytown.wav"
+        constant integer REST_GOLD_REWARD = 2
+        constant string REST_AMBIENT_TOWN_SOUND_PATH = ""
         constant string REST_SURVIVAL_END_SOUND_PATH = "war3mapImported\\SurvivalEnd.wav"
         constant real REST_TENDER_AUDIO_TICK_SEC = 0.25
         constant real REST_TENDER_AUDIO_RADIUS = 500.0
         constant integer REST_TENDER_AUDIO_VOLUME = 127
-        constant boolean REST_TENDER_AUDIO_ENABLED = true
+        constant boolean REST_TENDER_AUDIO_ENABLED = false
 
         timer RestPhaseTimer = null
         timer RestSurvivalEndTimer = null
@@ -22376,7 +22439,7 @@ endlibrary
 // ===== END: WaveSysAnAI/SwlsWave/RestTime/RestTimeState.j =====
 
 // ===== BEGIN: WaveSysAnAI/SwlsWave/RestTime/RestTimeSurvivalEnd.j =====
-library RestTimeSurvivalEnd requires PlayerUtils, RestTimeState, RestTimeAudio, RestTimeTenderAudio, RestTimeUI
+library RestTimeSurvivalEnd requires PlayerUtils, RestTimeState, RestTimeAudio, RestTimeUI
 
     function RestTimeCompleteSurvivalEndSequence takes nothing returns nothing
         local integer i = 0
@@ -22411,8 +22474,6 @@ library RestTimeSurvivalEnd requires PlayerUtils, RestTimeState, RestTimeAudio, 
         if RestPhaseTimer != null then
             call PauseTimer(RestPhaseTimer)
         endif
-        call RestTimeTenderAudioStop()
-        call StopAmbientTownSound()
         call BJDebugMsg("|cff66ff66Superaste las 10 waves|r")
         call RestTimeSetBoardTitle("|cFF66FF66Superaste las 10 waves|r")
         call RestTimeSetStatusForActivePlayers("|cff66ff66Superaste las 10 waves|r")
@@ -22429,127 +22490,18 @@ endlibrary
 // ===== END: WaveSysAnAI/SwlsWave/RestTime/RestTimeSurvivalEnd.j =====
 
 // ===== BEGIN: WaveSysAnAI/SwlsWave/RestTime/RestTimeTenderAudio.j =====
-library RestTimeTenderAudio requires PlayerUtils, PlayerHeroState, TenderSystem, RestTimeState
-
-    private function RestTimeTenderAudioTrackCount takes nothing returns integer
-        return 6
-    endfunction
-
-    private function RestTimeTenderAudioPath takes integer index returns string
-        if index == 1 then
-            return "war3mapImported\\Trader --- - Never Gonna Stay in The Abyss.wav"
-        elseif index == 2 then
-            return "war3mapImported\\Trader 1 - Meanwhile, in The Abyss.wav"
-        elseif index == 3 then
-            return "war3mapImported\\Trader 10 - Columba Noachi.wav"
-        elseif index == 4 then
-            return "war3mapImported\\Trader 11 - Cold Wind.wav"
-        elseif index == 5 then
-            return "war3mapImported\\Trader 12 - Crystal Breakin' Time.wav"
-        elseif index == 6 then
-            return "war3mapImported\\Trader 9 - Weapon Check-up.wav"
-        endif
-        return ""
-    endfunction
-
-    private function RestTimeTenderAudioPickTrack takes nothing returns integer
-        local integer count = RestTimeTenderAudioTrackCount()
-        local integer selected
-        if count <= 1 then
-            return 1
-        endif
-        set selected = GetRandomInt(1, count)
-        if selected == RestTenderAudioLastTrackIndex then
-            set selected = selected + 1
-            if selected > count then
-                set selected = 1
-            endif
-        endif
-        return selected
-    endfunction
-
-    private function RestTimeTenderAudioStopForPid takes integer pid returns nothing
-        if pid < 0 or pid >= bj_MAX_PLAYER_SLOTS then
-            return
-        endif
-        if RestTenderAudioActiveByPid[pid] then
-            call StopSound(RestTenderAudioSoundByPid[pid], true, false)
-            call KillSoundWhenDone(RestTenderAudioSoundByPid[pid])
-            set RestTenderAudioSoundByPid[pid] = null
-            set RestTenderAudioActiveByPid[pid] = false
-        endif
-    endfunction
-
-    private function RestTimeTenderAudioStartForUser takes User u returns nothing
-        local string path = ""
-        if RestTenderAudioActiveByPid[u.id] then
-            return
-        endif
-        if GetLocalPlayer() == u.toPlayer() then
-            set path = RestTimeTenderAudioPath(RestTenderAudioTrackIndex)
-        endif
-        set RestTenderAudioSoundByPid[u.id] = CreateSound(path, true, false, false, 12700, 12700, "")
-        call SetSoundVolume(RestTenderAudioSoundByPid[u.id], REST_TENDER_AUDIO_VOLUME)
-        call SetSoundPitch(RestTenderAudioSoundByPid[u.id], 1.00)
-        call StartSound(RestTenderAudioSoundByPid[u.id])
-        set RestTenderAudioActiveByPid[u.id] = true
-    endfunction
-
-    private function RestTimeTenderAudioTick takes nothing returns nothing
-        local integer i = 0
-        local User u
-        local unit hero
-        local boolean inRange
-
-        if not RestTenderAudioRunning or RestPhaseState != REST_PHASE_PURCHASE then
-            return
-        endif
-
-        loop
-            exitwhen i == User.AmountPlaying
-            set u = User.fromPlaying(i)
-            set hero = PlayerHero[u.id]
-            set inRange = IsUnitNearTender(hero, REST_TENDER_AUDIO_RADIUS)
-
-            if inRange and not RestTenderAudioActiveByPid[u.id] then
-                call RestTimeTenderAudioStartForUser(u)
-            elseif not inRange and RestTenderAudioActiveByPid[u.id] then
-                call RestTimeTenderAudioStopForPid(u.id)
-            endif
-
-            set i = i + 1
-        endloop
-        set hero = null
-    endfunction
+library RestTimeTenderAudio requires RestTimeState
 
     function RestTimeTenderAudioStart takes nothing returns nothing
-        if not REST_TENDER_AUDIO_ENABLED then
-            return
-        endif
-        if RestTenderAudioRunning then
-            return
-        endif
-        set RestTenderAudioTrackIndex = RestTimeTenderAudioPickTrack()
-        set RestTenderAudioLastTrackIndex = RestTenderAudioTrackIndex
-        set RestTenderAudioRunning = true
-        if RestTenderAudioTimer == null then
-            set RestTenderAudioTimer = CreateTimer()
-        endif
-        call TimerStart(RestTenderAudioTimer, REST_TENDER_AUDIO_TICK_SEC, true, function RestTimeTenderAudioTick)
-        call RestTimeTenderAudioTick()
+        // Desactivado: el audio local del Tender queda fuera del flujo de RestTime.
+        set RestTenderAudioRunning = false
     endfunction
 
     function RestTimeTenderAudioStop takes nothing returns nothing
-        local integer pid = 0
         set RestTenderAudioRunning = false
         if RestTenderAudioTimer != null then
             call PauseTimer(RestTenderAudioTimer)
         endif
-        loop
-            exitwhen pid >= bj_MAX_PLAYER_SLOTS
-            call RestTimeTenderAudioStopForPid(pid)
-            set pid = pid + 1
-        endloop
         set RestTenderAudioTrackIndex = 0
     endfunction
 
@@ -22558,7 +22510,7 @@ endlibrary
 // ===== END: WaveSysAnAI/SwlsWave/RestTime/RestTimeTenderAudio.j =====
 
 // ===== BEGIN: WaveSysAnAI/SwlsWave/RestTime/RestTimeUI.j =====
-library RestTimeUI requires PlayerUtils, PreConfi, RestTimeState
+library RestTimeUI requires PlayerUtils, PreConfi, RestTimeState, RestTimeMenuBridge
 
     function RestTimeSetBoardTitle takes string title returns nothing
         if SwlsMultiboard != null then
@@ -22569,7 +22521,7 @@ library RestTimeUI requires PlayerUtils, PreConfi, RestTimeState
 
     function RestTimeSetStatusForActivePlayers takes string statusText returns nothing
         set RestStatusText = statusText
-        call ExecuteFunc("RestTimeMenuApplyStatusForActivePlayers")
+        call RestTimeMenuApplyStatusForActivePlayers()
     endfunction
 
     function RestTimeCloseTenderForActivePlayers takes nothing returns nothing
@@ -22581,11 +22533,11 @@ library RestTimeUI requires PlayerUtils, PreConfi, RestTimeState
             set isTender[u.id] = false
             set i = i + 1
         endloop
-        call ExecuteFunc("RestTimeMenuCloseTenderForActivePlayers")
+        call RestTimeMenuCloseTenderForActivePlayers()
     endfunction
 
     function RestTimeShowClientsForActivePlayers takes nothing returns nothing
-        call ExecuteFunc("RestTimeMenuShowClientsForActivePlayers")
+        call RestTimeMenuShowClientsForActivePlayers()
     endfunction
 
 endlibrary
@@ -22617,7 +22569,7 @@ endlibrary
 
 // ===== BEGIN: WaveSysAnAI/SwlsWave/StageExample.j =====
 
-library stage1 requires PlayerUtils, WaveTest, HeroLives, AIProfiles, AIConfig, IAManager, TenderSystem, PreConfi, WavePointGroupsConfig, PlayerHeroState, WaveMultiboard
+library stage1 initializer InitStage1 requires PlayerUtils, WaveTest, HeroLives, AIProfiles, AIConfig, IAManager, TenderSystem, PreConfi, WavePointGroupsConfig, PlayerHeroState, WaveMultiboard
 
 function Trig_w1_Actions takes nothing returns nothing
     local Wave w
@@ -22630,65 +22582,77 @@ function Trig_w1_Actions takes nothing returns nothing
     if GetTenderUnit() != null then
         call SetUnitAnimation(GetTenderUnit(), "Spell")
     endif
+    if TargetWave > 1 then
+        if SwlsSound != null then
+            call StopSound(SwlsSound, true, false)
+            set SwlsSound = null
+        endif
+    endif
     if TargetWave == 1 then
     set SwlsSound = CreateSound("war3mapImported\\Wave 1.wav", true, false, false, 12700,12700,"")
     call SetSoundPitch(SwlsSound,1.0)
+    set SwlsSoundWaveVolume = 80
     call SetSoundVolume(SwlsSound,80)
     set Message = "Ahora siendo cannon por aqui jeje, asi que un saludo mio y mi creador Leforyer por cierto tienes un apartado especial para que este pendiende de lo que viene en la sig Wave"
-    set i = 0
-    loop
-        exitwhen i == User.AmountPlaying //static jeje por eso sin variable
-        set u = User.fromPlaying(i)
-        call Client[PlayerHero[u.id]].show(true, PlayerCamera[u.id])
-        set i = i + 1
-    endloop
     elseif TargetWave == 2 then
     set SwlsSound = CreateSound("war3mapImported\\Wave 2.wav", true, false, false, 12700,12700,"")
     call SetSoundPitch(SwlsSound,1.0)
+    set SwlsSoundWaveVolume = 60
     call SetSoundVolume(SwlsSound,60)
     set Message = "Se que no es mucho pero ante los fuertes ataque que sufri es lo minimo que puedo dar, pero animos ire mejorando implementaciones a futuro, defiende The Pueblo!!! "
     elseif TargetWave == 3 then
     set SwlsSound = CreateSound("war3mapImported\\Wave 3.wav", true, false, false, 12700,12700,"")
     call SetSoundPitch(SwlsSound,1.0)
+    set SwlsSoundWaveVolume = 60
     call SetSoundVolume(SwlsSound,60)
     set Message = "Estas waves se vuelven mas fuertes cada vez, ahora incluso aprendieron habilidades especiales debido a la DevCorruption, Animos adquiere unas mejoras y eliminalos de aqui"
     elseif TargetWave == 4 then
     set SwlsSound = CreateSound("war3mapImported\\Wave 4.wav", true, false, false, 12700,12700,"")
     call SetSoundPitch(SwlsSound,1.0)
+    set SwlsSoundWaveVolume = 60
     call SetSoundVolume(SwlsSound,60)
     set Message = "Lamentablemente en este tiempo los heroes encargados de defender el pueblo no lograron, me causa mucha tristeza.. pero ustedes se que lo lograran, animos!!"
     elseif TargetWave == 5 then
     set SwlsSound = CreateSound("war3mapImported\\Wave 5.wav", true, false, false, 12700,12700,"")
     call SetSoundPitch(SwlsSound,1.0)
+    set SwlsSoundWaveVolume = 80
     call SetSoundVolume(SwlsSound,80)
     set Message = "Aquella mutacion de las unidades a mas grandes llamado bosses es un monton, hasta potencia mucho su habilidad normal, esto la verda aterra mucho a la vez"
     elseif TargetWave == 6 then
     set SwlsSound = CreateSound("war3mapImported\\Wave 6.wav", true, false, false, 12700,12700,"")
     call SetSoundPitch(SwlsSound,1.0)
+    set SwlsSoundWaveVolume = 80
     call SetSoundVolume(SwlsSound,80)
     set Message = "Segun lo que me conto roucky aquella corrupcion que ocurrio en tu mundo se propago por aqui, pero a cambio tambien puedo beneficiarte pronto con mejoras exclusivas de este mundo!!"
     elseif TargetWave == 7 then
     set SwlsSound = CreateSound("war3mapImported\\Wave 7.wav", true, false, false, 12700,12700,"")
     call SetSoundPitch(SwlsSound,1.0)
+    set SwlsSoundWaveVolume = 80
     call SetSoundVolume(SwlsSound,80)
     set Message = "Queda poco no te rindas, espero poder anhelar la recuperacion del pueblo, extrano sus lindos momentos cuando todo era armonia aqui"
     elseif TargetWave == 8 then
     set SwlsSound = CreateSound("war3mapImported\\Wave 8.wav", true, false, false, 12700,12700,"")
     call SetSoundPitch(SwlsSound,1.0)
+    set SwlsSoundWaveVolume = 90
     call SetSoundVolume(SwlsSound,90)
     set Message = "Segun lo que conton roucky esta corruption conecta varios mundo... no me imagino un ataque aqui con criaturas de diferentes mundo.."
     elseif TargetWave == 9 then
     set SwlsSound = CreateSound("war3mapImported\\Wave 9.wav", true, false, false, 12700,12700,"")
     call SetSoundPitch(SwlsSound,1.0)
+    set SwlsSoundWaveVolume = 80
     call SetSoundVolume(SwlsSound,80)
     set Message = "Estamos a un paso de librar esta corrupcion, pondre a disposicion toda la enegia que pueda para mantener equilibrio por aqui"
     elseif TargetWave == 10 then
     set SwlsSound = CreateSound("war3mapImported\\Wave 11.wav", true, false, false, 12700,12700,"")
     call SetSoundPitch(SwlsSound,1.0)
+    set SwlsSoundWaveVolume = 80
     call SetSoundVolume(SwlsSound,80)
     set Message = "Llegamos a la final!! derrotando esta wave tendre la energia suficiente para llevarle al enemigo final o poner fin a este desastre (FinalBossAunPorTerminar)"
+    else
     endif
-    call StartSound(SwlsSound)
+    if SwlsSound != null then
+        call StartSound(SwlsSound)
+    endif
     set isWavez = true
     //call KillSoundWhenDone(SwlsSound)
     set w = Wave.create(30, 15, 0.25, SwlsMultiboard, "BMT1", TargetWave, 10, "Trig_w1_Actions")
@@ -22711,7 +22675,6 @@ function Trig_w1_Actions takes nothing returns nothing
     loop
         exitwhen i == User.AmountPlaying //static jeje por eso sin variable
         set u = User.fromPlaying(i)
-        
         call AISetTrackedHero(PlayerHero[u.id])
         call w.addNearUnit(PlayerHero[u.id])
         set i = i + 1
@@ -22739,19 +22702,19 @@ function Trig_w1_Actions takes nothing returns nothing
         //call w.addSlotExByPlayer('hmpr', 2,false, 2, 1, 1, -1, false,Player(11), AI_PROFILE_WAVE7_SPELL, 0, 0, 1.00)
         endif
         if TargetWave >= 2 then
-            call w.upsertSlotExByPlayers(AI_STAGE1_SLOT_GROUP_HMIL, 'hmil', 1, false, 2, 1, 2, -1, false, AI_PROFILE_MELEE, 0, 0, 1.00)
+            call w.upsertSlotExByPlayers(AI_STAGE1_SLOT_GROUP_HMIL, 'hmil', 2, false, 2, 1, 2, -1, false, AI_PROFILE_MELEE, 0, 0, 1.00)
             if TargetWave == 2 then
                 call w.addSlotExByPlayer('zA01', 2,false, 2, 1, 1, 5, true,Player(11), AI_PROFILE_BOSS, 0, 0, 1.00)
             endif
         endif
         if TargetWave >= 3 then
-            call w.upsertSlotExByPlayers(AI_STAGE1_SLOT_GROUP_HFOO, 'hfoo', 1, false, 2, 1, 3, -1, false, AI_PROFILE_MELEE, 0, 0, 1.00)
+            call w.upsertSlotExByPlayers(AI_STAGE1_SLOT_GROUP_HFOO, 'hfoo', 2, false, 2, 1, 3, -1, false, AI_PROFILE_MELEE, 0, 0, 1.00)
             if TargetWave == 3 then
             call w.addSlotExByPlayer('zA02', 2,false, 2, 1, 1, 10, true,Player(11), AI_PROFILE_BOSS, 0, 0, 1.00)
         endif
             endif
         if TargetWave >= 4 then
-            call w.upsertSlotExByPlayers(AI_STAGE1_SLOT_GROUP_HRIF, 'hrif', 1, false, 2, 1, 4, -1, false, AI_PROFILE_WAVE4_SPELL, 0, 0, 1.00)
+            call w.upsertSlotExByPlayers(AI_STAGE1_SLOT_GROUP_HRIF, 'hrif', 2, false, 2, 1, 4, -1, false, AI_PROFILE_WAVE4_SPELL, 0, 0, 1.00)
             if TargetWave == 4 then
             call w.addSlotExByPlayer('zA03', 2,false, 2, 1, 1, 15, true,Player(11), AI_PROFILE_BOSS, 0, 0, 1.00)
         endif
@@ -22794,7 +22757,6 @@ function Trig_w1_Actions takes nothing returns nothing
         endif
 
     
-    
     call w.start()
     set i = 0
     loop
@@ -22806,6 +22768,13 @@ function Trig_w1_Actions takes nothing returns nothing
         set i = i + 1
     endloop
 
+endfunction
+
+private function InitStage1 takes nothing returns nothing
+    if SwlsWaveStartTrigger == null then
+        set SwlsWaveStartTrigger = CreateTrigger()
+    endif
+    call TriggerAddAction(SwlsWaveStartTrigger, function Trig_w1_Actions)
 endfunction
 
 //===========================================================================
@@ -25411,7 +25380,7 @@ endlibrary
 // ===== END: WaveSysAnAI/SwlsWave/WavePointGroupsConfig.j =====
 
 // ===== BEGIN: WaveSysAnAI/SwlsWave/WaveStreaks.j =====
-library WaveStreaks initializer Init requires Table, TimerUtils, PlayerUtils, WaveTest, SelectionSystem, WaveDamageCredit, PlayerHeroState
+library WaveStreaks initializer Init requires Table, TimerUtils, PlayerUtils, WaveTest, SelectionSystem, WaveDamageCredit, PlayerHeroState, PrisonerDropSystem
 
     globals
         private constant integer WAVE_STREAK_MAX_TIERS = 8
@@ -25425,6 +25394,7 @@ library WaveStreaks initializer Init requires Table, TimerUtils, PlayerUtils, Wa
         private constant integer WAVE_QUEUE_KIND_MULTI = 3
         private constant integer WAVE_QUEUE_KIND_BREAK_STREAK = 4
         private constant integer WAVE_QUEUE_KIND_BREAK_MULTI = 5
+        private constant integer WAVE_QUEUE_KIND_WAVE_FINISHER = 6
         private constant real WAVE_DEFAULT_MULTI_WINDOW = 5.00
         private constant real WAVE_DEFAULT_QUEUE_GAP = 1.30 
 
@@ -25432,6 +25402,7 @@ library WaveStreaks initializer Init requires Table, TimerUtils, PlayerUtils, Wa
         private constant string WAVE_DEFAULT_SOUND_STREAK_BREAK = "war3mapImported\\RDK_RompeRacha.mp3"
         private constant string WAVE_DEFAULT_SOUND_MULTI_BREAK_LOW = "war3mapImported\\RDK_RompeCombo1.mp3"
         private constant string WAVE_DEFAULT_SOUND_MULTI_BREAK_HIGH = "war3mapImported\\RDK_RompeCombo2.mp3"
+        private constant string WAVE_DEFAULT_SOUND_WAVE_FINISHER = "war3mapImported\\te matee.wav"
 
         private constant string WAVE_DEFAULT_SOUND_STREAK_1 = "war3mapImported\\announcer_kill_spree_01.mp3"
         private constant string WAVE_DEFAULT_SOUND_STREAK_2 = "war3mapImported\\announcer_kill_dominate_01.mp3"
@@ -25448,6 +25419,7 @@ library WaveStreaks initializer Init requires Table, TimerUtils, PlayerUtils, Wa
         private constant string WAVE_DEFAULT_SOUND_MULTI_4 = "war3mapImported\\announcer_kill_rampage_01.mp3"
 
         private Table WaveFirstBloodDoneByWave
+        private Table WaveFinisherDoneByWave
 
         private integer array WavePlayerStreakKills
         private integer array WavePlayerMultiKills
@@ -25468,6 +25440,7 @@ library WaveStreaks initializer Init requires Table, TimerUtils, PlayerUtils, Wa
         private string WaveStreakBreakSoundPath = ""
         private string WaveMultiBreakLowSoundPath = ""
         private string WaveMultiBreakHighSoundPath = ""
+        private string WaveFinisherSoundPath = ""
 
         private real WaveMultiKillWindowSec = WAVE_DEFAULT_MULTI_WINDOW
         private real WaveQueueGapSec = WAVE_DEFAULT_QUEUE_GAP
@@ -25781,6 +25754,11 @@ library WaveStreaks initializer Init requires Table, TimerUtils, PlayerUtils, Wa
         call WaveQueuePushTyped(WaveStreakFirstBloodSoundPath, WaveGetPlayerNameColoredById(pid) + " |cffff3333FIRST BLOOD|r (Wave " + I2S(waveId) + ")", WAVE_QUEUE_KIND_FIRST_BLOOD, pid)
     endfunction
 
+    private function WaveQueueFinisher takes integer pid, integer waveId returns nothing
+        call WaveQueuePushTyped(WaveFinisherSoundPath, WaveGetPlayerNameColoredById(pid) + " |cff33ff66termino la Wave " + I2S(waveId) + "|r matando al ultimo enemigo", WAVE_QUEUE_KIND_WAVE_FINISHER, pid)
+        set WaveQueueCooldown = 0.00
+    endfunction
+
     private function WaveQueueStreakTier takes integer pid, integer tier, integer kills returns nothing
         call WaveQueueDropPendingByKindAndPid(WAVE_QUEUE_KIND_STREAK, pid)
         call WaveQueuePushTyped(WaveStreakKillSoundPath[tier], WaveGetPlayerNameColoredById(pid) + " |cffffff00" + WaveGetStreakTierName(tier) + "|r (" + WaveFormatKillUnits(kills) + ")", WAVE_QUEUE_KIND_STREAK, pid)
@@ -25809,6 +25787,7 @@ library WaveStreaks initializer Init requires Table, TimerUtils, PlayerUtils, Wa
         local Wave w = GetWaveEventWave()
         if w != 0 then
             set WaveFirstBloodDoneByWave[w] = 0
+            set WaveFinisherDoneByWave[w] = 0
         endif
     endfunction
 
@@ -25816,6 +25795,9 @@ library WaveStreaks initializer Init requires Table, TimerUtils, PlayerUtils, Wa
         local Wave w = GetWaveEventWave()
         if w != 0 and WaveFirstBloodDoneByWave.has(w) then
             call WaveFirstBloodDoneByWave.remove(w)
+        endif
+        if w != 0 and WaveFinisherDoneByWave.has(w) then
+            call WaveFinisherDoneByWave.remove(w)
         endif
     endfunction
 
@@ -25867,12 +25849,17 @@ library WaveStreaks initializer Init requires Table, TimerUtils, PlayerUtils, Wa
         if pid < 0 then
             return
         endif
+        call PrisonerDropTrySpawnForPid(dead, pid)
 
-        // First Blood por wave (solo héroe -> wave).
+        // First Blood por wave (solo heroe -> wave).
         if waveId != 0 then
             if (not WaveFirstBloodDoneByWave.has(waveId)) or WaveFirstBloodDoneByWave[waveId] == 0 then
                 set WaveFirstBloodDoneByWave[waveId] = 1
                 call WaveQueueFirstBlood(pid, waveId)
+            endif
+            if w.getToKillRemaining() <= 0 and ((not WaveFinisherDoneByWave.has(waveId)) or WaveFinisherDoneByWave[waveId] == 0) then
+                set WaveFinisherDoneByWave[waveId] = 1
+                call WaveQueueFinisher(pid, waveId)
             endif
         endif
 
@@ -26027,6 +26014,10 @@ library WaveStreaks initializer Init requires Table, TimerUtils, PlayerUtils, Wa
         set WaveMultiBreakHighSoundPath = path
     endfunction
 
+    function SetWaveStreakFinisherSound takes string path returns nothing
+        set WaveFinisherSoundPath = path
+    endfunction
+
     function SetWaveStreakKillStreakThreshold takes integer tier, integer kills returns nothing
         if tier < 1 or tier > WAVE_STREAK_MAX_TIERS then
             return
@@ -26082,6 +26073,7 @@ library WaveStreaks initializer Init requires Table, TimerUtils, PlayerUtils, Wa
         call SetWaveStreakBreakSound(WAVE_DEFAULT_SOUND_STREAK_BREAK)
         call SetWaveStreakMultiBreakLowSound(WAVE_DEFAULT_SOUND_MULTI_BREAK_LOW)
         call SetWaveStreakMultiBreakHighSound(WAVE_DEFAULT_SOUND_MULTI_BREAK_HIGH)
+        call SetWaveStreakFinisherSound(WAVE_DEFAULT_SOUND_WAVE_FINISHER)
 
         // Kill Streak (8 escalones)
         call SetWaveStreakKillStreakSound(1, WAVE_DEFAULT_SOUND_STREAK_1)
@@ -26109,6 +26101,7 @@ library WaveStreaks initializer Init requires Table, TimerUtils, PlayerUtils, Wa
         local integer i = 0
 
         set WaveFirstBloodDoneByWave = Table.create()
+        set WaveFinisherDoneByWave = Table.create()
         set WaveClockTimer = NewTimer()
         set WaveQueueTimer = NewTimer()
         call SetTimerDebugTag(WaveClockTimer, TIMER_DEBUG_TAG_WAVE_CORE)

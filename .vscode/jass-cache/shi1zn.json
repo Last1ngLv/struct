@@ -713,6 +713,15 @@
       "statementType": "FunctionDeclaration"
     },
     {
+      "label": "ContinueHomingAfterKill",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ContinueHomingAfterKill takes Missile missile returns boolean\n```\n\n\n**_>:** `MyMissiles/Loadout RocketLauncher.j`",
+      "sortText": "1_func_ContinueHomingAfterKill",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout RocketLauncher.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
       "label": "GetLoadoutRocketLauncherMoveCastDuration",
       "kind": 2,
       "detail": "Function",
@@ -830,6 +839,15 @@
       "statementType": "FunctionDeclaration"
     },
     {
+      "label": "Cleanup",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Cleanup takes SpellIndex dex returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout RocketLauncher.j`",
+      "sortText": "1_func_Cleanup",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout RocketLauncher.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
       "label": "OnBurstTick",
       "kind": 2,
       "detail": "Function",
@@ -844,15 +862,6 @@
       "detail": "Function",
       "documentation": "\n```jass\nfunction FireBurst takes SpellIndex dex returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout RocketLauncher.j`",
       "sortText": "1_func_FireBurst",
-      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout RocketLauncher.j",
-      "statementType": "FunctionDeclaration"
-    },
-    {
-      "label": "Cleanup",
-      "kind": 2,
-      "detail": "Function",
-      "documentation": "\n```jass\nfunction Cleanup takes SpellIndex dex returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout RocketLauncher.j`",
-      "sortText": "1_func_Cleanup",
       "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout RocketLauncher.j",
       "statementType": "FunctionDeclaration"
     },
@@ -911,6 +920,15 @@
       "statementType": "FunctionDeclaration"
     },
     {
+      "label": "LoadoutRocketLauncherFire",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction LoadoutRocketLauncherFire takes unit source, player owner, real tx, real ty returns boolean\n```\n\n\n**_>:** `MyMissiles/Loadout RocketLauncher.j`",
+      "sortText": "1_func_LoadoutRocketLauncherFire",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout RocketLauncher.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
       "label": "OnEffect",
       "kind": 2,
       "detail": "Function",
@@ -929,5 +947,5 @@
       "statementType": "FunctionDeclaration"
     }
   ],
-  "timestamp": 1777049211145
+  "timestamp": 1777579694718
 }

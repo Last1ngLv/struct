@@ -1,4 +1,4 @@
-library WaveStreaks initializer Init requires Table, TimerUtils, PlayerUtils, WaveTest, SelectionSystem, WaveDamageCredit, PlayerHeroState
+library WaveStreaks initializer Init requires Table, TimerUtils, PlayerUtils, WaveTest, SelectionSystem, WaveDamageCredit, PlayerHeroState, PrisonerDropSystem
 
     globals
         private constant integer WAVE_STREAK_MAX_TIERS = 8
@@ -12,6 +12,7 @@ library WaveStreaks initializer Init requires Table, TimerUtils, PlayerUtils, Wa
         private constant integer WAVE_QUEUE_KIND_MULTI = 3
         private constant integer WAVE_QUEUE_KIND_BREAK_STREAK = 4
         private constant integer WAVE_QUEUE_KIND_BREAK_MULTI = 5
+        private constant integer WAVE_QUEUE_KIND_WAVE_FINISHER = 6
         private constant real WAVE_DEFAULT_MULTI_WINDOW = 5.00
         private constant real WAVE_DEFAULT_QUEUE_GAP = 1.30 
 
@@ -19,6 +20,7 @@ library WaveStreaks initializer Init requires Table, TimerUtils, PlayerUtils, Wa
         private constant string WAVE_DEFAULT_SOUND_STREAK_BREAK = "war3mapImported\\RDK_RompeRacha.mp3"
         private constant string WAVE_DEFAULT_SOUND_MULTI_BREAK_LOW = "war3mapImported\\RDK_RompeCombo1.mp3"
         private constant string WAVE_DEFAULT_SOUND_MULTI_BREAK_HIGH = "war3mapImported\\RDK_RompeCombo2.mp3"
+        private constant string WAVE_DEFAULT_SOUND_WAVE_FINISHER = "war3mapImported\\te matee.wav"
 
         private constant string WAVE_DEFAULT_SOUND_STREAK_1 = "war3mapImported\\announcer_kill_spree_01.mp3"
         private constant string WAVE_DEFAULT_SOUND_STREAK_2 = "war3mapImported\\announcer_kill_dominate_01.mp3"
@@ -35,6 +37,7 @@ library WaveStreaks initializer Init requires Table, TimerUtils, PlayerUtils, Wa
         private constant string WAVE_DEFAULT_SOUND_MULTI_4 = "war3mapImported\\announcer_kill_rampage_01.mp3"
 
         private Table WaveFirstBloodDoneByWave
+        private Table WaveFinisherDoneByWave
 
         private integer array WavePlayerStreakKills
         private integer array WavePlayerMultiKills
@@ -55,6 +58,7 @@ library WaveStreaks initializer Init requires Table, TimerUtils, PlayerUtils, Wa
         private string WaveStreakBreakSoundPath = ""
         private string WaveMultiBreakLowSoundPath = ""
         private string WaveMultiBreakHighSoundPath = ""
+        private string WaveFinisherSoundPath = ""
 
         private real WaveMultiKillWindowSec = WAVE_DEFAULT_MULTI_WINDOW
         private real WaveQueueGapSec = WAVE_DEFAULT_QUEUE_GAP
@@ -368,6 +372,11 @@ library WaveStreaks initializer Init requires Table, TimerUtils, PlayerUtils, Wa
         call WaveQueuePushTyped(WaveStreakFirstBloodSoundPath, WaveGetPlayerNameColoredById(pid) + " |cffff3333FIRST BLOOD|r (Wave " + I2S(waveId) + ")", WAVE_QUEUE_KIND_FIRST_BLOOD, pid)
     endfunction
 
+    private function WaveQueueFinisher takes integer pid, integer waveId returns nothing
+        call WaveQueuePushTyped(WaveFinisherSoundPath, WaveGetPlayerNameColoredById(pid) + " |cff33ff66termino la Wave " + I2S(waveId) + "|r matando al ultimo enemigo", WAVE_QUEUE_KIND_WAVE_FINISHER, pid)
+        set WaveQueueCooldown = 0.00
+    endfunction
+
     private function WaveQueueStreakTier takes integer pid, integer tier, integer kills returns nothing
         call WaveQueueDropPendingByKindAndPid(WAVE_QUEUE_KIND_STREAK, pid)
         call WaveQueuePushTyped(WaveStreakKillSoundPath[tier], WaveGetPlayerNameColoredById(pid) + " |cffffff00" + WaveGetStreakTierName(tier) + "|r (" + WaveFormatKillUnits(kills) + ")", WAVE_QUEUE_KIND_STREAK, pid)
@@ -396,6 +405,7 @@ library WaveStreaks initializer Init requires Table, TimerUtils, PlayerUtils, Wa
         local Wave w = GetWaveEventWave()
         if w != 0 then
             set WaveFirstBloodDoneByWave[w] = 0
+            set WaveFinisherDoneByWave[w] = 0
         endif
     endfunction
 
@@ -403,6 +413,9 @@ library WaveStreaks initializer Init requires Table, TimerUtils, PlayerUtils, Wa
         local Wave w = GetWaveEventWave()
         if w != 0 and WaveFirstBloodDoneByWave.has(w) then
             call WaveFirstBloodDoneByWave.remove(w)
+        endif
+        if w != 0 and WaveFinisherDoneByWave.has(w) then
+            call WaveFinisherDoneByWave.remove(w)
         endif
     endfunction
 
@@ -454,12 +467,17 @@ library WaveStreaks initializer Init requires Table, TimerUtils, PlayerUtils, Wa
         if pid < 0 then
             return
         endif
+        call PrisonerDropTrySpawnForPid(dead, pid)
 
-        // First Blood por wave (solo héroe -> wave).
+        // First Blood por wave (solo heroe -> wave).
         if waveId != 0 then
             if (not WaveFirstBloodDoneByWave.has(waveId)) or WaveFirstBloodDoneByWave[waveId] == 0 then
                 set WaveFirstBloodDoneByWave[waveId] = 1
                 call WaveQueueFirstBlood(pid, waveId)
+            endif
+            if w.getToKillRemaining() <= 0 and ((not WaveFinisherDoneByWave.has(waveId)) or WaveFinisherDoneByWave[waveId] == 0) then
+                set WaveFinisherDoneByWave[waveId] = 1
+                call WaveQueueFinisher(pid, waveId)
             endif
         endif
 
@@ -614,6 +632,10 @@ library WaveStreaks initializer Init requires Table, TimerUtils, PlayerUtils, Wa
         set WaveMultiBreakHighSoundPath = path
     endfunction
 
+    function SetWaveStreakFinisherSound takes string path returns nothing
+        set WaveFinisherSoundPath = path
+    endfunction
+
     function SetWaveStreakKillStreakThreshold takes integer tier, integer kills returns nothing
         if tier < 1 or tier > WAVE_STREAK_MAX_TIERS then
             return
@@ -669,6 +691,7 @@ library WaveStreaks initializer Init requires Table, TimerUtils, PlayerUtils, Wa
         call SetWaveStreakBreakSound(WAVE_DEFAULT_SOUND_STREAK_BREAK)
         call SetWaveStreakMultiBreakLowSound(WAVE_DEFAULT_SOUND_MULTI_BREAK_LOW)
         call SetWaveStreakMultiBreakHighSound(WAVE_DEFAULT_SOUND_MULTI_BREAK_HIGH)
+        call SetWaveStreakFinisherSound(WAVE_DEFAULT_SOUND_WAVE_FINISHER)
 
         // Kill Streak (8 escalones)
         call SetWaveStreakKillStreakSound(1, WAVE_DEFAULT_SOUND_STREAK_1)
@@ -696,6 +719,7 @@ library WaveStreaks initializer Init requires Table, TimerUtils, PlayerUtils, Wa
         local integer i = 0
 
         set WaveFirstBloodDoneByWave = Table.create()
+        set WaveFinisherDoneByWave = Table.create()
         set WaveClockTimer = NewTimer()
         set WaveQueueTimer = NewTimer()
         call SetTimerDebugTag(WaveClockTimer, TIMER_DEBUG_TAG_WAVE_CORE)

@@ -20,7 +20,12 @@
       "symbolName": "casterFx1",
       "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
       "content": "\n```jass\neffect array casterFx1\n```\n\n\n---\n\nFX arrays\n\n**文件:** `MyMissiles/Loadout LeapMissile.j`"
+    },
+    {
+      "symbolName": "GetLoadoutLeapMissileMoveCastDuration",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout LeapMissile.j",
+      "content": "\n```jass\nfunction GetLoadoutLeapMissileMoveCastDuration takes nothing returns real\n```\n\n\n**文件:** `MyMissiles/Loadout LeapMissile.j`"
     }
   ],
-  "timestamp": 1777049362522
+  "timestamp": 1777316509218
 }

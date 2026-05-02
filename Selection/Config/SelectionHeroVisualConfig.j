@@ -1,4 +1,4 @@
-library SelectionHeroVisualConfig requires PlayerMissileLoadout
+library SelectionHeroVisualConfig requires PlayerMissileLoadout, WeaponProfileConfig, WeaponSelectionSystem
 
     function SelectionSetupHeroVisual takes integer heroId, player p returns nothing
         local string dummyFx1 = ""
@@ -26,8 +26,9 @@ library SelectionHeroVisualConfig requires PlayerMissileLoadout
         call SetPlayerOrbLevel(p, 1)
         call SetPlayerMissileHealOnHit(p, 0.00)
         call SetPlayerPointsOfMana(p, 1)
-        call SetPlayerMissileDamageValue(p, 0.50)
+        call SetPlayerMissileDamageValue(p, WeaponProfileGetDamage(WEAPON_PROFILE_HANDGUN))
         call SetPlayerMissileUseRapidFire(p, true)
+        call EnsurePlayerDefaultWeaponProfile(p)
     endfunction
 
 endlibrary

@@ -1,0 +1,15 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\Selection\\Config\\SelectionElementConfig.j",
+  "items": [
+    {
+      "label": "SelectionSetupElement",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SelectionSetupElement takes integer elementId, player p, unit hero returns nothing\n```\n\n\n**_>:** `Selection/Config/SelectionElementConfig.j`",
+      "sortText": "1_func_SelectionSetupElement",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Selection\\Config\\SelectionElementConfig.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1777579694744
+}

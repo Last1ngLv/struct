@@ -65,7 +65,12 @@
       "symbolName": "AI_BOSS_REINFORCEMENT_TEXT_LIFESPAN",
       "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
       "content": "\n```jass\nconstant real AI_BOSS_REINFORCEMENT_TEXT_LIFESPAN\n```\n\n\n**文件:** `WaveSysAnAI/AI/IAManager.j`"
+    },
+    {
+      "symbolName": "profileId",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
+      "content": "\n```jass\ninteger profileId\n```\n\n\n**所属:** `AIBossReinforcementCast`\n**文件:** `WaveSysAnAI/AI/IAManager.j`"
     }
   ],
-  "timestamp": 1776650023076
+  "timestamp": 1777315226986
 }

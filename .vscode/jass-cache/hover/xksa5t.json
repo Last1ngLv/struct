@@ -315,7 +315,22 @@
       "symbolName": "onRightClick",
       "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UserInterface.j",
       "content": "\n```jass\nfilterfunc onRightClick\n```\n\n\n**所属:** `UIButton`\n**文件:** `libraries/UserInterface.j`"
+    },
+    {
+      "symbolName": "UIText",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UserInterface.j",
+      "content": "\n```jass\nstruct UIText\n```\n\n\n**文件:** `libraries/UserInterface.j`"
+    },
+    {
+      "symbolName": "setTexture",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UserInterface.j",
+      "content": "\n```jass\nmethod setTexture takes integer texture returns nothing\n```\n\n\n**所属:** `UIButton`\n**文件:** `libraries/UserInterface.j`"
+    },
+    {
+      "symbolName": "setTexture",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\UserInterface.j",
+      "content": "\n```jass\nmethod setTexture takes integer texture returns nothing\n```\n\n\n**所属:** `UIPicture`\n**文件:** `libraries/UserInterface.j`"
     }
   ],
-  "timestamp": 1776566547882
+  "timestamp": 1777123856495
 }

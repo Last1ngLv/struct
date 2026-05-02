@@ -1,0 +1,15 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\Selection\\Config\\SelectionHeroVisualConfig.j",
+  "items": [
+    {
+      "label": "SelectionSetupHeroVisual",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction SelectionSetupHeroVisual takes integer heroId, player p returns nothing\n```\n\n\n**_>:** `Selection/Config/SelectionHeroVisualConfig.j`",
+      "sortText": "1_func_SelectionSetupHeroVisual",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Selection\\Config\\SelectionHeroVisualConfig.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1777579694744
+}

@@ -1,0 +1,11 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeCountdown.j",
+  "items": [
+    {
+      "symbolName": "RestTimeLaunchCurrentWave",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeCountdown.j",
+      "content": "\n```jass\nfunction RestTimeLaunchCurrentWave takes nothing returns nothing\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/RestTime/RestTimeCountdown.j`"
+    }
+  ],
+  "timestamp": 1777597221926
+}

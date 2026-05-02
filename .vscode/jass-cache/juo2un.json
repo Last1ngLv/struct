@@ -47,33 +47,6 @@
       "statementType": "VariableDeclaration"
     },
     {
-      "label": "WaveEnemyPreviewFx",
-      "kind": 5,
-      "detail": "Global Variable",
-      "documentation": "\n```jass\neffect array WaveEnemyPreviewFx\n```\n\n\n**_>:** `UI System/MyIU/MenuClient.j`",
-      "sortText": "2_var_WaveEnemyPreviewFx",
-      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
-      "statementType": "VariableDeclaration"
-    },
-    {
-      "label": "WaveEnemyPreviewWaveId",
-      "kind": 5,
-      "detail": "Global Variable",
-      "documentation": "\n```jass\ninteger array WaveEnemyPreviewWaveId\n```\n\n\n**_>:** `UI System/MyIU/MenuClient.j`",
-      "sortText": "2_var_WaveEnemyPreviewWaveId",
-      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
-      "statementType": "VariableDeclaration"
-    },
-    {
-      "label": "WaveEnemyPreviewModelPath",
-      "kind": 5,
-      "detail": "Global Variable",
-      "documentation": "\n```jass\nstring array WaveEnemyPreviewModelPath\n```\n\n\n**_>:** `UI System/MyIU/MenuClient.j`",
-      "sortText": "2_var_WaveEnemyPreviewModelPath",
-      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
-      "statementType": "VariableDeclaration"
-    },
-    {
       "label": "PlayerMenuCameraHeight",
       "kind": 5,
       "detail": "Global Variable",
@@ -101,20 +74,20 @@
       "statementType": "VariableDeclaration"
     },
     {
+      "label": "WeaponHudLastVersion",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array WeaponHudLastVersion\n```\n\n\n**_>:** `UI System/MyIU/MenuClient.j`",
+      "sortText": "2_var_WeaponHudLastVersion",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
       "label": "HERO_WINDOW_NAME",
       "kind": 2,
       "detail": "Function",
       "documentation": "\n```jass\nfunction HERO_WINDOW_NAME takes unit u returns string\n```\n\n\n**_>:** `UI System/MyIU/MenuClient.j`",
       "sortText": "1_func_HERO_WINDOW_NAME",
-      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
-      "statementType": "FunctionDeclaration"
-    },
-    {
-      "label": "DesignLocalInt",
-      "kind": 2,
-      "detail": "Function",
-      "documentation": "\n```jass\nfunction DesignLocalInt takes integer pid, integer value, integer other returns integer\n```\n\n\n---\n\nVersion local de Inventory.localInt para mostrar solo al jugador local.\n\n**_>:** `UI System/MyIU/MenuClient.j`",
-      "sortText": "1_func_DesignLocalInt",
       "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
       "statementType": "FunctionDeclaration"
     },
@@ -245,47 +218,29 @@
       "statementType": "FunctionDeclaration"
     },
     {
-      "label": "MenuClientGetSlotTooltip",
+      "label": "ExecuteCameraButton",
       "kind": 2,
       "detail": "Function",
-      "documentation": "\n```jass\nfunction MenuClientGetSlotTooltip takes player p, integer slot returns string\n```\n\n\n**_>:** `UI System/MyIU/MenuClient.j`",
-      "sortText": "1_func_MenuClientGetSlotTooltip",
+      "documentation": "\n```jass\nfunction ExecuteCameraButton takes Client client, integer pid, integer slot returns nothing\n```\n\n\n**_>:** `UI System/MyIU/MenuClient.j`",
+      "sortText": "1_func_ExecuteCameraButton",
       "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
       "statementType": "FunctionDeclaration"
     },
     {
-      "label": "MenuClientShowSlotTooltip",
+      "label": "LeftClickCameraButton",
       "kind": 2,
       "detail": "Function",
-      "documentation": "\n```jass\nfunction MenuClientShowSlotTooltip takes UIButton but, player p returns nothing\n```\n\n\n**_>:** `UI System/MyIU/MenuClient.j`",
-      "sortText": "1_func_MenuClientShowSlotTooltip",
+      "documentation": "\n```jass\nfunction LeftClickCameraButton takes nothing returns boolean\n```\n\n\n**_>:** `UI System/MyIU/MenuClient.j`",
+      "sortText": "1_func_LeftClickCameraButton",
       "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
       "statementType": "FunctionDeclaration"
     },
     {
-      "label": "ExecuteMenuSlotAction",
+      "label": "RightClickCameraButton",
       "kind": 2,
       "detail": "Function",
-      "documentation": "\n```jass\nfunction ExecuteMenuSlotAction takes nothing returns boolean\n```\n\n\n**_>:** `UI System/MyIU/MenuClient.j`",
-      "sortText": "1_func_ExecuteMenuSlotAction",
-      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
-      "statementType": "FunctionDeclaration"
-    },
-    {
-      "label": "LClickItemSlot",
-      "kind": 2,
-      "detail": "Function",
-      "documentation": "\n```jass\nfunction LClickItemSlot takes nothing returns boolean\n```\n\n\n**_>:** `UI System/MyIU/MenuClient.j`",
-      "sortText": "1_func_LClickItemSlot",
-      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
-      "statementType": "FunctionDeclaration"
-    },
-    {
-      "label": "RClickItemSlot",
-      "kind": 2,
-      "detail": "Function",
-      "documentation": "\n```jass\nfunction RClickItemSlot takes nothing returns boolean\n```\n\n\n**_>:** `UI System/MyIU/MenuClient.j`",
-      "sortText": "1_func_RClickItemSlot",
+      "documentation": "\n```jass\nfunction RightClickCameraButton takes nothing returns boolean\n```\n\n\n**_>:** `UI System/MyIU/MenuClient.j`",
+      "sortText": "1_func_RightClickCameraButton",
       "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
       "statementType": "FunctionDeclaration"
     },
@@ -299,5 +254,5 @@
       "statementType": "FunctionDeclaration"
     }
   ],
-  "timestamp": 1777095357089
+  "timestamp": 1777581319039
 }

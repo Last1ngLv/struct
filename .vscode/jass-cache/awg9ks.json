@@ -1,0 +1,645 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+  "items": [
+    {
+      "label": "WEAPON_PROFILE_NONE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WEAPON_PROFILE_NONE\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "2_var_WEAPON_PROFILE_NONE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WEAPON_PROFILE_HANDGUN",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WEAPON_PROFILE_HANDGUN\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "2_var_WEAPON_PROFILE_HANDGUN",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WEAPON_PROFILE_PISTOL",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WEAPON_PROFILE_PISTOL\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "2_var_WEAPON_PROFILE_PISTOL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WEAPON_PROFILE_SHOTGUN",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WEAPON_PROFILE_SHOTGUN\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "2_var_WEAPON_PROFILE_SHOTGUN",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WEAPON_PROFILE_HEAVY_MACHINE_GUN",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WEAPON_PROFILE_HEAVY_MACHINE_GUN\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "2_var_WEAPON_PROFILE_HEAVY_MACHINE_GUN",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WEAPON_PROFILE_ASSAULT_RIFLE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WEAPON_PROFILE_ASSAULT_RIFLE\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "2_var_WEAPON_PROFILE_ASSAULT_RIFLE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WEAPON_PROFILE_TWO_MACHINE_GUN",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WEAPON_PROFILE_TWO_MACHINE_GUN\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "2_var_WEAPON_PROFILE_TWO_MACHINE_GUN",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WEAPON_PROFILE_RIFLE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WEAPON_PROFILE_RIFLE\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "2_var_WEAPON_PROFILE_RIFLE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WEAPON_PROFILE_ROCKET_LAUNCHER",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WEAPON_PROFILE_ROCKET_LAUNCHER\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "2_var_WEAPON_PROFILE_ROCKET_LAUNCHER",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WEAPON_PROFILE_PLASMA_AOE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WEAPON_PROFILE_PLASMA_AOE\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "2_var_WEAPON_PROFILE_PLASMA_AOE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WEAPON_PROFILE_ENEMY_CHASER",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WEAPON_PROFILE_ENEMY_CHASER\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "2_var_WEAPON_PROFILE_ENEMY_CHASER",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WEAPON_PROFILE_TRACKING_MISSILE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WEAPON_PROFILE_TRACKING_MISSILE\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "2_var_WEAPON_PROFILE_TRACKING_MISSILE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WEAPON_PROFILE_GRENADE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WEAPON_PROFILE_GRENADE\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "2_var_WEAPON_PROFILE_GRENADE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WEAPON_PROFILE_LASER_GUN",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WEAPON_PROFILE_LASER_GUN\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "2_var_WEAPON_PROFILE_LASER_GUN",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WEAPON_PROFILE_DROP_SHOT",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WEAPON_PROFILE_DROP_SHOT\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "2_var_WEAPON_PROFILE_DROP_SHOT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WEAPON_PROFILE_FLAME_SHOT",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WEAPON_PROFILE_FLAME_SHOT\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "2_var_WEAPON_PROFILE_FLAME_SHOT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WEAPON_PROFILE_IRON_LIZARD",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WEAPON_PROFILE_IRON_LIZARD\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "2_var_WEAPON_PROFILE_IRON_LIZARD",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WEAPON_PROFILE_SUPER_GRENADE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WEAPON_PROFILE_SUPER_GRENADE\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "2_var_WEAPON_PROFILE_SUPER_GRENADE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WEAPON_PROFILE_THUNDER_SHOT",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WEAPON_PROFILE_THUNDER_SHOT\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "2_var_WEAPON_PROFILE_THUNDER_SHOT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WEAPON_PROFILE_LAST",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WEAPON_PROFILE_LAST\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "2_var_WEAPON_PROFILE_LAST",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WEAPON_MODE_SINGLE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WEAPON_MODE_SINGLE\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "2_var_WEAPON_MODE_SINGLE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WEAPON_MODE_BURST",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WEAPON_MODE_BURST\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "2_var_WEAPON_MODE_BURST",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WEAPON_MODE_RAPID",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WEAPON_MODE_RAPID\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "2_var_WEAPON_MODE_RAPID",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WEAPON_MODE_AOE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WEAPON_MODE_AOE\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "2_var_WEAPON_MODE_AOE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WEAPON_MODE_HOMING",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WEAPON_MODE_HOMING\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "2_var_WEAPON_MODE_HOMING",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WEAPON_MODE_DOUBLE_RAPID",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WEAPON_MODE_DOUBLE_RAPID\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "2_var_WEAPON_MODE_DOUBLE_RAPID",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WEAPON_MODE_PIERCING_AOE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WEAPON_MODE_PIERCING_AOE\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "2_var_WEAPON_MODE_PIERCING_AOE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WEAPON_MODE_BOUNCE_AOE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WEAPON_MODE_BOUNCE_AOE\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "2_var_WEAPON_MODE_BOUNCE_AOE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WEAPON_MODE_CHAINING_HOMING",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WEAPON_MODE_CHAINING_HOMING\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "2_var_WEAPON_MODE_CHAINING_HOMING",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WEAPON_BEHAVIOR_STRAIGHT",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WEAPON_BEHAVIOR_STRAIGHT\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "2_var_WEAPON_BEHAVIOR_STRAIGHT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WEAPON_BEHAVIOR_DOUBLE_STRAIGHT",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WEAPON_BEHAVIOR_DOUBLE_STRAIGHT\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "2_var_WEAPON_BEHAVIOR_DOUBLE_STRAIGHT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WEAPON_BEHAVIOR_STRAIGHT_AOE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WEAPON_BEHAVIOR_STRAIGHT_AOE\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "2_var_WEAPON_BEHAVIOR_STRAIGHT_AOE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WEAPON_BEHAVIOR_HOMING",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WEAPON_BEHAVIOR_HOMING\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "2_var_WEAPON_BEHAVIOR_HOMING",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WEAPON_BEHAVIOR_PIERCING_AOE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WEAPON_BEHAVIOR_PIERCING_AOE\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "2_var_WEAPON_BEHAVIOR_PIERCING_AOE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WEAPON_BEHAVIOR_DROP_BOUNCE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WEAPON_BEHAVIOR_DROP_BOUNCE\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "2_var_WEAPON_BEHAVIOR_DROP_BOUNCE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WEAPON_BEHAVIOR_BILLIARD_BOUNCE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WEAPON_BEHAVIOR_BILLIARD_BOUNCE\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "2_var_WEAPON_BEHAVIOR_BILLIARD_BOUNCE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WEAPON_BEHAVIOR_CHAINING_HOMING",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WEAPON_BEHAVIOR_CHAINING_HOMING\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "2_var_WEAPON_BEHAVIOR_CHAINING_HOMING",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WEAPON_AMMO_INFINITE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WEAPON_AMMO_INFINITE\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "2_var_WEAPON_AMMO_INFINITE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WEAPON_INVENTORY_FIRE_ABILITY",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WEAPON_INVENTORY_FIRE_ABILITY\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "2_var_WEAPON_INVENTORY_FIRE_ABILITY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WEAPON_INVENTORY_SELECT_SLOT_1_ABILITY",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WEAPON_INVENTORY_SELECT_SLOT_1_ABILITY\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "2_var_WEAPON_INVENTORY_SELECT_SLOT_1_ABILITY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WEAPON_INVENTORY_SELECT_SLOT_2_ABILITY",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WEAPON_INVENTORY_SELECT_SLOT_2_ABILITY\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "2_var_WEAPON_INVENTORY_SELECT_SLOT_2_ABILITY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WEAPON_PRISONER_UNIT_TYPE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WEAPON_PRISONER_UNIT_TYPE\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "2_var_WEAPON_PRISONER_UNIT_TYPE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WeaponProfileIsWeapon",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WeaponProfileIsWeapon takes integer profileId returns boolean\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "1_func_WeaponProfileIsWeapon",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WeaponProfileGetMode",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WeaponProfileGetMode takes integer profileId returns integer\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "1_func_WeaponProfileGetMode",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WeaponProfileGetBehavior",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WeaponProfileGetBehavior takes integer profileId returns integer\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "1_func_WeaponProfileGetBehavior",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WeaponProfileGetSelectorAbility",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WeaponProfileGetSelectorAbility takes integer profileId returns integer\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "1_func_WeaponProfileGetSelectorAbility",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WeaponProfileGetFireAbility",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WeaponProfileGetFireAbility takes integer profileId returns integer\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "1_func_WeaponProfileGetFireAbility",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WeaponProfileFromSelectorAbility",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WeaponProfileFromSelectorAbility takes integer abilityId returns integer\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "1_func_WeaponProfileFromSelectorAbility",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WeaponProfileFromFireAbility",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WeaponProfileFromFireAbility takes integer abilityId returns integer\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "1_func_WeaponProfileFromFireAbility",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WeaponProfileGetTexture",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WeaponProfileGetTexture takes integer profileId returns integer\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "1_func_WeaponProfileGetTexture",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WeaponProfileGetName",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WeaponProfileGetName takes integer profileId returns string\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "1_func_WeaponProfileGetName",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WeaponProfileGetRole",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WeaponProfileGetRole takes integer profileId returns string\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "1_func_WeaponProfileGetRole",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WeaponProfileGetDamage",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WeaponProfileGetDamage takes integer profileId returns real\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "1_func_WeaponProfileGetDamage",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WeaponProfileGetCastDuration",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WeaponProfileGetCastDuration takes integer profileId returns real\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "1_func_WeaponProfileGetCastDuration",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WeaponProfileGetCastCount",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WeaponProfileGetCastCount takes integer profileId returns integer\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "1_func_WeaponProfileGetCastCount",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WeaponProfileGetShotsPerSecond",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WeaponProfileGetShotsPerSecond takes integer profileId returns integer\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "1_func_WeaponProfileGetShotsPerSecond",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WeaponProfileGetInterval",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WeaponProfileGetInterval takes integer profileId returns real\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "1_func_WeaponProfileGetInterval",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WeaponProfileGetRange",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WeaponProfileGetRange takes integer profileId returns real\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "1_func_WeaponProfileGetRange",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WeaponProfileGetProjectileCount",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WeaponProfileGetProjectileCount takes integer profileId returns integer\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "1_func_WeaponProfileGetProjectileCount",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WeaponProfileGetArea",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WeaponProfileGetArea takes integer profileId returns real\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "1_func_WeaponProfileGetArea",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WeaponProfileGetCost",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WeaponProfileGetCost takes integer profileId returns integer\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "1_func_WeaponProfileGetCost",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WeaponProfileGetDefaultAmmo",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WeaponProfileGetDefaultAmmo takes integer profileId returns integer\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "1_func_WeaponProfileGetDefaultAmmo",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WeaponProfileGetPickupUnitType",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WeaponProfileGetPickupUnitType takes integer profileId returns integer\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "1_func_WeaponProfileGetPickupUnitType",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WeaponProfileFromPickupUnitType",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WeaponProfileFromPickupUnitType takes integer unitTypeId returns integer\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "1_func_WeaponProfileFromPickupUnitType",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WeaponProfileGetMissileModel",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WeaponProfileGetMissileModel takes integer profileId returns string\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "1_func_WeaponProfileGetMissileModel",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WeaponProfileGetTierMissileModel",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WeaponProfileGetTierMissileModel takes integer profileId, integer tier returns string\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "1_func_WeaponProfileGetTierMissileModel",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WeaponProfileGetMissileScale",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WeaponProfileGetMissileScale takes integer profileId returns real\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "1_func_WeaponProfileGetMissileScale",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WeaponProfileGetMissileSpeed",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WeaponProfileGetMissileSpeed takes integer profileId returns real\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "1_func_WeaponProfileGetMissileSpeed",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WeaponProfileGetAcceleration",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WeaponProfileGetAcceleration takes integer profileId returns real\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "1_func_WeaponProfileGetAcceleration",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WeaponProfileGetDescription",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WeaponProfileGetDescription takes integer profileId returns string\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "1_func_WeaponProfileGetDescription",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WeaponProfileGetDetailText",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WeaponProfileGetDetailText takes integer profileId returns string\n```\n\n\n**_>:** `MyMissiles/Config/WeaponProfileConfig.j`",
+      "sortText": "1_func_WeaponProfileGetDetailText",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1777595252093
+}

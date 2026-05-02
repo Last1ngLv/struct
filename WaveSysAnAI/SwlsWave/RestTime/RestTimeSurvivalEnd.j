@@ -1,4 +1,4 @@
-library RestTimeSurvivalEnd requires PlayerUtils, RestTimeState, RestTimeAudio, RestTimeTenderAudio, RestTimeUI
+library RestTimeSurvivalEnd requires PlayerUtils, RestTimeState, RestTimeAudio, RestTimeUI
 
     function RestTimeCompleteSurvivalEndSequence takes nothing returns nothing
         local integer i = 0
@@ -33,8 +33,6 @@ library RestTimeSurvivalEnd requires PlayerUtils, RestTimeState, RestTimeAudio, 
         if RestPhaseTimer != null then
             call PauseTimer(RestPhaseTimer)
         endif
-        call RestTimeTenderAudioStop()
-        call StopAmbientTownSound()
         call BJDebugMsg("|cff66ff66Superaste las 10 waves|r")
         call RestTimeSetBoardTitle("|cFF66FF66Superaste las 10 waves|r")
         call RestTimeSetStatusForActivePlayers("|cff66ff66Superaste las 10 waves|r")

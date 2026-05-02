@@ -1,19 +1,21 @@
-﻿//===========================================================================
+//===========================================================================
 //
-//  MovementSystem v1 - SIMPLE FOLLOW WITH CAST SESSION
-//  - smart/move stores or retargets the dummy path
-//  - registered spell casts refresh aim and session duration
-//  - smart during follow consumes recast charges
-//  - no manual facing; the native dummy order keeps orientation behavior
+//  MovementSystem v2 - DIRECT HERO MOVECAST
+//  - no dummy follower
+//  - registered spell casts open/refresh a fixed 1s move-cast session
+//  - move/smart during the session redirects the hero manually
+//  - smart recasts can re-issue the last registered spell while moving
 //
 //===========================================================================
-library MovementSystem initializer Init requires TimerUtils, Table, RegisterPlayerUnitEvent, TextTagDebug
+library MovementSystem initializer Init requires TimerUtils, Table, RegisterPlayerUnitEvent, TextTagDebug, TerrainPathability
 
 globals
     private constant real INTERVAL = 0.03125
+    private constant real MOVECAST_SESSION_DURATION = 1.00
     private constant real ARRIVAL_THRESHOLD = 50.0
     private constant real ARRIVAL_THRESHOLD_SQ = ARRIVAL_THRESHOLD * ARRIVAL_THRESHOLD
-    private constant integer DUMMY_UNIT_ID = 'h003'
+    private constant real SMART_POINT_TOLERANCE = 128.0
+    private constant real SMART_POINT_TOLERANCE_SQ = SMART_POINT_TOLERANCE * SMART_POINT_TOLERANCE
     private constant integer LOADOUT_LEAP_SPELL_ID = 'U0A2'
     private constant integer LEAP_BUFF_ID = 'BB01'
     private constant integer MAX_MOVECAST_PLAYER_ID = 7
@@ -29,9 +31,7 @@ globals
     private constant real CAST_TEXT_RISE_SPEED = 0.035
 
     private Table registeredAbilityFlags
-    private Table registeredOrderFlags
     private Table registeredOrderByAbility
-    private Table castDurationByAbility
     private Table smartRecastEnabledByAbility
     private Table smartRecastCountByAbility
     private integer ORDER_ID_MOVE
@@ -81,10 +81,13 @@ private function IsMoveCastTrackedUnit takes unit u returns boolean
     return true
 endfunction
 
+private function DistanceSq takes real ax, real ay, real bx, real by returns real
+    return (ax - bx) * (ax - bx) + (ay - by) * (ay - by)
+endfunction
+
 struct MovementData
     unit source
-    unit dummy
-    timer followTim
+    timer moveTim
     timer sessionTim
     timer pulseTim
     texttag castText
@@ -93,21 +96,24 @@ struct MovementData
     boolean hasLastSmart
     real moveX
     real moveY
+    boolean hasMovePoint
     real aimX
     real aimY
-    boolean hasMovePoint
     boolean hasAimPoint
     integer lastCastAbilityId
     integer lastCastOrderId
     unit lastCastTargetUnit
-    boolean isFollowing
+    boolean isMoving
     boolean sessionActive
     boolean isDestroying
-    real sessionDuration
     real sessionRemaining
     integer recastsLeft
 
     private static Table table
+
+    static method init takes nothing returns nothing
+        set table = Table.create()
+    endmethod
 
     static method create takes unit u returns thistype
         local thistype this = thistype.allocate()
@@ -117,8 +123,7 @@ struct MovementData
         endif
 
         set .source = u
-        set .dummy = null
-        set .followTim = null
+        set .moveTim = null
         set .sessionTim = null
         set .pulseTim = null
         set .castText = null
@@ -127,17 +132,16 @@ struct MovementData
         set .hasLastSmart = false
         set .moveX = 0.
         set .moveY = 0.
+        set .hasMovePoint = false
         set .aimX = 0.
         set .aimY = 0.
-        set .hasMovePoint = false
         set .hasAimPoint = false
         set .lastCastAbilityId = 0
         set .lastCastOrderId = 0
         set .lastCastTargetUnit = null
-        set .isFollowing = false
+        set .isMoving = false
         set .sessionActive = false
         set .isDestroying = false
-        set .sessionDuration = 0.
         set .sessionRemaining = 0.
         set .recastsLeft = 0
 
@@ -146,15 +150,18 @@ struct MovementData
     endmethod
 
     static method has takes unit u returns boolean
-        return table.has(GetHandleId(u))
+        return (u != null) and table.has(GetHandleId(u))
     endmethod
 
     static method get takes unit u returns thistype
+        if u == null then
+            return 0
+        endif
         return table[GetHandleId(u)]
     endmethod
 
     static method forget takes unit u returns nothing
-        if (u != null) and (GetUnitTypeId(u) != 0) then
+        if u != null then
             call table.remove(GetHandleId(u))
         endif
     endmethod
@@ -200,41 +207,16 @@ struct MovementData
         endif
     endmethod
 
-    private method ensureDummy takes nothing returns boolean
-        local real sx
-        local real sy
-
-        if (.source == null) or (GetUnitTypeId(.source) == 0) or (not UnitAlive(.source)) then
-            return false
-        endif
-
-        if (.dummy != null) and (GetUnitTypeId(.dummy) != 0) then
-            return true
-        endif
-
-        set sx = GetUnitX(.source)
-        set sy = GetUnitY(.source)
-        set .dummy = CreateUnit(Player(PLAYER_NEUTRAL_PASSIVE), DUMMY_UNIT_ID, sx, sy, 0)
-        call SetUnitInvulnerable(.dummy, true)
-        call SetUnitPathing(.dummy, true)
-        call ShowUnit(.dummy, false)
-        return (.dummy != null) and (GetUnitTypeId(.dummy) != 0)
-    endmethod
-
-    private method ensureFollowTimer takes nothing returns nothing
-        if .followTim == null then
-            set .followTim = NewTimerEx(this)
-            call SetTimerDebugTag(.followTim, TIMER_DEBUG_TAG_MOVECAST)
-            call TimerStart(.followTim, INTERVAL, true, function thistype.onFollowTick)
+    private method ensureMoveTimer takes nothing returns nothing
+        if .moveTim == null then
+            set .moveTim = NewTimerEx(this)
+            call SetTimerDebugTag(.moveTim, TIMER_DEBUG_TAG_MOVECAST)
+            call TimerStart(.moveTim, INTERVAL, true, function thistype.onMoveTick)
         endif
     endmethod
 
     private method ensureSessionTimer takes nothing returns nothing
-        if .sessionTim != null then
-            call ReleaseTimer(.sessionTim)
-            set .sessionTim = null
-        endif
-        if .sessionDuration > 0. then
+        if .sessionTim == null then
             set .sessionTim = NewTimerEx(this)
             call SetTimerDebugTag(.sessionTim, TIMER_DEBUG_TAG_MOVECAST)
             call TimerStart(.sessionTim, INTERVAL, true, function thistype.onSessionTick)
@@ -263,19 +245,26 @@ struct MovementData
         set .hasAimPoint = true
     endmethod
 
-    method applyMovePoint takes real x, real y, boolean queueAimPulse returns nothing
-        set .moveX = x
-        set .moveY = y
-        set .hasMovePoint = true
-        set .isFollowing = true
+    method isPointTooClose takes real x, real y returns boolean
+        if (.source == null) or (GetUnitTypeId(.source) == 0) then
+            return true
+        endif
+        return DistanceSq(GetUnitX(.source), GetUnitY(.source), x, y) <= SMART_POINT_TOLERANCE_SQ
+    endmethod
 
-        if not .ensureDummy() then
+    method applyMovePoint takes real x, real y, boolean queueAimPulse returns nothing
+        if .isPointTooClose(x, y) then
+            call .rememberPoint(x, y)
             return
         endif
 
+        set .moveX = x
+        set .moveY = y
+        set .hasMovePoint = true
+        set .isMoving = true
+
         call IssueImmediateOrderById(.source, ORDER_ID_STOP)
-        call IssuePointOrder(.dummy, "move", .moveX, .moveY)
-        call .ensureFollowTimer()
+        call .ensureMoveTimer()
 
         if queueAimPulse then
             call .queuePulse()
@@ -285,22 +274,16 @@ struct MovementData
     endmethod
 
     method beginOrRefreshSession takes integer abilityId returns nothing
-        local real duration = 0.
         local integer maxRecasts = 0
         local boolean allowSmart = false
         local boolean freshSession = not .sessionActive
-        local string activeStr = "0"
         local string freshStr = "0"
         local string smartStr = "0"
 
-        if .sessionActive then
-            set activeStr = "1"
-        endif
         if freshSession then
             set freshStr = "1"
         endif
 
-        set duration = castDurationByAbility.real[abilityId]
         set allowSmart = smartRecastEnabledByAbility.boolean[abilityId]
         set maxRecasts = R2I(smartRecastCountByAbility.real[abilityId])
         if allowSmart then
@@ -308,22 +291,17 @@ struct MovementData
         endif
 
         static if DEBUG_MODE then
-            call BJDebugMsg("[MoveCast] begin ability=" + I2S(abilityId) + " active=" + activeStr + " fresh=" + freshStr + " duration=" + R2S(duration) + " allowSmart=" + smartStr + " maxRecasts=" + I2S(maxRecasts))
+            call BJDebugMsg("[MoveCast] begin ability=" + I2S(abilityId) + " fresh=" + freshStr + " duration=" + R2S(MOVECAST_SESSION_DURATION) + " allowSmart=" + smartStr + " maxRecasts=" + I2S(maxRecasts))
         endif
 
         set .sessionActive = true
-        set .sessionDuration = duration
-        set .sessionRemaining = duration
+        set .sessionRemaining = MOVECAST_SESSION_DURATION
         if freshSession then
             if allowSmart and (maxRecasts > 0) then
                 set .recastsLeft = maxRecasts
             else
                 set .recastsLeft = 0
             endif
-        endif
-
-        static if DEBUG_MODE then
-            call BJDebugMsg("[MoveCast] loaded ability=" + I2S(abilityId) + " recastsLeft=" + I2S(.recastsLeft))
         endif
 
         call .ensureSessionTimer()
@@ -333,19 +311,20 @@ struct MovementData
     method consumeSmartRecast takes nothing returns nothing
         if .recastsLeft > 0 then
             set .recastsLeft = .recastsLeft - 1
+            set .sessionRemaining = MOVECAST_SESSION_DURATION
             call .refreshCastTextTag()
         endif
     endmethod
 
     method refreshSessionDuration takes nothing returns nothing
         if .sessionActive then
-            set .sessionRemaining = .sessionDuration
+            set .sessionRemaining = MOVECAST_SESSION_DURATION
             call .refreshCastTextTag()
         endif
     endmethod
 
-    method startFollowToStoredPoint takes nothing returns nothing
-        if .isFollowing then
+    method startMoveToStoredPoint takes nothing returns nothing
+        if .isMoving then
             return
         endif
 
@@ -356,19 +335,12 @@ struct MovementData
         call .applyMovePoint(.lastSmartX, .lastSmartY, false)
     endmethod
 
-    private method stopFollow takes nothing returns nothing
-        if .followTim != null then
-            call ReleaseTimer(.followTim)
-            set .followTim = null
+    private method stopMovement takes nothing returns nothing
+        if .moveTim != null then
+            call ReleaseTimer(.moveTim)
+            set .moveTim = null
         endif
-
-        if (.dummy != null) and (GetUnitTypeId(.dummy) != 0) then
-            call RemoveUnit(.dummy)
-        endif
-
-        set .dummy = null
-        set .lastCastTargetUnit = null
-        set .isFollowing = false
+        set .isMoving = false
         set .hasMovePoint = false
     endmethod
 
@@ -383,11 +355,10 @@ struct MovementData
             set .pulseTim = null
         endif
 
-        call .stopFollow()
+        call .stopMovement()
         call .releaseCastTextTag()
 
         set .sessionActive = false
-        set .sessionDuration = 0.
         set .sessionRemaining = 0.
         set .recastsLeft = 0
         set .hasAimPoint = false
@@ -398,15 +369,13 @@ struct MovementData
 
     private method endSessionAndRestoreMovement takes nothing returns nothing
         local unit u = .source
-        local boolean hadFollow = .isFollowing and .hasMovePoint
+        local boolean hadMove = .isMoving and .hasMovePoint
         local real targetX = .moveX
         local real targetY = .moveY
-        local real dx
-        local real dy
 
         call .endSession()
 
-        if (not hadFollow) or (u == null) or (GetUnitTypeId(u) == 0) or (not UnitAlive(u)) then
+        if (not hadMove) or (u == null) or (GetUnitTypeId(u) == 0) or (not UnitAlive(u)) then
             set u = null
             return
         endif
@@ -416,13 +385,18 @@ struct MovementData
             return
         endif
 
-        set dx = targetX - GetUnitX(u)
-        set dy = targetY - GetUnitY(u)
-        if dx * dx + dy * dy > ARRIVAL_THRESHOLD_SQ then
+        if DistanceSq(GetUnitX(u), GetUnitY(u), targetX, targetY) > SMART_POINT_TOLERANCE_SQ then
             call IssuePointOrder(u, "smart", targetX, targetY)
         endif
 
         set u = null
+    endmethod
+
+    private method endSessionByCollision takes nothing returns nothing
+        call .endSession()
+        if (.source != null) and (GetUnitTypeId(.source) != 0) and UnitAlive(.source) then
+            call IssueImmediateOrderById(.source, ORDER_ID_STOP)
+        endif
     endmethod
 
     method destroy takes nothing returns nothing
@@ -431,34 +405,40 @@ struct MovementData
         if .isDestroying then
             return
         endif
-
         set .isDestroying = true
         set u = .source
 
-        if u != null then
-            call table.remove(GetHandleId(u))
-        endif
-
         call .endSession()
+        call thistype.forget(u)
+
         set .source = null
-        set u = null
+        set .lastCastTargetUnit = null
         set .hasLastSmart = false
+        set .isDestroying = false
         call .deallocate()
+
+        set u = null
     endmethod
 
-    private static method onFollowTick takes nothing returns nothing
+    private static method onMoveTick takes nothing returns nothing
         local timer t = GetExpiredTimer()
         local thistype this = GetTimerData(t)
+        local real sx
+        local real sy
         local real dx
         local real dy
         local real distSq
+        local real dist
+        local real step
+        local real nx
+        local real ny
 
         if this == 0 then
             set t = null
             return
         endif
 
-        if .followTim != t then
+        if .moveTim != t then
             set t = null
             return
         endif
@@ -475,23 +455,47 @@ struct MovementData
             return
         endif
 
-        if (.dummy == null) or (GetUnitTypeId(.dummy) == 0) then
-            call .destroy()
+        if (not .sessionActive) or (not .hasMovePoint) then
+            call .stopMovement()
             set t = null
             return
         endif
 
-        set dx = GetUnitX(.dummy)
-        set dy = GetUnitY(.dummy)
-        set distSq = (.moveX - dx) * (.moveX - dx) + (.moveY - dy) * (.moveY - dy)
-
-        call SetUnitX(.source, dx)
-        call SetUnitY(.source, dy)
-        call .syncCastTextTagPosition()
+        set sx = GetUnitX(.source)
+        set sy = GetUnitY(.source)
+        set dx = .moveX - sx
+        set dy = .moveY - sy
+        set distSq = dx * dx + dy * dy
 
         if distSq <= ARRIVAL_THRESHOLD_SQ then
             call .endSession()
+            set t = null
+            return
         endif
+
+        set dist = SquareRoot(distSq)
+        set step = GetUnitMoveSpeed(.source) * INTERVAL
+        if step <= 0. then
+            call .endSessionByCollision()
+            set t = null
+            return
+        endif
+        if step > dist then
+            set step = dist
+        endif
+
+        set nx = sx + dx / dist * step
+        set ny = sy + dy / dist * step
+
+        if not IsTerrainWalkable(nx, ny) then
+            call .endSessionByCollision()
+            set t = null
+            return
+        endif
+
+        call SetUnitX(.source, nx)
+        call SetUnitY(.source, ny)
+        call .syncCastTextTagPosition()
 
         set t = null
     endmethod
@@ -518,12 +522,6 @@ struct MovementData
 
         if IsLeapBuffActive(.source) then
             call .destroy()
-            set t = null
-            return
-        endif
-
-        if .sessionRemaining <= 0. then
-            call .endSessionAndRestoreMovement()
             set t = null
             return
         endif
@@ -567,46 +565,28 @@ struct MovementData
             return
         endif
 
-        if (.dummy == null) or (GetUnitTypeId(.dummy) == 0) then
-            call ReleaseTimer(t)
-            set t = null
-            return
-        endif
-
-        if .sessionActive and .hasAimPoint then
-            if (.lastCastOrderId != 0) then
-                if (.lastCastTargetUnit != null) and (GetUnitTypeId(.lastCastTargetUnit) != 0) and UnitAlive(.lastCastTargetUnit) then
-                    call IssueTargetOrderById(.source, .lastCastOrderId, .lastCastTargetUnit)
-                else
-                    call IssuePointOrderById(.source, .lastCastOrderId, .aimX, .aimY)
-                endif
+        if .sessionActive and .hasAimPoint and (.lastCastOrderId != 0) then
+            if (.lastCastTargetUnit != null) and (GetUnitTypeId(.lastCastTargetUnit) != 0) and UnitAlive(.lastCastTargetUnit) then
+                call IssueTargetOrderById(.source, .lastCastOrderId, .lastCastTargetUnit)
+            else
+                call IssuePointOrderById(.source, .lastCastOrderId, .aimX, .aimY)
             endif
         endif
 
         call ReleaseTimer(t)
         set t = null
     endmethod
-
-    private static method onInit takes nothing returns nothing
-        set table = Table.create()
-    endmethod
 endstruct
 
 private function GetOrCreateMovementData takes unit u returns MovementData
-    local MovementData data = 0
+    local MovementData data
 
     if not IsMoveCastTrackedUnit(u) then
         return 0
     endif
 
     if MovementData.has(u) then
-        set data = MovementData.get(u)
-        if data != 0 then
-            if data.source == u then
-                return data
-            endif
-        endif
-        call MovementData.forget(u)
+        return MovementData.get(u)
     endif
 
     set data = MovementData.create(u)
@@ -616,19 +596,15 @@ endfunction
 private function DestroyMovementDataForUnit takes unit u returns nothing
     local MovementData data
 
-    if (u == null) or (GetUnitTypeId(u) == 0) then
+    if u == null then
         return
     endif
 
     if MovementData.has(u) then
         set data = MovementData.get(u)
         if data != 0 then
-            if data.source == u then
-                call data.destroy()
-                return
-            endif
+            call data.destroy()
         endif
-        call MovementData.forget(u)
     endif
 endfunction
 
@@ -636,7 +612,6 @@ endfunction
 function RegisterMovementSpell takes integer abilityId, string orderId returns nothing
     local integer oid = OrderId(orderId)
     set registeredAbilityFlags.boolean[abilityId] = true
-    set registeredOrderFlags.boolean[oid] = true
     set registeredOrderByAbility.real[abilityId] = I2R(oid)
 endfunction
 
@@ -647,21 +622,15 @@ endfunction
 
 //===========================================================================
 function ConfigureMovementSpellCastSession takes integer abilityId, real castDuration, boolean allowSmartRecast, integer maxSmartRecasts returns nothing
-    local string smartStr = "0"
-    if castDuration < 0. then
-        set castDuration = 0.
-    endif
     if maxSmartRecasts < 0 then
         set maxSmartRecasts = 0
     endif
-    if allowSmartRecast then
-        set smartStr = "1"
-    endif
-    set castDurationByAbility.real[abilityId] = castDuration
+
     set smartRecastEnabledByAbility.boolean[abilityId] = allowSmartRecast
     set smartRecastCountByAbility.real[abilityId] = I2R(maxSmartRecasts)
+
     static if DEBUG_MODE then
-        call BJDebugMsg("[MoveCast] configure ability=" + I2S(abilityId) + " duration=" + R2S(castDuration) + " allowSmart=" + smartStr + " maxRecasts=" + I2S(maxSmartRecasts))
+        call BJDebugMsg("[MoveCast] configure ability=" + I2S(abilityId) + " requestedDuration=" + R2S(castDuration) + " fixedDuration=" + R2S(MOVECAST_SESSION_DURATION) + " maxRecasts=" + I2S(maxSmartRecasts))
     endif
 endfunction
 
@@ -702,6 +671,7 @@ private function OnPointOrder takes nothing returns boolean
             set u = null
             return false
         endif
+
         set x = GetOrderPointX()
         set y = GetOrderPointY()
         set data = GetOrCreateMovementData(u)
@@ -712,18 +682,16 @@ private function OnPointOrder takes nothing returns boolean
 
         if not data.sessionActive then
             call data.rememberPoint(x, y)
+        elseif data.isPointTooClose(x, y) then
+            call data.rememberPoint(x, y)
+        elseif not data.isMoving then
+            call data.applyMovePoint(x, y, false)
+        elseif data.recastsLeft > 0 then
+            call data.consumeSmartRecast()
+            call data.applyMovePoint(x, y, true)
         else
-            if not data.isFollowing then
-                call data.applyMovePoint(x, y, false)
-            else
-                if data.recastsLeft > 0 then
-                    call data.consumeSmartRecast()
-                    call data.applyMovePoint(x, y, true)
-                else
-                    call IssueImmediateOrderById(u, ORDER_ID_STOP)
-                    call data.endSession()
-                endif
-            endif
+            call IssueImmediateOrderById(u, ORDER_ID_STOP)
+            call data.endSession()
         endif
     endif
 
@@ -753,6 +721,7 @@ private function OnTargetOrder takes nothing returns boolean
             set u = null
             return false
         endif
+
         set x = GetUnitX(targetU)
         set y = GetUnitY(targetU)
         set data = GetOrCreateMovementData(u)
@@ -764,18 +733,16 @@ private function OnTargetOrder takes nothing returns boolean
 
         if not data.sessionActive then
             call data.rememberPoint(x, y)
+        elseif data.isPointTooClose(x, y) then
+            call data.rememberPoint(x, y)
+        elseif not data.isMoving then
+            call data.applyMovePoint(x, y, false)
+        elseif data.recastsLeft > 0 then
+            call data.consumeSmartRecast()
+            call data.applyMovePoint(x, y, true)
         else
-            if not data.isFollowing then
-                call data.applyMovePoint(x, y, false)
-            else
-                if data.recastsLeft > 0 then
-                    call data.consumeSmartRecast()
-                    call data.applyMovePoint(x, y, true)
-                else
-                    call IssueImmediateOrderById(u, ORDER_ID_STOP)
-                    call data.endSession()
-                endif
-            endif
+            call IssueImmediateOrderById(u, ORDER_ID_STOP)
+            call data.endSession()
         endif
     endif
 
@@ -833,10 +800,11 @@ private function OnSpellEffect takes nothing returns boolean
             set data.lastCastTargetUnit = targetU
         endif
         call data.setAimPoint(tx, ty)
+        call SetUnitFacing(u, Atan2(ty - GetUnitY(u), tx - GetUnitX(u)) * bj_RADTODEG)
         call data.beginOrRefreshSession(abilityId)
 
-        if (not data.isFollowing) and data.hasLastSmart then
-            call data.startFollowToStoredPoint()
+        if (not data.isMoving) and data.hasLastSmart then
+            call data.startMoveToStoredPoint()
         endif
     endif
 
@@ -848,7 +816,6 @@ endfunction
 //===========================================================================
 private function OnUnitDeath takes nothing returns boolean
     local unit u = GetTriggerUnit()
-
     call DestroyMovementDataForUnit(u)
     set u = null
     return false
@@ -857,23 +824,19 @@ endfunction
 //===========================================================================
 private function Init takes nothing returns nothing
     set registeredAbilityFlags = Table.create()
-    set registeredOrderFlags = Table.create()
     set registeredOrderByAbility = Table.create()
-    set castDurationByAbility = Table.create()
     set smartRecastEnabledByAbility = Table.create()
     set smartRecastCountByAbility = Table.create()
     set ORDER_ID_MOVE = OrderId("move")
     set ORDER_ID_SMART = OrderId("smart")
     set ORDER_ID_STOP = OrderId("stop")
 
+    call MovementData.init()
+
     call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_ISSUED_POINT_ORDER, function OnPointOrder)
     call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_ISSUED_TARGET_ORDER, function OnTargetOrder)
     call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_SPELL_EFFECT, function OnSpellEffect)
     call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_DEATH, function OnUnitDeath)
-
-    static if DEBUG_MODE then
-        call BJDebugMsg("[MovementSystem] initialized")
-    endif
 endfunction
 
 endlibrary

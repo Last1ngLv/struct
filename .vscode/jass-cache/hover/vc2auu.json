@@ -5,7 +5,12 @@
       "symbolName": "GameStateInitDefaults",
       "filePath": "c:\\Users\\Leon\\Documents\\struct\\Core\\GameState.j",
       "content": "\n```jass\nfunction GameStateInitDefaults takes nothing returns nothing\n```\n\n\n**文件:** `Core/GameState.j`"
+    },
+    {
+      "symbolName": "SwlsWaveStartTrigger",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Core\\GameState.j",
+      "content": "\n```jass\ntrigger SwlsWaveStartTrigger\n```\n\n\n**文件:** `Core/GameState.j`"
     }
   ],
-  "timestamp": 1777049258227
+  "timestamp": 1777597704285
 }

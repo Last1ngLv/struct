@@ -1,4 +1,4 @@
-library HeroLives initializer Init requires PlayerUtils, TimerUtils, PreConfi, PlayerHeroState
+library HeroLives initializer Init requires PlayerUtils, TimerUtils, PreConfi, PlayerHeroState, WeaponSelectionSystem, WeaponInventoryCore
 
     globals
         public constant integer HERO_LIVES_BASE = 10
@@ -179,6 +179,7 @@ library HeroLives initializer Init requires PlayerUtils, TimerUtils, PreConfi, P
         if ReviveHero(hero, x, y, true) then
             call SetUnitState(hero, UNIT_STATE_LIFE, GetUnitState(hero, UNIT_STATE_MAX_LIFE))
             call SetUnitState(hero, UNIT_STATE_MANA, GetUnitState(hero, UNIT_STATE_MAX_MANA))
+            call EnsurePlayerDefaultWeaponProfile(Player(pid))
             if HERO_LIVES_REVIVE_FX != "" then
                 set fx = AddSpecialEffect(HERO_LIVES_REVIVE_FX, x, y)
                 call DestroyEffect(fx)
@@ -261,6 +262,7 @@ library HeroLives initializer Init requires PlayerUtils, TimerUtils, PreConfi, P
         set HeroLivesDeathY[pid] = GetUnitY(hero)
         set HeroLivesCurrent[pid] = HeroLivesCurrent[pid] - 1
         set HeroLivesState[pid] = 1
+        call WeaponInventoryResetActiveSlotOnDeath(Player(pid))
 
         if HeroLivesTimer[pid] == null then
             set HeroLivesTimer[pid] = NewTimer()

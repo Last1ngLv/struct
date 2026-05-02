@@ -135,7 +135,17 @@
       "symbolName": "RegisterMovementSpellTarget",
       "filePath": "c:\\Users\\Leon\\Documents\\struct\\MoveSys\\MoveCast.j",
       "content": "\n```jass\nfunction RegisterMovementSpellTarget takes integer abilityId, string orderId returns nothing\n```\n\n\n---\n\n===========================================================================\n\n**文件:** `MoveSys/MoveCast.j`"
+    },
+    {
+      "symbolName": "CAST_TEXT_B",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MoveSys\\MoveCast.j",
+      "content": "\n```jass\nconstant integer CAST_TEXT_B\n```\n\n\n**文件:** `MoveSys/MoveCast.j`"
+    },
+    {
+      "symbolName": "registeredOrderFlags",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MoveSys\\MoveCast.j",
+      "content": "\n```jass\nTable registeredOrderFlags\n```\n\n\n**文件:** `MoveSys/MoveCast.j`"
     }
   ],
-  "timestamp": 1776678211362
+  "timestamp": 1777228545751
 }

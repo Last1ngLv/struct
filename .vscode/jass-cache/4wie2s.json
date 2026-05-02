@@ -11,6 +11,15 @@
       "statementType": "VariableDeclaration"
     },
     {
+      "label": "MOVECAST_SESSION_DURATION",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real MOVECAST_SESSION_DURATION\n```\n\n\n**_>:** `MoveSys/MoveCast.j`",
+      "sortText": "2_var_MOVECAST_SESSION_DURATION",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MoveSys\\MoveCast.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
       "label": "ARRIVAL_THRESHOLD",
       "kind": 5,
       "detail": "Global Variable",
@@ -29,11 +38,20 @@
       "statementType": "VariableDeclaration"
     },
     {
-      "label": "DUMMY_UNIT_ID",
+      "label": "SMART_POINT_TOLERANCE",
       "kind": 5,
       "detail": "Global Variable",
-      "documentation": "\n```jass\nconstant integer DUMMY_UNIT_ID\n```\n\n\n**_>:** `MoveSys/MoveCast.j`",
-      "sortText": "2_var_DUMMY_UNIT_ID",
+      "documentation": "\n```jass\nconstant real SMART_POINT_TOLERANCE\n```\n\n\n**_>:** `MoveSys/MoveCast.j`",
+      "sortText": "2_var_SMART_POINT_TOLERANCE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MoveSys\\MoveCast.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "SMART_POINT_TOLERANCE_SQ",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real SMART_POINT_TOLERANCE_SQ\n```\n\n\n**_>:** `MoveSys/MoveCast.j`",
+      "sortText": "2_var_SMART_POINT_TOLERANCE_SQ",
       "filePath": "c:\\Users\\Leon\\Documents\\struct\\MoveSys\\MoveCast.j",
       "statementType": "VariableDeclaration"
     },
@@ -155,29 +173,11 @@
       "statementType": "VariableDeclaration"
     },
     {
-      "label": "registeredOrderFlags",
-      "kind": 5,
-      "detail": "Global Variable",
-      "documentation": "\n```jass\nTable registeredOrderFlags\n```\n\n\n**_>:** `MoveSys/MoveCast.j`",
-      "sortText": "2_var_registeredOrderFlags",
-      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MoveSys\\MoveCast.j",
-      "statementType": "VariableDeclaration"
-    },
-    {
       "label": "registeredOrderByAbility",
       "kind": 5,
       "detail": "Global Variable",
       "documentation": "\n```jass\nTable registeredOrderByAbility\n```\n\n\n**_>:** `MoveSys/MoveCast.j`",
       "sortText": "2_var_registeredOrderByAbility",
-      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MoveSys\\MoveCast.j",
-      "statementType": "VariableDeclaration"
-    },
-    {
-      "label": "castDurationByAbility",
-      "kind": 5,
-      "detail": "Global Variable",
-      "documentation": "\n```jass\nTable castDurationByAbility\n```\n\n\n**_>:** `MoveSys/MoveCast.j`",
-      "sortText": "2_var_castDurationByAbility",
       "filePath": "c:\\Users\\Leon\\Documents\\struct\\MoveSys\\MoveCast.j",
       "statementType": "VariableDeclaration"
     },
@@ -241,6 +241,15 @@
       "detail": "Function",
       "documentation": "\n```jass\nfunction IsMoveCastTrackedUnit takes unit u returns boolean\n```\n\n\n**_>:** `MoveSys/MoveCast.j`",
       "sortText": "1_func_IsMoveCastTrackedUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MoveSys\\MoveCast.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "DistanceSq",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction DistanceSq takes real ax, real ay, real bx, real by returns real\n```\n\n\n**_>:** `MoveSys/MoveCast.j`",
+      "sortText": "1_func_DistanceSq",
       "filePath": "c:\\Users\\Leon\\Documents\\struct\\MoveSys\\MoveCast.j",
       "statementType": "FunctionDeclaration"
     },
@@ -371,5 +380,5 @@
       "statementType": "FunctionDeclaration"
     }
   ],
-  "timestamp": 1777049211137
+  "timestamp": 1777579694713
 }

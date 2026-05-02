@@ -29,6 +29,24 @@
       "statementType": "VariableDeclaration"
     },
     {
+      "label": "SwlsWaveStartTrigger",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ntrigger SwlsWaveStartTrigger\n```\n\n\n**_>:** `Core/GameState.j`",
+      "sortText": "2_var_SwlsWaveStartTrigger",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Core\\GameState.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "SwlsSoundWaveVolume",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger SwlsSoundWaveVolume\n```\n\n\n**_>:** `Core/GameState.j`",
+      "sortText": "2_var_SwlsSoundWaveVolume",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Core\\GameState.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
       "label": "TargetWave",
       "kind": 5,
       "detail": "Global Variable",
@@ -101,5 +119,5 @@
       "statementType": "FunctionDeclaration"
     }
   ],
-  "timestamp": 1777049211106
+  "timestamp": 1777579694678
 }

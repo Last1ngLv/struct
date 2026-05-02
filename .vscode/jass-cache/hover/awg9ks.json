@@ -1,0 +1,151 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+  "items": [
+    {
+      "symbolName": "WEAPON_PROFILE_PLASMA_AOE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "content": "\n```jass\nconstant integer WEAPON_PROFILE_PLASMA_AOE\n```\n\n\n**文件:** `MyMissiles/Config/WeaponProfileConfig.j`"
+    },
+    {
+      "symbolName": "WEAPON_PROFILE_SHOTGUN",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "content": "\n```jass\nconstant integer WEAPON_PROFILE_SHOTGUN\n```\n\n\n**文件:** `MyMissiles/Config/WeaponProfileConfig.j`"
+    },
+    {
+      "symbolName": "WeaponProfileGetRole",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "content": "\n```jass\nfunction WeaponProfileGetRole takes integer profileId returns string\n```\n\n\n**文件:** `MyMissiles/Config/WeaponProfileConfig.j`"
+    },
+    {
+      "symbolName": "WEAPON_PROFILE_PISTOL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "content": "\n```jass\nconstant integer WEAPON_PROFILE_PISTOL\n```\n\n\n**文件:** `MyMissiles/Config/WeaponProfileConfig.j`"
+    },
+    {
+      "symbolName": "WeaponProfileGetFireAbility",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "content": "\n```jass\nfunction WeaponProfileGetFireAbility takes integer profileId returns integer\n```\n\n\n**文件:** `MyMissiles/Config/WeaponProfileConfig.j`"
+    },
+    {
+      "symbolName": "WEAPON_PROFILE_GRENADE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "content": "\n```jass\nconstant integer WEAPON_PROFILE_GRENADE\n```\n\n\n**文件:** `MyMissiles/Config/WeaponProfileConfig.j`"
+    },
+    {
+      "symbolName": "WEAPON_PROFILE_FLAME_SHOT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "content": "\n```jass\nconstant integer WEAPON_PROFILE_FLAME_SHOT\n```\n\n\n**文件:** `MyMissiles/Config/WeaponProfileConfig.j`"
+    },
+    {
+      "symbolName": "WEAPON_PROFILE_HEAVY_MACHINE_GUN",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "content": "\n```jass\nconstant integer WEAPON_PROFILE_HEAVY_MACHINE_GUN\n```\n\n\n**文件:** `MyMissiles/Config/WeaponProfileConfig.j`"
+    },
+    {
+      "symbolName": "WEAPON_PROFILE_TWO_MACHINE_GUN",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "content": "\n```jass\nconstant integer WEAPON_PROFILE_TWO_MACHINE_GUN\n```\n\n\n**文件:** `MyMissiles/Config/WeaponProfileConfig.j`"
+    },
+    {
+      "symbolName": "WEAPON_PROFILE_ENEMY_CHASER",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "content": "\n```jass\nconstant integer WEAPON_PROFILE_ENEMY_CHASER\n```\n\n\n**文件:** `MyMissiles/Config/WeaponProfileConfig.j`"
+    },
+    {
+      "symbolName": "WEAPON_PROFILE_IRON_LIZARD",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "content": "\n```jass\nconstant integer WEAPON_PROFILE_IRON_LIZARD\n```\n\n\n**文件:** `MyMissiles/Config/WeaponProfileConfig.j`"
+    },
+    {
+      "symbolName": "WEAPON_PROFILE_DROP_SHOT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "content": "\n```jass\nconstant integer WEAPON_PROFILE_DROP_SHOT\n```\n\n\n**文件:** `MyMissiles/Config/WeaponProfileConfig.j`"
+    },
+    {
+      "symbolName": "WEAPON_PROFILE_LASER_GUN",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "content": "\n```jass\nconstant integer WEAPON_PROFILE_LASER_GUN\n```\n\n\n**文件:** `MyMissiles/Config/WeaponProfileConfig.j`"
+    },
+    {
+      "symbolName": "WeaponProfileGetMissileModel",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "content": "\n```jass\nfunction WeaponProfileGetMissileModel takes integer profileId returns string\n```\n\n\n**文件:** `MyMissiles/Config/WeaponProfileConfig.j`"
+    },
+    {
+      "symbolName": "WeaponProfileGetMissileSpeed",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "content": "\n```jass\nfunction WeaponProfileGetMissileSpeed takes integer profileId returns real\n```\n\n\n**文件:** `MyMissiles/Config/WeaponProfileConfig.j`"
+    },
+    {
+      "symbolName": "WEAPON_PROFILE_SUPER_GRENADE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "content": "\n```jass\nconstant integer WEAPON_PROFILE_SUPER_GRENADE\n```\n\n\n**文件:** `MyMissiles/Config/WeaponProfileConfig.j`"
+    },
+    {
+      "symbolName": "WeaponProfileGetArea",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "content": "\n```jass\nfunction WeaponProfileGetArea takes integer profileId returns real\n```\n\n\n**文件:** `MyMissiles/Config/WeaponProfileConfig.j`"
+    },
+    {
+      "symbolName": "WEAPON_PROFILE_ROCKET_LAUNCHER",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "content": "\n```jass\nconstant integer WEAPON_PROFILE_ROCKET_LAUNCHER\n```\n\n\n**文件:** `MyMissiles/Config/WeaponProfileConfig.j`"
+    },
+    {
+      "symbolName": "WeaponProfileGetDescription",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "content": "\n```jass\nfunction WeaponProfileGetDescription takes integer profileId returns string\n```\n\n\n**文件:** `MyMissiles/Config/WeaponProfileConfig.j`"
+    },
+    {
+      "symbolName": "WeaponProfileGetTierMissileModel",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "content": "\n```jass\nfunction WeaponProfileGetTierMissileModel takes integer profileId, integer tier returns string\n```\n\n\n**文件:** `MyMissiles/Config/WeaponProfileConfig.j`"
+    },
+    {
+      "symbolName": "WEAPON_PROFILE_NONE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "content": "\n```jass\nconstant integer WEAPON_PROFILE_NONE\n```\n\n\n**文件:** `MyMissiles/Config/WeaponProfileConfig.j`"
+    },
+    {
+      "symbolName": "WeaponProfileGetCost",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "content": "\n```jass\nfunction WeaponProfileGetCost takes integer profileId returns integer\n```\n\n\n**文件:** `MyMissiles/Config/WeaponProfileConfig.j`"
+    },
+    {
+      "symbolName": "WeaponProfileGetProjectileCount",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "content": "\n```jass\nfunction WeaponProfileGetProjectileCount takes integer profileId returns integer\n```\n\n\n**文件:** `MyMissiles/Config/WeaponProfileConfig.j`"
+    },
+    {
+      "symbolName": "WEAPON_PROFILE_HANDGUN",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "content": "\n```jass\nconstant integer WEAPON_PROFILE_HANDGUN\n```\n\n\n**文件:** `MyMissiles/Config/WeaponProfileConfig.j`"
+    },
+    {
+      "symbolName": "WEAPON_PROFILE_THUNDER_SHOT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "content": "\n```jass\nconstant integer WEAPON_PROFILE_THUNDER_SHOT\n```\n\n\n**文件:** `MyMissiles/Config/WeaponProfileConfig.j`"
+    },
+    {
+      "symbolName": "WeaponProfileGetPickupUnitType",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "content": "\n```jass\nfunction WeaponProfileGetPickupUnitType takes integer profileId returns integer\n```\n\n\n**文件:** `MyMissiles/Config/WeaponProfileConfig.j`"
+    },
+    {
+      "symbolName": "WEAPON_AMMO_INFINITE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "content": "\n```jass\nconstant integer WEAPON_AMMO_INFINITE\n```\n\n\n**文件:** `MyMissiles/Config/WeaponProfileConfig.j`"
+    },
+    {
+      "symbolName": "WeaponProfileGetCastCount",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "content": "\n```jass\nfunction WeaponProfileGetCastCount takes integer profileId returns integer\n```\n\n\n**文件:** `MyMissiles/Config/WeaponProfileConfig.j`"
+    },
+    {
+      "symbolName": "WEAPON_BEHAVIOR_STRAIGHT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Config\\WeaponProfileConfig.j",
+      "content": "\n```jass\nconstant integer WEAPON_BEHAVIOR_STRAIGHT\n```\n\n\n**文件:** `MyMissiles/Config/WeaponProfileConfig.j`"
+    }
+  ],
+  "timestamp": 1777595277182
+}

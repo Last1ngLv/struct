@@ -1,0 +1,438 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\PrisonerDropSystem.j",
+  "items": [
+    {
+      "label": "PRISONER_DROP_CHANCE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real PRISONER_DROP_CHANCE\n```\n\n\n**_>:** `MyMissiles/PrisonerDropSystem.j`",
+      "sortText": "2_var_PRISONER_DROP_CHANCE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\PrisonerDropSystem.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "PRISONER_CAP",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer PRISONER_CAP\n```\n\n\n**_>:** `MyMissiles/PrisonerDropSystem.j`",
+      "sortText": "2_var_PRISONER_CAP",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\PrisonerDropSystem.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "PICKUP_CAP",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer PICKUP_CAP\n```\n\n\n**_>:** `MyMissiles/PrisonerDropSystem.j`",
+      "sortText": "2_var_PICKUP_CAP",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\PrisonerDropSystem.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "PRISONER_TICK",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real PRISONER_TICK\n```\n\n\n**_>:** `MyMissiles/PrisonerDropSystem.j`",
+      "sortText": "2_var_PRISONER_TICK",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\PrisonerDropSystem.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "PRISONER_RESCUE_RANGE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real PRISONER_RESCUE_RANGE\n```\n\n\n**_>:** `MyMissiles/PrisonerDropSystem.j`",
+      "sortText": "2_var_PRISONER_RESCUE_RANGE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\PrisonerDropSystem.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "PRISONER_PICKUP_RANGE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real PRISONER_PICKUP_RANGE\n```\n\n\n**_>:** `MyMissiles/PrisonerDropSystem.j`",
+      "sortText": "2_var_PRISONER_PICKUP_RANGE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\PrisonerDropSystem.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "PRISONER_RESCUE_DELAY",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real PRISONER_RESCUE_DELAY\n```\n\n\n**_>:** `MyMissiles/PrisonerDropSystem.j`",
+      "sortText": "2_var_PRISONER_RESCUE_DELAY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\PrisonerDropSystem.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "PRISONER_DROP_OFFSET",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real PRISONER_DROP_OFFSET\n```\n\n\n**_>:** `MyMissiles/PrisonerDropSystem.j`",
+      "sortText": "2_var_PRISONER_DROP_OFFSET",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\PrisonerDropSystem.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "PRISONER_ASCEND_TARGET",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real PRISONER_ASCEND_TARGET\n```\n\n\n**_>:** `MyMissiles/PrisonerDropSystem.j`",
+      "sortText": "2_var_PRISONER_ASCEND_TARGET",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\PrisonerDropSystem.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "PRISONER_ASCEND_SPEED",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real PRISONER_ASCEND_SPEED\n```\n\n\n**_>:** `MyMissiles/PrisonerDropSystem.j`",
+      "sortText": "2_var_PRISONER_ASCEND_SPEED",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\PrisonerDropSystem.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "PRISONER_WANDER_RADIUS",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real PRISONER_WANDER_RADIUS\n```\n\n\n**_>:** `MyMissiles/PrisonerDropSystem.j`",
+      "sortText": "2_var_PRISONER_WANDER_RADIUS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\PrisonerDropSystem.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "PRISONER_WANDER_INTERVAL",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real PRISONER_WANDER_INTERVAL\n```\n\n\n**_>:** `MyMissiles/PrisonerDropSystem.j`",
+      "sortText": "2_var_PRISONER_WANDER_INTERVAL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\PrisonerDropSystem.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "PRISONER_LIFETIME",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real PRISONER_LIFETIME\n```\n\n\n**_>:** `MyMissiles/PrisonerDropSystem.j`",
+      "sortText": "2_var_PRISONER_LIFETIME",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\PrisonerDropSystem.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "PICKUP_LIFETIME",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real PICKUP_LIFETIME\n```\n\n\n**_>:** `MyMissiles/PrisonerDropSystem.j`",
+      "sortText": "2_var_PICKUP_LIFETIME",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\PrisonerDropSystem.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "PRISONER_RESCUE_SOUND_PATH",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string PRISONER_RESCUE_SOUND_PATH\n```\n\n\n**_>:** `MyMissiles/PrisonerDropSystem.j`",
+      "sortText": "2_var_PRISONER_RESCUE_SOUND_PATH",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\PrisonerDropSystem.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "PrisonerTicker",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ntimer PrisonerTicker\n```\n\n\n**_>:** `MyMissiles/PrisonerDropSystem.j`",
+      "sortText": "2_var_PrisonerTicker",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\PrisonerDropSystem.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "PrisonerRescueSound",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nsound PrisonerRescueSound\n```\n\n\n**_>:** `MyMissiles/PrisonerDropSystem.j`",
+      "sortText": "2_var_PrisonerRescueSound",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\PrisonerDropSystem.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "PrisonerUnit",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nunit array PrisonerUnit\n```\n\n\n**_>:** `MyMissiles/PrisonerDropSystem.j`",
+      "sortText": "2_var_PrisonerUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\PrisonerDropSystem.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "PrisonerOwnerPid",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array PrisonerOwnerPid\n```\n\n\n**_>:** `MyMissiles/PrisonerDropSystem.j`",
+      "sortText": "2_var_PrisonerOwnerPid",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\PrisonerDropSystem.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "PrisonerProfile",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array PrisonerProfile\n```\n\n\n**_>:** `MyMissiles/PrisonerDropSystem.j`",
+      "sortText": "2_var_PrisonerProfile",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\PrisonerDropSystem.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "PrisonerState",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array PrisonerState\n```\n\n\n**_>:** `MyMissiles/PrisonerDropSystem.j`",
+      "sortText": "2_var_PrisonerState",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\PrisonerDropSystem.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "PrisonerStateTime",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array PrisonerStateTime\n```\n\n\n**_>:** `MyMissiles/PrisonerDropSystem.j`",
+      "sortText": "2_var_PrisonerStateTime",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\PrisonerDropSystem.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "PrisonerWanderTime",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array PrisonerWanderTime\n```\n\n\n**_>:** `MyMissiles/PrisonerDropSystem.j`",
+      "sortText": "2_var_PrisonerWanderTime",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\PrisonerDropSystem.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "PrisonerLifeTime",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array PrisonerLifeTime\n```\n\n\n**_>:** `MyMissiles/PrisonerDropSystem.j`",
+      "sortText": "2_var_PrisonerLifeTime",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\PrisonerDropSystem.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "PickupUnit",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nunit array PickupUnit\n```\n\n\n**_>:** `MyMissiles/PrisonerDropSystem.j`",
+      "sortText": "2_var_PickupUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\PrisonerDropSystem.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "PickupOwnerPid",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array PickupOwnerPid\n```\n\n\n**_>:** `MyMissiles/PrisonerDropSystem.j`",
+      "sortText": "2_var_PickupOwnerPid",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\PrisonerDropSystem.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "PickupProfile",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array PickupProfile\n```\n\n\n**_>:** `MyMissiles/PrisonerDropSystem.j`",
+      "sortText": "2_var_PickupProfile",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\PrisonerDropSystem.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "PickupLifeTime",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array PickupLifeTime\n```\n\n\n**_>:** `MyMissiles/PrisonerDropSystem.j`",
+      "sortText": "2_var_PickupLifeTime",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\PrisonerDropSystem.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "PrisonerDistanceSq",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction PrisonerDistanceSq takes real ax, real ay, real bx, real by returns real\n```\n\n\n**_>:** `MyMissiles/PrisonerDropSystem.j`",
+      "sortText": "1_func_PrisonerDistanceSq",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\PrisonerDropSystem.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "PrisonerAnyActive",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction PrisonerAnyActive takes nothing returns boolean\n```\n\n\n**_>:** `MyMissiles/PrisonerDropSystem.j`",
+      "sortText": "1_func_PrisonerAnyActive",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\PrisonerDropSystem.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "PrisonerClear",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction PrisonerClear takes integer i returns nothing\n```\n\n\n**_>:** `MyMissiles/PrisonerDropSystem.j`",
+      "sortText": "1_func_PrisonerClear",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\PrisonerDropSystem.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "PickupClear",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction PickupClear takes integer i, boolean killFirst returns nothing\n```\n\n\n**_>:** `MyMissiles/PrisonerDropSystem.j`",
+      "sortText": "1_func_PickupClear",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\PrisonerDropSystem.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "PrisonerAlloc",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction PrisonerAlloc takes nothing returns integer\n```\n\n\n**_>:** `MyMissiles/PrisonerDropSystem.j`",
+      "sortText": "1_func_PrisonerAlloc",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\PrisonerDropSystem.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "PickupAlloc",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction PickupAlloc takes nothing returns integer\n```\n\n\n**_>:** `MyMissiles/PrisonerDropSystem.j`",
+      "sortText": "1_func_PickupAlloc",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\PrisonerDropSystem.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "PrisonerRandomProfile",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction PrisonerRandomProfile takes nothing returns integer\n```\n\n\n**_>:** `MyMissiles/PrisonerDropSystem.j`",
+      "sortText": "1_func_PrisonerRandomProfile",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\PrisonerDropSystem.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "PickupCreate",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction PickupCreate takes integer pid, integer profileId, real x, real y, real facing returns nothing\n```\n\n\n**_>:** `MyMissiles/PrisonerDropSystem.j`",
+      "sortText": "1_func_PickupCreate",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\PrisonerDropSystem.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "PrisonerBeginRescue",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction PrisonerBeginRescue takes integer i, unit hero returns nothing\n```\n\n\n**_>:** `MyMissiles/PrisonerDropSystem.j`",
+      "sortText": "1_func_PrisonerBeginRescue",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\PrisonerDropSystem.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "PrisonerDropWeapon",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction PrisonerDropWeapon takes integer i returns nothing\n```\n\n\n**_>:** `MyMissiles/PrisonerDropSystem.j`",
+      "sortText": "1_func_PrisonerDropWeapon",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\PrisonerDropSystem.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "PrisonerUpdateWander",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction PrisonerUpdateWander takes integer i returns nothing\n```\n\n\n**_>:** `MyMissiles/PrisonerDropSystem.j`",
+      "sortText": "1_func_PrisonerUpdateWander",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\PrisonerDropSystem.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "PrisonerUpdateActive",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction PrisonerUpdateActive takes integer i returns nothing\n```\n\n\n**_>:** `MyMissiles/PrisonerDropSystem.j`",
+      "sortText": "1_func_PrisonerUpdateActive",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\PrisonerDropSystem.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "PrisonerUpdateRescueDelay",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction PrisonerUpdateRescueDelay takes integer i returns nothing\n```\n\n\n**_>:** `MyMissiles/PrisonerDropSystem.j`",
+      "sortText": "1_func_PrisonerUpdateRescueDelay",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\PrisonerDropSystem.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "PrisonerUpdateAscend",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction PrisonerUpdateAscend takes integer i returns nothing\n```\n\n\n**_>:** `MyMissiles/PrisonerDropSystem.j`",
+      "sortText": "1_func_PrisonerUpdateAscend",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\PrisonerDropSystem.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "PickupUpdate",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction PickupUpdate takes integer i returns nothing\n```\n\n\n**_>:** `MyMissiles/PrisonerDropSystem.j`",
+      "sortText": "1_func_PickupUpdate",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\PrisonerDropSystem.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "PrisonerTick",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction PrisonerTick takes nothing returns nothing\n```\n\n\n**_>:** `MyMissiles/PrisonerDropSystem.j`",
+      "sortText": "1_func_PrisonerTick",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\PrisonerDropSystem.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "PrisonerEnsureTicker",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction PrisonerEnsureTicker takes nothing returns nothing\n```\n\n\n**_>:** `MyMissiles/PrisonerDropSystem.j`",
+      "sortText": "1_func_PrisonerEnsureTicker",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\PrisonerDropSystem.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "PrisonerDropTrySpawnForPid",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction PrisonerDropTrySpawnForPid takes unit killedEnemy, integer pid returns boolean\n```\n\n\n**_>:** `MyMissiles/PrisonerDropSystem.j`",
+      "sortText": "1_func_PrisonerDropTrySpawnForPid",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\PrisonerDropSystem.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "PrisonerDropTrySpawn",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction PrisonerDropTrySpawn takes unit killedEnemy returns boolean\n```\n\n\n**_>:** `MyMissiles/PrisonerDropSystem.j`",
+      "sortText": "1_func_PrisonerDropTrySpawn",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\PrisonerDropSystem.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**_>:** `MyMissiles/PrisonerDropSystem.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\PrisonerDropSystem.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1777597121188
+}

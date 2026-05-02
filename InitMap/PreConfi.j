@@ -1,4 +1,4 @@
-library PreConfi initializer Init requires GameState, InitialWaveMultiboard, AudioPreloadConfig, WaveOwnerConfig, AllianceConfig, MovementSpellTargetConfig, TenderSpawnConfig, MenuClientInitConfig
+library PreConfi initializer Init requires GameState, InitialWaveMultiboard, AudioPreloadConfig, WaveOwnerConfig, AllianceConfig, InitialGoldConfig, MovementSpellTargetConfig, TenderSpawnConfig, MenuClientInitConfig
 
     function InitTrig_Vars takes nothing returns nothing
         call GameStateInitDefaults()
@@ -7,6 +7,7 @@ library PreConfi initializer Init requires GameState, InitialWaveMultiboard, Aud
         call PreloadMapResources()
         call InitDefaultWaveOwnerResearches()
         call InitHostileNeutralAlliances()
+        call InitInitialPlayerGold()
         call InitMovementSpellTargetConfig()
         call EnablePreSelect(true, false)
         call InitPlayerBountyStates()

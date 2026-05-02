@@ -5,6 +5,8 @@ library GameState
 
         multiboard SwlsMultiboard
         sound SwlsSound
+        trigger SwlsWaveStartTrigger
+        integer SwlsSoundWaveVolume
         integer TargetWave
         sound error
         sound error_Neg
@@ -16,6 +18,8 @@ library GameState
 
     function GameStateInitDefaults takes nothing returns nothing
         set TargetWave = 1
+        set SwlsWaveStartTrigger = null
+        set SwlsSoundWaveVolume = 80
     endfunction
 
 endlibrary

@@ -85,7 +85,27 @@
       "symbolName": "onDisplay",
       "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\ExampleAdvance\\Inventory\\InventoryCore.j",
       "content": "\n```jass\nmethod onDisplay takes nothing returns nothing\n```\n\n\n**所属:** `Inventory`\n**文件:** `Pruebas/ExampleAdvance/Inventory/InventoryCore.j`"
+    },
+    {
+      "symbolName": "InventoryCore",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\ExampleAdvance\\Inventory\\InventoryCore.j",
+      "content": "\n```jass\nlibrary InventoryCore requires UserInterface, InventoryItem, PlayerUtils, TimerUtils initializer Init\n```\n\n\n**文件:** `Pruebas/ExampleAdvance/Inventory/InventoryCore.j`"
+    },
+    {
+      "symbolName": "ICON_TRANSPARENT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\ExampleAdvance\\Inventory\\InventoryCore.j",
+      "content": "\n```jass\nstatic constant integer ICON_TRANSPARENT\n```\n\n\n**所属:** `Inventory`\n**文件:** `Pruebas/ExampleAdvance/Inventory/InventoryCore.j`"
+    },
+    {
+      "symbolName": "localInt",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\ExampleAdvance\\Inventory\\InventoryCore.j",
+      "content": "\n```jass\nstatic method localInt takes integer pid, integer value, integer other returns integer\n```\n\n\n**所属:** `Inventory`\n**文件:** `Pruebas/ExampleAdvance/Inventory/InventoryCore.j`"
+    },
+    {
+      "symbolName": "DisplayCount",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\ExampleAdvance\\Inventory\\InventoryCore.j",
+      "content": "\n```jass\nstatic readonly integer DisplayCount\n```\n\n\n**所属:** `Inventory`\n**文件:** `Pruebas/ExampleAdvance/Inventory/InventoryCore.j`"
     }
   ],
-  "timestamp": 1776464946793
+  "timestamp": 1777239911784
 }

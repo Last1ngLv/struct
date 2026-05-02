@@ -10,7 +10,27 @@
       "symbolName": "BASE_DAMAGE_MULT",
       "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout RocketLauncher.j",
       "content": "\n```jass\nconstant real BASE_DAMAGE_MULT\n```\n\n\n**文件:** `MyMissiles/Loadout RocketLauncher.j`"
+    },
+    {
+      "symbolName": "RAY_TEXT_B",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout RocketLauncher.j",
+      "content": "\n```jass\nconstant integer RAY_TEXT_B\n```\n\n\n**文件:** `MyMissiles/Loadout RocketLauncher.j`"
+    },
+    {
+      "symbolName": "BASE_MISSILE_MODEL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout RocketLauncher.j",
+      "content": "\n```jass\nconstant string BASE_MISSILE_MODEL\n```\n\n\n**文件:** `MyMissiles/Loadout RocketLauncher.j`"
+    },
+    {
+      "symbolName": "BASE_MISSILE_SPEED",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout RocketLauncher.j",
+      "content": "\n```jass\nconstant real BASE_MISSILE_SPEED\n```\n\n\n**文件:** `MyMissiles/Loadout RocketLauncher.j`"
+    },
+    {
+      "symbolName": "MIN_MISSILE_SPEED",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout RocketLauncher.j",
+      "content": "\n```jass\nconstant real MIN_MISSILE_SPEED\n```\n\n\n**文件:** `MyMissiles/Loadout RocketLauncher.j`"
     }
   ],
-  "timestamp": 1776205293124
+  "timestamp": 1777316531011
 }

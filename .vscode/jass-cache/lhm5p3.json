@@ -1,0 +1,384 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout ThunderShot.j",
+  "items": [
+    {
+      "label": "MISSILE_START_Z",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real MISSILE_START_Z\n```\n\n\n**_>:** `MyMissiles/Loadout ThunderShot.j`",
+      "sortText": "2_var_MISSILE_START_Z",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout ThunderShot.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "MISSILE_COLLISION",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real MISSILE_COLLISION\n```\n\n\n**_>:** `MyMissiles/Loadout ThunderShot.j`",
+      "sortText": "2_var_MISSILE_COLLISION",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout ThunderShot.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "MISSILE_FORWARD_OFFSET",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real MISSILE_FORWARD_OFFSET\n```\n\n\n**_>:** `MyMissiles/Loadout ThunderShot.j`",
+      "sortText": "2_var_MISSILE_FORWARD_OFFSET",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout ThunderShot.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "THUNDER_SEARCH_RADIUS",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real THUNDER_SEARCH_RADIUS\n```\n\n\n**_>:** `MyMissiles/Loadout ThunderShot.j`",
+      "sortText": "2_var_THUNDER_SEARCH_RADIUS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout ThunderShot.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "THUNDER_TURN_RATE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real THUNDER_TURN_RATE\n```\n\n\n**_>:** `MyMissiles/Loadout ThunderShot.j`",
+      "sortText": "2_var_THUNDER_TURN_RATE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout ThunderShot.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "THUNDER_SCAN_INTERVAL",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real THUNDER_SCAN_INTERVAL\n```\n\n\n**_>:** `MyMissiles/Loadout ThunderShot.j`",
+      "sortText": "2_var_THUNDER_SCAN_INTERVAL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout ThunderShot.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "THUNDER_REPEAT_INTERVAL",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real THUNDER_REPEAT_INTERVAL\n```\n\n\n**_>:** `MyMissiles/Loadout ThunderShot.j`",
+      "sortText": "2_var_THUNDER_REPEAT_INTERVAL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout ThunderShot.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "THUNDER_WAVE_CURVE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real THUNDER_WAVE_CURVE\n```\n\n\n**_>:** `MyMissiles/Loadout ThunderShot.j`",
+      "sortText": "2_var_THUNDER_WAVE_CURVE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout ThunderShot.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "THUNDER_WAVE_SEGMENT_RANGE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real THUNDER_WAVE_SEGMENT_RANGE\n```\n\n\n**_>:** `MyMissiles/Loadout ThunderShot.j`",
+      "sortText": "2_var_THUNDER_WAVE_SEGMENT_RANGE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout ThunderShot.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "THUNDER_FREE_TRAVEL_RANGE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real THUNDER_FREE_TRAVEL_RANGE\n```\n\n\n**_>:** `MyMissiles/Loadout ThunderShot.j`",
+      "sortText": "2_var_THUNDER_FREE_TRAVEL_RANGE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout ThunderShot.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "THUNDER_MAX_HITS",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer THUNDER_MAX_HITS\n```\n\n\n**_>:** `MyMissiles/Loadout ThunderShot.j`",
+      "sortText": "2_var_THUNDER_MAX_HITS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout ThunderShot.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "IMPACT_ATTACH",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string IMPACT_ATTACH\n```\n\n\n**_>:** `MyMissiles/Loadout ThunderShot.j`",
+      "sortText": "2_var_IMPACT_ATTACH",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout ThunderShot.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "ATTACK_TYPE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant attacktype ATTACK_TYPE\n```\n\n\n**_>:** `MyMissiles/Loadout ThunderShot.j`",
+      "sortText": "2_var_ATTACK_TYPE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout ThunderShot.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DAMAGE_TYPE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant damagetype DAMAGE_TYPE\n```\n\n\n**_>:** `MyMissiles/Loadout ThunderShot.j`",
+      "sortText": "2_var_DAMAGE_TYPE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout ThunderShot.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "active",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable active\n```\n\n\n**_>:** `MyMissiles/Loadout ThunderShot.j`",
+      "sortText": "2_var_active",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout ThunderShot.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "castAngle",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array castAngle\n```\n\n\n**_>:** `MyMissiles/Loadout ThunderShot.j`",
+      "sortText": "2_var_castAngle",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout ThunderShot.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "castTargetX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array castTargetX\n```\n\n\n**_>:** `MyMissiles/Loadout ThunderShot.j`",
+      "sortText": "2_var_castTargetX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout ThunderShot.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "castTargetY",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array castTargetY\n```\n\n\n**_>:** `MyMissiles/Loadout ThunderShot.j`",
+      "sortText": "2_var_castTargetY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout ThunderShot.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "thunderDamage",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array thunderDamage\n```\n\n\n**_>:** `MyMissiles/Loadout ThunderShot.j`",
+      "sortText": "2_var_thunderDamage",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout ThunderShot.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "thunderHitsLeft",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array thunderHitsLeft\n```\n\n\n**_>:** `MyMissiles/Loadout ThunderShot.j`",
+      "sortText": "2_var_thunderHitsLeft",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout ThunderShot.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "thunderScanRemaining",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array thunderScanRemaining\n```\n\n\n**_>:** `MyMissiles/Loadout ThunderShot.j`",
+      "sortText": "2_var_thunderScanRemaining",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout ThunderShot.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "thunderWaveSign",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array thunderWaveSign\n```\n\n\n**_>:** `MyMissiles/Loadout ThunderShot.j`",
+      "sortText": "2_var_thunderWaveSign",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout ThunderShot.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "thunderLastHit",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nunit array thunderLastHit\n```\n\n\n**_>:** `MyMissiles/Loadout ThunderShot.j`",
+      "sortText": "2_var_thunderLastHit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout ThunderShot.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "thunderSource",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nunit array thunderSource\n```\n\n\n**_>:** `MyMissiles/Loadout ThunderShot.j`",
+      "sortText": "2_var_thunderSource",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout ThunderShot.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "thunderOwner",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nplayer array thunderOwner\n```\n\n\n**_>:** `MyMissiles/Loadout ThunderShot.j`",
+      "sortText": "2_var_thunderOwner",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout ThunderShot.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "GetSafeFireInterval",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetSafeFireInterval takes nothing returns real\n```\n\n\n**_>:** `MyMissiles/Loadout ThunderShot.j`",
+      "sortText": "1_func_GetSafeFireInterval",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout ThunderShot.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "FilterUnits",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction FilterUnits takes unit target, player owner returns boolean\n```\n\n\n**_>:** `MyMissiles/Loadout ThunderShot.j`",
+      "sortText": "1_func_FilterUnits",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout ThunderShot.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "DamageUnit",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction DamageUnit takes unit source, unit target, real amount returns boolean\n```\n\n\n**_>:** `MyMissiles/Loadout ThunderShot.j`",
+      "sortText": "1_func_DamageUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout ThunderShot.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "ShowThunderImpact",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ShowThunderImpact takes unit target returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout ThunderShot.j`",
+      "sortText": "1_func_ShowThunderImpact",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout ThunderShot.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "ConfigureThunderWaveSegment",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ConfigureThunderWaveSegment takes Missile missile returns boolean\n```\n\n\n**_>:** `MyMissiles/Loadout ThunderShot.j`",
+      "sortText": "1_func_ConfigureThunderWaveSegment",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout ThunderShot.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "FindThunderTarget",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction FindThunderTarget takes Missile missile, unit excluded returns unit\n```\n\n\n**_>:** `MyMissiles/Loadout ThunderShot.j`",
+      "sortText": "1_func_FindThunderTarget",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout ThunderShot.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "AssignThunderTarget",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction AssignThunderTarget takes Missile missile, unit target returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout ThunderShot.j`",
+      "sortText": "1_func_AssignThunderTarget",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout ThunderShot.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "RefreshThunderTarget",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction RefreshThunderTarget takes Missile missile returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout ThunderShot.j`",
+      "sortText": "1_func_RefreshThunderTarget",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout ThunderShot.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "FindNextThunderTarget",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction FindNextThunderTarget takes Missile missile, unit excluded, unit fallback returns unit\n```\n\n\n**_>:** `MyMissiles/Loadout ThunderShot.j`",
+      "sortText": "1_func_FindNextThunderTarget",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout ThunderShot.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "ThunderShotCore",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct ThunderShotCore extends array\n```\n\n\n**_>:** `MyMissiles/Loadout ThunderShot.j`",
+      "sortText": "1_struct_ThunderShotCore",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout ThunderShot.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "LaunchThunderShot",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction LaunchThunderShot takes unit source, player owner, real angle returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout ThunderShot.j`",
+      "sortText": "1_func_LaunchThunderShot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout ThunderShot.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "CleanupCast",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction CleanupCast takes SpellIndex dex returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout ThunderShot.j`",
+      "sortText": "1_func_CleanupCast",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout ThunderShot.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "FireCastShot",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction FireCastShot takes SpellIndex dex returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout ThunderShot.j`",
+      "sortText": "1_func_FireCastShot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout ThunderShot.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnCastTick",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnCastTick takes nothing returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout ThunderShot.j`",
+      "sortText": "1_func_OnCastTick",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout ThunderShot.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "LoadoutThunderShotFire",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction LoadoutThunderShotFire takes unit source, player owner, real tx, real ty returns boolean\n```\n\n\n**_>:** `MyMissiles/Loadout ThunderShot.j`",
+      "sortText": "1_func_LoadoutThunderShotFire",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout ThunderShot.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnEffect",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnEffect takes nothing returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout ThunderShot.j`",
+      "sortText": "1_func_OnEffect",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout ThunderShot.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout ThunderShot.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout ThunderShot.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1777579694719
+}

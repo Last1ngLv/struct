@@ -1055,6 +1055,42 @@
       "statementType": "VariableDeclaration"
     },
     {
+      "label": "LOADOUT_MISSILE_RIFLE_SPELL",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer LOADOUT_MISSILE_RIFLE_SPELL\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_LOADOUT_MISSILE_RIFLE_SPELL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "LOADOUT_MISSILE_ASSAULT_SPELL",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer LOADOUT_MISSILE_ASSAULT_SPELL\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_LOADOUT_MISSILE_ASSAULT_SPELL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "LOADOUT_MISSILE_LASER_SPELL",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer LOADOUT_MISSILE_LASER_SPELL\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_LOADOUT_MISSILE_LASER_SPELL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "LOADOUT_MISSILE_IRON_LIZARD_SPELL",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer LOADOUT_MISSILE_IRON_LIZARD_SPELL\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_LOADOUT_MISSILE_IRON_LIZARD_SPELL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
       "label": "FIRE_DURATION",
       "kind": 5,
       "detail": "Global Variable",
@@ -1541,6 +1577,15 @@
       "statementType": "VariableDeclaration"
     },
     {
+      "label": "activeWeaponProfile",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array activeWeaponProfile\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "2_var_activeWeaponProfile",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
       "label": "FilterUnits",
       "kind": 2,
       "detail": "Function",
@@ -1667,6 +1712,15 @@
       "statementType": "FunctionDeclaration"
     },
     {
+      "label": "LaunchSingleLoadoutMissile",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction LaunchSingleLoadoutMissile takes unit source, player owner, real angle, real lateralOffset, integer profileId returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_LaunchSingleLoadoutMissile",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
       "label": "FireMissile",
       "kind": 2,
       "detail": "Function",
@@ -1685,10 +1739,19 @@
       "statementType": "FunctionDeclaration"
     },
     {
+      "label": "GetLoadoutMissileMoveCastDurationForAbility",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetLoadoutMissileMoveCastDurationForAbility takes integer abilityId returns real\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_GetLoadoutMissileMoveCastDurationForAbility",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
       "label": "GetSafeFireInterval",
       "kind": 2,
       "detail": "Function",
-      "documentation": "\n```jass\nfunction GetSafeFireInterval takes nothing returns real\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "documentation": "\n```jass\nfunction GetSafeFireInterval takes integer profileId returns real\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
       "sortText": "1_func_GetSafeFireInterval",
       "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
       "statementType": "FunctionDeclaration"
@@ -1739,6 +1802,15 @@
       "statementType": "FunctionDeclaration"
     },
     {
+      "label": "LoadoutMissileFireProfile",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction LoadoutMissileFireProfile takes unit source, player owner, integer profileId, real tx, real ty returns boolean\n```\n\n\n**_>:** `MyMissiles/Loadout Missile.j`",
+      "sortText": "1_func_LoadoutMissileFireProfile",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Missile.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
       "label": "OnEffect",
       "kind": 2,
       "detail": "Function",
@@ -1748,5 +1820,5 @@
       "statementType": "FunctionDeclaration"
     }
   ],
-  "timestamp": 1777049211143
+  "timestamp": 1777579694718
 }

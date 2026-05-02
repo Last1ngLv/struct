@@ -1,0 +1,16 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeUI.j",
+  "items": [
+    {
+      "symbolName": "RestTimeCloseTenderForActivePlayers",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeUI.j",
+      "content": "\n```jass\nfunction RestTimeCloseTenderForActivePlayers takes nothing returns nothing\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/RestTime/RestTimeUI.j`"
+    },
+    {
+      "symbolName": "RestTimeSetStatusForActivePlayers",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeUI.j",
+      "content": "\n```jass\nfunction RestTimeSetStatusForActivePlayers takes string statusText returns nothing\n```\n\n\n**文件:** `WaveSysAnAI/SwlsWave/RestTime/RestTimeUI.j`"
+    }
+  ],
+  "timestamp": 1777597652333
+}

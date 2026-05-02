@@ -722,60 +722,6 @@
       "statementType": "FunctionDeclaration"
     },
     {
-      "label": "AIBoolToInt",
-      "kind": 2,
-      "detail": "Function",
-      "documentation": "\n```jass\nfunction AIBoolToInt takes boolean b returns integer\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
-      "sortText": "1_func_AIBoolToInt",
-      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
-      "statementType": "FunctionDeclaration"
-    },
-    {
-      "label": "AIIntervalToMs",
-      "kind": 2,
-      "detail": "Function",
-      "documentation": "\n```jass\nfunction AIIntervalToMs takes real sec, integer fallback returns integer\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
-      "sortText": "1_func_AIIntervalToMs",
-      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
-      "statementType": "FunctionDeclaration"
-    },
-    {
-      "label": "AIClampInt",
-      "kind": 2,
-      "detail": "Function",
-      "documentation": "\n```jass\nfunction AIClampInt takes integer v, integer minV, integer maxV returns integer\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
-      "sortText": "1_func_AIClampInt",
-      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
-      "statementType": "FunctionDeclaration"
-    },
-    {
-      "label": "AIClampReal",
-      "kind": 2,
-      "detail": "Function",
-      "documentation": "\n```jass\nfunction AIClampReal takes real v, real minV, real maxV returns real\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
-      "sortText": "1_func_AIClampReal",
-      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
-      "statementType": "FunctionDeclaration"
-    },
-    {
-      "label": "AIGetRandomRealRange",
-      "kind": 2,
-      "detail": "Function",
-      "documentation": "\n```jass\nfunction AIGetRandomRealRange takes real minV, real maxV returns real\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
-      "sortText": "1_func_AIGetRandomRealRange",
-      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
-      "statementType": "FunctionDeclaration"
-    },
-    {
-      "label": "AIGetRandomMsRange",
-      "kind": 2,
-      "detail": "Function",
-      "documentation": "\n```jass\nfunction AIGetRandomMsRange takes real minSec, real maxSec, integer fallbackMs, integer minMs returns integer\n```\n\n\n**_>:** `WaveSysAnAI/AI/IAManager.j`",
-      "sortText": "1_func_AIGetRandomMsRange",
-      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\AI\\IAManager.j",
-      "statementType": "FunctionDeclaration"
-    },
-    {
       "label": "AIBossReinforcementRollInitialMs",
       "kind": 2,
       "detail": "Function",
@@ -1406,5 +1352,5 @@
       "statementType": "FunctionDeclaration"
     }
   ],
-  "timestamp": 1777049211197
+  "timestamp": 1777579694749
 }

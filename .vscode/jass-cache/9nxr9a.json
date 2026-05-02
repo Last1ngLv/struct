@@ -101,6 +101,42 @@
       "statementType": "VariableDeclaration"
     },
     {
+      "label": "REST_TENDER_AUDIO_TICK_SEC",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real REST_TENDER_AUDIO_TICK_SEC\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime/RestTimeState.j`",
+      "sortText": "2_var_REST_TENDER_AUDIO_TICK_SEC",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeState.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "REST_TENDER_AUDIO_RADIUS",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real REST_TENDER_AUDIO_RADIUS\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime/RestTimeState.j`",
+      "sortText": "2_var_REST_TENDER_AUDIO_RADIUS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeState.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "REST_TENDER_AUDIO_VOLUME",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer REST_TENDER_AUDIO_VOLUME\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime/RestTimeState.j`",
+      "sortText": "2_var_REST_TENDER_AUDIO_VOLUME",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeState.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "REST_TENDER_AUDIO_ENABLED",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant boolean REST_TENDER_AUDIO_ENABLED\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime/RestTimeState.j`",
+      "sortText": "2_var_REST_TENDER_AUDIO_ENABLED",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeState.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
       "label": "RestPhaseTimer",
       "kind": 5,
       "detail": "Global Variable",
@@ -115,6 +151,15 @@
       "detail": "Global Variable",
       "documentation": "\n```jass\ntimer RestSurvivalEndTimer\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime/RestTimeState.j`",
       "sortText": "2_var_RestSurvivalEndTimer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeState.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "RestTenderAudioTimer",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ntimer RestTenderAudioTimer\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime/RestTimeState.j`",
+      "sortText": "2_var_RestTenderAudioTimer",
       "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeState.j",
       "statementType": "VariableDeclaration"
     },
@@ -137,6 +182,24 @@
       "statementType": "VariableDeclaration"
     },
     {
+      "label": "RestTenderAudioTrackIndex",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger RestTenderAudioTrackIndex\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime/RestTimeState.j`",
+      "sortText": "2_var_RestTenderAudioTrackIndex",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeState.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "RestTenderAudioLastTrackIndex",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger RestTenderAudioLastTrackIndex\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime/RestTimeState.j`",
+      "sortText": "2_var_RestTenderAudioLastTrackIndex",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeState.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
       "label": "RestAmbientTownSound",
       "kind": 5,
       "detail": "Global Variable",
@@ -155,11 +218,38 @@
       "statementType": "VariableDeclaration"
     },
     {
+      "label": "RestTenderAudioSoundByPid",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nsound array RestTenderAudioSoundByPid\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime/RestTimeState.j`",
+      "sortText": "2_var_RestTenderAudioSoundByPid",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeState.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
       "label": "RestSurvivalEndSequenceActive",
       "kind": 5,
       "detail": "Global Variable",
       "documentation": "\n```jass\nboolean RestSurvivalEndSequenceActive\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime/RestTimeState.j`",
       "sortText": "2_var_RestSurvivalEndSequenceActive",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeState.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "RestTenderAudioRunning",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean RestTenderAudioRunning\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime/RestTimeState.j`",
+      "sortText": "2_var_RestTenderAudioRunning",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeState.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "RestTenderAudioActiveByPid",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean array RestTenderAudioActiveByPid\n```\n\n\n**_>:** `WaveSysAnAI/SwlsWave/RestTime/RestTimeState.j`",
+      "sortText": "2_var_RestTenderAudioActiveByPid",
       "filePath": "c:\\Users\\Leon\\Documents\\struct\\WaveSysAnAI\\SwlsWave\\RestTime\\RestTimeState.j",
       "statementType": "VariableDeclaration"
     },
@@ -173,5 +263,5 @@
       "statementType": "VariableDeclaration"
     }
   ],
-  "timestamp": 1777054099097
+  "timestamp": 1777579694751
 }

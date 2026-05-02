@@ -1,0 +1,11 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\WeaponInventoryCore.j",
+  "items": [
+    {
+      "symbolName": "WeaponInventoryValidPid",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\WeaponInventoryCore.j",
+      "content": "\n```jass\nfunction WeaponInventoryValidPid takes integer pid returns boolean\n```\n\n\n**文件:** `MyMissiles/WeaponInventoryCore.j`"
+    }
+  ],
+  "timestamp": 1777593733362
+}

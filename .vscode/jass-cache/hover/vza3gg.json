@@ -5,7 +5,12 @@
       "symbolName": "Init",
       "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\BloodMage\\Fireball.j",
       "content": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**文件:** `Pruebas/MissileExamples/BloodMage/Fireball.j`"
+    },
+    {
+      "symbolName": "Fireball",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\BloodMage\\Fireball.j",
+      "content": "\n```jass\nstruct Fireball extends array\n```\n\n\n---\n\n========================================================================\n\n*  Fireball code. Make changes carefully.\n\n========================================================================\n\n*  Uses Missile's API. Add or remove whatever you need.\n\n**文件:** `Pruebas/MissileExamples/BloodMage/Fireball.j`"
     }
   ],
-  "timestamp": 1775665632202
+  "timestamp": 1777315147092
 }

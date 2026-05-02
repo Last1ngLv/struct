@@ -66,8 +66,6 @@ library AudioPreloadConfig
         elseif idx == 22 then
             return "war3mapImported\\Trader 9 - Weapon Check-up.wav"
         elseif idx == 23 then
-            return "war3mapImported\\emptytown.wav"
-        elseif idx == 24 then
             return "war3mapImported\\SurvivalEnd.wav"
         endif
         return ""

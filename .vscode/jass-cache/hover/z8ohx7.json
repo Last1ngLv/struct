@@ -245,7 +245,12 @@
       "symbolName": "dex",
       "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
       "content": "\n```jass\nstruct dex extends array\n```\n\n\n**文件:** `build/AllCode.generated.j`"
+    },
+    {
+      "symbolName": "SwlsWaveStartTrigger",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "content": "\n```jass\ntrigger SwlsWaveStartTrigger\n```\n\n\n**文件:** `build/AllCode.generated.j`"
     }
   ],
-  "timestamp": 1776205784951
+  "timestamp": 1777597704283
 }

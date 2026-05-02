@@ -1,0 +1,51 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\WeaponInventorySystem.j",
+  "items": [
+    {
+      "label": "WeaponInventoryIsStraightProfile",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WeaponInventoryIsStraightProfile takes integer profileId returns boolean\n```\n\n\n**_>:** `MyMissiles/WeaponInventorySystem.j`",
+      "sortText": "1_func_WeaponInventoryIsStraightProfile",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\WeaponInventorySystem.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WeaponInventoryFireActive",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WeaponInventoryFireActive takes player p, real targetX, real targetY returns boolean\n```\n\n\n**_>:** `MyMissiles/WeaponInventorySystem.j`",
+      "sortText": "1_func_WeaponInventoryFireActive",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\WeaponInventorySystem.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnFireEffect",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnFireEffect takes nothing returns nothing\n```\n\n\n**_>:** `MyMissiles/WeaponInventorySystem.j`",
+      "sortText": "1_func_OnFireEffect",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\WeaponInventorySystem.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnAnySpellCast",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnAnySpellCast takes nothing returns nothing\n```\n\n\n**_>:** `MyMissiles/WeaponInventorySystem.j`",
+      "sortText": "1_func_OnAnySpellCast",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\WeaponInventorySystem.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**_>:** `MyMissiles/WeaponInventorySystem.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\WeaponInventorySystem.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1777579694723
+}

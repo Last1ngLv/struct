@@ -1,0 +1,285 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\WeaponInventoryCore.j",
+  "items": [
+    {
+      "label": "WEAPON_INVENTORY_SLOT_1",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WEAPON_INVENTORY_SLOT_1\n```\n\n\n**_>:** `MyMissiles/WeaponInventoryCore.j`",
+      "sortText": "2_var_WEAPON_INVENTORY_SLOT_1",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\WeaponInventoryCore.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WEAPON_INVENTORY_SLOT_2",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WEAPON_INVENTORY_SLOT_2\n```\n\n\n**_>:** `MyMissiles/WeaponInventoryCore.j`",
+      "sortText": "2_var_WEAPON_INVENTORY_SLOT_2",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\WeaponInventoryCore.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WEAPON_INVENTORY_SLOT_COUNT",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WEAPON_INVENTORY_SLOT_COUNT\n```\n\n\n**_>:** `MyMissiles/WeaponInventoryCore.j`",
+      "sortText": "2_var_WEAPON_INVENTORY_SLOT_COUNT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\WeaponInventoryCore.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WEAPON_INVENTORY_SLOT_STRIDE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer WEAPON_INVENTORY_SLOT_STRIDE\n```\n\n\n**_>:** `MyMissiles/WeaponInventoryCore.j`",
+      "sortText": "2_var_WEAPON_INVENTORY_SLOT_STRIDE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\WeaponInventoryCore.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WeaponInventorySlotProfile",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array WeaponInventorySlotProfile\n```\n\n\n**_>:** `MyMissiles/WeaponInventoryCore.j`",
+      "sortText": "2_var_WeaponInventorySlotProfile",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\WeaponInventoryCore.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WeaponInventorySlotAmmo",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array WeaponInventorySlotAmmo\n```\n\n\n**_>:** `MyMissiles/WeaponInventoryCore.j`",
+      "sortText": "2_var_WeaponInventorySlotAmmo",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\WeaponInventoryCore.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WeaponInventoryActiveSlot",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array WeaponInventoryActiveSlot\n```\n\n\n**_>:** `MyMissiles/WeaponInventoryCore.j`",
+      "sortText": "2_var_WeaponInventoryActiveSlot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\WeaponInventoryCore.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WeaponInventoryHudVersion",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array WeaponInventoryHudVersion\n```\n\n\n**_>:** `MyMissiles/WeaponInventoryCore.j`",
+      "sortText": "2_var_WeaponInventoryHudVersion",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\WeaponInventoryCore.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WeaponInventoryKey",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WeaponInventoryKey takes integer pid, integer slot returns integer\n```\n\n\n**_>:** `MyMissiles/WeaponInventoryCore.j`",
+      "sortText": "1_func_WeaponInventoryKey",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\WeaponInventoryCore.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WeaponInventoryValidPid",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WeaponInventoryValidPid takes integer pid returns boolean\n```\n\n\n**_>:** `MyMissiles/WeaponInventoryCore.j`",
+      "sortText": "1_func_WeaponInventoryValidPid",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\WeaponInventoryCore.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WeaponInventoryValidSlot",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WeaponInventoryValidSlot takes integer slot returns boolean\n```\n\n\n**_>:** `MyMissiles/WeaponInventoryCore.j`",
+      "sortText": "1_func_WeaponInventoryValidSlot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\WeaponInventoryCore.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WeaponInventoryValidHero",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WeaponInventoryValidHero takes unit hero returns boolean\n```\n\n\n**_>:** `MyMissiles/WeaponInventoryCore.j`",
+      "sortText": "1_func_WeaponInventoryValidHero",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\WeaponInventoryCore.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WeaponInventoryMarkDirtyByPid",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WeaponInventoryMarkDirtyByPid takes integer pid returns nothing\n```\n\n\n**_>:** `MyMissiles/WeaponInventoryCore.j`",
+      "sortText": "1_func_WeaponInventoryMarkDirtyByPid",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\WeaponInventoryCore.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WeaponInventoryRemoveLegacyAbilities",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WeaponInventoryRemoveLegacyAbilities takes unit hero returns nothing\n```\n\n\n**_>:** `MyMissiles/WeaponInventoryCore.j`",
+      "sortText": "1_func_WeaponInventoryRemoveLegacyAbilities",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\WeaponInventoryCore.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WeaponInventoryApplyProfileStats",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WeaponInventoryApplyProfileStats takes player p, integer profileId returns nothing\n```\n\n\n**_>:** `MyMissiles/WeaponInventoryCore.j`",
+      "sortText": "1_func_WeaponInventoryApplyProfileStats",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\WeaponInventoryCore.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WeaponInventoryGetHudVersion",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WeaponInventoryGetHudVersion takes player p returns integer\n```\n\n\n**_>:** `MyMissiles/WeaponInventoryCore.j`",
+      "sortText": "1_func_WeaponInventoryGetHudVersion",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\WeaponInventoryCore.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WeaponInventoryGetSlotProfile",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WeaponInventoryGetSlotProfile takes player p, integer slot returns integer\n```\n\n\n**_>:** `MyMissiles/WeaponInventoryCore.j`",
+      "sortText": "1_func_WeaponInventoryGetSlotProfile",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\WeaponInventoryCore.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WeaponInventoryGetSlotAmmo",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WeaponInventoryGetSlotAmmo takes player p, integer slot returns integer\n```\n\n\n**_>:** `MyMissiles/WeaponInventoryCore.j`",
+      "sortText": "1_func_WeaponInventoryGetSlotAmmo",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\WeaponInventoryCore.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WeaponInventoryGetActiveSlot",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WeaponInventoryGetActiveSlot takes player p returns integer\n```\n\n\n**_>:** `MyMissiles/WeaponInventoryCore.j`",
+      "sortText": "1_func_WeaponInventoryGetActiveSlot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\WeaponInventoryCore.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WeaponInventoryGetActiveProfile",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WeaponInventoryGetActiveProfile takes player p returns integer\n```\n\n\n**_>:** `MyMissiles/WeaponInventoryCore.j`",
+      "sortText": "1_func_WeaponInventoryGetActiveProfile",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\WeaponInventoryCore.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WeaponInventoryGetActiveAmmo",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WeaponInventoryGetActiveAmmo takes player p returns integer\n```\n\n\n**_>:** `MyMissiles/WeaponInventoryCore.j`",
+      "sortText": "1_func_WeaponInventoryGetActiveAmmo",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\WeaponInventoryCore.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WeaponInventorySetSlotWeapon",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WeaponInventorySetSlotWeapon takes player p, integer slot, integer profileId, integer ammo returns boolean\n```\n\n\n**_>:** `MyMissiles/WeaponInventoryCore.j`",
+      "sortText": "1_func_WeaponInventorySetSlotWeapon",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\WeaponInventoryCore.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WeaponInventoryResetSlotToHandgun",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WeaponInventoryResetSlotToHandgun takes player p, integer slot returns nothing\n```\n\n\n**_>:** `MyMissiles/WeaponInventoryCore.j`",
+      "sortText": "1_func_WeaponInventoryResetSlotToHandgun",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\WeaponInventoryCore.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WeaponInventorySetActiveSlot",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WeaponInventorySetActiveSlot takes player p, integer slot returns boolean\n```\n\n\n**_>:** `MyMissiles/WeaponInventoryCore.j`",
+      "sortText": "1_func_WeaponInventorySetActiveSlot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\WeaponInventoryCore.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WeaponInventoryEnsurePlayer",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WeaponInventoryEnsurePlayer takes player p returns nothing\n```\n\n\n**_>:** `MyMissiles/WeaponInventoryCore.j`",
+      "sortText": "1_func_WeaponInventoryEnsurePlayer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\WeaponInventoryCore.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WeaponInventoryGiveWeapon",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WeaponInventoryGiveWeapon takes player p, integer profileId, integer ammo returns boolean\n```\n\n\n**_>:** `MyMissiles/WeaponInventoryCore.j`",
+      "sortText": "1_func_WeaponInventoryGiveWeapon",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\WeaponInventoryCore.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WeaponInventoryConsumeShotForProfile",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WeaponInventoryConsumeShotForProfile takes player p, integer profileId returns boolean\n```\n\n\n**_>:** `MyMissiles/WeaponInventoryCore.j`",
+      "sortText": "1_func_WeaponInventoryConsumeShotForProfile",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\WeaponInventoryCore.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WeaponInventoryConsumeShot",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WeaponInventoryConsumeShot takes player p returns boolean\n```\n\n\n**_>:** `MyMissiles/WeaponInventoryCore.j`",
+      "sortText": "1_func_WeaponInventoryConsumeShot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\WeaponInventoryCore.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WeaponInventoryCanStartFire",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WeaponInventoryCanStartFire takes player p returns boolean\n```\n\n\n**_>:** `MyMissiles/WeaponInventoryCore.j`",
+      "sortText": "1_func_WeaponInventoryCanStartFire",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\WeaponInventoryCore.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "WeaponInventoryResetActiveSlotOnDeath",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WeaponInventoryResetActiveSlotOnDeath takes player p returns nothing\n```\n\n\n**_>:** `MyMissiles/WeaponInventoryCore.j`",
+      "sortText": "1_func_WeaponInventoryResetActiveSlotOnDeath",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\WeaponInventoryCore.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**_>:** `MyMissiles/WeaponInventoryCore.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\WeaponInventoryCore.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1777579694723
+}

@@ -55,7 +55,17 @@
       "symbolName": "event",
       "filePath": "c:\\Users\\Leon\\.antigravity\\extensions\\jass.jass-1.9.4\\static\\common.j",
       "content": "\n```jass\ntype event = agent\n```\n\n\n---\n\n事件\n\n**文件:** `c:\\Users\\Leon\\.antigravity\\extensions\\jass.jass-1.9.4\\static\\common.j`"
+    },
+    {
+      "symbolName": "GetPlayerRace",
+      "filePath": "c:\\Users\\Leon\\.antigravity\\extensions\\jass.jass-1.9.4\\static\\common.j",
+      "content": "\n```jass\nconstant native GetPlayerRace takes player whichPlayer returns race\n```\n\n\n---\n\n获取玩家种族\n\n返回值[RACE_NIGHTELF,RACE_HUMAN,RACE_ORC,RACE_UNDEAD]\n\n**文件:** `c:\\Users\\Leon\\.antigravity\\extensions\\jass.jass-1.9.4\\static\\common.j`"
+    },
+    {
+      "symbolName": "PLAYER_STATE_RESOURCE_GOLD",
+      "filePath": "c:\\Users\\Leon\\.antigravity\\extensions\\jass.jass-1.9.4\\static\\common.j",
+      "content": "\n```jass\nconstant playerstate PLAYER_STATE_RESOURCE_GOLD\n```\n\n\n---\n\ncurrent resource levels\n\n玩家状态 现有黄金量\n\n**文件:** `c:\\Users\\Leon\\.antigravity\\extensions\\jass.jass-1.9.4\\static\\common.j`"
     }
   ],
-  "timestamp": 1777091225542
+  "timestamp": 1777124557864
 }

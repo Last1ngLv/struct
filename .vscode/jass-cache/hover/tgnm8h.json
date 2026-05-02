@@ -1,0 +1,11 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\Multiboard\\InitialWaveMultiboard.j",
+  "items": [
+    {
+      "symbolName": "SetInitialBoardCell",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Multiboard\\InitialWaveMultiboard.j",
+      "content": "\n```jass\nfunction SetInitialBoardCell takes integer row, integer column, string value, real width returns nothing\n```\n\n\n**文件:** `Multiboard/InitialWaveMultiboard.j`"
+    }
+  ],
+  "timestamp": 1777492816430
+}

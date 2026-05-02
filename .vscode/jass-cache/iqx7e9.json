@@ -20,15 +20,6 @@
       "statementType": "VariableDeclaration"
     },
     {
-      "label": "SELECTION_PHASE_ELEMENT",
-      "kind": 5,
-      "detail": "Global Variable",
-      "documentation": "\n```jass\nconstant integer SELECTION_PHASE_ELEMENT\n```\n\n\n**_>:** `Selection/SelectionSystem.j`",
-      "sortText": "2_var_SELECTION_PHASE_ELEMENT",
-      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Selection\\SelectionSystem.j",
-      "statementType": "VariableDeclaration"
-    },
-    {
       "label": "SELECTION_PHASE_HERO",
       "kind": 5,
       "detail": "Global Variable",
@@ -47,29 +38,11 @@
       "statementType": "VariableDeclaration"
     },
     {
-      "label": "elementDialog",
-      "kind": 5,
-      "detail": "Global Variable",
-      "documentation": "\n```jass\ndialog array elementDialog\n```\n\n\n**_>:** `Selection/SelectionSystem.j`",
-      "sortText": "2_var_elementDialog",
-      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Selection\\SelectionSystem.j",
-      "statementType": "VariableDeclaration"
-    },
-    {
       "label": "heroButton",
       "kind": 5,
       "detail": "Global Variable",
       "documentation": "\n```jass\nbutton array heroButton\n```\n\n\n**_>:** `Selection/SelectionSystem.j`",
       "sortText": "2_var_heroButton",
-      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Selection\\SelectionSystem.j",
-      "statementType": "VariableDeclaration"
-    },
-    {
-      "label": "elementButton",
-      "kind": 5,
-      "detail": "Global Variable",
-      "documentation": "\n```jass\nbutton array elementButton\n```\n\n\n**_>:** `Selection/SelectionSystem.j`",
-      "sortText": "2_var_elementButton",
       "filePath": "c:\\Users\\Leon\\Documents\\struct\\Selection\\SelectionSystem.j",
       "statementType": "VariableDeclaration"
     },
@@ -83,15 +56,6 @@
       "statementType": "VariableDeclaration"
     },
     {
-      "label": "elementChoice",
-      "kind": 5,
-      "detail": "Global Variable",
-      "documentation": "\n```jass\ninteger array elementChoice\n```\n\n\n**_>:** `Selection/SelectionSystem.j`",
-      "sortText": "2_var_elementChoice",
-      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Selection\\SelectionSystem.j",
-      "statementType": "VariableDeclaration"
-    },
-    {
       "label": "heroChosen",
       "kind": 5,
       "detail": "Global Variable",
@@ -101,29 +65,11 @@
       "statementType": "VariableDeclaration"
     },
     {
-      "label": "elementChosen",
-      "kind": 5,
-      "detail": "Global Variable",
-      "documentation": "\n```jass\nboolean array elementChosen\n```\n\n\n**_>:** `Selection/SelectionSystem.j`",
-      "sortText": "2_var_elementChosen",
-      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Selection\\SelectionSystem.j",
-      "statementType": "VariableDeclaration"
-    },
-    {
       "label": "finished",
       "kind": 5,
       "detail": "Global Variable",
       "documentation": "\n```jass\nboolean array finished\n```\n\n\n**_>:** `Selection/SelectionSystem.j`",
       "sortText": "2_var_finished",
-      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Selection\\SelectionSystem.j",
-      "statementType": "VariableDeclaration"
-    },
-    {
-      "label": "totalElementChosen",
-      "kind": 5,
-      "detail": "Global Variable",
-      "documentation": "\n```jass\ninteger totalElementChosen\n```\n\n\n**_>:** `Selection/SelectionSystem.j`",
-      "sortText": "2_var_totalElementChosen",
       "filePath": "c:\\Users\\Leon\\Documents\\struct\\Selection\\SelectionSystem.j",
       "statementType": "VariableDeclaration"
     },
@@ -173,5 +119,5 @@
       "statementType": "StructDeclaration"
     }
   ],
-  "timestamp": 1777050097598
+  "timestamp": 1777579694745
 }

@@ -24,11 +24,6 @@ library RestTimeEndFlow requires HeroLives, TenderSystem, PreConfi, PlayerUtils,
         if SwlsMultiboard != null then
             call MultiboardSetTitleText(SwlsMultiboard, "|cFF66FF99Wave completada|r")
         endif
-        if SwlsSound != null then
-            call StopSound(SwlsSound, true, false)
-            set SwlsSound = null
-        endif
-
         set TargetWave = TargetWave + 1
         set WaveTgg = nextWaveFunc
         set isWavez = false
@@ -37,11 +32,17 @@ library RestTimeEndFlow requires HeroLives, TenderSystem, PreConfi, PlayerUtils,
         call ReviveAndHealHeroes()
 
         if TargetWave >= REST_FINAL_WAVE_DONE then
+            if SwlsSound != null then
+                call StopSound(SwlsSound, true, false)
+                set SwlsSound = null
+            endif
             call RestTimeStartSurvivalEndSequence()
             return
         endif
 
-        call RestTimeShowClientsForActivePlayers()
+        if SwlsSound != null then
+            call SetSoundVolume(SwlsSound, R2I(I2R(SwlsSoundWaveVolume) * 0.50))
+        endif
         call RestTimeRewardActivePlayers()
         call RestTimeAnimateTender()
         call RestTimeBeginCountdown(REST_PURCHASE_COUNTDOWN, REST_PHASE_PURCHASE)

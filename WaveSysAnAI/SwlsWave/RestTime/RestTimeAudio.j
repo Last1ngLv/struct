@@ -9,16 +9,7 @@ library RestTimeAudio requires RestTimeState
     endfunction
 
     function StartAmbientTownSound takes nothing returns nothing
-        call StopAmbientTownSound()
-        if REST_AMBIENT_TOWN_SOUND_PATH == null or REST_AMBIENT_TOWN_SOUND_PATH == "" then
-            return
-        endif
-        set RestAmbientTownSound = CreateSound(REST_AMBIENT_TOWN_SOUND_PATH, true, false, false, 12700, 12700, "")
-        if RestAmbientTownSound != null then
-            call SetSoundVolume(RestAmbientTownSound, 72)
-            call SetSoundPitch(RestAmbientTownSound, 1.00)
-            call StartSound(RestAmbientTownSound)
-        endif
+        // Desactivado: no hay ambiente emptytown al inicio ni en RestTime.
     endfunction
 
     function RestTimeStopSurvivalEndSound takes nothing returns nothing

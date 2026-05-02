@@ -1,6 +1,6 @@
 //TESH.scrollpos=0
 //TESH.alwaysfold=0
-library LoadoutRocketLauncher initializer Init requires TimerUtils, SpellIndex, Missile, PlayerMissileLoadout, DamageTextUtil, LoadoutOrbBalance, LoadoutIntFullManaSwapNew, Table, WaveBarrierSkills, WaveDamageCredit
+library LoadoutRocketLauncher initializer Init requires TimerUtils, SpellIndex, Missile, PlayerMissileLoadout, DamageTextUtil, LoadoutOrbBalance, LoadoutIntFullManaSwapNew, Table, WaveBarrierSkills, WaveDamageCredit, WeaponProfileConfig, WeaponInventoryCore
 //******************************************************************************
 // Shotgun-style burst spell that reuses TimerUtils, LoadoutMissile orb behavior.
 //******************************************************************************
@@ -18,7 +18,7 @@ library LoadoutRocketLauncher initializer Init requires TimerUtils, SpellIndex, 
         private constant attacktype ATTACK_TYPE = ATTACK_TYPE_NORMAL
         private constant damagetype DAMAGE_TYPE = DAMAGE_TYPE_MAGIC
 
-        private constant integer BURST_COUNT = 2
+        private constant integer BURST_COUNT = 1
         private constant real BURST_SPREAD_DEG = 05.
         private constant real BURST_STAGGER_INTERVAL = 0.03
         private constant real MISSILE_START_Z = 75.
@@ -30,7 +30,7 @@ library LoadoutRocketLauncher initializer Init requires TimerUtils, SpellIndex, 
         private constant real HOMING_TURN_RATE = 0.60
         private constant real HOMING_SCAN_INTERVAL = 0.10
         private constant real MISSILE_SCALE = 1.00
-        private constant real BASE_DAMAGE_MULT = 2
+        private constant real BASE_DAMAGE_MULT = 1
         private constant string BASE_MISSILE_MODEL = "Abilities\\Weapons\\Bolt\\BoltImpact.mdl"
         private constant string WRAP_ATTACH_POINT = "origin"
 
@@ -223,18 +223,27 @@ library LoadoutRocketLauncher initializer Init requires TimerUtils, SpellIndex, 
         set target = null
     endfunction
 
+    private function ContinueHomingAfterKill takes Missile missile returns boolean
+        set missile.target = null
+        set homingScanRemaining[missile] = 0.
+        call ResumeStraightFlight(missile)
+        return false
+    endfunction
+
     function GetLoadoutRocketLauncherMoveCastDuration takes nothing returns real
-        return FIRE_DURATION
+        return WeaponProfileGetCastDuration(WEAPON_PROFILE_ENEMY_CHASER)
     endfunction
 
     private function GetSafeFireInterval takes nothing returns real
-        if FIRE_DURATION <= 0. then
+        local real duration = WeaponProfileGetCastDuration(WEAPON_PROFILE_ENEMY_CHASER)
+        local integer count = WeaponProfileGetCastCount(WEAPON_PROFILE_ENEMY_CHASER)
+        if duration <= 0. then
             return 0.03125
         endif
-        if FIRE_COUNT <= 0 then
-            return FIRE_DURATION
+        if count <= 0 then
+            return duration
         endif
-        return FIRE_DURATION / I2R(FIRE_COUNT)
+        return duration / I2R(count)
     endfunction
 
     private function PoisonListAdd takes SpellIndex dex returns nothing
@@ -365,7 +374,11 @@ library LoadoutRocketLauncher initializer Init requires TimerUtils, SpellIndex, 
             endif
 
             if not bonusActive[missile] then
+                set wasAlive = UnitAlive(hit)
                 call DamageUnit(missile.source, hit, baseDamage)
+                if wasAlive and not UnitAlive(hit) then
+                    return ContinueHomingAfterKill(missile)
+                endif
                 return true
             endif
 
@@ -381,37 +394,64 @@ library LoadoutRocketLauncher initializer Init requires TimerUtils, SpellIndex, 
                     return false
                 endif
                 call ShowCustomLoadoutText(hit, FormatLoadoutDamageText(baseDamage) + "/[0]", RAY_TEXT_R, RAY_TEXT_G, RAY_TEXT_B)
+                if wasAlive and not UnitAlive(hit) then
+                    return ContinueHomingAfterKill(missile)
+                endif
                 return true
             elseif abil == LOADOUT_ORB_ABILITY_FIRE then
                 set finalDamage = LoadoutGetFireDamage(baseDamage, inst)
+                set wasAlive = UnitAlive(hit)
                 call DamageUnit(missile.source, hit, finalDamage)
                 call ShowCustomLoadoutText(hit, FormatLoadoutDamageText(finalDamage), FIRE_TEXT_R, FIRE_TEXT_G, FIRE_TEXT_B)
+                if wasAlive and not UnitAlive(hit) then
+                    return ContinueHomingAfterKill(missile)
+                endif
                 return true
             elseif abil == LOADOUT_ORB_ABILITY_POISON then
+                set wasAlive = UnitAlive(hit)
                 call ApplyPoison(missile.source, hit, LoadoutGetPoisonTickDamage(baseDamage), LoadoutGetPoisonDuration(inst))
+                if wasAlive and not UnitAlive(hit) then
+                    return ContinueHomingAfterKill(missile)
+                endif
                 return true
             elseif abil == LOADOUT_ORB_ABILITY_WIND then
                 set radius = LoadoutGetWindAoe(inst)
                 set finalDamage = LoadoutGetWindDamage(baseDamage)
+                set wasAlive = UnitAlive(hit)
                 call DamageArea(missile.source, missile.owner, missile.x, missile.y, radius, finalDamage)
                 call ShowCustomLoadoutText(hit, FormatLoadoutDamageText(finalDamage) + "/[" + FormatLoadoutDamageText(radius) + "]", WIND_TEXT_R, WIND_TEXT_G, WIND_TEXT_B)
+                if wasAlive and not UnitAlive(hit) then
+                    return ContinueHomingAfterKill(missile)
+                endif
                 return true
             elseif abil == LOADOUT_ORB_ABILITY_DARK then
                 set extraDamage = LoadoutGetDarkBonus(hit, inst)
                 set finalDamage = baseDamage + extraDamage
+                set wasAlive = UnitAlive(hit)
                 call DamageUnit(missile.source, hit, finalDamage)
                 call ShowCustomLoadoutText(hit, FormatLoadoutDamageText(finalDamage), DARK_TEXT_R, DARK_TEXT_G, DARK_TEXT_B)
+                if wasAlive and not UnitAlive(hit) then
+                    return ContinueHomingAfterKill(missile)
+                endif
                 return true
             elseif abil == LOADOUT_ORB_ABILITY_BLOOD then
                 set bloodMult = LoadoutGetBloodRandomMultiplier(inst)
                 set finalDamage = baseDamage*bloodMult
                 set bloodPct = LoadoutBloodMultiplierToPercent(bloodMult)
+                set wasAlive = UnitAlive(hit)
                 call DamageUnit(missile.source, hit, finalDamage)
                 call ShowCustomLoadoutText(hit, FormatLoadoutDamageText(finalDamage) + "   //" + I2S(bloodPct) + "%", CRIT_TEXT_R, CRIT_TEXT_G, CRIT_TEXT_B)
+                if wasAlive and not UnitAlive(hit) then
+                    return ContinueHomingAfterKill(missile)
+                endif
                 return true
             endif
 
+            set wasAlive = UnitAlive(hit)
             call DamageUnit(missile.source, hit, baseDamage)
+            if wasAlive and not UnitAlive(hit) then
+                return ContinueHomingAfterKill(missile)
+            endif
             return true
         endmethod
 
@@ -460,7 +500,7 @@ library LoadoutRocketLauncher initializer Init requires TimerUtils, SpellIndex, 
     private function LaunchBurstMissile takes unit source, player owner, real x, real y, real angle, integer chosen, boolean burstBonus, real damage, integer instances, string baseModel, string wrapModel returns nothing
         local SpellIndex mDex = SpellIndex.create()
         local Missile missile = Missile.create(x, y, MISSILE_START_Z, angle, SHOT_DISTANCE, MISSILE_START_Z)
-        local real speed = BASE_MISSILE_SPEED + GetPlayerMissileSpeedBonus(owner)
+        local real speed = WeaponProfileGetMissileSpeed(WEAPON_PROFILE_ENEMY_CHASER) + GetPlayerMissileSpeedBonus(owner)
 
         if speed < MIN_MISSILE_SPEED then
             set speed = MIN_MISSILE_SPEED
@@ -471,7 +511,7 @@ library LoadoutRocketLauncher initializer Init requires TimerUtils, SpellIndex, 
         set missile.owner = owner
         set missile.data = mDex
         set missile.model = baseModel
-        set missile.scale = MISSILE_SCALE
+        set missile.scale = WeaponProfileGetMissileScale(WEAPON_PROFILE_ENEMY_CHASER)
         set missile.collision = MISSILE_COLLISION
         call missile.setMovementSpeed(speed)
         set missile.turn = 0.
@@ -556,8 +596,37 @@ library LoadoutRocketLauncher initializer Init requires TimerUtils, SpellIndex, 
         if shot < 0 or shot >= burstCount then
             return
         endif
+        if not WeaponInventoryConsumeShotForProfile(dex.user, WEAPON_PROFILE_ENEMY_CHASER) then
+            return
+        endif
         set angle = burstBaseAngle[dex] + (BurstOffsetForShot(shot, burstCount)*BURST_SPREAD_DEG)*bj_DEGTORAD
         call LaunchBurstMissile(dex.source, dex.user, burstX[dex], burstY[dex], angle, burstChosen[dex], burstBonusActive[dex], burstDamage[dex], burstInstances[dex], burstBaseModel[dex], burstWrapModel[dex])
+    endfunction
+
+    private function Cleanup takes SpellIndex dex returns nothing
+        local integer id = 0
+        if dex == 0 or dex.phase == -999 then
+            return
+        endif
+        set dex.phase = -999
+        set id = GetHandleId(dex.source)
+        if active.has(id) and (active[id] == dex) then
+            call active.remove(id)
+        endif
+        if GetUnitTypeId(dex.source) != 0 then
+            call SetUnitTimeScale(dex.source, ANIMATION_TIME_SCALE_ON_END)
+        endif
+        if delayedAnimTimer[dex] != null then
+            call ReleaseTimer(delayedAnimTimer[dex])
+            set delayedAnimTimer[dex] = null
+        endif
+        call BurstStop(dex)
+        set aim[dex] = 0.
+        if dex.clock != null then
+            call ReleaseTimer(dex.clock)
+            set dex.clock = null
+        endif
+        call dex.destroy()
     endfunction
 
     private function OnBurstTick takes nothing returns nothing
@@ -571,8 +640,15 @@ library LoadoutRocketLauncher initializer Init requires TimerUtils, SpellIndex, 
             return
         endif
 
-        if (burstTimer[dex] != t) or (burstShotIndex[dex] >= BURST_COUNT) or (GetUnitTypeId(dex.source) == 0) or (not UnitAlive(dex.source)) or (dex.phase < 0) then
-            call BurstStop(dex)
+        if (burstTimer[dex] != t) then
+            set t = null
+            return
+        endif
+
+        if (burstShotIndex[dex] >= BURST_COUNT) or (GetUnitTypeId(dex.source) == 0) or (not UnitAlive(dex.source)) or (dex.phase < 0) then
+            set burstTimer[dex] = null
+            call Cleanup(dex)
+            call ReleaseTimer(t)
             set t = null
             return
         endif
@@ -582,7 +658,15 @@ library LoadoutRocketLauncher initializer Init requires TimerUtils, SpellIndex, 
         set burstShotIndex[dex] = shot + 1
 
         if burstShotIndex[dex] >= BURST_COUNT then
-            call BurstStop(dex)
+            if dex.time <= 0. then
+                set burstTimer[dex] = null
+                call Cleanup(dex)
+                call ReleaseTimer(t)
+                set t = null
+                return
+            else
+                call BurstStop(dex)
+            endif
         endif
 
         set t = null
@@ -594,9 +678,9 @@ library LoadoutRocketLauncher initializer Init requires TimerUtils, SpellIndex, 
         local real x = GetUnitX(source)
         local real y = GetUnitY(source)
         local real baseAngle = aim[dex]
-        local string baseModel = GetPlayerMissileModelPath(owner)
+        local string baseModel = WeaponProfileGetTierMissileModel(WEAPON_PROFILE_ENEMY_CHASER, 1)
         local string wrapModel = GetPlayerMissileOverlayModelPath(owner)
-        local real damage = GetPlayerMissileDamageValue(owner)*BASE_DAMAGE_MULT
+        local real damage = WeaponProfileGetDamage(WEAPON_PROFILE_ENEMY_CHASER)*BASE_DAMAGE_MULT
         local integer instances = GetPlayerMissileInstanceCount(owner)
         local integer chosen = GetPlayerMissileAbilityChoice(owner)
         local integer chosenLevel = 0
@@ -645,31 +729,13 @@ library LoadoutRocketLauncher initializer Init requires TimerUtils, SpellIndex, 
 
         if BURST_COUNT > 1 then
             set burstTimer[dex] = NewTimerEx(dex)
-        call SetTimerDebugTag(burstTimer[dex], TIMER_DEBUG_TAG_LOADOUT_ROCKET)
+            call SetTimerDebugTag(burstTimer[dex], TIMER_DEBUG_TAG_LOADOUT_ROCKET)
             call TimerStart(burstTimer[dex], GetBurstStaggerInterval(), true, function OnBurstTick)
         else
             call BurstStop(dex)
         endif
         set source = null
         set owner = null
-    endfunction
-
-    private function Cleanup takes SpellIndex dex returns nothing
-        local integer id = GetHandleId(dex.source)
-        if active.has(id) and (active[id] == dex) then
-            call active.remove(id)
-        endif
-        if GetUnitTypeId(dex.source) != 0 then
-            call SetUnitTimeScale(dex.source, ANIMATION_TIME_SCALE_ON_END)
-        endif
-        if delayedAnimTimer[dex] != null then
-            call ReleaseTimer(delayedAnimTimer[dex])
-            set delayedAnimTimer[dex] = null
-        endif
-        call BurstStop(dex)
-        set aim[dex] = 0.
-        call ReleaseTimer(dex.clock)
-        call dex.destroy()
     endfunction
 
     private function DelayedStartAnimation takes nothing returns nothing
@@ -738,29 +804,32 @@ library LoadoutRocketLauncher initializer Init requires TimerUtils, SpellIndex, 
         call MarkCanceled(GetTriggerUnit())
     endfunction
 
-    private function OnEffect takes nothing returns nothing
-        local unit source = GetTriggerUnit()
-        local player owner = GetTriggerPlayer()
+    function LoadoutRocketLauncherFire takes unit source, player owner, real tx, real ty returns boolean
         local integer id = GetHandleId(source)
         local SpellIndex dex
         local real x = GetUnitX(source)
         local real y = GetUnitY(source)
-        local real tx = GetSpellTargetX()
-        local real ty = GetSpellTargetY()
         local real step = GetSafeFireInterval()
         local boolean useRapid
+        local real duration = WeaponProfileGetCastDuration(WEAPON_PROFILE_ENEMY_CHASER)
 
-        set useRapid = GetPlayerMissileUseRapidFireControl(owner)
+        set useRapid = true
 
         if active.has(id) then
             set dex = active[id]
             if (dex.phase >= 0) and (GetUnitTypeId(dex.source) != 0) and UnitAlive(dex.source) then
                 set aim[dex] = Atan2(ty - y, tx - x)
-                set dex.time = FIRE_DURATION
+                // If a rocket burst is still emitting missiles, do not promote
+                // this recast into dex.time > 0. Otherwise the last burst tick
+                // only stops the burst timer and leaves active[dex] stuck with
+                // no periodic timer, making future casts return without firing.
+                if burstTimer[dex] != null then
+                    call SetUnitTimeScale(source, RAPID_FIRE_ANIMATION_TIME_SCALE)
+                    return true
+                endif
+                set dex.time = duration
                 call SetUnitTimeScale(source, RAPID_FIRE_ANIMATION_TIME_SCALE)
-                set source = null
-                set owner = null
-                return
+                return true
             endif
             call Cleanup(dex)
         endif
@@ -768,8 +837,8 @@ library LoadoutRocketLauncher initializer Init requires TimerUtils, SpellIndex, 
         set dex = SpellIndex.create()
         set dex.source = source
         set dex.user = owner
-        if useRapid and (FIRE_DURATION > 0.) then
-            set dex.time = FIRE_DURATION
+        if useRapid and (duration > 0.) then
+            set dex.time = duration
         else
             set dex.time = 0.
         endif
@@ -788,10 +857,17 @@ library LoadoutRocketLauncher initializer Init requires TimerUtils, SpellIndex, 
 
         if dex.time > 0. then
             call TimerStart(dex.clock, step, true, function OnPeriodic)
-        else
+        elseif burstTimer[dex] == null then
             call Cleanup(dex)
         endif
 
+        return true
+    endfunction
+
+    private function OnEffect takes nothing returns nothing
+        local unit source = GetTriggerUnit()
+        local player owner = GetTriggerPlayer()
+        call LoadoutRocketLauncherFire(source, owner, GetSpellTargetX(), GetSpellTargetY())
         set source = null
         set owner = null
     endfunction

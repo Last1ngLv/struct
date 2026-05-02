@@ -165,7 +165,212 @@
       "symbolName": "PlayerMenuHealthBarPreSelect",
       "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
       "content": "\n```jass\nboolean array PlayerMenuHealthBarPreSelect\n```\n\n\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "HUB_SLOT_UPGRADES",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nstatic constant integer HUB_SLOT_UPGRADES\n```\n\n\n**所属:** `Client`\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "WINDOW_DUMMY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nstatic constant integer WINDOW_DUMMY\n```\n\n\n**所属:** `Client`\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "PlayerMenuShowShop",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nboolean array PlayerMenuShowShop\n```\n\n\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "applyModelVisibility",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nmethod applyModelVisibility takes nothing returns nothing\n```\n\n\n**所属:** `Client`\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "isTreePanelVisible",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nmethod isTreePanelVisible takes nothing returns boolean\n```\n\n\n**所属:** `Client`\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "DesignLocalInt",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nfunction DesignLocalInt takes integer pid, integer value, integer other returns integer\n```\n\n\n---\n\nVersion local de Inventory.localInt para mostrar solo al jugador local.\n\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "MODEL_DUMMY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nstatic constant integer MODEL_DUMMY\n```\n\n\n**所属:** `Client`\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "isMutationPanelVisible",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nmethod isMutationPanelVisible takes nothing returns boolean\n```\n\n\n**所属:** `Client`\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "isShopPanelVisible",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nmethod isShopPanelVisible takes nothing returns boolean\n```\n\n\n**所属:** `Client`\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "SHOP_DETAIL_ICON_PICTURE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nstatic constant integer SHOP_DETAIL_ICON_PICTURE\n```\n\n\n**所属:** `Client`\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "SHOP_LABEL_PLASMA_TEXT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nstatic constant integer SHOP_LABEL_PLASMA_TEXT\n```\n\n\n**所属:** `Client`\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "HUB_SLOT_SHOP",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nstatic constant integer HUB_SLOT_SHOP\n```\n\n\n**所属:** `Client`\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "SHOP_DETAIL_BUY_BUTTON",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nstatic constant integer SHOP_DETAIL_BUY_BUTTON\n```\n\n\n**所属:** `Client`\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "getShopWeaponDetail",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nmethod getShopWeaponDetail takes integer weaponIndex returns string\n```\n\n\n**所属:** `Client`\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "SHOP_DETAIL_TREE_BUTTON",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nstatic constant integer SHOP_DETAIL_TREE_BUTTON\n```\n\n\n**所属:** `Client`\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "getShopWeaponTexture",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nmethod getShopWeaponTexture takes integer weaponIndex returns integer\n```\n\n\n**所属:** `Client`\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "SHOP_DETAIL_BUY_TEXT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nstatic constant integer SHOP_DETAIL_BUY_TEXT\n```\n\n\n**所属:** `Client`\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "SHOP_DETAIL_TITLE_TEXT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nstatic constant integer SHOP_DETAIL_TITLE_TEXT\n```\n\n\n**所属:** `Client`\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "getShopWeaponName",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nstatic method getShopWeaponName takes integer weaponIndex returns string\n```\n\n\n**所属:** `Client`\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "SHOP_LABEL_RIFLE_TEXT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nstatic constant integer SHOP_LABEL_RIFLE_TEXT\n```\n\n\n**所属:** `Client`\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "MenuClientSelectPanel",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nfunction MenuClientSelectPanel takes Client equip, integer panelSlot returns nothing\n```\n\n\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "getShopWeaponIndexFromSlot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nstatic method getShopWeaponIndexFromSlot takes integer slot returns integer\n```\n\n\n**所属:** `Client`\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "SHOP_DETAIL_TREE_TEXT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nstatic constant integer SHOP_DETAIL_TREE_TEXT\n```\n\n\n**所属:** `Client`\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "WaveEnemyPreviewFx",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\neffect array WaveEnemyPreviewFx\n```\n\n\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "SHOP_LABEL_TRACKER_TEXT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nstatic constant integer SHOP_LABEL_TRACKER_TEXT\n```\n\n\n**所属:** `Client`\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "SHOP_LABEL_PISTOL_TEXT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nstatic constant integer SHOP_LABEL_PISTOL_TEXT\n```\n\n\n**所属:** `Client`\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "shouldShowButton",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nmethod shouldShowButton takes integer slot returns boolean\n```\n\n\n**所属:** `Client`\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "HUB_TOOLTIP_BACKGROUND",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nstatic constant integer HUB_TOOLTIP_BACKGROUND\n```\n\n\n**所属:** `Client`\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "HUB_TOOLTIP_X",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nstatic constant real HUB_TOOLTIP_X\n```\n\n\n**所属:** `Client`\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "HUB_Y_OFFSET",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nstatic constant real HUB_Y_OFFSET\n```\n\n\n**所属:** `Client`\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "SHOP_LABEL_HEAD_TEXT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nstatic constant integer SHOP_LABEL_HEAD_TEXT\n```\n\n\n**所属:** `Client`\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "getShopItemTexture",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nstatic method getShopItemTexture takes integer itemIndex returns integer\n```\n\n\n**所属:** `Client`\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "HUB_TOOLTIP_Y",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nstatic constant real HUB_TOOLTIP_Y\n```\n\n\n**所属:** `Client`\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "SHOP_SLOT_PLASMA",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nstatic constant integer SHOP_SLOT_PLASMA\n```\n\n\n**所属:** `Client`\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "StepMenuCameraHeight",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nfunction StepMenuCameraHeight takes integer pid, real delta returns nothing\n```\n\n\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "setWaveStatusTitle",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nmethod setWaveStatusTitle takes string value returns nothing\n```\n\n\n**所属:** `Client`\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "DisplayCount",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nstatic readonly integer DisplayCount\n```\n\n\n**所属:** `Client`\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "PlayerLastButton",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nUIButton array PlayerLastButton\n```\n\n\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "WEAPON_HUD_TEXT_Y",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nstatic constant real WEAPON_HUD_TEXT_Y\n```\n\n\n**所属:** `Client`\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "WEAPON_HUD_TEXT_X",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nstatic constant real WEAPON_HUD_TEXT_X\n```\n\n\n**所属:** `Client`\n**文件:** `UI System/MyIU/MenuClient.j`"
+    },
+    {
+      "symbolName": "WEAPON_HUD_ICON_SIZE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\MenuClient.j",
+      "content": "\n```jass\nstatic constant real WEAPON_HUD_ICON_SIZE\n```\n\n\n**所属:** `Client`\n**文件:** `UI System/MyIU/MenuClient.j`"
     }
   ],
-  "timestamp": 1776566624423
+  "timestamp": 1777581201706
 }

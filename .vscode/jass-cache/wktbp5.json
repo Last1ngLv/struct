@@ -29,6 +29,15 @@
       "statementType": "VariableDeclaration"
     },
     {
+      "label": "DETECT_EPSILON",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real DETECT_EPSILON\n```\n\n\n**_>:** `libraries/SpacebarDetect.j`",
+      "sortText": "2_var_DETECT_EPSILON",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SpacebarDetect.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
       "label": "FireEvent",
       "kind": 5,
       "detail": "Global Variable",
@@ -128,6 +137,15 @@
       "statementType": "FunctionDeclaration"
     },
     {
+      "label": "IsDetectCameraTarget",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction IsDetectCameraTarget takes real x, real y returns boolean\n```\n\n\n**_>:** `libraries/SpacebarDetect.j`",
+      "sortText": "1_func_IsDetectCameraTarget",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\libraries\\SpacebarDetect.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
       "label": "OnMapStart",
       "kind": 2,
       "detail": "Function",
@@ -146,5 +164,5 @@
       "statementType": "FunctionDeclaration"
     }
   ],
-  "timestamp": 1777091811046
+  "timestamp": 1777579694693
 }

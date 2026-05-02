@@ -1,0 +1,267 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout IronLizard.j",
+  "items": [
+    {
+      "label": "MISSILE_START_Z",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real MISSILE_START_Z\n```\n\n\n**_>:** `MyMissiles/Loadout IronLizard.j`",
+      "sortText": "2_var_MISSILE_START_Z",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout IronLizard.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "MISSILE_COLLISION",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real MISSILE_COLLISION\n```\n\n\n**_>:** `MyMissiles/Loadout IronLizard.j`",
+      "sortText": "2_var_MISSILE_COLLISION",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout IronLizard.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "MISSILE_FORWARD_OFFSET",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real MISSILE_FORWARD_OFFSET\n```\n\n\n**_>:** `MyMissiles/Loadout IronLizard.j`",
+      "sortText": "2_var_MISSILE_FORWARD_OFFSET",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout IronLizard.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "LIZARD_RANGE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real LIZARD_RANGE\n```\n\n\n**_>:** `MyMissiles/Loadout IronLizard.j`",
+      "sortText": "2_var_LIZARD_RANGE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout IronLizard.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "LIZARD_MAX_BOUNCES",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer LIZARD_MAX_BOUNCES\n```\n\n\n**_>:** `MyMissiles/Loadout IronLizard.j`",
+      "sortText": "2_var_LIZARD_MAX_BOUNCES",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout IronLizard.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "IMPACT_ATTACH",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant string IMPACT_ATTACH\n```\n\n\n**_>:** `MyMissiles/Loadout IronLizard.j`",
+      "sortText": "2_var_IMPACT_ATTACH",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout IronLizard.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "ATTACK_TYPE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant attacktype ATTACK_TYPE\n```\n\n\n**_>:** `MyMissiles/Loadout IronLizard.j`",
+      "sortText": "2_var_ATTACK_TYPE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout IronLizard.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DAMAGE_TYPE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant damagetype DAMAGE_TYPE\n```\n\n\n**_>:** `MyMissiles/Loadout IronLizard.j`",
+      "sortText": "2_var_DAMAGE_TYPE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout IronLizard.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "active",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable active\n```\n\n\n**_>:** `MyMissiles/Loadout IronLizard.j`",
+      "sortText": "2_var_active",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout IronLizard.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "castAngle",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array castAngle\n```\n\n\n**_>:** `MyMissiles/Loadout IronLizard.j`",
+      "sortText": "2_var_castAngle",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout IronLizard.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "castTargetX",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array castTargetX\n```\n\n\n**_>:** `MyMissiles/Loadout IronLizard.j`",
+      "sortText": "2_var_castTargetX",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout IronLizard.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "castTargetY",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array castTargetY\n```\n\n\n**_>:** `MyMissiles/Loadout IronLizard.j`",
+      "sortText": "2_var_castTargetY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout IronLizard.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "lizardDamage",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array lizardDamage\n```\n\n\n**_>:** `MyMissiles/Loadout IronLizard.j`",
+      "sortText": "2_var_lizardDamage",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout IronLizard.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "lizardBouncesLeft",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array lizardBouncesLeft\n```\n\n\n**_>:** `MyMissiles/Loadout IronLizard.j`",
+      "sortText": "2_var_lizardBouncesLeft",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout IronLizard.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "lizardSource",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nunit array lizardSource\n```\n\n\n**_>:** `MyMissiles/Loadout IronLizard.j`",
+      "sortText": "2_var_lizardSource",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout IronLizard.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "lizardOwner",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nplayer array lizardOwner\n```\n\n\n**_>:** `MyMissiles/Loadout IronLizard.j`",
+      "sortText": "2_var_lizardOwner",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout IronLizard.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "GetSafeFireInterval",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetSafeFireInterval takes nothing returns real\n```\n\n\n**_>:** `MyMissiles/Loadout IronLizard.j`",
+      "sortText": "1_func_GetSafeFireInterval",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout IronLizard.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "FilterUnits",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction FilterUnits takes unit target, player owner returns boolean\n```\n\n\n**_>:** `MyMissiles/Loadout IronLizard.j`",
+      "sortText": "1_func_FilterUnits",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout IronLizard.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "DamageUnit",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction DamageUnit takes unit source, unit target, real amount returns boolean\n```\n\n\n**_>:** `MyMissiles/Loadout IronLizard.j`",
+      "sortText": "1_func_DamageUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout IronLizard.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "ShowIronImpact",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ShowIronImpact takes unit target returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout IronLizard.j`",
+      "sortText": "1_func_ShowIronImpact",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout IronLizard.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "BounceIronLizard",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction BounceIronLizard takes Missile missile, real normalX, real normalY returns boolean\n```\n\n\n**_>:** `MyMissiles/Loadout IronLizard.j`",
+      "sortText": "1_func_BounceIronLizard",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout IronLizard.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "IronLizardCore",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct IronLizardCore extends array\n```\n\n\n**_>:** `MyMissiles/Loadout IronLizard.j`",
+      "sortText": "1_struct_IronLizardCore",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout IronLizard.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "LaunchIronLizard",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction LaunchIronLizard takes unit source, player owner, real angle returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout IronLizard.j`",
+      "sortText": "1_func_LaunchIronLizard",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout IronLizard.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "CleanupCast",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction CleanupCast takes SpellIndex dex returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout IronLizard.j`",
+      "sortText": "1_func_CleanupCast",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout IronLizard.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "FireCastShot",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction FireCastShot takes SpellIndex dex returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout IronLizard.j`",
+      "sortText": "1_func_FireCastShot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout IronLizard.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnCastTick",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnCastTick takes nothing returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout IronLizard.j`",
+      "sortText": "1_func_OnCastTick",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout IronLizard.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "LoadoutIronLizardFire",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction LoadoutIronLizardFire takes unit source, player owner, real tx, real ty returns boolean\n```\n\n\n**_>:** `MyMissiles/Loadout IronLizard.j`",
+      "sortText": "1_func_LoadoutIronLizardFire",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout IronLizard.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "OnEffect",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction OnEffect takes nothing returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout IronLizard.j`",
+      "sortText": "1_func_OnEffect",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout IronLizard.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**_>:** `MyMissiles/Loadout IronLizard.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout IronLizard.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1777579694716
+}

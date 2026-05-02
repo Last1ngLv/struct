@@ -1,0 +1,21 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\WeaponSelectionSystem.j",
+  "items": [
+    {
+      "symbolName": "WEAPON_PROFILE_KEY_STRIDE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\WeaponSelectionSystem.j",
+      "content": "\n```jass\nconstant integer WEAPON_PROFILE_KEY_STRIDE\n```\n\n\n**文件:** `MyMissiles/WeaponSelectionSystem.j`"
+    },
+    {
+      "symbolName": "WeaponSelectionPlaySwitchSound",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\WeaponSelectionSystem.j",
+      "content": "\n```jass\nfunction WeaponSelectionPlaySwitchSound takes nothing returns nothing\n```\n\n\n**文件:** `MyMissiles/WeaponSelectionSystem.j`"
+    },
+    {
+      "symbolName": "PlayerHasWeaponProfile",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\WeaponSelectionSystem.j",
+      "content": "\n```jass\nfunction PlayerHasWeaponProfile takes player p, integer profileId returns boolean\n```\n\n\n---\n\nCompatibility layer for older systems that still call the previous\n\nweapon-selection API. The actual Metal Slug inventory lives in\n\nWeaponInventoryCore/WeaponInventorySystem.\n\n**文件:** `MyMissiles/WeaponSelectionSystem.j`"
+    }
+  ],
+  "timestamp": 1777580506071
+}

@@ -1,0 +1,21 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\MenuClient_full_legacy_before_cleanup.j",
+  "items": [
+    {
+      "symbolName": "setWaveStatusTitle",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\MenuClient_full_legacy_before_cleanup.j",
+      "content": "\n```jass\nmethod setWaveStatusTitle takes string value returns nothing\n```\n\n\n**所属:** `Client`\n**文件:** `Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j`"
+    },
+    {
+      "symbolName": "DisplayCount",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\MenuClient_full_legacy_before_cleanup.j",
+      "content": "\n```jass\nstatic readonly integer DisplayCount\n```\n\n\n**所属:** `Client`\n**文件:** `Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j`"
+    },
+    {
+      "symbolName": "PlayerLastButton",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\Reworks\\MenuClient_full_legacy_before_cleanup.j",
+      "content": "\n```jass\nUIButton array PlayerLastButton\n```\n\n\n**文件:** `Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j`"
+    }
+  ],
+  "timestamp": 1777580844121
+}

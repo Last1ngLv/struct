@@ -40,7 +40,32 @@
       "symbolName": "FIRE_TEXT_R",
       "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Loadout Missile(test v2).j",
       "content": "\n```jass\nconstant integer FIRE_TEXT_R\n```\n\n\n**文件:** `Pruebas/MissileExamples/Loadout Missile(test v2).j`"
+    },
+    {
+      "symbolName": "RAY_TEXT_B",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Loadout Missile(test v2).j",
+      "content": "\n```jass\nconstant integer RAY_TEXT_B\n```\n\n\n**文件:** `Pruebas/MissileExamples/Loadout Missile(test v2).j`"
+    },
+    {
+      "symbolName": "BASE_MISSILE_MODEL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Loadout Missile(test v2).j",
+      "content": "\n```jass\nconstant string BASE_MISSILE_MODEL\n```\n\n\n**文件:** `Pruebas/MissileExamples/Loadout Missile(test v2).j`"
+    },
+    {
+      "symbolName": "FIXED_TRAVEL_DISTANCE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Loadout Missile(test v2).j",
+      "content": "\n```jass\nconstant real FIXED_TRAVEL_DISTANCE\n```\n\n\n**文件:** `Pruebas/MissileExamples/Loadout Missile(test v2).j`"
+    },
+    {
+      "symbolName": "BASE_MISSILE_SPEED",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Loadout Missile(test v2).j",
+      "content": "\n```jass\nconstant real BASE_MISSILE_SPEED\n```\n\n\n---\n\n* Base missile defaults.\n\n**文件:** `Pruebas/MissileExamples/Loadout Missile(test v2).j`"
+    },
+    {
+      "symbolName": "MIN_MISSILE_SPEED",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Pruebas\\MissileExamples\\Loadout Missile(test v2).j",
+      "content": "\n```jass\nconstant real MIN_MISSILE_SPEED\n```\n\n\n**文件:** `Pruebas/MissileExamples/Loadout Missile(test v2).j`"
     }
   ],
-  "timestamp": 1776204759943
+  "timestamp": 1777316531012
 }

@@ -1,0 +1,21 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\PrisonerDropSystem.j",
+  "items": [
+    {
+      "symbolName": "PRISONER_ASCEND_TARGET",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\PrisonerDropSystem.j",
+      "content": "\n```jass\nconstant real PRISONER_ASCEND_TARGET\n```\n\n\n**文件:** `MyMissiles/PrisonerDropSystem.j`"
+    },
+    {
+      "symbolName": "PRISONER_WANDER_INTERVAL",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\PrisonerDropSystem.j",
+      "content": "\n```jass\nconstant real PRISONER_WANDER_INTERVAL\n```\n\n\n**文件:** `MyMissiles/PrisonerDropSystem.j`"
+    },
+    {
+      "symbolName": "PRISONER_RESCUE_SOUND_PATH",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\PrisonerDropSystem.j",
+      "content": "\n```jass\nconstant string PRISONER_RESCUE_SOUND_PATH\n```\n\n\n**文件:** `MyMissiles/PrisonerDropSystem.j`"
+    }
+  ],
+  "timestamp": 1777596916207
+}

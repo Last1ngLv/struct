@@ -1,23 +1,17 @@
-library SelectionSystem requires PlayerUtils, PlayerHeroState, InitialWaveMultiboard, SelectionElementConfig, SelectionHeroVisualConfig, SelectionHeroSpawn, SelectionStartFlow
+library SelectionSystem requires PlayerUtils, PlayerHeroState, InitialWaveMultiboard, SelectionElementConfig, SelectionHeroVisualConfig, SelectionHeroConfig, SelectionHeroSpawn, SelectionStartFlow
 
 globals
     private constant real SELECTION_PHASE_TIMEOUT = 10.0
     private constant integer SELECTION_PHASE_NONE = 0
-    private constant integer SELECTION_PHASE_ELEMENT = 1
-    private constant integer SELECTION_PHASE_HERO = 2
+    private constant integer SELECTION_PHASE_HERO = 1
 
     private dialog array heroDialog
-    private dialog array elementDialog
 
     private button array heroButton
-    private button array elementButton
 
     private integer array heroChoice
-    private integer array elementChoice
     private boolean array heroChosen
-    private boolean array elementChosen
     private boolean array finished
-    private integer totalElementChosen = 0
     private integer totalFinished = 0
     private trigger dialogTrig = null
     private timer selectionTimer = null
@@ -27,7 +21,7 @@ endglobals
 struct SelectionSystem
 
     private static method executeElement takes User u returns nothing
-        call SelectionSetupElement(elementChoice[u.id], u.toPlayer(), PlayerHero[u.id])
+        call SelectionSetupElement(SelectionGetHeroProjectileElementId(heroChoice[u.id]), u.toPlayer(), PlayerHero[u.id])
         call SelectionSetupHeroVisual(heroChoice[u.id], u.toPlayer())
     endmethod
 
@@ -37,7 +31,6 @@ struct SelectionSystem
         endif
         call SelectionEnsureHeroCreated(u, heroChoice[u.id])
         call DialogDisplay(u.toPlayer(), heroDialog[u.id], false)
-        call DialogDisplay(u.toPlayer(), elementDialog[u.id], false)
         call thistype.executeElement(u)
         set finished[u.id] = true
         set totalFinished = totalFinished + 1
@@ -55,7 +48,6 @@ struct SelectionSystem
         loop
             exitwhen i == User.AmountPlaying
             set u = User.fromPlaying(i)
-            call DialogDisplay(u.toPlayer(), elementDialog[u.id], false)
             if not heroChosen[u.id] then
                 call DialogDisplay(u.toPlayer(), heroDialog[u.id], true)
             endif
@@ -63,28 +55,6 @@ struct SelectionSystem
         endloop
 
         call TimerStart(selectionTimer, SELECTION_PHASE_TIMEOUT, false, function thistype.onHeroTimeout)
-    endmethod
-
-    private static method checkAllElementsChosen takes nothing returns nothing
-        if totalElementChosen >= User.AmountPlaying then
-            call PauseTimer(selectionTimer)
-            call thistype.startHeroPhase()
-        endif
-    endmethod
-
-    private static method randomizeMissingElements takes nothing returns nothing
-        local integer i = 0
-        local User u
-        loop
-            exitwhen i == User.AmountPlaying
-            set u = User.fromPlaying(i)
-            if not elementChosen[u.id] then
-                set elementChoice[u.id] = GetRandomInt(0, 5)
-                set elementChosen[u.id] = true
-                set totalElementChosen = totalElementChosen + 1
-            endif
-            set i = i + 1
-        endloop
     endmethod
 
     private static method randomizeMissingHeroes takes nothing returns nothing
@@ -97,16 +67,11 @@ struct SelectionSystem
                 set heroChoice[u.id] = GetRandomInt(0, 5)
                 set heroChosen[u.id] = true
             endif
-            if heroChosen[u.id] and elementChosen[u.id] and not finished[u.id] then
+            if heroChosen[u.id] and not finished[u.id] then
                 call thistype.finishSelection(u)
             endif
             set i = i + 1
         endloop
-    endmethod
-
-    private static method onElementTimeout takes nothing returns nothing
-        call thistype.randomizeMissingElements()
-        call thistype.startHeroPhase()
     endmethod
 
     private static method onHeroTimeout takes nothing returns nothing
@@ -135,17 +100,6 @@ struct SelectionSystem
         loop
             exitwhen i == 6
             set index = u.id*6 + i
-
-            if GetClickedButton() == elementButton[index] and selectionPhase == SELECTION_PHASE_ELEMENT then
-                set elementChoice[u.id] = i
-                call DialogDisplay(p, elementDialog[u.id], false)
-                if not elementChosen[u.id] then
-                    set elementChosen[u.id] = true
-                    set totalElementChosen = totalElementChosen + 1
-                endif
-                call thistype.checkAllElementsChosen()
-                return
-            endif
 
             if GetClickedButton() == heroButton[index] and selectionPhase == SELECTION_PHASE_HERO then
                 set heroChoice[u.id] = i
@@ -179,16 +133,6 @@ struct SelectionSystem
             set heroButton[index+5] = DialogAddButton(heroDialog[u.id], "Yoshi", 0)
             call DialogDisplay(u.toPlayer(), heroDialog[u.id], false)
 
-            set elementDialog[u.id] = DialogCreate()
-            call DialogSetMessage(elementDialog[u.id], "Elige tu elemento")
-            set elementButton[index+0] = DialogAddButton(elementDialog[u.id], "Rayo", 0)
-            set elementButton[index+1] = DialogAddButton(elementDialog[u.id], "Dark", 0)
-            set elementButton[index+2] = DialogAddButton(elementDialog[u.id], "Blood", 0)
-            set elementButton[index+3] = DialogAddButton(elementDialog[u.id], "Wind", 0)
-            set elementButton[index+4] = DialogAddButton(elementDialog[u.id], "Venom", 0)
-            set elementButton[index+5] = DialogAddButton(elementDialog[u.id], "Fire", 0)
-            call DialogDisplay(u.toPlayer(), elementDialog[u.id], true)
-
             set i = i + 1
         endloop
     endmethod
@@ -199,7 +143,7 @@ struct SelectionSystem
 
         call thistype.createDialogs()
         call ShowInitialWaveMultiboard()
-        set selectionPhase = SELECTION_PHASE_ELEMENT
+        set selectionPhase = SELECTION_PHASE_HERO
 
         if selectionTimer == null then
             set selectionTimer = CreateTimer()
@@ -213,12 +157,12 @@ struct SelectionSystem
             set u = User.fromPlaying(i)
 
             call TriggerRegisterDialogEvent(dialogTrig, heroDialog[u.id])
-            call TriggerRegisterDialogEvent(dialogTrig, elementDialog[u.id])
+            call DialogDisplay(u.toPlayer(), heroDialog[u.id], true)
 
             set i = i + 1
         endloop
 
-        call TimerStart(selectionTimer, SELECTION_PHASE_TIMEOUT, false, function thistype.onElementTimeout)
+        call TimerStart(selectionTimer, SELECTION_PHASE_TIMEOUT, false, function thistype.onHeroTimeout)
     endmethod
 
 endstruct

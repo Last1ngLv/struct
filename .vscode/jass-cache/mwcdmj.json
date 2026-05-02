@@ -2,114 +2,6 @@
   "filePath": "c:\\Users\\Leon\\Documents\\struct\\Systems\\Tender\\TenderEscInteraction.j",
   "items": [
     {
-      "label": "TENDER_ESC_RADIUS",
-      "kind": 5,
-      "detail": "Global Variable",
-      "documentation": "\n```jass\nconstant real TENDER_ESC_RADIUS\n```\n\n\n**_>:** `Systems/Tender/TenderEscInteraction.j`",
-      "sortText": "2_var_TENDER_ESC_RADIUS",
-      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Systems\\Tender\\TenderEscInteraction.j",
-      "statementType": "VariableDeclaration"
-    },
-    {
-      "label": "TENDER_ESC_PROMPT_TICK",
-      "kind": 5,
-      "detail": "Global Variable",
-      "documentation": "\n```jass\nconstant real TENDER_ESC_PROMPT_TICK\n```\n\n\n**_>:** `Systems/Tender/TenderEscInteraction.j`",
-      "sortText": "2_var_TENDER_ESC_PROMPT_TICK",
-      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Systems\\Tender\\TenderEscInteraction.j",
-      "statementType": "VariableDeclaration"
-    },
-    {
-      "label": "TenderEscPromptTimer",
-      "kind": 5,
-      "detail": "Global Variable",
-      "documentation": "\n```jass\ntimer TenderEscPromptTimer\n```\n\n\n**_>:** `Systems/Tender/TenderEscInteraction.j`",
-      "sortText": "2_var_TenderEscPromptTimer",
-      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Systems\\Tender\\TenderEscInteraction.j",
-      "statementType": "VariableDeclaration"
-    },
-    {
-      "label": "TenderEscPromptShownByPid",
-      "kind": 5,
-      "detail": "Global Variable",
-      "documentation": "\n```jass\nboolean array TenderEscPromptShownByPid\n```\n\n\n**_>:** `Systems/Tender/TenderEscInteraction.j`",
-      "sortText": "2_var_TenderEscPromptShownByPid",
-      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Systems\\Tender\\TenderEscInteraction.j",
-      "statementType": "VariableDeclaration"
-    },
-    {
-      "label": "HasValidHero",
-      "kind": 2,
-      "detail": "Function",
-      "documentation": "\n```jass\nfunction HasValidHero takes integer pid returns boolean\n```\n\n\n**_>:** `Systems/Tender/TenderEscInteraction.j`",
-      "sortText": "1_func_HasValidHero",
-      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Systems\\Tender\\TenderEscInteraction.j",
-      "statementType": "FunctionDeclaration"
-    },
-    {
-      "label": "IsHeroInTenderRange",
-      "kind": 2,
-      "detail": "Function",
-      "documentation": "\n```jass\nfunction IsHeroInTenderRange takes integer pid returns boolean\n```\n\n\n**_>:** `Systems/Tender/TenderEscInteraction.j`",
-      "sortText": "1_func_IsHeroInTenderRange",
-      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Systems\\Tender\\TenderEscInteraction.j",
-      "statementType": "FunctionDeclaration"
-    },
-    {
-      "label": "RefreshTenderClient",
-      "kind": 2,
-      "detail": "Function",
-      "documentation": "\n```jass\nfunction RefreshTenderClient takes integer pid returns nothing\n```\n\n\n**_>:** `Systems/Tender/TenderEscInteraction.j`",
-      "sortText": "1_func_RefreshTenderClient",
-      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Systems\\Tender\\TenderEscInteraction.j",
-      "statementType": "FunctionDeclaration"
-    },
-    {
-      "label": "ShowToPlayer",
-      "kind": 2,
-      "detail": "Function",
-      "documentation": "\n```jass\nfunction ShowToPlayer takes player p, string text returns nothing\n```\n\n\n**_>:** `Systems/Tender/TenderEscInteraction.j`",
-      "sortText": "1_func_ShowToPlayer",
-      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Systems\\Tender\\TenderEscInteraction.j",
-      "statementType": "FunctionDeclaration"
-    },
-    {
-      "label": "CloseTenderForPid",
-      "kind": 2,
-      "detail": "Function",
-      "documentation": "\n```jass\nfunction CloseTenderForPid takes integer pid returns nothing\n```\n\n\n**_>:** `Systems/Tender/TenderEscInteraction.j`",
-      "sortText": "1_func_CloseTenderForPid",
-      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Systems\\Tender\\TenderEscInteraction.j",
-      "statementType": "FunctionDeclaration"
-    },
-    {
-      "label": "ToggleTenderForEsc",
-      "kind": 2,
-      "detail": "Function",
-      "documentation": "\n```jass\nfunction ToggleTenderForEsc takes nothing returns nothing\n```\n\n\n**_>:** `Systems/Tender/TenderEscInteraction.j`",
-      "sortText": "1_func_ToggleTenderForEsc",
-      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Systems\\Tender\\TenderEscInteraction.j",
-      "statementType": "FunctionDeclaration"
-    },
-    {
-      "label": "PromptTenderEsc",
-      "kind": 2,
-      "detail": "Function",
-      "documentation": "\n```jass\nfunction PromptTenderEsc takes nothing returns nothing\n```\n\n\n**_>:** `Systems/Tender/TenderEscInteraction.j`",
-      "sortText": "1_func_PromptTenderEsc",
-      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Systems\\Tender\\TenderEscInteraction.j",
-      "statementType": "FunctionDeclaration"
-    },
-    {
-      "label": "RegisterEscForActivePlayers",
-      "kind": 2,
-      "detail": "Function",
-      "documentation": "\n```jass\nfunction RegisterEscForActivePlayers takes trigger t returns nothing\n```\n\n\n**_>:** `Systems/Tender/TenderEscInteraction.j`",
-      "sortText": "1_func_RegisterEscForActivePlayers",
-      "filePath": "c:\\Users\\Leon\\Documents\\struct\\Systems\\Tender\\TenderEscInteraction.j",
-      "statementType": "FunctionDeclaration"
-    },
-    {
       "label": "Init",
       "kind": 2,
       "detail": "Function",
@@ -119,5 +11,5 @@
       "statementType": "FunctionDeclaration"
     }
   ],
-  "timestamp": 1777094829109
+  "timestamp": 1777579694746
 }
